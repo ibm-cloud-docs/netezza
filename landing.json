@@ -1,0 +1,12 @@
+{
+    "title": "Netezza Performance Server",
+    "lastupdated": "2021-11-11",
+    "introduction": "Welcome to the Netezza Performance Server for Cloud Pak for Data as a Service product documentation.",
+    "section_recommended": [
+      {
+        "title": "Provision a service instance",
+        "description": "Create and deploy a Netezza Performance Server service instance.",
+        "href": "/docs/netezza?topic=netezza-getting-started"
+      }
+    ]
+  }
