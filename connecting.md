@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-26"
+lastupdated: "2021-11-22"
 
 keywords: connecting to Netezza Performance Server, connecting
 
