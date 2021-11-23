@@ -39,9 +39,9 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 ## Provision a {{site.data.keyword.netezza_short}} instance
 {: #provision}
 
-You can provision {{site.data.keyword.netezza_short}} through the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) and [Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/). Find the {{site.data.keyword.netezza_short}} tile and clik it. You are redirected to the provisioning page.
+You can provision {{site.data.keyword.netezza_short}} through the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) and [Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/). Find the {{site.data.keyword.netezza_short}} tile and click it. You are redirected to the provisioning page.
 
-On the provisioning page, select the cloud platform you want to deploy in and the corresponding region. Next, you can configure your instance by selecting the workload contour, Netezza units (NZU), storage values and connectivity options.
+On the provisioning page, select the cloud platform you want to deploy in and the corresponding region. Next, you can configure your instance by selecting the workload contour, Netezza units (NZU), storage values, and connectivity options.
 
 For more information about workload contours, Netezza Units (NZU) and available storage configuration, see [Architecture](/docs/netezza?topic=netezza-compute-isolation&interface=ui).
 
@@ -68,14 +68,14 @@ After {{site.data.keyword.netezza_short}} is provisioned, retrieve information a
 1. Select **Service credentials > New credentials > Add**.
 1. Enter the name for the new credential.
 1. Click **Add**.   
-1. Expand **View credentials**, which displays your service connectivity information.
-1. You can use the API key to connect to the {{site.data.keyword.netezza_short}} database and web console.
+1. Expand **View credentials**.
+   
+   You can use the password to connect to the {{site.data.keyword.netezza_short}} database and web console as user admin.
 
-### Resetting passwords
+### Resetting history user password
 {: #reset-password}
 
-Your instance comes with a database admin created and query history enabled by default. When you log in to your instance for the first time, make sure that you change passwords to the `admin` user and history configuration, and change the query history user.
+Your instance comes with [query history](https://www.ibm.com/docs/en/netezza?topic=administrators-collecting-data-history) enabled by default. 
 
-1. To change the `admin` password, use the [`ALTER USER`](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-user-1) command.
-1. To change the query history user and history configuration password, follow the instructions that are described in [Collecting data history](https://www.ibm.com/docs/en/netezza?topic=administrators-collecting-data-history).
-
+- Follow the instructions [here](https://www.ibm.com/support/pages/changing-query-history-users-password) to change the history user password.
+- Open a [ticket](https://www.ibm.com/support/pages/changing-query-history-users-password) to stop and start the database when resetting history user password.
