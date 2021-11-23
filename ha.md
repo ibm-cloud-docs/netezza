@@ -25,7 +25,7 @@ subcollection: netezza
 
 {{site.data.keyword.netezza_full}} leverages OpenShift to recover from node failures. It has a built-in self-healing mechanisms to recover from compute node (SPU) failures. It uses highly reliable storage (IBM Block Storage, Azure Premium SSD and others) for user data, and Cloud Object Storage (COS) for backups and staging.
 Netezza service however is zonal service. If the zone goes down, service will come up in another zone and then the user data needs to be restored after the service comes online.
-More details can be found [here](https://github.ibm.com/cloud-docs/netezza/bcdr.md). ( **Note:** Console displays the zone information on instance details page.)
+More details can be found [here](/docs/netezza?topic=netezza-understanding-bc-dr).
 {: shortdesc}
 
 ## Responsibilities
