@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="netezza" category="analytics" audience="service" release-level="beta" href="/docs/netezza?topic=netezza-getting-started" product-page="https://www.ibm.com/products/netezza" console-page="catalog/services/netezza-performance-server" path="netezza"}
+{: .toc subcollection="netezza" category="analytics" audience="service" href="/docs/netezza?topic=netezza-getting-started" product-page="https://www.ibm.com/products/netezza" console-page="catalog/services/netezza-performance-server" path="netezza"}
 Netezza Performance Server
 
     {: .navgroup id="learn"}
