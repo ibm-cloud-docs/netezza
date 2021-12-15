@@ -1,0 +1,97 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: netezza
+    category: analytics
+    audience: service
+    href: /docs/netezza?topic=netezza-getting-started
+    console-page: /catalog/services/netezza-performance-server
+    product-page: https://www.ibm.com/products/netezza
+    path: netezza
+    label: Netezza
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - getting-started.md
+      - connecting.md
+      - remove.md
+      - release-notes.md
+
+  - navgroup:
+      id: howto
+      topics:
+      - topicgroup:
+          label: Administering Netezza Performance Server
+          topics:
+          - admins/pause-resume.md
+          - admins/autopause.md
+          - admins/scaling.md
+          - topicgroup:
+              label: Backup and restore
+              topics:
+              - admins/bnr.md
+              - admins/bnr-ui.md
+              - admins/bnr-flow.md
+          - admins/nztool.md
+      - topicgroup:
+          label: Maintaining Netezza Performance Server
+          topics:
+          - admins/auto-admin.md
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - architecture-workload-isolation.md
+          - endpoints.md
+          - encryption.md
+          - iam-docs.md
+      - link:
+          label: Loading data
+          href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
+      - link:
+          label: Running queries
+          href: https://www.ibm.com/docs/en/netezza?topic=dud-netezza-sql-introduction
+
+  - navgroup:
+      id: reference
+      topics:
+      - ha.md
+      - bc-dr.md
+      - topicgroup:
+          label: Web console
+          topics:
+          - webconsole/get-strt.md
+          - webconsole/databases.md
+          - webconsole/query-editor.md
+          - webconsole/queries.md
+          - webconsole/current-activity.md
+          - webconsole/resource-monitoring.md
+          - topicgroup:
+              label: Administration
+              topics:
+              - webconsole/workload-patterns.md
+              - webconsole/scheduler-rules.md
+              - webconsole/settings.md
+          - webconsole/users-group.md
+          - topicgroup:
+              label: Backup and restore
+              topics:
+              - admins/bnr.md
+              - admins/bnr-ui.md
+              - admins/bnr-flow.md
+
+  - navgroup:
+      id: tutorial
+      topics:
+      - usecases/migrate-onpremises.md
+
+  - navgroup:
+      id: help
+      topics:
+      - faqs.md
+      - opening-tickets.md
