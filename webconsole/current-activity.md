@@ -20,12 +20,12 @@ subcollection: netezza
 # Current activity
 {: #current-activity}
 
-## Active queries
+## Queries
 {: #active-queries}
 
 To see a list of active queries, go to **Current activity > Queries**.
 
-## Active sessions
+## Sessions
 {: #active-sessions}
 
 To see a list of active queries, go to **Current activity > Sessions**.
