@@ -18,7 +18,7 @@ subcollection: netezza
 {:note: .note}
 {:caption: .caption}
 
-# Users and groups
+# Managing users and groups
 {: #users-groups}
 
 The **Users and groups** view displays all of your database user accounts and groups.
