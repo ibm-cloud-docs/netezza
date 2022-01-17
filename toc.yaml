@@ -66,6 +66,7 @@ toc:
           label: Web console
           topics:
           - webconsole/get-strt.md
+          - webconsole/users-group.md
           - webconsole/databases.md
           - webconsole/query-editor.md
           - webconsole/queries.md
@@ -77,7 +78,6 @@ toc:
               - webconsole/workload-patterns.md
               - webconsole/scheduler-rules.md
               - webconsole/settings.md
-          - webconsole/users-group.md
           - topicgroup:
               label: Backup and restore
               topics:
