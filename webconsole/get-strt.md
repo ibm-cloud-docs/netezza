@@ -30,3 +30,5 @@ subcollection: netezza
 1. Click the **Web console** button to launch the web console.
 
 Your credentials are available in the **Service credentials** section.
+
+For more information about managing users and groups, see (Managing users and groups)[/docs/netezza?topic=netezza-users-groups].
