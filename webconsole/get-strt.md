@@ -31,4 +31,4 @@ subcollection: netezza
 
 Your credentials are available in the **Service credentials** section.
 
-For more information about managing users and groups, see (Managing users and groups)[/docs/netezza?topic=netezza-users-groups].
+For more information about managing users and groups, see [Managing users and groups](/docs/netezza?topic=netezza-users-groups).
