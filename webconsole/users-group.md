@@ -27,37 +27,6 @@ The **Users and groups** view displays all of your database user accounts and gr
 ## Users
 {: #users}
 
-### Information about users
-{: #user-info}
-
-|Value          | Description                      |
-|:--------------|:---------------------------------|
-|Username       | Specifies the database user name.|
-|Resource group | Specifies the database group to which the user belongs and which controls the workload settings such as GRA and resource percentages.|
-|Owner          | Specifies the owner of the user account.|
-|Tables         | Specifies the number of tables that are owned by the user account.|
-|Password expiration| Specifies when a user password expires.|
-|Created on | Specifies when the user was created.|
-|Authentication type| Specifies the authentication type.|
-{: caption="Table 1. The table lists group-related values and their definitions." caption-side="bottom"}
-
-### User actions
-{: #user-actions}
-
-In the users list view, there is an overflow menu that lists the actions that can be taken on the user. 
-
-|Value          | Description                      |
-|:--------------|:---------------------------------|
-|Assign owner| Set the owner of the user account.|
-|View privileges| View and alter the privileges for the user account, which dictate what that user can view and execute.|
-|Change password| Change the password for the system user.|
-|Account expiration| Set a date that the system user account will be valid until.|
-|Password expiration| Set a number of days until the password for the user account expires.|
-|Rename | Change the username of the user account.|
-|Remove | Delete the user account from the system.|
-{: caption="Table 1. The table lists user actions and their definitions." caption-side="bottom"}
-
-
 ### Creating users
 {: #create-users}
 
@@ -89,13 +58,51 @@ In the users list view, there is an overflow menu that lists the actions that ca
  
    If you want a user to have the necessary privileges to do scaling, pause and resume operations, you must add the user to the **ADMINISTRATORS** group.
 
-### Deleting users
-{: #delete-users}
+### Information about users
+{: #user-info}
+
+|Value          | Description                      |
+|:--------------|:---------------------------------|
+|Username       | Specifies the database user name.|
+|Resource group | Specifies the database group to which the user belongs and which controls the workload settings such as GRA and resource percentages.|
+|Owner          | Specifies the owner of the user account.|
+|Tables         | Specifies the number of tables that are owned by the user account.|
+|Password expiration| Specifies when a user password expires.|
+|Created on | Specifies when the user was created.|
+|Authentication type| Specifies the authentication type.|
+{: caption="Table 1. The table lists group-related values and their definitions." caption-side="bottom"}
+
+### User actions
+{: #user-actions}
+
+In the users list view, there is an overflow menu that lists the actions that can be taken on the user. 
+
+|Value          | Description                      |
+|:--------------|:---------------------------------|
+|Assign owner| Set the owner of the user account.|
+|View privileges| View and alter the privileges for the user account, which dictate what that user can view and execute.|
+|Change password| Change the password for the system user.|
+|Account expiration| Set a date that the system user account will be valid until.|
+|Password expiration| Set a number of days until the password for the user account expires.|
+|Rename | Change the username of the user account.|
+|Remove | Delete the user account from the system.|
+{: caption="Table 1. The table lists user actions and their definitions." caption-side="bottom"}
+
+### Granting admin privileges to users
+{: #grant-admin-users}
+
+User privileges dictate what actions can be taken by a particular user account. When new users are created, they have no privileges, so in most cases privileges need to be added. 
 
 1. Go to **Users and groups > Users**.
-1. Select the user that you want to remove and select **Remove** from the overflow menu.
+1. Select the user for which you want to grant admin privileges and select **Admin privileges** from the overflow menu.
 
-   In the confirmation pop up, click **Remove** to remove the user or **Cancel** to cancel this action.
+   In this view, you can see different admin privileges, which are already granted or that can be granted to the selected user.
+   
+   Granting these privileges allows the user to do the actions that the privileges correspond to. Granting privileges on global database and global schema unlocks all the privileges to the user equivalent to an admin.
+   
+1. Click **Edit**.
+1. Update, grant, or revoke object privileges by putting ticks in corresponding boxes.
+1. Click **Save**.
    
 ### Granting object privileges to users
 {: #grant-object-users}
@@ -118,24 +125,35 @@ User privileges dictate what actions can be taken by a particular user account. 
 1. Update, grant, or revoke object privileges by putting ticks in corresponding boxes.
 1. Click **Save**.
 
-### Granting admin privileges to users
-{: #grant-admin-users}
-
-User privileges dictate what actions can be taken by a particular user account. When new users are created, they have no privileges, so in most cases privileges need to be added. 
+### Deleting users
+{: #delete-users}
 
 1. Go to **Users and groups > Users**.
-1. Select the user for which you want to grant admin privileges and select **Admin privileges** from the overflow menu.
+1. Select the user that you want to remove and select **Remove** from the overflow menu.
 
-   In this view, you can see different admin privileges, which are already granted or that can be granted to the selected user.
-   
-   Granting these privileges allows the user to do the actions that the privileges correspond to. Granting privileges on global database and global schema unlocks all the privileges to the user equivalent to an admin.
-   
-1. Click **Edit**.
-1. Update, grant, or revoke object privileges by putting ticks in corresponding boxes.
-1. Click **Save**.
+   In the confirmation pop up, click **Remove** to remove the user or **Cancel** to cancel this action.
 
 ## Groups
 {: #groups}
+
+### Creating groups
+{: #create-groups}
+
+1. Go to **Users and groups > Groups**.
+1. Click **Create group**.
+1. In the **General settings** section, select the following:
+
+   1. Name
+   
+   1. Password expiration date
+  
+1. Specify resource allocation settings.
+1. Specify session settings.
+1. Add users.
+
+   In the **Include users** section, specify which users to add to the group when it's created.
+  
+1. Click **Create**.
 
 ### Information about groups
 {: #group-info}
@@ -165,32 +183,21 @@ In the Groups list view, there is an overflow menu that lists the actions that c
 |Remove | Delete the group from the system.|
 {: caption="Table 1. The table lists group-related actions and their definitions." caption-side="bottom"}
 
-### Creating groups
-{: #create-groups}
+### Granting admin privileges to groups
+{: #grant-admin-groups}
+
+Group privileges dictate what actions canb be taken by users who are a part of the group.
 
 1. Go to **Users and groups > Groups**.
-1. Click **Create group**.
-1. In the **General settings** section, select the following:
+1. Select the group for which you want to grant admin privileges and select **Admin privileges** from the overflow menu.
 
-   1. Name
+   In this view, you can see different admin privileges, which are already granted or that can be granted to the selected group.
    
-   1. Password expiration date
-  
-1. Specify resource allocation settings.
-1. Specify session settings.
-1. Add users.
-
-   In the **Include users** section, specify which users to add to the group when it's created.
-  
-1. Click **Create**.
-
-### Deleting groups
-{: #delete-groups}
-
-1. Go to **Users and groups > Groups**.
-1. Select the group that you want to remove and select **Remove** from the overflow menu.
- 
-   In the confirmation pop up, click **Remove** to remove the group or **Cancel** to cancel this action.
+   Granting these privileges allows the users that belong to the group to do the actions that the privileges correspond to. Granting privileges on global database and global schema unlocks all the privileges to the user equivalent to an admin.
+   
+1. Click **Edit**.
+1. Update, grant, or revoke object privileges by putting ticks in corresponding boxes.
+1. Click **Save**.   
 
 ### Granting object privileges to groups
 {: #grant-object-groups}
@@ -213,19 +220,10 @@ Group privileges dictate what actions canb be taken by users who are a part of t
 1. Update, grant, or revoke object privileges by putting ticks in corresponding boxes.
 1. Click **Save**.
 
-### Granting admin privileges to groups
-{: #grant-admin-groups}
-
-Group privileges dictate what actions canb be taken by users who are a part of the group.
+### Deleting groups
+{: #delete-groups}
 
 1. Go to **Users and groups > Groups**.
-1. Select the group for which you want to grant admin privileges and select **Admin privileges** from the overflow menu.
-
-   In this view, you can see different admin privileges, which are already granted or that can be granted to the selected group.
-   
-   Granting these privileges allows the users that belong to the group to do the actions that the privileges correspond to. Granting privileges on global database and global schema unlocks all the privileges to the user equivalent to an admin.
-   
-1. Click **Edit**.
-1. Update, grant, or revoke object privileges by putting ticks in corresponding boxes.
-1. Click **Save**.   
-
+1. Select the group that you want to remove and select **Remove** from the overflow menu.
+ 
+   In the confirmation pop up, click **Remove** to remove the group or **Cancel** to cancel this action.
