@@ -45,7 +45,7 @@ You can provision {{site.data.keyword.netezza_short}} with a private endpoint or
 
 Each endpoint type provides a set of three hostnames. You can connect each of the hostnames to one of the following components:
 
-- Web console
+- [Web console](/docs/netezza?topic=netezza-getstarted-console)
    
    The web interface, which you can use to manage and monitor the database. Your credentials are available in the **Service credentials** section.
    
@@ -59,8 +59,6 @@ Each endpoint type provides a set of three hostnames. You can connect each of th
       
    1. Select the **Manage** tab.
    1. Click the **Web console** button to launch the web console.
-   
-   For more information about the web console, see [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
 
 - {{site.data.keyword.netezza_short}} database (NZ host)
 
