@@ -8,5 +8,10 @@
         "description": "Create and deploy a Netezza Performance Server service instance.",
         "href": "/docs/netezza?topic=netezza-getting-started"
       }
+      {
+        "title": "Web console documentation",
+        "description": "Learn how to access and use the Netezza Performance Server web console.",
+        "href": "/docs/netezza?topic=netezza-getstarted-console"
+      }
     ]
   }
