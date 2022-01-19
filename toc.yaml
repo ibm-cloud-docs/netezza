@@ -20,6 +20,28 @@ toc:
       topics:
       - getting-started.md
       - connecting.md
+      - topicgroup:
+          label: Web console
+          topics:
+          - webconsole/get-strt.md
+          - webconsole/users-group.md
+          - webconsole/databases.md
+          - webconsole/query-editor.md
+          - webconsole/queries.md
+          - webconsole/current-activity.md
+          - webconsole/resource-monitoring.md
+          - topicgroup:
+              label: Administration
+              topics:
+              - webconsole/workload-patterns.md
+              - webconsole/scheduler-rules.md
+              - webconsole/settings.md
+          - topicgroup:
+              label: Backup and restore
+              topics:
+              - admins/bnr.md
+              - admins/bnr-ui.md
+              - admins/bnr-flow.md
       - remove.md
       - release-notes.md
 
@@ -62,28 +84,6 @@ toc:
       topics:
       - ha.md
       - bc-dr.md
-      - topicgroup:
-          label: Web console
-          topics:
-          - webconsole/get-strt.md
-          - webconsole/users-group.md
-          - webconsole/databases.md
-          - webconsole/query-editor.md
-          - webconsole/queries.md
-          - webconsole/current-activity.md
-          - webconsole/resource-monitoring.md
-          - topicgroup:
-              label: Administration
-              topics:
-              - webconsole/workload-patterns.md
-              - webconsole/scheduler-rules.md
-              - webconsole/settings.md
-          - topicgroup:
-              label: Backup and restore
-              topics:
-              - admins/bnr.md
-              - admins/bnr-ui.md
-              - admins/bnr-flow.md
 
   - navgroup:
       id: tutorial
