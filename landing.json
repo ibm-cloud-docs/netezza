@@ -9,6 +9,11 @@
         "href": "/docs/netezza?topic=netezza-getting-started"
       },
       {
+        "title": "Pause and resume instances",
+        "description": "Learn how to pause and resume your Netezza Performance Server instances.",
+        "href": "docs/netezza?topic=netezza-pauseresume"
+      },
+      {
         "title": "Web console documentation",
         "description": "Learn how to access and use the Netezza Performance Server web console.",
         "href": "/docs/netezza?topic=netezza-getstarted-console"
