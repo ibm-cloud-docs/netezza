@@ -222,75 +222,19 @@ You can also select to replace your library, include a load clause, and include 
 ## Creating functions
 {: #create-functions}
 
-1. Go to **Databases**.
-1. Select the database in which you want to create a function.
-1. Go to **Functions/Procedures > Functions**.
-1. Click **Create function**.
-1. Select the schema where you want to create a function.
-1. Type a name for the function.
-1. Specify the argument types. 
-
-   For example, `int`.
-   
-1. Specify the return type. 
-
-   For example, `int`.
-   
-1. Specify the external class name. 
-
-   This is the name of the C++ class that implements the function. For example, int2max.
-  
-1. Specify the external host object filename. 
-
-   This is the path for the compiled host object file. For example, /etc/motd.
-  
-1. Specify the return SPU object filename. 
-
-   This is the path for the compiled object file of the Linux SPU. For example, `/etc/motd`.
-
-1. Click **Create**.
+You cannot create functions with the web console. Instead, you can use the dedicated command. For more information, see (CREATE {OR REPLACE} FUNCTION)[https://www.ibm.com/docs/en/netezza?topic=npssr-create-replace-function-2].
 
 ## Creating aggregates
 {: #create-aggregates}
 
-1. Go to **Databases**.
-1. Select the database in which you want to create a function.
-1. Go to **Functions/Procedures > Aggregates**.
-1. Click **Create aggregate**.
-1. Select the schema where you want to create a function.
-1. Type a name for the aggregate.
-1. Specify the argument types.
-
-   This is to specify the parameter type list of the aggregate. For example, `int`.
-   
-1. Specify the return type of your aggregate.
-
-   For example, `int`.
-
-1. Specify the state types.
-
-   This is a list of fully-specified state data types for the aggregate. For example, `int`.
-
-1. Specify the external class name.
-
-   This is the name of the C++ class that implements the function. For example, `int2max`.
-
-1. Specify the external host object filename.
-
-   This is the path for the compiled host object file. For example, `/etc/motd`.
-
-1. Specify the external SPU object filename.
-
-   This is the path for the compiled object file of the Linux SPU. For example, `/etc/motd`.
-
-1. Click **Create**.
+You cannot create aggregates with the web console. Instead, you can use the dedicated command. For more information, see (CREATE {OR REPLACE} AGGREGATE)[https://www.ibm.com/docs/en/netezza?topic=npssr-create-replace-aggregate-2].
 
 ## Creating procedures
 {: #create-procedures}
 
 1. Go to **Databases**.
 1. Select the database in which you want to create a function.
-1. Go to **Functions/Procedures > Procedures**.
+1. Go to **DB objects > Procedures**.
 1. Click **Create procedure**.
 1. Select the schema where you want to create a procedure.
 1. Type a name for the procedure.
