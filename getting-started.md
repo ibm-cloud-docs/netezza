@@ -39,15 +39,19 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 ## Provision a {{site.data.keyword.netezza_short}} instance
 {: #provision}
 
-You can provision {{site.data.keyword.netezza_short}} through the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) and [Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/). Find the {{site.data.keyword.netezza_short}} tile and click it. You are redirected to the provisioning page.
+You can provision {{site.data.keyword.netezza_short}} through the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) and [Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/). 
 
-On the provisioning page, select the cloud platform you want to deploy in and the corresponding region. Next, you can configure your instance by selecting the workload contour, Netezza units (NZU), storage values, and connectivity options.
+Find the {{site.data.keyword.netezza_short}} tile and click it. You are redirected to the provisioning page.
+
+On the provisioning page, select the cloud platform you want to deploy in and the corresponding region. Now, you can configure your instance by selecting the workload contour, Netezza units (NZU), storage values, and connectivity options.
 
 For more information about workload contours, Netezza Units (NZU) and available storage configuration, see [Architecture](/docs/netezza?topic=netezza-compute-isolation&interface=ui).
 
 For more information about connectivity options, see [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting&interface=ui).
 
-When you have made your selections, click the submit button to start the provisioning process. You are redirected to the your IBM Cloud dashboard page. Go to the **Resource list**. After the provisioning process is finished, the instance status is `Active`.
+When you have made your selections, click the submit button to start the provisioning process. You are redirected to the {{site.data.keyword.cloud_notm}} dashboard page. Go to **Resource list**. 
+
+After the provisioning process is finished, the instance status is `Active`.
 
 ## Next steps
 {: #next}
