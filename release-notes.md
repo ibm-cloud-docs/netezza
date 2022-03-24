@@ -22,5 +22,5 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
 
-For more information, see [Netezza Performance Server release notes](https://www.ibm.com/docs/en/netezza?topic=netezza-release-notes).
+For more information, see [Netezza Performance Server release notes](https://www.ibm.com/docs/en/netezza?topic=started-netezza-performance-server-release-notes).
 
