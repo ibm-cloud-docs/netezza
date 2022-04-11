@@ -19,8 +19,14 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Release notes for {{site.data.keyword.netezza_short}}
+# Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-For more information, see [Netezza Performance Server release notes](https://www.ibm.com/docs/en/netezza?topic=started-netezza-performance-server-release-notes).
+## March 2022
+{: #march2022}
+
+As of March 17, 2022, the {{site.data.keyword.netezza_short}} web console is available in the following languages: English, German, French, Spanish, Italian, Brazilian, Japanese, Chinese Simplified, Chinese Traditional, and Korean.
+
+
+For release notes for other {{site.data.keyword.netezza_short}} deployment options, see [this page](https://www.ibm.com/docs/en/netezza?topic=netezza-release-notes).
 
