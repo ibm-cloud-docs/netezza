@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-26"
+lastupdated: "2022-04-11"
 
 keywords: Netezza Performance Server release notes, what's new, 
 
