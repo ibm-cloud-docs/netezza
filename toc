@@ -10,33 +10,33 @@ Netezza Performance Server
     remove.md
     release-notes.md
     {: .navgroup-end}
-    
-    {: .navgroup id="howto"}           
+
+    {: .navgroup id="howto"}
     {: .topicgroup}
     Administering Netezza Performance Server
         admins/pause-resume.md
         admins/autopause.md
         admins/scaling.md
-        
+
         {: .topicgroup}
         Backup and restore
             admins/bnr.md
             admins/bnr-ui.md
             admins/bnr-flow.md
-        
+
         admins/nztool.md
-    
+
     {: .topicgroup}
     Maintaining Netezza Performance Server
         admins/auto-admin.md
-    
+
     {: .topicgroup}
     Enhancing security
         architecture-workload-isolation.md
         endpoints.md
         encryption.md
         iam-docs.md
-       
+
     [Loading data](https://www.ibm.com/docs/en/netezza?topic=ndu-data-loading)
     [Running queries](https://www.ibm.com/docs/en/netezza?topic=dud-netezza-sql-introduction)
     {: .navgroup-end}
@@ -44,7 +44,8 @@ Netezza Performance Server
     {: .navgroup id="reference"}
     ha.md
     bc-dr.md
-    
+    network_policies.md
+
     {: .topicgroup}
     Web console
         webconsole/get-strt.md
@@ -53,23 +54,23 @@ Netezza Performance Server
         webconsole/queries.md
         webconsole/current-activity.md
         webconsole/resource-monitoring.md
-        
+
         {: .topicgroup}
         Administration
             webconsole/workload-patterns.md
             webconsole/scheduler-rules.md
             webconsole/settings.md
-            
+
         webconsole/users-group.md
-        
+
         {: .topicgroup}
         Backup and restore
             admins/bnr.md
             admins/bnr-ui.md
             admins/bnr-flow.md
-        
+
     {: .navgroup-end}
-    
+
     {: .navgroup id="tutorial"}
     usecases/migrate-onpremises.md
     {: .navgroup-end}

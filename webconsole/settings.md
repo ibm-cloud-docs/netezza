@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-02"
+lastupdated: "2022-05-19"
 
 keywords: web console, administering web console, administering
 
@@ -20,14 +20,53 @@ subcollection: netezza
 # Settings
 {: #settings}
 
+## Network policies
+{: #wc-nwpolicies}
+
+On the *Network policies* page, you can add policies and view existing policies.
+
+**NOTE:** You can add network policies if you belong to the `ADMINISTRATORS` group.
+
+### Adding network policies
+{: #wc-nwpolicies-adding}
+
+1. Go to **Administration >> Settings >> Network policies**.
+1. In the *Add policy* panel, enter your Classless Inter-Domain Routing (CIDR) or hostname.
+
+   The IP address must conform to the domain standards.
+
+1. Select whether the policy is `Allowed` or `Blocked`.
+1. Click **Save**.
+
+### Domain standards
+{: #domain-standards}
+
+For more information on the domain standards, see [Defining network policies with Classless Inter-Domain Routing (CIDR)](/docs/netezza?topic=netezza-network-policies#nw-cidr).
+
+### Viewing network policies
+{: #wc-nwpolicies-viewing}
+
+To view existing policies, go to **Administration >> Settings >> Network policies >> Existing policies**.
+
+### Deleting network policies
+{: #wc-nwpolicies-deleting}
+
+To delete a policy: 
+1. Go to **Administration >> Settings >> Network policies >> Existing policies**.
+2. Select the policy that you want to delete.
+3. Click **Delete**.
+
+**NOTE:** You can select multiple policies to delete them.
+
+For more information about network policies and use cases, see [Network policies](/docs/netezza?topic=netezza-network-policies).
+
 ## Monitoring profile
 {: #monitoring-profile}
 
-On the *Monitoring profile* page, you can do the following.
+On the *Monitoring profile* page, you can do the following:
 
 - Monitor the performance of your system over time.
-- Collec data for historical and real time data.
-- Set a retention policy for your data.
+- Collect data for historical and real time data.
 
 To access the *Monitoring profile* page, go to **Administration >> Settings >> Monitoring profile**.
 

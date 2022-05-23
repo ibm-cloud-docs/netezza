@@ -68,17 +68,17 @@ You can access database information by using the web console.
 1. Type a name for the table.
 
    You can select a name that has up to 128 characters. The name must begin with a letter or an underscore and can't contain embedded spaces. The name must be unique.
-   
+
 1. Add columns to the table:
-   
+
    1. Click **Create column**.
    1. Type a name for the column.
-   1. Select column type. 
-   
+   1. Select column type.
+
       The data type restricts the type of data that can be stored in a column. For example, preventing entry of alphanumeric characters into a numeric field. Data types also help sort data correctly and play a role in optimizing storage. For all these reasons, it is important to pick the appropriate data type.
-      
+
    1. Specify whether or not you allow NULL values to be inserted. A column that allows NULL values also allows rows to be inserted with no value in that column. A column that does not allow NULL values does not accept rows with no value.
-   
+
    1. Specify the default value to be used if no value is specified when a row is inserted.
 
 1. In the *Distribution on* and *Organize on* sections, specify the distribution key for the table by selecting up to four columns.
@@ -87,21 +87,21 @@ You can access database information by using the web console.
 ### Column and table constraints
 {: #constraints-table-column}
 
-When you create a table, you can specify constraints for a column, table, or both. 
+When you create a table, you can specify constraints for a column, table, or both.
 
 For example, a table_constraint can be:
 
 ```
-{ PRIMARY KEY ( column_name [, ... ] ) |  FOREIGN KEY ( column_name [, 
-... ] ) REFERENCES reftable (refcolumn ) [ MATCH matchtype ] [ ON 
-DELETE action ] [ ON UPDATE action ] [ [ NOT ] DEFERRABLE ] [ INITIALLY 
+{ PRIMARY KEY ( column_name [, ... ] ) |  FOREIGN KEY ( column_name [,
+... ] ) REFERENCES reftable (refcolumn ) [ MATCH matchtype ] [ ON
+DELETE action ] [ ON UPDATE action ] [ [ NOT ] DEFERRABLE ] [ INITIALLY
 checktime ] } [, ...]
 ```
 {: screen}
 
 The system permits and maintains primary key, default, foreign key, unique, and references. Because Netezza Performance Server does not support constraint checking and referential integrity, you must ensure your own constraint checking and referential integrity.
 
-If you have permission to create a table, you can specify a constraint. 
+If you have permission to create a table, you can specify a constraint.
 
 If you have permission to alter a table, you can add or drop a table constraint.
 
@@ -110,11 +110,11 @@ You cannot change constraint names or directly change the owner of the constrain
 ### Grooming tables
 {: #groom-tbls}
 
-Groom Table processes and reorganizes the table records in each data slice in a series of steps. You can perform operations such as SELECT, UPDATE, DELETE, and INSERT while the online data grooming is taking place. 
+Groom Table processes and reorganizes the table records in each data slice in a series of steps. You can perform operations such as SELECT, UPDATE, DELETE, and INSERT while the online data grooming is taking place.
 
 The SELECT operations run in parallel with the groom operations.
 
-The INSERT, UPDATE, and DELETE operations run serially between the groom steps. 
+The INSERT, UPDATE, and DELETE operations run serially between the groom steps.
 
 For CBTs, the groom steps are longer than for non-CBT, so the INSERT, UPDATE, and DELETE operations might be pending for a longer time until the current step completes.
 
@@ -192,7 +192,7 @@ You can choose different modes when running the Groom Table operation.
 1. Select the schema where you want to create the synonym.
 1. Type a name for the synonym.
 1. Specify the reference type.
-   
+
    For example, table, view, etc.
 
 1. Specify the name of the reference type for which you are creating this synonym.
@@ -214,7 +214,7 @@ You can choose different modes when running the Groom Table operation.
 1. Specify the external SPU object filename.
 
    This it the path for the compiled object file of the Linux SPU. For example, `/etc/motd`.
-  
+
 1. Click **Create**.
 
 You can also select to replace your library, include a load clause, and include a dependencies clause.
@@ -222,12 +222,13 @@ You can also select to replace your library, include a load clause, and include 
 ## Creating functions
 {: #create-functions}
 
-You cannot create functions with the web console. Instead, you can use the dedicated command. For more information, see (CREATE {OR REPLACE} FUNCTION)[https://www.ibm.com/docs/en/netezza?topic=npssr-create-replace-function-2].
+You cannot create functions with the web console. Instead, you can use the dedicated command. For more information, see
+[CREATE {OR REPLACE} FUNCTION](https://www.ibm.com/docs/en/netezza?topic=npssr-create-replace-function-2).
 
 ## Creating aggregates
 {: #create-aggregates}
 
-You cannot create aggregates with the web console. Instead, you can use the dedicated command. For more information, see (CREATE {OR REPLACE} AGGREGATE)[https://www.ibm.com/docs/en/netezza?topic=npssr-create-replace-aggregate-2].
+You cannot create aggregates with the web console. Instead, you can use the dedicated command. For more information, see [CREATE {OR REPLACE} AGGREGATE](https://www.ibm.com/docs/en/netezza?topic=npssr-create-replace-aggregate-2).
 
 ## Creating procedures
 {: #create-procedures}
@@ -243,18 +244,18 @@ You cannot create aggregates with the web console. Instead, you can use the dedi
    This is to specify the parameter type list of the procedure. For example, `int`.
 
 1. Specify the return type of your procedure.
- 
+
    For example, `int`.
 
 1. Specify the procedure body.
 
    This is the source code for the body of the stored procedure. For example
-   
+
    ```
    BEGIN RAISE NOTICE 'The customer name is David'; END;
    ```
    {: codeblock}
-   
+
 1. Click **Create**.
 
 ## Assigning owners to objects
@@ -265,7 +266,7 @@ You cannot create aggregates with the web console. Instead, you can use the dedi
 1. Select an object type and object.
 
    For example, *Synonyms*.
-   
+
 1. Select **Assign owner** from the overflow menu.
 
    The* Assign owner* window appears and the current owner of the object is displayed.
@@ -283,11 +284,6 @@ To drop an owner, you must be the object owner, the admin user, or have appropri
 1. Select an object type and object.
 
    For example, *Synonyms*.
-   
+
 1. Select **Drop owner** from the overflow menu.
 1. Click **Drop**.
-
-
-
-
-

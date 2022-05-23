@@ -33,9 +33,9 @@ toc:
           - topicgroup:
               label: Administration
               topics:
-              - webconsole/workload-patterns.md
-              - webconsole/scheduler-rules.md
               - webconsole/settings.md
+              - webconsole/scheduler-rules.md
+          - webconsole/workload-patterns.md
           - topicgroup:
               label: Backup and restore
               topics:
@@ -84,6 +84,7 @@ toc:
       topics:
       - ha.md
       - bc-dr.md
+      - network_policies.md
 
   - navgroup:
       id: tutorial
