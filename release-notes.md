@@ -29,6 +29,7 @@ As of May 20, 2022, you can:
 
 - Use two new workload contours  NC0 and NC3 for a wider range of configuration options for provisioning and scaling.
 - Control the set of the IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or can be connected from by using network policies. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies) and [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
+- Netezza SQL Editor does not accept input for query requests. You can construct equivalent query requests by using (https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface)[the command line].
 
 ## March 2022
 {: #march2022}
