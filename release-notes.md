@@ -22,6 +22,11 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
+## June 2022
+{: #june2022}
+
+As of June 14, 2022, Postgres fixes and a stability patch for critical issues are added.
+
 ## May 2022
 {: #may2022}
 
