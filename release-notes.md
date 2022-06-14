@@ -25,15 +25,37 @@ subcollection: netezza
 ## June 2022
 {: #june2022}
 
-As of June 14, 2022, Postgres fixes and a stability patch for critical issues are added.
+As of June 14, 2022, several fixes, and a stability patch for critical issues.
+
+### Fixes
+{: #fjune2022}
+
+- Fixed the issue with queries failing with error **No such table exists** on a second attempt.
+- Fixed the issue with DBOS crashing while redumping modified plan to file.
+- Fixed the issue with intermittent hangs.
+- Fixed **ERROR : unexpected error 12** that occurred when you ran merge queries dynamically through a stored procedure.
+- Fixed the issue with memory leaks with stored procedures that occurred after the _ENABLE_SPROC_HIST_LOGGING_ variable was enabled.
+- Fixed the issue with postmaster crashing by compiling **librest** with Go 1.18.
+
+### Known issues
+{: #kijune2022}
+
+- If your backup to Microsoft Azure failed, update the streams to 16 and retry the backup.
+
 
 ## May 2022
 {: #may2022}
 
-As of May 20, 2022:
+As of May 20, 2022, workload enhacements and network policies support is added.
+
+### New features
+{: #nfmay2022}
 
 - Two new workload contours  NC0 and NC3 are available for a wider range of configuration options for provisioning and scaling.
 - Network policies support is added. You can control the set of the IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or can be connected from by using network policies. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies) and [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
+
+### Known issues
+{: #kimay2022}
 - Netezza SQL Editor does not accept input for query requests. You can construct equivalent query requests by using [the command line](https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface).
 
 ## March 2022
