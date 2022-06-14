@@ -40,7 +40,7 @@ As of June 14, 2022, several fixes, and a stability patch for critical issues.
 ### Known issues
 {: #kijune2022}
 
-- If your backup to Microsoft Azure failed, update the streams to 16 and retry the backup.
+- If a large database backup to Azure Blob Storage fails, update the number of streams to 16 and retry the backup.
 
 
 ## May 2022
