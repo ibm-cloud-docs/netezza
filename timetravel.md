@@ -159,6 +159,7 @@ As an *Admin* or a user with the *MANAGE SYSTEM* privilege, run the command:
 ```
 SYSTEM.ADMIN(ADMIN)=> SET SYSTEM DEFAULT TIME_TRAVEL_ENABLED TO ON
 ```
+
 ### Disabling time travel
 {: #disablett}
 
