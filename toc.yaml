@@ -72,6 +72,10 @@ toc:
           - endpoints.md
           - encryption.md
           - iam-docs.md
+     - topicgroup:
+         label: Netezza Performance Server time travel
+         topics:
+         - timetravel.md
       - link:
           label: Loading data
           href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
