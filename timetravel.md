@@ -27,18 +27,6 @@ Maintaining a time-based data support infrastructure might be expensive and comp
 With the technology preview of {{site.data.keyword.netezza_full}} time travel,
 you can store, retrieve, and analyze historical data without additional application logic in your data (tables, schemas, and databases).
 
-- Introducing time travel
-  - Bussines uses for time travel
-  - Time travel SQL commands
-  - Data version retention interval (DATA_VERSION_RETENTION_TIME)
-  - Temporal tables
-- Enabling and disabling time travel
-  - Enabling time travel
-  - Disabling time travel
-- Setting the retention interval
-- Changing the retention interval
--
-
 ## Introducing time travel
 {: #intrott}
 
