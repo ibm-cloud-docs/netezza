@@ -66,8 +66,7 @@ You can identify differences in between two points in time of interest.
 ## Introducing time travel
 {: #intrott}
 
-By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (for example, data that was changed or deleted)
-at any point within a specified time.
+By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (for example, data that was changed or deleted) at any point within a specified time.
 
 With time travel, you can do the following tasks:
 
@@ -92,7 +91,10 @@ specifies the maximum number of days that historical data in a temporal table is
 and visible to time travel queries. When you change data in a time travel (temporal) table,
 {{site.data.keyword.netezza_short}} preserves the state of the data before the modification so that you can do time travel operations.
 
-You can set the retention interval property at table, schema, database, and system level.
+#### Setting retention interval
+
+ If you have the *MANAGE SYSTEM* privilege, or are an *Admin* user, you can set the retention interval property (**DATA_VERSION_RETENTION_TIME**) at table, schema, database, and system level.
+
 By setting the value on a system, database, or schema, you do not have to set the property on many tables
 if you want to have the same value on all of these tables.
 
@@ -103,7 +105,6 @@ The default value at all levels is 0. A table with a 0 retention interval is not
 and does not support time travel queries.
 
 If you set a retention interval of 0 days for an object, time travel is disabled for the object.
-
 
 ### Temporal tables
 {: #temporaltablestt}
@@ -125,4 +126,23 @@ Use a system-period temporal table to store current versions of your data.
 The database transparently stores your updated and deleted data rows.
 System-period tables are system-managed.
 
-*
+## Enabling and disabling time travel
+{: #enabledisablett}
+
+### Enabling time travel
+{: #enablett}
+
+As an *Admin* or a user with the MANAGE SYSTEM privilege, run the command:
+
+```
+SYSTEM.ADMIN(ADMIN)=> SET SYSTEM DEFAULT TIME_TRAVEL_ENABLED TO ON
+```
+### Disabling time travel
+{: #disablett}
+
+As an *Admin* or a user with the MANAGE SYSTEM privilege, run the command:
+
+```
+SYSTEM.ADMIN(ADMIN)=> SET SYSTEM DEFAULT TIME_TRAVEL_ENABLED TO OFF
+```
+If **TIME_TRAVEL_ENABLED** is set from ON to OFF, existing temporal tables retain their retention time intervals and historical rows. That information is available again when **TIME_TRAVEL_ENABLED** is set to ON.
