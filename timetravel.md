@@ -20,15 +20,27 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Time travel
+# {{site.data.keyword.netezza_full}} time travel
 {: #timetravel}
 
 Maintaining a time-based data support infrastructure might be expensive and complex.
 With the technology preview of {{site.data.keyword.netezza_full}} time travel,
 you can store, retrieve, and analyze historical data without additional application logic in your data (tables, schemas, and databases).
 
-## Understanding time travel
-{: #understandingtt}
+- Introducing time travel
+  - Bussines uses for time travel
+  - Time travel SQL commands
+  - Data version retention interval (DATA_VERSION_RETENTION_TIME)
+  - Temporal tables
+- Enabling and disabling time travel
+  - Enabling time travel
+  - Disabling time travel
+- Setting the retention interval
+- Changing the retention interval
+-
+
+## Introducing time travel
+{: #intrott}
 
 This powerful tool comes in handy when you want to track the history of data changes or
 reconstruct your data. For example, you can identify one of the following values, and many more:
@@ -41,7 +53,8 @@ reconstruct your data. For example, you can identify one of the following values
 - The supplier that routinely offers a steeper discount than first indicated.
 
 
-Common business uses for temporal tables:
+### Business uses for time travel
+{: #businessusett}
 
 **Conducting data audits**
 You can do data forensics because time travel provides an audit trail.
@@ -64,12 +77,9 @@ You can reconstruct the state of the data as of any time in the past.
 **Identifying differences**
 You can identify differences in between two points in time of interest.
 
-## Introducing time travel
-{: #intrott}
-
 By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (for example, data that was changed or deleted) at any point within a specified time.
 
-With time travel, you can do the following tasks:
+With time travel, you can do the following tasks, and more:
 
 - Create a system-managed temporal table by specifying a data version retention time interval.
 - Create or alter a schema with a retention time, which is to be inherited by tables that are created after a create or delete operation.
@@ -81,31 +91,40 @@ With time travel, you can do the following tasks:
 - Create or replace a view whose definition is a temporal query.
 
 
-### Time travel SQL extensions
+### Time travel SQL commands
 {: #sqltt}
+
+A **TIME_TRAVEL_ENABLED** subcommand is added to the following commands:
+- SET SYSTEM DEFAULT
+- SHOW SYSTEM DEFAULT
+
+A **DATA_VERSION_RETENTION_TIME** subcommand is added to the following commands:
+- SET SYSTEM DEFAULT
+- SHOW SYSTEM DEFAULT
+- CREATE DATABASE
+- ALTER DATABASE
+- CREATE SCHEMA
+- ALTER SCHEMA
+- CREATE TABLE
 
 ### Data version retention interval (DATA_VERSION_RETENTION_TIME)
 {: #retentiontt}
 
 Data version retention time interval (retention time interval, retention interval)
 specifies the maximum number of days that historical data in a temporal table is preserved
-and visible to time travel queries. When you change data in a time travel (temporal) table,
-{{site.data.keyword.netezza_short}} preserves the state of the data before the modification so that you can do time travel operations.
+and visible to time travel queries.
 
-#### Setting retention interval
+For example, if you modify an object, {{site.data.keyword.netezza_short}} preserves the state of the data before the modification so that you can do time travel operations.
 
- If you have the *MANAGE SYSTEM* privilege, or are an *Admin* user, you can set the retention interval property (**DATA_VERSION_RETENTION_TIME**) at table, schema, database, and system level.
-
-By setting the value on a system, database, or schema, you do not have to set the property on many tables
-if you want to have the same value on all of these tables.
-
-You can set the retention interval to any value from 0 up to 92 days. When the retention interval ends,
+The default retention interval value at all levels is 0. The maximum is 92 days. When the retention interval ends,
 your historical data is no longer available for querying and you cannot restore objects.
 
-The default value at all levels is 0. A table with a 0 retention interval is not a temporal table
-and does not support time travel queries.
+A table with a 0 retention interval is not a temporal table (time travel table) and does not support time travel queries.
 
 If you set a retention interval of 0 days for an object, time travel is disabled for the object.
+
+Netezza Performance Server retains the historical data based on the retention time interval that is associated with a table. This retention period is the time period (in days) over which you can query the historical data.
+Older historical rows are reclaimed when you run the **GROOM TABLE** command, or use the **AutoMaint** groom feature if the rows are not needed to support incremental backup.
 
 ### Temporal tables
 {: #temporaltablestt}
@@ -130,10 +149,12 @@ System-period tables are system-managed.
 ## Enabling and disabling time travel
 {: #enabledisablett}
 
+By default, time travel
+
 ### Enabling time travel
 {: #enablett}
 
-As an *Admin* or a user with the MANAGE SYSTEM privilege, run the command:
+As an *Admin* or a user with the *MANAGE SYSTEM* privilege, run the command:
 
 ```
 SYSTEM.ADMIN(ADMIN)=> SET SYSTEM DEFAULT TIME_TRAVEL_ENABLED TO ON
@@ -141,9 +162,24 @@ SYSTEM.ADMIN(ADMIN)=> SET SYSTEM DEFAULT TIME_TRAVEL_ENABLED TO ON
 ### Disabling time travel
 {: #disablett}
 
-As an *Admin* or a user with the MANAGE SYSTEM privilege, run the command:
+As an *Admin* or a user with the *MANAGE SYSTEM* privilege, run the command:
 
 ```
 SYSTEM.ADMIN(ADMIN)=> SET SYSTEM DEFAULT TIME_TRAVEL_ENABLED TO OFF
 ```
-If **TIME_TRAVEL_ENABLED** is set from ON to OFF, existing temporal tables retain their retention time intervals and historical rows. That information is available again when **TIME_TRAVEL_ENABLED** is set to ON.
+
+If **TIME_TRAVEL_ENABLED** is set from ON to OFF, the existing temporal tables retain their retention intervals and historical rows. That information is available again when **TIME_TRAVEL_ENABLED** is set to ON.
+
+## Setting the retention interval
+{: #settingtt}
+
+If you have the *MANAGE SYSTEM* privilege, or are an *Admin* user, you can set the retention interval property (**DATA_VERSION_RETENTION_TIME**) on a table, schema, database, and system level.
+
+You can set **DATA_VERSION_RETENTION_TIME** on a whole system, database, or schema to have the same value on the tables within that system, database, or schema.
+
+You can set the retention interval to any value from 0 up to 92 days. When the retention interval ends,
+your historical data is no longer available for querying and you cannot restore objects.
+
+If you set a retention interval of 0 days for an object, time travel is disabled for the object.
+
+## Changing the retention interval
