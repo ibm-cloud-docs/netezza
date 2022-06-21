@@ -45,6 +45,8 @@ you can store, retrieve, and analyze historical data without additional applicat
 
 - Setting time periods for queries
 
+- Running queries
+
 ## Introducing time travel
 {: #intrott}
 
@@ -203,5 +205,8 @@ If you set a retention interval of 0 days for an object, time travel is disabled
 ## Querying historical data
 {: #queryingtt}
 
-### Setting time periods for queries
+## Setting time periods for queries
 {: #settingtimett}
+
+## Running queries
+{: #runningtt}
