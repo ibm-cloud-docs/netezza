@@ -72,7 +72,7 @@ toc:
           - endpoints.md
           - encryption.md
           - iam-docs.md
-     - topicgroup:
+      - topicgroup:
          label: Netezza Performance Server time travel
          topics:
          - timetravel.md
