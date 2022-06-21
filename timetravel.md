@@ -1,8 +1,9 @@
+---
 copyright:
   years:  2022
 lastupdated: "2022-06-20"
 
-keywords:
+keywords: time travel, Netezza time travel, temporal tables, Netezza Performance Server time travel, retention interval, retention time interval, enabling time travel, disabling time travel
 
 subcollection: netezza
 
