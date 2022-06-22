@@ -24,14 +24,15 @@ subcollection: netezza
 # {{site.data.keyword.netezza_short}} and Kafka
 {: #nz-kafka}
 
-**COMMENT** What systems, applications, etc. would be using this? Do we have any examples of usage?
+**COMMENT**
+1. What systems, applications, etc. would be using this? Do we have any examples of usage?
+1. Do we want to elaborate more on the structure of the messages/topics, or do we assume that the customer would know it already?
 
-Do we want to elaborate more on the structure of the messages/topics, or do we assume that the customer would know it already?
+Apache Kafka is a publish-subscribe messaging system. With Kafka, you can exchange data between processes, applications, and servers in distributed systems.
 
-Apache Kafka is a publish-subscribe based messaging system. With this system, you can exchange data between processes, applications, and servers in distributed systems.
+The sender (producers) can send and write messages to Kafka. In turn, the recipients (consumers) can read from its published stream. 
 
-The sender (producers) can send and write messages to Apache Kafka. In turn, the recipients (consumers) can read from its published stream. 
-**COMMENT** This is unclear What stream?
+**COMMENT** This is unclear What stream? Kafka's?
 
 The messages are grouped into topics. The sender writes messages to specific topics and the consumer receives the messages.
 
