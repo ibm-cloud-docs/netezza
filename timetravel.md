@@ -24,8 +24,8 @@ subcollection: netezza
 {: #timetravel}
 
 Maintaining a time-based data support infrastructure might be expensive and complex.
-With the technology preview of {{site.data.keyword.netezza_full}} time travel,
-you can store, retrieve, and analyze historical data without additional application logic in your data (tables, schemas, and databases).
+With the technology preview of {{site.data.keyword.netezza_short}} time travel,
+you can store, retrieve, and analyze historical data without using additional application logic in your data (tables, schemas, and databases).
 
 - Introducing time travel
   - Uses for time travel
