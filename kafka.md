@@ -24,7 +24,10 @@ subcollection: netezza
 # {{site.data.keyword.netezza_short}} and Kafka
 {: #netezzakafka}
 
-(Apache Kafka)[https://kafka.apache.org/documentation/] is a publish-subscribe messaging system, which you can use to move between popular applications.
+## Overview
+{: #overviewkafka}
+
+[Apache Kafka](https://kafka.apache.org/documentation/) is a publish-subscribe messaging system, which you can use to move between popular applications.
 
 After you integrate your {{site.data.keyword.netezza_full}} instance with Kafka through the Kafka JDBC connector, you can use {{site.data.keyword.netezza_short}} as one of the following:
 
