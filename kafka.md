@@ -54,6 +54,8 @@ In this case, data is read from {{site.data.keyword.netezza_short}} through the 
 
 The following image illustrates the flow.
 
+![{{site.data.keyword.netezza_short}} as a data source](images/nzdatasource.png){: caption="Image 1. The diagram depicts how Kafka reads data from Netezza through the JDBC source connector and enables consumer apps to access it." caption-side="bottom"}
+
 **Example #2**
 
 Data sink
@@ -61,6 +63,8 @@ Data sink
 To improve patient outcomes, efficiently identify risk factors, and ensure quicker intervention times, a hospital extracts meaningful insights by analyzing different data sets as they arrive from various channels. The incoming data is streamed and computed through Kafka.
 
 Later on, the processed data is stored on {{site.data.keyword.netezza_short}} through the Kafka JDBC sink connector for patient history record purposes.
+
+![{{site.data.keyword.netezza_short}} as a data sink](images/nzsink.png){: caption="Image 2. The diagram depicts how incoming data from various producers is streamed and computed by Kafka through the JDBC driver and stored on Netezza." caption-side="bottom"}
 
 In this case,
 - the producers = patient data from various channels
