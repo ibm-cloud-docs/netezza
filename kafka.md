@@ -22,29 +22,60 @@ subcollection: netezza
 {:caption: .caption}
 
 # {{site.data.keyword.netezza_short}} and Kafka
-{: #nz-kafka}
+{: #netezzakafka}
 
-**COMMENT**
-1. What systems, applications, etc. would be using this? Do we have any examples of usage?
-1. Do we want to elaborate more on the structure of the messages/topics, or do we assume that the customer would know it already?
+(Apache Kafka)[https://kafka.apache.org/documentation/] is a publish-subscribe messaging system, which you can use to move between popular applications.
 
-Apache Kafka is a publish-subscribe messaging system. With Kafka, you can exchange data between processes, applications, and servers in distributed systems.
+After you integrate your {{site.data.keyword.netezza_full}} instance with Kafka through the Kafka JDBC connector, you can use {{site.data.keyword.netezza_short}} as one of the following:
 
-The sender (producers) can send and write messages to Kafka. In turn, the recipients (consumers) can read from its published stream. 
+- A data source, which brings data to Kafka.
+- A data sink, which reads data from Kafka.
 
-**COMMENT** This is unclear What stream? Kafka's?
+## Use cases
+{: #usecaseskafka}
 
-The messages are grouped into topics. The sender writes messages to specific topics and the consumer receives the messages.
+With {{site.data.keyword.netezza_short}} and Kafka, you can do the following tasks:
 
-Messages from a specific topic are sent to the recipients who listen to that topic.
+- Collect metrics
+- Collect high-volume events
+- Share database change events (change data capture)
+- Share last-value queues
+- Exchange simple messages
 
-**COMMET** Is "listen" the correct word? Is there an option to listen to a topic or is it call "subscribe", "follow", etc.?
+Consider the following examples.
 
-## Kafka connect and connectors
-{: #kafkacc}
+**Example #1**
 
-## Installing Kafka
-{: #installingkafka}
+Data source
 
-## Starting Kafka
-{: #startingkafka}
+An e-commerce company stores its product listings in a {{site.data.keyword.netezza_short}} database. To streamline the in-app search experience and to access real time analytics, consumer apps (for example, Elasticsearch and Apache Flink) have access to the listings.
+
+In this case, data is read from {{site.data.keyword.netezza_short}} through the Kafka JDBC source connector and Kafka streams the data. The consumer apps read from the stream and further process the data.
+
+The following image illustrates the flow.
+
+**Example #2**
+
+Data sink
+
+To improve patient outcomes, efficiently identify risk factors, and ensure quicker intervention times, a hospital extracts meaningful insights by analyzing different data sets as they arrive from various channels. The incoming data is streamed and computed through Kafka.
+
+Later on, the processed data is stored on {{site.data.keyword.netezza_short}} through the Kafka JDBC sink connector for patient history record purposes.
+
+In this case,
+- the producers = patient data from various channels
+- input data is streamed through Kafka and processed before it is being written to Netezza.
+
+
+## Integrating {{site.data.keyword.netezza_short}} and Kafka
+{: #connectingkafka}
+
+If you want to integrate your {{site.data.keyword.netezza_short}} instance with Kafka, you must use the Kafka JDBC connector from (Aiven)[https://github.com/aiven/jdbc-connector-for-apache-kafka].
+
+The Aiven Kafka JDBC connector has support for source and sink JDBC connectors. With the source connector, you can transfer data from a relational database into Kafka topics. With the sink connector, you can transfer data from Kafka topics into a relational database Kafka Connect over JDBC.
+
+
+### Setting up the JDBC Kafka connector
+{:# connectorkafka}
+
+You must install the driver in Kafka's library by editing *plugin.path*. For more information, see
