@@ -80,6 +80,10 @@ toc:
          label: Netezza Performance Server and Kafka
          topics:
          - kafka.md
+      - topicgroup:
+         label: Netezza Performance Server external tables
+         topics:
+         - singularity.md
       - link:
           label: Loading data
           href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
