@@ -20,7 +20,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# {{site.data.keyword.netezza_short}} external data sources
+# Querying  data from data lakes
 {: #singularity}
 
 With {{site.data.keyword.netezza_full}}, you can use external tables to access and query **parquet** files that are stored outside of your database in data lakes.
