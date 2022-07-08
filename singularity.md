@@ -23,9 +23,7 @@ subcollection: netezza
 # {{site.data.keyword.netezza_short}} external data sources
 {: #singularity}
 
-**COMMENT: Name TBD**
-
-With {{site.data.keyword.metezza_full}}, you can use external tables to access and query **parquet** files that are stored outside of your database.
+With {{site.data.keyword.metezza_full}}, you can use external tables to access and query **parquet** files that are stored outside of your database in data lakes.
 
 {{site.data.keyword.netezza_short}} supports the following external data sources:
 
@@ -45,7 +43,7 @@ Use cases for external data source include:
 - X
 - X
 
-**COMMET: NEED HIGH-LEVEL EXAMPLES**
+**COMMET: NEED HIGH-LEVEL EXAMPLES, like loading and cleaning your data in one pass and writing the cleaned result into Netezza? Joining tables with frequently changing data from an external data source. By querying the external data source directly, you don't need to reload the data into NPS storage every time it changes.**
 
 To work with external data, you must do the following:
 
@@ -56,6 +54,8 @@ To work with external data, you must do the following:
 
 ## Creating external data sources with **CREATE EXTERNAL DATASOURCE**
 {: #creating_externaldatasources_singularity}
+
+You can create external data sources with the **CREATE EXTERNAL TABLE** command.
 
 External data sources are used to establish connection between storage accounts, and support the first use of data virtualization and data loading.
 
@@ -69,13 +69,15 @@ External data sources are used to establish connection between storage accounts,
 
   If the schema where you define the table is not the default schema, you must have the **List** privilege on the schema as well.
 
+1. If **ENABLE_EXTERNAL_DATASOURCE** is not set to `1`, set it.
+
+   ```
+   SET ENABLE_EXTERNAL_DATASOURCE = 1;
+   ```
+
 1. Run the **CREATE EXTERNAL DATASOURCE** command to create external data sources.
 
-   You cannot use the **INSERT**, **DROP**, **TRUNCATE** and other commands to work with external data sources.
-
-   You can only create external datasource when ENABLE_EXTERNAL_DATASOURCE 
-
-   **COMMENT: WHAT DOES THE LAST SENTENCE MEAN??**
+   The **INSERT**, **DROP**, **TRUNCATE** and other commands do not work with external data sources.
 
    ```
    CREATE EXTERNAL DATASOURCE <name> on AWSS3 or AZUREBLOB USING ( <external_datasource_options> );
@@ -159,8 +161,44 @@ DROP EXTERNAL DATASOURCE NYCTAXIS3 ;
 ## Creating external tables with **CREATE EXTERNAL TABLE**
 {: #externaltables_singularity}
 
-With the **CREATE EXTERNAL TABLE** command, you can create an external
+You can create an external tables with the **CREATE EXTERNAL TABLE** command.
+
+You can use external tables build on external datas ources. External data sources represent connection string information that describes where your data is placed and how to authenticate to your data source. -- REPETITION OF INFO?
+
+With this we will mention the object file path and format of the file and all other connection string information will be fetched from external datasource the external table is build on. 
+
+**COMMENT: This needs clarification**
+
+1. Ensure that **ENABLE_EXTERNAL_DATASOURCE** is set to `1`.
+
+**COMMENT: Is there a command to verify this or do you have to run the SET command every time?**
+
+1. Create an external data source.
+
+   Ensure that you have the correct privileges as mentioned in (Creating external data sources with **CREATE EXTERNAL DATASOURCE**)
+
+```
+CREAT1E EXTERNAL DATASOURCE NYCTAXIS3 
+ON AWSS3 
+USING (
+   ACCESSKEYID '.....' 
+   SECRETACCESSKEY  '...' 
+   BUCKET 'myfancybucket' 
+   REGION 'US-EAST-1'
+);
+```
+
+1. Create an external table.
+
+```
+CREATE EXTERNAL TABLE nyc_taxi 
+ON NYCTAXIS3 
+USING ( 
+   DATAOBJECT ('/example.parquet') 
+   format 'PARQUET' 
+);
+```
 
 ## Creating and querying external tables
 
-Can we use the examples from: https://github.ibm.com/Voldemort/nzparquet/blob/master/EXAMPLES.md??
+**COMMENT: Can we use the examples from: https://github.ibm.com/Voldemort/nzparquet/blob/master/EXAMPLES.md?? Especially how to get data from a private vs public bucket. How to save changed data? Optimisation seems to be the main selling point, why not showcase this better, for example by providing examples how to filter, display select columns, see how the file is structured?**
