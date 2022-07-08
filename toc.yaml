@@ -81,12 +81,19 @@ toc:
          topics:
          - kafka.md
       - topicgroup:
-         label: Netezza Performance Server external data sources
+         label: Querying data from data lakes
          topics:
          - singularity.md
+         - singularity_examples.md
          - link:
              label: External tables
              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
+         - link:
+             label: CREATE EXTERNAL TABLE command
+             href: https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2
+         - link:
+             label: CREATE EXTERNAL DATASOURCE command
+             href: https://www.ibm.com/docs/en/netezza?topic=tables-create-external-datasource-command
       - link:
           label: Loading data
           href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
