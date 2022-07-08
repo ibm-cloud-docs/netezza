@@ -81,7 +81,7 @@ toc:
          topics:
          - kafka.md
       - topicgroup:
-         label: Netezza Performance Server external tables
+         label: Netezza Performance Server external data sources
          topics:
          - singularity.md
       - link:
