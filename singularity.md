@@ -20,52 +20,44 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# {{site.data.keyword.netezza_short}} singularity
+# {{site.data.keyword.netezza_short}} external data sources
 {: #singularity}
 
-**COMMENT:**
+**COMMENT: Name TBD**
 
-1. Name TBD
-1. Can you access data from S3 only?
+With {{site.data.keyword.metezza_full}}, you can use external tables to access and query **parquet** files that are stored outside of your database.
 
-With {{site.data.keyword.netezza_full}}, you can run different types of analytics on the fly to guide better decisions without having to import the data directly into your database.
+{{site.data.keyword.netezza_short}} supports the following external data sources:
 
+- AWS S3
+- Azure Blob Storage
 
-If you are working with external data sources, you can use {{site.data.keyword.netezza_short}} to access and analyze **.parquet** files that are stored on on AWS Simple Cloud Storage (S3) or AZURE remote sources.
+External data sources use connection strings to specify how you can access an external system. Each connection string describes where your data is placed and how to authenticate to your data source. Each external data source has a definition (schema), but the actual data exists inside the {{site.data.keyword.netezza_short}} database.
 
+**TIP:**
+1. After you create an external datasource definition, you can use **ALTER** statements to modify the external data source columns or **SHOW** statements to view the external data source column values.
+1. You can use the *verbose* option with the **SHOW** command. When you run the command, the column values are combined to form the cloud connection string for that external data source.
 
-## Setting up
-{: #settingupsingularity}
+**COMMENT: Can I get an example command for this?**
 
-To query or load external data, do the following steps:
+Use cases for external data source include:
+
+- X
+- X
+
+**COMMET: NEED HIGH-LEVEL EXAMPLES**
+
+To work with external data, you must do the following:
 
 1. Specify bucket details, credentials, and other necessary information to access data that is stored outside {{site.data.keyword.netezza_short}}.
 1. Create an external table on a specific AWS bucket.
 
-## Using external tables
-{: #externaltablessingularity}
+**COMMENT: 1. AWS only? 2. How relevant is the info from the box note from a client POV?**
 
-An external table points to data that is located in AWS S3. External tables are used to read data from files or write data to files.
-
-Each external table specifies the parameters (connection string) that are needed to connect to a specific database. For example, username, password, the location of the database, or the timeout duration. You can include authentication information for the database in the data source connection by creating a sign on.
-
-Data sources represent connection string information that describes where your data is placed and how to authenticate to your data source.
-
-
-
-External data sources have schemas (definitions), but the actual data exists inside the {{site.data.keyword.netezza_short}} database.
-
-External datasources are maintained are specific to every database. After you create the external datasource definition, you can use ALTER statements to modify the external datasource columns or use SHOW statement to view the external datasource column values. Additionally, Netezza provides a verbose option too for the SHOW statement which combines the column values to form the cloud connection string for that external datasource. 
-
-## External data source
-{: #externaldatasource_singularity}
-
-Data sources represent connection string information that describes where your data is placed and how to authenticate to your data source. You can use external datasources to access files of various format like .parquet that are stored on S3 or AZURE remote sources. An external datasource has a definition, also called its schema, but the actual data exists inside the Netezza system database. External datasources are maintained are specific to every database. After you create the external datasource definition, you can use ALTER statements to modify the external datasource columns or use SHOW statement to view the external datasource column values. Additionally, Netezza provides a verbose option too for the SHOW statement which combines the column values to form the cloud connection string for that external datasource. 
-
-### Creating external data sources with **CREATE EXTERNAL DATASOURCE**
+## Creating external data sources with **CREATE EXTERNAL DATASOURCE**
 {: #creating_externaldatasources_singularity}
 
-External data source defines the location of the external database and the credentials to connect to it. External data sources are used to establish connectivity and support the primary use case of data virtualization and data load by using {{site.data.keyword.netezza_short}}.
+External data sources are used to establish connection between storage accounts, and support the first use of data virtualization and data loading.
 
 1. Ensure that you have the following privileges:
 
@@ -79,15 +71,61 @@ External data source defines the location of the external database and the crede
 
 1. Run the **CREATE EXTERNAL DATASOURCE** command to create external data sources.
 
+   You cannot use the **INSERT**, **DROP**, **TRUNCATE** and other commands to work with external data sources.
+
    You can only create external datasource when ENABLE_EXTERNAL_DATASOURCE 
 
    **COMMENT: WHAT DOES THE LAST SENTENCE MEAN??**
 
+   ```
+   CREATE EXTERNAL DATASOURCE <name> on AWSS3 or AZUREBLOB USING ( <external_datasource_options> );
+   ```
+
+### **CREATE EXTERNAL DATASOURCE** examples
+{: createexamples_singularity}
+
+- The following command creates an external datasource having remote source AWSS3: 
+
 ```
-CREATE EXTERNAL DATASOURCE <name> on AWSS3 or AZUREBLOB USING ( <external_datasource_options> );
+CREATE EXTERNAL DATASOURCE NYCTAXIS3 
+ON AWSS3 
+USING (
+   ACCESSKEYID '.....' 
+   SECRETACCESSKEY  '...' 
+   BUCKET 'myfancybucket' 
+   REGION 'US-EAST-1'
+);
 ```
 
+- The following command alters the external datasource to modify columns:
 
+```
+ALTER EXTERNAL DATASOURCE NYCTAXIS3 ON AWSS3 USING (BUCKET 'myfancybucket');
+```
+
+- The following command shows the external data source column values:
+
+```
+SHOW EXTERNAL DATASOURCE NYCTAXIS3;
+```
+
+- The following command shows the external data source in a cloud connection string format:
+
+```
+SHOW EXTERNAL DATASOURCE NYCTAXIS3 VERBOSE;
+```
+
+- The following command creates an external `NYCTAXIS31` data source with the remote source `AZUREBLOB`:
+
+```
+CREATE EXTERNAL DATASOURCE NYCTAXIS31B ON AZUREBLOB USING (CONTAINER '????' KEY '????' ACCOUNT '????' BLOBTYPE 'CSSM_KEYBLOB_RAW');
+```
+
+- The following command drops the external `NYCTAXIS3` data source:
+
+```
+DROP EXTERNAL DATASOURCE NYCTAXIS3 ;
+```
 
 ### **CREATE EXTERNAL DATASOURCE** syntax
 {: #syntax_singularity}
@@ -118,5 +156,11 @@ CREATE EXTERNAL DATASOURCE <name> on AWSS3 or AZUREBLOB USING ( <external_dataso
 
 **COMMENT: Why is blobtype empty? Is this N/A or an omission?**
 
-## External datasource examples
-{: #examples_singularity}
+## Creating external tables with **CREATE EXTERNAL TABLE**
+{: #externaltables_singularity}
+
+With the **CREATE EXTERNAL TABLE** command, you can create an external
+
+## Creating and querying external tables
+
+Can we use the examples from: https://github.ibm.com/Voldemort/nzparquet/blob/master/EXAMPLES.md??
