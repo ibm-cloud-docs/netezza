@@ -23,11 +23,7 @@ subcollection: netezza
 # Overview
 {: #overview_singularity}
 
-With {{site.data.keyword.netezza_full}}, you can use external tables to access and query **parquet** files that are stored outside of your database in data lakes.
-
-{{site.data.keyword.netezza_short}} supports the following external data sources:
-
-- AWS S3
+With {{site.data.keyword.netezza_full}}, you can use external tables to access and query **parquet** files that are stored outside of your database in data lakes (on AWS S3).
 
 External data sources use connection strings to specify how you can access an external system. Each connection string describes where your data is placed and how to authenticate to your data source. Each external data source has a definition (schema), but the actual data exists inside the {{site.data.keyword.netezza_short}} database.
 
@@ -35,13 +31,3 @@ Use cases for external data source include:
 
 - Loading and cleaning your data in one pass and writing the cleaned result into {{site.data.keyword.netezza_short}}.
 - Joining tables with frequently changing data from an external data source.
-
-- [Before you begin](/docs/netezza?topic=netezza-prereqs_singularity)
-- [Access data](/docs/netezza?topic=netezza-accessing_singularity)
-- Query data
-
-  - [Query data from data lakes without ingesting it](/docs/netezza?topic=netezza-querying-data-from-a-data-lake-without-ingesting)
-  - [Query and merging data from data lakes with data stored locally](/docs/netezza?topic=netezza-merging-data-from-a-data-lake-with-data-stored-locally)
-  - [Ingest data from data lakes by using external tables](/docs/netezza?topic=netezza-ingest_singularity)
-
-- [Query examples](/docs/netezza?topic=netezza-queries_singularity)
