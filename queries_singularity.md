@@ -30,12 +30,9 @@ subcollection: netezza
 
 Select the subset of columns. In this example, the columns are 'squares' and 'num'.
 
+
 ```
-select *
-from
-table(
-    scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 2, 'squares', 'num')
-);
+SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 2, 'squares', 'num'));
 ```
 
 Example:
@@ -76,11 +73,7 @@ squares | num
 {: #filters_singularity}
 
 ```
-select *
-from
-table(
-    scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 0, '$1 > $2', 'squares', 200::float)
-);
+SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 0, '$1 > $2', 'squares', 200::float));
 ```
 
 Example:
@@ -107,11 +100,7 @@ num | squares |     timestamps      | fibonacci | fibs_is_even | Uppercase | Low
 {: #filterscolumns_singularity}
 
 ```
-select *
-from
-table(
-    scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 3, 'num', 'timestamps', 'fibs_is_even', '$1 > $2', 'squares', 200::float)
-);
+SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 3, 'num', 'timestamps', 'fibs_is_even', '$1 > $2', 'squares', 200::float));
 ```
 
 Example:
@@ -138,11 +127,7 @@ num |     timestamps      | fibs_is_even
 {: #filterscolumnsoptions_singularity}
 
 ```
-select *
-from
-table(
-    scan_data_source('s3://myfancybucketexample/example.parquet', 'appendtimezonecolumn=true', 3, 'num', 'timestamps', 'fibs_is_even', '$1 > $2', 'squares', 200::float)
-);
+SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', 'appendtimezonecolumn=true', 3, 'num', 'timestamps', 'fibs_is_even', '$1 > $2', 'squares', 200::float));
 ```
 
 Example:
@@ -169,11 +154,7 @@ num |     timestamps      | timestamps-timezone | fibs_is_even
 {: #complexfilters_singularity}
 
 ```
-select *
-from
-table(
-    scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 0, '($1 > $2) && ($1 < $3)', 'squares', 20::float, 200::float)
-);
+SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 0, '($1 > $2) && ($1 < $3)', 'squares', 20::float, 200::float));
 ```
 
 Example:
