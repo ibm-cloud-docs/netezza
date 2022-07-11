@@ -63,22 +63,13 @@ USING ( 
 **COMMENT: need to highlight being able to use my loaded data against some external source**
 
 ```
-select *
-from
-table(
-    scan_data_source('file:///shared/example.parquet')
-);
+SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('file:///nz/example.parquet'));
 ```
-
 
 4. Get a subset of columns from the file.
 
 ```
-select *
-from
-table(
-    scan_data_source('file:///shared/example.parquet', NULL, 2, 'squares', 'num')
-);
+SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('file:///nz/example.parquet', NULL, 2, 'squares', 'num'));
 ```
 
 Example:

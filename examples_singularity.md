@@ -62,11 +62,7 @@ USING ( 
 4. Access your data.
 
 ```
-select *
-from
-table(
-    scan_data_source('s3://myfancybucketexample/example.parquet', 'awskeyid=AWSKEYID secretaccesskey=SECRETACCESSKEY')
-);
+SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', awskeyid=AWSKEYID secretaccesskey=SECRETACCESSKEY'));
 ```
 
 See [Accessing data](/docs/netezza?topic=netezza-accessing_singularity).
@@ -74,11 +70,7 @@ See [Accessing data](/docs/netezza?topic=netezza-accessing_singularity).
 4. Get a subset of columns from the file.
 
 ```
-select *
-from
-table(
-    scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 2, 'squares', 'num')
-);
+SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 2, 'squares', 'num'));
 ```
 
 Example:
