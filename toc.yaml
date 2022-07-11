@@ -85,7 +85,6 @@ toc:
          topics:
          - singularity.md
          - prereqs_singularity.md
-         - accessing_singularity.md
          - examples_singularity.md
          - examples2_singularity.md
          - examples3_singularity.md

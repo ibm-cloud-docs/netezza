@@ -19,7 +19,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Before you begin
+# Setting up
 {: #prereqs_singularity}
 
 To query external data, you must do the following:
