@@ -84,7 +84,6 @@ toc:
          label: Querying data from data lakes
          topics:
          - singularity.md
-         - prereqs_singularity.md
          - examples_singularity.md
          - examples2_singularity.md
          - examples3_singularity.md
