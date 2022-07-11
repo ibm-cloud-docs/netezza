@@ -30,14 +30,12 @@ To query external data, you must do the following:
 SET ENABLE_EXTERNAL_DATASOURCE = 1;
 ```
 
-**COMMENT: Is there a command to verify this or do you have to run the SET command every time?**
-
 2. Create an external data source.
 
    For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=).
 
 ```
-CREAT1E EXTERNAL DATASOURCE NYCTAXIS3 
+CREATE EXTERNAL DATASOURCE NYCTAXIS3 
 ON AWSS3 
 USING (
    ACCESSKEYID '.....' 
