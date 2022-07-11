@@ -130,7 +130,7 @@ num | squares |     timestamps      | fibonacci | fibs_is_even | Uppercase | Low
 (26 rows)
 ```
 
-## Accesing data from private buckets
+### Accesing data from private buckets
 
 To retrieve data from a private bucket, you must use the following credentials.
 
