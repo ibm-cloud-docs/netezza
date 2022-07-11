@@ -20,10 +20,4 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Querying data from a data lake without ingesting
-{:querying_singularity}
-
-1. Create an external data source.
-
-2. Create an external table.
-3. Query the external data source.
+# Ingesting data from data lakes by using external tables
