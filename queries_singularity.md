@@ -32,7 +32,7 @@ Select the subset of columns. In this example, the columns are 'squares' and 'nu
 
 
 ```
-SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 2, 'squares', 'num'));
+select squares, num from nyc_taxi;
 ```
 
 Example:
@@ -73,7 +73,7 @@ squares | num
 {: #filters_singularity}
 
 ```
-SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 0, '$1 > $2', 'squares', 200::float));
+select $1 > $2, squares, 200::float from nyc_taxi;
 ```
 
 Example:
@@ -100,7 +100,7 @@ num | squares |     timestamps      | fibonacci | fibs_is_even | Uppercase | Low
 {: #filterscolumns_singularity}
 
 ```
-SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 3, 'num', 'timestamps', 'fibs_is_even', '$1 > $2', 'squares', 200::float));
+select num, timestamps, fibs_is_even, $1 > $2, squares, 200::float from nyc_taxi;
 ```
 
 Example:
@@ -127,7 +127,7 @@ num |     timestamps      | fibs_is_even
 {: #filterscolumnsoptions_singularity}
 
 ```
-SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', 'appendtimezonecolumn=true', 3, 'num', 'timestamps', 'fibs_is_even', '$1 > $2', 'squares', 200::float));
+select appendtimezonecolumn=true, 3, num, timestamps, fibs_is_even, $1 > $2, squares, 200::float from nyc_taxi;
 ```
 
 Example:
@@ -154,7 +154,7 @@ num |     timestamps      | timestamps-timezone | fibs_is_even
 {: #complexfilters_singularity}
 
 ```
-SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 0, '($1 > $2) && ($1 < $3)', 'squares', 20::float, 200::float));
+select ($1 > $2) && ($1 < $3), squares, 20::float, 200::float from nyc_taxi;
 ```
 
 Example:

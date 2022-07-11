@@ -36,19 +36,43 @@ SET ENABLE_EXTERNAL_DATASOURCE = 1;
    For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=).
 
 ```
-CREAT1E EXTERNAL DATASOURCE NYCTAXIS3 
+CREAT1E EXTERNAL DATASOURCE 'DATASOURCE'
+ON AWSS3 
+USING (
+   ACCESSKEYID 'ACCESS KEY ID' 
+   SECRETACCESSKEY  'SECRET ACCESS KEY' 
+   BUCKET 'BUCKET' 
+   REGION 'REGION'
+);
+```
+
+Example:
+
+```
+CREAT1E EXTERNAL DATASOURCE NYCTAXIS3
 ON AWSS3 
 USING (
    ACCESSKEYID '.....' 
    SECRETACCESSKEY  '...' 
-   BUCKET 'myfancybucket' 
-   REGION 'US-EAST-1'
+   BUCKET '...' 
+   REGION '...'
 );
 ```
 
 3. Create an external table.
 
    Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
+
+```
+CREATE EXTERNAL TABLE 'TABLE' 
+ON 'DATASOURCE' 
+USING ( 
+   DATAOBJECT ('/example.parquet')
+   format 'PARQUET' 
+);
+```
+
+Example:
 
 ```
 CREATE EXTERNAL TABLE nyc_taxi 
@@ -59,18 +83,10 @@ USING ( 
 );
 ```
 
-4. Access your data.
-
-```
-SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', awskeyid=AWSKEYID secretaccesskey=SECRETACCESSKEY'));
-```
-
-See [Accessing data](/docs/netezza?topic=netezza-accessing_singularity).
-
 4. Get a subset of columns from the file.
 
 ```
-SYSTEM.ADMIN(ADMIN)=> select *from table(scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 2, 'squares', 'num'));
+select squares, num from nyc_taxi;
 ```
 
 Example:
