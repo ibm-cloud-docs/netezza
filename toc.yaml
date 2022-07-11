@@ -86,9 +86,12 @@ toc:
          - singularity.md
          - prereqs_singularity.md
          - accessing_singularity.md
-         - examples_singularity.md
-         - examples2_singularity.md
-         - examples3_singularity.md
+         -topicgroup:
+            label: Query data
+            topics:
+            - examples_singularity.md
+            - examples2_singularity.md
+            - examples3_singularity.md
          - queries_singularity.md
          - link:
              label: External tables

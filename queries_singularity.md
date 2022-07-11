@@ -34,7 +34,7 @@ Select the subset of columns. In this example, the columns are 'squares' and 'nu
 select *
 from
 table(
-    scan_data_source('s3://myfancybucketmateuszstompor/example.parquet', NULL, 2, 'squares', 'num')
+    scan_data_source('s3://myfancybucketexample/example.parquet', NULL, 2, 'squares', 'num')
 );
 ```
 

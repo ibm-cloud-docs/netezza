@@ -21,3 +21,6 @@ subcollection: netezza
 {:caption: .caption}
 
 # Ingesting data from data lakes by using external tables
+{: #ingest_singularity}
+
+NEED INPUT
