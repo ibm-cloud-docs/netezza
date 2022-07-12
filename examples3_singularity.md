@@ -31,9 +31,7 @@ NEED INPUT
 SET ENABLE_EXTERNAL_DATASOURCE = 1;
 ```
 
-**COMMENT: Is there a command to verify this or do you have to run the SET command every time?**
-
-2. Create an external data source.
+1. Create an external data source.
 
    For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=).
 
@@ -61,7 +59,7 @@ USING (
 );
 ```
 
-3. Create an external table.
+1. Create an external table.
 
    Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
