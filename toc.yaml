@@ -42,7 +42,6 @@ toc:
               - admins/bnr.md
               - admins/bnr-ui.md
               - admins/bnr-flow.md
-      - remove.md
       - release-notes.md
 
   - navgroup:
@@ -97,7 +96,7 @@ toc:
       - link:
           label: Running queries
           href: https://www.ibm.com/docs/en/netezza?topic=dud-netezza-sql-introduction
-
+      - remove.md
   - navgroup:
       id: reference
       topics:
