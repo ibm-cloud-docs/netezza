@@ -47,7 +47,7 @@ subcollection: netezza
    ```
    {: codeblock}
 
-Example:
+   Example:
 
    ```
    CREAT1E EXTERNAL DATASOURCE NYCTAXIS3
@@ -75,7 +75,7 @@ Example:
    ```
    {: codeblock}
 
-Example:
+   Example:
 
    ```
    CREATE EXTERNAL TABLE nyc_taxi 
@@ -94,7 +94,7 @@ Example:
    ```
    {: codeblock}
 
-Example:
+   Example:
 
    ```
    squares  | num
