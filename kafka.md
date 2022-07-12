@@ -77,9 +77,9 @@ The following image illustrates the data flow for {{site.data.keyword.netezza_sh
 ## Integrating {{site.data.keyword.netezza_short}} and Kafka
 {: #connectingkafka}
 
-If you want to integrate your {{site.data.keyword.netezza_short}} instance with Kafka, you must use the Kafka JDBC connector from [Aiven](https://github.com/aiven/jdbc-connector-for-apache-kafka).
+If you want to integrate your {{site.data.keyword.netezza_short}} instance with Kafka, you must use the Kafka JDBC connector.
 
-The Aiven Kafka JDBC connector has support for source and sink JDBC connectors. With the source connector, you can transfer data from a relational database into Kafka topics. With the sink connector, you can transfer data from Kafka topics into a relational database Kafka Connect over JDBC.
+The Kafka JDBC connector has support for source and sink JDBC connectors. With the source connector, you can transfer data from {{site.data.keyword.netezza_short}} into Kafka topics. With the sink connector, you can transfer data from Kafka topics into {{site.data.keyword.netezza_short}}by using the Kafka JDBC connector.
 
 
 ### Setting up the JDBC Kafka connector
