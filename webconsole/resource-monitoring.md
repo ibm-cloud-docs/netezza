@@ -18,7 +18,7 @@ subcollection: netezza
 {:note: .note}
 
 # Resource monitoring
-{: #resource}
+{: #resource_mon}
 
 ## Dasboard
 {: #dashboard}
@@ -54,7 +54,7 @@ For any of the charts, you can zoom in and out by moving the slider to see a spe
 
 The resource monitor chart summarizes several key system resources for the monitored system.
 
-The chart displays information about the overall CPU, disk, fabric network, and memory utilization of the monitored system. 
+The chart displays information about the overall CPU, disk, fabric network, and memory utilization of the monitored system.
 
 ### Query throughput
 {: #query-throughput}
@@ -64,7 +64,7 @@ The query throughput chart displays a current summary and view of the query thro
 Queries can be grouped basing on the number of queries that run per minute or per hour.
 
 ### Query performance
-{: #query performance}
+{: #query_performance}
 
 The query performance chart displays information on the query preparation time. Query preparation time is the time between when a query is submitted and when it starts to run. The chart also shows the total duration of a query.
 
@@ -102,14 +102,14 @@ Thee chart shows the values for the latest sample of data:
 - The number of long snippets that are waiting for resources.
 - The number of short snippets that are waiting for resources.
 
-The queue sizes monitor trend chart displays the recent history of these four queues. For newly added hosts, the charts show a short sample of trend, but the charts can grow to show up to six days of trend. 
+The queue sizes monitor trend chart displays the recent history of these four queues. For newly added hosts, the charts show a short sample of trend, but the charts can grow to show up to six days of trend.
 
 You can zoom in and out by moving the slider to see a specific range. You can also expand your graph view by clicking the arrows icon.
 {: tip}
 
 {{site.data.keyword.netezza_short}} separates short queries from longer-running queries. Short queries are those queries that run in two seconds or less. For “lightly loaded” systems, the queues might be zero if no queries are waiting, or small. As the system becomes busy with concurrent short or long queries, these queues can show a larger number of waiting snippets and jobs.
 
-{{site.data.keyword.netezza_short}} reserves resources specifically for short queries so that it can run and complete those short queries even while it is busy running longer queries. 
+{{site.data.keyword.netezza_short}} reserves resources specifically for short queries so that it can run and complete those short queries even while it is busy running longer queries.
 
 ### Resource allocation
 {: #resource-allocation}
@@ -122,7 +122,3 @@ The first chart monitors the percentage of system resources that are consumed by
 {: #infrastructure}
 
 On the *Infrastructure* page, you can view information about your system, system disk status, SPUs, and storage utilization.
-
-
-
-

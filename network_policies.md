@@ -44,6 +44,7 @@ By using these form-factors, you can create a network policy as either an `allow
 **Block policy**
 
 Specifies a type of policy that prevents you from the following:
+
 - Connecting to the {{site.data.keyword.netezza_short}} database by using any device or service.
 - Connecting from the {{site.data.keyword.netezza_short}} database to any device or service that has either the specified hostname or an IP address in the range that is specified by CIDR.
 
@@ -51,6 +52,7 @@ Specifies a type of policy that prevents you from the following:
 **Allow policy**
 
 Specifies a policy that allows you to do the following:
+
 - Connecting to the {{site.data.keyword.netezza_short}} database by using any device or service.
 - Connecting from the {{site.data.keyword.netezza_short}} database to any device or service that has either the specified hostname or an IP address in the range that is specified by CIDR.
 
@@ -104,6 +106,7 @@ When you use DNS hostname in a policy, the database tries to resolve the domain 
 If you use domain names that typically are not cached by the local name servers, for example, a service that is not native to or provided by the cloud infrastructure provider, the local name servers cannot resolve to it.
 
 In such scenarios, you can do one of the following:
+
 - Add the DNS server's IP address in the allow rule so that the database can resolve the hostname to its IP address.
 - Provide the complete CIDR range that is used by the device or the service.
 
