@@ -23,11 +23,13 @@ subcollection: netezza
 # Overview
 {: #overview_singularity}
 
-With {{site.data.keyword.netezza_full}}, you can use external tables to access and query **parquet** files that are stored outside of your database in data lakes (on AWS S3).
+Data lakes are an essential tool for storing structured and unstructured data on the cloud. With {{site.data.keyword.netezza_full}, you can use external tables to access and query **parquet** files that are stored outside of your database in data lakes (on AWS S3) and analyze this data by using the robust and massively parallel execution {{site.data.keyword.netezza_full}} engine.
+
 
 External data sources use connection strings to specify how you can access an external system. Each connection string describes where your data is placed and how to authenticate to your data source. Each external data source has a definition (schema), but the actual data exists inside the {{site.data.keyword.netezza_short}} database.
 
 Use cases for external data source include:
 
-- Loading and cleaning your data in one pass and writing the cleaned result into {{site.data.keyword.netezza_short}}.
-- Joining tables with frequently changing data from an external data source.
+- Running queries against *parquet* data that is stored in a data lake.
+- Ingesting data into {{site.data.keyword.netezza_short}}.
+- Querying both local and remote data that exist in the same data lake.
