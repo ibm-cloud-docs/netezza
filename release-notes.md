@@ -22,6 +22,22 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
+## July 2022
+{: #july2022}
+
+As of July 22, 2022, you can access data from data lakes and move data between applications with Kafka.
+
+### New features
+{: #nfjuly2022}
+
+- Use {{site.data.keyword.netezza_short}} external tables to access and query **parquet** files that are stored outside of your database in data lakes (on AWS S3). For more information, see [Querying data](/docs/netezza?topic=netezza-overview_singularity).
+- Use {{site.data.keyword.netezza_short}} as a data source or data sink. For more information, see [Using Netezza Performance Server as a data source](/docs/netezza?topic=netezza-netezzakafka#datasourcekafka) and [Using Netezza Performance Server as a data sink](/docs/netezza?topic=netezza-netezzakafka#datasinkkafka).
+
+### Known issues
+{: #kijuly2022}
+
+
+
 ## June 2022
 {: #june2022}
 
@@ -51,7 +67,7 @@ As of May 20, 2022, workload enhacements and network policies support is added.
 ### New features
 {: #nfmay2022}
 
-- Two new workload contours  NC0 and NC3 are available for a wider range of configuration options for provisioning and scaling.
+- Two new workload contours NC0 and NC3 are available for a wider range of configuration options for provisioning and scaling.
 - Network policies support is added. You can control the set of the IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or can be connected from by using network policies. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies) and [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
 
 ### Known issues
