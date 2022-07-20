@@ -34,20 +34,7 @@ After you integrate your {{site.data.keyword.netezza_full}} instance with Kafka 
 - A data source, which brings data to Kafka.
 - A data sink, which reads data from Kafka.
 
-## Use cases
-{: #usecaseskafka}
-
-With {{site.data.keyword.netezza_short}} and Kafka, you can do the following tasks:
-
-- Collect metrics
-- Collect high-volume events
-- Share database change events (change data capture)
-- Share last-value queues
-- Exchange simple messages
-
-Consider the following examples.
-
-### {{site.data.keyword.netezza_short}} as a data source
+## Using {{site.data.keyword.netezza_short}} as a data source
 {: #datasourcekafka}
 
 An e-commerce company stores its product listings in a {{site.data.keyword.netezza_short}} database. To streamline the in-app search experience and to access real time analytics, consumer apps (for example, Elasticsearch and Apache Flink) have access to the listings.
@@ -59,7 +46,7 @@ The following image illustrates the data flow {{site.data.keyword.netezza_short}
 ![{{site.data.keyword.netezza_short}} as a data source](images/nzdatasource.png){: caption="Image 1. The diagram depicts how Kafka reads data from Netezza through the JDBC source connector and enables consumer apps to access it." caption-side="bottom"}
 
 
-### {{site.data.keyword.netezza_short}} as a data sink
+## Using {{site.data.keyword.netezza_short}} as a data sink
 {: #datasinkkafka}
 
 To improve patient outcomes, efficiently identify risk factors, and provide quicker intervention times, a hospital extracts meaningful insights from physiological data. Different data sets from various channels are analyzed as they arrive.
@@ -87,10 +74,9 @@ The Kafka JDBC connector has support for source and sink JDBC connectors. With 
 
 You must install the driver in Kafka's library by editing *plugin.path*. For more information, see
 
-These steps are still in the box note, do we need/want them?
 
 1. Set up Java.
 1. Copy JDBC to Kafka.
-1. Set up Aiven.
+1. Set up your connector.
 1. Edit plugin.path.
 1. Edit the sink and source properties.
