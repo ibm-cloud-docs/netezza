@@ -27,7 +27,7 @@ You might keep only the most recent data locally in a database and use data lake
 
 In the following example, data that is loaded into {{site.data.keyword.netezza_short}} is compared with data that is in a data lake.
 
-For more information about loading data, see [Merging data](/docs/netezza?topic=netezza-merging-and-analyzing-data).
+For more information about loading data, see [Merging data](/docs/netezza?topic=netezza-merging_singularity).
 
 ## Before you begin
 {: #prereqs3}
