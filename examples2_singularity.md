@@ -32,17 +32,17 @@ In the examples, the publicly available [*New York taxi trip* record data](https
 
 - For January 2021:
 
-   ```
-   aws s3 cp ~/Downloads/yellow_tripdata_2021-01.parquet s3://exampledatalakebucket/yellow_tripdata_2021-01.parquet
-   ```
-   {: codeblock}
+    ```
+    aws s3 cp ~/Downloads/yellow_tripdata_2021-01.parquet s3://exampledatalakebucket/yellow_tripdata_2021-01.parquet
+    ```
+    {: codeblock}
 
 - For January 2022,
 
-  ```
-  aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket/yellow_tripdata_2022-01.parquet
-  ```
-  {: codeblock}
+   ```
+   aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket/yellow_tripdata_2022-01.parquet
+   ```
+   {: codeblock}
 
 
 ## 1. Create an external data source
