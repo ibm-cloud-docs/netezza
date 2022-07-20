@@ -148,7 +148,8 @@ Now, you can query the loaded data by using the improved read/write performance,
    ```
    {: codeblock} 
 
-   ```
+   
+   ```
    SUM   
    ---------
    3324167

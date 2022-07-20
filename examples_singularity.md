@@ -116,9 +116,12 @@ You can query external *parquet* format tables like you would any other {{site.d
 
    ```
    SELECT Sum("passenger_count") 
-   FROM   yellow_taxi_january_2022; 
+   FROM   yellow_taxi_january_2022;
+   ```
+   {: codeblock}
 
-      SUM   
+   ```
+   SUM   
    ---------
     3324167
    (1 row)
@@ -135,16 +138,19 @@ You can query external *parquet* format tables like you would any other {{site.d
             AND     "tpep_pickup_datetime"::time < '6:00am' 
    GROUP by "VendorID"
    ORDER BY "passengers" DESC;
+   ```
+   {: codeblock}
 
+   ```
     VendorID | passengers 
-   ----------+------------
+    ----------+------------
            2 |     122251
            1 |      40807
            6 |           
            5 |           
-   (4 rows)
-   ```
-   {: codeblock}
+    (4 rows)
+    ```
+    {: codeblock}
 
 
 **TIP:** You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can query a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.
