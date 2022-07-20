@@ -32,4 +32,4 @@ Use cases for external data source include:
 
 - [Running queries against *parquet* data that is stored in a data lake](/docs/netezza?topic=netezza-querying-data-from-data-lakes).
 - [Ingesting data into {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-ingest_singularity).
-- [Querying both local and remote data that exist in the same data lake](/docs/netezza?topic=netezza-merging_singularity).
+- [Querying both local and remote data](/docs/netezza?topic=netezza-merging_singularity).
