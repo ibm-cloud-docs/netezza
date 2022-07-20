@@ -132,7 +132,6 @@ Now, you can query both the local 2022 data that was loaded and the 2021 data fr
       (SELECT Sum("passenger_count")
       FROM   yellow_taxi_january_2021)        AS "passengers 2021";
 
-
     passengers 2022  | passengers 2021 
     -----------------+-----------------
           3324167    |     1794615
