@@ -79,7 +79,7 @@ b) Create an external data source.
 ## 2. Create an external table
 {: #create_table1}
 
-After you have an external data source, you can create an external table that accesses the yellow taxi data from January 2022.
+After you created an external data source, you can create an external table that accesses the yellow taxi data from January 2022.
 
 Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
