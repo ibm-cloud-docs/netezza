@@ -31,6 +31,7 @@ As of July 22, 2022, you can access data from data lakes and move data between a
 {: #nfjuly2022}
 
 - Use {{site.data.keyword.netezza_short}} external tables to access and query **parquet** files that are stored outside of your database in data lakes (on AWS S3). For more information, see [Querying data](/docs/netezza?topic=netezza-overview_singularity).
+
 - Use {{site.data.keyword.netezza_short}} as a data source or data sink. For more information, see [Using Netezza Performance Server as a data source](/docs/netezza?topic=netezza-netezzakafka#datasourcekafka) and [Using Netezza Performance Server as a data sink](/docs/netezza?topic=netezza-netezzakafka#datasinkkafka).
 
 ### Known issues
@@ -72,6 +73,7 @@ As of May 20, 2022, workload enhacements and network policies support is added.
 
 ### Known issues
 {: #kimay2022}
+
 - Netezza SQL Editor does not accept input for query requests. You can construct equivalent query requests by using [the command line](https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface).
 
 ## March 2022

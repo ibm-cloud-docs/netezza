@@ -28,7 +28,6 @@ subcollection: netezza
 
 Select the subset of columns. In this example, the columns are 'squares' and 'num'.
 
-
 ```
 select squares, num from nyc_taxi;
 ```
