@@ -70,7 +70,7 @@ The Kafka JDBC connector has support for source and sink JDBC connectors. With 
 
 
 ### Setting up the JDBC Kafka connector
-{:# connectorkafka}
+{: #connectorkafka}
 
 You must install the driver in Kafka's library by editing *plugin.path*. For more information, see
 
