@@ -117,7 +117,7 @@ You can query external *parquet* format tables like you would any other {{site.d
    ```
    SELECT Sum("passenger_count") 
    FROM   yellow_taxi_january_2022; 
-
+   
       SUM   
    ---------
     3324167
@@ -135,7 +135,6 @@ You can query external *parquet* format tables like you would any other {{site.d
             AND     "tpep_pickup_datetime"::time < '6:00am' 
    GROUP by "VendorID"
    ORDER BY "passengers" DESC;
-
 
     VendorID | passengers 
    ----------+------------
