@@ -77,7 +77,7 @@ b) Create an external data source.
    ```
    {: codeblock}
 
-## 2. Create an external table
+## 2. Create an external table for the data from a data lake
 {: #create_table3}
 
 After you created an external data source, you can create an external table that accesses the yellow taxi data from January 2022.
@@ -85,7 +85,7 @@ After you created an external data source, you can create an external table that
 Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
 ```
-CREATE EXTERNAL TABLE 'TABLE'
+CREATE EXTERNAL TABLE 'TABLE NAME'
 ON 'DATA SOURCE'
 USING ( 
   DATAOBJECT ('DATA OBJECT')
@@ -112,7 +112,7 @@ USING ( 
 To load data from the data lake into a {{site.data.keyword.netezza_short}} table, run **CREATE TABLE AS SELECT** from the external table that you want to load.
 
 ```
-CREATE TABLE TABLE_LOADED 
+CREATE TABLE 'TABLE NAME LOADED'
 AS
     SELECT
         * 
@@ -144,13 +144,17 @@ Now, you can query the loaded data by using the improved read/write performance,
 
    ```
    SELECT Sum("passenger_count")
-   FROM   yellow_taxi_january_2022_loaded; 
-   
-      SUM   
-    ---------
-    3324167
+   FROM   yellow_taxi_january_2022_loaded;
+   ```
+   {: codeblock} 
+
+   ```
+   SUM   
+   ---------
+   3324167
    (1 row)
    ```
    {: codeblock}
+
 
 **TIP:** You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can load a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.

@@ -84,7 +84,7 @@ After you created an external data source, you can create an external table that
 Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
 ```
-CREATE EXTERNAL TABLE 'TABLE'
+CREATE EXTERNAL TABLE 'TABLE NAME'
 ON 'DATA SOURCE'
 USING ( 
   DATAOBJECT ('DATA OBJECT')
@@ -117,7 +117,7 @@ You can query external *parquet* format tables like you would any other {{site.d
    ```
    SELECT Sum("passenger_count") 
    FROM   yellow_taxi_january_2022; 
-   
+
       SUM   
    ---------
     3324167
@@ -145,3 +145,6 @@ You can query external *parquet* format tables like you would any other {{site.d
    (4 rows)
    ```
    {: codeblock}
+
+
+**TIP:** You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can query a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.
