@@ -120,6 +120,8 @@ You can query external *parquet* format tables like you would any other {{site.d
    ```
    {: codeblock}
 
+   Output:
+
    ```
    SUM   
    ---------
@@ -140,6 +142,8 @@ You can query external *parquet* format tables like you would any other {{site.d
    ORDER BY "passengers" DESC;
    ```
    {: codeblock}
+
+   Output:
 
    ```
     VendorID | passengers 
