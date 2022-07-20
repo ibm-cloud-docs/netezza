@@ -27,66 +27,65 @@ subcollection: netezza
 ## Before you begin
 {: #prereqs1}
 
-In this example, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for Yellow taxis in January 2021 is used. To follow this example, download the data and upload it to an accessible S3 bucket.
+In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2022 is used. To follow this example, download the data and upload it to an accessible S3 bucket.
 
 ```
-aws s3 cp ~/Downloads/yellow_tripdata_2021-01.parquet s3://exampledatalakebucket/yellow_tripdata_2021-01.parquet
-```
-{: codeblock}
-
-
-## Set **ENABLE_EXTERNAL_DATASOURCE**
-{: #enable1}
-
-Ensure that **ENABLE_EXTERNAL_DATASOURCE** is set to `1`.
-
-```
-SET ENABLE_EXTERNAL_DATASOURCE = 1;
+aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket/yellow_tripdata_2022-01.parquet
 ```
 {: codeblock}
 
-## Create an external data source
+## 1. Create an external data source
 {: #create_ds1}
 
 External datasources allow an administrator to grant access to S3 without providing the keys directly to a user.
 
 For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=).
 
-```
-CREATE EXTERNAL DATASOURCE 'DATA SOURCE'
-ON 'REMOTE SOURCE'
-USING (
-  ACCESSKEYID 'ACCESS KEY ID'
-  SECRETACCESSKEY 'SECRET ACCESS KEY'
-  BUCKET 'BUCKET'
-  REGION 'REGION'
-);
-```
-{: codeblock}
+a) Set **ENABLE_EXTERNAL_DATASOURCE**.
 
-Example:
+   ```
+   SET ENABLE_EXTERNAL_DATASOURCE = 1;
+   ```
+   {: codeblock}
 
-```
-CREATE EXTERNAL DATASOURCE EXAMPLEDATALAKE 
-ON AWSS3 
-USING (
- ACCESSKEYID 'XXXX'
- SECRETACCESSKEY 'XXXX'
- BUCKET 'exampledatalakebucket'
- REGION 'US-EAST-1'
-);
-```
-{: codeblock}
+b) Create an external data source.
 
-## Create an external table
+   ```
+   CREATE EXTERNAL DATASOURCE 'DATA SOURCE'
+   ON 'REMOTE SOURCE'
+   USING (
+    ACCESSKEYID 'ACCESS KEY ID'
+    SECRETACCESSKEY 'SECRET ACCESS KEY'
+    BUCKET 'BUCKET'
+    REGION 'REGION'
+   );
+   ```
+   {: codeblock}
+
+   Example:
+
+   ```
+   CREATE EXTERNAL DATASOURCE EXAMPLEDATALAKE 
+   ON AWSS3 
+   USING (
+    ACCESSKEYID 'XXXX'
+    SECRETACCESSKEY 'XXXX'
+    BUCKET 'exampledatalakebucket'
+    REGION 'US-EAST-1'
+   );
+   ```
+   {: codeblock}
+
+## 2. Create an external table
 {: #create_table1}
 
-When you have an external data source, you can create an external table that accesses the Yellow Taxi data from January 2022.
+After you have an external data source, you can create an external table that accesses the yellow taxi data from January 2022.
 
 Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
 ```
 CREATE EXTERNAL TABLE 'TABLE'
+ON 'DATA SOURCE'
 USING ( 
   DATAOBJECT ('DATA OBJECT')
   FORMAT 'PARQUET' 
@@ -97,7 +96,8 @@ USING ( 
 Example:
 
 ```
-CREATE EXTERNAL TABLE YELLOW_TAXI_JANUARY_2022 
+CREATE EXTERNAL TABLE YELLOW_TAXI_JANUARY_2022
+ON EXAMPLEDATALAKE 
 USING ( 
   DATAOBJECT ('/yellow_tripdata_2022-01.parquet')
   FORMAT 'PARQUET' 
@@ -105,44 +105,47 @@ USING ( 
 ```
 {: codeblock}
 
-## Query the data
+## 3. Query the data
+{: #query1}
 
 You can query external *parquet* format tables like you would any other {{site.data.keyword.netezza_short}} table, but you do not need to load the data into the database.
 
 **NOTE:** The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
 
-### Analyzing the number of passengers that travelled by taxis in New York in January, 2022
+- To identify the total number of passengers that travelled by taxis in New York in January 2022, run:
 {: #total_number}
 
-```
-SELECT Sum("passenger_count") 
-FROM   yellow_taxi_january_2022; 
+  ```
+  SELECT Sum("passenger_count") 
+  FROM   yellow_taxi_january_2022; 
 
 
-   SUM   
----------
- 3324167
-(1 row)
-```
+     SUM   
+  ---------
+   3324167
+  (1 row)
+  ```
+  {: codeblock}
 
-### Identifying the vendor that had the most passengers between 1:00 AM and 6:00 AM
+- To identify the vendor that had the most passengers between 1:00 AM and 6:00 AM, run:
 {: id_vendor}
 
-```
-SELECT   "VendorID",
-     Sum("passenger_count") AS "passengers"
-FROM     yellow_taxi_january_2022
-WHERE   "tpep_pickup_datetime"::time > '1:00am'
-         AND     "tpep_pickup_datetime"::time < '6:00am' 
-GROUP by "VendorID"
-ORDER BY "passengers" DESC;
+  ```
+  SELECT   "VendorID",
+       Sum("passenger_count") AS "passengers"
+  FROM     yellow_taxi_january_2022
+  WHERE   "tpep_pickup_datetime"::time > '1:00am'
+           AND     "tpep_pickup_datetime"::time < '6:00am' 
+  GROUP by "VendorID"
+  ORDER BY "passengers" DESC;
 
 
- VendorID | passengers 
-----------+------------
-        2 |     122251
-        1 |      40807
-        6 |           
-        5 |           
-(4 rows)
-```
+   VendorID | passengers 
+  ----------+------------
+          2 |     122251
+          1 |      40807
+          6 |           
+          5 |           
+  (4 rows)
+  ```
+  {: codeblock}

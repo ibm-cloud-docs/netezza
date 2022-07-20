@@ -84,8 +84,8 @@ toc:
          topics:
          - singularity.md
          - examples_singularity.md
-         - examples2_singularity.md
          - examples3_singularity.md
+         - examples2_singularity.md
          - queries_singularity.md
          - link:
              label: External tables
