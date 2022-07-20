@@ -25,6 +25,7 @@ By using the network policies feature in the web console, you can control the se
 
 - If you want to restrict which destination my {{site.data.keyword.netezza_short}} instance can reach out to, see
 [Allowing connections only from a defined set of sources with the specified IP addresses and hostnames](docs/netezza?topic=netezza-network-policies#use-case-1)
+
 - If you want to restrict which sources can reach out to my {{site.data.keyword.netezza_short}} instance, see
 [Allowing connections only from on premises and take backups, load or unload data by using Cloud Object Store](docs/netezza?topic=netezza-network-policies#use-case-2)
 
@@ -46,6 +47,7 @@ By using these form-factors, you can create a network policy as either an `allow
 Specifies a type of policy that prevents you from the following:
 
 - Connecting to the {{site.data.keyword.netezza_short}} database by using any device or service.
+
 - Connecting from the {{site.data.keyword.netezza_short}} database to any device or service that has either the specified hostname or an IP address in the range that is specified by CIDR.
 
 
@@ -54,6 +56,7 @@ Specifies a type of policy that prevents you from the following:
 Specifies a policy that allows you to do the following:
 
 - Connecting to the {{site.data.keyword.netezza_short}} database by using any device or service.
+
 - Connecting from the {{site.data.keyword.netezza_short}} database to any device or service that has either the specified hostname or an IP address in the range that is specified by CIDR.
 
 
@@ -75,6 +78,7 @@ For example, `76.168.0.0/24` represents IP addresses in the range of `76.168.0.0
 `0.0.0.0/0` is a special case of a CIDR notation, which is allowed. Use it with caution because of the following reasons:
 
 - When you use `0.0.0.0/0` as a block policy, all traffic to and from your {{site.data.keyword.netezza_short}} database is restricted.
+
 - When you use `0.0.0.0/0`as an allow policy, all traffic to and from your {{site.data.keyword.netezza_short}} database is allowed.
 
 
@@ -108,6 +112,7 @@ If you use domain names that typically are not cached by the local name servers,
 In such scenarios, you can do one of the following:
 
 - Add the DNS server's IP address in the allow rule so that the database can resolve the hostname to its IP address.
+
 - Provide the complete CIDR range that is used by the device or the service.
 
 ## Order of evaluation of network policies
@@ -243,6 +248,7 @@ If you have a bucket, for example, in the `us-east-1` region and want to use it 
    To retrieve the CIDR range for various AWS services:
 
    - Follow the instructions from [here](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html#subscribe-notifications).
+
    - Add them as an allow rule as needed.
 
 
@@ -293,6 +299,7 @@ respective service endpoints.
    To retrieve the CIDR range for various Azure services:
 
    - Follow the instructions from [here](https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkservicetag?view=azps-7.5.0).
+
    - Add the CIDR ranges as an allow rule as needed.
 
    **NOTE:** The Azure Blob Storage endpoints do not have a single IP address that is associated with them. Adding the endpoint hostname to the allow list can give inconsistent results.
