@@ -145,8 +145,7 @@ Now, you can query the loaded data by using the improved read/write performance,
    ```
    SELECT Sum("passenger_count")
    FROM   yellow_taxi_january_2022_loaded; 
-
-
+   
       SUM   
     ---------
     3324167
