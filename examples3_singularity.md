@@ -142,16 +142,16 @@ Now, you can query the loaded data by using the improved read/write performance,
 
 - To identify the passenger count, run:
 
-  ```
-  SELECT Sum("passenger_count")
-  FROM   yellow_taxi_january_2022_loaded; 
+   ```
+   SELECT Sum("passenger_count")
+   FROM   yellow_taxi_january_2022_loaded; 
 
 
-     SUM   
-  ---------
-   3324167
-  (1 row)
-  ```
-  {: codeblock}
+      SUM   
+    ---------
+    3324167
+   (1 row)
+   ```
+   {: codeblock}
 
 **TIP:** You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can load a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.

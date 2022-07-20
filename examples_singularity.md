@@ -22,7 +22,7 @@ subcollection: netezza
 {:codeblock: .codeblock}
 
 # Querying data from data lakes
-{:querying_singularity}
+{: #querying_singularity}
 
 ## Before you begin
 {: #prereqs1}
@@ -113,39 +113,38 @@ You can query external *parquet* format tables like you would any other {{site.d
 **NOTE:** The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
 
 - To identify the total number of passengers that travelled by taxis in New York in January 2022, run:
-{: #total_number}
 
-  ```
-  SELECT Sum("passenger_count") 
-  FROM   yellow_taxi_january_2022; 
+   ```
+   SELECT Sum("passenger_count") 
+   FROM   yellow_taxi_january_2022; 
 
 
-     SUM   
-  ---------
-   3324167
-  (1 row)
-  ```
-  {: codeblock}
+      SUM   
+   ---------
+    3324167
+   (1 row)
+   ```
+   {: codeblock}
+
 
 - To identify the vendor that had the most passengers between 1:00 AM and 6:00 AM, run:
-{: id_vendor}
 
-  ```
-  SELECT   "VendorID",
-       Sum("passenger_count") AS "passengers"
-  FROM     yellow_taxi_january_2022
-  WHERE   "tpep_pickup_datetime"::time > '1:00am'
-           AND     "tpep_pickup_datetime"::time < '6:00am' 
-  GROUP by "VendorID"
-  ORDER BY "passengers" DESC;
+   ```
+   SELECT   "VendorID",
+        Sum("passenger_count") AS "passengers"
+   FROM     yellow_taxi_january_2022
+   WHERE   "tpep_pickup_datetime"::time > '1:00am'
+            AND     "tpep_pickup_datetime"::time < '6:00am' 
+   GROUP by "VendorID"
+   ORDER BY "passengers" DESC;
 
 
-   VendorID | passengers 
-  ----------+------------
-          2 |     122251
-          1 |      40807
-          6 |           
-          5 |           
-  (4 rows)
-  ```
-  {: codeblock}
+    VendorID | passengers 
+   ----------+------------
+           2 |     122251
+           1 |      40807
+           6 |           
+           5 |           
+   (4 rows)
+   ```
+   {: codeblock}

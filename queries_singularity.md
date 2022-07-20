@@ -23,10 +23,8 @@ subcollection: netezza
 # Query examples
 {: #examples_singularity}
 
-**COMMENT: Can we use the examples from: https://github.ibm.com/Voldemort/nzparquet/blob/master/EXAMPLES.md?? Especially how to get data from a private vs public bucket. How to save changed data? Optimisation seems to be the main selling point, why not showcase this better, for example by providing examples how to filter, display select columns, see how the file is structured?**
-
 ## Getting a subset of columns from a private file
-{:#subset_singularity}
+{: #subset_singularity}
 
 Select the subset of columns. In this example, the columns are 'squares' and 'num'.
 

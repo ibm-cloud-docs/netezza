@@ -36,16 +36,16 @@ In the examples, the publicly available [*New York taxi trip* record data](https
 
 - For January 2021:
 
-  ```
-  aws s3 cp ~/Downloads/yellow_tripdata_2021-01.parquet s3://exampledatalakebucket/yellow_tripdata_2021-01.parquet
-  ```
-  {: codeblock}
+   ```
+   aws s3 cp ~/Downloads/yellow_tripdata_2021-01.parquet s3://exampledatalakebucket/yellow_tripdata_2021-01.parquet
+   ```
+   {: codeblock}
 
 - For January 2022,
 
-  ```
-  aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket/yellow_tripdata_2022-01.parquet
-  ```
+   ```
+   aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket/yellow_tripdata_2022-01.parquet
+   ```
   {: codeblock}
 
 ## 1. Create an external data source
@@ -126,37 +126,37 @@ Now, you can query both the local 2022 data that was loaded and the 2021 data fr
 
 - To identify which year had the most passengers, run:
 
-  ```
-  SELECT (SELECT Sum("passenger_count")
-     FROM   yellow_taxi_january_2022_loaded) AS "passengers 2022",
-     (SELECT Sum("passenger_count")
-     FROM   yellow_taxi_january_2021)        AS "passengers 2021";
+   ```
+   SELECT (SELECT Sum("passenger_count")
+      FROM   yellow_taxi_january_2022_loaded) AS "passengers 2022",
+      (SELECT Sum("passenger_count")
+      FROM   yellow_taxi_january_2021)        AS "passengers 2021";
 
 
-   passengers 2022 | passengers 2021 
-   -----------------+-----------------
-         3324167 |         1794615
-  (1 row)
-  ```
+    passengers 2022  | passengers 2021 
+    -----------------+-----------------
+          3324167    |     1794615
+   (1 row)
+   ```
   {: codeblock}
 
 - To compare how many passengers travelled between 1:00 AM and 6:00 PM in 2021 and 2022, run:
 
-  ```
-  SELECT(SELECT Sum("passenger_count")
-     FROM   yellow_taxi_january_2022_loaded
-     WHERE  "tpep_pickup_datetime" :: time > '1:00am'
-       AND "tpep_pickup_datetime" :: time < '6:00am') AS
-     "overnight passengers 2022",
-     (SELECT Sum("passenger_count")
-     FROM   yellow_taxi_january_2021
-     WHERE  "tpep_pickup_datetime" :: time > '1:00am'
-       AND "tpep_pickup_datetime" :: time < '6:00am') AS
-     "overnight passengers 2021"; 
+   ```
+   SELECT(SELECT Sum("passenger_count")
+      FROM   yellow_taxi_january_2022_loaded
+      WHERE  "tpep_pickup_datetime" :: time > '1:00am'
+        AND "tpep_pickup_datetime" :: time < '6:00am') AS
+      "overnight passengers 2022",
+      (SELECT Sum("passenger_count")
+      FROM   yellow_taxi_january_2021
+      WHERE  "tpep_pickup_datetime" :: time > '1:00am'
+        AND "tpep_pickup_datetime" :: time < '6:00am') AS
+      "overnight passengers 2021"; 
 
-  overnight passengers 2022  | overnight passengers 2021 
-  ---------------------------+---------------------------
-                      163058 |                     33469
-  (1 row)
-  ```
-  {: codeblock}
+   overnight passengers 2022  | overnight passengers 2021 
+   ---------------------------+---------------------------
+                163058        |       33469
+   (1 row)
+   ```
+   {: codeblock}
