@@ -118,14 +118,12 @@ You can query external *parquet* format tables like you would any other {{site.d
    SELECT Sum("passenger_count") 
    FROM   yellow_taxi_january_2022; 
 
-
       SUM   
    ---------
     3324167
    (1 row)
    ```
    {: codeblock}
-
 
 - To identify the vendor that had the most passengers between 1:00 AM and 6:00 AM, run:
 
