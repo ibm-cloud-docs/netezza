@@ -35,7 +35,7 @@ aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket
 ```
 {: codeblock}
 
-## 1. Create an external data source
+## 1. Create an external data source.
 {: #create_ds1}
 
 External datasources allow an administrator to grant access to S3 without providing the keys directly to a user.
@@ -77,7 +77,7 @@ b) Create an external data source.
    ```
    {: codeblock}
 
-## 2. Create an external table
+## 2. Create an external table.
 {: #create_table1}
 
 After you created an external data source, you can create an external table that accesses the yellow taxi data from January 2022.
@@ -106,7 +106,7 @@ USING ( 
 ```
 {: codeblock}
 
-## 3. Query the data
+## 3. Query your data.
 {: #query1}
 
 You can query external *parquet* format tables like you would any other {{site.data.keyword.netezza_short}} table, but you do not need to load the data into the database.

@@ -36,7 +36,7 @@ aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket
 ```
 {: codeblock}
 
-## 1. Create an external data source
+## 1. Create an external data source.
 {: #create_ds3}
 
 External datasources allow an administrator to grant access to S3 without providing the keys directly to a user.
@@ -78,7 +78,7 @@ b) Create an external data source.
    ```
    {: codeblock}
 
-## 2. Create an external table for the data from a data lake
+## 2. Create an external table for the data from a data lake.
 {: #create_table3}
 
 After you created an external data source, you can create an external table that accesses the yellow taxi data from January 2022.
@@ -107,7 +107,7 @@ USING ( 
 ```
 {: codeblock}
 
-## 3. Load data into {{site.data.keyword.netezza_short}}
+## 3. Load the data into {{site.data.keyword.netezza_short}}.
 {: #create_cts}
 
 To load data from the data lake into a {{site.data.keyword.netezza_short}} table, run **CREATE TABLE AS SELECT** from the external table that you want to load.
@@ -136,7 +136,7 @@ INSERT 0 2463931
 ```
 {: codeblock}
 
-## 4. Query the loaded data
+## 4. Query the loaded data.
 {: #query_loaded}
 
 Now, you can query the loaded data by using the improved read/write performance, zonemaps, etc.

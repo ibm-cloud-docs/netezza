@@ -45,7 +45,7 @@ In the examples, the publicly available [*New York taxi trip* record data](https
    {: codeblock}
 
 
-## 1. Create an external data source
+## 1. Create an external data source.
 {: #create_ds2}
 
 External datasources allow an administrator to grant access to S3 without providing the keys directly to a user.
@@ -87,7 +87,7 @@ b) Create an external data source.
    ```
    {: codeblock}
 
-## 2. Identify the data from {{site.data.keyword.netezza_short}} to merge and compare
+## 2. Identify the data from {{site.data.keyword.netezza_short}} to merge and compare.
 {: #ensure_2022}
 
 In this example, data that was loaded into {{site.data.keyword.netezza_short}} (`YELLOW_TAXI_JANUARY_2022`) is compared with data from a data like (`YELLOW_TAXI_JANUARY_2021`).
@@ -146,7 +146,7 @@ b) Load the data (`YELLOW_TAXI_JANUARY_2022`) into {{site.data.keyword.netezza_s
    ```
    {: codeblock}
 
-## 3. Create an external table for the data from a data lake
+## 3. Create an external table for the data from a data lake.
 {: #create_table2}
 
 Create an external table that accesses the yellow taxi data from January 2021.
@@ -175,7 +175,7 @@ USING ( 
 ```
 {: codeblock}
 
-## 4. Query the remote and loaded data
+## 4. Query the remote and loaded data.
 {: #query_remote_loaded}
 
 Now, you can query both the local 2022 data that was loaded and the 2021 data from a data lake all in the same query.
