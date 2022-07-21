@@ -19,6 +19,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
 # {{site.data.keyword.netezza_short}} time travel
 {: #timetravel}
@@ -156,11 +157,12 @@ The retention interval of a temporal table is the period of time that starts at 
 
 Tables with retention interval set to zero are not temporal.
 
-**NOTE:** Netezza Performance Server supports only system-managed temporal tables.
+Netezza Performance Server supports only system-managed temporal tables.
 A system-managed temporal table is a table that maintains historical versions of its rows.
 Use a system-period temporal table to store current versions of your data.
 The database transparently stores your updated and deleted data rows.
 System-period tables are system-managed.
+{: note}
 
 ## Enabling and disabling time travel
 {: #enabledisablett}

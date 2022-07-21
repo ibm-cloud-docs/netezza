@@ -19,6 +19,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
 # Query examples
 {: #examples_singularity}
@@ -176,4 +177,5 @@ num | squares |     timestamps      | fibonacci | fibs_is_even | Uppercase | Low
 (14 rows)
 ```
 
-**NOTE: Even though the condition `squares > 20` was provided, rows with values `1`, `4`, `9`, and `16` were still returned. It is expected behaviour.**
+Even though the condition `squares > 20` was provided, rows with values `1`, `4`, `9`, and `16` were still returned. It is expected behaviour.
+{: note}

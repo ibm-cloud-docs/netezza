@@ -16,6 +16,7 @@ subcollection: netezza
 {:important: .important}
 {:note: .note}
 {:caption: .caption}
+{:note: .note}
 
 # Network policies
 {: #network-policies}
@@ -82,10 +83,11 @@ For example, `76.168.0.0/24` represents IP addresses in the range of `76.168.0.0
 - When you use `0.0.0.0/0`as an allow policy, all traffic to and from your {{site.data.keyword.netezza_short}} database is allowed.
 
 
-**NOTE:** You can use CIDR ranges to represent public and private IP addresses.
+You can use CIDR ranges to represent public and private IP addresses.
 Devices or services that are in a private or enterprise network that uses private IP addresses have gateways.
 These gateways typically have network interfaces with public IP addresses, which do network address translation (NAT).
 This allows entities in the private network to connect to external services.
+{: note}
 
 You must use a CIDR range that represents only the public IP addresses of gateways when you are setting `allow` and `block` policies.
 
@@ -241,7 +243,8 @@ If you have a bucket, for example, in the `us-east-1` region and want to use it 
      Rule 2: 0.0.0.0/0          (deny)
      ```
 
-    **NOTE:** The AWS S3 endpoints do not have a single IP address that is associated with them. Adding the S3 endpoint hostname to the allow list can give inconsistent results.
+    The AWS S3 endpoints do not have a single IP address that is associated with them. Adding the S3 endpoint hostname to the allow list can give inconsistent results.
+    {: note}
 
 1. If you want to use or connect from any other AWS service, add to the `allow` rule the CIDR range that is associated with those respective service endpoints.
 
@@ -302,7 +305,8 @@ respective service endpoints.
 
    - Add the CIDR ranges as an allow rule as needed.
 
-   **NOTE:** The Azure Blob Storage endpoints do not have a single IP address that is associated with them. Adding the endpoint hostname to the allow list can give inconsistent results.
+   The Azure Blob Storage endpoints do not have a single IP address that is associated with them. Adding the endpoint hostname to the allow list can give inconsistent results.
+   {: note}
 
 ## Limitation of network policies
 {: #limitations}

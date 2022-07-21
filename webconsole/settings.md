@@ -25,7 +25,8 @@ subcollection: netezza
 
 On the *Network policies* page, you can add policies and view existing policies.
 
-**NOTE:** You can add network policies if you belong to the `ADMINISTRATORS` group.
+You can add network policies if you belong to the `ADMINISTRATORS` group.
+{: note}
 
 ### Adding network policies
 {: #wc-nwpolicies-adding}
@@ -51,12 +52,13 @@ To view existing policies, go to **Administration >> Settings >> Network policie
 ### Deleting network policies
 {: #wc-nwpolicies-deleting}
 
-To delete a policy: 
+To delete a policy:
 1. Go to **Administration >> Settings >> Network policies >> Existing policies**.
 2. Select the policy that you want to delete.
 3. Click **Delete**.
 
-**NOTE:** You can select multiple policies to delete them.
+You can select multiple policies to delete them.
+{: note}
 
 For more information about network policies and use cases, see [Network policies](/docs/netezza?topic=netezza-network-policies).
 

@@ -21,6 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
 
 # Querying data from data lakes
 {: #querying_singularity}
@@ -111,7 +112,8 @@ USING ( 
 
 You can query external *parquet* format tables like you would any other {{site.data.keyword.netezza_short}} table, but you do not need to load the data into the database.
 
-**NOTE:** The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
+The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
+{: note}
 
 - To identify the total number of passengers that travelled by taxis in New York in January 2022, run:
 
