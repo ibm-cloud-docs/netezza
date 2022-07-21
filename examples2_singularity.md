@@ -207,21 +207,21 @@ Now, you can query both the local 2022 data that was loaded and the 2021 data fr
      FROM   yellow_taxi_january_2022_loaded
      WHERE  "tpep_pickup_datetime" :: time > '1:00am'
        AND "tpep_pickup_datetime" :: time < '6:00am') AS
-     "overnight passengers 2022",
-     (SELECT Sum("passenger_count")
-     FROM   yellow_taxi_january_2021
-     WHERE  "tpep_pickup_datetime" :: time > '1:00am'
-       AND "tpep_pickup_datetime" :: time < '6:00am') AS
-     "overnight passengers 2021"; 
+   "overnight passengers 2022",
+   (SELECT Sum("passenger_count")
+      FROM   yellow_taxi_january_2021
+      WHERE  "tpep_pickup_datetime" :: time > '1:00am'
+        AND "tpep_pickup_datetime" :: time < '6:00am') AS
+   "overnight passengers 2021"; 
    ```
    {: codeblock}
 
    Output:
 
    ```
-   overnight passengers 2022  | overnight passengers 2021 
+   overnight passengers 2022  | overnight passengers 2021
    ---------------------------+---------------------------
-                163058        |       33469
+   163058                     | 33469
    (1 row)
    ```
    {: codeblock}
