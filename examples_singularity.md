@@ -20,6 +20,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 {:codeblock: .codeblock}
+{:tip: .tip}
 
 # Querying data from data lakes
 {: #querying_singularity}
@@ -157,4 +158,5 @@ You can query external *parquet* format tables like you would any other {{site.d
    {: codeblock}
 
 
-   **TIP:** You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can query a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.
+   You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can query a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.
+   {: tip}
