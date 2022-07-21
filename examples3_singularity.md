@@ -136,7 +136,7 @@ INSERT 0 2463931
 {: codeblock}
 
 ## 4. Query the loaded data
-{: # query_loaded}
+{: #query_loaded}
 
 Now, you can query the loaded data by using the improved read/write performance, zonemaps, etc.
 
@@ -159,4 +159,4 @@ Now, you can query the loaded data by using the improved read/write performance,
    {: codeblock}
 
 
-**TIP:** You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can load a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.
+    **TIP:** You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can load a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.
