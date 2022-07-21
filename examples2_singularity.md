@@ -221,7 +221,7 @@ Now, you can query both the local 2022 data that was loaded and the 2021 data fr
    ```
    overnight passengers 2022  | overnight passengers 2021 
    ---------------------------+---------------------------
-                163058        |       33469
+                163058        |       33469
    (1 row)
    ```
    {: codeblock}
