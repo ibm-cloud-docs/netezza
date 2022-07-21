@@ -41,8 +41,6 @@ aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket
 
 External datasources allow an administrator to grant access to S3 without providing the keys directly to a user.
 
-For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=).
-
 a) Set **ENABLE_EXTERNAL_DATASOURCE**.
 
    ```
@@ -77,6 +75,8 @@ b) Create an external data source.
    );
    ```
    {: codeblock}
+
+   For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=).
 
 ## 2. Create an external table.
 {: #create_table1}

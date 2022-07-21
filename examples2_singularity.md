@@ -50,8 +50,6 @@ In the examples, the publicly available [*New York taxi trip* record data](https
 
 External datasources allow an administrator to grant access to S3 without providing the keys directly to a user.
 
-For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=).
-
 a) Set **ENABLE_EXTERNAL_DATASOURCE**.
 
    ```
@@ -86,6 +84,8 @@ b) Create an external data source.
    );
    ```
    {: codeblock}
+
+   For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=).
 
 ## 2. Identify the data from {{site.data.keyword.netezza_short}} to merge and compare.
 {: #ensure_2022}
