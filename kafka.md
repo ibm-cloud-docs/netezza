@@ -72,8 +72,7 @@ The Kafka JDBC connector has support for source and sink JDBC connectors. With 
 ### Setting up the JDBC Kafka connector
 {: #connectorkafka}
 
-You must install the driver in Kafka's library by editing *plugin.path*. For more information, see
-
+You must install the driver in Kafka's library by editing *plugin.path*.
 
 1. Set up Java.
 1. Copy JDBC to Kafka.
