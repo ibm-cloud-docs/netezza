@@ -30,14 +30,9 @@ As of July 22, 2022, you can access data from data lakes and move data between a
 ### New features
 {: #nfjuly2022}
 
-- Use {{site.data.keyword.netezza_short}} external tables to access and query **parquet** files that are stored outside of your database in data lakes (on AWS S3). For more information, see [Querying data](/docs/netezza?topic=netezza-overview_singularity).
+- Use {{site.data.keyword.netezza_short}} external tables to access and query *parquet* files that are stored outside of your database in data lakes (on AWS S3). For more information, see [Querying data from data lakes](/docs/netezza?topic=netezza-overview_singularity).
 
 - Use {{site.data.keyword.netezza_short}} as a data source or data sink. For more information, see [Using Netezza Performance Server as a data source](/docs/netezza?topic=netezza-netezzakafka#datasourcekafka) and [Using Netezza Performance Server as a data sink](/docs/netezza?topic=netezza-netezzakafka#datasinkkafka).
-
-### Known issues
-{: #kijuly2022}
-
-
 
 ## June 2022
 {: #june2022}
