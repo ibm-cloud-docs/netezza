@@ -18,7 +18,6 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - getting-started.md
       - connecting.md
       - topicgroup:
           label: Web console
@@ -71,10 +70,6 @@ toc:
           - endpoints.md
           - encryption.md
           - iam-docs.md
-      - topicgroup:
-         label: Netezza Performance Server time travel
-         topics:
-         - timetravel.md
       - topicgroup:
          label: Netezza Performance Server and Kafka
          topics:
