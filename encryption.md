@@ -23,7 +23,7 @@ subcollection: netezza
 # Data security and encryption
 {: #data-encryption}
 
-{{site.data.keyword.netezza_full}} has security built into its architecture.
+{{site.data.keyword.netezza_full}} has security built into its architecture. 
 {: shortdesc}
 
 The following methods are used to secure your connection and data:
