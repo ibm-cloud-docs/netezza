@@ -22,7 +22,7 @@ subcollection: netezza
 # Connecting to {{site.data.keyword.netezza_short}}
 {: #connecting}
 
-You can connect command-line interfaces, IBM® or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance.
+You can connect command-line interfaces, IBM® or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance. 
 {: shortdesc}
 
 ## Connectivity options
@@ -30,7 +30,7 @@ You can connect command-line interfaces, IBM® or third-party applications and t
 
 You can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints.
 
-- A public endpoint can be accessed over the public network or internet. 
+- A public endpoint can be accessed over the public network or internet.
 
    You can connect to your application by using a public hostname. To connect, you need public hostname details. Go to **Resource list > Services and Software > Service instance details**. On the page, you can find information about endpoints for accessing the web console, the API server, and the database.
 
