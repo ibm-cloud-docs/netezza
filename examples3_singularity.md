@@ -76,7 +76,7 @@ b) Create an external data source.
    ```
    {: codeblock}
 
-   For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=).
+   For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=tables-create-external-datasource-command).
 
 ## 2. Create an external table for the data from a data lake.
 {: #create_table3}
