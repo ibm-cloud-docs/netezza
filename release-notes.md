@@ -25,7 +25,7 @@ subcollection: netezza
 ## July 2022
 {: #july2022}
 
-As of July 22, 2022, you can access data from data lakes and move data between applications with Kafka.
+As of July 28, 2022, you can access data from data lakes and move data between applications with Kafka.
 
 ### New features
 {: #nfjuly2022}
