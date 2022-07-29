@@ -15,7 +15,7 @@ subcollection: netezza
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
-{:tip: .tip}
+{:note: .note}
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
@@ -27,6 +27,9 @@ Data lakes are an essential tool for storing structured and unstructured data on
 
 
 External data sources use connection strings to specify how you can access an external system. Each connection string describes where your data is placed and how to authenticate to your data source. Each external data source has a definition (schema), but the actual data exists inside the {{site.data.keyword.netezza_short}} database.
+
+You cannot backup (**nzbackup**) and restore (**nzrestore**) external data source objects.
+{: note}
 
 Use cases for external data source include:
 
