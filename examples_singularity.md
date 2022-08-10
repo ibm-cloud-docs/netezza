@@ -126,9 +126,9 @@ The *parquet* column names are case sensitive. You must use double quotation mar
    Output:
 
    ```
-   SUM   
-   ---------
-    3324167
+   SUM
+   -----
+   3324167
    (1 row)
    ```
    {: codeblock}
