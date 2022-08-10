@@ -141,17 +141,17 @@ The *parquet* column names are case sensitive. You must use double quotation mar
    {: codeblock}
 
    Output:
-
-   ```text
-   VendorID  | passengers
-   2         |     122251
-   1         |      40807
-   6         |
-   5         |
+   ```json
+   |VendorID | passengers|
+   |---------|-----------|
+   |VendorID | passengers|
+   |2        | 122251    |
+   |1        | 40807     |
+   |6        |           |
+   |5        |           |
    (4 rows)
    ```
    {: codeblock}
-
 
 
    You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can query a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.
