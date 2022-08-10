@@ -149,9 +149,8 @@ The *parquet* column names are case sensitive. You must use double quotation mar
 
    Output:
 
-
    ```
-   VendorID | passengers
+   VendorID  | passengers
    ----------+------------
    2         |     122251
    1         |      40807
