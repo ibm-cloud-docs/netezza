@@ -78,7 +78,7 @@ After you created an external data source, you can create an external table that
 Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
 ```sql
-create EXTERNAL TABLE 'TABLE NAME' on 'DATA SOURCE'
+create EXTERNAL table 'TABLE NAME' on 'DATA SOURCE'
 using ( 
     DATAOBJECT ('DATA OBJECT') FORMAT 'PARQUET' 
 );
@@ -88,7 +88,7 @@ using ( 
 Example:
 
 ```sql
-create EXTERNAL TABLE YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATALAKE 
+create EXTERNAL table YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATALAKE 
 using ( 
     DATAOBJECT ('/yellow_tripdata_2022-01.parquet') FORMAT 'PARQUET' 
 );
@@ -124,34 +124,34 @@ The *parquet* column names are case sensitive. You must use double quotation mar
 
 - To identify the vendor that had the most passengers between 1:00 AM and 6:00 AM, run:
 
-   ```sql
-   select
-       "VendorID",
-        sum("passenger_count") as "passengers"
-   from
-       YELLOW_TAXI_JANUARY_2022
-   where
-       "tpep_pickup_datetime"::time > '1:00am'
-       and "tpep_pickup_datetime"::time < '6:00am' 
-   group by 
-       "VendorID"
-   order by
-       "passengers" desc;
-   ```
-   {: codeblock}
+    ```sql
+    select
+        "VendorID",
+        sum("passenger_count") as "passengers"
+    from
+        YELLOW_TAXI_JANUARY_2022
+    where
+        "tpep_pickup_datetime"::time > '1:00am'
+        and "tpep_pickup_datetime"::time < '6:00am'
+    group by
+        "VendorID"
+    order by
+        "passengers" desc;
+    ```
+    {: codeblock}
 
-   Output:
-   ```json
-   |VendorID | passengers|
-   |---------|-----------|
-   |VendorID | passengers|
-   |2        | 122251    |
-   |1        | 40807     |
-   |6        |           |
-   |5        |           |
-   (4 rows)
-   ```
-   {: codeblock}
+    Output:
+
+    ```sql
+    VendorID| passengers
+    --------|----------
+    2       | 122251
+    1       | 40807
+    6       |
+    5       |
+    (4 rows)
+    ```
+    {: codeblock}
 
 
    You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can query a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.

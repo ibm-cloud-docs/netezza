@@ -43,35 +43,27 @@ External datasources allow an administrator to grant access to S3 without provid
 
 a) Set **ENABLE_EXTERNAL_DATASOURCE**.
 
-   ```
-   SET ENABLE_EXTERNAL_DATASOURCE = 1;
+   ```sql
+   set ENABLE_EXTERNAL_DATASOURCE = 1;
    ```
    {: codeblock}
 
 b) Create an external data source.
 
-   ```
-   CREATE EXTERNAL DATASOURCE 'DATA SOURCE'
-   ON 'REMOTE SOURCE'
-   USING (
-    ACCESSKEYID 'ACCESS KEY ID'
-    SECRETACCESSKEY 'SECRET ACCESS KEY'
-    BUCKET 'BUCKET'
-    REGION 'REGION'
+   ```sql
+   creste EXTERNAL DATASOURCE 'DATA SOURCE' on 'REMOTE SOURCE'
+   using (
+    ACCESSKEYID 'ACCESS KEY ID' SECRETACCESSKEY 'SECRET ACCESS KEY' BUCKET 'BUCKET' REGION 'REGION'
    );
    ```
    {: codeblock}
 
    Example:
 
-   ```
-   CREATE EXTERNAL DATASOURCE EXAMPLEDATALAKE 
-   ON AWSS3 
-   USING (
-    ACCESSKEYID 'XXXX'
-    SECRETACCESSKEY 'XXXX'
-    BUCKET 'exampledatalakebucket'
-    REGION 'US-EAST-1'
+   ```sql
+   create EXTERNAL DATASOURCE EXAMPLEDATALAKE on AWSS3 
+   using (
+    ACCESSKEYID 'XXXX' SECRETACCESSKEY 'XXXX' BUCKET 'exampledatalakebucket' REGION 'US-EAST-1'
    );
    ```
    {: codeblock}
@@ -85,24 +77,20 @@ After you created an external data source, you can create an external table that
 
 Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
-```
-CREATE EXTERNAL TABLE 'TABLE NAME'
-ON 'DATA SOURCE'
-USING ( 
-  DATAOBJECT ('DATA OBJECT')
-  FORMAT 'PARQUET' 
+```sql
+create EXTERNAL table 'TABLE NAME' on 'DATA SOURCE'
+using ( 
+  DATAOBJECT ('DATA OBJECT') FORMAT 'PARQUET' 
 );
 ```
 {: codeblock}
 
 Example:
 
-```
-CREATE EXTERNAL TABLE YELLOW_TAXI_JANUARY_2022 
-ON EXAMPLEDATASOURCE
-USING ( 
-  DATAOBJECT ('/yellow_tripdata_2022-01.parquet')
-  FORMAT 'PARQUET' 
+```sql
+create EXTERNAL table YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATASOURCE
+using ( 
+  DATAOBJECT ('/yellow_tripdata_2022-01.parquet') FORMAT 'PARQUET' 
 );
 ```
 {: codeblock}
@@ -112,26 +100,26 @@ USING ( 
 
 To load data from the data lake into a {{site.data.keyword.netezza_short}} table, run **CREATE TABLE AS SELECT** from the external table that you want to load.
 
-```
-CREATE TABLE 'TABLE NAME LOADED'
-AS
-    SELECT
-        * 
-    FROM
-        TABLE;
+```sql
+create table 'TABLE NAME LOADED' as
+select
+    * 
+from
+     'TABLE';
+
 INSERT 0 2463931
 ```
 {: codeblock}
 
 Example:
 
-```
-CREATE TABLE YELLOW_TAXI_JANUARY_2022_LOADED 
-AS
-    SELECT
-        * 
-    FROM
+```sql
+create table YELLOW_TAXI_JANUARY_2022_LOADED as
+select
+    * 
+from
         YELLOW_TAXI_JANUARY_2022;
+
 INSERT 0 2463931
 ```
 {: codeblock}
@@ -144,14 +132,15 @@ Now, you can query the loaded data by using the improved read/write performance,
 - To identify the passenger count, run:
 
    ```
-   SELECT Sum("passenger_count")
-   FROM   yellow_taxi_january_2022_loaded;
+   select
+      sum("passenger_count")
+   from YELLOW_TAXI_JANUARY_2022_LOADED;
    ```
    {: codeblock} 
 
    Output:
 
-   ```
+   ```sql
    SUM
    -------
    3324167

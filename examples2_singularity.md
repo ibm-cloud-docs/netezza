@@ -39,10 +39,10 @@ In the examples, the publicly available [*New York taxi trip* record data](https
 
 - For January 2022,
 
-   ```
-   aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket/yellow_tripdata_2022-01.parquet
-   ```
-   {: codeblock}
+    ```
+    aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket/yellow_tripdata_2022-01.parquet
+    ```
+    {: codeblock}
 
 
 ## 1. Create an external data source.
@@ -52,35 +52,27 @@ External datasources allow an administrator to grant access to S3 without provid
 
 a) Set **ENABLE_EXTERNAL_DATASOURCE**.
 
-   ```
-   SET ENABLE_EXTERNAL_DATASOURCE = 1;
+   ```sql
+   set ENABLE_EXTERNAL_DATASOURCE = 1;
    ```
    {: codeblock}
 
 b) Create an external data source.
 
-   ```
-   CREATE EXTERNAL DATASOURCE 'DATA SOURCE'
-   ON 'REMOTE SOURCE'
-   USING (
-    ACCESSKEYID 'ACCESS KEY ID'
-    SECRETACCESSKEY 'SECRET ACCESS KEY'
-    BUCKET 'BUCKET'
-    REGION 'REGION'
+   ```sql
+   create EXTERNAL DATASOURCE 'DATA SOURCE' on 'REMOTE SOURCE'
+   using (
+    ACCESSKEYID 'ACCESS KEY ID' SECRETACCESSKEY 'SECRET ACCESS KEY' BUCKET 'BUCKET' REGION 'REGION'
    );
    ```
    {: codeblock}
 
    Example:
 
-   ```
-   CREATE EXTERNAL DATASOURCE EXAMPLEDATALAKE 
-   ON AWSS3 
-   USING (
-    ACCESSKEYID 'XXXX'
-    SECRETACCESSKEY 'XXXX'
-    BUCKET 'exampledatalakebucket'
-    REGION 'US-EAST-1'
+   ```sql
+   create EXTERNAL DATASOURCE EXAMPLEDATALAKE on AWSS3 
+   using (
+    ACCESSKEYID 'XXXX' SECRETACCESSKEY 'XXXX' BUCKET 'exampledatalakebucket' REGION 'US-EAST-1'
    );
    ```
    {: codeblock}
@@ -98,50 +90,46 @@ a) Create an external table for the data that you want to load (`YELLOW_TAXI_JAN
 
    Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
-   ```
-   CREATE EXTERNAL TABLE 'TABLE NAME'
-   ON 'DATA SOURCE'
-   USING ( 
-     DATAOBJECT ('DATA OBJECT')
-     FORMAT 'PARQUET' 
+   ```sql
+   create EXTERNAL table 'TABLE NAME' on 'DATA SOURCE'
+   using ( 
+     DATAOBJECT ('DATA OBJECT') FORMAT 'PARQUET' 
    );
    ```
    {: codeblock}
 
    Example:
 
-   ```
-   CREATE EXTERNAL TABLE YELLOW_TAXI_JANUARY_2022 
-   ON EXAMPLEDATASOURCE
-   USING ( 
-     DATAOBJECT ('/yellow_tripdata_2022-01.parquet')
-     FORMAT 'PARQUET' 
+   ```sql
+   create EXTERNAL table YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATASOURCE
+   using ( 
+     DATAOBJECT ('/yellow_tripdata_2022-01.parquet') FORMAT 'PARQUET' 
    );
    ```
    {: codeblock}
 
 b) Load the data (`YELLOW_TAXI_JANUARY_2022`) into {{site.data.keyword.netezza_short}}.
 
-   ```
-   CREATE TABLE 'TABLE NAME LOADED'
-   AS
-       SELECT
-           * 
-       FROM
-           TABLE;
+   ```sql
+   create table 'TABLE NAME LOADED' as
+   select
+       * 
+   from
+       'TABLE';
+
    INSERT 0 2463931
    ```
    {: codeblock}
 
    Example:
 
-   ```
-   CREATE TABLE YELLOW_TAXI_JANUARY_2022_LOADED 
-   AS
-       SELECT
-           * 
-       FROM
-           YELLOW_TAXI_JANUARY_2022;
+   ```sql
+   create TABLE YELLOW_TAXI_JANUARY_2022_LOADED as
+   select
+       * 
+   from
+       YELLOW_TAXI_JANUARY_2022;
+
    INSERT 0 2463931
    ```
    {: codeblock}
@@ -153,24 +141,20 @@ Create an external table that accesses the yellow taxi data from January 2021.
 
 Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
-```
-CREATE EXTERNAL TABLE 'TABLE NAME'
-ON 'DATA SOURCE'
-USING ( 
-  DATAOBJECT ('DATA OBJECT')
-  FORMAT 'PARQUET' 
+```sql
+create EXTERNAL table 'TABLE NAME' on 'DATA SOURCE'
+using ( 
+  DATAOBJECT ('DATA OBJECT') FORMAT 'PARQUET' 
 );
 ```
 {: codeblock}
 
 Example:
 
-```
-CREATE EXTERNAL TABLE YELLOW_TAXI_JANUARY_2021
-ON EXAMPLEDATABASE 
-USING ( 
-  DATAOBJECT ('/yellow_tripdata_2021-01.parquet')
-  FORMAT 'PARQUET' 
+```sql
+create EXTERNAL table YELLOW_TAXI_JANUARY_2021 on EXAMPLEDATABASE 
+using ( 
+  DATAOBJECT ('/yellow_tripdata_2021-01.parquet') FORMAT 'PARQUET' 
 );
 ```
 {: codeblock}
@@ -182,17 +166,24 @@ Now, you can query both the local 2022 data that was loaded and the 2021 data fr
 
 - To identify which year had the most passengers, run:
 
-   ```
-   SELECT (SELECT Sum("passenger_count")
-     FROM   yellow_taxi_january_2022_loaded) AS "passengers 2022",
-     (SELECT Sum("passenger_count")
-     FROM   yellow_taxi_january_2021)        AS "passengers 2021";
-   ```
+   ```sql
+   select
+    (
+        select
+            sum("passenger_count")
+        from
+            YELLOW_TAXI_JANUARY_2022_LOADED) as "passengers 2022",
+    (
+        select
+            sum("passenger_count")
+        from
+            YELLOW_TAXI_JANUARY_2021) as "passengers 2021";
+    ```
    {: codeblock}
 
    Output:
 
-   ```   
+   ```sql   
    passengers 2022  | passengers 2021
    -----------------+-----------------
          3324167    |     1794615
@@ -202,17 +193,24 @@ Now, you can query both the local 2022 data that was loaded and the 2021 data fr
 
 - To compare how many passengers travelled between 1:00 AM and 6:00 PM in 2021 and 2022, run:
 
-   ```
-   SELECT(SELECT Sum("passenger_count")
-     FROM   yellow_taxi_january_2022_loaded
-     WHERE  "tpep_pickup_datetime" :: time > '1:00am'
-       AND "tpep_pickup_datetime" :: time < '6:00am') AS
-   "overnight passengers 2022",
-   (SELECT Sum("passenger_count")
-      FROM   yellow_taxi_january_2021
-      WHERE  "tpep_pickup_datetime" :: time > '1:00am'
-        AND "tpep_pickup_datetime" :: time < '6:00am') AS
-   "overnight passengers 2021"; 
+   ```sql
+   select
+    (
+        select
+            sum("passenger_count")
+        from
+            YELLOW_TAXI_JANUARY_2022_LOADED
+        where
+            "tpep_pickup_datetime"::time > '1:00am'
+            and "tpep_pickup_datetime"::time < '6:00am') as "overnight passengers 2022",
+    (
+        select
+            sum("passenger_count")
+        from
+            YELLOW_TAXI_JANUARY_2021
+        where
+            "tpep_pickup_datetime"::time > '1:00am'
+            and "tpep_pickup_datetime"::time < '6:00am') as "overnight passengers 2021"; 
    ```
    {: codeblock}
 
