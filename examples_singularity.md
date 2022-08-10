@@ -43,14 +43,14 @@ External datasources allow an administrator to grant access to S3 without provid
 
 a) Set **ENABLE_EXTERNAL_DATASOURCE**.
 
-   ```json
+   ```sql
    set ENABLE_EXTERNAL_DATASOURCE = 1;
    ```
    {: codeblock}
 
 b) Create an external data source.
 
-   ```json
+   ```sql
    create EXTERNAL DATASOURCE 'DATA SOURCE' on 'REMOTE SOURCE'
    using (
        ACCESSKEYID 'ACCESS KEY ID' SECRETACCESSKEY 'SECRET ACCESS KEY' BUCKET 'BUCKET' REGION 'REGION'
@@ -60,7 +60,7 @@ b) Create an external data source.
 
    Example:
 
-   ```json
+   ```sql
    create EXTERNAL DATASOURCE EXAMPLEDATALAKE on AWSS3 
    using (
        ACCESSKEYID 'XXXX' SECRETACCESSKEY 'XXXX' BUCKET 'exampledatalakebucket' REGION 'US-EAST-1'
@@ -77,7 +77,7 @@ After you created an external data source, you can create an external table that
 
 Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
-```json
+```sql
 create EXTERNAL TABLE 'TABLE NAME' on 'DATA SOURCE'
 using ( 
     DATAOBJECT ('DATA OBJECT') FORMAT 'PARQUET' 
@@ -87,7 +87,7 @@ using ( 
 
 Example:
 
-```json
+```sql
 create EXTERNAL TABLE YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATALAKE 
 using ( 
     DATAOBJECT ('/yellow_tripdata_2022-01.parquet') FORMAT 'PARQUET' 
@@ -105,7 +105,7 @@ The *parquet* column names are case sensitive. You must use double quotation mar
 
 - To identify the total number of passengers that travelled by taxis in New York in January 2022, run:
 
-   ```
+   ```sql
    select
        sum("passenger_count") 
    from YELLOW_TAXI_JANUARY_2022;
@@ -124,7 +124,7 @@ The *parquet* column names are case sensitive. You must use double quotation mar
 
 - To identify the vendor that had the most passengers between 1:00 AM and 6:00 AM, run:
 
-   ```json
+   ```sql
    select
        "VendorID",
         sum("passenger_count") as "passengers"
@@ -140,19 +140,18 @@ The *parquet* column names are case sensitive. You must use double quotation mar
    ```
    {: codeblock}
 
+   Output:
 
-    Output: 
+   ```text
+   VendorID  | passengers
+   2         |     122251
+   1         |      40807
+   6         |
+   5         |
+   (4 rows)
+   ```
+   {: codeblock}
 
-    ```json
-    VendorID  | passengers
-    ----------+------------
-    2         |     122251
-    1         |      40807
-    6         |
-    5         |
-    (4 rows)
-    ```
-    {: codeblock}
 
 
    You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can query a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.
