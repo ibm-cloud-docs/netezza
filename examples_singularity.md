@@ -43,35 +43,27 @@ External datasources allow an administrator to grant access to S3 without provid
 
 a) Set **ENABLE_EXTERNAL_DATASOURCE**.
 
-   ```
-   SET ENABLE_EXTERNAL_DATASOURCE = 1;
+   ```json
+   set ENABLE_EXTERNAL_DATASOURCE = 1;
    ```
    {: codeblock}
 
 b) Create an external data source.
 
-   ```
-   CREATE EXTERNAL DATASOURCE 'DATA SOURCE'
-   ON 'REMOTE SOURCE'
-   USING (
-    ACCESSKEYID 'ACCESS KEY ID'
-    SECRETACCESSKEY 'SECRET ACCESS KEY'
-    BUCKET 'BUCKET'
-    REGION 'REGION'
+   ```json
+   create EXTERNAL DATASOURCE 'DATA SOURCE' on 'REMOTE SOURCE'
+   using (
+       ACCESSKEYID 'ACCESS KEY ID' SECRETACCESSKEY 'SECRET ACCESS KEY' BUCKET 'BUCKET' REGION 'REGION'
    );
    ```
    {: codeblock}
 
    Example:
 
-   ```
-   CREATE EXTERNAL DATASOURCE EXAMPLEDATALAKE 
-   ON AWSS3 
-   USING (
-    ACCESSKEYID 'XXXX'
-    SECRETACCESSKEY 'XXXX'
-    BUCKET 'exampledatalakebucket'
-    REGION 'US-EAST-1'
+   ```json
+   create EXTERNAL DATASOURCE EXAMPLEDATALAKE on AWSS3 
+   using (
+       ACCESSKEYID 'XXXX' SECRETACCESSKEY 'XXXX' BUCKET 'exampledatalakebucket' REGION 'US-EAST-1'
    );
    ```
    {: codeblock}
@@ -85,24 +77,20 @@ After you created an external data source, you can create an external table that
 
 Ensure that you have the necessary privileges as described in [Privileges for creating external tables](https://www.ibm.com/docs/en/netezza?topic=et-create-external-table-command-2).
 
-```
-CREATE EXTERNAL TABLE 'TABLE NAME'
-ON 'DATA SOURCE'
-USING ( 
-  DATAOBJECT ('DATA OBJECT')
-  FORMAT 'PARQUET' 
+```json
+create EXTERNAL TABLE 'TABLE NAME' on 'DATA SOURCE'
+using ( 
+    DATAOBJECT ('DATA OBJECT') FORMAT 'PARQUET' 
 );
 ```
 {: codeblock}
 
 Example:
 
-```
-CREATE EXTERNAL TABLE YELLOW_TAXI_JANUARY_2022
-ON EXAMPLEDATALAKE 
-USING ( 
-  DATAOBJECT ('/yellow_tripdata_2022-01.parquet')
-  FORMAT 'PARQUET' 
+```json
+create EXTERNAL TABLE YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATALAKE 
+using ( 
+    DATAOBJECT ('/yellow_tripdata_2022-01.parquet') FORMAT 'PARQUET' 
 );
 ```
 {: codeblock}
@@ -118,8 +106,9 @@ The *parquet* column names are case sensitive. You must use double quotation mar
 - To identify the total number of passengers that travelled by taxis in New York in January 2022, run:
 
    ```
-   SELECT Sum("passenger_count") 
-   FROM   yellow_taxi_january_2022;
+   select
+       sum("passenger_count") 
+   from YELLOW_TAXI_JANUARY_2022;
    ```
    {: codeblock}
 
@@ -135,21 +124,26 @@ The *parquet* column names are case sensitive. You must use double quotation mar
 
 - To identify the vendor that had the most passengers between 1:00 AM and 6:00 AM, run:
 
-   ```
-   SELECT   "VendorID",
-        Sum("passenger_count") AS "passengers"
-   FROM     yellow_taxi_january_2022
-   WHERE   "tpep_pickup_datetime"::time > '1:00am'
-            AND     "tpep_pickup_datetime"::time < '6:00am' 
-   GROUP by "VendorID"
-   ORDER BY "passengers" DESC;
+   ```json
+   select
+       "VendorID",
+        sum("passenger_count") as "passengers"
+   from
+       YELLOW_TAXI_JANUARY_2022
+   where
+       "tpep_pickup_datetime"::time > '1:00am'
+       and "tpep_pickup_datetime"::time < '6:00am' 
+   group by 
+       "VendorID"
+   order by
+       "passengers" desc;
    ```
    {: codeblock}
 
 
     Output:
 
-    ```
+    ```json
     VendorID  | passengers
     ----------+------------
     2         |     122251
