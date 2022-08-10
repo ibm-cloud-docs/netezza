@@ -146,7 +146,9 @@ The *parquet* column names are case sensitive. You must use double quotation mar
    ```
    {: codeblock}
 
+
    Output:
+
 
    ```
    VendorID | passengers
