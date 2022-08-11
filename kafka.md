@@ -206,7 +206,7 @@ You must install the driver in Kafka's library by editing *plugin.path*.
 
 
 You can verify whether the connectors work correctly by checking the {{site.data.keyword.netezza_short}} logs.
-
+ 
 - For the source connector:
 
     ```ssh
