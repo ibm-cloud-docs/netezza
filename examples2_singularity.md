@@ -28,22 +28,7 @@ You might keep only the most recent data locally in a database and use data lake
 ## Before you begin
 {: #prereqs3}
 
-In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, download the data and upload it to an accessible S3 bucket.
-
-- For January 2021:
-
-    ```
-    aws s3 cp ~/Downloads/yellow_tripdata_2021-01.parquet s3://exampledatalakebucket/yellow_tripdata_2021-01.parquet
-    ```
-    {: codeblock}
-
-- For January 2022,
-
-    ```
-    aws s3 cp ~/Downloads/yellow_tripdata_2022-01.parquet s3://exampledatalakebucket/yellow_tripdata_2022-01.parquet
-    ```
-    {: codeblock}
-
+In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
 
 ## 1. Create an external data source.
 {: #create_ds2}
