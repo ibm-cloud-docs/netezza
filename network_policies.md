@@ -24,11 +24,9 @@ subcollection: netezza
 By default, you can connect to the {{site.data.keyword.netezza_short}} database or connect from the database to any device with any IP address or hostname.
 By using the network policies feature in the web console, you can control the set of the IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or can be connected from.
 
-- If you want to restrict which destination my {{site.data.keyword.netezza_short}} instance can reach out to, see
-[Allowing connections only from a defined set of sources with the specified IP addresses and hostnames](docs/netezza?topic=netezza-network-policies#use-case-1)
+- If you want to restrict the destination your {{site.data.keyword.netezza_short}} instance can reach out to or can be reached from, see [Allowing connections only from a defined set of sources with the specified IP addresses and hostnames](docs/netezza?topic=netezza-network-policies#use-case-1).
 
-- If you want to restrict which sources can reach out to my {{site.data.keyword.netezza_short}} instance, see
-[Allowing connections only from on premises and take backups, load or unload data by using Cloud Object Store](docs/netezza?topic=netezza-network-policies#use-case-2)
+- If you want to restrict the sources that can reach out to your {{site.data.keyword.netezza_short}} instance or from which the instance can be reached, see [Allowing connections only from on premises and take backups, load or unload data by using Cloud Object Store](docs/netezza?topic=netezza-network-policies#use-case-2).
 
 ## Overview
 {: #nw-overview}
@@ -120,7 +118,11 @@ In such scenarios, you can do one of the following:
 ## Order of evaluation of network policies
 {: #nw-eval}
 
-The policies are evaluated in the order that they are defined, from first to last. The first rule that matches the incoming or outgoing connection is applied and subsequent rules are ignored for that connection.
+The **allow** policies are evaluated first. Then, the **deny** policies.
+
+During the evaluation, each policy is evaluated in the order that they are defined, from first to last.
+
+The first rule that matches the incoming or outgoing connection is applied and subsequent rules are ignored for that connection.
 
 You can find examples of creating policies in **Examples of network policies**.
 
@@ -144,6 +146,7 @@ If you want to allow connections to the {{site.data.keyword.netezza_short}} data
 1. Create the policies in order from `Rule 1` to `Rule 5`.
 
    ```
+   Rule 1: CIDR-1    (allow)
    Rule 2: CIDR-2    (allow)
    Rule 3: H1        (allow)
    Rule 4: H2        (allow)
@@ -152,7 +155,7 @@ If you want to allow connections to the {{site.data.keyword.netezza_short}} data
 
    These rules ensure that connections are matched against `Rule 1-4` to determine whether they can be allowed. If they are not allowed, `Rule 5` rejects them.
 
-If someone is trying to connect to the {{site.data.keyword.netezza_short}} database with hostnames `H1` and `H2`, the database first tries to resolve the hostname to its IP address to complete the connection. Because the database might not have the DNS entry cached locally, the database tries to resolve the hostname by using a public DNS server. The DNS lookup fails because Rule 5 is in place. As a result, the connection attempt fails.
+   If someone is trying to connect to the {{site.data.keyword.netezza_short}} database with hostnames `H1` and `H2`, the database first tries to resolve the hostname to its IP address to complete the connection. Because the database might not have the DNS entry cached locally, the database tries to resolve the hostname by using a public DNS server. The DNS lookup fails because Rule 5 is in place. As a result, the connection attempt fails.
 
 2. Add the public authoritative DNS server hostname or CIDR (DNS-1) to the allow rules for the DNS lookup to succeed.
 
@@ -165,11 +168,7 @@ If someone is trying to connect to the {{site.data.keyword.netezza_short}} datab
    Rule 6: 0.0.0.0/0 (deny)
    ```
 
-   For the new `allow` rule to work, you must add it before the `deny all` rule.
-
-   To achieve this, delete the `deny all` rule and add the new `allow` rule as `Rule 5`.
-
-   As a result, `Rule 5` is followed by the `deny all` rule (`Rule 6`).
+   The new rule is added as an **allow** rule (*Rule 5*).
 
 ### Allowing connections only from on premises and take backups, load or unload data by using Cloud Object Store
 {: #use-case-2}
@@ -191,9 +190,10 @@ If you want applications or users only from their on-premises network to connect
    Rule 1: CIDR-1    (allow)
    ```
 
-1. After the CIDR-1 `allow` rule (Rule 1), add a `deny all` rule (Rule 2) to restrict connections that originate only from the on-premises network to be able to connect to the {{site.data.keyword.netezza_short}} database.
+1. Add a **deny all** rule (*Rule 2*) to restrict connections that originate only from the on-premises network.
 
    ```
+   Rule 1: CIDR-1    (allow)
    Rule 2: 0.0.0.0/0 (deny)
    ```
 
