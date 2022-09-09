@@ -81,7 +81,6 @@ toc:
          - examples_singularity.md
          - examples3_singularity.md
          - examples2_singularity.md
-         - queries_singularity.md
          - link:
              label: External tables
              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
