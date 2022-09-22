@@ -34,6 +34,18 @@ As of July 28, 2022, you can access data from data lakes and move data between a
 
 - Use {{site.data.keyword.netezza_short}} as a data source or data sink. For more information, see [Using Netezza Performance Server as a data source](/docs/netezza?topic=netezza-netezzakafka#datasourcekafka) and [Using Netezza Performance Server as a data sink](/docs/netezza?topic=netezza-netezzakafka#datasinkkafka).
 
+### Known issues
+{: #kijuly2022}
+
+`datasource` is a reserved keyword now. If you want to use `datasource` as an identifier, enclose it in double quotation marks (`"datasource"`).
+
+Example:
+
+```
+SYSTEM.ADMIN(ADMIN)=> create table t1 ( "datasource" int);
+CREATE TABLE
+```
+
 ## June 2022
 {: #june2022}
 
