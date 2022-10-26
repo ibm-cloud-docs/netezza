@@ -18,6 +18,7 @@ toc:
   - navgroup:
       id: learn
       topics:
+      - getting-started.md
       - connecting.md
       - topicgroup:
           label: Web console
