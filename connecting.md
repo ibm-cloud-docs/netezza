@@ -4,7 +4,7 @@ copyright:
   years: 2021
 lastupdated: "2021-11-22"
 
-keywords: connecting to Netezza Performance Server, connecting
+keywords: connecting to Netezza Performance Server, connecting, private endpoint, public endpoint, public and private endpoints, web console,
 
 subcollection: netezza
 
@@ -22,7 +22,7 @@ subcollection: netezza
 # Connecting to {{site.data.keyword.netezza_short}}
 {: #connecting}
 
-You can connect command-line interfaces, IBM® or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance. 
+You can connect command-line interfaces, IBM® or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance.
 {: shortdesc}
 
 ## Connectivity options
@@ -41,6 +41,8 @@ You can provision {{site.data.keyword.netezza_short}} with a private endpoint or
    {{site.data.keyword.netezza_short}} supports private connectivity through [Azure Privatelink](https://azure.microsoft.com/en-us/pricing/details/private-link/#overview).
 
    Create a [support ticket](/docs/netezza?topic=netezza-tickets&interface=ui) to receive further instructions on how to set up a [private ednpoint](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview) in your VNET.
+
+   **DRAFT COMMENT: IS THIS BIT ABOUT AZURE PRIVATELINK & CREATING SUPPORT TICKETS STILL VALID?**
 
 
 Each endpoint type provides a set of three hostnames. You can connect each of the hostnames to one of the following components:
