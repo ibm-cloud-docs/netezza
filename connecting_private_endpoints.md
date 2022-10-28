@@ -1,3 +1,25 @@
+---
+
+copyright:
+  years: 2021
+lastupdated: "2021-11-15"
+
+keywords: connecting, private endpoints
+
+subcollection: netezza
+
+---
+{:external: target="_blank" .external}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:caption: .caption}
+
 # Connecting to {{site.data.keyword.netezza_short}} by using private endpoints.
 {:# connecting-private-endpoints}
 
