@@ -19,7 +19,11 @@ toc:
       id: learn
       topics:
       - getting-started.md
-      - connecting.md
+     - topicgroup:
+         label: Connecting to Netezza
+         topics:
+         - connecting.md
+         - connecting_private_endpoints.md
       - topicgroup:
           label: Web console
           topics:
