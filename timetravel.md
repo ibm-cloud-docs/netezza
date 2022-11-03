@@ -29,14 +29,14 @@ With the technology preview of {{site.data.keyword.netezza_short}} time travel,
 you can store, retrieve, and analyze historical data without using additional application logic in your data (tables, schemas, and databases).
 
 - Introducing time travel
-  - Uses for time travel
-  - Time travel SQL commands
-  - Data version retention interval (DATA_VERSION_RETENTION_TIME)
-  - Temporal tables
+    - Uses for time travel
+    - Time travel SQL commands
+    - Data version retention interval (DATA_VERSION_RETENTION_TIME)
+    - Temporal tables
 
 - Enabling and disabling time travel
-  - Enabling time travel
-  - Disabling time travel
+    - Enabling time travel
+    - Disabling time travel
 
 - Setting the retention interval
 
@@ -47,6 +47,7 @@ you can store, retrieve, and analyze historical data without using additional ap
 - Setting time periods for queries
 
 - Running queries
+
 
 ## Introducing time travel
 {: #intrott}
@@ -112,10 +113,12 @@ You can identify differences in between two points in time of interest.
 {: #sqltt}
 
 A **TIME_TRAVEL_ENABLED** subcommand is added to the following commands:
+
 - SET SYSTEM DEFAULT
 - SHOW SYSTEM DEFAULT
 
 A **DATA_VERSION_RETENTION_TIME** subcommand is added to the following commands:
+
 - SET SYSTEM DEFAULT
 - SHOW SYSTEM DEFAULT
 - CREATE DATABASE
