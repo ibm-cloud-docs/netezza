@@ -55,7 +55,7 @@ If you deploy with a private endpoint, you must provide the subscription IDs.
 ![Connecting to {{site.data.keyword.netezza_short}}](connecting2.png){: caption="Image 2. The Configure advanced feature section of the IBM Cloud page" caption-side="bottom"}
 
 ### Adding or updating subscription IDs in the web console
-{: subscription-ids-webconsole}
+{: #subscription-ids-webconsole}
 
 If you deploy your instance with public and private endpoints, and you can log in to the web console by using the public endpoint and set up the  private link service there.
 
@@ -73,7 +73,7 @@ You can retrieve the resource ID or alias for the database and console in one of
 1. By going to _Administration > Setting > Private Link_ in the web console.
 
 ## Setting up Azure private endpoints to connect to Netezza instance
-{: setting-up-private-endpoints}
+{: #setting-up-private-endpoints}
 
 To create private endpoints in your subscription, follow the instructions from [Create a private endpoint](https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-portal?tabs=dynamic-ip#create-a-private-endpoint).  
 
