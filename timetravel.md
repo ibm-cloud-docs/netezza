@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-11-03"
 
 keywords: time travel, Netezza time travel, temporal tables, Netezza Performance Server time travel, retention interval, retention time interval, enabling time travel, disabling time travel
 
@@ -19,7 +19,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
-{:note: .note} 
+{:note: .note}
 
 # {{site.data.keyword.netezza_short}} time travel
 {: #timetravel}
