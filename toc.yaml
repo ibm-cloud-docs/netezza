@@ -43,6 +43,7 @@ toc:
               - admins/bnr-ui.md
               - admins/bnr-flow.md
       - release-notes.md
+      - timetravel.md
 
   - navgroup:
       id: howto
