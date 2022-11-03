@@ -19,7 +19,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
-{:note: .note}
+{:note: .note} 
 
 # {{site.data.keyword.netezza_short}} time travel
 {: #timetravel}
