@@ -19,7 +19,7 @@ toc:
       id: learn
       topics:
       - getting-started.md
-     - topicgroup:
+      - topicgroup:
          label: Connecting to Netezza
          topics:
          - connecting.md
