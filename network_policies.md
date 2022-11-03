@@ -115,6 +115,7 @@ In such scenarios, you can do one of the following:
 
 - Provide the complete CIDR range that is used by the device or the service.
 
+
 ## Order of evaluation of network policies
 {: #nw-eval}
 
@@ -295,6 +296,7 @@ If you have storage accounts, for example, in the `East US 2` region with Azure 
      Rule 6: 137.116.2.64/27    (allow)
      Rule 2: 0.0.0.0/0          (deny)
      ```
+
 
 1. If you want to use or connect from any other Azure service, add to the allow rule the CIDR range that is associated with those
 respective service endpoints.
