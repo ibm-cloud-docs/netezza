@@ -96,6 +96,10 @@ A **DATA_VERSION_RETENTION_TIME** subcommand is added to the following commands:
 - [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
 - [ALTER SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2)
 - [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
+- [ALTER TABLE] (https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)
+
+
+- [SHOW TEMPORAL HISTOGRAM] ADD LINK
 
 ## Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
 {: #dataretentioninterval_tt}
@@ -114,7 +118,7 @@ If you set a retention interval of 0 days for an object, time travel is disabled
 
 Older historical rows are reclaimed when you run the **GROOM TABLE** command, or use the **AutoMaint** groom feature if the rows are not needed to support incremental backup.
 
-To set **DATA_VERSION_RETENTION_TIME**, see ADD LINK
+To set **DATA_VERSION_RETENTION_TIME**, see [Setting the retention interval] ADD LINK
 
 ## Temporal tables
 {: #temporaltables_tt}
