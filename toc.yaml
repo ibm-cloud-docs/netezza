@@ -90,15 +90,15 @@ toc:
              label: External tables
              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - topicgroup:
-        label: Netezza Performance Server time travel
-        topics:
-        - timetravel/timetravel.md
-        - timetravel/introducing_timetravel.md
-        - timetravel/enabledisable_timetravel.md
-        - timetravel/retentioninterval_timetravel.md
-        - timetravel/queryingdata_timetravel.md
-        - timetravel/settingperiods_timetravel.md
-        - timetravel/runningqueries_timetravel.md
+         label: Netezza Performance Server time travel
+         topics:
+         - timetravel/timetravel.md
+         - timetravel/introducing_timetravel.md
+         - timetravel/enabledisable_timetravel.md
+         - timetravel/retentioninterval_timetravel.md
+         - timetravel/queryingdata_timetravel.md
+         - timetravel/settingperiods_timetravel.md
+         - timetravel/runningqueries_timetravel.md
       - link:
           label: Loading data
           href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
