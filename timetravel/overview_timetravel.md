@@ -105,13 +105,15 @@ The delete timestampof a historical row is the date/time that the transaction de
 - If the deleting (or truncating) transaction committed before the retention start timestamp, a deleted row is treated as having been deleted at the retention start timestamp. This generally applies only to existing deleted rows at the time of altering a nontemporal table to a temporal table; such rows are not visible to time travel queries against the table.
 - A historical row might be visible to a temporal query against the table if its delete timestampvfalls within the table’s retention period. As long as this condition is true, the historical row cannot be removed (with GROOM TABLE) from the table.
 - The delete timestamp of a current (not deleted) row is `NULL`.
+- You can select the insert timestamp by using the **_SYS_END** virtual column of a temporal table.
 
-### Insert timestampof
+### Insert timestamp
 {: #inserttimestamp_tt}
 
 The insert timestamp of a current or historical row is the date/time that the transaction inserting the row committed. Not the time of execution of the particular INSERT or UPDATE statement that inserted the row.
 
-If the inserting transaction committed  before  the  retention  start timestamp, a row is treated as having been inserted at the retention start timestamp. This generally applies only to existing rows at the time of altering a non-temporal table to a temporal table.
+- If the inserting transaction committed  before  the  retention  start timestamp, a row is treated as having been inserted at the retention start timestamp. This generally applies only to existing rows at the time of altering a non-temporal table to a temporal table.
+- You can select the insert timestamp by using the **_SYS_START** virtual column of a temporal table.
 
 ### Validity period
 {: #validity_tt}

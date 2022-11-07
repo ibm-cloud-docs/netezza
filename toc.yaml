@@ -97,9 +97,9 @@ toc:
          - timetravel/overview_timetravel.md
          - timetravel/enabledisable_timetravel.md
          - timetravel/retentioninterval_timetravel.md
+         - timetravel/runningqueries_timetravel.md
          - timetravel/queryingdata_timetravel.md
          - timetravel/settingperiods_timetravel.md
-         - timetravel/runningqueries_timetravel.md
       - link:
           label: Loading data
           href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
