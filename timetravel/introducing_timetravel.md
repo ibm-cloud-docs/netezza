@@ -30,15 +30,19 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
 
 With time travel, you can do the following tasks, and more:
 
-- Create a system-managed temporal table by specifying a data version retention time interval.
-- Create or alter a schema with a retention time, which is to be inherited by tables that are created after a create or delete operation.
-- Create or alter a database with a retention time, which is to be inherited by schemas that are created after a create or delete operation.
-- Set or disable a default retention time at the system level, which is inherited by databases that are created after the system level default is set.
-- View the retention time of a table, schema, database, or the system default.
-- Query past data in a temporal table as of a point in time.
-- Query past data in a temporal table over a range or period of time.
+- [Create system-managed temporal tables by specifying a data version retention time interval.]((https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2))
+- [Create schemas]((https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2) or [alter schemas](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2) with a retention time, which is to be inherited by tables that are created after a create or delete operation.
+- [Create databases](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2) or [alter databases](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2) with a retention time, which is to be inherited by schemas that are created after a create or delete operation.
+- [Set or disable a default retention time at the system level, which is inherited by databases that are created after the system level default is set.]((https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2))
+- [View the retention time of a table, schema, database, or the system default.](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-system-default-2)
+- [Query past data in a temporal table as of a point in time or period of time.](https://cloud.ibm.com/docs/netezza?topic=netezza-queryingdata_tt)
 - Create or replace a view whose definition is a temporal query.
-
+- [Convert an existing table to a system-managed temporal table, convert an existing temporal table to a nontemporal table, or modify a temporal table’s retention time.](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt)
+- [Specify, modify, or disable the retention time of an existing schema or database by cascading the retention time to existing tables (and schemas).](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt)
+- Backup and restore database, schema, and table retention times.
+- Use temporal queries in stored procedures.
+- Restore a dropped table, schema, or database within its retention period.
+- Replicate database, schema, or table retention times.
 
 For example, you can identify one of the following values, and many more:
 
@@ -66,74 +70,11 @@ For example, personal information, medical records or credit information of the 
 You can establish how data changes over time with the ongoing business activity,
 and calculate trends in the way that data changes over time.
 
-**Rebuilding data if inadvertent changes occur**
+**Rebuilding or reconstructing data**
 
 You can retrieve previous version of your data from the history table and insert
-the old data back into the table.
-
-**Reconstructing data**
-
-You can reconstruct the state of the data as of any time in the past.
+the old data back into the table. You can reconstruct the state of the data as of any time in the past.
 
 **Identifying differences**
 
 You can identify differences in between two points in time of interest.
-
-## Time travel SQL commands
-{: #sqlcommands_tt}
-
-A **TIME_TRAVEL_ENABLED** subcommand is added to the following commands:
-
-- [SET SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2)
-- [SHOW SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-system-default-2)
-
-A **DATA_VERSION_RETENTION_TIME** subcommand is added to the following commands:
-
-- [SET SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2)
-- [SHOW SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-system-default-2)
-- [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
-- [ALTER DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2)
-- [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
-- [ALTER SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2)
-- [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
-- [ALTER TABLE] (https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)
-
-
-- [SHOW TEMPORAL HISTOGRAM] ADD LINK
-
-## Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
-{: #dataretentioninterval_tt}
-
-Data version retention time interval (retention time interval, retention interval) specifies the maximum number of days that historical data in a temporal table is preserved and visible to time travel queries.
-
-For example, if you modify an object, {{site.data.keyword.netezza_short}} preserves the state of the data before the modification so that you can do time travel operations.
-
-The default retention interval value at all levels is 0. The maximum is 92 days. When the retention interval ends, your historical data is no longer available for querying and you cannot restore objects.
-
-A table with a 0 retention interval is not a temporal table (time travel table) and does not support time travel queries.
-
-If you set a retention interval of 0 days for an object, time travel is disabled for the object.
-
-{{site.data.keyword.netezza_short}} retains the historical data based on the retention time interval that is associated with a table. This retention period is the time period (in days) over which you can query the historical data.
-
-Older historical rows are reclaimed when you run the **GROOM TABLE** command, or use the **AutoMaint** groom feature if the rows are not needed to support incremental backup.
-
-To set **DATA_VERSION_RETENTION_TIME**, see [Setting the retention interval] ADD LINK
-
-## Temporal tables
-{: #temporaltables_tt}
-
-A temporal table is a table that has a specified, nonzero retention interval, and supports time travel queries.
-
-Temporal tables provide a built-in support to access the data that is stored in a table at any point in time rather than current data (current moment in time). The history of your data in the table is maintained and managed automatically.
-
-At any specified time, a table retention interval start timestamp equals the current timestamp (date/time, with microsecond granularity) minus the retention interval.
-
-The retention interval of a temporal table is the period of time that starts at the retention start timestamp and has no defined end.
-
-Tables with retention interval set to zero are not temporal.
-
-{{site.data.keyword.netezza_short}} supports only system-managed temporal tables.
-
-A system-managed temporal table is a table that maintains historical versions of its rows. Use a system-period temporal table to store current versions of your data. The database transparently stores your updated and deleted data rows. System-period tables are system-managed.
-{: note}
