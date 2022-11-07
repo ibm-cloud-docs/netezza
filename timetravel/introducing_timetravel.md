@@ -84,20 +84,20 @@ You can identify differences in between two points in time of interest.
 
 A **TIME_TRAVEL_ENABLED** subcommand is added to the following commands:
 
-- SET SYSTEM DEFAULT
-- SHOW SYSTEM DEFAULT
+- [SET SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2)
+- [SHOW SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-system-default-2)
 
 A **DATA_VERSION_RETENTION_TIME** subcommand is added to the following commands:
 
-- SET SYSTEM DEFAULT
-- SHOW SYSTEM DEFAULT
-- CREATE DATABASE
-- ALTER DATABASE
-- CREATE SCHEMA
-- ALTER SCHEMA
-- CREATE TABLE
+- [SET SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2)
+- [SHOW SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-system-default-2)
+- [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
+- [ALTER DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2)
+- [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
+- [ALTER SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2)
+- [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
 
-## Data version retention interval (DATA_VERSION_RETENTION_TIME)
+## Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
 {: #dataretentioninterval_tt}
 
 Data version retention time interval (retention time interval, retention interval) specifies the maximum number of days that historical data in a temporal table is preserved and visible to time travel queries.
@@ -114,6 +114,8 @@ If you set a retention interval of 0 days for an object, time travel is disabled
 
 Older historical rows are reclaimed when you run the **GROOM TABLE** command, or use the **AutoMaint** groom feature if the rows are not needed to support incremental backup.
 
+To set **DATA_VERSION_RETENTION_TIME**, see ADD LINK
+
 ## Temporal tables
 {: #temporaltables_tt}
 
@@ -127,7 +129,7 @@ The retention interval of a temporal table is the period of time that starts at 
 
 Tables with retention interval set to zero are not temporal.
 
-Netezza Performance Server supports only system-managed temporal tables.
+{{site.data.keyword.netezza_short}} supports only system-managed temporal tables.
 
 A system-managed temporal table is a table that maintains historical versions of its rows. Use a system-period temporal table to store current versions of your data. The database transparently stores your updated and deleted data rows. System-period tables are system-managed.
 {: note}
