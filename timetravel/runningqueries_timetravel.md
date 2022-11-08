@@ -54,7 +54,7 @@ At any given time, a temporal table’s data version retention start timestamp e
 - Current date/time (timestamp, in microsecond granularity) minus the data version retention time interval.
 - The table’s data version retention lower bound, which is is the date/time that the table’s retention time interval was last set by the CREATE TABLE or ALTER TABLE statements.
 
-## AS OF
+### AS OF
 {: asof_tt}
 
 You can use the **AS OF** subclause when you want to reconstruct the state of your data as it was at any specific time in the past.
@@ -72,7 +72,7 @@ The **AS OF** value cannot be a subquery.
 
 Includes all the rows where the begin value for the period is less than or equal to *value1* and the end value for the period is greater than *value1*. This enables you to query your data as of a certain point in time.
 
-## BEFORE
+### BEFORE
 {: #before_tt}
 
 You can use the **BEFORE** subclause when you want to to reconstruct the  of your data as it was at any specific time in the past.
@@ -90,7 +90,8 @@ The **BEFORE** value cannot be a subquery.
 
 Includes all the rows where the begin value for the period is less than *value1* and the end value for the period is greater than *value1*. This enables you to query your data as of a certain point in time.
 
-## FROM...TO and BETWEEN...AND
+### FROM...TO and BETWEEN...AND
+{: #fromtobetweenand_tt}
 
 You can use the **FROM...TO** and **BETWEEN...AND** subclauses for data audit; when you need to get all historical transformation for a specific rows in the table.
 

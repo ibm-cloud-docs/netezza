@@ -35,17 +35,24 @@ Maintaining a time-based data support infrastructure might be expensive and comp
     - Disabling time travel
 
 - Temporal tables
-    - Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
     - Creating temporal tables
     - Disabling temporal tables
-    - Converting nontemporal tables to temporal
+    - Altering nontemporal tables to temporal
 
-
-- Setting the retention interval for system level
-
-
-- Querying historical data
-
-- Setting time periods for queries
+- Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
+    - Data version retention interval
+    - Setting the retention interval
+    - Viewing the retention interval
 
 - Running queries
+   - SELECT queries and subqueries syntax
+
+- Querying historical data
+   - Querying data for a specific time with the AS OF subclause
+   - Querying data for a specific time with the BEFORE subclause
+   - Querying data for all rows over a time period with the FROM...TO subclause
+   - Querying data for all rows over a time period with the BETWEEN...AND subclause
+   - Identifying details for a specific date and time
+   - Identifying changes that happened on a specific date
+
+- SQL commands
