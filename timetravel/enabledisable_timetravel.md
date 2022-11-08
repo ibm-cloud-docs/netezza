@@ -30,6 +30,8 @@ subcollection: netezza
 
 By default, time travel is enabled on your system.
 
+To start running temporal queries, you must [create a temporal table] or [alter a nontemporal table to temporal] by setting data version retention interval (**DATA_VERSION_RETENTION_TIME**) to a nonzero value.
+
 ## Disabling time travel
 {: #disabling_tt}
 

@@ -28,6 +28,9 @@ This powerful tool comes in handy when you want to track the history of data cha
 
 By using {{site.data.keyword.netezza_short}} time travel, you can access historical data at any point within a specified time. For example, data that was changed or deleted.
 
+## Common tasks
+{: #commontasks_tt}
+
 With time travel, you can do the following tasks, and more:
 
 - [Create system-managed temporal tables by specifying a data version retention time interval.]((https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt#settingretentioninterval)
