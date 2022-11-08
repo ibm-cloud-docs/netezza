@@ -24,63 +24,24 @@ subcollection: netezza
 # Conecpts and commands
 {: #conceptscommands_tt}
 
-## Time travel SQL commands
-{: #sqlcommands_tt}
-
-A **DATA_VERSION_RETENTION_TIME** subcommand is added to the following commands:
-
-- [SET SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2)
-- [SHOW SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-system-default-2)
-- [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
-- [ALTER DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2)
-- [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
-- [ALTER SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2)
-- [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
-- [ALTER TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)
-
-See also:
-
-- [SHOW TEMPORAL HISTOGRAM](https://www.ibm.com/docs/en/netezza?topic=reference-show-temporal-histogram)
-
-## Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
-{: #dataretentioninterval_tt}
-
-Data version retention time interval (retention time interval, retention interval) specifies the maximum number of days that historical data in a temporal table is preserved and visible to time travel queries.
-
-For example, if you modify an object, {{site.data.keyword.netezza_short}} preserves the state of the data before the modification so that you can do time travel operations.
-
-The default retention interval value at all levels is 0. The maximum is 92 days. When the retention interval ends, your historical data is no longer available for querying and you cannot restore objects.
-
-A table with a 0 retention interval is not a temporal table (time travel table) and does not support time travel queries.
-
-If you set a retention interval of 0 days for an object, time travel is disabled for the object.
-
-{{site.data.keyword.netezza_short}} retains the historical data based on the retention time interval that is associated with a table. This retention period is the time period (in days) over which you can query the historical data.
-
-Older historical rows are reclaimed when you run the **GROOM TABLE** command, or use the **AutoMaint** groom feature if the rows are not needed to support incremental backup.
-
-To set **DATA_VERSION_RETENTION_TIME**, see [Setting the retention interval] ADD LINK
-
 ## Temporal tables
 {: #temporaltables_tt}
 
-A temporal table is a table that has a specified, nonzero retention interval, and supports time travel queries.
+{{site.data.keyword.netezza_short}} temporal tables provide a built-in support to access data from any point in time, not only the current moment.
 
-Temporal tables provide a built-in support to access the data that is stored in a table at any point in time rather than current data (current moment in time). The history of your data in the table is maintained and managed automatically.
-
-The retention interval of a temporal table is the period of time that starts at the retention start timestamp and has no defined end.
-
-Tables with retention interval set to zero are not temporal.
-
-{{site.data.keyword.netezza_short}} supports only system-managed temporal tables.
+{{site.data.keyword.netezza_short}} supports only system-managed temporal tables, which means that the history of your data in the table is maintained and managed automatically.
 
 Temporal tables might have the following rows:
 
-**Curent rows**
-Current rows are not marked for deletion.
+| Row type     | Description |
+| -----------  | ----------- |
+| Current      | Current rows are not marked for deletion.  |
+| Historical   | Historical rows are marked for deletion.   |
 
-**Historical rows**
-Historical rows are marked for deletion.
+
+You can [create a temporal table] or [convert a nontemporal table to a temporal] by setting **DATA_VERSION_RETENTION_TIME** to a nonzero value.
+
+By default, **DATA_VERSION_RETENTION_TIME** is set to 0. Tables with retention interval set to 0 are not temporal.
 
 ### Retention interval start timestamp
 {: #tableretentiontimestamp_tt}
@@ -135,3 +96,47 @@ A temporal query might request (SELECT) the values of the `insert` timestamp and
 A system-managed temporal table is a table that maintains historical versions of its rows.
 
 You can use a system-period temporal table to store current versions of your data. The database transparently stores your updated and deleted data rows. System-period tables are system-managed.
+
+## Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
+{: #dataretentioninterval_tt}
+
+Data version retention time interval (retention time interval, retention interval) specifies the maximum number of days that historical data in a temporal table is preserved for and visible to time travel queries.
+
+The default retention interval value at all levels is 0. The maximum is 99 days.
+
+For example, if you modify an object, {{site.data.keyword.netezza_short}} preserves the state of the data before the modification so that you can do time travel operations.
+
+To set **DATA_VERSION_RETENTION_TIME**, see [Setting the retention interval](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt#settingretentioninterval_tt).
+
+{{site.data.keyword.netezza_short}} retains the historical data based on the retention time interval that is associated with a table. When the retention interval ends, your historical data is no longer available for querying and you cannot restore objects.
+
+To reclaim older historical rows, you can run the **GROOM TABLE** command, or use the **AutoMaint** feature if the rows are not needed to support incremental backup.
+
+
+A table with a 0 retention interval is not a temporal table (time travel table) and does not support time travel queries. If you set a retention interval of 0 days for an object, time travel is disabled for the object.
+
+## Time travel SQL commands
+{: #sqlcommands_tt}
+
+A **DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>** subcommand is added to the following commands:
+
+- [SET SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2)
+- [SHOW SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-system-default-2)
+- [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
+- [ALTER DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2)
+- [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
+- [ALTER SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2)
+- [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
+- [ALTER TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)
+
+You can set **DATA_VERSION_RETENTION_TIME** at table, schema, database, and system level. The default value is 0. The maximum allowed value is 99 days.
+
+A table with a 0 retention time interval is not a temporal table and does not support time travel queries.
+
+If you set the property on a system, database, or schema, users can specify the default value that is inherited by newly created objects at the next level down (database, schema, or table, respectively).
+
+If you set **DATA_VERSION_RETENTION_TIME** on a system, database, or schema, you do not have to set the property on a large number of tables if you want to have the same value on all of those tables. If you want to, you can set the property explicitly to a different value for any table.
+
+See also:
+
+- [SHOW TEMPORAL HISTOGRAM](https://www.ibm.com/docs/en/netezza?topic=reference-show-temporal-histogram)
