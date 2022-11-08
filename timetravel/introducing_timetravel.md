@@ -30,15 +30,15 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
 
 With time travel, you can do the following tasks, and more:
 
-- [Create system-managed temporal tables by specifying a data version retention time interval.]((https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2))
+- [Create system-managed temporal tables by specifying a data version retention time interval.]((https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt#settingretentioninterval)
 - [Create schemas]((https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2) or [alter schemas](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2) with a retention time, which is to be inherited by tables that are created after a create or delete operation.
 - [Create databases](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2) or [alter databases](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2) with a retention time, which is to be inherited by schemas that are created after a create or delete operation.
-- [Set or disable a default retention time at the system level, which is inherited by databases that are created after the system level default is set.]((https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2))
-- [View the retention time of a table, schema, database, or the system default.](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-system-default-2)
+- [Set or disable a default retention time at the system level, which is inherited by databases that are created after the system level default is set.](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt#settingretentioninterval)
+- [View the retention time of a table, schema, database, or the system default.](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt)
 - [Query past data in a temporal table as of a point in time or period of time.](https://cloud.ibm.com/docs/netezza?topic=netezza-queryingdata_tt)
-- Create or replace a view whose definition is a temporal query.
 - [Convert an existing table to a system-managed temporal table, convert an existing temporal table to a nontemporal table, or modify a temporal table’s retention time.](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt)
 - [Specify, modify, or disable the retention time of an existing schema or database by cascading the retention time to existing tables (and schemas).](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt)
+- Create or replace a view whose definition is a temporal query.
 - Backup and restore database, schema, and table retention times.
 - Use temporal queries in stored procedures.
 - Restore a dropped table, schema, or database within its retention period.

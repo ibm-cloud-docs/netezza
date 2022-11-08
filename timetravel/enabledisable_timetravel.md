@@ -25,45 +25,18 @@ subcollection: netezza
 # Enabling and disabling time travel
 {: #enablingdisabling_tt}
 
-By default, time travel
-
-**DRAFT COMMENT: IS TT ENABLED BY DEFAULT?**
-
-To enable the time travel feature, you must be an *Admin* or a user with the *MANAGE SYSTEM* privilege.
-
-## Enabling time travel on Netezza
+## Enabling time travel
 {: #enabling_tt}
 
-To enable time travel, run the command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
+By default, time travel is enabled on your system.
 
-```sql
-SYSTEM.ADMIN(ADMIN)=> SET SYSTEM DEFAULT TIME_TRAVEL_ENABLED TO ON
-```
-{: codeblock}
-
-## Verifying time travel is enabled
-{: #verify_tt}
-
-To check whether the time travel feature is enabled, run the command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
-
-```sql
-SHOW SYSTEM DEFAULT TIME_TRAVEL_ENABLED
-```
-{: codeblock}
-
-If **TIME_TRAVEL_ENABLED** was not set, the command displays *FALSE*.
-
-## Disabling time travel on Netezza
+## Disabling time travel
 {: #disabling_tt}
 
-To disable time travel, run the command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
+To disable time travel for an object, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt#settingretentioninterval) to 0 days.
+
 
 ```sql
-SYSTEM.ADMIN(ADMIN)=> SET SYSTEM DEFAULT TIME_TRAVEL_ENABLED TO OFF
+SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO 0
 ```
 {: codeblock}
-
-If **TIME_TRAVEL_ENABLED** is set from *ON* to *OFF*, the existing temporal tables retain their retention intervals and historical rows. That information is available again when **TIME_TRAVEL_ENABLED** is set to *ON*.
-
-If you set a retention interval of 0 days for an object, time travel is disabled for the object. See ADD LINK TO CHANGING RETENTION
-{: tip}
