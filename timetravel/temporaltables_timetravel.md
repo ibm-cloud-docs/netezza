@@ -24,7 +24,10 @@ subcollection: netezza
 # Temporal tables
 {: #temporaltables_tt}
 
-{{site.data.keyword.netezza_short}} temporal tables provide a built-in support to access data from any point in time, not only the current moment. {{site.data.keyword.netezza_short}} supports only system-managed temporal tables, which means that the history of your data in the table is maintained and managed automatically.
+## Temporal tables
+{: #temporal_tt}
+
+{{site.data.keyword.netezza_short}} temporal tables provide a built-in support to access data from any point in time, not only the current moment. Only system-managed temporal tables are supported, which means that the history of your data in the table is maintained and managed automatically.
 
 You can use a system-period temporal table to store current versions of your data. The database transparently stores your updated and deleted data rows. System-period tables are system-managed.
 
