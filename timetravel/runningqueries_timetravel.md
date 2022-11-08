@@ -31,18 +31,23 @@ subcollection: netezza
 Any base table reference (the table name, with or without database and schema name, and with or without an alias) in a SELECT or sub-SELECT might have an optional temporal clause, which consists of the keywords **FOR SYSTEM_TIME** and one of the following values:
 
 - AS OF <TIMESTAMP EXPRESSION>
-- AS OF <RETENTION START TIMESTAMP>
-- BEFORE <TIMESTAMP EXPRESSION>
-- BETWEEN <TIMESTAMP EXPRESSION 1> AND <TIMESTAMP EXPRESSION 2>
-- BETWEEN RETENTION START TIMESTAMP AND <TIMESTAMP EXPRESSION 2>
-- FROM <TIMESTAMP EXPRESSION 1> TO <TIMESTAMP EXPRESSION 2>
-- FROM <RETENTION START TIMESTAMP 1> TO <TIMESTAMP EXPRESSION 2>
+  (AS OF RETENTION START TIMESTAMP)
 
-The timestamp expression must be a literal value or a constant. For example, it might be **CURRENT_TIMESTAMP - <INTERVAL CONSTANT>**.
-It cannot be an expression that uses table columns. Such an expression would have different values for different table rows.
+- BEFORE <TIMESTAMP EXPRESSION>
+
+- BETWEEN <TIMESTAMP EXPRESSION 1> AND <TIMESTAMP EXPRESSION 2>
+  (BETWEEN RETENTION START TIMESTAMP AND <TIMESTAMP EXPRESSION 2>)
+
+- FROM <TIMESTAMP EXPRESSION 1> TO <TIMESTAMP EXPRESSION 2>
+ (FROM RETENTION START TIMESTAMP TO <TIMESTAMP EXPRESSION 2>)
+
+**TIMESTAMP EXPRESSION** must be a literal value or a constant. For example, it might be **CURRENT_TIMESTAMP - <INTERVAL CONSTANT>**.
+
+**TIMESTAMP EXPRESSION** cannot be an expression that uses table columns. Such an expression would have different values for different table rows.
 
 **RETENTION_START_TIMESTAMP**  represents the beginning timestamp for historical data or retention start timestamp.
-It is applicable in the **AS OF** clause and start timestamp expression value in the **FROM-TO** and **BETWEEN-AND** clauses.
+
+This timestamp value is applicable in the **AS OF** clause and start timestamp expression value in the **FROM...TO** and **BETWEEN...AND** clauses.
 
 At any given time, a temporal table’s data version retention start timestamp equals the larger of the following:
 
