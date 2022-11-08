@@ -64,7 +64,7 @@ Example:
 ```
 {: codeblock}
 
-## Querying for a specific time with AS OF
+## Querying data for a specific time with AS OF
 {: #queryasof_tt}
 
 ```sql
@@ -90,7 +90,7 @@ The system returns the previous valid row.
 
 See also [the **AS OF** subclause](https://cloud.ibm.com/docs/netezza?topic=netezza-runningqueries_tt).
 
-## Querying for a specific time with BEFORE
+## Querying data for a specific time with BEFORE
 {: querybefore_tt}
 
 ```sql
@@ -116,7 +116,7 @@ The system returns the previous valid row.
 
 See also [the **BEFORE** subclause](https://cloud.ibm.com/docs/netezza?topic=netezza-runningqueries_tt).
 
-## Querying for all rows over a time period
+## Querying data for all rows over a time period
 {: #queryall_tt}
 
 ### With the FROM...TO subclause

@@ -35,8 +35,7 @@ To start running temporal queries, you must [create a temporal table] or [alter 
 ## Disabling time travel
 {: #disabling_tt}
 
-To disable time travel for an object, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt#settingretentioninterval) to 0 days.
-
+As an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt#settingretentioninterval) to 0 days.
 
 ```sql
 SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO 0
