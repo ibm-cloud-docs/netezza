@@ -24,7 +24,7 @@ subcollection: netezza
 # Time travel SQL commands
 {: #sqlcommands_tt}
 
-A **DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>** subcommand is added to the following commands:
+A **DATA_VERSION_RETENTION_TIME** subcommand is added to the following commands:
 
 - [SET SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-set-system-default-2)
 - [SHOW SYSTEM DEFAULT](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-system-default-2)

@@ -46,6 +46,7 @@ The pair of time values that are listed at the end are the row-begin and row-end
 The row begin values or **_sys-start** values reflect when these records become current or visible (transaction commit time).
 
 ## Showing data with the row-begin and row-end values
+{: #showingdata_tt}
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM <TABLE NAME> AS OF NOW();
@@ -91,7 +92,7 @@ The system returns the previous valid row.
 See also [the **AS OF** subclause](https://cloud.ibm.com/docs/netezza?topic=netezza-runningqueries_tt).
 
 ## Querying data for a specific time with BEFORE
-{: querybefore_tt}
+{: #querybefore_tt}
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM <TABLE NAME> FOR SYSTEM_TIME BEFORE <“RETENTION_START_TIMESTAMP”>

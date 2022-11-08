@@ -30,16 +30,10 @@ subcollection: netezza
 
 Any base table reference (the table name, with or without database and schema name, and with or without an alias) in a SELECT or sub-SELECT might have an optional temporal clause, which consists of the keywords **FOR SYSTEM_TIME** and one of the following values:
 
-- AS OF <TIMESTAMP EXPRESSION>
-  (AS OF RETENTION START TIMESTAMP)
-
+- AS OF <TIMESTAMP EXPRESSION> (AS OF RETENTION START TIMESTAMP)
 - BEFORE <TIMESTAMP EXPRESSION>
-
-- BETWEEN <TIMESTAMP EXPRESSION 1> AND <TIMESTAMP EXPRESSION 2>
-  (BETWEEN RETENTION START TIMESTAMP AND <TIMESTAMP EXPRESSION 2>)
-
-- FROM <TIMESTAMP EXPRESSION 1> TO <TIMESTAMP EXPRESSION 2>
- (FROM RETENTION START TIMESTAMP TO <TIMESTAMP EXPRESSION 2>)
+- BETWEEN <TIMESTAMP EXPRESSION 1> AND <TIMESTAMP EXPRESSION 2> (BETWEEN RETENTION START TIMESTAMP AND <TIMESTAMP EXPRESSION 2>)
+- FROM <TIMESTAMP EXPRESSION 1> TO <TIMESTAMP EXPRESSION 2> (FROM RETENTION START TIMESTAMP TO <TIMESTAMP EXPRESSION 2>)
 
 **TIMESTAMP EXPRESSION** must be a literal value or a constant. For example, it might be **CURRENT_TIMESTAMP - <INTERVAL CONSTANT>**.
 
@@ -67,7 +61,6 @@ You can use the **AS OF** subclause with the following values, which allows it t
 
 The **AS OF** value cannot be a subquery.
 
-
 **AS OF <value1>**
 
 Includes all the rows where the begin value for the period is less than or equal to *value1* and the end value for the period is greater than *value1*. This enables you to query your data as of a certain point in time.
@@ -85,7 +78,6 @@ You can use the **BEFORE** subclause with the following values, which allows it 
 
 The **BEFORE** value cannot be a subquery.
 
-
 **BEFORE <value1>**
 
 Includes all the rows where the begin value for the period is less than *value1* and the end value for the period is greater than *value1*. This enables you to query your data as of a certain point in time.
@@ -102,7 +94,6 @@ You can use the **FROM...TO** and **BETWEEN...AND** subclauses with the followin
 - Host variables or parameter markers.
 
 The **FROM...TO** and **BETWEEN...AND** subclauses cannot be a subquery.
-
 
 **FROM <value1> TO <value2<**
 

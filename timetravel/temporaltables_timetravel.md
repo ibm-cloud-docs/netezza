@@ -37,7 +37,7 @@ Temporal tables might have the following rows:
 | -----------  | ----------- |
 | Current      | Current rows are not marked for deletion.  |
 | Historical   | Historical rows are marked for deletion.   |
-
+{: caption}
 
 You can [create a temporal table] or [convert a nontemporal table to a temporal] by setting **DATA_VERSION_RETENTION_TIME** to a nonzero value.
 

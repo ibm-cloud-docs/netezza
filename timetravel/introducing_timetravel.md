@@ -59,25 +59,23 @@ For example, you can identify one of the following values, and many more:
 ## Bussiness use for time travel
 {: #uses_tt}
 
-**Conducting data audits**
+- Conducting data audits
 
-You can do data forensics because time travel provides an audit trail.
+    You can do data forensics because time travel provides an audit trail.
 
-**Changing dimensions**
+- Changing dimensions**
 
-With data warehouse systems, you can use time travel for attributes that change overtime through the normal course of business.
-For example, personal information, medical records or credit information of the customer.
+    With data warehouse systems, you can use time travel for attributes that change overtime through the normal course of business.
+    For example, personal information, medical records or credit information of the customer.
 
-**Analyzing and calculating trends**
+- Analyzing and calculating trends**
 
-You can establish how data changes over time with the ongoing business activity,
-and calculate trends in the way that data changes over time.
+    You can establish how data changes over time with the ongoing business activity, and calculate trends in the way that data changes over time.
 
-**Rebuilding or reconstructing data**
+- Rebuilding or reconstructing data**
 
-You can retrieve previous version of your data from the history table and insert
-the old data back into the table. You can reconstruct the state of the data as of any time in the past.
+    You can retrieve previous version of your data from the history table and insert the old data back into the table. You can reconstruct the state of the data as of any time in the past.
 
-**Identifying differences**
+- Identifying differences**
 
-You can identify differences in between two points in time of interest.
+    You can identify differences in between two points in time of interest.

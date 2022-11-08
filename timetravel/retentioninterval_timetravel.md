@@ -77,7 +77,7 @@ The validity periodof a historical row is the time period that starts with the r
 The validity period of a current row starts with the row’s insert timestamp and is unbounded; has no end.
 
 ## Setting the retention interval (**DATA_VERSION_RETENTION_TIME**)
-{: setting_tt}
+{: #setting_tt}
 
 ## Setting the retention interval on system level
 {: #settingretentioninterval_tt}
