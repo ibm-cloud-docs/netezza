@@ -113,6 +113,24 @@ toc:
       - ha.md
       - bc-dr.md
       - network_policies.md
+      - link:
+          label: Backup and restore performance improvements with many tables, views, and procedures
+          href: https://www.ibm.com/docs/en/netezza?topic=npscpdas-backup-restore-performance-improvements-many-tables-views-procedures
+      - link:
+          label: Backup and restore best practices
+          href: https://www.ibm.com/docs/en/netezza?topic=service-backup-restore-best-practices
+      - link:
+          label: Command-line interface
+          href: https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface
+      - link:
+          label: Netezza for database users
+          href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-database-users
+      - link:
+          label: Netezza for security experts
+          href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-security-experts
+      - link:
+          label: Netezza for analytics and acceleration developers
+          href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-analytics-acceleration-developers
 
   - navgroup:
       id: tutorial
