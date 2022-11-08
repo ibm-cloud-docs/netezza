@@ -109,7 +109,7 @@ SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME BEFORE “2020-10-23
 1003, “Hat”,     18.99, 2020-10-23 16:10:00, NULL
 1004, “Shoes”,  125.25, 2020-10-23 16:15:00, 2020-10-23 17:00:00.000000
 ```
-{:codeblock}
+{: codeblock}
 
 The price for `Shoes` has been modified after or at the **BEFORE** value.
 The system returns the previous valid row.
