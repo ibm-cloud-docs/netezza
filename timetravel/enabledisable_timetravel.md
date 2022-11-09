@@ -25,6 +25,6 @@ subcollection: netezza
 # Setting up time travel
 {: #enablingdisabling_tt}
 
-To start running temporal queries, you must set **DATA_VERSION_RETENTION_TIME** for a table, schema, or database to a non zero value.
+To start running temporal queries, you must [set **DATA_VERSION_RETENTION_TIME**](docs/netezza?topic=netezza-dataretentioninterval_tt#setting-the-retention-interval-data_version_retention_time) to a non zero value.
 
-See [Setting **DATA_VERSION_RETENTION_TIME**](docs/netezza?topic=netezza-dataretentioninterval_tt#setting-the-retention-interval-data_version_retention_time)
+Before you begin, make sure that you read the information from **DATA_VERSION_RETENTION_TIME**]

@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Temporal tables
+# Creating and altering temporal tables
 {: #temporaltables_tt}
 
 ## Temporal tables
@@ -39,14 +39,12 @@ Temporal tables might have the following rows:
 | Historical   | Historical rows are marked for deletion.   |
 {: caption}
 
-You can [create a temporal table] or [convert a nontemporal table to a temporal] by setting **DATA_VERSION_RETENTION_TIME** to a nonzero value.
-
-To [drop a temporal table], you must set **DATA_VERSION_RETENTION_TIME** to 0.
+Temporal tables have the [**DATA_VERSION_RETENTION_TIME** option](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) specified to a nonzero value.
 
 ## Creating temporal tables
 {: #creatingtemporal_tt}
 
-To create a temporal table, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, run the command.
+To create a temporal table, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)to a nonzero value.
 
 ```sql
 CREATE TABLE <TABLE NAME> (<rows>) DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
@@ -60,12 +58,19 @@ CREATE TABLE PRODUCT (prodid int, proddesc char(100)) DATA_VERSION_RETENTION_TIM
 ```
 {: codeblock}
 
+When you insert a row into the table, the row receives a virtual insert timestamp that is equal to the commit time of the inserting transaction.
+
+When you delete a row from the table, the row receives a virtual delete timestamp that is equal to the commit time of the deleting (or truncating) transaction.
+
 See also [the CREATE TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2).
 
-## Disabling temporal tables
+## Altering tables
+{: #altertables_tt}
+
+### Altering temporal tables to nontemporal
 {: #droppingtemporal_tt}
 
-To disable a temporal table, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, run the command.
+To alter a temporal table to a nontemporal, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) to 0.
 
 ```sql
 ALTER TABLE <TABLE NAME> DATA_VERSION_RETENTION_TIME 0;
@@ -79,17 +84,17 @@ ALTER TABLE PRODUCT DATA_VERSION_RETENTION_TIME 0;
 ```
 {: codeblock}
 
-When you set **DATA_VERSION_RETENTION_TIME** to 0, you cannot run temporal queries and you do not have access to historical rows for that table anymore.
+When you set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) to 0, you cannot run temporal queries and you do not have access to historical rows for that table anymore.
 You can reclaim some or all of the current historical rows in the table (with GROOM TABLE) without warning.
 
-If you convert the table to a temporal again, the table is not accessible to temporal queries anymore.
+If you convert the table to a temporal again, the table is not accessible to temporal queries anymore and you cannot run time travel queries.
 
 See also [the ALTER TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
 
-## Altering nontemporal tables to temporal
+### Altering nontemporal tables to temporal
 {: #convertingtemporal_tt}
 
-To alter a nontemporal table to temporal, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, run the command.
+To alter a nontemporal table to temporal, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) to a nonzero value.
 
 ```sql
 ALTER TABLE <TABLE NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
@@ -106,4 +111,11 @@ ALTER TABLE PRODUCT DATA_VERSION_RETENTION_TIME 30;
 If you first disabled your temporal table and then converted the same table to a temporal table, you cannot run temporal queries and you do not have access to historical rows for that table anymore.
 {: important}
 
+As with the CREATE TABLE command, a row that is inserted into the table receives a virtual insert timestamp that is equal to the commit time of the inserting transaction. A row that is deleted from the table receives a virtual delete timestamp that is equal to the commit time of the deleting (or truncating) transaction. The table’s retention lower bound and retention start time are equal to or just before the commit time of this ALTER TABLE’s transaction.
+
+Unlike the CREATE TABLE command, which does not have any existing rows, existing visible rows in the table are treated as if they were inserted by this ALTER TABLE transaction. For example, the existing visible rows receive virtual insert timestamps that are equal to the retention start time.
+With these timestamps, the rows are potentially visible to temporal queries.
+
 See also [the ALTER TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
+
+### Altering
