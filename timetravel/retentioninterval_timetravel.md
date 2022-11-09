@@ -21,7 +21,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
+# Setting and viewing **DATA_VERSION_RETENTION_TIME**
 {: #dataretentioninterval_tt}
 
 ## Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
