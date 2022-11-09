@@ -26,5 +26,3 @@ subcollection: netezza
 {: #enablingdisabling_tt}
 
 To start running temporal queries, you must [set **DATA_VERSION_RETENTION_TIME**](docs/netezza?topic=netezza-dataretentioninterval_tt#setting-the-retention-interval-data_version_retention_time) to a non zero value.
-
-Before you begin, make sure that you read the information from **DATA_VERSION_RETENTION_TIME**]
