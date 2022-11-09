@@ -127,4 +127,4 @@ SHOW SCHEMA (_v_schema.dataverretntime)
 ```sql
 \l+ (all databases, with detail - _v_database.dataverretntime)
 ```
-{:codeblock}
+{: codeblock}

@@ -64,6 +64,7 @@ The **AS OF** value cannot be a subquery.
 |Syntax           | Description  |
 | -----------     | -----------  |
 | AS OF <value1>  | Includes all the rows where the begin value for the period is less than or equal to *value1* and the end value for the period is greater than value1. This enables you to query your data as of a certain point in time. |
+{: caption}
 
 ### BEFORE
 {: #before_tt}
@@ -81,6 +82,7 @@ The **BEFORE** value cannot be a subquery.
 | Syntax      | Description |
 | ----------- | ----------- |
 | BEFORE <value1> | Includes all the rows where the begin value for the period is less than *value1* and the end value for the period is greater than *value1*. This enables you to query your data as of a certain point in time. |
+{: caption}
 
 ### FROM...TO and BETWEEN...AND
 {: #fromtobetweenand_tt}
