@@ -108,7 +108,7 @@ ALTER TABLE PRODUCT DATA_VERSION_RETENTION_TIME 30;
 ```
 {: codeblock}
 
-If you first disabled your temporal table and then converted the same table to a temporal table, you cannot run temporal queries and you do not have access to historical rows for that table anymore. 
+If you first disabled your temporal table and then converted the same table to a temporal table, you cannot run temporal queries and you do not have access to historical rows for that table anymore.
 {: important}
 
 As with the CREATE TABLE command, a row that is inserted into the table receives a virtual insert timestamp that is equal to the commit time of the inserting transaction. A row that is deleted from the table receives a virtual delete timestamp that is equal to the commit time of the deleting (or truncating) transaction. The table’s retention lower bound and retention start time are equal to or just before the commit time of this ALTER TABLE’s transaction.
@@ -117,5 +117,3 @@ Unlike the CREATE TABLE command, which does not have any existing rows, existing
 With these timestamps, the rows are potentially visible to temporal queries.
 
 See also [the ALTER TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
-
-### Altering
