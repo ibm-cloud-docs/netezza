@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Creating and altering temporal tables
+# Creating and altering time travel objects
 {: #temporaltables_tt}
 
 ## Temporal tables
@@ -41,7 +41,7 @@ Temporal tables might have the following rows:
 
 Temporal tables have the [**DATA_VERSION_RETENTION_TIME** option](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) specified to a nonzero value.
 
-## Creating temporal tables
+### Creating temporal tables
 {: #creatingtemporal_tt}
 
 To create a temporal table, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)to a nonzero value.
@@ -64,10 +64,10 @@ When you delete a row from the table, the row receives a virtual delete timestam
 
 See also [the CREATE TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2).
 
-## Altering tables
+### Altering tables
 {: #altertables_tt}
 
-### Altering temporal tables to nontemporal
+#### Altering temporal tables to nontemporal
 {: #droppingtemporal_tt}
 
 To alter a temporal table to a nontemporal, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) to 0.
@@ -91,7 +91,7 @@ If you convert the table to a temporal again, the table is not accessible to tem
 
 See also [the ALTER TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
 
-### Altering nontemporal tables to temporal
+#### Altering nontemporal tables to temporal
 {: #convertingtemporal_tt}
 
 To alter a nontemporal table to temporal, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) to a nonzero value.
@@ -117,3 +117,15 @@ Unlike the CREATE TABLE command, which does not have any existing rows, existing
 With these timestamps, the rows are potentially visible to temporal queries.
 
 See also [the ALTER TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
+
+## Creating databases
+{: #createdb_tt}
+
+## Altering databases
+{: #alterdb_tt}
+
+## Creating schemas
+{: #createschemas_tt}
+
+## Altering schemas
+{: #alteringschemas_tt}

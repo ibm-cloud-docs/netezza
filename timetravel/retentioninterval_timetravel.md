@@ -21,7 +21,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
+# Setting and viewing **DATA_VERSION_RETENTION_TIME**
 {: #dataretentioninterval_tt}
 
 ## Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
@@ -93,7 +93,7 @@ SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO 30
 
 The value of the property at the system level determines the default value inherited by a subsequent CREATE DATABASE statement that does not explicitly specify this property.
 
-To set **DATA_VERSION_RETENTION_TIME** for a specific object, run the **ALTER** command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
+To set **DATA_VERSION_RETENTION_TIME** for a specific object, you can run the **ALTER** or **CREATE** command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
 
 ## Viewing the retention interval
 {: #viewretentioninterval_tt}
