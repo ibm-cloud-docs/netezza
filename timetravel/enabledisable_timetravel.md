@@ -22,22 +22,9 @@ subcollection: netezza
 {:caption: .caption}
 {:codeblock: .codeblock}
 
-# Enabling and disabling time travel
+# Setting up time travel
 {: #enablingdisabling_tt}
 
-## Enabling time travel
-{: #enabling_tt}
+To start running temporal queries, you must [set **DATA_VERSION_RETENTION_TIME**](docs/netezza?topic=netezza-dataretentioninterval_tt#setting-the-retention-interval-data_version_retention_time) to a non zero value.
 
-By default, time travel is enabled on your system.
-
-To start running temporal queries, you must [create a temporal table] or [alter a nontemporal table to temporal] by setting data version retention interval (**DATA_VERSION_RETENTION_TIME**) to a nonzero value.
-
-## Disabling time travel
-{: #disabling_tt}
-
-As an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt#settingretentioninterval) to 0 days.
-
-```sql
-SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO 0
-```
-{: codeblock}
+Before you begin, make sure that you read the information from **DATA_VERSION_RETENTION_TIME**]

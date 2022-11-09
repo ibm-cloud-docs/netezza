@@ -33,8 +33,6 @@ The default retention interval value at all levels is 0. The maximum is 99 days.
 
 For example, if you modify an object, {{site.data.keyword.netezza_short}} preserves the state of the data before the modification so that you can do time travel operations.
 
-To set **DATA_VERSION_RETENTION_TIME**, see [Setting the retention interval](https://cloud.ibm.com/docs/netezza?topic=netezza-retentioninterval_tt#settingretentioninterval_tt).
-
 {{site.data.keyword.netezza_short}} retains the historical data based on the retention time interval that is associated with a table. When the retention interval ends, your historical data is no longer available for querying and you cannot restore objects.
 
 To reclaim older historical rows, you can run the **GROOM TABLE** command, or use the **AutoMaint** feature if the rows are not needed to support incremental backup.
@@ -76,9 +74,6 @@ The validity periodof a historical row is the time period that starts with the r
 
 The validity period of a current row starts with the row’s insert timestamp and is unbounded; has no end.
 
-## Setting the retention interval (**DATA_VERSION_RETENTION_TIME**)
-{: #setting_tt}
-
 ## Setting the retention interval on system level
 {: #settingretentioninterval_tt}
 
@@ -98,22 +93,7 @@ SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO 30
 
 The value of the property at the system level determines the default value inherited by a subsequent CREATE DATABASE statement that does not explicitly specify this property.
 
-## Setting the retention interval for tables, schemas, and databases
-{: #settingretentionintervalobjects_tt}
-
 To set **DATA_VERSION_RETENTION_TIME** for a specific object, run the **ALTER** command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
-
-```sql
-ALTER TABLE <TABLE NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>
-```
-{: codeblock}
-
-Example:
-
-```sql
-ALTER TABLE PRODUCT DATA_VERSION_RETENTION_TIME 30
-```
-{: codeblock}
 
 ## Viewing the retention interval
 {: #viewretentioninterval_tt}
@@ -133,3 +113,18 @@ If you did not set the retention time previously, the default is 0.
 {: #viewingretentionintervalobjects_tt}
 
 To view **DATA_VERSION_RETENTION_TIME** for a specific object, run the command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
+
+```sql
+\d <tablename>
+```
+{: codeblock}
+
+```sql
+SHOW SCHEMA (_v_schema.dataverretntime)
+```
+{: codeblock}
+
+```sql
+\l+ (all databases, with detail - _v_database.dataverretntime)
+```
+{:codeblock}

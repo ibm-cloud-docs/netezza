@@ -21,25 +21,25 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Running queries
+# Running queries syntax
 {: #runningqueries_tt}
 
 
 ## SELECT queries and subqueries syntax
 {: #selectqueries_tt}
 
-Any base table reference (the table name, with or without database and schema name, and with or without an alias) in a SELECT or sub-SELECT might have an optional temporal clause, which consists of the keywords **FOR SYSTEM_TIME** and one of the following values:
+Any base table reference (the table name, with or without database and schema name, and with or without an alias) in a SELECT or sub-SELECT might have an optional temporal clause, which consists of the keywords `FOR SYSTEM_TIME` and one of the following values:
 
 - AS OF <TIMESTAMP EXPRESSION> (AS OF RETENTION START TIMESTAMP)
 - BEFORE <TIMESTAMP EXPRESSION>
 - BETWEEN <TIMESTAMP EXPRESSION 1> AND <TIMESTAMP EXPRESSION 2> (BETWEEN RETENTION START TIMESTAMP AND <TIMESTAMP EXPRESSION 2>)
 - FROM <TIMESTAMP EXPRESSION 1> TO <TIMESTAMP EXPRESSION 2> (FROM RETENTION START TIMESTAMP TO <TIMESTAMP EXPRESSION 2>)
 
-**TIMESTAMP EXPRESSION** must be a literal value or a constant. For example, it might be **CURRENT_TIMESTAMP - <INTERVAL CONSTANT>**.
+`TIMESTAMP EXPRESSION` must be a literal value or a constant. For example, it might be `CURRENT_TIMESTAMP - <INTERVAL CONSTANT>`.
 
-**TIMESTAMP EXPRESSION** cannot be an expression that uses table columns. Such an expression would have different values for different table rows.
+`TIMESTAMP EXPRESSION` cannot be an expression that uses table columns. Such an expression would have different values for different table rows.
 
-**RETENTION_START_TIMESTAMP**  represents the beginning timestamp for historical data or retention start timestamp.
+`RETENTION_START_TIMESTAMP`  represents the beginning timestamp for historical data or retention start timestamp.
 
 This timestamp value is applicable in the **AS OF** clause and start timestamp expression value in the **FROM...TO** and **BETWEEN...AND** clauses.
 
@@ -61,9 +61,9 @@ You can use the **AS OF** subclause with the following values, which allows it t
 
 The **AS OF** value cannot be a subquery.
 
-**AS OF <value1>**
-
-Includes all the rows where the begin value for the period is less than or equal to *value1* and the end value for the period is greater than *value1*. This enables you to query your data as of a certain point in time.
+|Syntax           | Description  |
+| -----------     | -----------  |
+| AS OF <value1>  | Includes all the rows where the begin value for the period is less than or equal to *value1* and the end value for the period is greater than value1. This enables you to query your data as of a certain point in time. |
 
 ### BEFORE
 {: #before_tt}
@@ -78,9 +78,9 @@ You can use the **BEFORE** subclause with the following values, which allows it 
 
 The **BEFORE** value cannot be a subquery.
 
-**BEFORE <value1>**
-
-Includes all the rows where the begin value for the period is less than *value1* and the end value for the period is greater than *value1*. This enables you to query your data as of a certain point in time.
+| Syntax      | Description |
+| ----------- | ----------- |
+| BEFORE <value1> | Includes all the rows where the begin value for the period is less than *value1* and the end value for the period is greater than *value1*. This enables you to query your data as of a certain point in time. |
 
 ### FROM...TO and BETWEEN...AND
 {: #fromtobetweenand_tt}
@@ -95,10 +95,8 @@ You can use the **FROM...TO** and **BETWEEN...AND** subclauses with the followin
 
 The **FROM...TO** and **BETWEEN...AND** subclauses cannot be a subquery.
 
-**FROM <value1> TO <value2<**
-
-Includes all the rows where the value of the begin column for the specified period in the row is less than *value2*. The value of the end column for the specified period in the row is greater than *value1*. If *value1* is greater than or equal to *value2*, the query produces no rows.
-
-**BETWEEN <value1> AND <value2>**
-
-Includes all the rows where any time period overlaps any point in time between *value1* and *value2*. A row is returned if the begin value for the period is less than or equal to *value2* and the end value for the period is greater than *value1*.
+| Syntax      | Description |
+| ----------- | ----------- |
+| FROM <value1> TO <value2> | Includes all the rows where the value of the begin column for the specified period in the row is less than *value2*. The value of the end column for the specified period in the row is greater than *value1*. If *value1* is greater than or equal to *value2*, the query produces no rows.|
+| BETWEEN <value1> AND <value2> | Includes all the rows where any time period overlaps any point in time between *value1* and *value2*. A row is returned if the begin value for the period is less than or equal to *value2* and the end value for the period is greater than *value1*.|
+{: caption}
