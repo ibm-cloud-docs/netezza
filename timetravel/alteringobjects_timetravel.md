@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Altering objects
+# Altering time travel objects
 {: #alteringobjects_tt}
 
 ## Altering tables
