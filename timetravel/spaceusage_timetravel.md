@@ -25,6 +25,10 @@ subcollection: netezza
 # Showing space usage
 {: #showingspaceusage_tt}
 
+Before you set **DATA_VERSION_RETENTION_TIME** for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
+
+To check space usage, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, run the command.
+
 ```sql
 SHOW TEMPORAL HISTOGRAM <TEMPORAL TABLE> [DAYSPERROW <number of days>]
 ```
