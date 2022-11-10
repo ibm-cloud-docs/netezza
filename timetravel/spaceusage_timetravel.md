@@ -40,3 +40,5 @@ SHOW TEMPORAL HISTOGRAM PRODUCT
 |2022-11-07 16:40:47.363187 |            3 |          2 |           4 | 0.11029411764706 | 29.411764705882|
 ```
 {: codeblock}
+
+See also [the SHOW TEMPORAL HISTOGRAM command](https://www.ibm.com/docs/en/netezza?topic=reference-show-temporal-histogram).
