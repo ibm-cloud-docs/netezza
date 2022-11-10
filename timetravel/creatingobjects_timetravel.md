@@ -64,26 +64,7 @@ Temporal tables might have the following rows:
 
 Temporal tables have the [**DATA_VERSION_RETENTION_TIME** option](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) specified to a nonzero value.
 
-## Creating schemas
-{: #createschemas_tt}
-
-To create a temporal schema, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)to a nonzero value.
-
-```sql
-CREATE SCHEMA <SCHEMA NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
-```
-{: codeblock}
-
-Example:
-
-```sql
-CREATE SCHEMA SCHEMA1 DATA_VERSION_RETENTION_TIME 30;
-```
-{: codeblock}
-
-See also [the CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2) command.
-
-## Creating databases
+## Creating temporal databases
 {: #createdb_tt}
 
 To create a temporal database, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)to a nonzero value.
@@ -101,3 +82,22 @@ CREATE SCHEMA DB1 DATA_VERSION_RETENTION_TIME 30;
 {: codeblock}
 
 See also [the CREATE DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2).
+
+## Creating temporal schemas
+{: #createschemas_tt}
+
+To create a temporal schema, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)to a nonzero value.
+
+```sql
+CREATE SCHEMA <SCHEMA NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
+```
+{: codeblock}
+
+Example:
+
+```sql
+CREATE SCHEMA SCHEMA1 DATA_VERSION_RETENTION_TIME 30;
+```
+{: codeblock}
+
+See also [the CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2) command.

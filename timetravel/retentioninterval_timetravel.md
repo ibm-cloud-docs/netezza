@@ -70,7 +70,7 @@ The insert timestamp of a current or historical row is the date/time that the tr
 ### Validity period
 {: #validity_tt}
 
-The validity periodof a historical row is the time period that starts with the row’s insert timestamp and ends just before its delete timestamp. The row is no longer valid as of the delete timestamp.
+The validity period of a historical row is the time period that starts with the row’s insert timestamp and ends just before its delete timestamp. The row is no longer valid as of the delete timestamp.
 
 The validity period of a current row starts with the row’s insert timestamp and is unbounded; has no end.
 
@@ -78,6 +78,9 @@ The validity period of a current row starts with the row’s insert timestamp an
 {: #settingretentioninterval_tt}
 
 To set **DATA_VERSION_RETENTION_TIME** to a specific value for the whole system, run the command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
+
+Before you set DATA_VERSION_RETENTION_TIME for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
+{: important}
 
 ```sql
 SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO <NUMBER OF DAYS>

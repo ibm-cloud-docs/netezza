@@ -26,33 +26,35 @@ subcollection: netezza
 
 Maintaining a time-based data support infrastructure might be expensive and complex. With the {{site.data.keyword.netezza_short}} time travel feature, you can store, retrieve, and analyze historical data without using additional application logic in your data (tables, schemas, and databases).
 
-- Introducing time travel
-    - Common tasks
-    - Business uses
+- [Introducing time travel](/docs/netezza?topic=netezza-introducing_tt)
+    - [Common tasks](/docs/netezza?topic=netezza-introducing_tt#commontasks_tt)
+    - [Business uses](https://test.cloud.ibm.com/docs/netezza?topic=netezza-introducing_tt#uses_tt)
 
-- Enabling and disabling time travel
-    - Enabling time travel
-    - Disabling time travel
+- [Setting up time travel](/docs/netezza?topic=netezza-enablingdisabling_tt)
 
-- Temporal tables
-    - Creating temporal tables
-    - Disabling temporal tables
-    - Altering nontemporal tables to temporal
+- [Creating time travel objects](/docs/netezza?topic=netezza-temporaltables_tt)
+    - [Creating temporal tables](/docs/netezza?topic=netezza-temporaltables_tt#creatingtemporaltables_tt)
+    - Creating temporal databases
+    - Creating temporal schemas
 
-- Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
-    - Data version retention interval
-    - Setting the retention interval
-    - Viewing the retention interval
+- Altering time travel objects
+    - [Altering tables](/docs/netezza?topic=netezza-alteringobjects_tt#alterdb_tt)
+    - [Altering databases](/docs/netezza?topic=netezza-alteringobjects_tt#alterdb_tt)
+    - [Altering schemas](/docs/netezza?topic=netezza-alteringobjects_tt#alteringschemas_tt)
 
-- Running queries
-   - SELECT queries and subqueries syntax
+- Setting **DATA_VERSION_RETENTION_TIME** systemwide and viewing **DATA_VERSION_RETENTION_TIME**
+    - [Data version retention interval](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)
+    - [Setting the retention interval](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt)
+    - [Viewing the retention interval](/docs/netezza?topic=netezza-dataretentioninterval_tt#viewretentioninterval_tt)
 
-- Querying historical data
-   - Querying data for a specific time with the AS OF subclause
-   - Querying data for a specific time with the BEFORE subclause
-   - Querying data for all rows over a time period with the FROM...TO subclause
-   - Querying data for all rows over a time period with the BETWEEN...AND subclause
-   - Identifying details for a specific date and time
-   - Identifying changes that happened on a specific date
+- [Running queries syntax](/docs/netezza?topic=netezza-runningqueries_tt)
+
+- [Querying historical data](/docs/netezza?topic=netezza-queryingdata_tt)
+   - [Querying data for a specific time with the AS OF subclause](/docs/netezza?topic=netezza-queryingdata_tt#queryasof_tt)
+   - [Querying data for a specific time with the BEFORE subclause](/docs/netezza?topic=netezza-queryingdata_tt#querybefore_tt)
+   - [Querying data for all rows over a time period with the FROM...TO subclause](/docs/netezza?topic=netezza-queryingdata_tt#fromto_tt)
+   - [Querying data for all rows over a time period with the BETWEEN...AND subclause](/docs/netezza?topic=netezza-queryingdata_tt#betweenand_tt)
+   - [Identifying details for a specific date and time](/docs/netezza?topic=netezza-queryingdata_tt#detailsdatetime_tt)
+   - [Identifying changes that happened on a specific date](/docs/netezza?topic=netezza-queryingdata_tt#changesdate_tt)
 
 - SQL commands
