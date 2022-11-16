@@ -100,6 +100,7 @@ toc:
             - timetravel/creatingobjects_timetravel.md
             - timetravel/alteringobjects_timetravel.md
             - timetravel/retentioninterval_timetravel.md
+            - timetravel/dataretentioninterval_timetravel.md
          - timetravel/spaceusage_timetravel.md
          - timetravel/runningqueries_timetravel.md
          - timetravel/queryingdata_timetravel.md
