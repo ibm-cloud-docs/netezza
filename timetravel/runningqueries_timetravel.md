@@ -24,6 +24,9 @@ subcollection: netezza
 # Running queries syntax
 {: #runningqueries_tt}
 
+Time travel queries can appear as a sub-SELECT in the **INSERT**, **UPDATE**, **DELETE**, **MERGE**, or **CREATE TABLE AS SELECT (CTAS)** statements.
+
+Also, time travel queries can appear in a view definition (**CREATE VIEW** or **REPLACE VIEW**) or a stored procedure definition (**CREATE PROCEDURE** or **REPLACE PROCEDURE**). In either case, timestamp expressions (CURRENT_TIMESTAMP - INTERVAL ‘1 day’) are not evaluated at view or procedure definition time, but at the time a user or application queries the view or calls the procedure.
 
 ## SELECT queries and subqueries syntax
 {: #selectqueries_tt}

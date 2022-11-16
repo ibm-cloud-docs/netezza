@@ -74,18 +74,10 @@ This limitation affects the following commands:
 
 The **GROOM TABLE VERSIONS** command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
 
+
+
 **WHAT TO DO NEXT**
 You can start running time travel queries now. For more information, see the following links:
 
 - [Running queries syntax](/docs/netezza?topic=netezza-runningqueries_tt).
 - [Querying historical data](/docs/netezza?topic=netezza-queryingdata_tt).
-
-
-## Using time travel
-{: #using_tt}
-
-Time travel SELECT queries are described in Running queries syntax and Querying historical data .
-
-A time travel query can appear as a sub-SELECT in an INSERT, UPDATE, DELETE, MERGE, or CREATE TABLE AS SELECT (CTAS) statement.
-
-A time travel query can also appear in a view definition (CREATE OR REPLACE VIEW) or a stored procedure definition (CREATE OR REPLACE PROCEDURE). In either case, timestamp expressions (such as CURRENT_TIMESTAMP - INTERVAL ‘1 day’) are not evaluated at view or procedure definition time but at the time a user or application queries the view or calls the procedure.
