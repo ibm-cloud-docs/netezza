@@ -31,7 +31,7 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
 ## Business use cases and examples
 {: #buexamples_tt}
 
-- Conducting data audits 
+- Conducting data audits
     You can examine and audit past data because time travel provides an audit trail of data insertions, deletions, and changes to attributes over the course of business activity.
 
     For example:
@@ -54,3 +54,6 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
 
     - Restore a table to a point in the past (for which the historical data is still available).
     - Restore selected rows that were incorrectly deleted or updated.
+
+**WHAT TO DO NEXT**
+[Set up {{site.data.keyword.netezza_short}} for time travel](/docs/netezza?topic=netezza-enablingdisabling_tt).

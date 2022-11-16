@@ -22,7 +22,7 @@ subcollection: netezza
 {:caption: .caption}
 {:codeblock: .codeblock}
 
-# Managing time travel
+# Managing space usage
 {: #managing_tt}
 
 Historical rows in temporal tables take up space on your {{site.data.keyword.netezza_short}} disks over and above that if it is necessary for current rows. The amount of this extra space depends on the following factors:
