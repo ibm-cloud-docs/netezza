@@ -27,7 +27,7 @@ subcollection: netezza
 ## Creating temporal tables
 {: #creatingtemporaltables_tt}
 
-To create a temporal table, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)to a nonzero value.
+To create a temporal table, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) to a nonzero value.
 
 ```sql
 CREATE TABLE <TABLE NAME> (<rows>) DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
@@ -67,7 +67,7 @@ Temporal tables have the [**DATA_VERSION_RETENTION_TIME** option](/docs/netezza?
 ## Creating temporal databases
 {: #createdb_tt}
 
-To create a temporal database, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)to a nonzero value.
+To create a temporal database, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) to a nonzero value.
 
 ```sql
 CREATE DATABASE <DATABASE NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
@@ -86,7 +86,7 @@ See also [the CREATE DATABASE command](https://www.ibm.com/docs/en/netezza?topic
 ## Creating temporal schemas
 {: #createschemas_tt}
 
-To create a temporal schema, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)to a nonzero value.
+To create a temporal schema, as an *Admin* or a user with the *MANAGE SYSTEM* privilege, set [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) to a nonzero value.
 
 ```sql
 CREATE SCHEMA <SCHEMA NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
