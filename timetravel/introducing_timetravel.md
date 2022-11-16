@@ -31,7 +31,7 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
 ## Business use cases and examples
 {: #buexamples_tt}
 
-- Conducting data audits
+- Conducting data audits 
     You can examine and audit past data because time travel provides an audit trail of data insertions, deletions, and changes to attributes over the course of business activity.
 
     For example:
