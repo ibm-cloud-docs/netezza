@@ -101,8 +101,6 @@ b) Load the data (`YELLOW_TAXI_JANUARY_2022`) into {{site.data.keyword.netezza_s
        * 
    from
        'TABLE';
-
-   INSERT 0 2463931
    ```
    {: codeblock}
 
