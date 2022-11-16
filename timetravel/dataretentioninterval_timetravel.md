@@ -22,7 +22,7 @@ subcollection: netezza
 {:caption: .caption}
 {:codeblock: .codeblock}
 
-## Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
+# Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
 {: #dataretentionintervaldef_tt}
 
 Data version retention time interval (retention time interval, retention interval) specifies the maximum number of days that historical data in a temporal table is preserved for and visible to time travel queries.
@@ -37,7 +37,7 @@ To reclaim older historical rows, you can run the **GROOM TABLE** command, or us
 
 A table with a 0 retention interval is not a temporal table (time travel table) and does not support time travel queries. If you set a retention interval of 0 days for an object, time travel is disabled for the object.
 
-### Retention interval start timestamp
+## Retention interval start timestamp
 {: #tableretentiontimestamp_tt}
 
 At any specified time, a table retention interval start timestamp equals the larger of the following values:
@@ -46,7 +46,7 @@ At any specified time, a table retention interval start timestamp equals the lar
 
 - The table’s data version retention lower bound, which is is the date/time that the table’s retention time interval was last set with the CREATE TABLE or ALTER TABLE statements.
 
-### Delete timestamp
+## Delete timestamp
 {: #deletetimestamp_tt}
 
 The delete timestampof a historical row is the date/time that the transaction deleting the row committed. Not the time of execution of the particular DELETE, UPDATE, or TRUNCATE statement that deleted the row.
@@ -57,7 +57,7 @@ The delete timestampof a historical row is the date/time that the transaction de
 - The delete timestamp of a current (not deleted) row is `NULL`.
 - You can select the insert timestamp by using the **_SYS_END** virtual column of a temporal table.
 
-### Insert timestamp
+## Insert timestamp
 {: #inserttimestamp_tt}
 
 The insert timestamp of a current or historical row is the date/time that the transaction inserting the row committed. Not the time of execution of the particular INSERT or UPDATE statement that inserted the row.
@@ -65,7 +65,7 @@ The insert timestamp of a current or historical row is the date/time that the tr
 - If the inserting transaction committed  before  the  retention  start timestamp, a row is treated as having been inserted at the retention start timestamp. This generally applies only to existing rows at the time of altering a non-temporal table to a temporal table.
 - You can select the insert timestamp by using the **_SYS_START** virtual column of a temporal table.
 
-### Validity period
+## Validity period
 {: #validity_tt}
 
 The validity period of a historical row is the time period that starts with the row’s insert timestamp and ends just before its delete timestamp. The row is no longer valid as of the delete timestamp.
