@@ -21,6 +21,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 {:codeblock: .codeblock}
+{:note: .note}
 
 # Managing space usage
 {: #managing_tt}
@@ -66,7 +67,7 @@ show temporal histogram flight;
 ```
 {: codeblock}
 
-NOTE: The virtual **_SYS_START** and **_SYS_END** columns do not take up additional space in the (current or historical) rows of table. They are derived from other hidden fields that are already present in the on-disk rows.
+The virtual **_SYS_START** and **_SYS_END** columns do not take up additional space in the (current or historical) rows of table. They are derived from other hidden fields that are already present in the on-disk rows.
 {: note}
 
 See also [the SHOW TEMPORAL HISTOGRAM command](https://www.ibm.com/docs/en/netezza?topic=reference-show-temporal-histogram).
