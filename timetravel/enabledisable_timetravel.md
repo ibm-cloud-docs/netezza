@@ -48,6 +48,44 @@ See:
 - [Altering databases](/docs/netezza?topic=netezza-alteringobjects_tt#alterdb_tt)
 - [Altering schemas](/docs/netezza?topic=netezza-alteringobjects_tt#alteringschemas_tt)
 
-
 Before you set **DATA_VERSION_RETENTION_TIME** for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
 {: important}
+
+## Limitations
+{: #limitations_tt}
+
+The following types of tables cannot be temporal tables:
+
+- Temporary tables.
+- External tables.
+- Versioned tables that were altered by adding and/or dropping columns.
+- Row-secure tables.
+
+This limitation affects the following commands:
+
+- **CREATE TABLE ROW SECURITY**, **CREATE EXTERNAL TABLE**, **CREATE TEMPORARY TABLE**
+    If **DATA_VERSION_RETENTION_TIME** is specified to a nonzero value, the commands fail.
+
+- **ALTER TABLE DATA_VERSION_RETENTION_TIME**
+    If the table is a temporary, row-secure, versioned, or an external table and DATA_VERSION_RETENTION_TIME is specified with a nonzero value, the command fails.
+
+- **ALTER TABLE ADD COLUMN**, **ALTER TABLE DROP COLUMN**
+    If the table has a nonzero **DATA_VERSION_RETENTION_TIME** specified, the command fails.
+
+The **GROOM TABLE VERSIONS** command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
+
+**WHAT TO DO NEXT**
+You can start running time travel queries now. For more information, see the following links:
+
+- [Running queries syntax](/docs/netezza?topic=netezza-runningqueries_tt).
+- [Querying historical data](/docs/netezza?topic=netezza-queryingdata_tt).
+
+
+## Using time travel
+{: #using_tt}
+
+Time travel SELECT queries are described in Running queries syntax and Querying historical data .
+
+A time travel query can appear as a sub-SELECT in an INSERT, UPDATE, DELETE, MERGE, or CREATE TABLE AS SELECT (CTAS) statement.
+
+A time travel query can also appear in a view definition (CREATE OR REPLACE VIEW) or a stored procedure definition (CREATE OR REPLACE PROCEDURE). In either case, timestamp expressions (such as CURRENT_TIMESTAMP - INTERVAL ‘1 day’) are not evaluated at view or procedure definition time but at the time a user or application queries the view or calls the procedure.
