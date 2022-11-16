@@ -25,6 +25,14 @@ subcollection: netezza
 # Data version retention interval (**DATA_VERSION_RETENTION_TIME**)
 {: #dataretentionintervaldef_tt}
 
+## Retention time interval and retention time period
+{: #timeperiod_tt}
+
+A table’s retention time interval defines the number of days past their delete timestamps (see below) that historical (deleted) rows are available for time travel queries. At any given time, the retention time period ends at the current timestamp (i.e., date and time) and extends back the given number of days; this is a sliding time “window” that advances as the current system time advances.
+
+
+
+
 Data version retention time interval (retention time interval, retention interval) specifies the maximum number of days that historical data in a temporal table is preserved for and visible to time travel queries.
 
 The default retention interval value at all levels is 0. The maximum is 99 days.
