@@ -102,8 +102,11 @@ toc:
             - timetravel/retentioninterval_timetravel.md
             - timetravel/dataretentioninterval_timetravel.md
          - timetravel/spaceusage_timetravel.md
-         - timetravel/runningqueries_timetravel.md
-         - timetravel/queryingdata_timetravel.md
+         - topicgroup:
+             label: Querying historical database
+             topics:
+             - timetravel/runningqueries_timetravel.md
+             - timetravel/queryingdata_timetravel.md
          - timetravel/bnr_timetravel.md
          - timetravel/sqlcommands_timetravel.md
       - link:
