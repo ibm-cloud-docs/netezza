@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-15"
+lastupdated: "2022-11-17"
 
 keywords: connecting, private endpoints
 
@@ -23,25 +23,24 @@ subcollection: netezza
 # Connecting to {{site.data.keyword.netezza_short}} by using private endpoints
 {:# connecting-private-endpoints}
 
+![Connecting to {{site.data.keyword.netezza_short}}](connecting.png){: caption="Image 1. The diagram depicts the dependencies between the  {{site.data.keyword.netezza_short}} subscription, Azure Private Link, and customer account." caption-side="bottom"}
+
 If you want to connect to {{site.data.keyword.netezza_short}} by using private endpoints, two [private link services](https://learn.microsoft.com/en-us/azure/private-link/private-link-service-overview) are available in the (IBM) Azure subscription. To connect to your instance by using these private link service, you must create two [private endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) in your Azure subscriptions.
 
 With these private endpoints, you can connect to:
-1. Your {{site.data.keyword.netezza_short}} database on port 5480 and the API server on port 443.
+
+1. Your {{site.data.keyword.netezza_short}} database on port 5480, and the API server on port 443.
 1. The web console on port 443.
 
 ## Providing subscription IDs
 {: #providing-subscription-ids}
 
-When you create your private endpoint connection, the request needs to be approved by the private link service.
-
-To approve the private endpoints connection automatically, we need to add the subscription IDs, in which it has been created, to an allowlist.
-**DRAFT COMMENT:Please clarify- in which the connection has been created?
+When you create your private endpoint connection, the request needs to be approved by the private link service. For the private endpoints connection requests to be approved automatically, you need to provide the subscription IDs in which they will be created.
 
 There are two ways the subscription IDs can be provided:
+
 - At deployment
 - In the web console
-
-![Connecting to {{site.data.keyword.netezza_short}}](connecting.png){: caption="Image 1. The diagram depicts the dependencies between the  {{site.data.keyword.netezza_short}} subscription, Azure Private Link, and customer account." caption-side="bottom"}
 
 ### Providing subscription IDs at deployment
 {:# subscription-ids-deployment}
@@ -79,9 +78,6 @@ To create private endpoints in your subscription, follow the instructions from [
 
 In Step 5, when you are in the _Resource_ tab, select **Connect to an Azure resource by resource ID or alias**.
 
-| Connection method    |Connect to an Azure resource by resource ID or alias.|
-| Resource ID or alias |Provide the resource ID or alias you retrieved above.|
-
 After you created the private endpoints, the status automatically changes to **Approved**.
 After the approval, the private IPs that are assigned to your private endpoint in the Azure portal are displayed.
 
@@ -89,6 +85,6 @@ The IP address that is associated with the private endpoint that was created wit
 
 The IP address that is associated with the private endpoint that was created with the console resource ID or alias can be used to connect to your  {{site.data.keyword.netezza_short}} web console on port 443.
 
-By using the IP addresses from the devices in your subscription, you can now access the {{site.data.keyword.netezza_short}} instance.
+By using the IP addresses from the devices in your subscription, you can now access the {{site.data.keyword.netezza_short}} instance. Also, you can  assign a hostname over URLs to these IP addresses by logging in the to web console and navigating to _Administration > Setting > Private link_.
 
-To connect to the {{site.data.keyword.netezza_short}} instance from on-prem by using the IP addresses, you need to setup [VPN or Express Route](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/) from your on-prem network to the VNET in your subscription.   
+To connect to the {{site.data.keyword.netezza_short}} instance from on-prem by using the IP addresses or hostnames, you need to setup [VPN or Express Route](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/) from your on-prem network to the VNET in your subscription.   
