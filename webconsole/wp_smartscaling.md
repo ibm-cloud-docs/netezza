@@ -20,9 +20,12 @@ subcollection: netezza
 # Smart scaling
 {: #smartscaling}
 
+You can use this feature only if you are on {{site.data.keyword.netezza_short}} on AWS.
+{: important}
+
 On the _Workload patterns_ page, you learn how to optimize the usage of your system resources as smart scaling uses machine learning to provide predictions based on historical workload patterns.
 
-By hovering over each data point, you reveal a tool tip with more information. Tool tips include Time interval, Historical and/or Predicted NZP, NZP description, Historical or Suggested Contour Profile. 
+By hovering over each data point, you reveal a tool tip with more information. Tool tips include Time interval, Historical and/or Predicted NZP, NZP description, Historical or Suggested Contour Profile.
 
 When you are looking at the graph overall, use the legend to identify the contour profile.
 
