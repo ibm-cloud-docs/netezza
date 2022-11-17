@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-17"
 
 keywords: netezza time travel, data retention interval, setting the retention interval, changing the retention interval
 
@@ -40,7 +40,7 @@ SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO <NUMBER OF DAYS>
 Example:
 
 ```sql
-SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO 30 
+SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO 30
 ```
 {: codeblock}
 
