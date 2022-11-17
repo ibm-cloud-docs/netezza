@@ -40,7 +40,7 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
     - Identify the price of stock that was used in a valuation or initial public offering three months ago.
     - Identify the financials according to due diligence at the time of a company merger.
 
-- Analyzing and calculating trends**
+- Analyzing and calculating trends
     You can examine how data changes over time, identify differences in the data between two points in time, or analyze trends.
 
     For example:
