@@ -42,8 +42,7 @@ toc:
           - topicgroup:
               label: Workload patterns
               topics:
-              - webconsole/workload-patterns.md
-              - webconsole/wp_pauseresume.md
+              - webconsole/wp_pausereresume.md
               - webconsole/wp_scaling.md
               - webconsole/wp_smartscaling.md
           - topicgroup:

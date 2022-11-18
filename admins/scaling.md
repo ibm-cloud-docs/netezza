@@ -29,4 +29,4 @@ You must have appropriate privileges to launch scaling. For more information, se
 ## Scaling with the web console
 {: #scaling-webconsole}
 
-For more information, see [Scaling](/docs/netezza?topic=netezza-patterns&interface=ui#scaling-console).
+For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
