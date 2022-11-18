@@ -32,4 +32,4 @@ You can use this feature only if you are on {{site.data.keyword.netezza_short}} 
 ## Smartscaling with the web console
 {: #smartscaling_webconsole}
 
-For more information, see [Smart scaling].
+For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling).
