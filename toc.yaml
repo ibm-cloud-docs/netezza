@@ -96,7 +96,7 @@ toc:
              label: External tables
              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - topicgroup:
-         label: Netezza Performance Server time travel
+         label: Querying historical data (time travel)
          topics:
          - timetravel/introducing_timetravel.md
          - topicgroup:
