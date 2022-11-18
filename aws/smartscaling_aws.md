@@ -17,7 +17,7 @@ subcollection: netezza
 {:note: .note}
 {:caption: .caption}
 
-# {{site.data.keyword.netezza_short}} smart scaling
+# Smart scaling
 {: #smartscaling_intro}
 
 With {{site.data.keyword.netezza_short}} smart scaling, you can gain a deeper understanding of your system resources, especially if you are a database administrator or an operational decision maker.
