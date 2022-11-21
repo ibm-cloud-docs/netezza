@@ -103,11 +103,11 @@ toc:
             label: Setting up time travel
             topics:
             - timetravel/enabledisable_timetravel.md
-            - topicgroup:
-               label: Creating and altering time travel objects
-               topics:
-               - timetravel/creatingobjects_timetravel.md
-               - timetravel/alteringobjects_timetravel.md
+         - topicgroup:
+            label: Creating and altering time travel objects
+            topics:
+            - timetravel/creatingobjects_timetravel.md
+            - timetravel/alteringobjects_timetravel.md
          - timetravel/retentioninterval_timetravel.md
          - timetravel/dataretentioninterval_timetravel.md
          - timetravel/spaceusage_timetravel.md
