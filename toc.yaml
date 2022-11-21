@@ -93,6 +93,7 @@ toc:
           label: Querying historical data (time travel)
           topics:
           - timetravel/introducing_timetravel.md
+          - timetravel/dataretentioninterval_timetravel.md
           - timetravel/enabledisable_timetravel.md
           - topicgroup:
               label: Creating and altering objects for time travel
@@ -100,7 +101,6 @@ toc:
               - timetravel/creatingobjects_timetravel.md
               - timetravel/alteringobjects_timetravel.md
           - timetravel/retentioninterval_timetravel.md
-          - timetravel/dataretentioninterval_timetravel.md
           - timetravel/spaceusage_timetravel.md
           - topicgroup:
               label: Querying historical database
