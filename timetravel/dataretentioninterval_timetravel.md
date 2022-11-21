@@ -31,8 +31,6 @@ subcollection: netezza
 A table’s retention time interval defines the number of days past their delete timestamps (see below) that historical (deleted) rows are available for time travel queries. At any given time, the retention time period ends at the current timestamp (i.e., date and time) and extends back the given number of days; this is a sliding time “window” that advances as the current system time advances.
 
 
-
-
 Data version retention time interval (retention time interval, retention interval) specifies the maximum number of days that historical data in a temporal table is preserved for and visible to time travel queries.
 
 The default retention interval value at all levels is 0. The maximum is 99 days.
@@ -61,7 +59,7 @@ The delete timestampof a historical row is the date/time that the transaction de
 
 - If a temporal table is truncated, the existing table rows are available to time travel queries and are treated as having been deleted as of the time the truncating transaction committed.
 - If the deleting (or truncating) transaction committed before the retention start timestamp, a deleted row is treated as having been deleted at the retention start timestamp. This generally applies only to existing deleted rows at the time of altering a nontemporal table to a temporal table; such rows are not visible to time travel queries against the table.
-- A historical row might be visible to a temporal query against the table if its delete timestampvfalls within the table’s retention period. As long as this condition is true, the historical row cannot be removed (with GROOM TABLE) from the table.
+- A historical row might be visible to a time travel query against the table if its delete timestampvfalls within the table’s retention period. As long as this condition is true, the historical row cannot be removed (with GROOM TABLE) from the table.
 - The delete timestamp of a current (not deleted) row is `NULL`.
 - You can select the insert timestamp by using the **_SYS_END** virtual column of a temporal table.
 

@@ -46,9 +46,9 @@ ALTER TABLE PRODUCT DATA_VERSION_RETENTION_TIME 0;
 ```
 {: codeblock}
 
-When you set **DATA_VERSION_RETENTION_TIME** to 0, you cannot run temporal queries and you do not have access to historical rows for that table anymore. You can reclaim some or all of the now inaccessible historical rows in the table with **GROOM TABLE**.
+When you set **DATA_VERSION_RETENTION_TIME** to 0, you cannot run time travel queries and you do not have access to historical rows for that table anymore. You can reclaim some or all of the now inaccessible historical rows in the table with **GROOM TABLE**.
 
-If you convert the table to a temporal again, the table is not accessible to temporal queries anymore and you cannot run time travel queries.
+If you convert the table to a temporal again, the table is not accessible to time travel queries anymore and you cannot run time travel queries.
 
 ### Altering nontemporal tables to temporal
 {: #convertingtemporal_tt}
@@ -74,7 +74,7 @@ If you first disabled your temporal table and then converted the same table to a
 
 As with the **CREATE TABLE** command, a row that is inserted into the table receives a virtual insert timestamp that is equal to the commit time of the inserting transaction. A row that is deleted from the table receives a virtual delete timestamp that is equal to the commit time of the deleting (or truncating) transaction. The table’s retention lower bound and retention start time are equal to or just before the commit time of this **ALTER TABLE** transaction.
 
-Unlike the **CREATE TABLE** command, which does not have any existing rows, existing visible rows in the table are treated as if they were inserted by this **ALTER TABLE** transaction. The existing visible rows receive virtual insert timestamps that are equal to the retention start time. With these timestamps, the rows are potentially visible to temporal queries.
+Unlike the **CREATE TABLE** command, which does not have any existing rows, existing visible rows in the table are treated as if they were inserted by this **ALTER TABLE** transaction. The existing visible rows receive virtual insert timestamps that are equal to the retention start time. With these timestamps, the rows are potentially visible to time travel queries.
 
 ## Altering schemas
 {: #alteringschemas_tt}
