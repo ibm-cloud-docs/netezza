@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2022
-lastupdated: "2022-11-03"
+lastupdated: "2022-11-21"
 
 keywords: time travel, Netezza time travel,
 
@@ -26,7 +26,7 @@ subcollection: netezza
 
 Time-related data is core to most application databases. With the {{site.data.keyword.netezza_short}} time travel feature, you can store, retrieve, and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data.
 
-By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (for example, data that was changed or deleted) at past points in time or within a past period of time. For example, data that was changed or deleted.
+By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time. For example, data that was changed or deleted.
 
 ## Business use cases and examples
 {: #buexamples_tt}
