@@ -43,7 +43,7 @@ INSERT INTO PRODUCT VALUES(1004, 'Shoes', 125.25);  - 2020-10-23 16:15:00
 
 The pair of time values that are listed at the end are the insert and delete timestamp values.
 
-The row begin values or **_sys-start** values reflect when these records become current or visible (transaction commit time).
+The row begin values or **SYS_START** values reflect when these records become current or visible (transaction commit time).
 
 ## Showing data with the insert and delete timestamps
 {: #showingdata_tt}
@@ -51,7 +51,7 @@ The row begin values or **_sys-start** values reflect when these records become 
 This **SELECT** command shows the table data with the associated insert and delete timestamp values at that instant when the query was issued. The **_SYS_START** and **_SYS_END** timestamps are available only in time travel queries, hence the use of **AS OF NOW()**.
 
 ```sql
-SELECT *, _SYS_START, _SYS_END FROM <TABLE NAME> FOR SYSTEM_TIME AS OF NOW();
+SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME AS OF NOW();
 ```
 {: codeblock}
 
@@ -72,7 +72,7 @@ PRODUCTID | DESCRIPTION | PRICE   |     _SYS_START      | _SYS_END
 {: #queryasof_tt}
 
 ```sql
-SELECT *, _SYS_START, _SYS_END FROM <TABLE NAME> FOR SYSTEM_TIME AS OF <RETENTION_START_TIMESTAMP>;
+SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME AS OF <RETENTION_START_TIMESTAMP>;
 ```
 {: codeblock}
 
@@ -99,7 +99,7 @@ See also [the **AS OF** subclause](https://cloud.ibm.com/docs/netezza?topic=nete
 {: #querybefore_tt}
 
 ```sql
-SELECT *, _SYS_START, _SYS_END FROM <TABLE NAME> FOR SYSTEM_TIME BEFORE <RETENTION_START_TIMESTAMP>;
+SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME BEFORE <RETENTION_START_TIMESTAMP>;
 ```
 {: codeblock}
 
@@ -129,11 +129,14 @@ See also [the **BEFORE** subclause](https://cloud.ibm.com/docs/netezza?topic=net
 {: #fromto_tt}
 
 ```sql
-SELECT *, _SYS_START, _SYS_END FROM <TABLE NAME> FOR SYSTEM_TIME FROM <RETENTION_START_TIMESTMAP> TO “<expr2>” WHERE;
+SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME FROM <RETENTION_START_TIMESTMAP> TO “<expr2>” WHERE <condition>;
 ```
 {: codeblock}
 
 If you want to see the row begin and row end values, you must specify the **_SYS_START** and **_SYS_END** columns.
+
+If you want to query historical data as far back as possible, you can use the **RETENTION_START_TIMESTAMP** keyword in your time travel queries. If you do this, you can avoid having to try to compute the right timestamp on your own. By extension, you reduce the risk of running into an error if the value turns out to be too old (older than the retention start timestamp).
+{: tip}
 
 Example:
 
@@ -154,7 +157,7 @@ See also [the **FROM...TO** subclause](https://cloud.ibm.com/docs/netezza?topic=
 {: #betweenand_tt}
 
 ```sql
-SELECT *, _SYS_START, _SYS_END FROM <TABLE NAME> FOR SYSTEM_TIME BETWEEN <RETENTION_START_TIMETAMP> AND <expr2>;
+SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME BETWEEN <RETENTION_START_TIMETAMP> AND <expr2>;
 ```
 {: codeblock}
 
@@ -183,10 +186,10 @@ See also [the **BETWEEN...AND** subclause](https://cloud.ibm.com/docs/netezza?to
 
 ```sql
 BEGIN;
-RENAME TABLE <TABLE NAME> TO <NEW TABLE NAME>;
+RENAME TABLE <table_name> TO <new_table_name>;
 CREATE TABLE <TABLE NAME> AS
-  SELECT * FROM <NEW TABLE NAME> FOR SYSTEM_TIME AS OF <RETENTION_START_TIMESTAMP>;
-DROP TABLE <NEW TABLE NAME>; -- or, keep it for diagnostics
+  SELECT * FROM <new_table_name> FOR SYSTEM_TIME AS OF <RETENTION_START_TIMESTAMP>;
+DROP TABLE <new_table_name>; -- or, keep it for diagnostics
 COMMIT;
 ```
 {: codeblock}
@@ -211,8 +214,8 @@ In this example, you suspect that changes were made to the **PRODUCT** table, an
 A particular product’s price was incorrectly updated and needs to be restored. Example:
 
 ```sql
-UPDATE <TABLE NAME> SET <VALUE>
-  FROM (SELECT <COLUMN> FROM <TABLE NAME> WHERE <CONDITION> FOR SYSTEM_TIME BEFORE <RETENTION_START_TIMESTAMP>) AS P;
+UPDATE <table> SET <col> = <expression> [,<expression>...]
+  FROM (<fromlist> WHERE <condition> FOR SYSTEM_TIME BEFORE <RETENTION_START_TIMESTAMP>) AS P;
 ```
 {: codeblock}
 
@@ -230,9 +233,9 @@ See also the [**SELECT (to retrieve rows) command**](https://www.ibm.com/docs/en
 {: #restoredeleted_tt}
 
 ```sql
-INSERT INTO <TABLE NAME>
-  SELECT * FROM <TABLE NAME>
-  WHERE <CONDITION> FOR SYSTEM_TIME BEFORE <RETENTION_START_TIMESTAMP>’;
+INSERT INTO <table>
+  SELECT * FROM <table>
+  WHERE <confition> FOR SYSTEM_TIME BEFORE <RETENTION_START_TIMESTAMP>’;
 ```
 {: codeblock}
 

@@ -91,10 +91,3 @@ The **FROM...TO** and **BETWEEN...AND** subclauses cannot be a subquery.
 | FROM <expr1> TO <expr2> | Includes all the rows that were valid at any time from expr1 to expr2 (exclusive), whose insert timestamp is strictly less than expr2 and whose delete timestamp is NULL or is greater than expr1. If expr1 or expr2 is less than or equal to the table’s retention start timestamp, sn error is returned. If expr1 is greater than or equal to expr2, the query produces no rows.|
 | BETWEEN <expr1> AND <expr2> | Includes all the rows that were valid at any time between expr1 and expr2 (inclusive), whose insert timestamp is less than or equal to expr2 and whose delete timestamp is NULL or is greater than expr1. If expr1 or expr2 is less than the table’s retention start timestamp, an error is returned. If expr1 is greater than expr2, the query produces no rows.|
 {: caption}
-
-
-Syntax: BETWEEN expr1 AND expr2
-Description:
-
-Syntax: FROM expr1 TO expr2
-Description:
