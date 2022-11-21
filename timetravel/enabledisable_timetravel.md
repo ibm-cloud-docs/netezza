@@ -27,15 +27,10 @@ subcollection: netezza
 
 To start running time travel queries on {{site.data.keyword.netezza_short}}, create a temporal table, database, or schema (time travel objects) by setting [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)(retention time interval) to a nonzero value. You can select between 1 day and up to of 99 days.
 
-You can set **DATA_VERSION_RETENTION_TIME** by running the **CREATE** or **ALTER** command for these object types.
+To set **DATA_VERSION_RETENTION_TIME**, run the **CREATE** or **ALTER** command for these object types.
 
-Also, you can [set **DATA_VERSION_RETENTION_TIME** for the system](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt).
-
-Temporal tables usually have current rows and historical rows. Current rows are not marked for deletion. Historical rows are marked for deletion (by the **DELETE**, **UDPATE** or **TRUNCATE** statements) and are visible to time travel queries up to the specified retention time interval past their delete timestamps.
-
-A table with a **DATA_VERSION_RETENTION_TIME** value of zero is nontemporal. Only its current (not deleted) rows are visible to queries. Some historical rows might be preserved for incremental backup purposes, but the rows are not accessible to time travel queries.
-
-If you alter **DATA_VERSION_RETENTION_TIME** of an existing temporal table to zero, the table becomes a nontemporal table. It no longer supports access to historical data with time travel queries.
+Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
+{: important}
 
 See:
 
@@ -46,8 +41,13 @@ See:
 - [Altering schemas](/docs/netezza?topic=netezza-alteringobjects_tt#alteringschemas_tt)
 - [Altering databases](/docs/netezza?topic=netezza-alteringobjects_tt#alterdb_tt)
 
-Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
-{: important}
+Also, you can [set **DATA_VERSION_RETENTION_TIME** for the system](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt).
+
+Temporal tables usually have current rows and historical rows. Current rows are not marked for deletion. Historical rows are marked for deletion (by the **DELETE**, **UDPATE** or **TRUNCATE** statements) and are visible to time travel queries up to the specified retention time interval past their delete timestamps.
+
+A table with a **DATA_VERSION_RETENTION_TIME** value of zero is nontemporal. Only its current (not deleted) rows are visible to queries. Some historical rows might be preserved for incremental backup purposes, but the rows are not accessible to time travel queries.
+
+If you alter **DATA_VERSION_RETENTION_TIME** of an existing temporal table to zero, the table becomes a nontemporal table. It no longer supports access to historical data with time travel queries.
 
 ## Limitations
 {: #limitations_tt}

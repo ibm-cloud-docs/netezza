@@ -21,10 +21,10 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Setting and viewing **DATA_VERSION_RETENTION_TIME**
+# Setting and viewing retention time intervals
 {: #dataretentioninterval_tt}
 
-## Setting the retention interval for the system
+## Setting the retention time interval for the system
 {: #settingretentioninterval_tt}
 
 To set **DATA_VERSION_RETENTION_TIME** to a specific value for the whole system, run the **SET SYSTEM DEFAULT** command.
@@ -48,7 +48,7 @@ The value of the property at the system level determines the default value inher
 
 To set **DATA_VERSION_RETENTION_TIME** for a specific object, you can run the **ALTER** or **CREATE** command.
 
-## Viewing the retention interval for the whole system
+## Viewing the retention time interval for the whole system
 {: #viewingsystemretention_tt}
 
 To view **DATA_VERSION_RETENTION_TIME** for the whole system, run the **SHOW SYSTEM DEFAULT** command.
@@ -59,7 +59,7 @@ SHOW SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME
 
 If you did not set the retention time previously, the default is 0.
 
-## Viewing the retention interval for tables, schemas, and databases
+## Viewing the retention intervals for tables, schemas, and databases
 {: #viewingtsd_tt}
 
 ```sql
