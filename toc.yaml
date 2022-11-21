@@ -82,42 +82,42 @@ toc:
           - encryption.md
           - iam-docs.md
       - topicgroup:
-         label: Netezza Performance Server and Kafka
-         topics:
-         - kafka.md
+          label: Netezza Performance Server and Kafka
+          topics:
+          - kafka.md
       - topicgroup:
-         label: Querying data from data lakes
-         topics:
-         - singularity.md
-         - examples_singularity.md
-         - examples3_singularity.md
-         - examples2_singularity.md
-         - link:
-             label: External tables
-             href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
+          label: Querying data from data lakes
+          topics:
+          - singularity.md
+          - examples_singularity.md
+          - examples3_singularity.md
+          - examples2_singularity.md
+          - link:
+              label: External tables
+              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - topicgroup:
-         label: Querying historical data (time travel)
-         topics:
-         - timetravel/introducing_timetravel.md
-         - topicgroup:
-            label: Setting up time travel
-            topics:
-            - timetravel/enabledisable_timetravel.md
-         - topicgroup:
-            label: Creating and altering time travel objects
-            topics:
-            - timetravel/creatingobjects_timetravel.md
-            - timetravel/alteringobjects_timetravel.md
-         - timetravel/retentioninterval_timetravel.md
-         - timetravel/dataretentioninterval_timetravel.md
-         - timetravel/spaceusage_timetravel.md
-         - topicgroup:
-             label: Querying historical database
-             topics:
-             - timetravel/runningqueries_timetravel.md
-             - timetravel/queryingdata_timetravel.md
-         - timetravel/bnr_timetravel.md
-         - timetravel/sqlcommands_timetravel.md
+          label: Querying historical data (time travel)
+          topics:
+          - timetravel/introducing_timetravel.md
+          - topicgroup:
+              label: Setting up time travel
+              topics:
+              - timetravel/enabledisable_timetravel.md
+          - topicgroup:
+              label: Creating and altering time travel objects
+              topics:
+              - timetravel/creatingobjects_timetravel.md
+              - timetravel/alteringobjects_timetravel.md
+          - timetravel/retentioninterval_timetravel.md
+          - timetravel/dataretentioninterval_timetravel.md
+          - timetravel/spaceusage_timetravel.md
+          - topicgroup:
+              label: Querying historical database
+              topics:
+              - timetravel/runningqueries_timetravel.md
+              - timetravel/queryingdata_timetravel.md
+          - timetravel/bnr_timetravel.md
+          - timetravel/sqlcommands_timetravel.md
       - link:
           label: Loading data
           href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
@@ -125,6 +125,7 @@ toc:
           label: Running queries
           href: https://www.ibm.com/docs/en/netezza?topic=dud-netezza-sql-introduction
       - remove.md
+
   - navgroup:
       id: reference
       topics:
