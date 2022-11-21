@@ -99,12 +99,9 @@ toc:
           label: Querying historical data (time travel)
           topics:
           - timetravel/introducing_timetravel.md
+          - timetravel/enabledisable_timetravel.md
           - topicgroup:
-              label: Setting up time travel
-              topics:
-              - timetravel/enabledisable_timetravel.md
-          - topicgroup:
-              label: Creating and altering time travel objects
+              label: Creating and altering objects for time travel
               topics:
               - timetravel/creatingobjects_timetravel.md
               - timetravel/alteringobjects_timetravel.md
