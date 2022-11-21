@@ -32,8 +32,6 @@ To set **DATA_VERSION_RETENTION_TIME**, run the **CREATE** or **ALTER** command 
 Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
 {: important}
 
-See:
-
 - [Creating temporal tables](/docs/netezza?topic=netezza-temporaltables_tt#creatingtemporal_tt)
 - [Creating temporal schemas](/docs/netezza?topic=netezza-temporaltables_tt#createschemas_tt)
 - [Creating temporal databases](/docs/netezza?topic=netezza-temporaltables_tt#createdb_tt)
@@ -64,7 +62,7 @@ Also, consider the following points:
 - Changes to retention time intervals for tables, schemas, and databases are not replicated.
 - Retention time intervals of tables, schemas, and databases are automatically backed up by the `nzbackup` command and restored by the `nzrestore` command. The insert and delete timestamps of table rows are not. Restored rows get fresh insert timestamps in the target database or system, and rows that were deleted by incremental restore get fresh delete timestamps in the target database or system".
 
-This limitation affects the following commands:
+This limitations affect the following commands:
 
 - **CREATE TABLE ROW SECURITY**, **CREATE EXTERNAL TABLE**, **CREATE TEMPORARY TABLE**
 
