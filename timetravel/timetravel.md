@@ -42,7 +42,7 @@ Maintaining a time-based data support infrastructure might be expensive and comp
     - [Altering databases](/docs/netezza?topic=netezza-alteringobjects_tt#alterdb_tt)
     - [Altering schemas](/docs/netezza?topic=netezza-alteringobjects_tt#alteringschemas_tt)
 
-- Setting **DATA_VERSION_RETENTION_TIME** systemwide and viewing **DATA_VERSION_RETENTION_TIME**
+- Setting **DATA_VERSION_RETENTION_TIME** for the system and viewing **DATA_VERSION_RETENTION_TIME**
     - [Data version retention interval](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)
     - [Setting the retention interval](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt)
     - [Viewing the retention interval](/docs/netezza?topic=netezza-dataretentioninterval_tt#viewretentioninterval_tt)

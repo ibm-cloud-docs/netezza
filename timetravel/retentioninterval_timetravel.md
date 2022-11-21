@@ -21,15 +21,15 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Setting and viewing **DATA_VERSION_RETENTION_TIME** systemwide
+# Setting and viewing **DATA_VERSION_RETENTION_TIME**
 {: #dataretentioninterval_tt}
 
-## Setting the retention interval on system level
+## Setting the retention interval for the system
 {: #settingretentioninterval_tt}
 
-To set **DATA_VERSION_RETENTION_TIME** to a specific value for the whole system, run the command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
+To set **DATA_VERSION_RETENTION_TIME** to a specific value for the whole system, run the **SET SYSTEM DEFAULT** command.
 
-Before you set DATA_VERSION_RETENTION_TIME for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
+Before you set **DATA_VERSION_RETENTION_TIME** for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
 {: important}
 
 ```sql
@@ -46,15 +46,30 @@ SET SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME TO 30
 
 The value of the property at the system level determines the default value inherited by a subsequent CREATE DATABASE statement that does not explicitly specify this property.
 
-To set **DATA_VERSION_RETENTION_TIME** for a specific object, you can run the **ALTER** or **CREATE** command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
+To set **DATA_VERSION_RETENTION_TIME** for a specific object, you can run the **ALTER** or **CREATE** command.
 
 ## Viewing the retention interval for the whole system
 {: #viewingsystemretention_tt}
 
-To view **DATA_VERSION_RETENTION_TIME** for the whole system, run the command as an *Admin* or a user with the *MANAGE SYSTEM* privilege.
+To view **DATA_VERSION_RETENTION_TIME** for the whole system, run the **SHOW SYSTEM DEFAULT** command.
 
 ```sql
 SHOW SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME
 ```
 
 If you did not set the retention time previously, the default is 0.
+
+## Viewing the retention interval for tables, schemas, and databases
+{: #viewingtsd_tt}
+
+```sql
+\d <TABLE NAME> (see also _v_table.dataverretntime)
+```
+
+```sql
+SHOW SCHEMA (_v_schema.dataverretntime)
+```
+
+```sql
+\l+ (all databases, with detail - _v_database.dataverretntime)
+```
