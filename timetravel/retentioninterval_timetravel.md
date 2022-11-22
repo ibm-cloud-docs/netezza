@@ -21,7 +21,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Setting and viewing retention time intervals
+# Setting retention time interval for the system and viewing retention time intervals
 {: #dataretentioninterval_tt}
 
 ## Setting the retention time interval for the system
