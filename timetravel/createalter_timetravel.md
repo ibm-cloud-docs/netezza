@@ -25,7 +25,7 @@ subcollection: netezza
 # Creating and altering objects for time travel
 {: #enablingdisabling_tt}
 
-## Getting started with {{site.data.keyword.netezza_short}} time travel
+## Overview
 {: #introtott}
 
 To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, database, or schema (time travel objects) by setting [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) (retention time interval) to a nonzero value. You can select between 1 day and up to of 99 days.
