@@ -22,7 +22,7 @@ subcollection: netezza
 {:caption: .caption}
 {:codeblock: .codeblock}
 
-# Time travel concepts
+# Timestamps in time travel queries
 {: concepts_tt}
 
 ## Retention time interval and retention time period
