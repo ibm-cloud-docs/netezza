@@ -47,7 +47,7 @@ Each `TIMESTAMP EXPRESSION` must be one of the following:
 - The special identifier **RETENTION_START_TIMESTAMP**, on the particular cases of **AS OF**, **BETWEEN**, and **FROM** (but not **BEFORE**, **AND**, or **TO**). This refers to the retention start timestamp. LINK For example, the oldest possible row insert timestamp or delete timestamp that is available for time travel queries.
 
 ### AS OF
-{: asof_tt}
+{: #asof_tt}
 
 You can use the **AS OF** subclause when you want to retrieve the state of your data as it was at any specific time in the past.
 
@@ -96,7 +96,7 @@ The **FROM...TO** and **BETWEEN...AND** subclauses cannot be a subquery.
 {: caption}
 
 ## Timestamps in time travel queries
-{: concepts_tt}
+{: #concepts_tt}
 
 ### Retention time interval and retention time period
 {: #timeperiod_tt}
