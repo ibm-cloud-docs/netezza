@@ -84,3 +84,11 @@ Example:
 CREATE DATABASE DB1 DATA_VERSION_RETENTION_TIME 30;
 ```
 {: codeblock}
+
+## What to do next
+{: #next_tt}
+
+After you created time travel objects, you can start running time travel queries now. For more information, see the following links:
+
+- [Running queries syntax](/docs/netezza?topic=netezza-runningqueries_tt)
+- [Querying historical data](/docs/netezza?topic=netezza-queryingdata_tt)

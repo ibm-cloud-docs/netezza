@@ -22,12 +22,12 @@ subcollection: netezza
 {:caption: .caption}
 {:codeblock: .codeblock}
 
-# Setting up time travel
+# Creating and altering objects for time travel
 {: #enablingdisabling_tt}
 
-To start running time travel queries on {{site.data.keyword.netezza_short}}, create a temporal table, database, or schema (time travel objects) by setting [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt)(retention time interval) to a nonzero value. You can select between 1 day and up to of 99 days.
+To run time travel queries on {{site.data.keyword.netezza_short}}, create a temporal table, database, or schema (time travel objects) by setting [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) (retention time interval) to a nonzero value. You can select between 1 day and up to of 99 days.
 
-To set **DATA_VERSION_RETENTION_TIME**, run the **CREATE** or **ALTER** command for these object types.
+To set **DATA_VERSION_RETENTION_TIME**, you can run the **CREATE** or **ALTER** command for these object types.
 
 Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
 {: important}
@@ -77,11 +77,3 @@ This limitations affect the following commands:
     If the table has a nonzero **DATA_VERSION_RETENTION_TIME** specified, the command fails.
 
 The **GROOM TABLE VERSIONS** command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
-
-## What to do next
-{: #next_tt}
-
-After you created time travel objects, you can start running time travel queries now. For more information, see the following links:
-
-- [Running queries syntax](/docs/netezza?topic=netezza-runningqueries_tt)
-- [Querying historical data](/docs/netezza?topic=netezza-queryingdata_tt)
