@@ -106,7 +106,7 @@ A table’s retention time interval defines the number of days past their delete
 ### Retention lower bound
 {: #retentionlowerbound_tt}
 
-For the most part, a table’s retention lower bound is the date and time when the table was defined to be a temporal table. This could have been when you run the **CREATE TABLE** command, or the last time you altered the table’s **DATA_VERSION_RETENTION_TIME** from zero to non-zero.
+For the most part, a table’s retention lower bound is the date and time when the table was defined to be a temporal table. This could have been when you ran the **CREATE TABLE** command, or the last time you altered the table’s **DATA_VERSION_RETENTION_TIME** from zero to non-zero.
 
 ### Retention start timestamp
 {: #starttimestamp_tt}
@@ -120,9 +120,9 @@ A table’s retention start timestamp comes into play in the following operation
 
 - Time travel queries (**SELECT** and **sub-SELECT**)
 
-    If you attempts to run queries for historical rows that are older than the retention start timestamp, an error is returned.
+    If you attempt to run queries for historical rows that are older than the retention start timestamp, an error is returned.
 
-    If you want to query historical data as far back as possible, you can use the **RETENTION_START_TIMESTAMP** keyword in time travel queries. If you do this, you can avoid having to try to compute the right timestamp on your own. By extension, you reduce the risk of running into an error if the value turns out to be too old (older than the retention start timestamp).
+    If you want to query historical data as far back as possible, you can use the **RETENTION_START_TIMESTAMP** keyword in time travel queries. If you do this, you can avoid having to try to compute the right timestamp on your own. By extension, you eliminate the risk of running into an error if the value turns out to be too old (older than the retention start timestamp).
 
 - **GROOM TABLE**
     Historical rows that were deleted before the retention start timestamp are no longer needed for time travel queries and can be reclaimed.
