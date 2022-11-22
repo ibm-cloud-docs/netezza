@@ -58,5 +58,7 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
     - Restore a table to a point in the past (for which the historical data is still available).
     - Restore selected rows that were incorrectly deleted or updated.
 
-**WHAT TO DO NEXT**
-[Set up {{site.data.keyword.netezza_short}} for time travel](/docs/netezza?topic=netezza-enablingdisabling_tt).
+## What to do next
+{: #next_tt}
+
+[Create or alter objects for time travel](/docs/netezza?topic=netezza-enablingdisabling_tt).

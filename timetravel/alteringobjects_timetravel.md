@@ -35,7 +35,7 @@ To alter a temporal table to a nontemporal, set **DATA_VERSION_RETENTION_TIME** 
 For detailed syntax and the necessary privileges, see [the ALTER TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
 
 ```sql
-ALTER TABLE <TABLE NAME> DATA_VERSION_RETENTION_TIME 0;
+ALTER TABLE <table> DATA_VERSION_RETENTION_TIME 0;
 ```
 {: codeblock}
 
@@ -58,7 +58,7 @@ To alter a nontemporal table to temporal, set **DATA_VERSION_RETENTION_TIME**] t
 For detailed syntax and the necessary privileges, see [the ALTER TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
 
 ```sql
-ALTER TABLE <TABLE NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
+ALTER TABLE <table> DATA_VERSION_RETENTION_TIME <number-of-days>;
 ```
 {: codeblock}
 
@@ -87,7 +87,7 @@ To alter a temporal schema to a nontemporal, set **DATA_VERSION_RETENTION_TIME**
 For detailed syntax, the necessary privileges, and the **CASCADE** option, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
 
 ```sql
-ALTER SCHEMA <SCHEMA NAME> DATA_VERSION_RETENTION_TIME 0;
+ALTER SCHEMA <schema_name> DATA_VERSION_RETENTION_TIME 0;
 ```
 {: codeblock}
 
@@ -106,7 +106,7 @@ To alter a nontemporal schema to temporal, set **DATA_VERSION_RETENTION_TIME** t
 For detailed syntax, the necessary privileges, and the **CASCADE** option, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
 
 ```sql
-ALTER SCHEMA <SCHEMA NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
+ALTER SCHEMA <schema_name> DATA_VERSION_RETENTION_TIME <number-of-days>;
 ```
 {: codeblock}
 
@@ -128,7 +128,7 @@ To alter a temporal database to a nontemporal, set **DATA_VERSION_RETENTION_TIME
 For detailed syntax and the necessary privileges, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
 
 ```sql
-ALTER DATABASE <DATABASE NAME> DATA_VERSION_RETENTION_TIME 0;
+ALTER DATABASE <db_name> DATA_VERSION_RETENTION_TIME 0;
 ```
 {: codeblock}
 
@@ -147,7 +147,7 @@ To alter a nontemporal database to temporal, set **DATA_VERSION_RETENTION_TIME**
 For detailed syntax and the necessary privileges, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
 
 ```sql
-ALTER DATABASE <DATABASE NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
+ALTER DATABASE <db_name> DATA_VERSION_RETENTION_TIME <number-of-days>;
 ```
 {: codeblock}
 
@@ -157,3 +157,11 @@ Example:
 ALTER DATABASE DB1 DATA_VERSION_RETENTION_TIME 30;
 ```
 {: codeblock}
+
+## What to do next
+{: #next_tt}
+
+After you created time travel objects, you can start running time travel queries now. For more information, see the following links:
+
+- [Running queries syntax](/docs/netezza?topic=netezza-runningqueries_tt)
+- [Querying historical data](/docs/netezza?topic=netezza-queryingdata_tt)

@@ -47,7 +47,7 @@ A table’s retention start timestamp comes into play in the following operation
 
 - Time travel queries (**SELECT** and **sub-SELECT**)
 
-    If you attempts to run queries for historical rows that are older than the retention start timestamp, an error is retured.
+    If you attempts to run queries for historical rows that are older than the retention start timestamp, an error is returned.
 
     If you want to query historical data as far back as possible, you can use the **RETENTION_START_TIMESTAMP** keyword in time travel queries. If you do this, you can avoid having to try to compute the right timestamp on your own. By extension, you reduce the risk of running into an error if the value turns out to be too old (older than the retention start timestamp).
 

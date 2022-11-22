@@ -32,7 +32,7 @@ To create a temporal table, set **DATA_VERSION_RETENTION_TIME** to a nonzero val
 See [the CREATE TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2).
 
 ```sql
-CREATE TABLE <TABLE NAME> (<rows>) DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
+CREATE TABLE <tablename> ( <col>[, <col>… ] ) DATA_VERSION_RETENTION_TIME <number-of-days>;
 ```
 {: codeblock}
 
@@ -55,7 +55,7 @@ To create a temporal schema, set **DATA_VERSION_RETENTION_TIME** to a nonzero va
 See [the CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2) command.
 
 ```sql
-CREATE SCHEMA <SCHEMA NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
+CREATE SCHEMA <schema_name> DATA_VERSION_RETENTION_TIME <number-of-days>;
 ```
 {: codeblock}
 
@@ -74,7 +74,7 @@ To create a temporal database, set **DATA_VERSION_RETENTION_TIME** to a nonzero 
 See [the CREATE DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2).
 
 ```sql
-CREATE DATABASE <DATABASE NAME> DATA_VERSION_RETENTION_TIME <NUMBER OF DAYS>;
+CREATE DATABASE <db_name> DATA_VERSION_RETENTION_TIME <number-of-days>;
 ```
 {: codeblock}
 
@@ -84,3 +84,11 @@ Example:
 CREATE DATABASE DB1 DATA_VERSION_RETENTION_TIME 30;
 ```
 {: codeblock}
+
+## What to do next
+{: #next_tt}
+
+After you created time travel objects, you can start running time travel queries now. For more information, see the following links:
+
+- [Running queries syntax](/docs/netezza?topic=netezza-runningqueries_tt)
+- [Querying historical data](/docs/netezza?topic=netezza-queryingdata_tt)
