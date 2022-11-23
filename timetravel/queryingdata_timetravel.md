@@ -41,10 +41,6 @@ INSERT INTO PRODUCT VALUES(1004, 'Shoes', 125.25);  - 2020-10-23 16:15:00
 ```
 {: codeblock}
 
-The pair of time values that are listed at the end are the insert and delete timestamp values.
-
-The row begin values or **SYS_START** values reflect when these records become current or visible (transaction commit time).
-
 ## Showing data with the insert and delete timestamps
 {: #showingdata_tt}
 
@@ -72,11 +68,9 @@ PRODUCTID | DESCRIPTION | PRICE   |     _SYS_START      | _SYS_END
 {: #queryasof_tt}
 
 ```sql
-SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME AS OF <RETENTION_START_TIMESTAMP>;
+SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME AS OF <TIMESTAMP EXPRESSION>;
 ```
 {: codeblock}
-
-If you want to see the row begin and row end values, you must specify the **_SYS_START** and **_SYS_END** columns.
 
 Example:
 
@@ -91,7 +85,7 @@ PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END
 ```
 {: codeblock}
 
-The price for `Shoes` has been modified after the specified **AS OF** timestamp. The system returns the previous valid row.
+In this example, the price for `Shoes` has been modified after the specified **AS OF** timestamp. The system returns the previous valid row.
 
 See also [the **AS OF** subclause](https://cloud.ibm.com/docs/netezza?topic=netezza-runningqueries_tt).
 
@@ -99,11 +93,9 @@ See also [the **AS OF** subclause](https://cloud.ibm.com/docs/netezza?topic=nete
 {: #querybefore_tt}
 
 ```sql
-SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME BEFORE <RETENTION_START_TIMESTAMP>;
+SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME BEFORE <TIMESTAMP EXPRESSION>;
 ```
 {: codeblock}
-
-If you want to see the row begin and row end values, you must specify the **_SYS_START** and **_SYS_END** columns.
 
 Example:
 
@@ -118,7 +110,7 @@ PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END
 ```
 {: codeblock}
 
-The price for `Shoes` has been modified after or at the **BEFORE** timestamp. The system returns the previous valid row.
+In this example, the price for `Shoes` has been modified after or at the **BEFORE** timestamp. The system returns the previous valid row.
 
 See also [the **BEFORE** subclause](https://cloud.ibm.com/docs/netezza?topic=netezza-runningqueries_tt).
 
@@ -129,11 +121,9 @@ See also [the **BEFORE** subclause](https://cloud.ibm.com/docs/netezza?topic=net
 {: #fromto_tt}
 
 ```sql
-SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME FROM <RETENTION_START_TIMESTMAP> TO “<expr2>” WHERE <condition>;
+SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME FROM <TIMESTAMP EXPRESSION 1> TO “<TIMESTAMP EXPRESSION 2>” WHERE <condition>;
 ```
 {: codeblock}
-
-If you want to see the row begin and row end values, you must specify the **_SYS_START** and **_SYS_END** columns.
 
 If you want to query historical data as far back as possible, you can use the **RETENTION_START_TIMESTAMP** keyword in your time travel queries. If you do this, you can avoid having to try to compute the right timestamp on your own. By extension, you reduce the risk of running into an error if the value turns out to be too old (older than the retention start timestamp).
 {: tip}
@@ -149,7 +139,7 @@ PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END
 ```
 {: codeblock}
 
-This query searches for all the changes that happened for **PRODUCTID 1004** during a specified period of time, not including the **TO** timestamp.
+In this example, the query searched for all the changes that happened for **PRODUCTID 1004** during a specified period of time, not including the **TO** timestamp.
 
 See also [the **FROM...TO** subclause](https://cloud.ibm.com/docs/netezza?topic=netezza-runningqueries_tt).
 
@@ -157,11 +147,9 @@ See also [the **FROM...TO** subclause](https://cloud.ibm.com/docs/netezza?topic=
 {: #betweenand_tt}
 
 ```sql
-SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME BETWEEN <RETENTION_START_TIMETAMP> AND <expr2>;
+SELECT *, _SYS_START, _SYS_END FROM <table_name> FOR SYSTEM_TIME BETWEEN <TIMESTAMP EXPRESSION 1> AND <TIMESTAMP EXPRESSION 2>;
 ```
 {: codeblock}
-
-If you want to see the row begin and row end values, you must specify the **_SYS_START** and **_SYS_END** columns.
 
 Example:
 
@@ -177,7 +165,7 @@ PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END
 ```
 {: codeblock}
 
-This query searches for all the changes that happened to the product table during a certain period of time, up to and including the **AND** timestamp.
+In this example, the query searched for all the changes that happened to the product table during a certain period of time, up to and including the **AND** timestamp.
 
 See also [the **BETWEEN...AND** subclause](https://cloud.ibm.com/docs/netezza?topic=netezza-runningqueries_tt).
 
@@ -206,12 +194,10 @@ COMMIT;
 ```
 {: codeblock}
 
-In this example, you suspect that changes were made to the **PRODUCT** table, and you want to revert them.
+In this example, you suspected that changes were made to the **PRODUCT** table, and you wanted to revert them.
 
 ## Restoring updated rows
 {: #restoringupdated_tt}
-
-A particular product’s price was incorrectly updated and needs to be restored. Example:
 
 ```sql
 UPDATE <table> SET <col> = <expression> [,<expression>...]
@@ -226,6 +212,8 @@ UPDATE PRODUCT SET PRICE=P.PRICE
   FROM (SELECT PRICE FROM PRODUCT WHERE PRODUCTID=’1002’ FOR SYSTEM_TIME BEFORE ‘2022-11-01 09:22:41’) AS P;
 ```
 {: codeblock}
+
+In this example, a product’s price was incorrectly updated and needed to be restored.
 
 See also the [**SELECT (to retrieve rows) command**](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2).
 
@@ -248,6 +236,6 @@ INSERT INTO PRODUCT
 ```
 {: codeblock}
 
-In this example, a product was incorrectly deleted and needs to be restored.
+In this example, a product was incorrectly deleted and needed to be restored.
 
 See also the [**INSERT** command](https://www.ibm.com/docs/en/netezza?topic=npsscr-insert-2).
