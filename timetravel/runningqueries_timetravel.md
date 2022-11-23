@@ -44,7 +44,7 @@ Each `TIMESTAMP EXPRESSION` must be one of the following:
 - A query parameter or host variable whose value is a timestamp.
 - A built-in function that returns or implicitly converts to a timestamp. For example, `CURRENT_DATE`, `CURRENT_TIMESTAMP` or (equivalently) `NOW()`, or `CURRENT_TIMESTAMP(subsecond-digits)` or (equivalently) `NOW(subsecond-digits)`.
 - An expression that evaluates to a single timestamp for all rows in the table. For example, `CURRENT_TIMESTAMP - INTERVAL ‘1 day’`. The expression cannot refer to table columns or to a non-deterministic function (for example, `RANDOM()`) or be a **sub-SELECT**.
-- The special identifier **RETENTION_START_TIMESTAMP**, on the particular case of **AS OF**, **BETWEEN**, and **FROM** (but not **BEFORE**, **AND**, or **TO**). This refers to the retention start timestamp. LINK For example, the oldest possible row insert timestamp or delete timestamp that is available for time travel queries.
+- The special identifier **RETENTION_START_TIMESTAMP**, in the particular cases of **AS OF**, **BETWEEN**, and **FROM** (but not **BEFORE**, **AND**, or **TO**). This refers to the retention start timestamp, which is the oldest possible row insert timestamp or delete timestamp that is available for time travel queries.
 
 ### AS OF
 {: #asof_tt}
@@ -53,7 +53,7 @@ You can use the **AS OF** subclause when you want to retrieve the state of your 
 
 |Syntax           | Description  |
 | -----------     | -----------  |
-| AS OF <expr1>  | Includes all the rows that were valid (see LINK) at the timestamp that expr1 evaluates to. Whose insert timestamp is less than or equal to expr1 and whose delete timestamp is NULL or is greater than expr1. If expr1 is less than the table’s retention start timestamp, an error is returned if expr1 is less than the table’s retention start timestamp.|
+| AS OF <TIMESTAMP EXPRESSION 1>  | Includes all the rows that were valid at the timestamp that TIMESTAMP EXPRESSION 1 evaluates to, whose insert timestamp is less than or equal to TIMESTAMP EXPRESSION 1, and whose delete timestamp is NULL or is greater than TIMESTAMP EXPRESSION 1. If TIMESTAMP EXPRESSION 1 is less than the table’s retention start timestamp, an error is returned if TIMESTAMP EXPRESSION 1 is less than the table’s retention start timestamp.|
 {: caption}
 
 ### BEFORE
@@ -63,7 +63,7 @@ You can use the **BEFORE** subclause when you want to to retrieve the state of y
 
 | Syntax      | Description |
 | ----------- | ----------- |
-| BEFORE <expr1> | Includes all the rows that were valid just before the timestamp that expr1 evaluates to. Whose insert timestamp is strictly less than expr1 and whose delete timestamp is NULL or is greater than expr1. If expr1 is less than or equal to the table’s retention start timestamp, sn error is returned. |
+| BEFORE <TIMESTAMP EXPRESSION 1> | Includes all the rows that were valid just before the timestamp that TIMESTAMP EXPRESSION 1 evaluates to. Whose insert timestamp is strictly less than TIMESTAMP EXPRESSION 1 and whose delete timestamp is NULL or is greater than TIMESTAMP EXPRESSION 1. If TIMESTAMP EXPRESSION 1 is less than or equal to the table’s retention start timestamp, an error is returned. |
 {: caption}
 
 ### FROM...TO and BETWEEN...AND
@@ -73,8 +73,8 @@ You can use the **FROM...TO** and **BETWEEN...AND** subclauses for data audit or
 
 | Syntax      | Description |
 | ----------- | ----------- |
-| FROM <expr1> TO <expr2> | Includes all the rows that were valid at any time from expr1 to expr2 (exclusive), whose insert timestamp is strictly less than expr2 and whose delete timestamp is NULL or is greater than expr1. If expr1 or expr2 is less than or equal to the table’s retention start timestamp, sn error is returned. If expr1 is greater than or equal to expr2, the query produces no rows.|
-| BETWEEN <expr1> AND <expr2> | Includes all the rows that were valid at any time between expr1 and expr2 (inclusive), whose insert timestamp is less than or equal to expr2 and whose delete timestamp is NULL or is greater than expr1. If expr1 or expr2 is less than the table’s retention start timestamp, an error is returned. If expr1 is greater than expr2, the query produces no rows.|
+| FROM <TIMESTAMP EXPRESSION 1> TO <TIMESTAMP EXPRESSION 2> | Includes all the rows that were valid at any time from TIMESTAMP EXPRESSION 1 to TIMESTAMP EXPRESSION 2 (exclusive), whose insert timestamp is strictly less than TIMESTAMP EXPRESSION 2 and whose delete timestamp is NULL or is greater than TIMESTAMP EXPRESSION 1. If TIMESTAMP EXPRESSION 1 or TIMESTAMP EXPRESSION 2 is less than or equal to the table’s retention start timestamp, an error is returned. If TIMESTAMP EXPRESSION 1 is greater than or equal to TIMESTAMP EXPRESSION 2, the query produces no rows.|
+| BETWEEN <TIMESTAMP EXPRESSION 1> AND <TIMESTAMP EXPRESSION 2> | Includes all the rows that were valid at any time between TIMESTAMP EXPRESSION 1 and TIMESTAMP EXPRESSION 2 (inclusive), whose insert timestamp is less than or equal to TIMESTAMP EXPRESSION 2 and whose delete timestamp is NULL or is greater than TIMESTAMP EXPRESSION 1. If TIMESTAMP EXPRESSION 1 or TIMESTAMP EXPRESSION 2 is less than the table’s retention start timestamp, an error is returned. If TIMESTAMP EXPRESSION 1 is greater than TIMESTAMP EXPRESSION 2, the query produces no rows.|
 {: caption}
 
 ## Timestamps in time travel queries
