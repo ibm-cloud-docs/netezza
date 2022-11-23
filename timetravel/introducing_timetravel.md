@@ -24,9 +24,9 @@ subcollection: netezza
 # Getting started with {{site.data.keyword.netezza_short}} time travel
 {: #introducing_tt}
 
-Time-related data is core to most application databases. With the {{site.data.keyword.netezza_short}} time travel feature, you can store, retrieve, and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data.
+Time-related data is core to most application databases. With the {{site.data.keyword.netezza_short}} time travel feature, you can retrieve, and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data.
 
-By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time. For example, data that was changed or deleted.
+By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time.
 
 [Create or alter objects](/docs/netezza?topic=netezza-enablingdisabling_tt) to start running time travel queries.
 
@@ -50,7 +50,7 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
 
     - Identify the number of cars that are rented out week over week.
     - Identify the purchaser that makes the most changes to the quantity after an order is entered.
-    - Identify the supplier that routinely offers a steeper discount than first indicated.
+    - Identify the suppliers that routinely offer a steeper discount than first indicated.
 
 - Rebuilding or reconstructing data
 
