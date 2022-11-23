@@ -29,14 +29,14 @@ subcollection: netezza
 
 A **SELECT** query with one or more temporal clauses is a time travel query. Time travel queries might appear as **sub-SELECTs** in the **INSERT**, **UPDATE**, **DELETE**, **MERGE**, or **CREATE TABLE AS SELECT (CTAS)** statements.
 
-Also, time travel queries might appear in a view definition (**CREATE VIEW** or **REPLACE VIEW**) or a stored procedure definition (**CREATE PROCEDURE** or **REPLACE PROCEDURE**). In either case, timestamp expressions in the syntax (for example, `CURRENT_TIMESTAMP - INTERVAL ‘1 day’`) are not evaluated at view or procedure definition time, but at the time a user or application queries the view or calls the procedure.
+Also, time travel queries might appear in a view definition (**CREATE VIEW**, with or without **OR REPLACE**) or a stored procedure definition (**CREATE PROCEDURE**, with or without **OR REPLACE**). In either case, timestamp expressions in the syntax (for example, `CURRENT_TIMESTAMP - INTERVAL ‘1 day’`) are not evaluated at view or procedure definition time, but at the time a user or application queries the view or calls the procedure.
 
 Any base table reference (the table name, with or without database and schema name, and with or without an alias) in a **SELECT** or **sub-SELECT** might have an optional temporal clause, which consists of the keywords **FOR SYSTEM_TIME** followed by one of the following values:
 
-- `AS OF { <TIMESTAMP EXPRESSION> | RETENTION_START_TIMESTAMP }`
+- `AS OF <TIMESTAMP EXPRESSION>`
 - `BEFORE <TIMESTAMP EXPRESSION>`
-- `BETWEEN { <TIMESTAMP EXPRESSION 1> | RETENTION_START_TIMESTAMP } AND <TIMESTAMP EXPRESSION 2>`
-- `FROM { <TIMESTAMP EXPRESSION 1> | RETENTION_START_TIMESTAMP } TO <TIMESTAMP EXPRESSION 2>`
+- `BETWEEN <TIMESTAMP EXPRESSION 1> AND <TIMESTAMP EXPRESSION 2>`
+- `FROM <TIMESTAMP EXPRESSION 1> TO <TIMESTAMP EXPRESSION 2>`
 
 Each `TIMESTAMP EXPRESSION` must be one of the following:
 
@@ -44,7 +44,7 @@ Each `TIMESTAMP EXPRESSION` must be one of the following:
 - A query parameter or host variable whose value is a timestamp.
 - A built-in function that returns or implicitly converts to a timestamp. For example, `CURRENT_DATE`, `CURRENT_TIMESTAMP` or (equivalently) `NOW()`, or `CURRENT_TIMESTAMP(subsecond-digits)` or (equivalently) `NOW(subsecond-digits)`.
 - An expression that evaluates to a single timestamp for all rows in the table. For example, `CURRENT_TIMESTAMP - INTERVAL ‘1 day’`. The expression cannot refer to table columns or to a non-deterministic function (for example, `RANDOM()`) or be a **sub-SELECT**.
-- The special identifier **RETENTION_START_TIMESTAMP**, on the particular cases of **AS OF**, **BETWEEN**, and **FROM** (but not **BEFORE**, **AND**, or **TO**). This refers to the retention start timestamp. LINK For example, the oldest possible row insert timestamp or delete timestamp that is available for time travel queries.
+- The special identifier **RETENTION_START_TIMESTAMP**, on the particular case of **AS OF**, **BETWEEN**, and **FROM** (but not **BEFORE**, **AND**, or **TO**). This refers to the retention start timestamp. LINK For example, the oldest possible row insert timestamp or delete timestamp that is available for time travel queries.
 
 ### AS OF
 {: #asof_tt}
