@@ -82,7 +82,7 @@ The **GROOM TABLE VERSIONS** command turns a versioned table into nonversioned. 
 
 To create a temporal table, set **DATA_VERSION_RETENTION_TIME** to a nonzero value.
 
-See [the CREATE TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2).
+For detailed syntax and privileges, see [the CREATE TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2).
 
 ```sql
 CREATE TABLE <tablename> ( <col>[, <col>… ] ) DATA_VERSION_RETENTION_TIME <number-of-days>;
@@ -105,7 +105,7 @@ When you delete a row from the table, the row receives a virtual delete timestam
 
 To create a temporal schema, set **DATA_VERSION_RETENTION_TIME** to a nonzero value.
 
-See [the CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2) command.
+For detailed syntax and privileges, see [the CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2) command.
 
 ```sql
 CREATE SCHEMA <schema_name> DATA_VERSION_RETENTION_TIME <number-of-days>;
@@ -124,7 +124,7 @@ CREATE SCHEMA SCHEMA1 DATA_VERSION_RETENTION_TIME 30;
 
 To create a temporal database, set **DATA_VERSION_RETENTION_TIME** to a nonzero value.
 
-See [the CREATE DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2).
+For detailed syntax and privileges, see [the CREATE DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2).
 
 ```sql
 CREATE DATABASE <db_name> DATA_VERSION_RETENTION_TIME <number-of-days>;
