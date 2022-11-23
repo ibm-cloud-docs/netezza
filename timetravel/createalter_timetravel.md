@@ -162,8 +162,6 @@ ALTER TABLE PRODUCT DATA_VERSION_RETENTION_TIME 0;
 
 When you set **DATA_VERSION_RETENTION_TIME** to 0, you cannot run time travel queries and you do not have access to historical rows for that table anymore. You can reclaim some or all of the now inaccessible historical rows in the table with **GROOM TABLE**.
 
-If you convert the table to a temporal again, the table is not accessible to time travel queries anymore and you cannot run time travel queries.
-
 ### Altering nontemporal tables to temporal
 {: #convertingtemporal_tt}
 
@@ -183,7 +181,9 @@ ALTER TABLE PRODUCT DATA_VERSION_RETENTION_TIME 30;
 ```
 {: codeblock}
 
-If you first disabled your temporal table and then converted the same table to a temporal table, you do not have access to the historical rows for that table. Historical data is collected when rows are deleted or updated after the table is converted to temporal.
+
+
+If you first disabled your temporal table and then converted the same table to a temporal table, you do not have access to the prior historical rows for that table. Historical data is collected when rows are deleted or updated after the table is converted to temporal.
 {: important}
 
 As with the **CREATE TABLE** command, a row that is inserted into the table receives a virtual insert timestamp that is equal to the commit time of the inserting transaction. A row that is deleted from the table receives a virtual delete timestamp that is equal to the commit time of the deleting (or truncating) transaction. The table’s retention lower bound and retention start time are equal to or just before the commit time of this **ALTER TABLE** transaction.
