@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Getting started with {site.data.keyword.netezza_short}} time travel
+# Getting started with {{site.data.keyword.netezza_short}} time travel
 {: #introducing_tt}
 
 Time-related data is core to most application databases. With the {{site.data.keyword.netezza_short}} time travel feature, you can store, retrieve, and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data.

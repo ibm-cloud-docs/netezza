@@ -28,7 +28,7 @@ subcollection: netezza
 ## Overview
 {: #introtott}
 
-To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, database, or schema (time travel objects) by setting [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) (retention time interval) to a nonzero value. You can select between 1 day and up to of 99 days.
+To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, database, or schema (time travel objects) by setting **DATA_VERSION_RETENTION_TIME** (retention time interval) to a nonzero value. You can select between 1 day and up to of 99 days.
 
 To set **DATA_VERSION_RETENTION_TIME**, you can run the **CREATE** or **ALTER** command for these object types.
 
@@ -56,7 +56,7 @@ The following types of tables cannot be temporal tables:
 Also, consider the following points:
 
 - Changes to retention time intervals for tables, schemas, and databases are not replicated.
-- Retention time intervals of tables, schemas, and databases are automatically backed up by the `nzbackup` command and restored by the `nzrestore` command. The insert and delete timestamps of table rows are not. Restored rows get fresh insert timestamps in the target database or system, and rows that were deleted by incremental restore get fresh delete timestamps in the target database or system".
+- Retention time intervals of tables, schemas, and databases are automatically backed up by the `nzbackup` command and restored by the `nzrestore` command. The insert and delete timestamps of table rows are not. Restored rows get fresh insert timestamps in the target database or system, and rows that were deleted by incremental restore get fresh delete timestamps in the target database or system.
 
 This limitations affect the following commands:
 
@@ -66,7 +66,7 @@ This limitations affect the following commands:
 
 - **ALTER TABLE DATA_VERSION_RETENTION_TIME**
 
-    If the table is a temporary, row-secure, versioned, or an external table and DATA_VERSION_RETENTION_TIME is specified with a nonzero value, the command fails.
+    If the table is a temporary, row-secure, versioned, or an external table and **DATA_VERSION_RETENTION_TIME** is specified with a nonzero value, the command fails.
 
 - **ALTER TABLE ADD COLUMN**, **ALTER TABLE DROP COLUMN**
 
