@@ -44,7 +44,7 @@ Each `TIMESTAMP EXPRESSION` must be one of the following:
 - A query parameter or host variable whose value is a timestamp.
 - A built-in function that returns or implicitly converts to a timestamp. For example, `CURRENT_DATE`, `CURRENT_TIMESTAMP` or (equivalently) `NOW()`, or `CURRENT_TIMESTAMP(subsecond-digits)` or (equivalently) `NOW(subsecond-digits)`.
 - An expression that evaluates to a single timestamp for all rows in the table. For example, `CURRENT_TIMESTAMP - INTERVAL ‘1 day’`. The expression cannot refer to table columns or to a non-deterministic function (for example, `RANDOM()`) or be a **sub-SELECT**.
-- The special identifier **RETENTION_START_TIMESTAMP**, in the particular cases of **AS OF**, **BETWEEN**, and **FROM** (but not **BEFORE**, **AND**, or **TO**). This refers to the retention start timestamp, which is the oldest possible row insert timestamp or delete timestamp that is available for time travel queries.
+- The special identifier **RETENTION_START_TIMESTAMP**, in the particular cases of **AS OF**, **BETWEEN**, and **FROM** (but not **BEFORE**, **AND**, or **TO**). This refers to the retention start timestamp, which is the oldest possible row insert timestamp or delete timestamp that is available for time travel queries. For more information about retention start timestamps, insert timestamps, and delete timestamps, see [Timestamps in time travel queries](/docs/netezza?topic=netezza-runningqueries_tt#concepts_tt).
 
 ### AS OF
 {: #asof_tt}
@@ -53,7 +53,7 @@ You can use the **AS OF** subclause when you want to retrieve the state of your 
 
 |Syntax           | Description  |
 | -----------     | -----------  |
-| AS OF <TIMESTAMP EXPRESSION 1>  | Includes all the rows that were valid at the timestamp that TIMESTAMP EXPRESSION 1 evaluates to, whose insert timestamp is less than or equal to TIMESTAMP EXPRESSION 1, and whose delete timestamp is NULL or is greater than TIMESTAMP EXPRESSION 1. If TIMESTAMP EXPRESSION 1 is less than the table’s retention start timestamp, an error is returned if TIMESTAMP EXPRESSION 1 is less than the table’s retention start timestamp.|
+| AS OF <TIMESTAMP EXPRESSION 1>  | Includes all the rows that were valid at the timestamp that TIMESTAMP EXPRESSION 1 evaluates to, whose insert timestamp is less than or equal to TIMESTAMP EXPRESSION 1, and whose delete timestamp is NULL or is greater than TIMESTAMP EXPRESSION 1. If TIMESTAMP EXPRESSION 1 is less than the table’s retention start timestamp, an error is returned.|
 {: caption}
 
 ### BEFORE
