@@ -14,6 +14,17 @@
         "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-pauseresume"
       },
       {
+        "title": "Query data from data lakes",
+        "description": "Learn how to use external tables to access parquet files that are stored outside of your database in data lakes (on AWS S3), and analyze this data by using the robust and massively parallel Netezza Performance Server execution engine.",
+        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-overview_singularity"
+      },
+      {
+        "title": "Query historical data",
+        "description": "Learn how to retrieve and analyze historical data without having to develop additional application logic such as history tables. With Netezza Performance Server time travel, you can access data that was changed or deleted at past points in time or within a past period of time.",
+        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-introducing_tt"
+
+      },
+      {
         "title": "Web console documentation",
         "description": "Learn how to access and use the Netezza Performance Server web console.",
         "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-getstarted-console"
