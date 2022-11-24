@@ -27,17 +27,17 @@ subcollection: netezza
 The following table definition is used for the example queries.
 
 ```sql
-CREATE TABLE PRODUCT (PRODUCTID INTEGER, DESC VARCHAR (100), PRICE DECIMAL) DATA_VERSION_RETENTION_TIME 30
+CREATE TABLE PRODUCT (PRODUCTID INTEGER, DESC VARCHAR (100), PRICE DECIMAL) DATA_VERSION_RETENTION_TIME 30;
 ```
 {: codeblock}
 
-The following rows are inserted at different times. The commit times of the inserts (the insert timestamps or **_SYS_START** values) are indicated in comments.
+The following rows are inserted at different times. The commit times of the inserts (the insert timestamps or **_SYS_START** values) are indicated in SQL comments.
 
 ```sql
-INSERT INTO PRODUCT VALUES(1001, 'Jacket', 102.00); - 2020-10-23 16:00:00
-INSERT INTO PRODUCT VALUES(1002, 'Gloves', 20.50);  - 2020-10-23 16:05:00
-INSERT INTO PRODUCT VALUES(1003, 'Hat', 18.99);     - 2020-10-23 16:10:00
-INSERT INTO PRODUCT VALUES(1004, 'Shoes', 125.25);  - 2020-10-23 16:15:00
+INSERT INTO PRODUCT VALUES(1001, 'Jacket', 102.00); -- 2020-10-23 16:00:00
+INSERT INTO PRODUCT VALUES(1002, 'Gloves', 20.50);  -- 2020-10-23 16:05:00
+INSERT INTO PRODUCT VALUES(1003, 'Hat', 18.99);     -- 2020-10-23 16:10:00
+INSERT INTO PRODUCT VALUES(1004, 'Shoes', 125.25);  -- 2020-10-23 16:15:00
 ```
 {: codeblock}
 
@@ -56,6 +56,7 @@ Example:
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME AS OF NOW();
 PRODUCTID | DESCRIPTION | PRICE   |     _SYS_START      | _SYS_END  
+----------+-------------+---------+---------------------+-----------
       1001 | Jacket      | 102.00 | 2020-10-23 16:00:00 |
       1002 | Gloves      |  20.50 | 2020-10-23 16:05:00 |
       1003 | Hat         |  18.99 | 2020-10-23 16:10:00 |
@@ -76,7 +77,8 @@ Example:
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME AS OF '2020-10-23 16:30:00';
-PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END       
+PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END
+-----------+-------------+--------+---------------------+---------------------      
       1001 | Jacket      | 102.00 | 2020-10-23 16:00:00 |
       1002 | Gloves      |  20.50 | 2020-10-23 16:05:00 |
       1003 | Hat         |  18.99 | 2020-10-23 16:10:00 |
@@ -101,7 +103,8 @@ Example:
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME BEFORE '2020-10-23 17:00:00';
-PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END       
+PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END   
+-----------+-------------+--------+---------------------+---------------------    
       1001 | Jacket      | 102.00 | 2020-10-23 16:00:00 |
       1002 | Gloves      |  20.50 | 2020-10-23 16:05:00 |
       1003 | Hat         |  18.99 | 2020-10-23 16:10:00 |
@@ -132,7 +135,8 @@ Example:
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME FROM RETENTION_START_TIMESTAMP TO '2020-10-23 17:10:00' WHERE PRODUCTID = 1004;
-PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END       
+PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END      
+-----------+-------------+--------+---------------------+---------------------
       1004 | Shoes       | 125.25 | 2020-10-23 16:15:00 | 2020-10-23 17:00:00
       1004 | Shoes       | 100.00 | 2020-10-23 17:00:00 |
 (2 rows)
@@ -155,7 +159,8 @@ Example:
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME BETWEEN '2020-10-23 16:00:00' AND '2020-10-23 17:10:00';
-PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END       
+PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END    
+-----------+-------------+--------+---------------------+---------------------   
       1001 | Jacket      | 102.00 | 2020-10-23 16:00:00 |
       1002 | Gloves      |  20.50 | 2020-10-23 16:05:00 |
       1003 | Hat         |  18.99 | 2020-10-23 16:10:00 |
@@ -175,8 +180,8 @@ See also [the **BETWEEN...AND** subclause](https://cloud.ibm.com/docs/netezza?to
 ```sql
 BEGIN;
 RENAME TABLE <table_name> TO <new_table_name>;
-CREATE TABLE <TABLE NAME> AS
-  SELECT * FROM <new_table_name> FOR SYSTEM_TIME AS OF <RETENTION_START_TIMESTAMP>;
+CREATE TABLE <table_ name> AS
+  SELECT * FROM <new_table_name> FOR SYSTEM_TIME <temporal_clause>;
 DROP TABLE <new_table_name>; -- or, keep it for diagnostics
 COMMIT;
 ```
@@ -186,22 +191,22 @@ Example:
 
 ```sql
 BEGIN;
-RENAME TABLE PRODUCT TO PRODUCT_BAK;
+RENAME TABLE PRODUCT TO PRODUCT_BACK;
 CREATE TABLE PRODUCT AS
-  SELECT * FROM FLIGHT_BAK FOR SYSTEM_TIME AS OF '2022-11-01 11:30:00';
-DROP TABLE FLIGHT_BAK; -- or, keep it for diagnostics
+  SELECT * FROM FLIGHT_BACK FOR SYSTEM_TIME AS OF '2022-11-01 11:30:00';
+DROP TABLE FLIGHT_BACK; -- or, keep it for diagnostics
 COMMIT;
 ```
 {: codeblock}
 
-In this example, you suspected that changes were made to the **PRODUCT** table, and you wanted to revert them.
+In this example, you suspected that incorrect bulk changes were made to the **PRODUCT** table, and you wanted to revert them.
 
 ## Restoring updated rows
 {: #restoringupdated_tt}
 
 ```sql
-UPDATE <table> SET <col> = <expression> [,<expression>...]
-  FROM (<fromlist> WHERE <condition> FOR SYSTEM_TIME BEFORE <RETENTION_START_TIMESTAMP>) AS P;
+UPDATE <table> SET <col> = <expression> [, <col> = <expression>...]
+  FROM (SELECT <col> [, <col> ...] FROM <fromlist> WHERE <condition> FOR SYSTEM_TIME <temporal_clause>) AS <alias>;
 ```
 {: codeblock}
 
@@ -223,7 +228,7 @@ See also the [**SELECT (to retrieve rows) command**](https://www.ibm.com/docs/en
 ```sql
 INSERT INTO <table>
   SELECT * FROM <table>
-  WHERE <confition> FOR SYSTEM_TIME BEFORE <RETENTION_START_TIMESTAMP>’;
+  WHERE <condition> FOR SYSTEM_TIME <temporal_clause>;
 ```
 {: codeblock}
 
