@@ -31,10 +31,10 @@ By default, account users don't have access to create, update, search, or view c
 {: #creating-support-case}
 {: ui}
 
-Complete the following steps to create a support case: 
+Complete the following steps to create a support case:
 
 1. In the web console, go to **Support > Contact support section**.
-1. Click **Create a case**. 
+1. Click **Create a case**.
 1. Select **All products**.
 1. Select **Netezza Performance Server**.
 1. Click **Next**.
@@ -44,25 +44,25 @@ Complete the following steps to create a support case:
    {: important}
 
    You can also:
-   
+
    - Attach files and resources to provide more details about the issue you are experiencing.
    - If you want a specific user that is associated with your account to be updated about the case, add the user by using **Contact watchlist**. For more information about assigning users access to your account, see [Adding users to your case management access group](/docs/get-support?topic=get-support-access#add-user-access-group).
-   - Select **Email me updates about this case** to receive support case notifications. 
-   
+   - Select **Email me updates about this case** to receive support case notifications.
+
 1. Click **Next**.
 1. Review your case summary and click **Submit case**.
 
-   After you receive an email verification for the case that you submitted, follow the instructions that are included in the email for further communication on the issue. 
+   After you receive an email verification for the case that you submitted, follow the instructions that are included in the email for further communication on the issue.
 
-   After your support case is created, you can follow its progress on the [Manage cases page](/unifiedsupport/cases). 
+   After your support case is created, you can follow its progress on the [Manage cases page](/unifiedsupport/cases).
    {: tip}
 
-## Supported file types for cases 
+## Supported file types for cases
 {: #supported-file-types}
 
-When you create a case, you can attach a file. The following file types are supported: 
+When you create a case, you can attach a file. The following file types are supported:
 
-```
+```sh
 7z, ace, ams, arm, asp, bash, history, bkp, big, bmp, bz2, ca, ca-bundle, ca-crt, cabundle, cap, cer, cert, cfg, cnf, crt, csr, csv, dat, dbs, debug, dib, dmesg, dmp, doc, docx, dotx, dump, email, eml, emz, env, eps, error, evt, evtx, fragment, gif, gz, gz_aa, gz_ab, gz_ac, har, hosts, htaccess, html, iaf, ics, id, img, info, jpb, jpe, jpeg, jpg, key, lic, log, logsm lon02, lst, lzh, mai, md5, mib, mjpg, msg, mso, odp, ods, odt, oft, openssh, out, ovf, ovpn, p7b, p7s, pages, pcap, pcf, pcx, pdb, pem, pfx, pic, pix, png, ppk, ppt, pptx, psd, psp, pspimage, pub_key, rar, raw, rdp, req, rpt, rtf, sjc03-raid-2, sjc03-raid-log-1, snag, sql, ssh, stats, sth, svg, sxc, tar, targz, tbz2, tcpdump, text, tgz, tgz-aa, tgz-ab, tgz-ac, tgz-ad, tgz-ae, tgz-af, tgz-ag, tgz-ah, tgz-ai, tgz-aj, tgz-ak, tgz-ak, tgz-al, tgz-al, tgz-am, tif, tiff, tip, trace, tsv, txt, ufo, vcf, vdx, vsdx, webarchive, wml, wps, wpz, wrf, wri, xcf, xlog, xlr, xls, xis, xism, xisx, xit, xml, xpm, xps, xslic, xz, yaml, zip, zipaa, zipx, zone
 ```
 {: screen}

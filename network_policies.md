@@ -68,9 +68,10 @@ With {{site.data.keyword.netezza_short}}, you can specify a range of IP addresse
 
 A CIDR notation is a compact representation of an IP address and its associated network mask.
 
-```
+```sh
 <ip_address>/<prefix_length>
 ```
+{: codeblock}
 
 For example, `76.168.0.0/24` represents IP addresses in the range of `76.168.0.0` and `76.168.0.62`
 
@@ -146,13 +147,14 @@ If you want to allow connections to the {{site.data.keyword.netezza_short}} data
 
 1. Create the policies in order from `Rule 1` to `Rule 5`.
 
-   ```
+   ```sh
    Rule 1: CIDR-1    (allow)
    Rule 2: CIDR-2    (allow)
    Rule 3: H1        (allow)
    Rule 4: H2        (allow)
    Rule 5: 0.0.0.0/0 (deny)
    ```
+   {: codeblock}
 
    These rules ensure that connections are matched against `Rule 1-4` to determine whether they can be allowed. If they are not allowed, `Rule 5` rejects them.
 
@@ -160,7 +162,7 @@ If you want to allow connections to the {{site.data.keyword.netezza_short}} data
 
 2. Add the public authoritative DNS server hostname or CIDR (DNS-1) to the allow rules for the DNS lookup to succeed.
 
-   ```
+   ```sh
    Rule 1: CIDR-1    (allow)
    Rule 2: CIDR-2    (allow)
    Rule 3: H1        (allow)
@@ -168,6 +170,7 @@ If you want to allow connections to the {{site.data.keyword.netezza_short}} data
    Rule 5: DNS-1     (allow)
    Rule 6: 0.0.0.0/0 (deny)
    ```
+   {: codeblock}
 
    The new rule is added as an **allow** rule (*Rule 5*).
 
@@ -187,16 +190,18 @@ If you want applications or users only from their on-premises network to connect
 
 1. Add CIDR-1 as an `allow` rule (Rule 1).
 
-   ```
+   ```sh
    Rule 1: CIDR-1    (allow)
    ```
+   {: codeblock}
 
 1. Add a **deny all** rule (*Rule 2*) to restrict connections that originate only from the on-premises network.
 
-   ```
+   ```sh
    Rule 1: CIDR-1    (allow)
    Rule 2: 0.0.0.0/0 (deny)
    ```
+   {: codeblock}
 
 1. Make connections from the database to the respective Cloud Object Store endpoints (such as AWS S3 and Azure Blob Storage).
 
@@ -214,7 +219,7 @@ If you have a bucket, for example, in the `us-east-1` region and want to use it 
 
    - Follow the instructions from [How can I find the IP address ranges used by Amazon S3?](https://aws.amazon.com/premiumsupport/knowledge-center/s3-find-ip-address-ranges/).
 
-     ```
+     ```sh
      curl https://ip-ranges.amazonaws.com/ip-ranges.json |\
          jq -r '.prefixes[] |
                 select(.region=="us-east-1") |
@@ -229,10 +234,11 @@ If you have a bucket, for example, in the `us-east-1` region and want to use it 
      44.192.134.240/28
      44.192.140.64/28
      ```
+     {: codeblock}
 
    - Add the CIDR ranges to the allow lists.
 
-     ```
+     ```sh
      Rule 1: CIDR-1             (allow)
      Rule 2: 18.34.0.0/19       (allow)
      Rule 3: 54.231.0.0/16      (allow)
@@ -243,6 +249,7 @@ If you have a bucket, for example, in the `us-east-1` region and want to use it 
      Rule 8: 44.192.140.64/28   (allow)
      Rule 2: 0.0.0.0/0          (deny)
      ```
+     {: codeblock}
 
     The AWS S3 endpoints do not have a single IP address that is associated with them. Adding the S3 endpoint hostname to the allow list can give inconsistent results.
     {: note}
@@ -268,7 +275,7 @@ If you have storage accounts, for example, in the `East US 2` region with Azure 
 
    - Follow the instructions from [AWS IP address ranges notifications](https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkservicetag?view=azps-7.5.0).
 
-     ```
+     ```she
      > $serviceTags = Get-AzNetworkServiceTag -Location eastus2
      > $serviceTags.Values | Where-Object { $_.Name -like "Storage*" -and $_.Properties.Region -eq "eastus2" }
 
@@ -284,10 +291,11 @@ If you have storage accounts, for example, in the `East US 2` region with Azure 
      Address Prefixes : 137.116.2.64/27
      Change Number    : 1
      ```
+     {: codeblock}
 
    - Add the CIDR ranges to your allow lists.
 
-     ```
+     ```sh
      Rule 1: CIDR-1             (allow)
      Rule 2: 13.68.120.64/28    (allow)
      Rule 3: 13.77.112.16/28    (allow)
@@ -296,7 +304,7 @@ If you have storage accounts, for example, in the `East US 2` region with Azure 
      Rule 6: 137.116.2.64/27    (allow)
      Rule 2: 0.0.0.0/0          (deny)
      ```
-
+     {: codeblock}
 
 1. If you want to use or connect from any other Azure service, add to the allow rule the CIDR range that is associated with those
 respective service endpoints.

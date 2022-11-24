@@ -41,10 +41,11 @@ As of July 28, 2022, you can access data from data lakes and move data between a
 
 Example:
 
-```
+```sql
 SYSTEM.ADMIN(ADMIN)=> create table t1 ( "datasource" int);
 CREATE TABLE
 ```
+{: codeblock}
 
 ## June 2022
 {: #june2022}

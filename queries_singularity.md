@@ -29,13 +29,14 @@ subcollection: netezza
 
 Select the subset of columns. In this example, the columns are 'squares' and 'num'.
 
-```
+```sql
 select squares, num from nyc_taxi;
 ```
+{: codeblock}
 
 Example:
 
-```
+```sql
 squares | num
 ---------+-----
        1 |   1
@@ -66,17 +67,19 @@ squares | num
      676 |  26
 (26 rows)
 ```
+{: codeblock}
 
 ## Using simple filters
 {: #filters_singularity}
 
-```
+```sql
 select $1 > $2, squares, 200::float from nyc_taxi;
 ```
+{: codeblock}
 
 Example:
 
-```
+```sql
 num | squares |     timestamps      | fibonacci | fibs_is_even | Uppercase | Lowercase
 -----+---------+---------------------+-----------+--------------+-----------+-----------
   15 |     225 | 2021-01-15 12:15:00 |       610 | t            | O         | o
@@ -93,17 +96,19 @@ num | squares |     timestamps      | fibonacci | fibs_is_even | Uppercase | Low
   26 |     676 | 2021-01-26 12:15:00 |    121393 | f            | Z         | z
 (12 rows)
 ```
+{: codeblock}
 
 ## Using filters and column selection
 {: #filterscolumns_singularity}
 
-```
+```sql
 select num, timestamps, fibs_is_even, $1 > $2, squares, 200::float from nyc_taxi;
 ```
+{: codeblock}
 
 Example:
 
-```
+```sql
 num |     timestamps      | fibs_is_even
 -----+---------------------+--------------
   15 | 2021-01-15 12:15:00 | t
@@ -120,17 +125,19 @@ num |     timestamps      | fibs_is_even
   26 | 2021-01-26 12:15:00 | f
 (12 rows)
 ```
+{: codeblock}
 
 ## Using filters, column selection, and options
 {: #filterscolumnsoptions_singularity}
 
-```
+```sql
 select appendtimezonecolumn=true, 3, num, timestamps, fibs_is_even, $1 > $2, squares, 200::float from nyc_taxi;
 ```
+{: codeblock}
 
 Example:
 
-```
+```sql
 num |     timestamps      | timestamps-timezone | fibs_is_even
 -----+---------------------+---------------------+--------------
   15 | 2021-01-15 12:15:00 | UTC                 | t
@@ -147,11 +154,12 @@ num |     timestamps      | timestamps-timezone | fibs_is_even
   26 | 2021-01-26 12:15:00 | UTC                 | f
 (12 rows)
 ```
+{: codeblock}
 
 ## Using complex filters
 {: #complexfilters_singularity}
 
-```
+```sql
 select ($1 > $2) && ($1 < $3), squares, 20::float, 200::float from nyc_taxi;
 ```
 
@@ -176,6 +184,7 @@ num | squares |     timestamps      | fibonacci | fibs_is_even | Uppercase | Low
   14 |     196 | 2021-01-14 12:15:00 |       377 | f            | N         | n
 (14 rows)
 ```
+{: codeblock}
 
 Even though the condition `squares > 20` was provided, rows with values `1`, `4`, `9`, and `16` were still returned. It is expected behaviour.
 {: note}
