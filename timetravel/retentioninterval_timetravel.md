@@ -51,7 +51,7 @@ To set **DATA_VERSION_RETENTION_TIME** for a specific object, you can run the **
 ## Viewing the retention time interval for the whole system
 {: #viewingsystemretention_tt}
 
-To view **DATA_VERSION_RETENTION_TIME** for the whole system, run the **SHOW SYSTEM DEFAULT** command.
+To view **DATA_VERSION_RETENTION_TIME** for the system, run the **SHOW SYSTEM DEFAULT** command.
 
 ```sql
 SHOW SYSTEM DEFAULT DATA_VERSION_RETENTION_TIME
@@ -62,14 +62,22 @@ If you did not set the retention time previously, the default is 0.
 ## Viewing the retention intervals for tables, schemas, and databases
 {: #viewingtsd_tt}
 
+To view **DATA_VERSION_RETENTION_TIME** for a specific objectm run one of these commands. The commands display **DATA_VERSION_RETENTION_TIME** only if it is a nonzero value.
+
 ```sql
-\d <TABLE NAME> (see also _v_table.dataverretntime)
+\d <table_name>
 ```
 
 ```sql
-SHOW SCHEMA (_v_schema.dataverretntime)
+SHOW SCHEMA (schema_name)
 ```
 
 ```sql
-\l+ (all databases, with detail - _v_database.dataverretntime)
+\l+ (all databases, with detail)
 ```
+
+Retention time interval and retention lower bound for an object are available in the `dataverretntime` and `dataverretnlowerbound` columns of the following system views:
+
+- `_v_table`
+- `_v_schema`
+- `_v_database`
