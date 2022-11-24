@@ -25,29 +25,32 @@ subcollection: netezza
 
 - Alter the external datasource to modify columns:
 
-```
+```sql
 ALTER EXTERNAL DATASOURCE NYCTAXIS3
 ON AWSS3
 USING (
    BUCKET 'myfancybucket'
 );
 ```
+{: codeblock}
 
 - Show the external data source column values:
 
-```
+```sql
 SHOW EXTERNAL DATASOURCE NYCTAXIS3;
 ```
+{: codeblock}
 
 - Show the external data source in a cloud connection string format:
 
-```
+```sql
 SHOW EXTERNAL DATASOURCE NYCTAXIS3 VERBOSE;
 ```
+{: codeblock}
 
 - Create an external `NYCTAXIS31` data source with the remote source `AZUREBLOB`:
 
-```
+```sql
 CREATE EXTERNAL DATASOURCE NYCTAXIS31B
 ON AZUREBLOB
 USING (
@@ -57,9 +60,11 @@ USING (
    BLOBTYPE 'CSSM_KEYBLOB_RAW'
 );
 ```
+{: codeblock}
 
 - Drops the external `NYCTAXIS3` data source:
 
-```
+```sql
 DROP EXTERNAL DATASOURCE NYCTAXIS3 ;
 ```
+{: codeblock}

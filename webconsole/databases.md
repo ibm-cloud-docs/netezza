@@ -91,13 +91,13 @@ When you create a table, you can specify constraints for a column, table, or bot
 
 For example, a table_constraint can be:
 
-```
+```sql
 { PRIMARY KEY ( column_name [, ... ] ) |  FOREIGN KEY ( column_name [,
 ... ] ) REFERENCES reftable (refcolumn ) [ MATCH matchtype ] [ ON
 DELETE action ] [ ON UPDATE action ] [ [ NOT ] DEFERRABLE ] [ INITIALLY
 checktime ] } [, ...]
 ```
-{: screen}
+{: codeblock}
 
 The system permits and maintains primary key, default, foreign key, unique, and references. Because Netezza Performance Server does not support constraint checking and referential integrity, you must ensure your own constraint checking and referential integrity.
 
@@ -251,7 +251,7 @@ You cannot create aggregates with the web console. Instead, you can use the dedi
 
    This is the source code for the body of the stored procedure. For example
 
-   ```
+   ```sql
    BEGIN RAISE NOTICE 'The customer name is David'; END;
    ```
    {: codeblock}

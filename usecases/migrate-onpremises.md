@@ -36,7 +36,7 @@ Follow these steps to  migrate a backup image take on {{site.data.keyword.netezz
 
 1. Synchronize the on-premises backup image to the cloud instance by using the `nz` tool with the `bnr` option.
 
-   ```
+   ```sh
    $./nz bnr ls scan-object-store -host <nps-hostname> -u <nps-admin-user> -pw <nps-admin-user-password> -unique-id <backupuniqueID>
    ```
    {: #codeblock}

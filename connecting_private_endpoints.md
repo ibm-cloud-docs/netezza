@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 
 # Connecting to {{site.data.keyword.netezza_short}} by using private endpoints.
-{:# connecting-private-endpoints}
+{: #connecting-private-endpoints}
 
 If you want to connect to {{site.data.keyword.netezza_short}} by using private endpoints, two [private link services](https://learn.microsoft.com/en-us/azure/private-link/private-link-service-overview) are available in the (IBM) Azure subscription. To connect to your instance by using these private link service, you must create two [private endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) in your Azure subscriptions.
 
@@ -44,7 +44,7 @@ There are two ways the subscription IDs can be provided:
 ![Connecting to {{site.data.keyword.netezza_short}}](connecting.png){: caption="Image 1. The diagram depicts the dependencies between the  {{site.data.keyword.netezza_short}} subscription, Azure Private Link, and customer account." caption-side="bottom"}
 
 ### Providing subscription IDs at deployment
-{:# subscription-ids-deployment}
+{: #subscription-ids-deployment}
 
 You can provide the subscription IDs as input during provisioning, in the **Configure advanced feature** section.
 
