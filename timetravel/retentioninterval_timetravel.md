@@ -29,7 +29,7 @@ subcollection: netezza
 
 To set the default **DATA_VERSION_RETENTION_TIME** to a specific value for the system, run the **SET SYSTEM DEFAULT** command.
 
-Before you set **DATA_VERSION_RETENTION_TIME** for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
+Before you set **DATA_VERSION_RETENTION_TIME** for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](docs/netezza?topic=netezza-managing_tt).
 {: important}
 
 ```sql
