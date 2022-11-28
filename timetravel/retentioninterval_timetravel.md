@@ -21,15 +21,15 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Setting retention time interval for the system and viewing retention time intervals
+# Setting the default retention time interval for the system and viewing retention time intervals
 {: #dataretentioninterval_tt}
 
 ## Setting the retention time interval for the system
 {: #settingretentioninterval_tt}
 
-To set **DATA_VERSION_RETENTION_TIME** to a specific value for the whole system, run the **SET SYSTEM DEFAULT** command.
+To set the default **DATA_VERSION_RETENTION_TIME** to a specific value for the system, run the **SET SYSTEM DEFAULT** command.
 
-Before you set **DATA_VERSION_RETENTION_TIME** for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
+Before you set **DATA_VERSION_RETENTION_TIME** for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
 {: important}
 
 ```sql
@@ -48,7 +48,7 @@ The value of the property at the system level determines the default value inher
 
 To set **DATA_VERSION_RETENTION_TIME** for a specific object, you can run the **ALTER** or **CREATE** command.
 
-## Viewing the retention time interval for the whole system
+## Viewing the default retention time interval for the system
 {: #viewingsystemretention_tt}
 
 To view **DATA_VERSION_RETENTION_TIME** for the system, run the **SHOW SYSTEM DEFAULT** command.

@@ -25,11 +25,11 @@ subcollection: netezza
 # Creating and altering objects for time travel
 {: #enablingdisabling_tt}
 
-To run time travel queries on {{site.data.keyword.netezza_short}}, create a temporal table, database, or schema (time travel objects) by setting [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) (retention time interval) to a nonzero value. You can select between 1 day and up to of 99 days.
+To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, database, or schema (time travel objects) by setting [**DATA_VERSION_RETENTION_TIME**](/docs/netezza?topic=netezza-dataretentioninterval_tt#dataretentionintervaldef_tt) (retention time interval) to a nonzero value. You can select between 1 day and up to 99 days.
 
-To set **DATA_VERSION_RETENTION_TIME**, you can run the **CREATE** or **ALTER** command for these object types.
+To set **DATA_VERSION_RETENTION_TIME**, you can select the **CREATE** or **ALTER** command for these object types.
 
-Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
+Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
 {: important}
 
 - [Creating temporal tables](/docs/netezza?topic=netezza-temporaltables_tt#creatingtemporal_tt)
@@ -39,9 +39,9 @@ Before you set the retention time intervals for all tables in a schema or databa
 - [Altering schemas](/docs/netezza?topic=netezza-alteringobjects_tt#alteringschemas_tt)
 - [Altering databases](/docs/netezza?topic=netezza-alteringobjects_tt#alterdb_tt)
 
-Also, you can [set **DATA_VERSION_RETENTION_TIME** for the system](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt).
+Also, you can [set a default **DATA_VERSION_RETENTION_TIME** for the system](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt).
 
-Temporal tables usually have current rows and historical rows. Current rows are not marked for deletion. Historical rows are marked for deletion (by the **DELETE**, **UDPATE** or **TRUNCATE** statements) and are visible to time travel queries up to the specified retention time interval past their delete timestamps.
+Temporal tables usually have current rows and historical rows. Current rows are not marked for deletion. Historical rows are marked for deletion (by the **DELETE**, **UPDATE**, **MERGE**, or **TRUNCATE** statements) and are visible to time travel queries up to the specified retention time interval past their delete timestamps.
 
 A table with a **DATA_VERSION_RETENTION_TIME** value of zero is nontemporal. Only its current (not deleted) rows are visible to queries. Some historical rows might be preserved for incremental backup purposes, but the rows are not accessible to time travel queries.
 
