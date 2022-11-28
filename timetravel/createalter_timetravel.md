@@ -32,7 +32,7 @@ To run time travel queries on {{site.data.keyword.netezza_short}}, create a time
 
 To set **DATA_VERSION_RETENTION_TIME**, you can select the **CREATE** or **ALTER** command for these object types.
 
-Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
+Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](docs/netezza?topic=netezza-managing_tt).
 {: important}
 
 Also, you can [set a default **DATA_VERSION_RETENTION_TIME** for the system](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt).
