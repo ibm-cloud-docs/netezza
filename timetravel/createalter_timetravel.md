@@ -28,16 +28,16 @@ subcollection: netezza
 ## Overview
 {: #introtott}
 
-To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, database, or schema (time travel objects) by setting **DATA_VERSION_RETENTION_TIME** (retention time interval) to a nonzero value. You can select between 1 day and up to of 99 days.
+To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, schema, or database (time travel objects) by setting **DATA_VERSION_RETENTION_TIME** (retention time interval) to a nonzero value. You can select between 1 day and up to 99 days.
 
-To set **DATA_VERSION_RETENTION_TIME**, you can run the **CREATE** or **ALTER** command for these object types.
+To set **DATA_VERSION_RETENTION_TIME**, you can select the **CREATE** or **ALTER** command for these object types.
 
-Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Showing space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
+Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](/docs/netezza?topic=netezza-showingspaceusage_tt).
 {: important}
 
-Also, you can [set **DATA_VERSION_RETENTION_TIME** for the system](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt).
+Also, you can [set a default **DATA_VERSION_RETENTION_TIME** for the system](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt).
 
-Temporal tables usually have current rows and historical rows. Current rows are not marked for deletion. Historical rows are marked for deletion (by the **DELETE**, **UDPATE** or **TRUNCATE** statements) and are visible to time travel queries up to the specified retention time interval past their delete timestamps.
+Temporal tables usually have current rows and historical rows. Current rows are not marked for deletion. Historical rows are marked for deletion (by the **DELETE**, **UPDATE**, **MERGE**, or **TRUNCATE** statements) and are visible to time travel queries up to the specified retention time interval past their delete timestamps.
 
 A table with a **DATA_VERSION_RETENTION_TIME** value of zero is nontemporal. Only its current (not deleted) rows are visible to queries. Some historical rows might be preserved for incremental backup purposes, but the rows are not accessible to time travel queries.
 
@@ -46,6 +46,10 @@ If you alter **DATA_VERSION_RETENTION_TIME** of an existing temporal table to ze
 ## Limitations
 {: #limitations_tt}
 
+Changes to retention time intervals for tables, schemas, and databases are not replicated from primary to replica nodes. They are not historical (deleted) table rows either.  
+
+Retention time intervals of tables, schemas, and databases are automatically backed up by the `nzbackup` command and restored by the `nzrestore` command. The insert and delete timestamps of table rows are not. Restored rows get fresh insert timestamps in the target database or system, and rows that were deleted by incremental restore get fresh delete timestamps in the target database or system. There is no expectation or guarantee that the number of historical versions of a row on the target will match that on the source database. For example, a specific row might get updated multiple times, or get updated and then deleted, between backup increments on the source. This actions result in a single delete of that row on the target.
+
 The following types of tables cannot be temporal tables:
 
 - Temporary tables.
@@ -53,12 +57,8 @@ The following types of tables cannot be temporal tables:
 - Versioned tables that were altered by adding and/or dropping columns.
 - Row-secure tables.
 
-Also, consider the following points:
 
-- Changes to retention time intervals for tables, schemas, and databases are not replicated.
-- Retention time intervals of tables, schemas, and databases are automatically backed up by the `nzbackup` command and restored by the `nzrestore` command. The insert and delete timestamps of table rows are not. Restored rows get fresh insert timestamps in the target database or system, and rows that were deleted by incremental restore get fresh delete timestamps in the target database or system.
-
-This limitations affect the following commands:
+This limitation affects the following commands:
 
 - **CREATE TABLE ROW SECURITY**, **CREATE EXTERNAL TABLE**, **CREATE TEMPORARY TABLE**
 
@@ -144,7 +144,7 @@ CREATE DATABASE DB1 DATA_VERSION_RETENTION_TIME 30;
 ### Altering temporal tables to nontemporal
 {: #droppingtemporal_tt}
 
-To alter a temporal table to a nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
+To alter a temporal table to nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
 
 For detailed syntax and the necessary privileges, see [the ALTER TABLE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
 
@@ -193,7 +193,7 @@ Unlike the **CREATE TABLE** command, which does not have any existing rows, exis
 ### Altering temporal schemas to nontemporal
 {: #alterschematemporal_tt}
 
-To alter a temporal schema to a nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
+To alter a temporal schema to nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
 
 For detailed syntax, the necessary privileges, and the **CASCADE** option, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
 
@@ -231,7 +231,7 @@ ALTER SCHEMA DB1 DATA_VERSION_RETENTION_TIME 30;
 ### Altering temporal databases to nontemporal
 {: #alterdbtemporal_tt}
 
-To alter a temporal database to a nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
+To alter a temporal database to nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
 
 For detailed syntax and the necessary privileges, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
 
