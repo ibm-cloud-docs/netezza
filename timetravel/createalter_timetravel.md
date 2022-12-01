@@ -28,9 +28,7 @@ subcollection: netezza
 ## Overview
 {: #introtott}
 
-To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, schema, or database (time travel objects) by setting **DATA_VERSION_RETENTION_TIME** (retention time interval) to a nonzero value. You can select between 1 day and up to 99 days.
-
-To set **DATA_VERSION_RETENTION_TIME**, you can select the **CREATE** or **ALTER** command for these object types.
+To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, schema, or database (time travel objects) by setting **DATA_VERSION_RETENTION_TIME** (retention time interval) to a nonzero value. To set **DATA_VERSION_RETENTION_TIME**, use the **CREATE** or **ALTER** command for these object types. You can select between 1 day and up to 99 days, or zero to alter a temporal object to nontemporal.
 
 Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](docs/netezza?topic=netezza-managing_tt).
 {: important}
@@ -48,7 +46,9 @@ If you alter **DATA_VERSION_RETENTION_TIME** of an existing temporal table to ze
 
 Changes to retention time intervals for tables, schemas, and databases are not replicated from primary to replica nodes. They are not historical (deleted) table rows either.  
 
-Retention time intervals of tables, schemas, and databases are automatically backed up by the `nzbackup` command and restored by the `nzrestore` command. The insert and delete timestamps of table rows are not. Restored rows get fresh insert timestamps in the target database or system, and rows that were deleted by incremental restore get fresh delete timestamps in the target database or system. There is no expectation or guarantee that the number of historical versions of a row on the target will match that on the source database. For example, a specific row might get updated multiple times, or get updated and then deleted, between backup increments on the source. This actions result in a single delete of that row on the target.
+Retention time intervals of tables, schemas, and databases are automatically backed up by the `nzbackup` command and restored by the `nzrestore` command. The insert and delete timestamps of table rows are not backed up and restored. Restored rows get fresh insert timestamps in the target database or system, and rows that were deleted by incremental restore get fresh delete timestamps in the target database or system. There is no expectation or guarantee that the number of historical versions of a row on the target will match that on the source database. For example, a specific row might get updated multiple times, or get updated and then deleted, between backup increments on the source. This actions result in a single delete of that row on the target.
+
+If you try to expand your {{site.data.keyword.netezza_short}} system with additional SPU enclosures, the procedure results in the loss of historical (deleted) rows. All current rows are redistributed with fresh insert timestamps.
 
 The following types of tables cannot be temporal tables:
 
@@ -181,8 +181,6 @@ ALTER TABLE PRODUCT DATA_VERSION_RETENTION_TIME 30;
 ```
 {: codeblock}
 
-
-
 If you first disabled your temporal table and then converted the same table to a temporal table, you do not have access to the prior historical rows for that table. Historical data is collected when rows are deleted or updated after the table is converted to temporal.
 {: important}
 
@@ -195,17 +193,17 @@ Unlike the **CREATE TABLE** command, which does not have any existing rows, exis
 
 To alter a temporal schema to nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
 
-For detailed syntax, the necessary privileges, and the **CASCADE** option, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
+For detailed syntax, the necessary privileges, and the **CASCADE** option, see [the ALTER SCHEMA command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2).
 
 ```sql
-ALTER SCHEMA <schema_name> DATA_VERSION_RETENTION_TIME 0;
+ALTER SCHEMA <schema_name> DATA_VERSION_RETENTION_TIME 0 NOCASCADE;
 ```
 {: codeblock}
 
 Example:
 
 ```sql
-ALTER SCHEMA SCHEMA DATA_VERSION_RETENTION_TIME 0;
+ALTER SCHEMA SCHEMA DATA_VERSION_RETENTION_TIME 0 NOCASCADE;
 ```
 {: codeblock}
 
@@ -214,17 +212,17 @@ ALTER SCHEMA SCHEMA DATA_VERSION_RETENTION_TIME 0;
 
 To alter a nontemporal schema to temporal, set **DATA_VERSION_RETENTION_TIME** to a nonzero value.
 
-For detailed syntax, the necessary privileges, and the **CASCADE** option, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
+For detailed syntax, the necessary privileges, and the **CASCADE** option, see [the ALTER SCHEMA command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2).
 
 ```sql
-ALTER SCHEMA <schema_name> DATA_VERSION_RETENTION_TIME <number-of-days>;
+ALTER SCHEMA <schema_name> DATA_VERSION_RETENTION_TIME <number-of-days> NOCASCADE;
 ```
 {: codeblock}
 
 Example:
 
 ```sql
-ALTER SCHEMA DB1 DATA_VERSION_RETENTION_TIME 30;
+ALTER SCHEMA DB1 DATA_VERSION_RETENTION_TIME 30 NOCASCADE;
 ```
 {: codeblock}
 
@@ -236,14 +234,14 @@ To alter a temporal database to nontemporal, set **DATA_VERSION_RETENTION_TIME**
 For detailed syntax and the necessary privileges, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
 
 ```sql
-ALTER DATABASE <db_name> DATA_VERSION_RETENTION_TIME 0;
+ALTER DATABASE <db_name> DATA_VERSION_RETENTION_TIME 0 NOCASCADE;
 ```
 {: codeblock}
 
 Example:
 
 ```sql
-ALTER DATABASE DB1 DATA_VERSION_RETENTION_TIME 0;
+ALTER DATABASE DB1 DATA_VERSION_RETENTION_TIME 0 NOCASCADE;
 ```
 {: codeblock}
 
@@ -255,14 +253,14 @@ To alter a nontemporal database to temporal, set **DATA_VERSION_RETENTION_TIME**
 For detailed syntax and the necessary privileges, see [the ALTER DATABASE command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-database-2).
 
 ```sql
-ALTER DATABASE <db_name> DATA_VERSION_RETENTION_TIME <number-of-days>;
+ALTER DATABASE <db_name> DATA_VERSION_RETENTION_TIME <number-of-days> NOCASCADE;
 ```
 {: codeblock}
 
 Example:
 
 ```sql
-ALTER DATABASE DB1 DATA_VERSION_RETENTION_TIME 30;
+ALTER DATABASE DB1 DATA_VERSION_RETENTION_TIME 30 NOCASCADE;
 ```
 {: codeblock}
 
