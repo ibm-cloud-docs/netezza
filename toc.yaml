@@ -90,7 +90,7 @@ toc:
               label: External tables
               href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - topicgroup:
-          label: Querying historical data (time travel)
+          label: Time travel and historical data 
           topics:
           - timetravel/introducing_timetravel.md
           - timetravel/createalter_timetravel.md
