@@ -63,7 +63,7 @@ show temporal histogram flight;
 ```
 {: codeblock}
 
-The virtual **_SYS_START** and **_SYS_END** columns do not take up additional space in the (current or historical) rows of table. They are derived from other hidden fields that are already present in the on-disk rows.
+The virtual [_SYS_START and _SYS_END columns](/docs/netezza?topic=netezza-runningqueries_tt#rowvalidity_tt) do not take up additional space in the (current or historical) rows of table. They are derived from other hidden fields that are already present in the on-disk rows.
 {: note}
 
 See also [the SHOW TEMPORAL HISTOGRAM command](https://www.ibm.com/docs/en/netezza?topic=reference-show-temporal-histogram).
