@@ -35,8 +35,8 @@ The following rows are inserted at different times. The commit times of the inse
 
 ```sql
 INSERT INTO PRODUCT VALUES(1001, 'Jacket', 102.00); -- 2020-10-23 16:00:00
-INSERT INTO PRODUCT VALUES(1002, 'Gloves', 20.50);  -- 2020-10-23 16:05:00
-INSERT INTO PRODUCT VALUES(1003, 'Hat', 18.99);     -- 2020-10-23 16:10:00
+INSERT INTO PRODUCT VALUES(1002, 'Gloves',  20.50); -- 2020-10-23 16:05:00
+INSERT INTO PRODUCT VALUES(1003, 'Hat',     18.99); -- 2020-10-23 16:10:00
 INSERT INTO PRODUCT VALUES(1004, 'Shoes', 125.25);  -- 2020-10-23 16:15:00
 ```
 {: codeblock}
@@ -57,10 +57,10 @@ Example:
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME AS OF NOW();
 PRODUCTID | DESCRIPTION | PRICE   |     _SYS_START      | _SYS_END  
 ----------+-------------+---------+---------------------+-----------
-      1001 | Jacket      | 102.00 | 2020-10-23 16:00:00 |
-      1002 | Gloves      |  20.50 | 2020-10-23 16:05:00 |
-      1003 | Hat         |  18.99 | 2020-10-23 16:10:00 |
-      1004 | Shoes       | 125.25 | 2020-10-23 16:15:00 |
+     1001 | Jacket      | 102.00  | 2020-10-23 16:00:00 |
+     1002 | Gloves      |  20.50  | 2020-10-23 16:05:00 |
+     1003 | Hat         |  18.99  | 2020-10-23 16:10:00 |
+     1004 | Shoes       | 125.25  | 2020-10-23 16:15:00 |
 (4 rows)
 ```
 {: codeblock}
@@ -191,10 +191,10 @@ Example:
 
 ```sql
 BEGIN;
-RENAME TABLE PRODUCT TO PRODUCT_BACK;
+RENAME TABLE PRODUCT TO PRODUCT_BAK;
 CREATE TABLE PRODUCT AS
-  SELECT * FROM FLIGHT_BACK FOR SYSTEM_TIME AS OF '2022-11-01 11:30:00';
-DROP TABLE FLIGHT_BACK; -- or, keep it for diagnostics
+  SELECT * FROM FLIGHT_BAK FOR SYSTEM_TIME AS OF '2022-11-01 11:30:00';
+DROP TABLE FLIGHT_BAK; -- or, keep it for diagnostics
 COMMIT;
 ```
 {: codeblock}
@@ -220,7 +220,7 @@ UPDATE PRODUCT SET PRICE=P.PRICE
 
 In this example, a product’s price was incorrectly updated and needed to be restored.
 
-See also the [**SELECT (to retrieve rows) command**](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2).
+See also [Time travel query syntax and timestamps](/docs/netezza?topic=netezza-runningqueries_tt).
 
 ## Restoring deleted rows
 {: #restoredeleted_tt}
@@ -243,4 +243,4 @@ INSERT INTO PRODUCT
 
 In this example, a product was incorrectly deleted and needed to be restored.
 
-See also the [**INSERT** command](https://www.ibm.com/docs/en/netezza?topic=npsscr-insert-2).
+[Time travel query syntax and timestamps](/docs/netezza?topic=netezza-runningqueries_tt).
