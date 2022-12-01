@@ -102,7 +102,7 @@ A table’s retention start timestamp comes into play in the following operation
 
 - Time travel queries (**SELECT** and **sub-SELECT**)
 
-    If you attempt to run queries for historical rows that are older than the retention start timestamp, an error is returned.
+    If you attempt to run queries for historical rows that were deleted before the retention start timestamp, an error is returned.
 
     If you want to query historical data as far back as possible, you can use the **RETENTION_START_TIMESTAMP** keyword in time travel queries. If you do this, you can avoid having to try to compute the right timestamp on your own. By extension, you eliminate the risk of running into an error if the value turns out to be too old (older than the retention start timestamp).
 
@@ -133,3 +133,6 @@ The delete timestamp of a current row (not deleted, or marked for deletion but n
 In a time travel query, you can select the delete timestamp by using the **_SYS_END** virtual column of a temporal table.
 
 A historical row is considered valid from its insert timestamp up to just before the delete timestamp. A current row is considered valid from its insert timestamp forward. Time travel queries use timestamps or timestamp expressions to only return rows (current or historical) that are valid at a point in time or at any point within a time period.
+
+The insert and delete timestamps for recently inserted and deleted rows might not be available for time travel queries until a short time (generally under 3 minutes) after the inserting and deleting transactions commit.
+{: note}
