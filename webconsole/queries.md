@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-02-23"
+lastupdated: "2022-12-08"
 
 keywords: web console, queries
 
@@ -34,40 +34,27 @@ You do not need to be the administrator to view recent queries. You must have th
 ### Creating stored queries
 {: #create-stored-queries}
 
-1. Go to **Queries > Stored queries**.
-1. Type a name for your query.
-1. Select the database in which you want to run the query.
-1. Select the schema where you want to run the query.
-
+1. Go to **Query editor**.
+1. From **Data objects**, select the database and schema in which you want to create the query.  
    If you do not pick a schema, the default database schema is selected.
 
-1. Type the SQL query that you want to run.
+1. Type the SQL query that you want to create.  
+   If your query is a select statement, a `Set Limit` option shows up to allow you to specify how many rows of data you would like to retrieve. The default is `No limit`.
 
-   If your query is a select statement, a *Set Limit* option appears to allow you to specify how many rows of data you want to retrieve. The default is `No limit`.
-
-1. When you add the necessary information, you can do one of the following:
-
-   - Click **Run** to run the query.
-
-     The results of the query are displayed in the panel.
-
-   - Click the floppy disk icon that is next to the `Query field` name to save the query as a template.
-
-     The saved query is added to **Queries > Recent Queries**.
-
-   - Click **Clear** to clear the query.
+1. Click the floppy disk icon to save the query.  
+   The saved query is added to **Queries > Recent Queries**.
 
 ### Finding stored queries
 {: #find-stored-queries}
 
-1. Go to **Queries > Recent queries**.
+1. Go to **Queries > Recent queries** or **Queries > Saved queries**.
 1. Type the name of the query you are looking for in the search bar.
 
 ### Deleting stored queries
 {: #delete-stores-queries}
 
 1. Go to **Queries > Stored queries**.
-1. Select a query.
+1. Select the query that you want to delete.
 1. From the overflow menu, click **Remove**.
 1. Confirm your choice by clicking **Remove** again.
 
@@ -77,19 +64,18 @@ You do not need to be the administrator to view recent queries. You must have th
 To access the page, go to **Queries > Query history** or select **Query history** from the home page.
 
 When you are on the **Query history** page, you can do the following:
+
 - View your data in a table or card view.
 - Export data to export your query history to a data file.
 - Sort any column by placing the cursor on the column header.
-- Find specific queries by using various filtering criteria.
+- Find specific queries by using various filtering criteria.  
+   For example, you can use it to find queries that are submitted by a particular user or group, or queries that run on a particular database.
 
-  For example, you can use it to find queries that are submitted by a particular user or group, or queries that run on a particular database.
+- Search the query history but clicking **Search**.  
+   You can use a predefined search criteria, or create a new search option.
 
-- Search the query history but clicking **Search**.
-  You can use a predefined search criteria, or create a new search option.
-
-- Select the columns to display in the table.
-
-  Click the settings icon next to the **Find query history** field to edit columns.
+- Select the columns to display in the table.  
+   Click the settings icon next to the **Find query history** field to edit columns.
 
 - View metrics, access the explain graph, explain summary, explain verbose, explain distribution pages, and view the plan file and statistics status.
 
