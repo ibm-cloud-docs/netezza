@@ -69,8 +69,7 @@ You can access database information by using the web console.
 1. Add columns to the table:
 
    1. In the **Columns** section, type a name for the column.
-   1. Select the column type.
-
+   1. Select the column type.  
       The data type restricts the type of data that can be stored in a column. For example, preventing entry of alphanumeric characters into a numeric field. Data types also help sort data correctly and play a role in optimizing storage. For all these reasons, it is important to pick the appropriate data type.
 
    1. Specify whether or not you allow NULL values to be inserted. A column that allows NULL values also allows rows to be inserted with no value in that column. A column that does not allow NULL values does not accept rows with no value.
@@ -243,7 +242,7 @@ You cannot create libraries with the web console. Instead, you can use the dedic
    For example, *Tables*.
 
 1. Identify your object name, and click **Assign owner** from the overflow menu.  
-   The* Assign owner* window appears and the current owner of the object is displayed.
+   The *Assign owner* window appears and the current owner of the object is displayed.
 
 1. Choose an owner.  
    You can select a new owner from the drop down menu.

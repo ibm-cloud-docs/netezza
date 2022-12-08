@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-05-19"
+lastupdated: "2022-12-08"
 
 keywords: web console, administering web console, administering
 
@@ -20,6 +20,13 @@ subcollection: netezza
 # Settings
 {: #settings}
 
+On the *Settings* page, you can manage the following items:
+
+- Private link services
+- Network policies
+- Monitoring profile
+- Database maintenance
+
 ## Network policies
 {: #wc-nwpolicies}
 
@@ -32,8 +39,7 @@ You can add network policies if you belong to the `ADMINISTRATORS` group.
 {: #wc-nwpolicies-adding}
 
 1. Go to **Administration >> Settings >> Network policies**.
-1. In the *Add policy* panel, enter your Classless Inter-Domain Routing (CIDR) or hostname.
-
+1. In the *Add policy* panel, enter your Classless Inter-Domain Routing (CIDR) or hostname.  
    The IP address must conform to the domain standards.
 
 1. Select whether the policy is `Allowed` or `Blocked`.
