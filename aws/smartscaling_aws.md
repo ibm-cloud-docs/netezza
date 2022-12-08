@@ -29,7 +29,7 @@ For example, a database administrator wants to get a deeper understanding of the
 You can use this feature only if you are on {{site.data.keyword.netezza_short}} on AWS.
 {: important}
 
-## Smartscaling with the web console
+## Smart scaling with the web console
 {: #smartscaling_webconsole}
 
 For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling).
