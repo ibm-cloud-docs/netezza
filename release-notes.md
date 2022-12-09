@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-05-23"
+lastupdated: "2022-12-09"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -22,12 +22,47 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
+For release notes for other {{site.data.keyword.netezza_short}} deployment options, see [this page](https://www.ibm.com/docs/en/netezza?topic=netezza-release-notes).
+
+## December 2022
+{: #december2022}
+
+As of December 9, 2022, you can run time travel queries, and deploy {{site.data.keyword.netezza_short}} on AWS.
+
+### New features and enhancements
+{:nfdec2022}
+
+- Introduced full support for {{site.data.keyword.netezza_short}} time travel. You can retrieve and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data. By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time.  
+For more information, see [Getting started with time travel](/docs/netezza?topic=netezza-introducing_tt).
+
+- Introduced {{site.data.keyword.netezza_short}} on AWS. This is a beta feature that is available for evaluation and testing purposes. For known issues and limitations, see [Netezza Performance Server on AWS](https://supportcontent.ibm.com/support/pages/netezza-performance-server-cloud-pak-data-service-aws
+).
+
+### Known issues
+
+If a common table expression or derived table query contains column names or column aliases, which begin with an underscore, {{site.data.keyword.netezza_short}} deletes these columns in the query result set. If there are no columns to display, {{site.data.keyword.netezza_short}} returns the following error.
+
+```sql
+ERROR:  No columns are selected due to column alias begin with underscore
+```
+{: codeblock}
+
+Example:
+
+```sql
+create table t1 ( c1 int , c2 int);
+CREATE TABLE
+with tab1 as ( select c1 as _c1 , c2 as _c2 from t1 ) select tab1.* from tab1; ERROR:  No columns are selected due to column alias begin with underscore
+select tab1.* from ( select c1 as _c1 , c2 as _c2 from t1 ) as tab1; ERROR:  No columns are selected due to column alias begin with underscore
+```
+{: codeblock}
+
 ## July 2022
 {: #july2022}
 
 As of July 28, 2022, you can access data from data lakes and move data between applications with Kafka.
 
-### New features
+### New features and enhancements
 {: #nfjuly2022}
 
 - Use the technology preview of the {{site.data.keyword.netezza_short}} external tables to access and query *parquet* files that are stored outside of your database in data lakes (on AWS S3). For more information, see [Querying data from data lakes](/docs/netezza?topic=netezza-overview_singularity).
@@ -73,7 +108,7 @@ As of June 14, 2022, several fixes, and a stability patch for critical issues.
 
 As of May 20, 2022, workload enhacements and network policies support is added.
 
-### New features
+### New features and enhancements
 {: #nfmay2022}
 
 - Two new workload contours NC0 and NC3 are available for a wider range of configuration options for provisioning and scaling.
@@ -88,6 +123,3 @@ As of May 20, 2022, workload enhacements and network policies support is added.
 {: #march2022}
 
 As of March 17, 2022, the {{site.data.keyword.netezza_short}} web console is available in the following languages: English, German, French, Spanish, Italian, Brazilian, Japanese, Chinese Simplified, Chinese Traditional, and Korean.
-
-
-For release notes for other {{site.data.keyword.netezza_short}} deployment options, see [this page](https://www.ibm.com/docs/en/netezza?topic=netezza-release-notes).
