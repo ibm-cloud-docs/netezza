@@ -30,7 +30,7 @@ For release notes for other {{site.data.keyword.netezza_short}} deployment optio
 As of December 9, 2022, you can run time travel queries, deploy {{site.data.keyword.netezza_short}} on AWS, and more.
 
 ### New features and enhancements
-{:nfdec2022}
+{: #nfdec2022}
 
 - Introduced full support for {{site.data.keyword.netezza_short}} time travel. You can retrieve and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data. By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time.  
 For more information, see [Getting started with time travel](/docs/netezza?topic=netezza-introducing_tt).
