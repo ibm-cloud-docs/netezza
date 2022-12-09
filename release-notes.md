@@ -27,7 +27,7 @@ For release notes for other {{site.data.keyword.netezza_short}} deployment optio
 ## December 2022
 {: #december2022}
 
-As of December 9, 2022, you can run time travel queries, and deploy {{site.data.keyword.netezza_short}} on AWS.
+As of December 9, 2022, you can run time travel queries, and deploy {{site.data.keyword.netezza_short}} on AWS. 
 
 ### New features and enhancements
 {:nfdec2022}
