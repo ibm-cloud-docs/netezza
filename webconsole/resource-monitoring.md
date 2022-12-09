@@ -23,7 +23,7 @@ subcollection: netezza
 ## Dasboard
 {: #dashboard}
 
-On the *Dashboard* page, you can view graphs for the following.
+On the *Dashboard* page, you can view graphs for the following items:
 
 - Resource consumption
 - Query throughput
@@ -89,6 +89,14 @@ The current GRA distribution chart displays information about the current guaran
 
 ## Workload
 {: #workload}
+
+On the *Workload* page, you can view graphs for the following items:
+
+- Queue monitor
+- Resource allocation
+- Current resource allocation
+- CPU utilization
+- Disk utilization
 
 ### Queue monitor
 {: #queue-monitor}
