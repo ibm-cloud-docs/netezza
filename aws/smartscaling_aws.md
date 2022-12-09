@@ -16,9 +16,13 @@ subcollection: netezza
 {:important: .important}
 {:note: .note}
 {:caption: .caption}
+{:beta: .beta}
 
 # Smart scaling
 {: #smartscaling_intro}
+
+This is a beta feature that is available for evaluation and testing purposes if you are on {{site.data.keyword.netezza_short}} on AWS.
+{: beta}
 
 With {{site.data.keyword.netezza_short}} smart scaling, you can gain a deeper understanding of your system resources, especially if you are a database administrator or an operational decision maker.
 
@@ -26,8 +30,6 @@ By using machine learning, smart scaling learns from historical resource data an
 
 For example, a database administrator wants to get a deeper understanding of their system utilization over time. They are interested in both historical trends in resource data and future predictions for the next quarter. By understanding utilization trends for the next quarter, the database administrator can make an informed scaling schedule to match anticipated peaks and dips in workloads. During the next quarter, the administrators will see performance improvement and reduction in resource waste and costs.
 
-You can use this feature only if you are on {{site.data.keyword.netezza_short}} on AWS.
-{: important}
 
 ## Smart scaling with the web console
 {: #smartscaling_webconsole}
