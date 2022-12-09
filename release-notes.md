@@ -37,6 +37,8 @@ For more information, see [Getting started with time travel](/docs/netezza?topic
 
 - Introduced automation for NC0, NC1, NC2, and NC3.
 
+- Introduced new version of the web console.
+
 - Introduced full scaling support. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-topic).
 
 - Introduced {{site.data.keyword.netezza_short}} on AWS. This is a beta feature that is available for evaluation and testing purposes. For known issues and limitations, see [Netezza Performance Server on AWS](https://supportcontent.ibm.com/support/pages/netezza-performance-server-cloud-pak-data-service-aws

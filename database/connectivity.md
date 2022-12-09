@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-10-12"
+  years: 2021,2022
+lastupdated: "2022-12-09"
 
 keywords: connectivity
 
@@ -20,7 +20,7 @@ subcollection: netezza
 # Connectivity
 {: #connectivity}
 
-## Client drivers 
+## Client drivers
 {: #drivers}
 
 ### JDBC
@@ -48,5 +48,3 @@ List the tools not applicable to SaaS https://ibmdocs-test.mybluemix.net/docs/en
 
 ### nzload
 {: #nzload}
-
-

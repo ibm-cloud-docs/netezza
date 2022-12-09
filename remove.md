@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-26"
+lastupdated: "2022-12-09"
 
 subcollection: netezza
 
@@ -32,7 +32,7 @@ To delete your deployment instance:
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 1. From the Resource list, select your deployment.
-1. Using the menu icon, choose `Delete` from the list. 
+1. Using the menu icon, choose `Delete` from the list.
 
 ## Removing backups
 {: #remove-backups}

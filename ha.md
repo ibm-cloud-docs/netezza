@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-07-16"
+  years: 2022
+lastupdated: "2022-12-09"
 
 keywords: HA for Netezza Performance Server, high availability for Netezza Performance Server, HA
 
@@ -32,5 +32,3 @@ More details can be found [here](/docs/netezza?topic=netezza-understanding-bc-dr
 {: #ha-responsibilities}
 
 To find out more about responsibility ownership for using {{site.data.keyword.cloud}} products between {{site.data.keyword.IBM_notm}} and the customer, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} products](/docs/overview?topic=overview-shared-responsibilities).
-
-

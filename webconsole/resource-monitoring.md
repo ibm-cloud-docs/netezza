@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-02"
+  years: 2022
+lastupdated: "2022-12-09"
 
 keywords: web console, getting started with the web cosnole
 

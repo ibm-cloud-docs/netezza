@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-09"
+lastupdated: "2022-12-09"
 
 keywords: pnr, pause and resume, netezza pause and resume, pause and resume by using netezza web console, pausing and resuming netezza performance server with the web console
 
@@ -41,7 +41,7 @@ On the *Workload patterns* page, you can initiate, edit or delete your **Pause/r
 1. Type the name for your resume operation. **DRAFT COMMENT: is that really optional?**
 1. Click **Resume** and **Confirm**.
 
-## Scheduling pause 
+## Scheduling pause
 {: #pnr-console-pausing-scheduled}
 
 1. Go to **Administration > Workload patterns**.
@@ -67,7 +67,7 @@ On the *Workload patterns* page, you can initiate, edit or delete your **Pause/r
 {: #pnr-console-editing}
 
 1. Go to **Administration > Workload patterns > Schedules**.
-1. Select the operation that you want to edit. 
+1. Select the operation that you want to edit.
 1. Click **Edit**.
 1. Select the required parameters.
 1. Click **Save**.
@@ -89,6 +89,3 @@ On the *Workload patterns* page, you can initiate, edit or delete your **Pause/r
    - Filter by **Time completed** or **Owner**.
 
    - In **Find history**, type the name of the operation.
-   
- 
-

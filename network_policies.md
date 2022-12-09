@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-19"
+lastupdated: "2022-12-09"
 
 keywords: network policy, netezza network policy
 subcollection: netezza

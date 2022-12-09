@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2022
-lastupdated: "2022-11-07"
+lastupdated: "2022-12-09"
 
 keywords: time travel, Netezza time travel,
 

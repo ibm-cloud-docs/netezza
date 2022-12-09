@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2020-07-26"
+  years: 2022
+lastupdated: "2022-12-09"
 
 keywords: Netezza Performance Server frequently asked questions, signing up for Netezza Performance Server, generating credentials for Netezza Performance Server instance,
 
@@ -41,7 +41,7 @@ Once you have the account, you can provision an instance of {{site.data.keyword.
 1. Select **Service credentials > New credentials+ > Add** to generate your API.
 
    You need the API key to connect to the instance.
-   
+
 1. Expand **View credentials**, which displays your service connectivity information.
 1. You can use the API key to connect to both {{site.data.keyword.netezza_short}} and the web console.
 
