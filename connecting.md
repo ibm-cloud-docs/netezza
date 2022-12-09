@@ -28,8 +28,6 @@ You can connect command-line interfaces, IBM® or third-party applications and t
 ## Connectivity options
 {: #connectivity-options}
 
-![Connecting to {{site.data.keyword.netezza_short}}](connecting.png){: caption="Image 1. The diagram depicts the the available options to connect to your {{site.data.keyword.netezza_short}} instance." caption-side="bottom"} **PLACEHOLDER**
-
 You can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints.
 
 - A public endpoint can be accessed over the public network or internet.
