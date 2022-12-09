@@ -27,13 +27,17 @@ For release notes for other {{site.data.keyword.netezza_short}} deployment optio
 ## December 2022
 {: #december2022}
 
-As of December 9, 2022, you can run time travel queries, and deploy {{site.data.keyword.netezza_short}} on AWS.
+As of December 9, 2022, you can run time travel queries, deploy {{site.data.keyword.netezza_short}} on AWS, and more.
 
 ### New features and enhancements
 {:nfdec2022}
 
 - Introduced full support for {{site.data.keyword.netezza_short}} time travel. You can retrieve and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data. By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time.  
 For more information, see [Getting started with time travel](/docs/netezza?topic=netezza-introducing_tt).
+
+- Introduced automation for NC0, NC1, NC2, and NC3.
+
+- Introduced full scaling support. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-topic).
 
 - Introduced {{site.data.keyword.netezza_short}} on AWS. This is a beta feature that is available for evaluation and testing purposes. For known issues and limitations, see [Netezza Performance Server on AWS](https://supportcontent.ibm.com/support/pages/netezza-performance-server-cloud-pak-data-service-aws
 ).
