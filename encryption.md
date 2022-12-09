@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021,2022
+  years: 2022
 lastupdated: "2022-12-09"
 
 keywords: data encryption in Netezza Performance Server, data storage for Netezza Performance Server, personal data in Netezza Performance Server, data deletion for Netezza Performance Server, data in Netezza Performance Server, data security in Netezza Performance Server
