@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: 2022-12-09"
+lastupdated: "2022-12-09"
 
 keywords: web console, administering web console, administering, pnr, pause and resume, netezza pause and resume, pause and resume by using netezza web console, pausing and resuming netezza performance server with the web console, netezza auto-pause and resume, netezza autopause and resume, netezza auto-pause and resume with the web console, scaling, netezza scaling with the web console, compute scaling, smartscaling, netezza smartscaling, netezza performance server smartscaling
 

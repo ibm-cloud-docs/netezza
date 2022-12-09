@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022
-lastupdated: lastupdated: "2022-12-09"
+lastupdated: "2022-12-09"
 
 keywords: netezza time travel, data retention interval, setting the retention interval, changing the retention interval
 
