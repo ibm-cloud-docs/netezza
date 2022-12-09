@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-15"
+  years: 2021,2022
+lastupdated: "2022-12-09"
 
 keywords: business continuity and disaster recovery for Netezza Performance Server as a Service, business continuity, disaster recovery,
 

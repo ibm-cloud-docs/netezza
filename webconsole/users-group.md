@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-12-08"
+  years: 2022
+lastupdated: "2022-12-09"
 
 keywords: web console, users and groups, creating users, creating groups, users, groups
 

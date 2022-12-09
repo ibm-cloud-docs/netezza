@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022
-lastupdated: "2022-08-07"
+lastupdated: "2022-12-09"
 
 keywords: singularity, parquet, data lake, netezza singularity, parquet files
 subcollection: netezza

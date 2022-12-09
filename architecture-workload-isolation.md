@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-07-26"
+  years: 2021,2022
+lastupdated: "2022-12-09"
 
 keywords: public isolation for Netezza Performance Server, compute isolation for Netezza Performance Server, Netezza Performance Server architecture, workload isolation in Netezza Performance Server
 
@@ -26,7 +26,7 @@ subcollection: netezza
 
 ## {{site.data.keyword.netezza_short}} architecture
 {: #architecture}
- 
+
 ![{{site.data.keyword.netezza_short}} architecture](images/Netezza-Deployment-diagram.png){: caption="Image 1. The diagram depicts the deployment model and how the workload isolation is ensured." caption-side="bottom"}
 
 

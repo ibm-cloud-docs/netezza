@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-09"
+  years: 2021,2022
+lastupdated: "2022-12-09"
 
 keywords: autopause, auto-pause, autopause and resume, auto-pause and resume, auto-resume, resume, auto resuming Netezza, auto pausing Netezza
 
@@ -22,7 +22,7 @@ subcollection: netezza
 
 {{site.data.keyword.netezza_full}} offers a feature called auto-pause and resume where the system automatically detects inactivity and pauses its operations along with the customer billing. As soon as an activity (queries against the catalog are not considered activities) is detected on the system, it automatically resumes the operations and starts customer billing again.
 
-You can perform an on demand (ad hoc) or scheduled resume while the system is in the auto-paused state. 
+You can perform an on demand (ad hoc) or scheduled resume while the system is in the auto-paused state.
 
 ## Auto-pausing and Auto-resuming with the web console
 {: #pnr-webconsole}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-04"
+  years: 2021,2022
+lastupdated: "2022-12-09"
 
 keywords: pause and resume, pause, resume, pausing and resuming instances, pause Netezza, resume Netezza
 

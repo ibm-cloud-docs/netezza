@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-12-09"
 
 keywords: netezza time travel, enabling time travel on netezza, creating tables, creating schemas, creating databases, altering schemas, altering databases, altering tables, time travel objects, retention time interval, create tables, create schemas, create databases, alter schemas, alter databases, alter tables,
 

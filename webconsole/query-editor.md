@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-11-08"
+  years: 2022
+lastupdated: "2022-12-09"
 
 keywords: web console, query editor
 

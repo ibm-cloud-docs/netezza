@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-12-08"
+  years: 2021,2022
+lastupdated: "2022-12-09"
 
 keywords: Smart scaling, scaling, Netezza Performance Server smart scaling,
 subcollection: netezza
@@ -24,7 +24,7 @@ subcollection: netezza
 This is a beta feature that is available for evaluation and testing purposes if you are on {{site.data.keyword.netezza_short}} on AWS.
 {: beta}
 
-With {{site.data.keyword.netezza_short}} smart scaling, you can gain a deeper understanding of your system resources, especially if you are a database administrator or an operational decision maker. 
+With {{site.data.keyword.netezza_short}} smart scaling, you can gain a deeper understanding of your system resources, especially if you are a database administrator or an operational decision maker.
 
 By using machine learning, smart scaling learns from historical resource data and produces predictions that anticipate future system utilization. You can now prepare and scale accordingly for varying workloads ahead of time. With this tool, you can ease system exhaustion, reduce wasted resources, and lower costs.
 

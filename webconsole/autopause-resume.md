@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-09"
+lastupdated: "2022-12-09"
 
 keywords: netezza auto-pause and resume, netezza autopause and resume, netezza auto-pause and resume with the web console
 
@@ -48,4 +48,3 @@ On the *Workload patterns* page, you can enable or disable your **Auto pause** o
    - Filter by **Time completed** or **Owner**.
 
    - In **Find history**, type the name of the operation.
-

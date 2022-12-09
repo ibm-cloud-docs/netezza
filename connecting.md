@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-22"
+  years: 2021,2022
+lastupdated: "2022-12-09"
 
 keywords: connecting to Netezza Performance Server, connecting
 
@@ -22,7 +22,7 @@ subcollection: netezza
 # Connecting to {{site.data.keyword.netezza_short}}
 {: #connecting}
 
-You can connect command-line interfaces, IBM® or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance. 
+You can connect command-line interfaces, IBM® or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance.
 {: shortdesc}
 
 ## Connectivity options

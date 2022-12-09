@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-10"
+  years: 2022
+lastupdated: "2021-12-09"
 
 keywords: scheduler rules,
 
@@ -40,9 +40,9 @@ On the *Scheduler rules* page, you can view the list of scheduler rules, create 
     For any rule to be triggered, all of the conditions must be met. If you do not set any conditions, the rule applies to all plans. The action is taken as a result of the rule.
 
 1. Add actions.
-   
+
    You can add only one action for a scheduler rule.
-   
+
 1. If you want the rule to control administrative jobs, tick **Apply to admin jobs**.
 1. Tick **Active** to activate the rule.
 1. Click **Create**.
