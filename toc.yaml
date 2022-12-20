@@ -18,7 +18,6 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - release-notes.md
       - getting-started.md
       - topicgroup:
          label: Connecting to Netezza
@@ -31,6 +30,7 @@ toc:
           - webconsole/get-strt.md
           - webconsole/users-group.md
           - webconsole/databases.md
+          - webconsole/query-editor.md
           - webconsole/queries.md
           - webconsole/current-activity.md
           - webconsole/resource-monitoring.md
@@ -39,18 +39,15 @@ toc:
               topics:
               - webconsole/settings.md
               - webconsole/scheduler-rules.md
-          - topicgroup:
-              label: Workload patterns
-              topics:
-              - webconsole/wp_pausreresume.md
-              - webconsole/wp_scaling.md
-              - webconsole/wp_smartscaling.md
+          - webconsole/workload-patterns.md
           - topicgroup:
               label: Backup and restore
               topics:
               - admins/bnr.md
               - admins/bnr-ui.md
               - admins/bnr-flow.md
+      - release-notes.md
+
   - navgroup:
       id: howto
       topics:
@@ -60,7 +57,6 @@ toc:
           - admins/pause-resume.md
           - admins/autopause.md
           - admins/scaling.md
-          - aws/smartscaling_aws.md
           - topicgroup:
               label: Backup and restore
               topics:
@@ -93,6 +89,19 @@ toc:
           - link:
               label: External tables
               href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
+      - topicgroup:
+          label: Time travel and historical data
+          topics:
+          - timetravel/introducing_timetravel.md
+          - timetravel/createalter_timetravel.md
+          - timetravel/spaceusage_timetravel.md
+          - timetravel/retentioninterval_timetravel.md
+          - topicgroup:
+              label: Querying historical database
+              topics:
+              - timetravel/runningqueries_timetravel.md
+              - timetravel/queryingdata_timetravel.md
+          - timetravel/sqlcommands_timetravel.md
       - link:
           label: Loading data
           href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
