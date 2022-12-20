@@ -1,4 +1,24 @@
-## Network policies
+---
+
+copyright:
+  years: 2022
+lastupdated: "2022-12-09"
+
+keywords: public isolation for Netezza Performance Server, compute isolation for Netezza Performance Server, Netezza Performance Server architecture, workload isolation in Netezza Performance Server
+
+subcollection: netezza
+
+---
+
+{:external: target="_blank" .external}
+{:shortdesc: .shortdesc}
+{:table: .aria-labeledby="caption"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:caption: .caption}
+
+# Network policies
 {: #wc-nwpolicies}
 
 On the *Network policies* page, you can add policies and view existing policies.
