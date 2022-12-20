@@ -1,4 +1,24 @@
-### New features and enhancements
+---
+
+copyright:
+  years: 2022
+lastupdated: "2022-12-09"
+
+keywords: relnotes
+
+subcollection: netezza
+
+---
+
+{:external: target="_blank" .external}
+{:shortdesc: .shortdesc}
+{:table: .aria-labeledby="caption"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:caption: .caption}
+
+# New features and enhancements
 {: #nfdec2022}
 
 - Introduced full support for {{site.data.keyword.netezza_short}} time travel. You can retrieve and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data. By using {{site.data.keyword.netezza_short}} time travel, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time.
@@ -14,6 +34,7 @@ For more information, see [Getting started with time travel](/docs/netezza?topic
 ).
 
 ### Known issues
+{: #knownissuesdec2022}
 
 If a common table expression or derived table query contains column names or column aliases, which begin with an underscore, {{site.data.keyword.netezza_short}} deletes these columns in the query result set. If there are no columns to display, {{site.data.keyword.netezza_short}} returns the following error.
 
