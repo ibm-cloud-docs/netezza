@@ -25,4 +25,4 @@ subcollection: netezza
 # Backup and restore for time travel
 {: #bnr_tt}
 
-The retention time intervals of databases, schemas, and tables are automatically backed up by the **nzbackup** command and restored by the **nzrestore** command.
+The retention time intervals of databases, schemas, and tables are automatically backed up by the **nzbackup** command and restored by the **nzrestore** command. 
