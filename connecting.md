@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021,2022
+  years: 2021, 2022, 2023
 lastupdated: "2023-01-11"
 
 keywords: connecting to Netezza Performance Server, connecting, private endpoint, public endpoint, public and private endpoints, web console,
