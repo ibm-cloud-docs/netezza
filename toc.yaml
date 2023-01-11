@@ -20,10 +20,10 @@ toc:
       topics:
       - getting-started.md
       - topicgroup:
-         label: Connecting to Netezza
-         topics:
-         - connecting.md
-         - connecting_private_endpoints.md
+          label: Connecting to Netezza Performance Server
+          topics:
+          - connecting.md
+          - connecting_private_endpoints.md
       - topicgroup:
           label: Web console
           topics:
