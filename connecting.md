@@ -30,20 +30,22 @@ You can connect command-line interfaces, IBM or third-party applications and too
 
 You can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints.
 
+![Connectivity options](networking.png){: caption="Image 1. Ways to connect." caption-side="bottom"}
+
 - **PUBLIC ENDPOINT**  
 A public endpoint can be accessed over the public network or internet.
 
-You can connect to your application by using a public hostname. To connect, you need public hostname details.  
-To get the details, go to **Resource list > Services and Software > Service instance details**.  
-On the page, you can find the URLs that are needed to access the web console, the API server, and the database.
+   You can connect to your application by using a public hostname. To connect, you need public hostname details.  
+   To get the details, go to **Resource list > Services and Software > Service instance details**.  
+   On the page, you can find the URLs that are needed to access the web console, the API server, and the database.
 
-Access to your data is protected by strong authentication, vast {{site.data.keyword.netezza_short}} authorization options and access controls, encryption over the wire by using SSL and at rest, and IBM security and compliance practices for development and operations.
+   Access to your data is protected by strong authentication, vast {{site.data.keyword.netezza_short}} authorization options and access controls, encryption over the wire by using SSL and at rest, and IBM security and compliance practices for development and operations.
 
 - **PRIVATE ENDPOINT**  
 A private endpoint offers you a way to connect over the cloud platform internal network and is not accessible from public networks.
 
-{{site.data.keyword.netezza_short}} supports private connectivity through [Azure Privatelink](https://azure.microsoft.com/en-us/pricing/details/private-link/#overview).  
-For more information on how to set up your private link and setting up the URLs for connecting to your instance, see [Connecting to {{site.data.keyword.netezza_short}} by using private endpoints](/docs/netezza?topic=netezza-connecting-to-netezza-performance-server-by-using-private-endpoints&interface=ui).
+   {{site.data.keyword.netezza_short}} supports private connectivity through [Azure Privatelink](https://azure.microsoft.com/en-us/pricing/details/private-link/#overview).  
+   For more information on how to set up your private link and setting up the URLs for connecting to your instance, see [Connecting to {{site.data.keyword.netezza_short}} by using private endpoints](/docs/netezza?topic=netezza-connecting-to-netezza-performance-server-by-using-private-endpoints&interface=ui).
 
 ## Connecting hostnames to {{site.data.keyword.netezza_short}}
 {: #connecting}
@@ -62,7 +64,7 @@ Each endpoint type provides a set of two hostnames. You can connect each of the 
 
 1. Log in to your IBM Cloud account.
 1. Go to **Resource list > Services and software**.
-1. Select your **Netezza Performance Server** instance.  
+1. Select your instance.  
    You are now on the service instance page.
 
 1. Select the **Manage** tab.
