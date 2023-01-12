@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021, 2022, 2023
+  years: 2021, 2023
 lastupdated: "2023-01-11"
 
 keywords: connecting, private endpoints
@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 
 # Connecting to {{site.data.keyword.netezza_short}} by using private endpoints
-{:# connecting-private-endpoints}
+{: #connecting-private-endpoints}
 
 If you want to connect to {{site.data.keyword.netezza_short}} by using private endpoints, two [private link services](https://learn.microsoft.com/en-us/azure/private-link/private-link-service-overview) are created.  
 
@@ -50,7 +50,7 @@ There are two ways in which you can provide the subscription IDs:
 ![Providing subscription IDs](conn_wc_d.png){: caption="Image 1. Ways to provide subscription IDs." caption-side="bottom"}
 
 #### Providing subscription IDs at deployment
-{:# subscription-ids-deployment}
+{: #subscription-ids-deployment}
 
 You can provide the subscription IDs as input during provisioning, in the **Configure advanced feature** section.
 
