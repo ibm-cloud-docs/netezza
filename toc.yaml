@@ -61,6 +61,7 @@ toc:
           - admins/pause-resume.md
           - admins/autopause.md
           - admins/scaling.md
+          - admins/smartscaling.md
           - topicgroup:
               label: Backup and restore
               topics:
