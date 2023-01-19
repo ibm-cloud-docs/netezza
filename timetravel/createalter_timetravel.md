@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022
-lastupdated: "2022-12-09"
+lastupdated: "2023-01-19"
 
 keywords: netezza time travel, enabling time travel on netezza, creating tables, creating schemas, creating databases, altering schemas, altering databases, altering tables, time travel objects, retention time interval, create tables, create schemas, create databases, alter schemas, alter databases, alter tables,
 
@@ -52,24 +52,20 @@ If you try to expand your {{site.data.keyword.netezza_short}} system with additi
 
 The following types of tables cannot be temporal tables:
 
-- Temporary tables.
-- External tables.
-- Versioned tables that were altered by adding and/or dropping columns.
+- Temporary tables
+- External tables
+- Versioned tables that were altered by adding and/or dropping columns
 - Row-secure tables.
-
 
 This limitation affects the following commands:
 
-- **CREATE TABLE ROW SECURITY**, **CREATE EXTERNAL TABLE**, **CREATE TEMPORARY TABLE**
-
+- **CREATE TABLE ROW SECURITY**, **CREATE EXTERNAL TABLE**, **CREATE TEMPORARY TABLE**  
     If **DATA_VERSION_RETENTION_TIME** is specified to a nonzero value, the commands fail.
 
-- **ALTER TABLE DATA_VERSION_RETENTION_TIME**
-
+- **ALTER TABLE DATA_VERSION_RETENTION_TIME**  
     If the table is a temporary, row-secure, versioned, or an external table and **DATA_VERSION_RETENTION_TIME** is specified with a nonzero value, the command fails.
 
-- **ALTER TABLE ADD COLUMN**, **ALTER TABLE DROP COLUMN**
-
+- **ALTER TABLE ADD COLUMN**, **ALTER TABLE DROP COLUMN**  
     If the table has a nonzero **DATA_VERSION_RETENTION_TIME** specified, the command fails.
 
 The **GROOM TABLE VERSIONS** command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
