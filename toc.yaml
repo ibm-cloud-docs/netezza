@@ -13,17 +13,17 @@ toc:
     path: netezza
     label: Netezza
 
-#  List fyour getting starte d tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn
       topics:
       - getting-started.md
       - topicgroup:
-         label: Connecting to Netezza
-         topics:
-         - connecting.md
-         - connecting_private_endpoints.md
+          label: Connecting to Netezza Performance Server
+          topics:
+          - connecting.md
+          - connecting_private_endpoints.md
       - topicgroup:
           label: Web console
           topics:
@@ -76,32 +76,19 @@ toc:
           - encryption.md
           - iam-docs.md
       - topicgroup:
-          label: Netezza Performance Server and Kafka
-          topics:
-          - kafka.md
+         label: Netezza Performance Server and Kafka
+         topics:
+         - kafka.md
       - topicgroup:
-          label: Querying data from data lakes
-          topics:
-          - singularity.md
-          - examples_singularity.md
-          - examples3_singularity.md
-          - examples2_singularity.md
-          - link:
-              label: External tables
-              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
-      - topicgroup:
-          label: Time travel and historical data
-          topics:
-          - timetravel/introducing_timetravel.md
-          - timetravel/createalter_timetravel.md
-          - timetravel/spaceusage_timetravel.md
-          - timetravel/retentioninterval_timetravel.md
-          - topicgroup:
-              label: Querying historical database
-              topics:
-              - timetravel/runningqueries_timetravel.md
-              - timetravel/queryingdata_timetravel.md
-          - timetravel/sqlcommands_timetravel.md
+         label: Querying data from data lakes
+         topics:
+         - singularity.md
+         - examples_singularity.md
+         - examples3_singularity.md
+         - examples2_singularity.md
+         - link:
+             label: External tables
+             href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - link:
           label: Loading data
           href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
@@ -109,31 +96,12 @@ toc:
           label: Running queries
           href: https://www.ibm.com/docs/en/netezza?topic=dud-netezza-sql-introduction
       - remove.md
-
   - navgroup:
       id: reference
       topics:
       - ha.md
       - bc-dr.md
       - network_policies.md
-      - link:
-          label: Backup and restore performance improvements with many tables, views, and procedures
-          href: https://www.ibm.com/docs/en/netezza?topic=npscpdas-backup-restore-performance-improvements-many-tables-views-procedures
-      - link:
-          label: Backup and restore best practices
-          href: https://www.ibm.com/docs/en/netezza?topic=service-backup-restore-best-practices
-      - link:
-          label: Command-line interface
-          href: https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface
-      - link:
-          label: Netezza for database users
-          href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-database-users
-      - link:
-          label: Netezza for security experts
-          href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-security-experts
-      - link:
-          label: Netezza for analytics and acceleration developers
-          href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-analytics-acceleration-developers
 
   - navgroup:
       id: tutorial

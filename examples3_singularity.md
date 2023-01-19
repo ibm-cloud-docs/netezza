@@ -46,7 +46,7 @@ a) Set **ENABLE_EXTERNAL_DATASOURCE**.
 b) Create an external data source.
 
    ```sql
-   creste EXTERNAL DATASOURCE 'DATA SOURCE' on 'REMOTE SOURCE'
+   create EXTERNAL DATASOURCE 'DATA SOURCE' on 'REMOTE SOURCE'
    using (
     ACCESSKEYID 'ACCESS KEY ID' SECRETACCESSKEY 'SECRET ACCESS KEY' BUCKET 'BUCKET' REGION 'REGION'
    );
@@ -101,8 +101,6 @@ select
     * 
 from
      'TABLE';
-
-INSERT 0 2463931
 ```
 {: codeblock}
 
