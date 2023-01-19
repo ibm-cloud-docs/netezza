@@ -18,6 +18,7 @@ toc:
   - navgroup:
       id: learn
       topics:
+      - release-notes.md
       - getting-started.md
       - topicgroup:
           label: Connecting to Netezza Performance Server
@@ -46,7 +47,6 @@ toc:
               - admins/bnr.md
               - admins/bnr-ui.md
               - admins/bnr-flow.md
-      - release-notes.md
 
   - navgroup:
       id: howto
