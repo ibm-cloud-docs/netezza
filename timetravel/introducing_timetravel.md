@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2022
-lastupdated: "2022-11-21"
+lastupdated: "2023-01-19"
 
 keywords: time travel, Netezza time travel,
 
@@ -32,28 +32,23 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
 
 **Business use cases and examples**
 
-- Conducting data audits
-
-    You can examine and audit past data because time travel provides an audit trail of data insertions, deletions, and changes to attributes over the course of business activity.
-
+- Conducting data audits  
+    You can examine and audit past data because time travel provides an audit trail of data insertions, deletions, and changes to attributes over the course of business activity.  
     For example:
 
     - Identify the price of an item before the holiday discount season.
     - Identify the price of stock that was used in a valuation or initial public offering three months ago.
     - Identify the financials according to due diligence at the time of a company merger.
 
-- Analyzing and calculating trends
-
-    You can examine how data changes over time, identify differences in the data between two points in time, or analyze trends.
-
+- Analyzing and calculating trends  
+    You can examine how data changes over time, identify differences in the data between two points in time, or analyze trends.  
     For example:
 
     - Identify the number of cars that are rented out week over week.
     - Identify the purchaser that makes the most changes to the quantity after an order is entered.
     - Identify the suppliers that routinely offer a steeper discount than first indicated.
 
-- Rebuilding or reconstructing data
-
+- Rebuilding or reconstructing data  
     For example:
 
     - Restore a table to a point in the past (for which the historical data is still available).
