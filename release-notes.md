@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2023-01-05"
+lastupdated: "2022-05-23"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -12,8 +12,7 @@ subcollection: netezza
 
 {:shortdesc: .shortdesc}
 {:screen: .screen}  
-{:codeblock: .codeblock}
-{:screen: .screen} 
+{:codeblock: .codeblock}  
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -23,17 +22,11 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-For release notes for other {{site.data.keyword.netezza_short}} deployment options, see [this page](https://www.ibm.com/docs/en/netezza?topic=netezza-release-notes).
-
-## December 2022
-{: #december2022}
-
-As of December 2022, you can deploy {{site.data.keyword.netezza_short}} on AWS and run time travel queries.
+## February 2022
+{: #feb2023}
 
 ## New features and enhacements
-{: #dec2022}
-
-- Deploy {{site.data.keyword.netezza_short}} on AWS. This is a beta feature that is available for evaluation and testing purposes. For known issues and limitations, see [Netezza Performance Server on AWS](https://supportcontent.ibm.com/support/pages/netezza-performance-server-cloud-pak-data-service-aws).
+{: #feb2023}
 
 - Use time travel queries to retrieve and analyze historical data without having to develop extra application logic such as history tables. {{site.data.keyword.netezza_short}} time travel comes in handy when you want to track the history of data changes or reconstruct your data. By using this powerful tool, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time.
 
@@ -49,7 +42,7 @@ For more information, see [Getting started with time travel](/docs/netezza?topic
 | Postgre cors    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres   |
 
 ### Known issues
-{: #kidec2022}
+{: #kifeb2023}
 
 If a common table expression or derived table query contains column names or column aliases, which begin with an underscore, Netezza Performance Server deletes these columns in the query result set.  
 If there are no columns to display, Netezza Performance Server returns the following error.
@@ -74,7 +67,7 @@ select tab1.* from ( select c1 as _c1 , c2 as _c2 from t1 ) as tab1; ERROR:  No 
 
 As of July 28, 2022, you can access data from data lakes and move data between applications with Kafka.
 
-### New features and enhacements
+### New features
 {: #nfjuly2022}
 
 - Use the technology preview of the {{site.data.keyword.netezza_short}} external tables to access and query *parquet* files that are stored outside of your database in data lakes (on AWS S3). For more information, see [Querying data from data lakes](/docs/netezza?topic=netezza-overview_singularity).
@@ -120,7 +113,7 @@ As of June 14, 2022, several fixes, and a stability patch for critical issues.
 
 As of May 20, 2022, workload enhacements and network policies support is added.
 
-### New features and enhacements
+### New features
 {: #nfmay2022}
 
 - Two new workload contours NC0 and NC3 are available for a wider range of configuration options for provisioning and scaling.
