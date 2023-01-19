@@ -41,6 +41,7 @@ toc:
               - webconsole/scheduler-rules.md
           - topicgroup:
               label: Workload patterns
+              topics:
               - webconsole/wp_pausreresume.md
               - webconsole/wp_scaling.md
               - webconsole/wp_smartscaling.md
