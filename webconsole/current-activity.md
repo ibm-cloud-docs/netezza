@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-03-01"
+lastupdated: "2022-12-09"
 
 keywords: web console, current activity
 
@@ -32,7 +32,7 @@ When you select **Queries**, you can do the following:
 - View graphs summaries
 - View verbose information
 - View distribution information
-- View plan file 
+- View plan file
 - View plan details
 
 You can also export information about queries by clicking **Export** or refresh your view by clicking the refresh button next to **Export**.
@@ -50,4 +50,3 @@ When you select **Sessions**, you can do the following:
 - End sessions
 
 You can also export information about sessions by clicking **Export** or refresh your view by clicking the refresh button next to **Export**.
-

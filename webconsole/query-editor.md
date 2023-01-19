@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-02"
+  years: 2022
+lastupdated: "2022-12-09"
 
 keywords: web console, query editor
 
@@ -27,25 +27,18 @@ With the query editor, you can run SQL queries on a specific host and database. 
 {: #create-queries}
 
 1. Go to **Query editor**.
-1. Type a name for your query.
-1. Select the database in which you want to run the query.
-1. Select the schema where you want to run the query.
-
+1. From **Data objects**, select the database and schema in which you want to run the query.  
    If you do not pick a schema, the default database schema is selected.
-   
-1. Type the SQL query that you want to run.
 
+1. Type the SQL query that you want to run.  
    If your query is a select statement, a Set Limit option shows up to allow you to specify how many rows of data you would like to retrieve. The default is No limit.
 
 1. When you input the information, you can do one of the following:
 
-   - Click **Run** to run the query.
-     
-     The results of the query are displayed in the panel.
+   - Click **Run** to run the query.  
+      The results of the query are displayed in the panel.
 
    - Click the floppy disk icon that is next to the `Query field` name to save the query as a template.
-
-     The saved query is added to **Queries > Recent Queries**.
+      The saved query is added to **Saved queries**, and **Queries > Saved queries**.
 
    - Click **Clear** to clear the query.
-

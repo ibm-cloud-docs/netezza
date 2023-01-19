@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-02"
+lastupdated: "2022-12-09"
 
 keywords: web console, getting started with the web cosnole
 
@@ -22,10 +22,9 @@ subcollection: netezza
 
 1. Log in to your IBM Cloud account.
 1. Go to **Resource list > Services and software**.
-1. Select your **Netezza Performance Server** instance.
-
+1. Select your **Netezza Performance Server** instance.  
    You are now on the service instance page.
-      
+
 1. Select the **Manage** tab.
 1. Click the **Web console** button to launch the web console.
 
