@@ -39,7 +39,11 @@ toc:
               topics:
               - webconsole/settings.md
               - webconsole/scheduler-rules.md
-          - webconsole/workload-patterns.md
+          - topicgroup:
+              label: Workload patterns
+              - webconsole/wp_pausreresume.md
+              - webconsole/wp_scaling.md
+              - webconsole/wp_smartscaling.md
           - topicgroup:
               label: Backup and restore
               topics:
@@ -57,6 +61,7 @@ toc:
           - admins/pause-resume.md
           - admins/autopause.md
           - admins/scaling.md
+          - admins/smartscaling.md
           - topicgroup:
               label: Backup and restore
               topics:
