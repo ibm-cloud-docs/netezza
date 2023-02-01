@@ -65,7 +65,7 @@ If you deploy only with a private endpoint, you must provide subscription IDs.
 
 If you deployed your instance with public and private endpoints, log in to the web console by using the public endpoint and set up the private link service on the **Private Link** page.  
 
-1. Go to **Administration > Setting > Private Link** and click **Create Private Link**.
+1. Go to **Administration > Settings > Private Link** and click **Create Private Link**.
 1. Provide the subscription IDs which you want to use to set up the private endpoints in your Azure account.
 
 Use the **Private Link** page to update subscription IDs after private link is created.
@@ -77,7 +77,7 @@ Use the **Private Link** page to update subscription IDs after private link is c
 You can get the resource ID or alias in one of the following ways:
 
 - By going to **Private endpoints > Service instance details** page for the instance in the IBM Cloud dashboard.
-- By going to **Administration > Setting > Private Link** in the web console.
+- By going to **Administration > Settings > Private Link** in the web console.
 
 ### 3. Create private endpoints.
 {: #create_private_link}
