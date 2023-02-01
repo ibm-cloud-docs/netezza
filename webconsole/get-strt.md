@@ -33,5 +33,5 @@ For more information about managing users and groups, see [Managing users and gr
 
 After you log in to the {{site.data.keyword.netezza_short}} web console, you are on the home page.
 
-Choose a light mode or dark mode for your web console.
+Choose a light mode or dark mode for a better web console experience.
 {: tip}
