@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-09"
+  years: 2023
+lastupdated: "2023-02-02"
 
-keywords: web console, query editor
+keywords: web console, query editor, SQL
 
 subcollection: netezza
 
@@ -28,17 +28,17 @@ With the query editor, you can run SQL queries on a specific host and database. 
 
 1. Go to **Query editor**.
 1. From **Data objects**, select the database and schema in which you want to run the query.  
-   If you do not pick a schema, the default database schema is selected.
+If you do not pick a schema, the default database schema is selected.
 
 1. Type the SQL query that you want to run.  
-   If your query is a select statement, a Set Limit option shows up to allow you to specify how many rows of data you would like to retrieve. The default is No limit.
+If your query is a select statement, a Set Limit option shows up to allow you to specify how many rows of data you would like to retrieve. The default is No limit.
 
 1. When you input the information, you can do one of the following:
 
    - Click **Run** to run the query.  
-      The results of the query are displayed in the panel.
+     The results of the query are displayed in the panel.
 
-   - Click the floppy disk icon that is next to the `Query field` name to save the query as a template.
-      The saved query is added to **Saved queries**, and **Queries > Saved queries**.
+   - Click the floppy disk icon that is in the `SQLworksheet` toolbar to save the query as a template.  
+     The saved query is added to **Saved queries** and **Queries > Recent Queries**.
 
    - Click **Clear** to clear the query.
