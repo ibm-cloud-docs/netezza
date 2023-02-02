@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-09"
+  years: 2023
+lastupdated: "2023-02-02"
 
-keywords: web console, users and groups, creating users, creating groups, users, groups
+keywords: web console, users and groups, creating users, creating groups, users, groups, comparing groups
 
 subcollection: netezza
 
@@ -74,7 +74,6 @@ In the users list view, there is an overflow menu that lists the actions that ca
 |Value          | Description                      |
 |:--------------|:---------------------------------|
 |Assign owner| Set the owner of the user account.|
-|View privileges| View and alter the privileges for the user account, which dictate what that user can view and execute.|
 |Change password| Change the password for the system user.|
 |Account expiration| Set a date that the system user account will be valid until.|
 |Password expiration| Set a number of days until the password for the user account expires.|
@@ -116,7 +115,7 @@ User privileges dictate what actions can be taken by a particular user account. 
 1. Update, grant, or revoke object privileges by putting ticks in corresponding boxes.
 1. Click **Save**.
 
-### Deleting users
+### Removing users
 {: #delete-users}
 
 1. Go to **Users and groups > Users**.
@@ -175,7 +174,7 @@ In the Groups list view, there is an overflow menu that lists the actions that c
 ### Granting admin privileges to groups
 {: #grant-admin-groups}
 
-Group privileges dictate what actions canb be taken by users who are a part of the group.
+Group privileges dictate what actions can be taken by users who are a part of the group.
 
 1. Go to **Users and groups > Groups**.
 1. Select the group for which you want to grant admin privileges and select **Admin privileges** from the overflow menu.  
@@ -189,7 +188,7 @@ Group privileges dictate what actions canb be taken by users who are a part of t
 ### Granting object privileges to groups
 {: #grant-object-groups}
 
-Group privileges dictate what actions canb be taken by users who are a part of the group.
+Group privileges dictate what actions can be taken by users who are a part of the group.
 
 1. Go to **Users and groups > Groups**.
 1. Select the group for which you want to grant object privileges and select **Object privileges** from the overflow menu.
@@ -204,7 +203,17 @@ Group privileges dictate what actions canb be taken by users who are a part of t
 1. Update, grant, or revoke object privileges by putting ticks in corresponding boxes.
 1. Click **Save**.
 
-### Deleting groups
+### Comparing groups
+{: #compare-groups}
+
+1. Go to **Users and groups > Groups**.
+1. Click **Workload management**.
+1. Click **Compare groups**.
+1. Select the groups you want to compare.
+1. Select the time within which you want to compare the chosen groups.  
+   You can see the results on the *Comparison graph*.
+
+### Removing groups
 {: #delete-groups}
 
 1. Go to **Users and groups > Groups**.
