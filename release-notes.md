@@ -22,6 +22,46 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
+## February 2022
+{: #feb2023}
+
+## New features and enhacements
+{: #feb2023}
+
+- Use time travel queries to retrieve and analyze historical data without having to develop extra application logic such as history tables. {{site.data.keyword.netezza_short}} time travel comes in handy when you want to track the history of data changes or reconstruct your data. By using this powerful tool, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time.
+
+For more information, see [Getting started with time travel](/docs/netezza?topic=netezza-introducing_tt).
+
+- The **nzbackup** and **nzrestore** destination directory limit was updated. Previously, only 16 directory locations to read/write were supported. Now the limit is 32.
+
+- The location of postmaster and postgres core dumps was changed.
+
+| Core dump       | Previous location | New location |
+| -----------     | -----------       | ----------   |
+| Postmaster cores| NZ_DATA_DIR/global| NZ_LOG_DIR/postgres/postmaster/|
+| Postgre cors    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres   |
+
+### Known issues
+{: #kifeb2023}
+
+If a common table expression or derived table query contains column names or column aliases, which begin with an underscore, Netezza Performance Server deletes these columns in the query result set.  
+If there are no columns to display, Netezza Performance Server returns the following error.
+
+```sh
+ERROR:  No columns are selected due to column alias begin with underscore
+```
+{: screen}
+
+Example:
+
+```sql
+create table t1 ( c1 int , c2 int);
+CREATE TABLE
+with tab1 as ( select c1 as _c1 , c2 as _c2 from t1 ) select tab1.* from tab1; ERROR:  No columns are selected due to column alias begin with underscore
+select tab1.* from ( select c1 as _c1 , c2 as _c2 from t1 ) as tab1; ERROR:  No columns are selected due to column alias begin with underscore
+```
+{: screen}
+
 ## July 2022
 {: #july2022}
 
@@ -41,10 +81,11 @@ As of July 28, 2022, you can access data from data lakes and move data between a
 
 Example:
 
-```
+```sql
 SYSTEM.ADMIN(ADMIN)=> create table t1 ( "datasource" int);
 CREATE TABLE
 ```
+{: codeblock}
 
 ## June 2022
 {: #june2022}

@@ -124,7 +124,7 @@ Now, you can query the loaded data by using the improved read/write performance,
 
 - To identify the passenger count, run:
 
-   ```
+   ```sql
    select
       sum("passenger_count")
    from YELLOW_TAXI_JANUARY_2022_LOADED;
