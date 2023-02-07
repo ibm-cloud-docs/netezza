@@ -19,12 +19,6 @@
         "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-overview_singularity"
       },
       {
-        "title": "Query historical data",
-        "description": "Learn how to retrieve and analyze historical data without having to develop additional application logic such as history tables. With Netezza Performance Server time travel, you can access data that was changed or deleted at past points in time or within a past period of time.",
-        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-introducing_tt"
-
-      },
-      {
         "title": "Web console documentation",
         "description": "Learn how to access and use the Netezza Performance Server web console.",
         "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-getstarted-console"
