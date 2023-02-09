@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-10-12"
+  years: 2023
+lastupdated: "2023-09-02"
 
 keywords: bnr, backup and restore, backup, restore
 
@@ -20,7 +20,7 @@ subcollection: netezza
 # Overview
 {: #bnr-overview}
 
-{{site.data.keyword.netezza_full}} supports full, differential, and cumulative backups that can be performed on demand or according to a schedule.
+{{site.data.keyword.netezza_full}} supports full, differential, and cumulative backups that can be performed on demand or according to a schedule. You can run differential and/or cumulative backups only after you run a full backup first.
 
 You cannot backup (**nzbackup**) and restore (**nzrestore**) external data source objects.
 {: note}
