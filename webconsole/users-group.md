@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-02-09"
 
 keywords: web console, users and groups, creating users, creating groups, users, groups, comparing groups
 
@@ -50,7 +50,7 @@ The *Users and groups* view displays all of your database user accounts and grou
 
 1. Optionally, you can add the user account to any available groups by ticking the box next to the name of the group.
 
-   If you want a user to have the necessary privileges to do scaling, pause and resume operations, you must add the user to the **ADMINISTRATORS** group.
+   If you want a user to have the necessary privileges to do scaling, pause and resume operations, and backup and restore, you must add the user to the **ADMINISTRATORS** group.
 
 ### Information about users
 {: #user-info}
