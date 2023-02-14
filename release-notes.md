@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-05-23"
+  years: 2023
+lastupdated: "2023-02-14"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -32,14 +32,22 @@ subcollection: netezza
 
 For more information, see [Getting started with time travel](/docs/netezza?topic=netezza-introducing_tt).
 
-- The **nzbackup** and **nzrestore** destination directory limit was updated. Previously, only 16 directory locations to read/write were supported. Now the limit is 32.
+- The **nzbackup** and **nzrestore** destination directory limit is updated. Previously, only 16 directory locations to read/write were supported. Now, the limit is 32.
 
-- The location of postmaster and postgres core dumps was changed.
+- The location of postmaster and postgres core dumps is changed.
 
 | Core dump       | Previous location | New location |
 | -----------     | -----------       | ----------   |
 | Postmaster cores| NZ_DATA_DIR/global| NZ_LOG_DIR/postgres/postmaster/|
 | Postgre cors    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres   |
+
+- Automatic pause and resume is enabled in the web console.
+
+## Components
+{: #components}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.5
+- Web console 4.0.11
 
 ### Known issues
 {: #kifeb2023}
