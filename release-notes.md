@@ -28,8 +28,7 @@ subcollection: netezza
 ## New features and enhacements
 {: #feb2023}
 
-- Use time travel queries to retrieve and analyze historical data without having to develop extra application logic such as history tables. {{site.data.keyword.netezza_short}} time travel comes in handy when you want to track the history of data changes or reconstruct your data. By using this powerful tool, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time.
-
+- Use time travel queries to retrieve and analyze historical data without having to develop extra application logic such as history tables. {{site.data.keyword.netezza_short}} time travel comes in handy when you want to track the history of data changes or reconstruct your data. By using this powerful tool, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time.  
 For more information, see [Getting started with time travel](/docs/netezza?topic=netezza-introducing_tt).
 
 - The **nzbackup** and **nzrestore** destination directory limit is updated. Previously, only 16 directory locations to read/write were supported. Now, the limit is 32.
