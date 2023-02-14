@@ -87,7 +87,7 @@ toc:
             - topicgroup:
                 label: Setting IBM IAM authentication
                 topics:
-                - authentication/ibmiam_authentication.md
+                - authentication/ibmiam_autnentication.md
                 - authentication/iam-docs.md
             - authentication/azuread_authenticating.md
             - authentication/ldap_authentication.md
