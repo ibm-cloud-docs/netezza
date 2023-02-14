@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2023-02-13"
+  years: 2023
+lastupdated: "2023-02-14"
 
 keywords: web console, queries
 
