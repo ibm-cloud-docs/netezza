@@ -1,6 +1,6 @@
 {
     "title": "Netezza Performance Server",
-    "lastupdated": "2022-12-09",
+    "lastupdated": "2023-02-07",
     "introduction": "Welcome to the Netezza Performance Server for Cloud Pak for Data as a Service product documentation.",
     "section_recommended": [
       {
@@ -17,12 +17,6 @@
         "title": "Query data from data lakes",
         "description": "Learn how to use external tables to access parquet files that are stored outside of your database in data lakes (on AWS S3), and analyze this data by using the robust and massively parallel Netezza Performance Server execution engine.",
         "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-overview_singularity"
-      },
-      {
-        "title": "Query historical data",
-        "description": "Learn how to retrieve and analyze historical data without having to develop additional application logic such as history tables. With Netezza Performance Server time travel, you can access data that was changed or deleted at past points in time or within a past period of time.",
-        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-introducing_tt"
-
       },
       {
         "title": "Web console documentation",
