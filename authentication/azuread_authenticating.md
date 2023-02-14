@@ -78,12 +78,12 @@ SSL enabled connection. Cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol
 1. Create a user or users with the external authentication method set to `AzureAD`.
 
 ```sql
-create user "USER" with auth external 'azuread';
+create user "USER" with auth external 'AzureAD';
 CREATE USER
 ```
 {: codeblock}
 
-1. Verify whether the user was added successfully.
+1. Verify whether the user was created successfully.
 
     ```sql
     \q
@@ -97,7 +97,7 @@ CREATE USER
     ```sql
     \q
 
-    nzsql -u '"xyz@example.example.com"' -pw PASSWORD
+    nzsql -u '"xyz@example.example.com"' -pw XXXXXXXXXXXXXX
     Welcome to nzsql, the IBM Netezza SQL interactive terminal.
 
     Type: \h for help with SQL commands

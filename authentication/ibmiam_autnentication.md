@@ -84,7 +84,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
     ```
     {: codeblock}
 
-1. Verify whether the user was added successfully.
+1. Verify whether the user was created successfully.
 
     ```sql
     \q
@@ -98,7 +98,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
     ```sql
     \q
 
-    nzsql -u '"xyz@ibm.com"' -pw XXXXXXXXXXXXx
+    nzsql -u '"xyz@ibm.com"' -pw XXXXXXXXXXXXX
     Welcome to nzsql, the IBM Netezza SQL interactive terminal.
 
     Type: \h for help with SQL commands
