@@ -89,7 +89,7 @@ toc:
                 topics:
                 - authentication/ibmiam_authentication.md
                 - authentication/iam-docs.md
-            - authentication/azuread_authentication.md
+            - authentication/azuread_authenticating.md
             - authentication/ldap_authentication.md
       - topicgroup:
          label: Netezza Performance Server and Kafka
