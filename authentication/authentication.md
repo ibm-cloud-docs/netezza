@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-14-02"
+lastupdated: "2023-02-14"
 
 keywords:
 
@@ -22,10 +22,10 @@ subcollection: netezza
 {:caption: .caption}
 {:codeblock: .codeblock}
 
-# Authenticating
+# Managing authentication methods
 {: #authenticating}
 
-## Authentication methods
+## {{site.data.keyword.netezza_short}} authentication methods
 {: #authmethods}
 
 {{site.data.keyword.netezza_full}} offers the following authentication methods for {{site.data.keyword.netezza_short}} database users:
@@ -33,7 +33,9 @@ subcollection: netezza
 1. Local authentication
 1. LDAP authentication
 1. Azure Active Directory (Azure AD) authentication
-1. IBM IAM authentication
+1. [IBM IAM authentication](//docs/netezza?topic=netezza-iam-docs)
+
+By default, local authentication and IBMIAM are enabled on the system.
 
 Two factor authentication is not supported with an external authentication system.
 {: important}
@@ -55,11 +57,6 @@ Examples:
 REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID' tenantid 'AZURE TENANT ID'
 ```
 {: codeblock}
-
-   See:
-
-   - [How to find your Azure Active Directory tenant ID](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)
-   - [How to: Get an Azure Application ID](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/msipcthin2/application-id?)
 
 - For IBM IAM:
 
