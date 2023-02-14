@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022
-lastupdated: "2022-11-21"
+lastupdated: "2023-02-14"
 
 keywords: netezza time travel, enabling time travel on netezza, disabling time travel on netezza, enabling time travel, disabling time travel, time travel
 
