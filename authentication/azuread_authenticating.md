@@ -48,23 +48,23 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
 1. Log in to your {{site.data.keyword.netezza_short}} instance.
 1. Connect to the database by using `nzsql`.
 
-```sql
-nzsql
-```
-{: codeblock}
+    ```sql
+    nzsql
+    ```
+    {: codeblock}
 
-Example:
+    Example:
 
-```sql
-nzsql
-Welcome to nzsql, the IBM Netezza SQL interactive terminal.  
-Type: \h for help with SQL commands
-? for help on internal slash commands
-\g or terminate with semicolon to execute query
-\q to quit  
-SSL enabled connection. Cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol: TLSv1.2
-```
-{: codeblock}
+    ```sql
+    nzsql
+    Welcome to nzsql, the IBM Netezza SQL interactive terminal.  
+    Type: \h for help with SQL commands
+    ? for help on internal slash commands
+    \g or terminate with semicolon to execute query
+    \q to quit  
+    SSL enabled connection. Cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol: TLSv1.2
+    ```
+    {: codeblock}
 
 1. As admin, register an `AzureAD` external authentication system.  
    Specify the `clientid` and `tenantid` parameters.
@@ -77,11 +77,11 @@ SSL enabled connection. Cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol
 
 1. Create a user or users with the external authentication method set to `AzureAD`.
 
-```sql
-create user "USER" with auth external 'AzureAD';
-CREATE USER
-```
-{: codeblock}
+    ```sql
+    create user "USER" with auth external 'AzureAD';
+    CREATE USER
+    ```
+    {: codeblock}
 
 1. Verify whether the user was created successfully.
 
