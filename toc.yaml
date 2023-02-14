@@ -74,7 +74,17 @@ toc:
           - architecture-workload-isolation.md
           - endpoints.md
           - encryption.md
-          - iam-docs.md
+      - topicgroup:
+          label: Managing authentication methods
+          topics:
+            - authentication/authentication.md
+            - topicgroup:
+                label: Setting IBM IAM authentication
+                topics:
+                - authentication/ibmiam_authentication.md
+                - authentication/iam-docs.md
+            - authentication/azuread_authentication.md
+            - authentication/ldap_authentication.md
       - topicgroup:
          label: Netezza Performance Server and Kafka
          topics:
