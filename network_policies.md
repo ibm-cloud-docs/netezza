@@ -41,7 +41,8 @@ By using these form-factors, you can create a network policy as either an `allow
 ### Block and allow policies
 {: #nw-block-allow}
 
-**Block policy**
+#### Block policy
+{: #blockpolicy}
 
 Specifies a type of policy that prevents you from the following:
 
@@ -50,7 +51,8 @@ Specifies a type of policy that prevents you from the following:
 - Connecting from the {{site.data.keyword.netezza_short}} database to any device or service that has either the specified hostname or an IP address in the range that is specified by CIDR.
 
 
-**Allow policy**
+1. Allow policy
+{: #allowpolicy}
 
 Specifies a policy that allows you to do the following:
 

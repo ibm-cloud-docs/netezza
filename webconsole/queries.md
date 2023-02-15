@@ -47,15 +47,13 @@ You do not need to be the administrator to view recent queries. You must have th
 
 1. When you add the necessary information, you can do one of the following:
 
-     - Click **Run** to run the query.
+    - Click **Run** to run the query.  
+      The results of the query are displayed in the panel.
 
-       The results of the query are displayed in the panel.
+    - Click the floppy disk icon that is next to the `Query field` name to save the query as a template.  
+      The saved query is added to **Queries > Recent Queries**.
 
-     - Click the floppy disk icon that is next to the `Query field` name to save the query as a template.
-
-       The saved query is added to **Queries > Recent Queries**.
-
-     - Click **Clear** to clear the query.
+    - Click **Clear** to clear the query.
 
 ### Finding stored queries
 {: #find-stored-queries}
