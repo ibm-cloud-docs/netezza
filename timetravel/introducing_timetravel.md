@@ -30,7 +30,8 @@ By using {{site.data.keyword.netezza_short}} time travel, you can access histori
 
 [Create or alter objects](/docs/netezza?topic=netezza-enablingdisabling_tt) to start running time travel queries.
 
-**Business use cases and examples**
+## Business use cases and examples
+{: #businessusecases}
 
 - Conducting data audits  
     You can examine and audit past data because time travel provides an audit trail of data insertions, deletions, and changes to attributes over the course of business activity.  

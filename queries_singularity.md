@@ -165,7 +165,7 @@ select ($1 > $2) && ($1 < $3), squares, 20::float, 200::float from nyc_taxi;
 
 Example:
 
-```
+```sql
 num | squares |     timestamps      | fibonacci | fibs_is_even | Uppercase | Lowercase
 -----+---------+---------------------+-----------+--------------+-----------+-----------
    1 |       1 | 2021-01-01 12:15:00 |         1 | f            | A         | a
