@@ -1,6 +1,6 @@
 {
     "title": "Netezza Performance Server",
-    "lastupdated": "2023-02-14",
+    "lastupdated": "2023-02-15",
     "introduction": "Welcome to the Netezza Performance Server for Cloud Pak for Data as a Service product documentation.",
     "section_recommended": [
       {
@@ -25,7 +25,7 @@
 
       },
       {
-        "title": "Web console documentation",
+        "title": "Web console",
         "description": "Learn how to access and use the Netezza Performance Server web console.",
         "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-getstarted-console"
       }
