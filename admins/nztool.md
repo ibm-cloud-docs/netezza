@@ -41,8 +41,24 @@ Supported platforms for the `nz` tool:
 Run the command:
 
 ```
-curl -o nz -k https://<external hostname>/v1/download/<platform specific package>
+curl -o nz -k https://<external hostname>/<version number>/download/<platform specific package>
 chmod +x nz
+```
+{: codeblock}
+
+Examples:
+
+To download `nz` on a Linux box, run:
+
+```
+curl -o nz -k https://<external hostname>/v2/download/nz-linux-amd64
+```
+{: codeblock}
+
+To download `nz` on Windows, run:
+
+```
+curl.exe -o nz.exe -k https://<external hostname>/v2/download/nz-windows-amd64
 ```
 {: codeblock}
 
@@ -61,20 +77,20 @@ The `nz` command syntax can take two forms, depending on whether you created sho
    nz [command] [subcommands] [options]
    ```
    {: screen}
-   
+
    Example:
 
    ```
    ./nz nzstate -host <nps-hostname> -u <nps-admin-user> -pw <nps-admin-user-password>
    System state is 'Online'.
    ```
-   
+
 - Shortcut syntax
 
    ```
    [command] [subcommand] [options]
    ```
-   
+
    Example:
 
    ```
@@ -313,7 +329,7 @@ nz_zonemap
 
 ## Creating nz shortcuts with the nz install command
 {: #nzinstall-shortcuts}
-  
+
 You can create shortcuts for the following commonly used commands by running the `nz install` command. As a result, for example, instead of running `nz nzstate`, you can issue `nzstate`.
 
 ```
@@ -360,7 +376,7 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
    export NZ_PASSWORD=<nps-admin-user-password>
    ```
    {: codeblock}
-   
+
 - From Windows (`cmd.exe`), run:
 
    ```
@@ -369,7 +385,7 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
    set NZ_PASSWORD=<nps-admin-user-password>
    ```
    {: codeblock}
-   
+
 ## CLI
 {: #cli}
 
