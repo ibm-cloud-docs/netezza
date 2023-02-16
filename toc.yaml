@@ -79,7 +79,7 @@ toc:
           topics:
             - authentication/authentication.md
             - topicgroup:
-                label: Setting IBM IAM authentication
+                label: Setting IBM IAM authentication 
                 topics:
                 - authentication/ibmiam_autnentication.md
                 - authentication/iam-docs.md
