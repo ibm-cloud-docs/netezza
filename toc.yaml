@@ -74,17 +74,7 @@ toc:
           - architecture-workload-isolation.md
           - endpoints.md
           - encryption.md
-      - topicgroup:
-          label: Managing authentication methods
-          topics:
-            - authentication/authentication.md
-            - topicgroup:
-                label: Setting IBM IAM authentication 
-                topics:
-                - authentication/ibmiam_autnentication.md
-                - authentication/iam-docs.md
-            - authentication/azuread_authenticating.md
-            - authentication/ldap_authentication.md
+          - iam-docs.md
       - topicgroup:
          label: Netezza Performance Server and Kafka
          topics:
@@ -96,6 +86,9 @@ toc:
          - examples_singularity.md
          - examples3_singularity.md
          - examples2_singularity.md
+         - link:
+             label: External tables
+             href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - topicgroup:
          label: Time travel and historical data 
          topics:
@@ -109,9 +102,6 @@ toc:
             - timetravel/runningqueries_timetravel.md
             - timetravel/queryingdata_timetravel.md
          - timetravel/sqlcommands_timetravel.md
-         - link:
-             label: External tables
-             href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - link:
           label: Loading data
           href: https://www.ibm.com/docs/en/netezza?topic=npsdu-data-loading-2
