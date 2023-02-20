@@ -30,7 +30,7 @@ subcollection: netezza
 
 {{site.data.keyword.netezza_full}} offers the following authentication methods for {{site.data.keyword.netezza_short}} database users:
 
-1. Local authentication
+1. Local authentication 
 1. LDAP authentication
 1. Azure Active Directory (Azure AD) authentication
 1. IBM IAM authentication
