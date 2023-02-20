@@ -26,7 +26,7 @@ subcollection: netezza
 
 On the page, you can see the most recent 2000 queries.
 
-You do not need to have the administrator privileges to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
+You do not need to have the administrator privileges to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements. 
 
 ## Stored queries
 {: #stored-queries}
