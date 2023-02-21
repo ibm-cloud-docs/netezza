@@ -47,15 +47,13 @@ You do not need to have the administrator privileges to view recent queries. You
 
 1. When you add the necessary information, you can do one of the following:
 
-   - Click **Run** to run the query.
+    - Click **Run** to run the query.  
+      The results of the query are displayed in the panel.
 
-     The results of the query are displayed in the panel.
+    - Click the floppy disk icon that is next to the `Query field` name to save the query as a template.  
+      The saved query is added to **Queries > Recent Queries**.
 
-   - Click the floppy disk icon that is next to the `Query field` name to save the query as a template.
-
-     The saved query is added to **Queries > Recent Queries**.
-
-   - Click **Clear** to clear the query.
+    - Click **Clear** to clear the query.
 
 ### Finding stored queries
 {: #find-stored-queries}
@@ -77,6 +75,7 @@ You do not need to have the administrator privileges to view recent queries. You
 To access the page, go to **Queries > Query history** or select **Query history** from the home page.
 
 When you are on the **Query history** page, you can do the following:
+
 - View your data in a table or card view.
 - Export data to export your query history to a data file.
 - Sort any column by placing the cursor on the column header.
@@ -96,71 +95,71 @@ When you are on the **Query history** page, you can do the following:
 ### Query history columns
 {: #query-history-columns}
 
-- **Start time**
-   Specifies the time when the query started.
+- **Start time**  
+    Specifies the time when the query started.
 
-- **End time**
-   Specifies the time when the query finished.
+- **End time**  
+    Specifies the time when the query finished.
 
-- **Elapsed time**
-   Specifies the time that it took the query to run.
+- **Elapsed time**  
+    Specifies the time that it took the query to run.
 
-- **Query text**
-   Specifies the SQL command of the query.
+- **Query text**  
+    Specifies the SQL command of the query.
 
-- **Database**
-   Specifies the name of the database on which the query ran.
+- **Database**  
+    Specifies the name of the database on which the query ran.
 
-- **Schema**
-   Specifies the schema that was used for the query.
+- **Schema**  
+    Specifies the schema that was used for the query.
 
-- **User name**
-   Species the name of the user that ran the query.
+- **User name**  
+    Species the name of the user that ran the query.
 
-- **Group**
-   Specifies the group of users from which the query originates.
+- **Group**  
+    Specifies the group of users from which the query originates.
 
-- **Result rows**
-   Specifies the number of result rows that were returned by the query.
+- **Result rows**  
+    Specifies the number of result rows that were returned by the query.
 
-- **Prep time**
-   Specifies the preparation time that was needed for the query.
+- **Prep time**  
+    Specifies the preparation time that was needed for the query.
 
-- **Status**
-   Specifies the completion status of the query.
+- **Status**  
+    Specifies the completion status of the query.
 
-- **Plan ID**
-   Specifies the ID of the system-generated plan for the query.
+- **Plan ID**  
+    Specifies the ID of the system-generated plan for the query.
 
-- **Client IP**
-   Specifies the IP of the client that ran the SQL query.
+- **Client IP**  
+    Specifies the IP of the client that ran the SQL query.
 
-- **GRA time**
-   Specifies the time that the query spent at the GRA.
+- **GRA time**  
+    Specifies the time that the query spent at the GRA.
 
-- **Checksum**
-   Specifies the checksum of the query.
+- **Checksum**  
+    Specifies the checksum of the query.
 
-- **Client type**
-   Specifies the type of the client that ran the query.
+- **Client type**  
+    Specifies the type of the client that ran the query.
 
-- **Client host**
-   Specifies the hostname of the client from which the query originates.
+- **Client host**  
+    Specifies the hostname of the client from which the query originates.
 
-- **Resource group name**
-   Specifies the resource group on which the query ran.
+- **Resource group name**  
+    Specifies the resource group on which the query ran.
 
-- **Session ID**
-   Specifies the ID of the session in which the query ran.
+- **Session ID**  
+    Specifies the ID of the session in which the query ran.
 
-- **Client user ID**
-   Specifies the client user ID of the client that ran the query.
+- **Client user ID**  
+    Specifies the client user ID of the client that ran the query.
 
-- **Client application name**
-   Specifies the client application name from which the query originates.
+- **Client application name**  
+    Specifies the client application name from which the query originates.
 
-- **Client workstation name**
-   Specifies the client workstation name from which the query originates.
+- **Client workstation name**  
+    Specifies the client workstation name from which the query originates.
 
-- **Client accounting string**
-   Specifies the accounting string of the client that ran the query.
+- **Client accounting string**  
+    Specifies the accounting string of the client that ran the query.

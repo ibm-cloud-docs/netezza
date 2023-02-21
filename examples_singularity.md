@@ -109,7 +109,7 @@ The *parquet* column names are case sensitive. You must use double quotation mar
 
    Output:
 
-   ```
+   ```sql
    SUM
    -----
    3324167
