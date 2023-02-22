@@ -47,6 +47,19 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP' with BASE SERVER
 ```
 {: codeblock}
 
+Where:
+
+| Input       | Description  |
+| ----------- | ----------- |
+| VERSION     | The LDAP protocol version number to use. The default is 3.       |
+| BINDDN      | The Distinguished Name to use when binding to the LDAP server. A bind string is optional. This clause is typically not defined for conducting anonymous LDAP look-ups.        |
+| BINDPW      | The password that accompanies the `BINDDN` for binding to the LDAP server. |
+| PORT        | The port number to use when it connects to the LDAP server. The default is 389. |
+| SCOPE       | The scope to use when it searches the LDAP tree. |
+| SSL         | Default is `OFF`. If `ON`, SSL is used when it contacts the LDAP server. When you specify LDAP as the authentication type, you must specify the SSL option. |
+| ATTRNAME    | The field defined in the LDAP server that contains the user name. For Microsoft Active Directory, this is typically 'sAMAccountname', 'uid' for IBM® Tivoli Directory Server, and 'cn' for OpenLDAP servers. The default is 'cn'. |
+| NAMECASE    | Indicates whether the LDAP server stores the user name in lowercase or uppercase. |
+
 ## Procedure
 {: #ldapprocedure}
 
