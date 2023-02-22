@@ -46,10 +46,10 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
 {: #azureadprocedure}
 
 1. Log in to your {{site.data.keyword.netezza_short}} instance.
-1. Connect to the database by using `nzsql`.
+1. Connect to the database by using `nzsql` as a user with administrative access.
 
     ```sql
-    nzsql
+    nzsql -u admin -pw XXXXX
     ```
     {: codeblock}
 
@@ -78,8 +78,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
 1. Create a user or users with the external authentication method set to `AzureAD`.
 
     ```sql
-    create user "USER" with auth external 'AzureAD';
-    CREATE USER
+    CREATE USER "USER" with auth external 'AzureAD';
     ```
     {: codeblock}
 

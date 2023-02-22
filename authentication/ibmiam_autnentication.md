@@ -42,10 +42,10 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
 {: #ibmiamprocedure}
 
 1. Log in to your {{site.data.keyword.netezza_short}} instance.
-1. Connect to the database by using `nzsql`.
+1. Connect to the database by using `nzsql` as a user with administrative access.
 
     ```sql
-    nzsql
+    nzsql -u admin -pw XXXXX
     ```
     {: codeblock}
 
