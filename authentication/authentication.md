@@ -35,7 +35,7 @@ subcollection: netezza
 1. Azure Active Directory (Azure AD) authentication
 1. IBM IAM authentication
 
-By default, local authentication and IBMIAM are enabled on the system. You can set your authentication method by running the `REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement.
+By default, local authentication and IBMIAM are enabled on the system. You can set your authentication method by running the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
 
 
 Two factor authentication is not supported with an external authentication system.

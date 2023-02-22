@@ -24,7 +24,7 @@ subcollection: netezza
 # Setting IBM IAM authentication
 {: #ibmiamauth}
 
-Set your authentication method to `AzureAD` with the `REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement.
+Set your authentication method to `AzureAD` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
 {: shortdesc}
 
 Two factor authentication is not supported with an external authentication system.
