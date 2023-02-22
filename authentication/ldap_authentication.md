@@ -59,6 +59,7 @@ Where:
 | SSL         | Default is `OFF`. If `ON`, SSL is used when it contacts the LDAP server. When you specify LDAP as the authentication type, you must specify the SSL option. |
 | ATTRNAME    | The field defined in the LDAP server that contains the user name. For Microsoft Active Directory, this is typically 'sAMAccountname', 'uid' for IBM® Tivoli Directory Server, and 'cn' for OpenLDAP servers. The default is 'cn'. |
 | NAMECASE    | Indicates whether the LDAP server stores the user name in lowercase or uppercase. |
+{: caption="Table 1. REGISTER EXTERNAL AUTHENTICATION SYSTEM command config for LDAP." caption-side="bottom"}
 
 ## Procedure
 {: #ldapprocedure}
