@@ -25,7 +25,7 @@ subcollection: netezza
 # Setting Azure AD authentication
 {: #azureadauth}
 
-Set your authentication method to `AzureAD` with the `REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement.
+Set your authentication method to `AzureAD` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
 {: shortdesc}
 
 Two factor authentication is not supported with an external authentication system.
@@ -39,8 +39,8 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
 ```
 {: codeblock}
 
-- For `clientid`, see [How to: Get an Azure Application ID](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/msipcthin2/application-id?)
-- For `tenantid`, see [How to find your Azure Active Directory tenant ID](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)
+- For `clientid`, see [How to: Get an Azure Application ID](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/msipcthin2/application-id?).
+- For `tenantid`, see [How to find your Azure Active Directory tenant ID](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
 
 ## Procedure
 {: #azureadprocedure}
