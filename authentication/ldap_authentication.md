@@ -51,10 +51,10 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP' with BASE SERVER
 {: #ldapprocedure}
 
 1. Log in to your {{site.data.keyword.netezza_short}} instance.
-1. Connect to the database by using `nzsql`.
+1. Connect to the database by using `nzsql` as a user with administrative access.
 
     ```sql
-    nzsql
+    nzsql -u admin -pw XXXXX
     ```
     {: codeblock}
 
@@ -83,8 +83,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP' with BASE SERVER
 1. Create a user or users with the external authentication method set to `LDAP`.
 
     ```sql
-    create user "USER" with auth external 'LDAP';
-    CREATE USER
+    CREATE USER "USER" with auth external 'LDAP';
     ```
     {: codeblock}
 
