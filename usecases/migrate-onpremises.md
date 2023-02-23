@@ -1,15 +1,12 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-10-26"
+  years: 2023
+lastupdated: "2023-02-23"
 
 keywords: use cases, Netezza tutorials, migrating on-premises backups to cloud, migrating
 
 subcollection: netezza
-
-content-type: tutorial
-services:
 
 ---
 
