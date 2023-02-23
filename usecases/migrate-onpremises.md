@@ -20,7 +20,7 @@ subcollection: netezza
 # Migrating on-premises backups to cloud
 {: #migrating-onprem-cloud}
 
-Follow these steps to  migrate a backup image take on {{site.data.keyword.netezza_short}} on Cloud Pak for Data System (on premises) to {{site.data.keyword.netezza_full}}.
+Follow these steps to migrate a backup image take on {{site.data.keyword.netezza_short}} on Cloud Pak for Data System (on premises) to {{site.data.keyword.netezza_full}}.
 {: shortdesc}
 
 1. Migrate your backup image to IBM Cloud Object Store.
