@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-14"
+lastupdated: "2023-02-23"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -33,6 +33,12 @@ subcollection: netezza
 
 - {{site.data.keyword.netezza_short}} 11.2.2.6
 - Web console 4.0.12
+
+### Known issues
+{: #kimarch2023}
+
+You might experience a rare timing issue if you perform the following sequence of actions: 
+
 
 ## February 2022
 {: #feb2023}
