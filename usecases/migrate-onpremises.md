@@ -20,7 +20,7 @@ services:
 {:note: .note}
 {:codeblock: .codeblock}
 
-# Tutorial migrating on-premises backups to cloud
+# Migrating on-premises backups to cloud
 {: #migrating-onprem-cloud}
 
 Follow these steps to  migrate a backup image take on {{site.data.keyword.netezza_short}} on Cloud Pak for Data System (on premises) to {{site.data.keyword.netezza_full}}.
@@ -37,7 +37,7 @@ Follow these steps to  migrate a backup image take on {{site.data.keyword.netezz
 1. Synchronize the on-premises backup image to the cloud instance by using the `nz` tool with the `bnr` option.
 
    ```sh
-   $./nz bnr ls scan-object-store -host <nps-hostname> -u <nps-admin-user> -pw <nps-admin-user-password> -unique-id <backupuniqueID>
+   $./nz bnr ls scan-object-store -host<NPS HOSTNAME -u ADMIN -pw PASSWORD -unique-id BACKUP UNIQUE ID
    ```
    {: #codeblock}
 
