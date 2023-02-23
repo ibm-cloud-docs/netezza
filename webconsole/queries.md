@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-02-23"
+  years: 2023
+lastupdated: "2023-02-14"
 
 keywords: web console, queries
 
@@ -26,7 +26,7 @@ subcollection: netezza
 
 On the page, you can see the most recent 2000 queries.
 
-You do not need to be the administrator to view recent queries. You must have the *List* permission for the users who ran the queries and the database objects to see the history records.
+You do not need to have the administrator privileges to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
 ## Stored queries
 {: #stored-queries}

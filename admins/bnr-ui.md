@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2021
-lastupdated: "2021-11-10"
+  years: 2023
+lastupdated: "2023-02-13"
 
 keywords: bnr, backup and restore, backup, restore
 
@@ -19,7 +19,7 @@ subcollection: netezza
 # Backup and restore with the web console
 {: #bnr-webconsole}
 
-With the web console, you can run on demand backups, set, modify, and delete backup schedules, and restore backups.
+With the web console, you can run on demand backups, set, modify, and delete backup schedules, and restore backups. You can run differential and/or cumulative backups only after you run a full backup first. You can restore differential and/or cumulative backups only after you restore a full backup first.
 
 ## Running on demand backups
 {: #run-backups-ondemand}
@@ -28,12 +28,12 @@ With the web console, you can run on demand backups, set, modify, and delete bac
 1. Make sure that a destination bucket for the backups is created.
 
    For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).   
-   
+
 1. Select a destination bucket for your backup.
 1. Select the backup type.
 
    You can choose a full, differential or cumulative backup type.
-   
+
 1. Specify whether you want to back up all databases or select databases.
 1. Click **Back up now**.
 
@@ -44,7 +44,7 @@ With the web console, you can run on demand backups, set, modify, and delete bac
 1. Make sure that a destination bucket for the backups is created.
 
    For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).
-   
+
 1. Select a destination bucket for your backup.
 1. Select the backup type.
 1. Specify whether you want to back up all databases or select databases.
@@ -54,7 +54,7 @@ With the web console, you can run on demand backups, set, modify, and delete bac
 1. Specify the frequency.
 
    You can choose between daily, weekly, and monthly intervals.
-   
+
 1. Click **Create schedule**.
 
 For more information about scheduled backups, see [Scheduled backups](/docs/netezza?topic=netezza-bnr-overview#scheduled-bnr).
@@ -86,7 +86,7 @@ For more information about scheduled backups, see [Scheduled backups](/docs/nete
 ## Deleting backups
 {: #delete-backups}
 
-You can't manually remove information about backups that were taken. 
+You can't manually remove information about backups that were taken.
 
 If you delete your deployment, its backups are deleted automatically within 30 days.
 
