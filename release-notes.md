@@ -49,7 +49,7 @@ You might experience a rare timing issue if you perform the following sequence o
 Workaround:
 Mark the free nodes as cordon nodes before you initiate their deletion and continue (with the rest of the steps) to delete them. If the issue reoccurs, repeat the workaround.**draft-comment: wording needs to be clarified as it mentions reoccurrence during expansion?**
 
-## February 2022
+## February 2023
 {: #feb2023}
 
 ### New features and enhancements
