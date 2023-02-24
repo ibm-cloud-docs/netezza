@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-14"
+lastupdated: "2023-02-24"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -22,10 +22,37 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
+## March 2023
+{: #march2023}
+
+### New features and enhancements
+{: #march2023}
+
+### Components
+{: #components11226}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.6
+- Web console 4.0.12
+
+### Known issues
+{: #kimarch2023}
+
+You might experience a rare timing issue if you perform the following sequence of actions.
+
+1. Initiate scaling job and observe removing pod starts.
+1. After a cronjob starts a run, you see it identifies out of x nodes , x1 nodes are occupied and x2 nodes are free. After calculation cronjob applied scale-in protection to x1 nodes and decide to reduce count of nodegroup to x1.**draft-comment: wording needs to be clarified as pretty unclear**
+1. <Before x1 nodes are getting tainted by EKS-Nodegroup for deletion>. **draft-comment: wording needs to be clarified as pretty unclear**
+1. Part 2 of scaling job starts (which is responsible to scale to new desired size) and identifies a few nodes from x2 as available. It marking required node count available and proceeded for pod scheduling.**draft-comment: wording needs to be clarified as pretty unclear**
+1. <Cronjob finishes deletion and x2 nodes are deleted.>
+1. Scaling job returns the following output: x2 nodes are not available and pushed it self to pending state.**draft-comment: wording needs to be clarified as pretty unclear**
+
+Workaround:
+Mark the free nodes as cordon nodes before you initiate their deletion and continue (with the rest of the steps) to delete them. If the issue reoccurs, repeat the workaround.**draft-comment: wording needs to be clarified as it mentions reoccurrence during expansion?**
+
 ## February 2022
 {: #feb2023}
 
-### New features and enhacements
+### New features and enhancements
 {: #feb2023}
 
 - Use time travel queries to retrieve and analyze historical data without having to develop extra application logic such as history tables. {{site.data.keyword.netezza_short}} time travel comes in handy when you want to track the history of data changes or reconstruct your data. By using this powerful tool, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time. For more information, see [Getting started with time travel](/docs/netezza?topic=netezza-introducing_tt).
