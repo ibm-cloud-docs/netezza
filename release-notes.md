@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-14"
+lastupdated: "2023-02-24"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -22,7 +22,7 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-## February 2022
+## February 2023
 {: #feb2023}
 
 ### New features and enhacements
