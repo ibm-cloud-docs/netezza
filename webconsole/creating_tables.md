@@ -41,11 +41,11 @@ subcollection: netezza
       Data types also help sort data correctly and play a role in optimizing storage. For all these reasons, it is important to pick the appropriate data type.
    1. Specify whether or not you allow NULL values to be inserted.  
       A column that allows NULL values also allows rows to be inserted with no value in that column. A column that does not allow NULL values does not accept rows with no value.
-   1. Specify the default value to be used if no value is specified when a row is inserted.
-      
+   1. Specify the default value to be used if no value is specified when a row is inserted.      
+   1. In the *Distribute on* and *Organize on* sections, specify the distribution key for the table by selecting up to four columns.
+
       To add another column, click the plus sign.
 
-1. In the *Distribute on* and *Organize on* sections, specify the distribution key for the table by selecting up to four columns.
 1. Click **Create**.
 
 ## Column and table constraints
@@ -74,32 +74,30 @@ You cannot change constraint names or directly change the owner of the constrain
 ## Grooming tables
 {: #groom-tbls}
 
-Groom Table processes and reorganizes the table records in each data slice in a series of steps. You can perform operations such as SELECT, UPDATE, DELETE, and INSERT while the online data grooming is taking place.
-
-The SELECT operations run in parallel with the groom operations.
-
-The INSERT, UPDATE, and DELETE operations run serially between the groom steps.
-
-For CBTs, the groom steps are longer than for non-CBT, so the INSERT, UPDATE, and DELETE operations might be pending for a longer time until the current step completes.
+`GROOM TABLES` processes and reorganizes table records in each data slice in a series of steps. You can still run operations such as `SELECT`, `UPDATE`, `DELETE`, and `INSERT` while data grooming is happening.  
+`SELECT` operations run in parallel with the groom operations.  
+`INSERT`, `UPDATE`, and `DELETE` operations run serially between the groom steps.  
+For cluster based tables (CBTs), `GRROM TABLE` takes longer. Tthe `INSERT`, `UPDATE`, and `DELETE` operations might be pending longer until the current step completes.
 
 You can use the Groom Table functionality to reclaim disk space from deleted or outdated rows. You can also use this option to reorganize tables based on the clustered base table organizing keys or to migrate data from tables that have multiple stored versions.
 
 1. Go to **Databases**.
-1. Select your database.
-1. Go to **DB Objects > Tables**.
+1. Select your database and schema.
+1. Ensure that you are in the *DB Objects > Tables* tab.
 1. Select the table that you want to groom.
-1. Click **Groom**.
+1. Go to the *Grooms* tab.
+1. Click **Groom table**.
 
-- To run the Groom Table operation, a user must have the GROOM object privilege. Grooming a table is done as a user, not an administrator, so to run Groom Table, you must have object privileges on that table.
+- To run the operation, the user must have object privileges. The user does not have to be an administrator.
 
-- You cannot run Groom Table inside a transaction block (begin or commit pair) or with a stored procedure.
+- You cannot groom tables inside a transaction block (begin or commit pair) or with a stored procedure.
 
-- When you specify organizing keys for an existing table to make it a CBT, the new organization can impact the compression size of the table. The new organization can create sequences of records that improve the overall compression benefit, or it can create sequences that do not compress so well. Following a groom operation, your table size can change compared with its previous organization.
+- When you specify organizing keys for an existing table to make it a CBT, the new organization might impact the compression size of the table. The new organization can create sequences of records that improve the overall compression benefit, or it can create sequences that do not compress so well. After a groom operation, your table size might change.
 
 ### Modes
 {: #modes}
 
-You can choose different modes when running the Groom Table operation.
+You can choose different modes when you groom tables.
 
 |Value | Description|
 |:-----|:-----------|
