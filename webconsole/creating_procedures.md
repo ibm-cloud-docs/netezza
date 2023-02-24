@@ -29,16 +29,14 @@ subcollection: netezza
 1. Click **Create procedure**.
 1. Select the schema where you want to create a procedure.
 1. Type a name for the procedure.
-1. Specify the arguments.
-
+1. Specify the arguments.  
    This is to specify the parameter type list of the procedure. For example, `int`.
 
 1. Specify the return type of your procedure.
 
    For example, `int`.
 
-1. Specify the procedure body.
-
+1. Specify the procedure body.  
    This is the source code for the body of the stored procedure. For example
 
    ```sql

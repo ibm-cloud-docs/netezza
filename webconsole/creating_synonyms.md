@@ -29,9 +29,9 @@ subcollection: netezza
 1. Click **Create synonym**.
 1. Select the schema where you want to create the synonym.
 1. Type a name for the synonym.
-1. Specify the reference type.
-
+1. Specify the reference type.  
    For example, table, view, etc.
 
 1. Specify the name of the reference type for which you are creating this synonym.
 1. Click **Create**.
+
