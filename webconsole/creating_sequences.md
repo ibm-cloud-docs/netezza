@@ -32,8 +32,7 @@ subcollection: netezza
 1. Specify the starting integer value for the sequence.
 1. Specify the minimum value of the sequence.
 1. Specify the maximum value of the sequence.
-1. Select *Cycle* so the sequence restarts when it reaches its last value.
-
+1. Select *Cycle* so the sequence restarts when it reaches its last value.  
    The default is NO CYCLE, which means that the sequence stops when it reaches its last value.
 
 1. Click **Create**.

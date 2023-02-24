@@ -28,12 +28,10 @@ subcollection: netezza
 
 1. Go to **Databases**.
 1. Select the database in which you want to create a function.
-1. Select an object type and object.
-
+1. Select an object type and object.  
    For example, *Synonyms*.
 
-1. Select **Assign owner** from the overflow menu.
-
+1. Select **Assign owner** from the overflow menu.  
    The* Assign owner* window appears and the current owner of the object is displayed.
 
 1. Choose an owner.
@@ -46,8 +44,7 @@ To drop an owner, you must be the object owner, the admin user, or have appropri
 
 1. Go to **Databases**.
 1. Select the database in which you want to create a function.
-1. Select an object type and object.
-
+1. Select an object type and object.  
    For example, *Synonyms*.
 
 1. Select **Drop owner** from the overflow menu.
