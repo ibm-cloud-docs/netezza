@@ -75,6 +75,18 @@ toc:
           - endpoints.md
           - encryption.md
           - iam-docs.md
+      - topicgroup: 
+         label: Managing authentication methods
+         topics:
+         - authentication/authentication.md
+         - topicgroup:
+            label: Setting IBM IAM authentication
+            topics: 
+            - authentication/ibmiam_autnentication.md
+            - authentication/iam-docs.md
+         - authentication/azuread_authenticating.md
+         - authentication/ldap_authentication.md 
+         - https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication   
       - topicgroup:
          label: Netezza Performance Server and Kafka
          topics:
