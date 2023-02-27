@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-09"
+lastupdated: "2023-02-27"
 
 keywords: scaling, netezza scaling with the web console, compute scaling 
 

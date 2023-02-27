@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-11-17"
+lastupdated: "2023-02-27"
 
 keywords: smart scaling, scaling, Netezza Performance Server smart scaling,
 subcollection: netezza
