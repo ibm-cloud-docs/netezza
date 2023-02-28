@@ -30,7 +30,21 @@ toc:
           topics:
           - webconsole/get-strt.md
           - webconsole/users-group.md
-          - webconsole/databases.md
+          - topicgroup: 
+              label: Databases
+              topics: 
+              - webconsole/databases.md
+              - webconsole/creating_dbs.md
+              - webconsole/creating_schemas.md
+              - webconsole/creating_tables.md
+              - webconsole/creating_views.md
+              - webconsole/creating_sequences.md
+              - webconsole/creating_synonyms.md
+              - webconsole/creating_libraries.md
+              - webconsole/creating_functions.md
+              - webconsole/creating_aggregates.md
+              - webconsole/creating_procedures.md
+              - webconsole/managing_owners.md
           - webconsole/query-editor.md
           - webconsole/queries.md
           - webconsole/current-activity.md
@@ -40,14 +54,7 @@ toc:
               topics:
               - webconsole/settings.md
               - webconsole/scheduler-rules.md
-          - topicgroup:
-             label: Workload patterns
-             topics:
-             - webconsole/workload-patterns.md
-             - webconsole/wp_pausreresume.md
-             - webconsole/wp_autopauseresume.md
-             - webconsole/wp_scaling.md
-             - webconsole/wp_smartscaling.md
+          - webconsole/workload-patterns.md
           - topicgroup:
               label: Backup and restore
               topics:
