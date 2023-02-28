@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-02-28"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -36,19 +36,6 @@ subcollection: netezza
 
 ### Known issues
 {: #kimarch2023}
-
-You might experience a rare timing issue if you perform the following sequence of actions.
-
-1. Initiate scaling job and observe removing pod starts.
-1. After a cronjob starts a run, you see it identifies out of x nodes , x1 nodes are occupied and x2 nodes are free. After calculation cronjob applied scale-in protection to x1 nodes and decide to reduce count of nodegroup to x1. **draft-comment: wording needs to be clarified as pretty unclear.**
-1. Before x1 nodes are getting tainted by EKS-Nodegroup for deletion. **draft-comment: wording needs to be clarified as pretty unclear.**
-1. Part 2 of scaling job starts (which is responsible to scale to new desired size) and identifies a few nodes from x2 as available. It marking required node count available and proceeded for pod scheduling.**draft-comment: wording needs to be clarified as pretty unclear.**
-1. Cronjob finishes deletion and x2 nodes are deleted.
-1. Scaling job returns the following output: x2 nodes are not available and pushed it self to pending state.**draft-comment: wording needs to be clarified as pretty unclear.**
-
-Workaround:
-
-Mark the free nodes as cordon nodes before you initiate their deletion and continue (with the rest of the steps) to delete them. If the issue reoccurs, repeat the workaround. **draft-comment: wording needs to be clarified as it mentions reoccurrence during expansion?**
 
 ## February 2023
 {: #feb2023}
