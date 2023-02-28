@@ -30,7 +30,7 @@ toc:
           topics:
           - webconsole/get-strt.md
           - webconsole/users-group.md
-          - topicgroup:
+          - topicgroup: 
               label: Databases
               topics: 
               - webconsole/databases.md
