@@ -61,7 +61,7 @@ toc:
              - webconsole/wp_pausreresume.md
              - webconsole/wp_autopauseresume.md
              - webconsole/wp_scaling.md
-             - webconsole/wp_smartscaling.md
+             - webconsole/wp_smartscaling.md 
           - topicgroup:
               label: Backup and restore
               topics:
