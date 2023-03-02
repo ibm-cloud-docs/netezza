@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-09"
+  years: 2023
+lastupdated: "2023-03-02"
 
 keywords: autopause, auto-pause, autopause and resume, auto-pause and resume, auto-resume, resume, auto resuming Netezza, auto pausing Netezza
 

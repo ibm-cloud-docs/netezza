@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-01-11"
+  years: 2023
+lastupdated: "2023-03-02"
 
 keywords: connecting, private endpoints
 
@@ -47,7 +47,7 @@ There are two ways in which you can provide the subscription IDs:
 - At deployment
 - In the web console
 
-![Providing subscription IDs](conn_wc_d.png){: caption="Image 1. Ways to provide subscription IDs." caption-side="bottom"}
+![Providing subscription IDs](../images/conn_wc_d.png){: caption="Image 1. Ways to provide subscription IDs." caption-side="bottom"}
 
 #### Providing subscription IDs at deployment
 {: #subscription-ids-deployment}
@@ -58,7 +58,7 @@ If you deploy your {{site.data.keyword.netezza_short}} instance with both privat
 If you deploy only with a private endpoint, you must provide subscription IDs.
 {: note}
 
-![Connecting to {{site.data.keyword.netezza_short}}](connecting2.png){: caption="Image 2. The Configure advanced feature section of the IBM Cloud page." caption-side="bottom"}
+![Connecting to {{site.data.keyword.netezza_short}}](../images/connecting2.png){: caption="Image 2. The Configure advanced feature section of the IBM Cloud page." caption-side="bottom"}
 
 #### Providing subscription IDs in the web console
 {: #subscription-ids-webconsole}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022
-lastupdated: "2022-12-09"
+  years:  2023
+lastupdated: "2023-03-02"
 
 keywords: netezza and kafka, integrating kafka with netezza, kafka, netezza as a data sink, netezza as a data source,
 

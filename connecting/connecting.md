@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-01-11"
+  years: 2023
+lastupdated: "2023-03-02"
 
 keywords: connecting to Netezza Performance Server, connecting, private endpoint, public endpoint, public and private endpoints, web console,
 
@@ -30,7 +30,7 @@ You can connect command-line interfaces, IBM or third-party applications and too
 
 You can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints.
 
-![Connectivity options](networking.png){: caption="Image 1. Ways to connect." caption-side="bottom"}
+![Connectivity options](../images/networking.png){: caption="Image 1. Ways to connect." caption-side="bottom"}
 
 - **PUBLIC ENDPOINT**  
    A public endpoint can be accessed over the public network or internet.

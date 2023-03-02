@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-10-12"
+  years: 2023
+lastupdated: "2023-03-02"
 
 keywords: nztool
 
@@ -40,7 +40,7 @@ Supported platforms for the `nz` tool:
 
 Run the command:
 
-```
+```sh
 curl -o nz -k https://<external hostname>/<version number>/download/<platform specific package>
 chmod +x nz
 ```
@@ -50,14 +50,14 @@ Examples:
 
 To download `nz` on a Linux box, run:
 
-```
+```sh
 curl -o nz -k https://<external hostname>/v2/download/nz-linux-amd64
 ```
 {: codeblock}
 
 To download `nz` on Windows, run:
 
-```
+```sh
 curl.exe -o nz.exe -k https://<external hostname>/v2/download/nz-windows-amd64
 ```
 {: codeblock}
@@ -73,30 +73,33 @@ The `nz` command syntax can take two forms, depending on whether you created sho
 
 - Full syntax:
 
-   ```
+   ```sh
    nz [command] [subcommands] [options]
    ```
-   {: screen}
+   {: codeblock}
 
    Example:
 
-   ```
+   ```sh
    ./nz nzstate -host <nps-hostname> -u <nps-admin-user> -pw <nps-admin-user-password>
    System state is 'Online'.
    ```
+   {: codeblock}
 
 - Shortcut syntax
 
-   ```
+   ```sh
    [command] [subcommand] [options]
    ```
+   {: codeblock}
 
    Example:
 
-   ```
+   ```sh
    -host <nps-hostname> -u <nps-admin-user> -pw <nps-admin-user-password>
    System state is 'Online'.
    ```
+   {: codeblock}
 
 ### Commands supported by the nz tool
 {: #supported-cmds}
@@ -389,4 +392,4 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
 ## CLI
 {: #cli}
 
-For more information about commands, see [the IBM Documentation page](https://www.ibm.com/docs/en/netezza).
+For more information about commands, see [the command-line interface](https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface) section.

@@ -18,13 +18,13 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - release-notes.md
-      - getting-started.md
+      - start/release-notes.md
+      - start/getting-started.md
       - topicgroup:
           label: Connecting to Netezza Performance Server
           topics:
-          - connecting.md
-          - connecting_private_endpoints.md
+          - connecting/connecting.md
+          - connecting/connecting_private_endpoints.md
       - topicgroup:
           label: Web console
           topics:
@@ -78,6 +78,7 @@ toc:
           - admins/pause-resume.md
           - admins/autopause.md
           - admins/scaling.md
+          - admins/smartscaling.md
           - topicgroup:
               label: Backup and restore
               topics:
@@ -92,10 +93,10 @@ toc:
       - topicgroup:
           label: Enhancing security
           topics:
-          - architecture-workload-isolation.md
-          - endpoints.md
-          - encryption.md
-          - iam-docs.md
+          - security/architecture-workload-isolation.md
+          - security/endpoints.md
+          - security/encryption.md
+          - security/iam-docs.md
       - topicgroup: 
          label: Managing authentication methods
          topics:
@@ -104,7 +105,7 @@ toc:
             label: Setting IBM IAM authentication
             topics: 
             - authentication/ibmiam_autnentication.md
-            - authentication/iam-docs.md
+            - security/iam-docs.md
          - authentication/azuread_authenticating.md
          - authentication/ldap_authentication.md 
          - https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication   
@@ -115,10 +116,10 @@ toc:
       - topicgroup:
          label: Querying data from data lakes
          topics:
-         - singularity.md
-         - examples_singularity.md
-         - examples3_singularity.md
-         - examples2_singularity.md
+         - datalakes/singularity.md
+         - datalakes/examples_singularity.md
+         - datalakes/examples3_singularity.md
+         - datalakes/examples2_singularity.md
          - link:
              label: External tables
              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
@@ -145,9 +146,9 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - ha.md
-      - bc-dr.md
-      - network_policies.md
+      - reference/ha.md
+      - reference/bc-dr.md
+      - reference/network_policies.md
 
   - navgroup:
       id: tutorial
@@ -157,5 +158,5 @@ toc:
   - navgroup:
       id: help
       topics:
-      - faqs.md
-      - opening-tickets.md
+      - help/faqs.md
+      - help/opening-tickets.md

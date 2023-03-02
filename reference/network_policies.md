@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-12-09"
+  years: 2023
+lastupdated: "2023-03-02"
 
 keywords: network policy, netezza network policy
 subcollection: netezza
@@ -60,7 +60,6 @@ Specifies a policy that allows you to do the following:
 
 - Connecting from the {{site.data.keyword.netezza_short}} database to any device or service that has either the specified hostname or an IP address in the range that is specified by CIDR.
 
-
 You can use the combination of allow and block (deny) policies to restrict connections to and from the {{site.data.keyword.netezza_short}} database to the provided set of IP addresses and hostnames.
 
 ## Defining network policies with Classless Inter-Domain Routing (CIDR)
@@ -83,7 +82,6 @@ For example, `76.168.0.0/24` represents IP addresses in the range of `76.168.0.0
 
 - When you use `0.0.0.0/0`as an allow policy, all traffic to and from your {{site.data.keyword.netezza_short}} database is allowed.
 
-
 You can use CIDR ranges to represent public and private IP addresses.
 Devices or services that are in a private or enterprise network that uses private IP addresses have gateways.
 These gateways typically have network interfaces with public IP addresses, which do network address translation (NAT).
@@ -93,7 +91,6 @@ This allows entities in the private network to connect to external services.
 You must use a CIDR range that represents only the public IP addresses of gateways when you are setting `allow` and `block` policies.
 
 Do not specify a CIDR range that represents private IP addresses space as block policies. You might impact the functioning of the database.
-
 
 ## Defining network policies with DNS hostnames
 {: #nw-defining-DNS}
@@ -117,7 +114,6 @@ In such scenarios, you can do one of the following:
 - Add the DNS server's IP address in the allow rule so that the database can resolve the hostname to its IP address.
 
 - Provide the complete CIDR range that is used by the device or the service.
-
 
 ## Order of evaluation of network policies
 {: #nw-eval}
@@ -180,7 +176,6 @@ If you want to allow connections to the {{site.data.keyword.netezza_short}} data
 {: #use-case-2}
 
 If you want applications or users only from their on-premises network to connect to their {{site.data.keyword.netezza_short}} database, follow these steps.
-
 
 1. Use a public NAT gateway.
 

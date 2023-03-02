@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-09"
+  years: 2023
+lastupdated: "2023-03-02"
 
 keywords: public isolation for Netezza Performance Server, compute isolation for Netezza Performance Server, Netezza Performance Server architecture, workload isolation in Netezza Performance Server
 
@@ -50,6 +50,7 @@ To view existing policies, go to **Administration >> Settings >> Network policie
 {: #wc-nwpolicies-deleting}
 
 To delete a policy:
+
 1. Go to **Administration >> Settings >> Network policies >> Existing policies**.
 2. Select the policy that you want to delete.
 3. Click **Delete**.

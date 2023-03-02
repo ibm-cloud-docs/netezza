@@ -1,7 +1,7 @@
 ---
 copyright:
-  years:  2022
-lastupdated: "2023-02-14"
+  years:  2023
+lastupdated: "2023-03-02"
 
 keywords: time travel, time travel sql commands,
 
