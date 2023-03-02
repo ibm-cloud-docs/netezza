@@ -106,7 +106,7 @@ The `nz` command syntax can take two forms, depending on whether you created sho
 
 - {{site.data.keyword.netezza_short}} commands:
 
-```
+```sh
 nzbackup
 nzbatchbnr
 nzds
@@ -118,10 +118,11 @@ nzstats
 nzsession
 nzsystem
 ```
+{: screen}
 
 - Software Support Tools scripts:
 
-```
+```sh
 nz_abort
 nz_altered_tables
 nz_backup_size_estimate
@@ -329,13 +330,14 @@ nz_view_references
 nz_wrapper
 nz_zonemap
 ```
+{: screen}
 
 ## Creating nz shortcuts with the nz install command
 {: #nzinstall-shortcuts}
 
 You can create shortcuts for the following commonly used commands by running the `nz install` command. As a result, for example, instead of running `nz nzstate`, you can issue `nzstate`.
 
-```
+```sh
 nz
 nzbackup
 nzbatchbnr
@@ -373,7 +375,7 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
 
 - From Linux or Mac OSX terminal, run:
 
-   ```
+   ```sh
    export NZ_HOST=<nps-hostname>
    export NZ_USER=<nps-admin-user>
    export NZ_PASSWORD=<nps-admin-user-password>
@@ -382,7 +384,7 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
 
 - From Windows (`cmd.exe`), run:
 
-   ```
+   ```sh
    set NZ_HOST=<nps-hostname>
    set NZ_USER=<nps-admin-user>
    set NZ_PASSWORD=<nps-admin-user-password>

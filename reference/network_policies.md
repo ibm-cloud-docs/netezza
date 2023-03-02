@@ -303,9 +303,7 @@ If you have storage accounts, for example, in the `East US 2` region with Azure 
      ```
      {: codeblock}
 
-1. If you want to use or connect from any other Azure service, add to the allow rule the CIDR range that is associated with those
-respective service endpoints.
-
+1. If you want to use or connect from any other Azure service, add to the allow rule the CIDR range that is associated with those respective service endpoints.  
    To retrieve the CIDR range for various Azure services:
 
    - Follow the instructions from [here](https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkservicetag?view=azps-7.5.0).
@@ -320,6 +318,5 @@ respective service endpoints.
 
 1. Network policies support only IPv4 addresses.
 1. Network policies can support a maximum of 1000 network policies.
-1. Network policies restrict traffic only to the {{site.data.keyword.netezza_short}} database.
-
+1. Network policies restrict traffic only to the {{site.data.keyword.netezza_short}} database.  
    They are not applicable to other components, such as the web console.
