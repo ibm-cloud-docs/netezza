@@ -27,7 +27,7 @@ subcollection: netezza
 ## {{site.data.keyword.netezza_short}} architecture
 {: #architecture}
 
-![{{site.data.keyword.netezza_short}} architecture](images/Netezza-Deployment-diagram.png){: caption="Image 1. The diagram depicts the deployment model and how the workload isolation is ensured." caption-side="bottom"}
+![{{site.data.keyword.netezza_short}} architecture](../images/Netezza-Deployment-diagram.png){: caption="Image 1. The diagram depicts the deployment model and how the workload isolation is ensured." caption-side="bottom"}
 
 
 ## {{site.data.keyword.netezza_short}} workload isolation
