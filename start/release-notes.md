@@ -22,6 +22,30 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
+## March 2023
+{: #march2023}
+
+### New features and enhancements
+{: #march2023}
+
+### Fixes
+{: #fmarch2023}
+
+- Fixed the issue with **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17028**
+- Fixed the issue with **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17185**
+
+### Components
+{: #components11226}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.6
+- Web console 4.0.12
+
+### Known issues
+{: #kimarch2023}
+
+- **draft comment: https://jsw.ibm.com/browse/NEXTGEN-19031**
+- **draft comment: https://jsw.ibm.com/browse/NEXTGEN-18984**
+
 ## February 2023
 {: #feb2023}
 
