@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-09"
+lastupdated: "2023-03-08"
 
 keywords: web console, users and groups, creating users, creating groups, users, groups, comparing groups
 
@@ -39,7 +39,7 @@ The *Users and groups* view displays all of your database user accounts and grou
       The name must begin with a letter or an underscore. The name cannot contain embedded spaces. It must be unique within the system. It can have 128 characters.
 
    1. Password  
-      The password must have 15 characters, 1 upper case letter, and 1 special character.
+      The password must have 15 characters, 1 upper case letter, 1 lower case letter, 1 special character, and a number.
 
    1. Resource group
    1. Account expiration date   
