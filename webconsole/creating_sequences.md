@@ -29,6 +29,8 @@ subcollection: netezza
 1. Go to **DB Objects > Sequences**.
 1. Click **Create sequence**.
 1. Type a name for sequence.
+   The name can be up to 128 characters long and it must begin with a letter or underscore and cannot contain embedded spaces. The name must be unique.  
+   If the name contains special characters, enclose it in double quotation marks.  
 1. Specify the starting integer value for the sequence.
 1. Specify the minimum value.
 1. Specify the maximum value.

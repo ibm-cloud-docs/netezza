@@ -24,14 +24,15 @@ subcollection: netezza
 {: #create-synonyms}
 
 1. Go to **Databases**
-1. Select the database in which you want to create a view.
+1. Select the database in which you want to create a synonym.
+1. Select the schema in which you want to create a synonym.
 1. Go to **DB Objects > Synonyms**.
 1. Click **Create synonym**.
-1. Select the schema where you want to create the synonym.
 1. Type a name for the synonym.
+   The name can be up to 128 characters long and it must begin with a letter or underscore and cannot contain embedded spaces. The name must be unique.  
+   If the name contains special characters, enclose it in double quotation marks.  
 1. Specify the reference type.  
-   For example, table, view, etc.
-
+   For example, table or view.
 1. Specify the name of the reference type for which you are creating this synonym.
 1. Click **Create**.
 
