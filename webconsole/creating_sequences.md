@@ -25,14 +25,14 @@ subcollection: netezza
 
 1. Go to **Databases**
 1. Select the database in which you want to create a sequence.
+1. Select the schema in which you want to create a sequence.
 1. Go to **DB Objects > Sequences**.
 1. Click **Create sequence**.
-1. Select the schema where you want to create the sequence.
 1. Type a name for sequence.
 1. Specify the starting integer value for the sequence.
-1. Specify the minimum value of the sequence.
-1. Specify the maximum value of the sequence.
-1. Select **Cycle** so the sequence restarts when it reaches its last value.  
+1. Specify the minimum value.
+1. Specify the maximum value.
+1. Specify the increment by value.
+1. Specify whether you want the sequence to restart when it reaches its last value by checking the **Cycle** box.  
    The default is **No cycle**, which means that the sequence stops when it reaches its last value.
-
 1. Click **Create**.
