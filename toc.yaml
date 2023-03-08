@@ -112,7 +112,7 @@ toc:
       - topicgroup:
          label: Netezza Performance Server and Kafka
          topics:
-         - kafka.md
+         - kafka/kafka.md
       - topicgroup:
          label: Querying data from data lakes
          topics:
