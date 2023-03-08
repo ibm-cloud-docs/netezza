@@ -24,18 +24,17 @@ subcollection: netezza
 {: #create-procedures}
 
 1. Go to **Databases**.
-1. Select the database in which you want to create a function.
+1. Select the database in which you want to create a procedure.
+1. Select the schema in which you want to create a procedure.
 1. Go to **DB objects > Procedures**.
 1. Click **Create procedure**.
-1. Select the schema where you want to create a procedure.
 1. Type a name for the procedure.
+   The name can be up to 128 characters long and it must begin with a letter or underscore and cannot contain embedded spaces. The name must be unique.  
+   If the name contains special characters, enclose it in double quotation marks.  
 1. Specify the arguments.  
    This is to specify the parameter type list of the procedure. For example, `int`.
-
-1. Specify the return type of your procedure.
-
+1. Specify the return type of your procedure.  
    For example, `int`.
-
 1. Specify the procedure body.  
    This is the source code for the body of the stored procedure. For example
 
@@ -44,4 +43,6 @@ subcollection: netezza
    ```
    {: codeblock}
 
+1. Specify whether to replace the procedure.
+1. Specify whether to include an execute clause.
 1. Click **Create**.
