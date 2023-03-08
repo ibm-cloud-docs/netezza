@@ -27,4 +27,5 @@ subcollection: netezza
 1. Click **Create database**.
 1. Type a name for the database.  
    If the name contains special characters, enclose it in double quotation marks.
+1. Specify the retention time interval (in days) for the database.
 1. Click **Create**.
