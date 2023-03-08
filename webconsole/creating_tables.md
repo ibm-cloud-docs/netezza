@@ -23,26 +23,29 @@ subcollection: netezza
 # Creating tables
 {: #create-tables}
 
+## Creating tables
+{: #creating-tables}
+
 1. Go to **Databases**.
 1. Select the database in which you want to create a table.
 1. Select the schema in which you want to create a table.
-1. Ensure that you are in the **DB Objects > Tables* tab.
+1. Ensure that you are in the **DB Objects > Tables** tab.
 1. Click **Create table**.
 1. Type a name for the table.  
    If the name contains special characters, enclose it in double quotation marks.  
    You can select a name that has up to 128 characters. The name must begin with a letter or an underscore and can't contain embedded spaces. The name must be unique.
-
+1. Specify the retention time interval (in days) for the table.
 1. Add columns to the table:
 
-   1. In the *Columns* section, under *Name*, type a name for the column.
+   1. In the **Columns** section, under **Name**, type a name for the column.
       The name must start with a letter.
    1. Select your column type.  
       The data type restricts the type of data that can be stored in a column. For example, preventing entry of alphanumeric characters into a numeric field.  
       Data types also help sort data correctly and play a role in optimizing storage. For all these reasons, it is important to pick the appropriate data type.
-   1. Specify whether or not you allow NULL values to be inserted.  
+   1. Specify whether `Not null` is true or false.  
       A column that allows NULL values also allows rows to be inserted with no value in that column. A column that does not allow NULL values does not accept rows with no value.
    1. Specify the default value to be used if no value is specified when a row is inserted.      
-   1. In the *Distribute on* and *Organize on* sections, specify the distribution key for the table by selecting up to four columns.
+   1. In the **Distribute on** and **Organize on** sections, specify the distribution key for the table by selecting up to four columns.
 
       To add another column, click the plus sign.
 
