@@ -86,9 +86,9 @@ You can use the Groom Table functionality to reclaim disk space from deleted or 
 
 1. Go to **Databases**.
 1. Select your database and schema.
-1. Ensure that you are in the *DB Objects > Tables* tab.
+1. Ensure that you are in the **DB Objects > Tables** tab.
 1. Select the table that you want to groom.
-1. Go to the *Grooms* tab.
+1. Go to the **Grooms** tab.
 1. Click **Groom table**.
 
 - To run the operation, the user must have object privileges. The user does not have to be an administrator.
