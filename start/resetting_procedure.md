@@ -23,9 +23,6 @@ subcollection: netezza
 # Resetting history user password
 {: #reset-password}
 
-## Procedure
-{: resetting_procedure}
-
 Your instance comes with [query history](https://www.ibm.com/docs/en/netezza?topic=administrators-collecting-data-history) enabled by default.
 
 - Follow the instructions [here](https://www.ibm.com/support/pages/changing-query-history-users-password) to change the history user password.

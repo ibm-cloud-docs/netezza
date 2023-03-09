@@ -23,9 +23,6 @@ subcollection: netezza
 # Generating credentials
 {: #generate-credentials}
 
-## Procedure
-{: #credentials_procedure}
-
 1. In the [{{site.data.keyword.cloud_notm}} catalog], go to **Service credentials > New credentials > Add**.
 1. Enter the name for the new credential.
 1. Click **Add**.   
