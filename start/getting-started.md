@@ -57,7 +57,7 @@ After {{site.data.keyword.netezza_short}} is provisioned, retrieve information a
 ### Retrieving information about endpoints
 {: #next-endpoints}
 
-1. On the **Resource list** page, go to **Services and Software**.
+1. On the **Resource list** page, go to **Services and Software**. 
 1. Locate your {{site.data.keyword.netezza_short}} instance and click on the service name.  
    You are redirected to the **Service instance details** page. On the page, you can find information about endpoints for accessing the web console, the API server, and the database. For more information, see [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting).
 
