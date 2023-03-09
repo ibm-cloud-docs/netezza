@@ -20,10 +20,14 @@ subcollection: netezza
 {:pre: .pre}
 {:caption: .caption}
 
-# Connecting to {{site.data.keyword.netezza_short}} by using private endpoints
+# Connecting to {{site.data.keyword.netezza_short}} on Azure 
 {: #connecting-private-endpoints}
 
 If you want to connect to {{site.data.keyword.netezza_short}} by using private endpoints, two [private link services](https://learn.microsoft.com/en-us/azure/private-link/private-link-service-overview) are created.  
+{: shortdesc}
+
+## Connecting to {{site.data.keyword.netezza_short}} on Azure by using private endpoints
+{: #connecting-azure}
 
 To connect to your instance by using these private link services, you must create [private endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) in your Azure subscriptions.
 

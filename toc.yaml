@@ -24,9 +24,14 @@ toc:
           label: Connecting to Netezza Performance Server
           topics:
           - connecting/connecting.md
-          - connecting/connecting_private_endpoints.md
+          - topicgroup: Connecting to Netezza Performance Server on Azure
+          - topics:
+              - connecting/connecting_private_endpoints.md
+          - topicgroup: Connecting to Netezza Performance Server on AWS
+          - topics:
+              - connecting/connecting_aws.md
       - topicgroup:
-          label: Web console
+          label: Netezza Performance Server web console
           topics:
           - webconsole/get-strt.md
           - webconsole/users-group.md
