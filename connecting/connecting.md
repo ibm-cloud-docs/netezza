@@ -19,8 +19,8 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Connecting to {{site.data.keyword.netezza_short}}
-{: #connecting}
+# Overview
+{: #connecting-overview}
 
 You can connect command-line interfaces, IBM or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance.
 {: shortdesc}
