@@ -20,7 +20,6 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-
 # Getting started with {{site.data.keyword.netezza_short}}
 {: #getting-started}
 
