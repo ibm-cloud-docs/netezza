@@ -26,32 +26,38 @@ subcollection: netezza
 
 {{site.data.keyword.netezza_full}} ({{site.data.keyword.netezza_short}}) is a fully managed, cloud native analytical data warehouse that is based on massively parallel processing [MPP] architecture. {{site.data.keyword.netezza_short}} is mainly used for analytical processing of historical data, and can process from 100TB up to a few petabytes of data with best in the class performance. Its array of SPUs processes disjoint dataset in parallel which is then aggregated to come up with final result set.
 
-This page explains how you can provision a {{site.data.keyword.netezza_short}} instance, and how to retrieve information about endpoints, and create credentials so that you can access your instance.
+Learn how to provision a {{site.data.keyword.netezza_short}} instance on Azure or AWS, how to retrieve information about endpoints, and create credentials to access your instance.
 {: shortdesc}
 
 ## Before you begin
 {: #prereqs}
 
-You need a Pay-as-you-go {{site.data.keyword.cloud_notm}} account to start the provisioning process.
+You need a pay-as-you-go {{site.data.keyword.cloud_notm}} account to start the provisioning process.
 
 For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/docs/account?topic=account-account-getting-started) and [Upgrading your account](https://cloud.ibm.com/docs/account?topic=account-upgrading-account).
 
-## Provision a {{site.data.keyword.netezza_short}} instance
+## Provisioning a {{site.data.keyword.netezza_short}} instance
 {: #provision}
 
-You can provision {{site.data.keyword.netezza_short}} through the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) and [Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/).
+You can provision {{site.data.keyword.netezza_short}} on Azure and AWS through the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) and [Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/).
 
-Find the {{site.data.keyword.netezza_short}} tile and click it. You are redirected to the provisioning page.
+| Cloud provider      | Steps |
+| -----------         | ----------- |
+| Azure               | 1. Go to the the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) or [Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/) web console. |
+                        1. Locate the {{site.data.keyword.netezza_short}} tile and click it. You are redirected to the provisioning page.
+                        1. On the provisioning page, select Azure as the cloud provider and the corresponding region.
+                        1. Configure your instance by selecting the workload contour, Netezza units (NZU), storage values, and connectivity options.  
+                           For more information about workload contours, Netezza Units (NZU) and available storage configuration, see [Architecture](/docs/netezza?topic=netezza-compute-isolation&interface=ui).  
+                           For more information about connectivity options, see [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting&interface=ui).
+                        1. Click **Submit** to start the provisioning process.  
+                           You are redirected to the {{site.data.keyword.cloud_notm}} dashboard page.
+                        1. Go to **Resource list**.  
+                           After the provisioning process is finished, the instance status is `Active`. |
 
-On the provisioning page, select the cloud platform you want to deploy in and the corresponding region. Now, you can configure your instance by selecting the workload contour, Netezza units (NZU), storage values, and connectivity options.
+| AWS                 | Text        |
 
-For more information about workload contours, Netezza Units (NZU) and available storage configuration, see [Architecture](/docs/netezza?topic=netezza-compute-isolation&interface=ui).
 
-For more information about connectivity options, see [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting&interface=ui).
 
-When you have made your selections, click the submit button to start the provisioning process. You are redirected to the {{site.data.keyword.cloud_notm}} dashboard page. Go to **Resource list**.
-
-After the provisioning process is finished, the instance status is `Active`.
 
 ## Next steps
 {: #next}
