@@ -22,7 +22,6 @@ toc:
       - topicgroup:
           label: Getting started with Netezza Performance Server
           topics:
-            - start/getting-started.md
             - start/provisioning_procedure.md
             - start/endpoints_procedure.md
             - start/credentials_procedure.md

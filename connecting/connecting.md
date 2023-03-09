@@ -28,7 +28,7 @@ You can connect command-line interfaces, IBM or third-party applications and too
 ## Connectivity options
 {: #connectivity-options}
 
-You can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints.
+You can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints if you are on Azure, or with a private or public endpoint if you are on AWS.
 
 ![Connectivity options](../images/networking.png){: caption="Image 1. Ways to connect." caption-side="bottom"}
 

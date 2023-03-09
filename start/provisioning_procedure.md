@@ -23,6 +23,11 @@ subcollection: netezza
 # Provisioning a {{site.data.keyword.netezza_short}} instance
 {: #provisioning}
 
+{{site.data.keyword.netezza_full}} ({{site.data.keyword.netezza_short}}) is a fully managed, cloud native analytical data warehouse that is based on massively parallel processing [MPP] architecture. {{site.data.keyword.netezza_short}} is mainly used for analytical processing of historical data, and can process from 100TB up to a few petabytes of data with best in the class performance. Its array of SPUs processes disjoint dataset in parallel which is then aggregated to come up with final result set.
+
+Learn how to provision a {{site.data.keyword.netezza_short}} instance on Azure or AWS, how to retrieve information about endpoints, and create credentials to access your instance.
+{: shortdesc}
+
 ## Before you begin
 {: #provisioning_prereqs}
 
