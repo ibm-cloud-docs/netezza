@@ -19,7 +19,14 @@ toc:
       id: learn
       topics:
       - start/release-notes.md
-      - start/getting-started.md
+      - topicgroup:
+          label: Getting started with Netezza Performance Server
+          topics:
+            - start/getting-started.md
+            - start/provisioning_procedure.md
+            - start/endpoints_procedure.md
+            - start/credentials_procedure.md
+            - start/resetting_procedure.md
       - topicgroup:
           label: Connecting to Netezza Performance Server
           topics:
