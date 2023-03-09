@@ -20,8 +20,8 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Provisioning a {{site.data.keyword.netezza_short}} instance
-{: #provisioning}
+# Getting started with {{site.data.keyword.netezza_short}}
+{: #getstarted}
 
 {{site.data.keyword.netezza_full}} ({{site.data.keyword.netezza_short}}) is a fully managed, cloud native analytical data warehouse that is based on massively parallel processing [MPP] architecture. {{site.data.keyword.netezza_short}} is mainly used for analytical processing of historical data, and can process from 100TB up to a few petabytes of data with best in the class performance. Its array of SPUs processes disjoint dataset in parallel which is then aggregated to come up with final result set.
 
@@ -35,8 +35,8 @@ You need a pay-as-you-go {{site.data.keyword.cloud_notm}} account to start the p
 
 For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/docs/account?topic=account-account-getting-started) and [Upgrading your account](https://cloud.ibm.com/docs/account?topic=account-upgrading-account).
 
-## Procedure
-{: #provisioning_procedrue}
+## Provisioning {{site.data.keyword.netezza_short}} instances
+{: #provisioning_instances}
 
 1. Go to the the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) or [Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/) web console.
 1. Locate the {{site.data.keyword.netezza_short}} tile and click it.  
