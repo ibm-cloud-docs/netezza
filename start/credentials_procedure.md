@@ -25,6 +25,6 @@ subcollection: netezza
 
 1. In the [{{site.data.keyword.cloud_notm}} catalog], go to **Service credentials > New credentials > Add**.
 1. Enter the name for the new credential.
-1. Click **Add**.   
+1. Click **Add**.  
 1. Expand **View credentials**.   
    You can use the password to connect to the {{site.data.keyword.netezza_short}} database and web console as user admin.
