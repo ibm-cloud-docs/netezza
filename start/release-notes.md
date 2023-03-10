@@ -45,7 +45,19 @@ subcollection: netezza
 {: #kimarch2023}
 
 - **draft comment: https://jsw.ibm.com/browse/NEXTGEN-19031**
-- **draft comment: https://jsw.ibm.com/browse/NEXTGEN-18984**
+- You might experience the paste option not working in Mozilla Firefox when you are using the query editor in the web console. You must change the browser configuration preferences to allow the web pages get access to the clipboard by using JavaScript. This issue is not present when using other web browsers.
+
+Workaround:
+
+1. Open a new Firefox window.
+1. In the address bar, enter about:config.
+1. Click Accept the Risk and Continue button.
+1. In the Search preference name, type asyncc.
+1. Select dom.events.asyncClipboard.readText and dom.events.testing.asyncClipboard by clicking the toggle icon on the right.
+   The settings change to true.
+1. Refresh the web page.   
+
+**draft comment: https://jsw.ibm.com/browse/NEXTGEN-18984**
 
 ## February 2023
 {: #feb2023}
