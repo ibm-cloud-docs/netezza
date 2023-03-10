@@ -57,6 +57,8 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
    After the provisioning process is finished, the instance status is `Active`. 
 
 ## Next steps
-{: #next}
+{: #provisioning_next}
 
-After {{site.data.keyword.netezza_short}} is provisioned, retrieve information about endpoints and create credentials so that you can access your instance.
+- [Retrieve information about endpoints](/docs/netezza?topic=netezza-next-endpoints)
+- [Generate credentials](/docs/netezza?topic=netezza-generate-credentials) to access your instance
+- [Reset history user password](/docs/netezza?topic=netezza-reset-password)
