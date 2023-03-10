@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2022-12-09"
+  years: 2023
+lastupdated: "2023-03-02"
 
 keywords: netezza auto-pause and resume, netezza autopause and resume, netezza auto-pause and resume with the web console
 
@@ -22,7 +22,7 @@ subcollection: netezza
 # Auto-pausing
 {: #autopnr-console}
 
-On the *Workload patterns* page, you can enable or disable your **Auto pause** operations and check their **History**.
+On the *Workload patterns* page, you can enable or disable your **Auto pause** operations and check their history.
 
 ## Enabling auto-pause
 {: #autopnr-console-enable}

@@ -28,4 +28,5 @@ subcollection: netezza
 1. Click **Create schema**.
 1. Type a name for the schema.  
    If the name contains special characters, enclose it in double quotation marks.
+1. Specify the retention time interval (in days) for the schema.
 1. Click **Create**.
