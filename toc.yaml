@@ -19,13 +19,7 @@ toc:
       id: learn
       topics:
       - start/release-notes.md
-      - topicgroup:
-          label: Getting started with Netezza Performance Server
-          topics:
-            - start/provisioning_procedure.md
-            - start/endpoints_procedure.md
-            - start/credentials_procedure.md
-            - start/resetting_procedure.md
+      - start/provisioning_procedure.md
       - topicgroup:
           label: Connecting to Netezza Performance Server
           topics:
@@ -92,6 +86,9 @@ toc:
               - admins/bnr.md
               - admins/bnr-ui.md
               - admins/bnr-flow.md
+          - start/endpoints_procedure.md
+          - start/credentials_procedure.md
+          - start/resetting_procedure.md
           - admins/nztool.md
       - topicgroup:
           label: Maintaining Netezza Performance Server
