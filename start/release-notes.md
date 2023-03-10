@@ -28,10 +28,11 @@ subcollection: netezza
 ### New features and enhancements
 {: #march2023}
 
+- Default database maximum connections to the server is now increased to 1000. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17028**
+
 ### Fixes
 {: #fmarch2023}
 
-- Fixed the issue with **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17028**
 - Fixed the issue with `.pln` files not getting stored in `$NZ_KIT_LOG/plans` directory if your query crashes. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17185**
 
 ### Components
