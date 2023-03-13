@@ -59,16 +59,16 @@ The following types of tables cannot be temporal tables:
 
 This limitation affects the following commands:
 
-- **CREATE TABLE ROW SECURITY**, **CREATE EXTERNAL TABLE**, **CREATE TEMPORARY TABLE**  
+- [**CREATE TABLE ROW SECURITY**](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2), [**CREATE EXTERNAL TABLE**](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-external-table-2), **CREATE TEMPORARY TABLE**  
     If **DATA_VERSION_RETENTION_TIME** is specified to a nonzero value, the commands fail.
 
-- **ALTER TABLE DATA_VERSION_RETENTION_TIME**  
+- [**ALTER TABLE DATA_VERSION_RETENTION_TIME**](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)  
     If the table is a temporary, row-secure, versioned, or an external table and **DATA_VERSION_RETENTION_TIME** is specified with a nonzero value, the command fails.
 
-- **ALTER TABLE ADD COLUMN**, **ALTER TABLE DROP COLUMN**  
+- [**ALTER TABLE ADD COLUMN**](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2), [**ALTER TABLE DROP COLUMN**](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)  
     If the table has a nonzero **DATA_VERSION_RETENTION_TIME** specified, the command fails.
 
-The **GROOM TABLE VERSIONS** command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
+The [**GROOM TABLE VERSIONS**](https://www.ibm.com/docs/en/netezza?topic=npsscr-groom-table-2) command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
 
 ## Creating time travel objects
 {: #temporaltables_tt}
