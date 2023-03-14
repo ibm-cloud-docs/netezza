@@ -25,7 +25,14 @@ You can use this feature only if you are on {{site.data.keyword.netezza_short}} 
 
 On the _Workload patterns_ page, you learn how to optimize the usage of your system resources as smart scaling uses machine learning to provide predictions based on historical workload patterns.
 
-By hovering over each data point, you reveal a tool tip with more information. Tool tips include Time interval, Historical and/or Predicted NZP, NZP description, Historical or Suggested Contour Profile.
+By hovering over each data point, you reveal a tool tip with more information.  
+Tool tips include:
+
+- Time interval
+- Historical and/or Predicted NZP
+- NZP description
+- Historical or Suggested Contour Profile
+- Confidence score
 
 When you are looking at the graph overall, use the legend to identify the contour profile.
 
@@ -53,7 +60,7 @@ By default, the current date stays the same. When you select between the daily, 
 
 A line in the middle of the graph shows the cut off between historical and predicted or suggested data.
 
-Predicted data is only displayed when the system has been collecting historical data for at least 7 days. Until then, the graph displays a data point for each day. On the 7th day, a prediction for an extra two weeks' worth of information appears.
+Predicted data is only displayed when the system has been collecting historical data for at least 7 days. Until then, the graph displays a data point for each day. After 7 days, a prediction for an extra two weeks' worth of information appears.
 
 ### Historical and Predicted NZP
 {: #smartscaling_nzp}
@@ -71,9 +78,14 @@ The historical and predicted NZP lines are measured on the scale to the left of 
 
 Historical Contour Profile and Suggested Contour Profiles are visualized by the blue bars.
 
-The contours that are displayed to the right of the current date line are historical contours. They represent the profiles that are used on each time interval.
+The contours that are displayed to the left of the current date line are historical contours. They represent the profiles that are used on each time interval.
 
 The bars that are displayed on the right side of the current date line are suggested contours for each time interval.
 
 Contour profiles are suggested based on the predicted NZP during that time interval. If NZP exceeds 80%, it is suggested that contour profile is scaled up the next closest contour to increase compute and improve performance for heavy workload periods. When the algorithm predicts NZP at or below 20% for a time interval, the graph suggests to scale down to a lower profile.
 {: tip}
+
+### Confidence score
+{: #confidence_score}
+
+Confidence score reflects the accuracy of the predictions that are provided based on your system historical workload patterns. By analyzing the confidence score, you can choose how to use your system resources.
