@@ -4,7 +4,7 @@ copyright:
   years: 2021
 lastupdated: "2023-02-27"
 
-keywords: smart scaling, scaling, Netezza Performance Server smart scaling,
+keywords: smart scaling, scaling, Netezza Performance Server smart scaling, seed models, confidence score
 subcollection: netezza
 
 ---
@@ -20,36 +20,34 @@ subcollection: netezza
 # Smart scaling
 {: #smartscaling}
 
-You can use this feature only if you are on {{site.data.keyword.netezza_short}} on AWS.
-{: important}
+Smart scaling uses machine learning to provide predictions based on historical workload patterns. By analyzing the data on the **Administering > Workload patterns** page, you can learn how to optimize the usage of your system resources.
+{: #shortdesc}
 
-On the _Workload patterns_ page, you learn how to optimize the usage of your system resources as smart scaling uses machine learning to provide predictions based on historical workload patterns.
-
-By hovering over each data point, you reveal a tool tip with more information.  
-Tool tips include:
+You can obtain more information about the following system items:
 
 - Time interval
-- Historical and/or Predicted NZP
-- NZP description
+- Historical and Predicted NZP and NZP description
 - Historical or Suggested Contour Profile
 - Confidence score
 
-When you are looking at the graph overall, use the legend to identify the contour profile.
+## Seed models
+{: #seed-models}
+
+Seed models are pretrained models that are uploaded on your temporary workspace. A prediction API uses these models for the duration of a training grace period (7 days or more), after the system is deployed, starting from after day 1. At this stage, the confidence score is very low because the models do not reflect your workloads yet.  
+
+After the training grace period is over, the model is retrained with the dataset that was generated from the collected workload data. The prediction API runs inference based on the pretrained models. Then, the confidence score is updated based on the accuracy of the prediction, and system scheduler triggers the training model task daily for 2 weeks, and then on a weekly basis.
+
+**DRAFT COMMENT:  
+1. You say that the training grace period is 7+ days, what exactly is the number of days? Can you change on your own?
+1. How exactly are the pretrained models uploaded on your temporary workspace?
+1. Is my understanding of this correct? `First, the models gather data/work on the temporary workspace. (For how long are they on the temp workspace; until the system is deployed; is there a min required timeframe? If they don't gather data on the temp workspace, why are they uploaded to it to begin with?) Then, after the system is deployed, a prediction API uses these models for 7 or so days (training grace period) to generate accurate data - confidence score. You are ok to use the confidence score after this period.`
 
 ## Graph elements
 {: #smartscaling_graph}
 
-The default *Workload Utilization* graph visualizes multiple data points that are related to your system resources.
+The default **Workload Utilization** graph visualizes multiple data points that are related to your system resources.
 
-- Historical NZP*
-
-- Predicted NZP*
-
-- Historical Contour Profile
-
-- Suggested Contour Profile
-
-- Time
+When you are looking at the graph overall, use the legend to identify the contour profile.
 
 ### Time interval
 {: #smartscaling_timeinterval}
