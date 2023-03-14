@@ -28,3 +28,4 @@ subcollection: netezza
 1. Click **Add**.  
 1. Expand **View credentials**.   
    You can use the password to connect to the {{site.data.keyword.netezza_short}} database and web console as user admin.
+   
