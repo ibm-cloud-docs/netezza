@@ -90,6 +90,9 @@ toc:
           - start/credentials_procedure.md
           - start/resetting_procedure.md
           - admins/nztool.md
+          - link:
+             label: The nzsql command
+             href: https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2
       - topicgroup:
           label: Maintaining Netezza Performance Server
           topics:
