@@ -23,9 +23,9 @@ toc:
       - topicgroup:
           label: Connecting to Netezza Performance Server
           topics:
-            - connecting/connecting.md
-            - connecting/connecting_private_endpoints.md
-            - connecting/connecting_aws.md
+          - connecting/connecting.md
+          - connecting/connecting_private_endpoints.md
+          - connecting/connecting_aws.md
       - topicgroup:
           label: Netezza Performance Server web console
           topics:
@@ -56,20 +56,19 @@ toc:
               - webconsole/settings.md
               - webconsole/scheduler-rules.md
           - topicgroup:
-             label: Workload patterns
-             topics:
-             - webconsole/workload-patterns.md
-             - webconsole/wp_pausreresume.md
-             - webconsole/wp_autopauseresume.md
-             - webconsole/wp_scaling.md
-             - webconsole/wp_smartscaling.md 
+              label: Workload patterns
+              topics:
+              - webconsole/workload-patterns.md
+              - webconsole/wp_pausreresume.md
+              - webconsole/wp_autopauseresume.md
+              - webconsole/wp_scaling.md
+              - webconsole/wp_smartscaling.md 
           - topicgroup:
               label: Backup and restore
               topics:
               - admins/bnr.md
               - admins/bnr-ui.md
               - admins/bnr-flow.md
- 
   - navgroup:
       id: howto
       topics:
@@ -119,12 +118,11 @@ toc:
          - timetravel/spaceusage_timetravel.md
          - timetravel/retentioninterval_timetravel.md
          - topicgroup:
-            label: Querying historical database
-            topics:
-            - timetravel/runningqueries_timetravel.md
-            - timetravel/queryingdata_timetravel.md
+             label: Querying historical database
+             topics:
+             - timetravel/runningqueries_timetravel.md
+             - timetravel/queryingdata_timetravel.md
          - timetravel/sqlcommands_timetravel.md
- 
   - navgroup:
       id: reference
       topics:
@@ -133,14 +131,14 @@ toc:
           topics:
           - admins/nztool.md
           - link:
-             label: Netezza Performance Server commands
-             href: https://www.ibm.com/docs/en/netezza?topic=interface-netezza-performance-server-commands
+              label: Netezza Performance Server commands
+              href: https://www.ibm.com/docs/en/netezza?topic=interface-netezza-performance-server-commands
           - link:
-             label: The nzsql command
-             href: https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2
+              label: The nzsql command
+              href: https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2
           - link:
-             label: SQL commands
-             href: https://www.ibm.com/docs/en/netezza?topic=dud-netezza-performance-server-sql-command-reference-2
+              label: SQL commands
+              href: https://www.ibm.com/docs/en/netezza?topic=dud-netezza-performance-server-sql-command-reference-2
       - topicgroup:
           label: Backup and restore
           topics:
@@ -148,11 +146,11 @@ toc:
           - admins/bnr-ui.md
           - admins/bnr-flow.md
           - link:
-             label: Backup and restore performance improvements
-             href: https://www.ibm.com/docs/en/netezza?topic=npscpdas-backup-restore-performance-improvements-many-tables-views-procedures
+              label: Backup and restore performance improvements
+              href: https://www.ibm.com/docs/en/netezza?topic=npscpdas-backup-restore-performance-improvements-many-tables-views-procedures
           - link: 
-             label: Backup and restore best practices
-             href: https://www.ibm.com/docs/en/netezza?topic=service-backup-restore-best-practices        
+              label: Backup and restore best practices
+              href: https://www.ibm.com/docs/en/netezza?topic=service-backup-restore-best-practices        
       - topicgroup:
           label: Security
           topics:
@@ -161,20 +159,18 @@ toc:
           - security/encryption.md
           - security/iam-docs.md
           - link:
-             label: Security and access control
-             href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-security-experts
+              label: Security and access control
+              href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-security-experts
       - link:
-         label: Analytics
-         href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-analytics-acceleration-developers
+          label: Analytics
+          href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-analytics-acceleration-developers
       - reference/ha.md
       - reference/bc-dr.md
       - reference/network_policies.md
-
   - navgroup:
       id: tutorial
       topics:
       - usecases/migrate-onpremises.md
-
   - navgroup:
       id: help
       topics:
