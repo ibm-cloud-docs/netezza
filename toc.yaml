@@ -85,7 +85,7 @@ toc:
           - start/resetting_procedure.md
           - admins/remove.md
       - topicgroup: 
-          label: Managing authentication methods
+          label: Managing authentication methods 
           topics:
           - authentication/authentication.md
           - topicgroup:
