@@ -34,6 +34,7 @@ subcollection: netezza
 {: #fmarch2023}
 
 - Fixed the issue with `.pln` files not getting stored in `$NZ_KIT_LOG/plans` directory if your query crashes. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17185**
+- Fixed the issue with sensitive files from host pod being read by using external tables and remote nzsql client. **https://jsw.ibm.com/browse/NEXTGEN-18608**
 
 ### Components
 {: #components11226}
