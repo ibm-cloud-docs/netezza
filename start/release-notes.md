@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-03-17"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -34,7 +34,7 @@ subcollection: netezza
 {: #fmarch2023}
 
 - Fixed the issue with `.pln` files not getting stored in `$NZ_KIT_LOG/plans` directory if your query crashes. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17185**
-- Fixed the issue with sensitive files from host pod being read by using external tables and remote nzsql client. **https://jsw.ibm.com/browse/NEXTGEN-18608**
+- Fixed the issue with sensitive files from host pod being read by using external tables and remote `nzsql` client. Starting with this release, you cannot load data into `/root` and `/home` directories, so using `nzload` with datafile from `/home` and `/root` is restricted along with creating external tables in these directories. **https://jsw.ibm.com/browse/NEXTGEN-18608**
 
 ### Components
 {: #components11226}
@@ -156,7 +156,7 @@ As of June 14, 2022, several fixes, and a stability patch for critical issues.
 ## May 2022
 {: #may2022}
 
-As of May 20, 2022, workload enhacements and network policies support is added.
+As of May 20, 2022, workload enhancements and network policies support is added.
 
 ### New features
 {: #nfmay2022}
