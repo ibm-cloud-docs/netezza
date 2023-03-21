@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-17"
+lastupdated: "2023-03-21"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -45,7 +45,6 @@ subcollection: netezza
 ### Known issues
 {: #kimarch2023}
 
-- **draft comment: https://jsw.ibm.com/browse/NEXTGEN-19031**
 - You might experience the paste option not working in Mozilla Firefox 110.x when you are using the query editor in the web console. This is the web browser limitation and you must change the browser configuration preferences to allow the web pages to get access to the clipboard by using JavaScript. This issue is not present when using other web browsers.
 
 Workaround:
