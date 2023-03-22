@@ -2,9 +2,9 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-22"
 
-keywords: Netezza Performance Server release notes, what's new,
+keywords: Netezza Performance Server release notes, what's new
 
 subcollection: netezza
 
