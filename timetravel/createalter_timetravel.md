@@ -30,7 +30,7 @@ subcollection: netezza
 
 To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, schema, or database (time travel objects) by setting **DATA_VERSION_RETENTION_TIME** (retention time interval) to a nonzero value. To set **DATA_VERSION_RETENTION_TIME**, use the **CREATE** or **ALTER** command for these object types. You can select between 1 day and up to 99 days, or zero to alter a temporal object to nontemporal.
 
-Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](docs/netezza?topic=netezza-managing_tt).
+Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](/docs/netezza?topic=netezza-managing_tt).
 {: important}
 
 Also, you can [set a default **DATA_VERSION_RETENTION_TIME** for the system](/docs/netezza?topic=netezza-dataretentioninterval_tt#settingretentioninterval_tt).
