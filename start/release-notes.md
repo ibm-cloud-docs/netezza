@@ -30,6 +30,8 @@ subcollection: netezza
 
 - Default database maximum connections to the server is now increased to 1000. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17028**
 
+- LSV3 nodes are supported by default with CSI driver enabled. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17989**  
+
 ### Fixes
 {: #fmarch2023}
 
@@ -50,11 +52,11 @@ subcollection: netezza
   Workaround:
 
   1. Open a new Firefox window.
-  1. In the address bar, enter about:config.
-  1. Click Accept the Risk and Continue button.
-  1. In the Search preference name, type asyncc.
-  1. Select dom.events.asyncClipboard.readText and dom.events.testing.asyncClipboard by clicking the toggle icon on the right.
-     The settings change to true.
+  1. In the address bar, enter `about:config`.
+  1. Click **Accept the Risk and Continue** button.
+  1. In the Search preference name, type `asyncc`.
+  1. Select **dom.events.asyncClipboard.readText** and **dom.events.testing.asyncClipboard** by clicking the toggle icon on the right.
+     The settings change from **false** to **true**.
   1. Refresh the web console page.   
 
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-18984**
