@@ -29,7 +29,6 @@ subcollection: netezza
 {: #march2023}
 
 - Default database maximum connections to the server is now increased to 1000. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17028**
-
 - LSV3 nodes are supported by default with CSI driver enabled. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17989**  
 
 ### Fixes
@@ -77,7 +76,7 @@ subcollection: netezza
 | -----------       | -----------       | ----------   |
 | Postmaster cores  | NZ_DATA_DIR/global| NZ_LOG_DIR/postgres/postmaster/|
 | Postgres cores    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres   |
-{: caption="Table 1. New and previous locations of the postmaster and posgres core dumps." caption-side="bottom"}
+{: caption="Table 1. New and previous locations of the postmaster and postgres core dumps." caption-side="bottom"}
 
 - Automatic pause and resume is enabled in the web console.
 
