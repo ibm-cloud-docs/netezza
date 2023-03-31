@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-22"
+lastupdated: "2023-03-31"
 
 keywords: Netezza Performance Server release notes, what's new
 
@@ -34,7 +34,7 @@ subcollection: netezza
 {: #fmarch2023}
 
 - Fixed the issue with `.pln` files not getting stored in `$NZ_KIT_LOG/plans` directory if your query crashes. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17185**
-- Fixed the issue with sensitive files from host pod being read by using external tables and remote `nzsql` client. Starting with this release, you cannot load data into `/root` and `/home` directories, so using `nzload` with datafile from `/home` and `/root` is restricted along with creating external tables in these directories. **https://jsw.ibm.com/browse/NEXTGEN-18608**
+- Fixed the issue with sensitive files from host pod being read by using external tables and remote `nzsql` client. Starting with this release, you cannot load data into `/root` and `/home` directories, so using `nzload` with datafile from `/root` and `/home` is restricted along with creating external tables in these directories. **https://jsw.ibm.com/browse/NEXTGEN-18608**
 
 ### Components
 {: #components11226}
@@ -45,17 +45,17 @@ subcollection: netezza
 ### Known issues
 {: #kimarch2023}
 
-- You might experience the paste option not working in Mozilla Firefox 110.x when you are using the query editor in the web console. This is the web browser limitation and you must change the browser configuration preferences to allow the web pages to get access to the clipboard by using JavaScript. This issue is not present when using other web browsers.
+- You might experience the paste option not working in Mozilla Firefox 110.x when you are using the query editor in the web console. This is the web browser limitation and you must change the browser configuration preferences to allow the web pages to get access to the clipboard by using JavaScript. This issue is not present in other web browsers.
 
-Workaround:
+  Workaround:
 
-1. Open a new Firefox window.
-1. In the address bar, enter about:config.
-1. Click Accept the Risk and Continue button.
-1. In the Search preference name, type asyncc.
-1. Select dom.events.asyncClipboard.readText and dom.events.testing.asyncClipboard by clicking the toggle icon on the right.
-   The settings change to true.
-1. Refresh the web console page.   
+  1. Open a new Firefox window.
+  1. In the address bar, enter about:config.
+  1. Click Accept the Risk and Continue button.
+  1. In the Search preference name, type asyncc.
+  1. Select dom.events.asyncClipboard.readText and dom.events.testing.asyncClipboard by clicking the toggle icon on the right.
+     The settings change to true.
+  1. Refresh the web console page.   
 
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-18984**
 
