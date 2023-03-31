@@ -28,14 +28,14 @@ subcollection: netezza
 ### New features and enhancements
 {: #march2023}
 
-- Default database maximum connections to the server is now increased to 1000. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17028**
-- LSV3 nodes are supported by default with CSI driver enabled. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17989**  
+- Default database maximum connections to the server is now increased to 1000.
+- LSV3 nodes are supported by default with CSI driver enabled.
 
 ### Fixes
 {: #fmarch2023}
 
-- Fixed the issue with `.pln` files not getting stored in `$NZ_KIT_LOG/plans` directory if your query crashes. **draft comment: https://jsw.ibm.com/browse/NEXTGEN-17185**
-- Fixed the issue with sensitive files from host pod being read by using external tables and remote `nzsql` client. Starting with this release, you cannot load data into `/root` and `/home` directories, so using `nzload` with datafile from `/root` and `/home` is restricted along with creating external tables in these directories. **https://jsw.ibm.com/browse/NEXTGEN-18608**
+- Fixed the issue with `.pln` files not getting stored in `$NZ_KIT_LOG/plans` directory if your query crashes.
+- Fixed the issue with sensitive files from host pod being read by using external tables and remote `nzsql` client. Starting with this release, you cannot load data into `/root` and `/home` directories, so using `nzload` with datafile from `/root` and `/home` is restricted along with creating external tables in these directories.
 
 ### Components
 {: #components11226}
@@ -56,9 +56,7 @@ subcollection: netezza
   1. In the Search preference name, type `asyncc`.
   1. Select **dom.events.asyncClipboard.readText** and **dom.events.testing.asyncClipboard** by clicking the toggle icon on the right.
      The settings change from **false** to **true**.
-  1. Refresh the web console page.   
-
-**draft comment: https://jsw.ibm.com/browse/NEXTGEN-18984**
+  1. Refresh the web console page.
 
 ## February 2023
 {: #feb2023}
