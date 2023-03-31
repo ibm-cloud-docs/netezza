@@ -73,10 +73,10 @@ subcollection: netezza
 
 - The location of postmaster and postgres core dumps is changed.
 
-| Core dump       | Previous location | New location |
-| -----------     | -----------       | ----------   |
-| Postmaster cores| NZ_DATA_DIR/global| NZ_LOG_DIR/postgres/postmaster/|
-| Postgre cors    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres   |
+| Core dump         | Previous location | New location |
+| -----------       | -----------       | ----------   |
+| Postmaster cores  | NZ_DATA_DIR/global| NZ_LOG_DIR/postgres/postmaster/|
+| Postgres cores    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres   |
 {: caption="Table 1. New and previous locations of the postmaster and posgres core dumps." caption-side="bottom"}
 
 - Automatic pause and resume is enabled in the web console.
