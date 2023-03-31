@@ -2,9 +2,9 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-03-31"
 
-keywords: Netezza Performance Server release notes, what's new,
+keywords: Netezza Performance Server release notes, what's new
 
 subcollection: netezza
 
@@ -22,6 +22,42 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
+## March 2023
+{: #march2023}
+
+### New features and enhancements
+{: #march2023}
+
+- Default database maximum connections to the server is now increased to 1000.
+- LSV3 nodes are supported by default with CSI driver enabled.
+
+### Fixes
+{: #fmarch2023}
+
+- Fixed the issue with `.pln` files not getting stored in `$NZ_KIT_LOG/plans` directory if your query crashes.
+- Fixed the issue with sensitive files from host pod being read by using external tables and remote `nzsql` client. Starting with this release, you cannot load data into `/root` and `/home` directories, so using `nzload` with datafile from `/root` and `/home` is restricted along with creating external tables in these directories.
+
+### Components
+{: #components11226}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.6
+- Web console 4.0.12
+
+### Known issues
+{: #kimarch2023}
+
+- You might experience the paste option not working in Mozilla Firefox 110.x when you are using the query editor in the web console. This is the web browser limitation and you must change the browser configuration preferences to allow the web pages to get access to the clipboard by using JavaScript. This issue is not present in other web browsers.
+
+  Workaround:
+
+  1. Open a new Firefox window.
+  1. In the address bar, enter `about:config`.
+  1. Click **Accept the Risk and Continue** button.
+  1. In the Search preference name, type `asyncc`.
+  1. Select **dom.events.asyncClipboard.readText** and **dom.events.testing.asyncClipboard** by clicking the toggle icon on the right.
+     The settings change from **false** to **true**.
+  1. Refresh the web console page.
+
 ## February 2023
 {: #feb2023}
 
@@ -34,11 +70,11 @@ subcollection: netezza
 
 - The location of postmaster and postgres core dumps is changed.
 
-| Core dump       | Previous location | New location |
-| -----------     | -----------       | ----------   |
-| Postmaster cores| NZ_DATA_DIR/global| NZ_LOG_DIR/postgres/postmaster/|
-| Postgre cors    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres   |
-{: caption="Table 1. New and previous locations of the postmaster and posgres core dumps." caption-side="bottom"}
+| Core dump         | Previous location | New location |
+| -----------       | -----------       | ----------   |
+| Postmaster cores  | NZ_DATA_DIR/global| NZ_LOG_DIR/postgres/postmaster/|
+| Postgres cores    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres   |
+{: caption="Table 1. New and previous locations of the postmaster and postgres core dumps." caption-side="bottom"}
 
 - Automatic pause and resume is enabled in the web console.
 
@@ -118,7 +154,7 @@ As of June 14, 2022, several fixes, and a stability patch for critical issues.
 ## May 2022
 {: #may2022}
 
-As of May 20, 2022, workload enhacements and network policies support is added.
+As of May 20, 2022, workload enhancements and network policies support is added.
 
 ### New features
 {: #nfmay2022}
