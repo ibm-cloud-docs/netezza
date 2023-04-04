@@ -29,7 +29,6 @@ subcollection: netezza
 {: #march2023}
 
 - Default database maximum connections to the server is now increased to 1000.
-- LSV3 nodes are supported by default with CSI driver enabled.
 
 ### Fixes
 {: #fmarch2023}
