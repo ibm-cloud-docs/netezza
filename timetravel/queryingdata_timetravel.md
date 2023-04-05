@@ -179,7 +179,7 @@ See also [the **BETWEEN...AND** subclause](https://cloud.ibm.com/docs/netezza?to
 
 ```sql
 BEGIN;
-RENAME TABLE <table_name> TO <new_table_name>;
+ALTER TABLE <table_name> RENAME TO <new_table_name>;
 CREATE TABLE <table_ name> AS
   SELECT * FROM <new_table_name> FOR SYSTEM_TIME <temporal_clause>;
 DROP TABLE <new_table_name>; -- or, keep it for diagnostics
@@ -191,7 +191,7 @@ Example:
 
 ```sql
 BEGIN;
-RENAME TABLE PRODUCT TO PRODUCT_BAK;
+ALTER TABLE PRODUCT RENAME TO PRODUCT_BAK;
 CREATE TABLE PRODUCT AS
   SELECT * FROM FLIGHT_BAK FOR SYSTEM_TIME AS OF '2022-11-01 11:30:00';
 DROP TABLE FLIGHT_BAK; -- or, keep it for diagnostics
