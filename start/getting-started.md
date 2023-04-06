@@ -81,3 +81,11 @@ Your instance comes with [query history](https://www.ibm.com/docs/en/netezza?top
 
 - Follow the instructions [here](https://www.ibm.com/support/pages/changing-query-history-users-password) to change the history user password.
 - Open a [ticket](https://www.ibm.com/support/pages/changing-query-history-users-password) to stop and start the database when resetting history user password.
+
+### Instlling client packages
+{: #download-packages}
+
+Now, you can install the necessary Netezza Performance Server CLI clients tools.
+
+For more information, see 
+https://www.ibm.com/docs/en/netezza?topic=administrators-installing-client-software-packages
