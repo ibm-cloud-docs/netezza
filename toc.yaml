@@ -25,6 +25,7 @@ toc:
           topics:
           - connecting/connecting.md
           - connecting/connecting_private_endpoints.md
+      - start/loading_unloading.md
       - topicgroup:
           label: Web console
           topics:
