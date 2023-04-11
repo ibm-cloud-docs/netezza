@@ -33,7 +33,7 @@ Alternatively, you can use `nzpy`, `nzgo`, and the ODBC/JDBC drivers to load and
 ## Before you begin
 {: #loading-prereqs}
       
-Connect to {{site.data.keyword.netezza_short}} as the `admin` user by using [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command).  
+- If you downloaded and installed `nzsql`, connect to {{site.data.keyword.netezza_short}} as the `admin` user by using [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command).  
 As explained in [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview), you can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints. Each endpoint type provides a set of two hostnames that you can connect to {{site.data.keyword.netezza_short}}.
 
 ```sql
@@ -46,7 +46,6 @@ nzsql -host NPS HOST IP -u USER -pw PASSWORD
 | -host NPS HOST IP | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
 | -u USER           | Specifies the user name.      |
 | -p PASSWORD       | Specifies the password for the user. |
-
 
 
 Example:
@@ -63,22 +62,28 @@ SYSTEM.ADMIN(ADMIN)=>
 ```
 {: codeblock}
 
+- If you did not donwload and install `nzsql`, complete these steps:
 
-If you did not install `nzsql`, complete these steps:
 1. Download the package from Fix Central and install it as desribed in [Installing client packages](https://www.ibm.com/docs/en/netezza?topic=service-installing-client-software-packages).  
 1. Ensure that you have the correct path set up to run `nzsql` commands.  
    See:  
    - [Path for {{site.data.keyword.netezza_short}} CLI client commands](https://www.ibm.com/docs/en/netezza?topic=inpsccls-path-netezza-performance-server-cli-client-commands-2)
    - [The more command on Windows](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command)
-1. Connect to {{site.data.keyword.netezza_short}} by using `nzsql`.   
+1. Connect to {{site.data.keyword.netezza_short}} by using `nzsql` by using [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command).  
+   As explained in [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview), you can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints. Each endpoint type provides a set of two hostnames that you can connect to {{site.data.keyword.netezza_short}}.
+
 
 
 ## Loading databases
 {: #loading-dbs}
 
+1. Create an external table. https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
 
+An external table allows to treat an external flat file as a database table. You can use external tables to access files that are stored on the Netezza Performance Server host server. Additionally, Netezza Performance Server can treat a file on a client system as a remote external table by using the REMOTESOURCE option.
+Netezza Performance Server environments also support system tables, which are stored on the host, and user tables, which are stored on the disks in the storage arrays.
 
+You can use external tables to load data into a Netezza system or store data outside a Netezza system. If you use an external table to store data outside a system, you can transfer the data to another application or use the data as a table backup. You can also use data from an external table as part of an SQL query.
 
-1. set appropriate path and invoke nzsql
+An external table has a definition, also called a table schema, but the actual data exists outside the Netezza Performance Server system database. After you create the external table definition, you can use INSERT INTO statements to load data from the external file into a database table or use SELECT FROM statements to query the external table.
 
-https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2
+1. 
