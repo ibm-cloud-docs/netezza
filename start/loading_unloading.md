@@ -51,30 +51,29 @@ subcollection: netezza
    
    As explained in [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview), you can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints. Each endpoint type provides a set of two hostnames that you can connect to {{site.data.keyword.netezza_short}}.
    
-       ```sql
-       nzsql -host NPS HOST IP -u USER -pw PASSWORD
-       ```
-       {: codeblock}
-       
-       | Option            | Description |
-       | -----------       | ----------- |
-       | -host NPS HOST IP | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
-       | -u USER           | Specifies the user name.      |
-       | -p PASSWORD       | Specifies the password for the user. |
-        
-       Example:
-       
-       ```sql
-       nzsql -host X.XX.XXX.XXX -u admin -pw password
-       Welcome to nzsql, the IBM Netezza SQL interactive terminal.
-       Type:  \h for help with SQL commands
-              \? for help on internal slash commands
-              \g or terminate with semicolon to execute query
-             \q to quit
-         
-       SYSTEM.ADMIN(ADMIN)=> 
-       ```
-      {: codeblock}
+   ```sql
+   nzsql -host NPS HOST IP -u USER -pw PASSWORD
+   ```
+   {: codeblock}
+   
+   | Option            | Description |
+   | -----------       | ----------- |
+   | -host NPS HOST IP | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
+   | -u USER           | Specifies the user name.      |
+   | -p PASSWORD       | Specifies the password for the user. |
+   
+   Example:
+    ```sql
+    nzsql -host X.XX.XXX.XXX -u admin -pw password
+    Welcome to nzsql, the IBM Netezza SQL interactive terminal.
+    Type:  \h for help with SQL commands
+           \? for help on internal slash commands
+           \g or terminate with semicolon to execute query
+           \q to quit
+           
+    SYSTEM.ADMIN(ADMIN)=> 
+    ```
+    {: codeblock}
 
 ## Loading data
 {: #lodading-data}
@@ -97,12 +96,12 @@ subcollection: netezza
 
    | Input               | Description |
    | -----------         | ----------- |
-   | <table>             | Specifies a name for the table that you are creating. |
-   | <file path>         | Specifies the location of the source data file that you are loading. |
-   | <col1>, <col2>, ... | Specify column names in the table that correspond to column names from the file that you are loading. |
-   | <source type>       | Specifies that the source data file is remote. You must use `nzsql` because you are using the `nzsql` client to load data. For more information, see [RemoteSource option](https://www.ibm.com/docs/en/netezza?topic=od-remotesource-option-2).|
-   | <delimiter type>    | Specifies the delimiter that is used in your source data file. For more information, see [Delimiter option](https://www.ibm.com/docs/en/netezza?topic=od-delimiter-option-2).|
-   | <number of rows>    | Specifies the number of initial rows to skip before loading the data. For more information, see [SkipRows option](https://www.ibm.com/docs/en/netezza?topic=od-skiprows-option-2).|
+   | table             | Specifies a name for the table that you are creating. |
+   | file path         | Specifies the location of the source data file that you are loading. |
+   | col1, col2, ... | Specify column names in the table that correspond to column names from the file that you are loading. |
+   | source type       | Specifies that the source data file is remote. You must use `nzsql` because you are using the `nzsql` client to load data. For more information, see [RemoteSource option](https://www.ibm.com/docs/en/netezza?topic=od-remotesource-option-2).|
+   | delimiter type   | Specifies the delimiter that is used in your source data file. For more information, see [Delimiter option](https://www.ibm.com/docs/en/netezza?topic=od-delimiter-option-2).|
+   | number of rows  | Specifies the number of initial rows to skip before loading the data. For more information, see [SkipRows option](https://www.ibm.com/docs/en/netezza?topic=od-skiprows-option-2).|
    
    Example:
 
@@ -152,16 +151,16 @@ subcollection: netezza
 
    | Input               | Description |
    | -----------         | ----------- |
-   | <data object>       | Specifies a valid source data file on S3. |
-   | <source type>       | Specifies the source type. You must use `S3`. |
-   | <delimiter type>    | Specifies the delimiter type that is used in your source data file. |
-   | <unique ID>         | Optional. Specifies the namespace that is used to group data in the cloud bucket. |
-   | <access key ID>     | Specifies the access key. |
-   | <secret access key> | Specifies the secret access key. |
-   | <default region>    | Specifies the region in  which the bucket is located. |
-   | <bucket URL>        | Specifies the name of the bucket. |
-   | <endpoint>          | Specifies the region URL to access your bucket. |
-   | <multipart size>    | Specifies the size of each part in a multipart upload. The default is 105 MB; a maximum 105 MB of buffer can be uploaded in one request.)
+   | data object      | Specifies a valid source data file on S3. |
+   | source type       | Specifies the source type. You must use `S3`. |
+   | delimiter type    | Specifies the delimiter type that is used in your source data file. |
+   | unique ID         | Optional. Specifies the namespace that is used to group data in the cloud bucket. |
+   | access key ID>    | Specifies the access key. |
+   | secret access key | Specifies the secret access key. |
+   | default region    | Specifies the region in  which the bucket is located. |
+   | bucket URL        | Specifies the name of the bucket. |
+   | endpoint          | Specifies the region URL to access your bucket. |
+   | multipart size    | Specifies the size of each part in a multipart upload. The default is 105 MB; a maximum 105 MB of buffer can be uploaded in one request.)
 
    Example:
 
