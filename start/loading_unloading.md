@@ -117,7 +117,7 @@ subcollection: netezza
 
    ```sql
    insert into <table> SELECT * from <external table> ????????????
-   ```
+   ``` 
    {: codeblock}
 
 
