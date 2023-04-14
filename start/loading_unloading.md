@@ -75,7 +75,7 @@ subcollection: netezza
     ```
     {: codeblock}
 
-## Loading data
+### Loading data
 {: #lodading-data}
 
 1. Prepare the data that you want to load:
@@ -83,9 +83,7 @@ subcollection: netezza
     1. Note the columns.
     1. Note the location of the file.
 
-1. Create a table by using the `CREATE TABLE AS` command.
-
-**DRAFT COMMENT: When do you create the external table? This is not clear**
+1. Create a table by using the `CREATE TABLE AS` command. **DRAFT COMMENT: When do you create the external table? This is not clear**
 
    ```sql
    create table <table> as select * from external <file path> (<col1>, <col2>, ...) using (remotesource <source type> delim <delimiter type> skiprows <number of rows>);
@@ -119,7 +117,8 @@ subcollection: netezza
    ``` 
    {: codeblock}
 
-
+   Example: 
+   
    ```sql
    INSERT INTO banking_customer_data_nps SELECT * FROM banking_customer_data ???????
    ```
