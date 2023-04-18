@@ -75,7 +75,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
     ```
     {: codeblock}
 
-## Loading and unloading local data
+## Loading data from local systems
 {: #load-data-nzsql}
 
 1. Prepare the local data file that you want to load:
