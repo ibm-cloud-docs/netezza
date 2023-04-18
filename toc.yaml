@@ -30,9 +30,9 @@ toc:
           topics:
           - webconsole/get-strt.md
           - webconsole/users-group.md
-          - topicgroup: 
+          - topicgroup:
               label: Databases
-              topics: 
+              topics:
               - webconsole/databases.md
               - webconsole/creating_dbs.md
               - webconsole/creating_schemas.md
@@ -61,7 +61,7 @@ toc:
              - webconsole/wp_pausreresume.md
              - webconsole/wp_autopauseresume.md
              - webconsole/wp_scaling.md
-             - webconsole/wp_smartscaling.md 
+             - webconsole/wp_smartscaling.md
           - topicgroup:
               label: Backup and restore
               topics:
@@ -97,18 +97,18 @@ toc:
           - security/endpoints.md
           - security/encryption.md
           - security/iam-docs.md
-      - topicgroup: 
+      - topicgroup:
          label: Managing authentication methods
          topics:
          - authentication/authentication.md
          - topicgroup:
             label: Setting IBM IAM authentication
-            topics: 
+            topics:
             - authentication/ibmiam_autnentication.md
             - security/iam-docs.md
          - authentication/azuread_authenticating.md
-         - authentication/ldap_authentication.md 
-         - https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication   
+         - authentication/ldap_authentication.md
+         - https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication
       - topicgroup:
          label: Netezza Performance Server and Kafka
          topics:
@@ -124,7 +124,14 @@ toc:
              label: External tables
              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - topicgroup:
-         label: Time travel and historical data 
+         label: Querying data from data lakehouse
+         topics:
+         - data_lakehouse/data_lakehouse_overview.md
+         - data_lakehouse/querying_datalakehouse.md
+         - data_lakehouse/ingesting_datalakehouse.md
+         - data_lakehouse/merging_datalakehouse.md
+      - topicgroup:
+         label: Time travel and historical data
          topics:
          - timetravel/introducing_timetravel.md
          - timetravel/createalter_timetravel.md

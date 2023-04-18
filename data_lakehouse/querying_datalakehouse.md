@@ -31,7 +31,7 @@ subcollection: netezza
 
 Ensure that you are connected to the HIVE Metastore.**draft comment: anything more we need to add here?**
 
-In the examples, the publicly available **draft comment: need examples for our data lakehouse use cases?** is used. To follow this example, make sure that the data is in an accessible S3 bucket. **draft comment: do we need to specify any data format?**
+In the examples, the publicly available **draft comment: need examples for our data lakehouse use cases? if we want to stau consistent with the singularity examples we'd need yellow taxi table** is used. To follow this example, make sure that the data is in an accessible S3 bucket. **draft comment: do we need to specify any data format or anything else here?**
 
 ## 1. Create a database by using the required `metasroreuri`.
 {: #create_database}
@@ -44,9 +44,9 @@ In the examples, the publicly available **draft comment: need examples for our d
 
 ## 3. Show schema.
 
-**draft comment: need command and example**
+**draft comment: need command and example. Also, I'm not sure I followed the information on the default schema... What is crucial to be mentioned here?**
 
-## 4.Set schema.
+## 4. Set schema.
 
 **draft comment: need command and example**
 
@@ -54,6 +54,6 @@ In the examples, the publicly available **draft comment: need examples for our d
 
 **draft comment: need command and example**
 
-## 6. Select (from) the table.
+## 6. Select * from the YELLOW_TAXI_TABLE table.
 
 **draft comment: need command and example**
