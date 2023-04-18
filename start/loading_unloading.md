@@ -24,22 +24,20 @@ subcollection: netezza
 # Loading data 
 {: #load-dbs}
 
-- Loading and unloading local data
-   
-- Loading and unloading data from S3
+There are different ways in which you can load your data on {{site.data.keyword.netezza_short}}. Learn how to load data [from your local machine](/docs/netezza?topic=netezza-load-dbs#load-data-nzsql) or [from S3](/docs/netezza?topic=netezza-load-dbs#load-data-s3).
 
 ## Loading and unloading local data
 {: #load-data-nzsql}
 
-### Before you begin
+## Before you begin
 {: #loading-prereqs}
       
 1. Download the client packages from Fix Central and install it as desribed in [Installing client packages](https://www.ibm.com/docs/en/netezza?topic=npsda-installing-client-software-packages-2).
 
-   One of the easiest way to load and unload data to {{site.data.keyword.netezza_short}} is by using the `nzsql` command. `nzsql` invokes an SQL command interpreter on the {{site.data.keyword.netezza_short}} host or a client system that you can use to manage database operations. 
+   One of the easiest way to upload your data to {{site.data.keyword.netezza_short}} is by using the `nzsql` command. `nzsql` provides an interface that allows you to run SQL commands on the {{site.data.keyword.netezza_short}} host.
    {: tip}
      
-   You cannot load and unload data by using the web console.
+   You cannot use the web console to load data.
    
 1. Ensure that you have the correct path set up to run `nzsql` commands.  
    See:  
@@ -47,9 +45,13 @@ subcollection: netezza
    - [Path for {{site.data.keyword.netezza_short}} CLI client commands](https://www.ibm.com/docs/en/netezza?topic=inpsccls-path-netezza-performance-server-cli-client-commands-2)
    - [The more command on Windows](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command)
 
-1. Connect to Netezza Performance Server as the `admin` user by using [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command) amd your credentials.  
+1. Log in to Netezza Performance Server.
+
+   In this example, the [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command) is used, but you can use other clients.
    
    As explained in [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview), you can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints. Each endpoint type provides a set of two hostnames that you can connect to {{site.data.keyword.netezza_short}}.
+
+   To load data, you must be the admin user, the owner of the database or schema, or you must have the `Create Table` privilege. If you need to change user privileges, see [Managing users](/docs/netezza?topic=netezza-users-groups#users).
    
    ```sql
    nzsql -host NPS HOST IP -u USER -pw PASSWORD
@@ -63,6 +65,7 @@ subcollection: netezza
    | -p PASSWORD       | Specifies the password for the user. |
    
    Example:
+
     ```sql
     nzsql -host X.XX.XXX.XXX -u admin -pw password
     Welcome to nzsql, the IBM Netezza SQL interactive terminal.
@@ -78,15 +81,19 @@ subcollection: netezza
 ### Loading data
 {: #lodading-data}
 
-1. Prepare the data that you want to load:
+1. Prepare the local data file that you want to load:
    
     1. Note the columns.
     1. Note the location of the file.
 
-1. Create a table by using the `CREATE TABLE AS` command. **DRAFT COMMENT: When do you create the external table? This is not clear**
+1. Create a table by using the [`CREATE TABLE AS`]((https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-as-2).) command.  
 
+   The command creates a table on Netezza Performance Server and fills it with the data from your local data file.  
+
+   As a part of this command, your local data file is turned into [a transient external table](https://www.ibm.com/docs/en/netezza?topic=et-transient-external-tables-2). In other words, your local data file is temporarily treated as a database table that you can upload to NPS. When you are finished, the transient external table is automatically deleted.  
+   
    ```sql
-   create table <table> as select * from external <file path> (<col1>, <col2>, ...) using (remotesource <source type> delim <delimiter type> skiprows <number of rows>);
+   CREATE TABLE <table> AS SELECT * FROM EXTERNAL <file path> (<col1>, <col2>, ...) USING (RemoteSource <source type> DELIM <delimiter type> SkipRows <number of rows>);
    ```
    {: codeblock}
 
@@ -95,39 +102,29 @@ subcollection: netezza
    | Input               | Description |
    | -----------         | ----------- |
    | table             | Specifies a name for the table that you are creating. |
-   | file path         | Specifies the location of the source data file that you are loading. |
-   | col1, col2, ... | Specify column names in the table that correspond to column names from the file that you are loading. |
-   | source type       | Specifies that the source data file is remote. You must use `nzsql` because you are using the `nzsql` client to load data. For more information, see [RemoteSource option](https://www.ibm.com/docs/en/netezza?topic=od-remotesource-option-2).|
+   | file path         | Specifies the location of the source data file that you are loading. This source data file is turned into a transient external table. |
+   | col1, col2, ... | Specify column names that correspond to column names from the file that you are loading. |
+   | source type       | Specifies that the source data file is remote. When you load data by using external tables, by default, the source data file path is assumed to be on the {{site.data.keyword.netezza_short}} host. If you want to load data from your local machine, you must use the `RemoteSource` option. For the `nzsql` client, specify `RemoteSource 'NZSQL'`. For more information, see [RemoteSource option](https://www.ibm.com/docs/en/netezza?topic=od-remotesource-option-2).|
    | delimiter type   | Specifies the delimiter that is used in your source data file. For more information, see [Delimiter option](https://www.ibm.com/docs/en/netezza?topic=od-delimiter-option-2).|
    | number of rows  | Specifies the number of initial rows to skip before loading the data. For more information, see [SkipRows option](https://www.ibm.com/docs/en/netezza?topic=od-skiprows-option-2).|
    
    Example:
 
    ```sql
-   create table banking_customer_data as select * from external '/home/user/Downloads/banking_customer_data.csv' (customer_id bigint, credit_store int, country varchar(20), gender varchar(6), age int, tenure int, balance double, products_number int, credit_card int, active_member int, estimated_salary double, churn int) using (remotesource 'nzsql' delim ',' skiprows 1);
+   CREATE TABLE flight_data AS SELECT * FROM EXTERNAL '/home/user/Downloads/customer_data.csv' (flight_id bigint, passenger_id int, last_name varchar(225), first_name varchar(225), seat_number int) USING (RemoteSource 'nzsql' DELIM ',' SkipRows 1);
    ```
    {: codeblock}
 
-   For more information about the `CREATE TABLE AS SELECT` command, see [CREATE TABLE AS](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-as-2).
+   For more examples on loading data with external tables, see [External tables](https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2).
 
-1. Insert the data from the table into the table on the Netezza Performance Server system 
-
-   ```sql
-   insert into <table> SELECT * from <external table> ????????????
-   ``` 
-   {: codeblock}
-
-   Example: 
-   
-   ```sql
-   INSERT INTO banking_customer_data_nps SELECT * FROM banking_customer_data ???????
-   ```
-   {: codeblock}
+   Your data is loaded into Netezza Performance Server. You can start running queries now.
 
 ## Loading data from S3
 {: #load-data-s3}
 
 1. Prepare the data that you want to load.
+   Note the file format.
+
 1. On NPS, create an external table (that is based on another table) for the data that you want to load.
 
    ```sql
@@ -154,7 +151,7 @@ subcollection: netezza
    | source type       | Specifies the source type. You must use `S3`. |
    | delimiter type    | Specifies the delimiter type that is used in your source data file. |
    | unique ID         | Optional. Specifies the namespace that is used to group data in the cloud bucket. |
-   | access key ID>    | Specifies the access key. |
+   | access key ID     | Specifies the access key. |
    | secret access key | Specifies the secret access key. |
    | default region    | Specifies the region in  which the bucket is located. |
    | bucket URL        | Specifies the name of the bucket. |
