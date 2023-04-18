@@ -26,9 +26,6 @@ subcollection: netezza
 
 There are different ways in which you can load your data on {{site.data.keyword.netezza_short}}. Learn how to load data [from your local machine](/docs/netezza?topic=netezza-load-dbs#load-data-nzsql) or [from S3](/docs/netezza?topic=netezza-load-dbs#load-data-s3).
 
-## Loading and unloading local data
-{: #load-data-nzsql}
-
 ## Before you begin
 {: #loading-prereqs}
       
@@ -78,8 +75,8 @@ There are different ways in which you can load your data on {{site.data.keyword.
     ```
     {: codeblock}
 
-### Loading data
-{: #lodading-data}
+## Loading and unloading local data
+{: #load-data-nzsql}
 
 1. Prepare the local data file that you want to load:
    
