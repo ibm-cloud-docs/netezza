@@ -44,7 +44,7 @@ For more information about domain standards, see [Defining network policies with
 ### Adding network policies
 {: #wc-nwpolicies-adding}
 
-1. Go to **Administration >> Settings >> Network policies**.
+1. Go to **Administration > Settings > Network policies**.
 1. In the *Add policy* section, type your Classless Inter-Domain Routing (CIDR) or hostname.  
    The IP address must conform to the domain standards.  
 1. Select whether the policy is `Allowed` or `Blocked`.
@@ -53,12 +53,12 @@ For more information about domain standards, see [Defining network policies with
 ### Viewing network policies
 {: #wc-nwpolicies-viewing}
 
-To view existing policies, go to **Administration >> Settings >> Network policies >> Existing policies**.
+To view existing policies, go to **Administration > Settings > Network policies > Existing policies**.
 
 ### Deleting network policies
 {: #wc-nwpolicies-deleting}
 
-1. Go to **Administration >> Settings >> Network policies >> Existing policies**.
+1. Go to **Administration > Settings > Network policies > Existing policies**.
 2. Select the policy that you want to delete.
 3. Click **Delete**.
 
@@ -74,7 +74,7 @@ On the *Monitoring profile* page, you can do the following:
 - Monitor the performance of your system over time.
 - Collect data for historical and real time data.
 
-To access the *Monitoring profile* page, go to **Administration >> Settings >> Monitoring profile**.
+To access the *Monitoring profile* page, go to **Administration > Settings > Monitoring profile**.
 
 ## Maintenance
 {: #maintenance}
@@ -83,7 +83,7 @@ On the *Maintenance*  page, you can schedule a database maintenance and view inf
 
 To schedule a database maintenance slot:
 
-1. Go to **Administration >> Settings >> Maintenance**.
+1. Go to **Administration > Settings > Maintenance**.
 1. Click **Edit**.
 1. Select a time for the maintenance job.
 1. Select a day or days for the maintenance job.
