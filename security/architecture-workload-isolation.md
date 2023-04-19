@@ -21,7 +21,10 @@ subcollection: netezza
 # Learning about {{site.data.keyword.netezza_short}} architecture and workload isolation
 {: #compute-isolation}
 
-{{site.data.keyword.netezza_full}} uses a multi-tenant-in-a-cluster isolation model. The model uses a separate OpenShift namespace for each customer and each instance.
+{{site.data.keyword.netezza_full}} uses a multi-tenant-in-a-cluster isolation model.  
+
+For Azure, the model uses a separate OpenShift namespace for each customer and each instance.
+For AWS, the model uses EKS (an AWS-managed Kubernetes platform) for each customer and each instance.
 {: shortdesc}
 
 ## {{site.data.keyword.netezza_short}} architecture
