@@ -21,4 +21,4 @@ subcollection: netezza
 {:caption: .caption}
 
 # Merging and querying data within data lakehouse
-{: #merging_singularity}
+{: #merging_datalakehouse}
