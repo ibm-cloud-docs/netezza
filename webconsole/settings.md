@@ -26,12 +26,12 @@ On the *Settings* page, you can manage the following items:
 - Monitoring profile
 - Database maintenance
 
-## Network policies
+## Network policies 
 {: #wc-nwpolicies}
 
 On the *Network policies* page, you can add policies and view existing policies.
 
-You can add network policies if you belong to the `ADMINISTRATORS` group.
+To add network policies, you must belong to the `ADMINISTRATORS` group.
 {: note}
 
 For more information about network policies and exmples, see [Network policies](/docs/netezza?topic=netezza-network-policies).
@@ -39,7 +39,7 @@ For more information about network policies and exmples, see [Network policies](
 ### Domain standards
 {: #domain-standards}
 
-For more information on the domain standards, see [Defining network policies with Classless Inter-Domain Routing (CIDR)](/docs/netezza?topic=netezza-network-policies#nw-cidr).
+For more information about domain standards, see [Defining network policies with Classless Inter-Domain Routing (CIDR)](/docs/netezza?topic=netezza-network-policies#nw-cidr).
 
 ### Adding network policies
 {: #wc-nwpolicies-adding}
