@@ -39,4 +39,4 @@ The following methods are used to secure your connection and data:
 ## Data deletion
 {: #data-delete}
 
-When you delete an instance, the service deletes the data associated with you instance, including IBM-managed backups that are associated with the service. You will never be able to restore it after that.
+When you delete an instance, the service deletes the data associated with you instance, including IBM-managed backups that are associated with the service. You will never be able to restore it after that. 
