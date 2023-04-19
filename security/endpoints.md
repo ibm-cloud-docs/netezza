@@ -25,22 +25,24 @@ subcollection: netezza
 # Endpoints
 {: #endpoints}
 
-{{site.data.keyword.netezza_full}} offers a choice of public, private, or both public and private endpoints. Public network service endpoints are accessible from anywhere on the internet. Private network service endpoint access traverses only the cloud platform backbone network, not the public internet.
+{{site.data.keyword.netezza_full}} offers a choice of [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoint), [private](/docs/netezza?topic=netezza-connecting-overview#private_endpoint), or both public and private endpoints. 
+
+Public network service endpoints are accessible from anywhere on the internet. Private network service endpoint access traverses only the cloud platform backbone network, not the public internet.
 {: shortdesc}
 
-Each endpoint type provides a set of three hostnames. You can connect each of the hostnames to one of the following components:
+For more information about connecting to {{site.data.keyword.netezza_short}} by using private endpoints, see [Connecting to {{site.data.keyword.netezza_short}}](docs/netezza?topic=netezza-connecting-overview)
 
-- Web console
+Each endpoint type provides a set of hostnames that you can connect to one of the following {{site.data.keyword.netezza_short}} components:
 
-   The web interface, which you can use to manage and monitor the database.
+- **[WEB CONSOLE](/docs/netezza?topic=netezza-getstarted-console)**  
+   The web interface, which you can use to manage and monitor the database.  See: [Retrieving credentials](/docs/netezza?topic=netezza-next-endpoints).
 
-- {{site.data.keyword.netezza_short}} database (NZ host)
-
-   The hostname, which you can connect to the database on port 5480.
+- **{{site.data.keyword.netezza_short}} database (NZ host)**  
+   The hostname, which you can connect to the database on port 5480 by using the ODBC, JDBC, OLE DB, .NET and Go Driver drivers](https://www.ibm.com/docs/en/netezza?topic=npsdu-drivers-language-support-2), [nzsql](https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2), and [nz](/docs/netezza?topic=netezza-nztool).  See [Installing client packages](https://www.ibm.com/docs/en/netezza?topic=npsda-installing-client-software-packages-2).
 
 
 ## Viewing endpoints
 {: #endpoint-setup}
 
-At the time of instance creation, you can select your choice of endpoint from the **Service Endpoints** box on {{site.data.keyword.cloud_notm}}.
-The endpoints are available on the **Manage** page when you click on service instance.
+At the time of instance creation, you can select your choice of endpoint from the **Service Endpoints** section on {{site.data.keyword.cloud_notm}}.
+The endpoints are available on the *Manage* page when you click on your service instance.
