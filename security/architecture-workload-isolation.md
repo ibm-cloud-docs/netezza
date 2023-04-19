@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-04-19"
 
 keywords: public isolation for Netezza Performance Server, compute isolation for Netezza Performance Server, Netezza Performance Server architecture, workload isolation in Netezza Performance Server
 

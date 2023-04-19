@@ -3,7 +3,7 @@
 copyright:
   years: 2023
 
-lastupdated: "2023-03-02"
+lastupdated: "2023-04-19"
 
 keywords: isolation for Netezza Performance Server, service endpoints for Netezza Performance Server, private network for Netezza Performance Server, network isolation in Netezza Performance Server, non-public routes for Netezza Performance Server, private connection for Netezza Performance Server, private connectivity for Netezza Performance Server, endpoints,
 
