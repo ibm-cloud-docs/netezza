@@ -34,7 +34,7 @@ On the *Network policies* page, you can add policies and view existing policies.
 To add network policies, you must belong to the `ADMINISTRATORS` group.
 {: note}
 
-For more information about network policies and exmples, see [Network policies](/docs/netezza?topic=netezza-network-policies).
+For more information about network policies and examples, see [Network policies](/docs/netezza?topic=netezza-network-policies).
 
 ### Domain standards
 {: #domain-standards}
