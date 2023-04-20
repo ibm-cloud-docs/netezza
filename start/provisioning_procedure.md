@@ -66,6 +66,4 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 ## Next steps
 {: #provisioning_next}
 
-- [Retrieve information about endpoints](/docs/netezza?topic=netezza-next-endpoints)
-- [Generate credentials](/docs/netezza?topic=netezza-generate-credentials) to access your instance
-- [Reset history user password](/docs/netezza?topic=netezza-reset-password)
+- [Connect to your instance](/docs/netezza?topic=netezza-connecting-overview)
