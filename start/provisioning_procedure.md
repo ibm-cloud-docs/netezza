@@ -41,15 +41,16 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 1. Go to the the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) or [Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/) web console.
 1. Locate the {{site.data.keyword.netezza_short}} tile and click it.  
    You are redirected to the provisioning page.
-1. On the provisioning page, select your platgorm.
+1. On the provisioning page, select your platform.
    You can choose Azure or AWS.
 1. Choose a corresponding location.
    Based on your selection of platform, {{site.data.keyword.netezza_short}} is available in different locations.
 1. Specify a name for your instance.
 1. Choose a workload contour, Netezza units (NZU) and storage values.
    For more information about workload contours, Netezza Units (NZU) and available storage configuration, see [Architecture](/docs/netezza?topic=netezza-compute-isolation&interface=ui).  
-1. Choose an ednpoint type.  
-   For more information about connectivity options, see [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting&interface=ui). 
+1. Choose a performance profile and storage density.
+1. Choose an endpoint type.  
+   For more information about connectivity options, see [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting). 
 1. Configure advanced features.  
 1. Click **Create** to start the provisioning process.  
    You are redirected to the {{site.data.keyword.cloud_notm}} dashboard page. 
