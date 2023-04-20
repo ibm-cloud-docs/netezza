@@ -24,7 +24,7 @@ subcollection: netezza
 # Loading data 
 {: #load-dbs}
 
-There are different ways in which you can load your data on {{site.data.keyword.netezza_short}}. Learn how to load data [from your local machine](/docs/netezza?topic=netezza-load-dbs#load-data-nzsql) or [from S3](/docs/netezza?topic=netezza-load-dbs#load-data-s3).
+There are different ways in which you can load your data on {{site.data.keyword.netezza_full}}. Learn how to load data [from your local machine](/docs/netezza?topic=netezza-load-dbs#load-data-nzsql) or [from S3](/docs/netezza?topic=netezza-load-dbs#load-data-s3).
 
 ## Before you begin
 {: #loading-prereqs}
@@ -48,7 +48,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
    
    As explained in [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview), you can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints. Each endpoint type provides a set of two hostnames that you can connect to {{site.data.keyword.netezza_short}}.
 
-   To load data, you must be the admin user, the owner of the database or schema, or you must have the `Create Table` privilege. If you need to change user privileges, see [Managing users](/docs/netezza?topic=netezza-users-groups#users).
+   To load data, you must be the admin user, the owner of the database or schema. If you are not loading data to a table that already exists, you also must have the `Create Table` privilege. If you need to change user privileges, see [Managing users](/docs/netezza?topic=netezza-users-groups#users).
    
    ```sql
    nzsql -host NPS HOST IP -u USER -pw PASSWORD
@@ -87,7 +87,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
 
    The command creates a table on Netezza Performance Server and fills it with the data from your local data file.  
 
-   As a part of this command, your local data file is turned into [a transient external table](https://www.ibm.com/docs/en/netezza?topic=et-transient-external-tables-2). In other words, your local data file is temporarily treated as a database table that you can upload to NPS. When you are finished, the transient external table is automatically deleted.  
+   As a part of this command, your local data file is turned into [a transient external table](https://www.ibm.com/docs/en/netezza?topic=et-transient-external-tables-2). In other words, your local data file is temporarily treated as a database table that you can query for loading to a {{site.data.keyword.netezza_short}} table. When you are finished, the transient external table is automatically deleted.  
    
    ```sql
    CREATE TABLE <table> AS SELECT * FROM EXTERNAL <file path> (<col1>, <col2>, ...) USING (RemoteSource <source type> DELIM <delimiter type> SkipRows <number of rows>);
@@ -125,7 +125,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
 1. On NPS, create an external table (that is based on another table) for the data that you want to load.
 
    ```sql
-   CREATE EXTERNAL TABLE <table> SAMEAS <table> USING (
+   CREATE TABLE <table> AS SELECT * FROM EXTERNAL <> USING (
     DATAOBJECT <data object>
     REMOTESOURCE <source type>
     DELIM <delimiter type>
@@ -158,18 +158,17 @@ There are different ways in which you can load your data on {{site.data.keyword.
    Example:
 
    ```sql
-   CREATE EXTERNAL TABLE emp_backup SAMEAS emp USING (
-    DATAOBJECT ('/employee_data.dat')
-    REMOTESOURCE 'S3' 
-    DELIM '|' 
-    UNIQUEID 'samplebackup' 
-    ACCESSKEYID 'xxxxx'
-    SECRETACCESSKEY 'xxxxx'
-    DEFAULTREGION 'ap-geo' 
-    BUCKETURL 'my.backup.bucket' 
-    ENDPOINT 's3.us-east.cloud-object-storage.appdomain.cloud' 
-    MULTIPARTSIZEMB '50'
-    );
+   CREATE TABLE flight_data AS SELECT * FROM EXTERNAL '/customer_data.dat' (flight_id bigint, passenger_id int, last_name varchar(225), first_name varchar(225), seat_number int) USING (
+      REMOTESOURCE 'S3'
+      DELIM '|'
+      UNIQUEID 'samplebackup'
+      ACCESSKEYID 'xxxxx'
+      SECRETACCESSKEY 'xxxxx'
+      DEFAULTREGION 'ap-geo'
+      BUCKETURL 'my.backup.bucket'
+      ENDPOINT 's3.us-east.cloud-object-storage.appdomain.cloud'
+      MULTIPARTSIZEMB '50'
+      );
    ```
    {: codeblock}
 
