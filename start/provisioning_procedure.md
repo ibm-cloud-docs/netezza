@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-09"
+lastupdated: "2023-04-20"
 
 keywords: getting started with Netezza Performance Server, provisioning Netezza Performance Server
 
