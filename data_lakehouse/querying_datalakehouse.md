@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-17"
+lastupdated: "2023-04-20"
 
 keywords: netezza data lakehouse, data lake, querying data, connecting to a metastore
 subcollection: netezza
@@ -26,14 +26,9 @@ subcollection: netezza
 # Querying data from data lakehouse
 {: #querying_datalakehouse}
 
-## Before you begin
-{: #prereqs_datalakehouse}
-
-Ensure that you are connected to the HIVE Metastore.**draft comment: anything more we need to add here?**
-
 In the examples, the publicly available **draft comment: need examples for our data lakehouse use cases? if we want to stau consistent with the singularity examples we'd need yellow taxi table** is used. To follow this example, make sure that the data is in an accessible S3 bucket. **draft comment: do we need to specify any data format or anything else here?**
 
-## 1. Create a database by using the required `metasroreuri`.
+## 1. Create a database by using the required `metastoreuri`.
 {: #create_database}
 
 **draft comment: need command and example**
