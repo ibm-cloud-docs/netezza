@@ -39,11 +39,13 @@ In the examples, the publicly available **draft comment: need examples for our d
 
 ## 3. Show schema.
 
-**draft comment: need command and example. Also, I'm not sure I followed the information on the default schema... What is crucial to be mentioned here?**
-
-## 4. Set schema.
-
 **draft comment: need command and example**
+
+By default, you get connected to a reserved schema called NETEZZA_SCHEMA.
+
+## 4. From your metastore schemas list, set the schema you want to connect to.
+
+**draft comment: need command and example. `set schema x` (or query via full path select * from mydb.myschema.mytable)**
 
 ## 5. Show the table.
 
