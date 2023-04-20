@@ -52,6 +52,12 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 1. Choose an endpoint type.  
    For more information about connectivity options, see [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting). 
 1. Configure advanced features.  
+   
+   For Azure, if you want to be able to access NPS by connecting to the database or web console with [private endpoints](https://learn.microsoft.com/en-us/azure/private-link/) only, you must provide the list of subscription IDs that will be used to create the private endpoint.  
+   If you deploy your {{site.data.keyword.netezza_short}} instance with both private and public endpoints, you do not have to provide subscription IDs.
+
+   For AWS, if you want to be able to access NPS by connecting to the database or web console with [private endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html), you must provide the list of service principals that will be used to create the VPC endpoint service.
+
 1. Click **Create** to start the provisioning process.  
    You are redirected to the {{site.data.keyword.cloud_notm}} dashboard page. 
 1. Go to **Resource list**.  

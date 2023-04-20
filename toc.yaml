@@ -75,15 +75,16 @@ toc:
       - topicgroup:
           label: Administering
           topics:
+          - admins/assigning_hostnames.md
+          - start/endpoints_procedure.md
+          - start/credentials_procedure.md
+          - start/resetting_procedure.md
+          - admins/remove.md
           - admins/pause-resume.md
           - admins/autopause.md
           - admins/scaling.md
           - admins/smartscaling.md
           - admins/auto-admin.md
-          - start/endpoints_procedure.md
-          - start/credentials_procedure.md
-          - start/resetting_procedure.md
-          - admins/remove.md
       - topicgroup: 
           label: Managing authentication methods 
           topics:
