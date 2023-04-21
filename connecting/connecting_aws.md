@@ -34,9 +34,9 @@ With these private endpoints, you can connect to the following components:
 
 1. Get subscription IDs.
 
-When you create your private endpoint connection, the private link service must approve the request. Your request is approved automatically if you provide the **subscription IDs???? TRUE FOR AWS?** in which they are to be created.
+   When you create your private endpoint connection, the private link service must approve the request. Your request is approved automatically if you provide the **subscription IDs???? TRUE FOR AWS?** in which they are to be created.
 
-There are two ways in which you can provide the subscription IDs:
+   There are two ways in which you can provide the subscription IDs:
 
 - At deployment  
    
@@ -47,9 +47,9 @@ There are two ways in which you can provide the subscription IDs:
 
 2. Create private endpoints.
 
-Follow the instructions described in [Create a private endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html).  
+   Follow the instructions described in [Create a private endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html).  
 
-**DRAFT COMMENT: NEED INPUT**
+   **DRAFT COMMENT: NEED INPUT**
 
 ## Connecting to {{site.data.keyword.netezza_short}}
 {: #connecting_instance}
@@ -60,20 +60,22 @@ You can access the {{site.data.keyword.netezza_short}} instance by using the two
 
 - To connect to your {{site.data.keyword.netezza_short}} web console on port 443, you can use the hostname that is associated with the private endpoint that was created with the console resource ID or alias.  
 
-   To form the web console URL from the private endpoint hostname, append the CRN name to it.  
-   Example:  
-   `https://<private endpoint hostname>/#/?crn=CRN_NAME`  
-   To get the CRN name, follow the steps:
+To form the web console URL from the private endpoint hostname, append the CRN name to it.  
 
-   1. Log in to your IBM Cloud account.
-   1. Go to **Resource list > Services and software**.
-   1. Select your {{site.data.keyword.netezza_short}} instance.  
-      The CRN name is displayed on the page.
+Example:  
+`https://<private endpoint hostname>/#/?crn=CRN_NAME`  
+
+To get the CRN name, follow the steps:
+
+1. Log in to your IBM Cloud account.
+1. Go to **Resource list > Services and software**.
+1. Select your {{site.data.keyword.netezza_short}} instance.  
+   The CRN name is displayed on the page.
 
 - To connect to the {{site.data.keyword.netezza_short}} instance from on-prem by using hostnames, you need to setup VPN or Express Route from your on-prem network to the VNET in your subscription.
 **DRAFT COMMENT: IS THIS ACCURATE?**
 
 See also:
-- Assigning hostnames **ADD LINK**
+- [Assigning hostnames](/docs/netezza?topic=netezza-assing_hostnames)
 - [Retrieving information about endpoints for logging in](/docs/netezza?topic=netezza-next-endpoints)
 - [Generating credentials](/docs/netezza?topic=netezza-generate-credentials)
