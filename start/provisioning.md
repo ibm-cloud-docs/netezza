@@ -23,9 +23,9 @@ subcollection: netezza
 # Getting started with {{site.data.keyword.netezza_short}}
 {: #getstarted}
 
-{{site.data.keyword.netezza_full}} ({{site.data.keyword.netezza_short}}) is a fully managed, cloud native analytical data warehouse that is based on massively parallel processing [MPP] architecture. {{site.data.keyword.netezza_short}} is mainly used for analytical processing of historical data, and can process from 100TB up to a few petabytes of data with best in the class performance. Its array of SPUs processes disjoint dataset in parallel which is then aggregated to come up with final result set.
+{{site.data.keyword.netezza_full}} ({{site.data.keyword.netezza_short}}) is a fully managed, cloud native analytical data warehouse that is based on massively parallel processing (MPP) architecture. {{site.data.keyword.netezza_short}} is mainly used for analytical processing of historical data, and can process from 100TB up to a few petabytes of data with best in the class performance. Its array of SPUs processes disjoint dataset in parallel which is then aggregated to come up with final result set.
 
-Learn how to provision a {{site.data.keyword.netezza_short}} instance on Azure or AWS, how to retrieve information about endpoints, and create credentials to access your instance.
+Learn how to provision a {{site.data.keyword.netezza_short}} instance on Azure or AWS and configure private endpoint access.
 {: shortdesc}
 
 ## Before you begin
@@ -62,6 +62,7 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
    After the provisioning process is finished, the instance status is `Active`. 
 
 If you selected to connect to your instance by using private endpoints, see [Configuring private endpoints](/docs/netezza?topic=netezza-getstarted#creating-private-endpoints).
+{: important}
 
 ## Configuring private endpoints
 {: #creating-private-endpoints}
@@ -122,5 +123,3 @@ To connect to your {{site.data.keyword.netezza_short}} on AWS by using [AWS Priv
    When the private endpoints are created, a private hostname is assigned to each of your private endpoints. Use these details to [log in to your instace by using private endpoints](/docs/netezza?topic=netezza-connecting-overview#private_endpoints).
 
    **DRAFT COMMENT: NEEDS VERIFICATION**
-
-
