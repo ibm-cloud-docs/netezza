@@ -63,7 +63,7 @@ To log in to your instance by using public endpoints, you need public hostname d
 
 Access to your data is protected by strong authentication, vast {{site.data.keyword.netezza_short}} authorization options and access controls, encryption over the wire by using SSL and at rest, and IBM security and compliance practices for development and operations.
 
-## Connecting in by using private endpoints
+## Connecting by using private endpoints
 {: #private_endpoints} 
 
 A private endpoint offers you a way to connect over the cloud platform internal network and is not accessible from public networks.
