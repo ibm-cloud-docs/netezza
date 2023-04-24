@@ -19,13 +19,11 @@ toc:
       id: learn
       topics:
       - start/release-notes.md
-      - start/provisioning_procedure.md
+      - start/provisioning.md
       - topicgroup:
           label: Connecting to Netezza Performance Server
           topics:
-          - connecting/connecting.md
-          - connecting/connecting_private_endpoints.md
-          - connecting/connecting_aws.md
+          - logging_in.md
       - topicgroup:
           label: Netezza Performance Server web console
           topics:
@@ -75,7 +73,6 @@ toc:
       - topicgroup:
           label: Administering
           topics:
-          - admins/assigning_hostnames.md
           - start/endpoints_procedure.md
           - start/credentials_procedure.md
           - start/resetting_procedure.md

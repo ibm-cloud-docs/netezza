@@ -30,11 +30,10 @@ You can provision {{site.data.keyword.netezza_short}} with a private endpoint or
 Each endpoint type provides a set of hostnames that you can connect to one of the following {{site.data.keyword.netezza_short}} components:
 
 - **[WEB CONSOLE](/docs/netezza?topic=netezza-getstarted-console)**  
-   The web interface, which you can use to manage and monitor the database.  See: [Retrieving credentials](/docs/netezza?topic=netezza-next-endpoints).
+   The web interface, which you can use to manage and monitor the database.  
 
 - **{{site.data.keyword.netezza_short}} database (NZ host)**  
-   The hostname, which you can connect to the database on port 5480 by using the ODBC, JDBC, OLE DB, .NET and Go Driver drivers](https://www.ibm.com/docs/en/netezza?topic=npsdu-drivers-language-support-2), [nzsql](https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2), and [nz](/docs/netezza?topic=netezza-nztool).  See [Installing client packages](https://www.ibm.com/docs/en/netezza?topic=npsda-installing-client-software-packages-2).
-
+   The hostname, which you can connect to the database on port 5480 by using [the ODBC, JDBC, OLE DB, .NET and Go Driver drivers](https://www.ibm.com/docs/en/netezza?topic=npsdu-drivers-language-support-2), [nzsql](https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2), and [nz](/docs/netezza?topic=netezza-nztool).  
 
 ![Connectivity options](../images/networking.png){: caption="Image 1. Ways to connect." caption-side="bottom"}
 
