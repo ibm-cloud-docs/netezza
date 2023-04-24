@@ -20,10 +20,7 @@ toc:
       topics:
       - start/release-notes.md
       - start/provisioning.md
-      - topicgroup:
-          label: Connecting to Netezza Performance Server
-          topics:
-          - logging_in.md
+      - logging_in.md
       - topicgroup:
           label: Netezza Performance Server web console
           topics:
