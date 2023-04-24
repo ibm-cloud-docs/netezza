@@ -61,7 +61,7 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 1. Go to **Resource list**.  
    After the provisioning process is finished, the instance status is `Active`. 
 
-If you selected to connect to your instance by using private endpoints, see [Setting up private endpoints](LINK).
+If you selected to connect to your instance by using private endpoints, see [Configuring private endpoints](/docs/netezza?topic=netezza-getstarted#creating-private-endpoints).
 
 ## Configuring private endpoints
 {: #creating-private-endpoints}
@@ -100,7 +100,7 @@ If you want to connect to your {{site.data.keyword.netezza_short}} instance on A
 
    During Step 5, when you are in the _Resource_ pane, select **Connect to an Azure resource by resource ID or alias** and enter the resource ID or alias you retrieved in **2. Get resource ID or alias**.
 
-   When the private endpoints are created, the status automatically changes to **Approved**. A private IP is assigned to each of your private endpoints. The IPs are displayed in **Microsoft Azure Portal**. Use these details to [log in to your instace by using private endpoints](LINK).
+   When the private endpoints are created, the status automatically changes to **Approved**. A private IP is assigned to each of your private endpoints. The IPs are displayed in **Microsoft Azure Portal**. Use these details to [log in to your instace by using private endpoints](/docs/netezza?topic=netezza-connecting-overview#private_endpoints).
 
 ### Configuring private endpoints for AWS
 {: #private-endpoints-aws}
@@ -119,7 +119,7 @@ To connect to your {{site.data.keyword.netezza_short}} on AWS by using [AWS Priv
 
    Follow the instructions described in [Create a private endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html).  
 
-   When the private endpoints are created, a private hostname is assigned to each of your private endpoints. Use these details to [log in to your instace by using private endpoints](LINK).
+   When the private endpoints are created, a private hostname is assigned to each of your private endpoints. Use these details to [log in to your instace by using private endpoints](/docs/netezza?topic=netezza-connecting-overview#private_endpoints).
 
    **DRAFT COMMENT: NEEDS VERIFICATION**
 

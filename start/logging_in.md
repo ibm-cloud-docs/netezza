@@ -32,7 +32,7 @@ Each endpoint type provides a set of IP addresses or hostnames that you can use 
 
 - **The {{site.data.keyword.netezza_short}} web console**  
    The web interface, which you can log in to on port 443, and use to manage and monitor your instace.  
-   See [Getting started with the web console]((/docs/netezza?topic=netezza-getstarted-console).
+   See [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
 
 - **The {{site.data.keyword.netezza_short}} software clients**  
    The CLI clients that you can use to connect to the database on port 5480, and use to manage and monitor your instace.  
