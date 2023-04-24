@@ -20,7 +20,7 @@ toc:
       topics:
       - start/release-notes.md
       - start/provisioning.md
-      - logging_in.md
+      - start/logging_in.md
       - topicgroup:
           label: Netezza Performance Server web console
           topics:
