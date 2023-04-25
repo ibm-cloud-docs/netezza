@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-04-19"
 
 keywords: network policy, netezza network policy
 subcollection: netezza
@@ -28,7 +28,15 @@ By using the network policies feature in the web console, you can control the se
 
 - If you want to restrict the sources that can reach out to your {{site.data.keyword.netezza_short}} instance or from which the instance can be reached, see [Allowing connections only from on premises and take backups, load or unload data by using Cloud Object Store](https://cloud.ibm.com/docs/netezza?topic=netezza-network-policies#use-case-2).
 
-## Overview
+## Limitations
+{: #limitations}
+
+1. Network policies support only `IPv4` addresses.
+1. Network policies can support a maximum of 1000 network policies.
+1. Network policies restrict traffic only to the {{site.data.keyword.netezza_short}} database.  
+   They are not applicable to other components, such as the web console.
+
+## Form factors
 {: #nw-overview}
 
 Network policies are defined by:
@@ -38,10 +46,10 @@ Network policies are defined by:
 
 By using these form-factors, you can create a network policy as either an `allow` or a `block` policy.
 
-### Block and allow policies
+## Block and allow policies
 {: #nw-block-allow}
 
-#### Block policy
+### Block policy
 {: #blockpolicy}
 
 Specifies a type of policy that prevents you from the following:
@@ -50,8 +58,7 @@ Specifies a type of policy that prevents you from the following:
 
 - Connecting from the {{site.data.keyword.netezza_short}} database to any device or service that has either the specified hostname or an IP address in the range that is specified by CIDR.
 
-
-1. Allow policy
+### Allow policy
 {: #allowpolicy}
 
 Specifies a policy that allows you to do the following:
@@ -62,7 +69,10 @@ Specifies a policy that allows you to do the following:
 
 You can use the combination of allow and block (deny) policies to restrict connections to and from the {{site.data.keyword.netezza_short}} database to the provided set of IP addresses and hostnames.
 
-## Defining network policies with Classless Inter-Domain Routing (CIDR)
+## Defining network policies
+{: #define-np}
+
+### Defining network policies with Classless Inter-Domain Routing (CIDR)
 {: #nw-cidr}
 
 With {{site.data.keyword.netezza_short}}, you can specify a range of IP addresses by using Classless Inter-Domain Routing (CIDR) in network policies.
@@ -92,7 +102,7 @@ You must use a CIDR range that represents only the public IP addresses of gatewa
 
 Do not specify a CIDR range that represents private IP addresses space as block policies. You might impact the functioning of the database.
 
-## Defining network policies with DNS hostnames
+### Defining network policies with DNS hostnames
 {: #nw-defining-DNS}
 
 With {{site.data.keyword.netezza_short}}, you can specify DNS hostnames in network policies.
@@ -103,7 +113,7 @@ If you use a DNS hostname in policies, the local DNS name resolves the hostname 
 
 If the hostname resolves to multiple IP addresses or if the assigned IP addresses can change (for example, load balancer), make sure that you provide the CIDR range of those IP addresses in the policy rather than the DNS hostname.
 
-### Domain Name Server (DNS) resolution
+## Domain Name Server (DNS) resolution
 {: #nw-dns}
 
 When you use DNS hostname in a policy, the database tries to resolve the domain by using the local name server on the node.
@@ -126,14 +136,14 @@ The first rule that matches the incoming or outgoing connection is applied and s
 
 You can find examples of creating policies in **Examples of network policies**.
 
-## Creating and listing network policies with the web console
+## Creating and listing network policies
 {: #nw-creating-listing}
 
 You can create network policies if you belong to the `ADMINISTRATORS` group.
 
-To create and view existing network policies in the {{site.data.keyword.netezza_short}} web console, select `Administration->Network Policies`. For more information about using network policies with the web console, see [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
+To create and view existing network policies in the {{site.data.keyword.netezza_short}} web console, select **Administration > Settings > Network Policies**. For more information about creating network policies with the web console, see [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
 
-## Examples of network policies
+## Examples
 {: #nw-examples}
 
 Following are examples of how you can apply network policies.
@@ -312,11 +322,3 @@ If you have storage accounts, for example, in the `East US 2` region with Azure 
 
    The Azure Blob Storage endpoints do not have a single IP address that is associated with them. Adding the endpoint hostname to the allow list can give inconsistent results.
    {: note}
-
-## Limitation of network policies
-{: #limitations}
-
-1. Network policies support only IPv4 addresses.
-1. Network policies can support a maximum of 1000 network policies.
-1. Network policies restrict traffic only to the {{site.data.keyword.netezza_short}} database.  
-   They are not applicable to other components, such as the web console.
