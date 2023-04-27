@@ -80,6 +80,8 @@ using ( 
 ```
 {: codeblock}
 
+The `DATAOBJECT` argument must reference a single file in the `parquet` format. To query from multiple `parquet` files, create additional external tables.
+
 Example:
 
 ```sql

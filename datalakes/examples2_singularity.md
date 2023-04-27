@@ -132,6 +132,8 @@ using ( 
 ```
 {: codeblock}
 
+The `DATAOBJECT` argument must reference a single file in the `parquet` format. To query from multiple `parquet` files, create additional external tables.
+
 Example:
 
 ```sql
@@ -146,8 +148,6 @@ using ( 
 {: #query_remote_loaded}
 
 Now, you can query both the local 2022 data that was loaded and the 2021 data from a data lake all in the same query.
-
-You can access data from one *parquet* file at a time.
 
 The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
 {: note}
