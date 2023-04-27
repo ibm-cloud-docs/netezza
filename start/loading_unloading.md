@@ -35,12 +35,6 @@ There are different ways in which you can load your data on {{site.data.keyword.
    {: tip}
      
    You cannot use the web console to load data.
-   
-1. Ensure that you have the correct path set up to run `nzsql` commands.  
-   See:  
-      
-   - [Path for {{site.data.keyword.netezza_short}} CLI client commands](https://www.ibm.com/docs/en/netezza?topic=inpsccls-path-netezza-performance-server-cli-client-commands-2)
-   - [The more command on Windows](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command)
 
 1. Log in to Netezza Performance Server.
 
@@ -48,7 +42,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
    
    As explained in [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview), you can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints. Each endpoint type provides a set of two hostnames that you can connect to {{site.data.keyword.netezza_short}}.
 
-   To load data, you must be the admin user, the owner of the database or schema. If you are not loading data to a table that already exists, you also must have the `Create Table` privilege. If you need to change user privileges, see [Managing users](/docs/netezza?topic=netezza-users-groups#users).
+   To load data, you must be the admin user, the owner of the database or schema. If this is your first time loading data and you are not loading data to a table that already exists, you also must have the `Create Table` privilege. If you need to change user privileges, see [Managing users](/docs/netezza?topic=netezza-users-groups#users).
    
    ```sql
    nzsql -host NPS HOST IP -u USER -pw PASSWORD
@@ -125,8 +119,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
 1. On NPS, create an external table (that is based on another table) for the data that you want to load.
 
    ```sql
-   CREATE TABLE <table> AS SELECT * FROM EXTERNAL <> USING (
-    DATAOBJECT <data object>
+   CREATE TABLE <table> AS SELECT * FROM EXTERNAL <file> USING (
     REMOTESOURCE <source type>
     DELIM <delimiter type>
     UNIQUEID <unique ID>
@@ -144,7 +137,6 @@ There are different ways in which you can load your data on {{site.data.keyword.
 
    | Input               | Description |
    | -----------         | ----------- |
-   | data object      | Specifies a valid source data file on S3. |
    | source type       | Specifies the source type. You must use `S3`. |
    | delimiter type    | Specifies the delimiter type that is used in your source data file. |
    | unique ID         | Optional. Specifies the namespace that is used to group data in the cloud bucket. |
@@ -171,9 +163,3 @@ There are different ways in which you can load your data on {{site.data.keyword.
       );
    ```
    {: codeblock}
-
-1. Insert data from the external table into the table on the Netezza Performance Server host.
-
-   ```sql
-   insert into <table> SELECT * FROM <table>;
-   ```
