@@ -122,6 +122,9 @@ INSERT 0 2463931
 
 Now, you can query the loaded data by using the improved read/write performance, zonemaps, etc.
 
+The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
+{: note}
+
 - To identify the passenger count, run:
 
    ```sql

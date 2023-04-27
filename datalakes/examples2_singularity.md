@@ -147,6 +147,11 @@ using ( 
 
 Now, you can query both the local 2022 data that was loaded and the 2021 data from a data lake all in the same query.
 
+You can access data from one *parquet* file at a time.
+
+The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
+{: note}
+
 - To identify which year had the most passengers, run:
 
    ```sql
