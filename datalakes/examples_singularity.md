@@ -93,7 +93,9 @@ using ( 
 ## 3. Query your data.
 {: #query1}
 
-You can query external *parquet* format tables like you would any other {{site.data.keyword.netezza_short}} table, but you do not need to load the data into the database.
+You can query external *parquet* format tables like you would any other {{site.data.keyword.netezza_short}} table without having to load the data into the database.
+
+You can access data from one *parquet* file at a time.
 
 The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
 {: note}
