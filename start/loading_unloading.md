@@ -21,7 +21,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Loading data 
+# Loading data to Netezza Performance Server
 {: #load-dbs}
 
 There are different ways in which you can load your data on {{site.data.keyword.netezza_full}}. Learn how to load data [from your local machine](/docs/netezza?topic=netezza-load-dbs#load-data-nzsql) or [from S3](/docs/netezza?topic=netezza-load-dbs#load-data-s3).
