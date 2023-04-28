@@ -132,6 +132,8 @@ using ( 
 ```
 {: codeblock}
 
+The `DATAOBJECT` argument must reference a single file in the `parquet` format. If you want to query from multiple `parquet` files, you must create additional external tables.
+
 Example:
 
 ```sql
@@ -146,6 +148,9 @@ using ( 
 {: #query_remote_loaded}
 
 Now, you can query both the local 2022 data that was loaded and the 2021 data from a data lake all in the same query.
+
+The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
+{: note}
 
 - To identify which year had the most passengers, run:
 
