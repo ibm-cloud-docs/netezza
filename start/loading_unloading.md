@@ -49,12 +49,11 @@ There are different ways in which you can load your data on {{site.data.keyword.
    ```
    {: codeblock}
    
-   | Input            | Description |
-   | :-----------     | :---------- |
-   | nps_host_ip | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
+   | Input          | Description |
+   | :-----------   | :---------- |
+   | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
    | user           | Specifies the user name.      |
    | password       | Specifies the password for the user. |
-   {: caption="Table 1. The table outlines the `nzsql` input options and their descriptions that are required to log in to NPS." caption-side="bottom"}
    
    Example:
 
@@ -101,7 +100,6 @@ There are different ways in which you can load your data on {{site.data.keyword.
    | source_type         | Specifies that the source data file is remote. When you load data by using external tables, by default, the source data file path is assumed to be on the {{site.data.keyword.netezza_short}} host. If you want to load data from your local machine, you must use the `RemoteSource` option. For the `nzsql` client, specify `RemoteSource 'NZSQL'`. For more information, see [RemoteSource option](https://www.ibm.com/docs/en/netezza?topic=od-remotesource-option-2).|
    | delimiter_type      | Specifies the delimiter that is used in your source data file. For more information, see [Delimiter option](https://www.ibm.com/docs/en/netezza?topic=od-delimiter-option-2).|
    | number_of_rows      | Specifies the number of initial rows to skip before loading the data. For more information, see [SkipRows option](https://www.ibm.com/docs/en/netezza?topic=od-skiprows-option-2).|
-   {: caption="Table 2. The table outlines the `CREATE TABLE AS` input options and their descriptions that are required to create an external table if you are loading data from a local machine." caption-side="bottom"}
    
    Example:
 
@@ -157,7 +155,6 @@ You can load data to {{site.data.keyword.netezza_short}} from a data file on Ama
    | bucket_URL        | Specifies the name of the bucket. |
    | endpoint          | Specifies the region URL to access your bucket. |
    | multipart_size    | Specifies the size of each part in a multipart upload. The default is 105 MB; a maximum 105 MB of buffer can be uploaded in one request.|
-   {: caption="Table 3. The table outlines the `CREATE TABLE AS` input options and their descriptions that are required to create an external table if you are loading data from S3." caption-side="bottom"}
 
    Example:
 
