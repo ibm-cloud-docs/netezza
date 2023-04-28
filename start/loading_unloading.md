@@ -38,7 +38,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
 
 1. Log in to Netezza Performance Server.
 
-   In this example, the [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command) is used, but you can use other clients.
+   In this example, the [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=sco-nzsql-command) is used, but you can use other clients.
    
    As explained in [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview), you can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints. Each endpoint type provides a set of two hostnames that you can connect to {{site.data.keyword.netezza_short}}.
 
@@ -49,11 +49,12 @@ There are different ways in which you can load your data on {{site.data.keyword.
    ```
    {: codeblock}
    
-   | Option            | Description |
+   | Input            | Description |
    | -----------       | ----------- |
-   | -host nps_host_ip | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
-   | -u user           | Specifies the user name.      |
-   | -p password       | Specifies the password for the user. |
+   | nps_host_ip | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
+   | user           | Specifies the user name.      |
+   | password       | Specifies the password for the user. |
+   {: caption="Table 1. The table outlines the `nzsql` input options and their descriptions that are required to log in to NPS." caption-side="bottom"}
    
    Example:
 
@@ -81,7 +82,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
 
 1. Create a table by using the [`CREATE TABLE AS`](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-as-2) command.  
 
-   The [`CREATE TABLE AS`] command creates a table on {{site.data.keyword.netezza_short}} and fills it with the data from your local data file.  
+   The `CREATE TABLE AS` command creates a table on {{site.data.keyword.netezza_short}} and fills it with the data from your local data file.  
 
    As a part of this command, your local data file is turned into [a transient external table](https://www.ibm.com/docs/en/netezza?topic=et-transient-external-tables-2). In other words, your local data file is temporarily treated as a database table that you can query for loading to a {{site.data.keyword.netezza_short}} table. When you are finished, the transient external table is automatically deleted.  
    
@@ -100,6 +101,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
    | source_type       | Specifies that the source data file is remote. When you load data by using external tables, by default, the source data file path is assumed to be on the {{site.data.keyword.netezza_short}} host. If you want to load data from your local machine, you must use the `RemoteSource` option. For the `nzsql` client, specify `RemoteSource 'NZSQL'`. For more information, see [RemoteSource option](https://www.ibm.com/docs/en/netezza?topic=od-remotesource-option-2).|
    | delimiter_type   | Specifies the delimiter that is used in your source data file. For more information, see [Delimiter option](https://www.ibm.com/docs/en/netezza?topic=od-delimiter-option-2).|
    | number_of_rows  | Specifies the number of initial rows to skip before loading the data. For more information, see [SkipRows option](https://www.ibm.com/docs/en/netezza?topic=od-skiprows-option-2).|
+   {: caption="Table 2. The table outlines the `CREATE TABLE AS` input options and their descriptions that are required to create an external table if you are loading data from a local machine." caption-side="bottom"}
    
    Example:
 
@@ -123,7 +125,7 @@ You can load data to {{site.data.keyword.netezza_short}} from a data file on Ama
 
 1. On {{site.data.keyword.netezza_short}}, create a table by using the [`CREATE TABLE AS`](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-as-2) command.  
 
-   The [`CREATE TABLE AS`] command creates a table on {{site.data.keyword.netezza_short}} and fills it with the data from S3. 
+   The `CREATE TABLE AS` command creates a table on {{site.data.keyword.netezza_short}} and fills it with the data from S3. 
 
    As a part of this command, your data file is turned into [a transient external table](https://www.ibm.com/docs/en/netezza?topic=et-transient-external-tables-2). In other words, your data file is temporarily treated as a database table that you can query for loading to a {{site.data.keyword.netezza_short}} table. When you are finished, the transient external table is automatically deleted.  
 
@@ -154,7 +156,8 @@ You can load data to {{site.data.keyword.netezza_short}} from a data file on Ama
    | default_region    | Specifies the region in  which the bucket is located. |
    | bucket_URL        | Specifies the name of the bucket. |
    | endpoint          | Specifies the region URL to access your bucket. |
-   | multipart_size    | Specifies the size of each part in a multipart upload. The default is 105 MB; a maximum 105 MB of buffer can be uploaded in one request.)
+   | multipart_size    | Specifies the size of each part in a multipart upload. The default is 105 MB; a maximum 105 MB of buffer can be uploaded in one request.|
+   {: caption="Table 3. The table outlines the `CREATE TABLE AS` input options and their descriptions that are required to create an external table if you are loading data from S3." caption-side="bottom"}
 
    Example:
 
