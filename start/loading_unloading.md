@@ -100,8 +100,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
    | col1, col2, ...     | Specify column names that correspond to column names from the file that you are loading. |
    | source_type         | Specifies that the source data file is remote. When you load data by using external tables, by default, the source data file path is assumed to be on the {{site.data.keyword.netezza_short}} host. If you want to load data from your local machine, you must use the `RemoteSource` option. For the `nzsql` client, specify `RemoteSource 'NZSQL'`. For more information, see [RemoteSource option](https://www.ibm.com/docs/en/netezza?topic=od-remotesource-option-2).|
    | delimiter_type      | Specifies the delimiter that is used in your source data file. For more information, see [Delimiter option](https://www.ibm.com/docs/en/netezza?topic=od-delimiter-option-2).|
-   | number_of_rows      | Specifies the number of initial rows to skip before loading the data. For more information, see [SkipRows option](https://www.ibm.com/docs/en/netezza?topic=od-skiprows-option-2).|
-   {: caption="Table 2. The table outlines the `CREATE TABLE AS` input options and their descriptions that are required to create an external table if you are loading data from a local machine." caption-side="bottom"}
+   | number_of_rows      | Specifies the number of initial rows to skip before loading the data. For more information, see [SkipRows option](https://www.ibm.com/docs/en/netezza?topic=od-skiprows-option-2).|{: caption="Table 2. The table outlines the `CREATE TABLE AS` input options and their descriptions that are required to create an external table if you are loading data from a local machine." caption-side="bottom"}
    
    Example:
 
@@ -156,8 +155,7 @@ You can load data to {{site.data.keyword.netezza_short}} from a data file on Ama
    | default_region    | Specifies the region in  which the bucket is located. |
    | bucket_URL        | Specifies the name of the bucket. |
    | endpoint          | Specifies the region URL to access your bucket. |
-   | multipart_size    | Specifies the size of each part in a multipart upload. The default is 105 MB; a maximum 105 MB of buffer can be uploaded in one request.|
-   {: caption="Table 3. The table outlines the `CREATE TABLE AS` input options and their descriptions that are required to create an external table if you are loading data from S3." caption-side="bottom"}
+   | multipart_size    | Specifies the size of each part in a multipart upload. The default is 105 MB; a maximum 105 MB of buffer can be uploaded in one request.|{: caption="Table 3. The table outlines the `CREATE TABLE AS` input options and their descriptions that are required to create an external table if you are loading data from S3." caption-side="bottom"}
 
    Example:
 
