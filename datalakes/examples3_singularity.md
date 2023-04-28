@@ -80,6 +80,8 @@ using ( 
 ```
 {: codeblock}
 
+The `DATAOBJECT` argument must reference a single file in the `parquet` format. If you want to query from multiple `parquet` files, you must create additional external tables.
+
 Example:
 
 ```sql
@@ -121,6 +123,9 @@ INSERT 0 2463931
 {: #query_loaded}
 
 Now, you can query the loaded data by using the improved read/write performance, zonemaps, etc.
+
+The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
+{: note}
 
 - To identify the passenger count, run:
 

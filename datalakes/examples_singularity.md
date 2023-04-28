@@ -80,6 +80,8 @@ using ( 
 ```
 {: codeblock}
 
+The `DATAOBJECT` argument must reference a single file in the `parquet` format. If you want to query from multiple `parquet` files, you must create additional external tables.
+
 Example:
 
 ```sql
@@ -90,10 +92,11 @@ using ( 
 ```
 {: codeblock}
 
+
 ## 3. Query your data.
 {: #query1}
 
-You can query external *parquet* format tables like you would any other {{site.data.keyword.netezza_short}} table, but you do not need to load the data into the database.
+You can query external *parquet* format tables like you would any other {{site.data.keyword.netezza_short}} table without having to load the data into the database.
 
 The *parquet* column names are case sensitive. You must use double quotation marks ("") when you are querying specific columns.
 {: note}
