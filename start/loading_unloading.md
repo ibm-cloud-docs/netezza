@@ -49,12 +49,11 @@ There are different ways in which you can load your data on {{site.data.keyword.
    ```
    {: codeblock}
    
-   | Input            | Description |
-   | :-----------     | :---------- |
-   | nps_host_ip | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
+   | Input          | Description |
+   | :-----------   | :---------- |
+   | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
    | user           | Specifies the user name.      |
-   | password       | Specifies the password for the user. |
-   {: caption="Table 1. The table outlines the `nzsql` input options and their descriptions that are required to log in to NPS." caption-side="bottom"}
+   | password       | Specifies the password for the user. |{: caption="Table 1. The table outlines the `nzsql` input options and their descriptions that are required to log in to NPS." caption-side="bottom"}
    
    Example:
 
