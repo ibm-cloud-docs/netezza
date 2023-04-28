@@ -132,7 +132,7 @@ using ( 
 ```
 {: codeblock}
 
-The `DATAOBJECT` argument must reference a single file in the `parquet` format. To query from multiple `parquet` files, create additional external tables.
+The `DATAOBJECT` argument must reference a single file in the `parquet` format. If you want to query from multiple `parquet` files, you must create additional external tables.
 
 Example:
 
