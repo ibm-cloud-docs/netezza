@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-05-09"
 
 keywords: Netezza Performance Server release notes, what's new,
 
@@ -21,6 +21,21 @@ subcollection: netezza
 
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
+
+## May 2023
+{: #may2023}
+
+### New features and enhancements
+{: #nfmay2023}
+
+### Components
+{: #compsmay2023}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.7
+- Web console 4.0.14
+
+### Known issues
+{: #kimay2023}
 
 ## February 2023
 {: #feb2023}
