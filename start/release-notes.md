@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-09"
+lastupdated: "2023-05-10"
 
 keywords: Netezza Performance Server release notes, what's new, AWS
 
@@ -27,6 +27,13 @@ subcollection: netezza
 
 ### New features and enhancements
 {: #nfmay2023}
+
+- {{site.data.keyword.netezza_short}} is now supported on AWS. For more information, see
+
+
+### Fixes
+{: #fmay2023}
+
 
 ### Components
 {: #compsmay2023}
