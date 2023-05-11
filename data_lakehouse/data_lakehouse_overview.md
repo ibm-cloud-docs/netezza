@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-04-20"
+lastupdated: "2023-05-11"
 
 keywords: netezza data lakehouse, metastore
 subcollection: netezza
@@ -54,6 +54,6 @@ For beta, the following functionalities and data types are supported:
 
 Use cases for data lakehouse include: **draft comment: are these the uses cases we want to cover? If so, we'd need input for ingesting and querying local and remote. Mike confirmed these are valid for now.**
 
-- [Running queries against data that is stored in a data lakehouse]().
-- [Ingesting data from data lakehouse into {{site.data.keyword.netezza_short}}]().
-- [Querying both local and remote data within data lakehouse]().
+- [Running queries against data that is stored in a data lakehouse](/docs/netezza?topic=netezza-querying_datalakehouse).
+- [Ingesting data from data lakehouse into {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-ingest_datalakehouse).
+- [Querying both local and remote data within data lakehouse](/docs/netezza?topic=netezza-merging_datalakehouse).

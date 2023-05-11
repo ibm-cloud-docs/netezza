@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-05"
+lastupdated: "2023-05-11"
 
 keywords: netezza data lakehouse, data lake, querying data, connecting to a metastore
 subcollection: netezza
@@ -26,6 +26,9 @@ subcollection: netezza
 # Querying data from data lakes (or lakehouse?)
 {: #querying_datalakehouse}
 
+## Before you begin
+{: #prereqsdlh1}
+
 In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
 
 ## 1. Create a database by using the required `metastoreuri`.
@@ -39,9 +42,10 @@ SYSTEM.ADMIN(ADMIN)=> create database mylake with metastoreuri 'thrift://mymetas
 ```
 {: codeblock}
 
-Note: You can see there are 589 tables from the datalake available in **mylake**.
+You can see there are 589 tables from the datalake available in **mylake**.
 
 ## 2. Connect to the database.
+{: #connectdlh_database}
 
 ```sql
 CREATE DATABASE
@@ -49,9 +53,10 @@ SYSTEM.ADMIN(ADMIN)=> \c mylake
 ```
 {: codeblock}
 
-Note: You are now connected to **mylake** database.
+You are now connected to **mylake** database.
 
 ## 3. Show schema by running:
+{: #showschemadlh}
 
 ```sql
 MYLAKE.NETEZZA_SCHEMA(ADMIN)=> show schema;
@@ -77,6 +82,7 @@ MYLAKE   | TEST                                       | ADMIN
 {: codeblock}
 
 ## 4. From your metastore schemas list, set the schema you want to connect to. Run:
+{: #setschdlh}
 
 ```sql
 MYLAKE.NETEZZA_SCHEMA(ADMIN)=> set schema taxidata;
@@ -87,6 +93,7 @@ SET SCHEMA
 You can also query by using a full path select * from mydb.myschema.mytable)**
 
 ## 5. Show the table.
+{: #showtabledlh}
 
 ```sql
 MYLAKE.TAXIDATA(ADMIN)=> show table;
@@ -105,6 +112,7 @@ MYLAKE   | TAXIDATA | YELLOW_TAXI_JANUARY_2021 | DATALAKE TABLE | ADMIN
 {: codeblock}
 
 ## 6. Select * from the YELLOW_TAXI_TABLE table.
+{: #selectdlh_table}
 
 ```sql
 MYLAKE.TAXIDATA(ADMIN)=> select * from YELLOW_TAXI_JANUARY_2021 limit 1;
