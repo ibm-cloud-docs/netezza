@@ -4,7 +4,7 @@ copyright:
   years: 2023
 lastupdated: "2023-05-16"
 
-keywords: Netezza Performance Server release notes, what's new, AWS
+keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
 subcollection: netezza
 
