@@ -43,6 +43,7 @@ subcollection: netezza
 {: #kimay2023}
 
 - Need to pass exact database name which are present in our system into backup.json file. **Requested clarification under https://jsw.ibm.com/browse/NEXTGEN-22211**
+- Time Travel Stats and Graphs not showing for Schema Name with special characters. **Anna requested clarification under https://jsw.ibm.com/browse/NEXTGEN-21651**
 
 ## February 2023
 {: #feb2023}
