@@ -42,7 +42,6 @@ subcollection: netezza
 ### Known issues
 {: #kimay2023}
 
-- Need to pass exact database name which are present in our system into backup.json file. **Requested clarification under https://jsw.ibm.com/browse/NEXTGEN-22211**
 
 ## February 2023
 {: #feb2023}
