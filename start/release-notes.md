@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-10"
+lastupdated: "2023-05-16"
 
 keywords: Netezza Performance Server release notes, what's new, AWS
 
@@ -28,12 +28,10 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmay2023}
 
-- {{site.data.keyword.netezza_short}} is now supported on AWS. For more information, see
-
+- {{site.data.keyword.netezza_short}} is now supported on AWS. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getting-started) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
 
 ### Fixes
 {: #fmay2023}
-
 
 ### Components
 {: #compsmay2023}
@@ -43,6 +41,8 @@ subcollection: netezza
 
 ### Known issues
 {: #kimay2023}
+
+- Need to pass exact database name which are present in our system into backup.json file. **Requested clarification under https://jsw.ibm.com/browse/NEXTGEN-22211**
 
 ## February 2023
 {: #feb2023}
