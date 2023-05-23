@@ -45,8 +45,8 @@ subcollection: netezza
 ### Known issues
 {: #kimay2023}
 
-- If you take a backup of your database by using `nzbatchnbr`, you must keep the original spelling of the database name in your `backup.json`. **https://jsw.ibm.com/browse/NEXTGEN-22211**
-- Time Travel Stats and Graphs not showing for Schema Name with special characters. **Anna requested clarification under https://jsw.ibm.com/browse/NEXTGEN-21651**
+- When you take a backup of your database by using `nzbatchnbr`, you must keep the original spelling of the database name in your `backup.json`. **https://jsw.ibm.com/browse/NEXTGEN-22211**
+- Databases, schemas, and table names containing a dot character (".") do not show in the time travel statistics and graphs. **https://jsw.ibm.com/browse/NEXTGEN-21651**
 - Time Travel Console: Table Record Count Mismatch on Console. **but, we'd rather see this implemented in the web console UI https://jsw.ibm.com/browse/NEXTGEN-21334**
 
 ## February 2023
