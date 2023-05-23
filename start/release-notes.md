@@ -29,8 +29,9 @@ subcollection: netezza
 {: #nfmay2023}
 
 - {{site.data.keyword.netezza_short}} is now supported on AWS. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
-- INZA 11.2.28 is now supported. **https://jsw.ibm.com/browse/NEXTGEN-21556**
+- INZA 11.2.28 is now supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2). **https://jsw.ibm.com/browse/NEXTGEN-21556**
 - `go` package is upgraded to version 1.20.3.
+- Time travel functionality is now supported in {{site.data.keyword.netezza_short}} web console. **TBC by Emily Zhang**
 
 ### Fixes
 {: #fmay2023}
@@ -44,8 +45,9 @@ subcollection: netezza
 ### Known issues
 {: #kimay2023}
 
-- Need to pass exact database name which are present in our system into backup.json file. **Requested clarification under https://jsw.ibm.com/browse/NEXTGEN-22211**
+- If you take a backup of your database by using `nzbatchnbr`, you must keep the original spelling of the database name in your `backup.json`. **https://jsw.ibm.com/browse/NEXTGEN-22211**
 - Time Travel Stats and Graphs not showing for Schema Name with special characters. **Anna requested clarification under https://jsw.ibm.com/browse/NEXTGEN-21651**
+- Time Travel Console: Table Record Count Mismatch on Console. **but, we'd rather see this implemented in the web console UI https://jsw.ibm.com/browse/NEXTGEN-21334**
 
 ## February 2023
 {: #feb2023}
