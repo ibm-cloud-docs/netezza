@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-16"
+lastupdated: "2023-05-23"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -28,7 +28,9 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmay2023}
 
-- {{site.data.keyword.netezza_short}} is now supported on AWS. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getting-started) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
+- {{site.data.keyword.netezza_short}} is now supported on AWS. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
+- INZA 11.2.28 is now supported. **https://jsw.ibm.com/browse/NEXTGEN-21556**
+- `go` package is upgraded to version 1.20.3.
 
 ### Fixes
 {: #fmay2023}
@@ -141,7 +143,7 @@ As of June 14, 2022, several fixes, and a stability patch for critical issues.
 ## May 2022
 {: #may2022}
 
-As of May 20, 2022, workload enhacements and network policies support is added.
+As of May 20, 2022, workload enhancements and network policies support is added.
 
 ### New features
 {: #nfmay2022}
