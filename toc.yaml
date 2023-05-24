@@ -94,7 +94,9 @@ toc:
               - security/iam-docs.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
-          - https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication
+          - link:
+              label: External authentication
+              href: https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication
       - kafka/kafka.md
       - topicgroup:
          label: Querying data from data lakes
