@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-23"
+lastupdated: "2023-05-24"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -28,10 +28,11 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmay2023}
 
-- {{site.data.keyword.netezza_short}} is now supported on AWS. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
-- INZA 11.2.28 is now supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2). **https://jsw.ibm.com/browse/NEXTGEN-21556**
+- {{site.data.keyword.netezza_short}} is now enabled on AWS for US-East-1 region. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
+- Smart scaling with confidence score and seed models display in now available by using the {{site.data.keyword.netezza_short}} web console. For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling_intro).
+- INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2). **https://jsw.ibm.com/browse/NEXTGEN-21556**
 - `go` package is upgraded to version 1.20.3.
-- Time travel functionality is now supported in {{site.data.keyword.netezza_short}} web console. **TBC by Emily Zhang**
+- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. **TBC by Emily Zhang**
 
 ### Fixes
 {: #fmay2023}
