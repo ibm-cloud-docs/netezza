@@ -20,7 +20,11 @@ toc:
       topics:
       - start/release-notes.md
       - start/provisioning.md
-      - start/logging_in.md
+      - topicgroup:
+          label: Connecting to Netezza Performance Server with private and public endpoints
+          topics:
+          - start/logging_in.md
+          - start/config_endpoints.md
       - topicgroup:
           label: Netezza Performance Server web console
           topics:
