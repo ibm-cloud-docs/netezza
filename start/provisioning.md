@@ -52,9 +52,9 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 1. Choose an endpoint type.   
 1. Configure advanced features.  
    
-   For Azure, if you want to access {{site.data.keyword.netezza_short}} by connecting to the database or web console with [private endpoints](https://learn.microsoft.com/en-us/azure/private-link/) only, you must provide the list of subscription IDs that will be used to create the private endpoint.  
+   For Azure, if you want to access {{site.data.keyword.netezza_short}} by connecting to the database or web console with [private endpoints](https://learn.microsoft.com/en-us/azure/private-link/) only, you must provide the list of [subscription IDs](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) that will be used to create the private endpoint.  
 
-   For AWS, if you want to access {{site.data.keyword.netezza_short}} by connecting to the database or web console with [private endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html), you must provide the list of service principals that will be used to create the VPC endpoint service.
+   For AWS, if you want to access {{site.data.keyword.netezza_short}} by connecting to the database or web console with [private endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html), you must provide the Amazon Resource Names (ARNs) for the [service principals](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html) that will be used to create the VPC endpoint service.
 
 1. Click **Create** to start the provisioning process.  
    You are redirected to the {{site.data.keyword.cloud_notm}} dashboard page. 
