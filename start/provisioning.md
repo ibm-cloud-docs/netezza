@@ -64,6 +64,6 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 ## What to do next
 {: #wtdn}
 
-If you selected to connect to your instance by using private endpoints, see [Configuring private endpoints](/docs/netezza?topic=netezza-getstarted#creating-private-endpoints).
+If you selected to connect to your instance by using private endpoints, see [Configuring private endpoints](/docs/netezza?topic=netezza-getstarted#creating-private-endpoints). 
 {: important}
 
