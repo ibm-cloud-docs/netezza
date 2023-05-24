@@ -21,8 +21,7 @@ subcollection: netezza
 # Smart scaling
 {: #smartscaling_intro}
 
-This is a beta feature that is available for evaluation and testing purposes if you are on {{site.data.keyword.netezza_short}} on AWS.
-{: beta}
+This feature that is available for evaluation and testing purposes if you are on {{site.data.keyword.netezza_short}} on AWS.
 
 With {{site.data.keyword.netezza_short}} smart scaling, you can gain a deeper understanding of your system resources, especially if you are a database administrator or an operational decision maker.
 
