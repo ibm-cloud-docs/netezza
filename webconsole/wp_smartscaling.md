@@ -32,14 +32,9 @@ You can obtain more information about the following system resources:
 ## Seed models
 {: #seed-models}
 
-Seed models are pretrained models that are uploaded on your temporary workspace. A prediction API uses these models for the duration of a training grace period (7 days or more), after the system is deployed, starting from after day 1. At this stage, the confidence score is very low because the models do not reflect your workloads yet.  
+Seed models are pretrained models that are uploaded on your temporary workspace. A prediction API uses these models for the duration of a training grace period (7 days or more), after the system is deployed, starting from after day 1. At this stage, the confidence score is low because the models do not reflect your workloads yet.  
 
-After the training grace period is over, the model is retrained with the dataset that was generated from the collected workload data. The prediction API runs inference based on the pretrained models. Then, the confidence score is updated based on the accuracy of the prediction, and system scheduler triggers the training model task daily for 2 weeks, and then on a weekly basis.
-
-**DRAFT COMMENT:  
-1. You say that the training grace period is 7+ days, what exactly is the number of days? Can you change on your own?
-1. How exactly are the pretrained models uploaded on your temporary workspace?
-1. Is my understanding of this correct? `First, the models gather data/work on the temporary workspace. (For how long are they on the temp workspace; until the system is deployed; is there a min required timeframe? If they don't gather data on the temp workspace, why are they uploaded to it to begin with?) Then, after the system is deployed, a prediction API uses these models for 7 or so days (training grace period) to generate accurate data - confidence score. You are ok to use the confidence score after this period.`
+After the training grace period is over, the model is retrained with the datasets that were generated from the collected workload data. The prediction API runs inference based on the pretrained models. Then, the confidence score is updated based on the accuracy of the prediction, and system scheduler triggers the training model task daily for 2 weeks, and then on a weekly basis.
 
 ## Graph elements
 {: #smartscaling_graph}
@@ -47,7 +42,7 @@ After the training grace period is over, the model is retrained with the dataset
 ### Performance property
 {: #performance-property}
 
-You can use the **Performance property** dropdown to navigate between different charts. The default **Workload Utilization** graph visualizes multiple data points that are related to your system resources.  
+Use the **Performance property** dropdown to navigate between different charts. The default **Workload Utilization** graph visualizes multiple data points that are related to your system resources.  
 
 When you are looking at the graph overall, use the legend to identify the contour profile.
 {: tip}
@@ -55,7 +50,7 @@ When you are looking at the graph overall, use the legend to identify the contou
 ### Time interval
 {: #smartscaling_timeinterval}
 
-You can use the **Time interval** dropdown to select different time intervals.
+Use the **Time interval** dropdown to select different time intervals.
 
 By default, the current date stays the same. When you select between the daily, weekly, or monthly view, the date is aggregated over time accordingly.  
 
