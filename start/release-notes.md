@@ -36,6 +36,11 @@ subcollection: netezza
 
 ### Fixes
 {: #fmay2023}
+- **https://jsw.ibm.com/browse/NEXTGEN-19913**
+- **https://jsw.ibm.com/browse/NEXTGEN-19215**
+- **https://jsw.ibm.com/browse/NEXTGEN-19580**
+- **https://jsw.ibm.com/browse/NEXTGEN-18547**
+- **https://jsw.ibm.com/browse/NEXTGEN-18635 the whole list provided by Mona Modase**
 
 ### Components
 {: #compsmay2023}
