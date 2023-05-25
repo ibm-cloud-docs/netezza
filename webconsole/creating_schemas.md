@@ -20,7 +20,7 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-#  Schemas
+# Schemas
 {: #create-schemas}
 
 ## Creating schemas

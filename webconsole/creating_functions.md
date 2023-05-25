@@ -20,8 +20,11 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Creating functions
+# Functions
 {: #create-functions}
+
+## Creating functions
+{: #creating_fc}
 
 You cannot create functions with the web console. Instead, you can use the dedicated command. For more information, see
 [CREATE {OR REPLACE} FUNCTION](https://www.ibm.com/docs/en/netezza?topic=npssr-create-replace-function-2).

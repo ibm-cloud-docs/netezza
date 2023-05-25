@@ -70,7 +70,7 @@ You can access database information by using the web console.
    If the name contains special characters, enclose it in double quotation marks.
 1. Click **Rename**.
 
-## Updating retention time interval (time travel)
+## Updating retention time interval (time travel) for databases
 {: #updating_retention_db}
 
 1. Go to **Databases**.

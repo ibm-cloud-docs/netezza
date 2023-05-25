@@ -20,8 +20,11 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Creating views
+# Views
 {: #create-views}
+
+## Creating views
+{: #creating_vws}
 
 1. Go to **Databases**
 1. Select the database in which you want to create a view.

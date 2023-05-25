@@ -20,8 +20,11 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Creating synonyms
+# Synonyms
 {: #create-synonyms}
+
+## Creating synonyms
+{: #creating_synonyms}
 
 1. Go to **Databases**
 1. Select the database in which you want to create a synonym.

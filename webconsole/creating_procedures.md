@@ -20,8 +20,11 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Creating procedures
+# Procedures
 {: #create-procedures}
+
+## Creating procedures
+{: #creating_proc}
 
 1. Go to **Databases**.
 1. Select the database in which you want to create a procedure.
