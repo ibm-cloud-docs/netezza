@@ -300,15 +300,17 @@ ALTER DATABASE DB1 DATA_VERSION_RETENTION_TIME 30 NOCASCADE;
 To alter a temporal table to nontemporal, set **retention time interval** to 0.
 
 1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
-1. Alter your table as described in 
+1. Alter your table as described in [Updating retention time interval for tables](/docs/netezza?topic=netezza-create-tables#updating_retention_db).
 
 When you set **retention time interval** to 0, you cannot run time travel queries and you do not have access to historical rows for that table anymore. You can reclaim some or all of the now inaccessible historical rows in the table with **GROOM TABLE**.
 
-### Altering nontemporal tables to temporal with the command-line
+### Altering nontemporal tables to temporal with the web console
 {: #convertingtemporal_wc_tt}
 
 To alter a nontemporal table to temporal, set **retention time interval** to a nonzero value.
 
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for tables](/docs/netezza?topic=netezza-create-tables#updating_retention_db).
 
 If you first disabled your temporal table and then converted the same table to a temporal table, you do not have access to the prior historical rows for that table. Historical data is collected when rows are deleted or updated after the table is converted to temporal.
 {: important}
@@ -322,30 +324,33 @@ Unlike when you create a table, existing visible rows in the table are treated a
 
 To alter a temporal schema to nontemporal, set **retention time interval** to 0.
 
-For detailed syntax, the necessary privileges, and the **CASCADE** option, see [the ALTER SCHEMA command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2).
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for schemas](/docs/netezza?topic=netezza-create-schemas#updating_rt_sch).
 
-
-### Altering nontemporal schemas to temporal with the command-line
-{: #alterschematemporalnon_tt}
+### Altering nontemporal schemas to temporal with the web console
+{: #alterschematemporalnon_wc_tt}
 
 To alter a nontemporal schema to temporal, set **retention time interval** to a nonzero value.
 
-For detailed syntax, the necessary privileges, and the **CASCADE** option, see [the ALTER SCHEMA command](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2).
-
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for schemas](/docs/netezza?topic=netezza-create-schemas#updating_rt_sch).
 
 ### Altering temporal databases to nontemporal with the web console
 {: #alterdbtemporal_wc_tt}
 
 To alter a temporal database to nontemporal, set **retention time interval** to 0.
 
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for databases](/docs/netezza?topic=netezza-databases#updating_retention_db).
+https://test.cloud.ibm.com
+
 ### Altering nontemporal databases to temporal with the web console
 {: #alterdbtemporalnon_wc_tt}
 
 To alter a nontemporal database to temporal, set **retention time interval** to a nonzero value.
 
-
-
-
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for databases](/docs/netezza?topic=netezza-databases#updating_retention_db).
 
 ## What to do next
 {: #next_tt}
