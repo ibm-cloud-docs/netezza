@@ -33,7 +33,7 @@ Follow these steps to migrate a backup image take on {{site.data.keyword.netezza
 
 1. Synchronize the on-premises backup image to the cloud instance by using the `nz` tool with the `bnr` option.
 
-   ```sh
+   ```sql
    $./nz bnr ls scan-object-store -host<NPS HOSTNAME -u ADMIN -pw PASSWORD -unique-id BACKUP-UNIQUE-ID
    ```
    {: #codeblock}
@@ -49,14 +49,14 @@ Follow these steps to migrate a backup image take on {{site.data.keyword.netezza
 
    - By using `az` connector:
 
-   ```sh
+   ```sql
    ./nz nzrestore -v -db <targetdbname> -sourcedb <targetdbname -backupset <> -npshost <> -connector az -connectorArgs "UNIQUE_ID=<>:STORAGE_ACCOUNT=<>:KEY=<>:CONTAINER=<>:REGION=<>:BLOCK_SIZE_MB=25"
    ```
    {: #codeblock}
 
    - For S3:
 
-   ```sh
+   ```sql
    "time nzrestore -v -db <> -npshost <> -streams AUTO -connector s3 -connectorArgs BUCKET_URL=<>:UNIQUE_ID=<>:ACCESS_KEY_ID=<>:SECRET_ACCESS_KEY=<>:DEFAULT_REGION=<>"
    ```
    {: #codeblock}
