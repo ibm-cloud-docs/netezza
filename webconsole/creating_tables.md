@@ -32,7 +32,7 @@ subcollection: netezza
 1. Ensure that you are in the **DB Objects > Tables** tab.
 1. Click **Create table**.
 1. Type a name for the table.  
-   If the name contains special characters, enclose it in double quotation marks.  
+   If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.  
    You can select a name that has up to 128 characters. The name must begin with a letter or an underscore and can't contain embedded spaces. The name must be unique.
 1. Optional: Specify the retention time interval (in days) for the table.  
    You can select between 1 day and up to 99 days, or zero to alter a temporal table to nontemporal.
@@ -121,6 +121,16 @@ You can choose different modes when you groom tables.
 1. From the overflow menu, click **Assign owner**.
 1. Select an owner for the table.  
 1. Click **Assign**.
+
+## Renaming tables
+{: #renaming_tbls}
+
+1. Go to **Databases**.
+1. Select the database and schema in which the table that you want to rename is.
+1. From the overflow menu, click **Rename**.
+1. Type a new name for the table.  
+   If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.
+1. Click **Rename**.
 
 ## Updating retention time interval (time travel) for tables
 {: #updating_retention_db}

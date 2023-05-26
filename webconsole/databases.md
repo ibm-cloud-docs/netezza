@@ -45,7 +45,7 @@ You can access database information by using the web console.
 1. Go to **Databases**.
 1. Click **Create database**.
 1. Type a name for the database.  
-   If the name contains special characters, enclose it in double quotation marks.
+   If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.
 1. Optional: Specify the retention time interval (in days) for the database.  
    You can select between 1 day and up to 99 days.  
    For more information on retention time interval and time travel, see [{{site.data.keyword.netezza_short}} time travel](/docs/netezza?topic=netezza-enablingdisabling_tt).
@@ -67,7 +67,7 @@ You can access database information by using the web console.
 1. Select the database that you want to rename.
 1. From the overflow menu, click **Rename**.
 1. Type a new name for the database.  
-   If the name contains special characters, enclose it in double quotation marks.
+   If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.
 1. Click **Rename**.
 
 ## Updating retention time interval (time travel) for databases

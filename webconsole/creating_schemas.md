@@ -30,7 +30,7 @@ subcollection: netezza
 1. Select the database in which you want to create a schema.
 1. Click **Create schema**.
 1. Type a name for the schema.  
-   If the name contains special characters, enclose it in double quotation marks.
+   If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.
 1. Specify the retention time interval (in days) for the schema.
 1. Click **Create**.
 
