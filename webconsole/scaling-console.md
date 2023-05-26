@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021
-lastupdated: "2023-02-27"
+lastupdated: "2023-05-26"
 
-keywords: scaling, netezza scaling with the web console, compute scaling 
+keywords: scaling, netezza scaling with the web console, compute scaling
 
 subcollection: netezza
 
@@ -24,6 +24,8 @@ subcollection: netezza
 
 On the *Workload patterns* page, you can initiate, edit or delete your **Scaling** operations and check their **History**.
 
+On AWS, storage scaling has a cool-down period of six hours.
+
 ## Initiating on demand scaling
 {: #scaling-console-ondemand}
 
@@ -32,7 +34,7 @@ On the *Workload patterns* page, you can initiate, edit or delete your **Scaling
 1. Type the name for your scaling job. **DRAFT COMMENT: is that really optional?**
 1. Move the Netezza unit (NZU) slider to the required position, or select from the drop-down.
 1. Click **Scale**.
-  
+
 ## Scheduling scaling
 {: #scaling-console-scheduled}
 
@@ -42,12 +44,12 @@ On the *Workload patterns* page, you can initiate, edit or delete your **Scaling
 1. Select the **Schedule for a later time** checkbox.
 1. Select the required parameters.
 1. Click **Scale**.
-  
-## Editing scheduled scaling 
+
+## Editing scheduled scaling
 {: #scaling-console-editing}
 
 1. Go to **Administration > Workload patterns >Schedules**.
-1. Select the operation that you want to edit. 
+1. Select the operation that you want to edit.
 1. Click **Edit**.
 1. Select the required parameters.
 1. Click **Save**.
@@ -56,7 +58,7 @@ On the *Workload patterns* page, you can initiate, edit or delete your **Scaling
 {: #scaling-console-deleting}
 
 1. Go to **Administration > Workload patterns >Schedules**.
-1. Select the operation that you want to edit. 
+1. Select the operation that you want to edit.
 1. Click **Delete**.
 1. Click **Delete**. **DRAFT COMMENT: Are we asking to click delete twice??**
 
@@ -69,4 +71,3 @@ On the *Workload patterns* page, you can initiate, edit or delete your **Scaling
    - Filter by **Time completed** or **Owner**.
 
    - In **Find history**, type the name of the operation.
-
