@@ -27,16 +27,27 @@ subcollection: netezza
 {: shortdesc}
 
 The following methods are used to secure your connection and data:
-- All client connections to the database server are TLS1.2 connections.
-- {{site.data.keyword.netezza_short}} uses ECDHE-RSA-AES256-GCM-SHA384 Cipher with 2048 bit key size for TLS communication.
-- User data are stored on secure reliable storage (as a service) from the cloud providers.  
-   For Azure, IBM Cloud block storage or Azure Premium disks.  
-   For AWS, Amazon Elastic Block Store (EBS).  
-   Also, cloud provider-managed encryption is used.
-- The data are encrypted at rest by the cloud provider itself.
-- Backups are stored on Cloud Object Storage (COS) and are geo-replicated as well as encrypted by cloud provider at rest and in transit.
+
+- All the connections to the database server are TLS 1.2 connections.
+- {{site.data.keyword.netezza_short}} supports the following suites of Cipher with 2048 bit RSA key size for TLS communication:
+
+   -  `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`
+   -  `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`
+   -  `TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`
+   -  `TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256`
+   -  `TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256`
+   -  `TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256`
+
+- User data is stored on secure reliable storage (as a service) from the cloud providers.  
+  For Azure, Azure Premium disks.  
+  For AWS, Amazon Elastic Block Store (EBS).  
+
+- The data is encrypted at rest by using cloud provider key management service.
+- Snapshots are stored on Cloud Object Storage (COS), which is replicated across AZs in the region in which it was created and are encrypted at rest and in transit.
 
 ## Data deletion
 {: #data-delete}
 
-When you delete an instance, the service deletes the data associated with you instance, including IBM-managed backups that are associated with the service. You will never be able to restore it after that. 
+When you delete an instance, all the data and snapshots associated with the instance are deleted immediately. 
+
+
