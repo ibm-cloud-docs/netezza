@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-05-25"
+lastupdated: "2023-05-26"
 
 keywords: netezza time travel, enabling time travel on netezza, creating tables, creating schemas, creating databases, altering schemas, altering databases, altering tables, time travel objects, retention time interval, create tables, create schemas, create databases, alter schemas, alter databases, alter tables,
 
@@ -21,6 +21,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 {:codeblock: .codeblock}
+{:note: .note}
 
 # Creating and altering objects for time travel
 {: #enablingdisabling_tt}
@@ -144,6 +145,9 @@ CREATE DATABASE DB1 DATA_VERSION_RETENTION_TIME 30;
 1. Create a temporal table as described in [Creating tables](/docs/netezza?topic=netezza-create-tables#creating-tables).
 
 You must set **retention time interval** to a nonzero value.
+
+Databases, schemas, and table names containing a dot character (".") do not show in the time travel statistics and graphs when you set the **retention time interval** to a nonzero value. When you do not set the **retention time interval**, all special characters are supported.
+{: note}
 
 When you insert a row into the table, the row receives a virtual insert timestamp that is equal to the commit time of the inserting transaction.
 

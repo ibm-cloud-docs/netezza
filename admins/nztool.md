@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-05-26"
 
 keywords: nztool
 
@@ -119,6 +119,9 @@ nzsession
 nzsystem
 ```
 {: screen}
+
+When you take a backup of your database by using `nzbatchnbr`, you must keep the original spelling of the database name in your `backup.json`.
+{: note}
 
 - Software Support Tools scripts:
 
