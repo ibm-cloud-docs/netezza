@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-24"
+lastupdated: "2023-05-26"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -32,15 +32,12 @@ subcollection: netezza
 - Smart scaling with confidence score and seed models display in now available in {{site.data.keyword.netezza_short}} web console. For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling_intro).
 - INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2). **https://jsw.ibm.com/browse/NEXTGEN-21556**
 - `go` package is upgraded to version 1.20.3.
-- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. **TBC by Emily Zhang**
+- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. **https://jsw.ibm.com/browse/NEXTGEN-18635**
 
 ### Fixes
 {: #fmay2023}
-- **https://jsw.ibm.com/browse/NEXTGEN-19913**
-- **https://jsw.ibm.com/browse/NEXTGEN-19215**
-- **https://jsw.ibm.com/browse/NEXTGEN-19580**
-- **https://jsw.ibm.com/browse/NEXTGEN-18547**
-- **https://jsw.ibm.com/browse/NEXTGEN-18635 the whole list provided by Mona Modase**
+- Fixed the issue with SPU pod stuck in terminating state while scaling down. **https://jsw.ibm.com/browse/NEXTGEN-19913**
+- Fixed the issue with dataslice expansion taking too much time. **https://jsw.ibm.com/browse/NEXTGEN-19580**
 
 ### Components
 {: #compsmay2023}
