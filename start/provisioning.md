@@ -74,7 +74,8 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 
    1. Type a name to assing to your credentials.
    1. Select the IAM role that was assigned to you to manage the instance.
-   1. Click Add??
+   1. Click **Add**.  
+      If your credentials were generated successfully, you can view them now.
 
 1. Expand your credential entry.
    The following credentials were generated:
@@ -83,10 +84,7 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
    - `password: xxxx`  - Specifies the password that you must use when logging in to your instance as `admin`.  
        After you log in to your instance for the first time, change your `admin` password.{: tip}
 
-   You can now [connect to your instance](/docs/netezza?topic=netezza-connecting-overview).
+   You can now connect to your instance. See [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview).
 
-
-   
-   
-   Go to Connecting to Netezza Performance Server  to get the URLs to user for connecting to your instance or how to configure Private link service to do the same.
+   to get the URLs to user for connecting to your instance or how to configure Private link service to do the same.
 

@@ -35,13 +35,9 @@ subcollection: netezza
 
    1. Type a name to assing to your credentials.
    1. Select the IAM role that was assigned to you to manage the instance.
+   1. Click **Add**.
 
-1. Expand your credential entry.
-   The following credentials were generated:
-
-   - `username: admin` - Specifies a local database `admin` user that was created for you to access the instance.
-   - `password: xxxx`  - Specifies the password that you must use when logging in to your instance as `admin`.  
-       After you log in to your instance for the first time, change your `admin` password.{: tip}
+If your credentials were generated successfully, you can expand the newly created credential entry to view them.
 
 ## Viewing credentials
 {: #view-credentials}
