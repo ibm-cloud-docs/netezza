@@ -86,5 +86,3 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 
    You can now connect to your instance. See [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview).
 
-   to get the URLs to user for connecting to your instance or how to configure Private link service to do the same.
-
