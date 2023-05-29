@@ -25,13 +25,13 @@ subcollection: netezza
 
 {{site.data.keyword.netezza_full}} ({{site.data.keyword.netezza_short}}) is a fully managed, cloud native analytical data warehouse that is based on massively parallel processing (MPP) architecture. {{site.data.keyword.netezza_short}} is mainly used for analytical processing of historical data, and can process from 100TB up to a few petabytes of data with best in the class performance. Its array of SPUs processes disjoint dataset in parallel which is then aggregated to come up with final result set.
 
-Learn how to provision a {{site.data.keyword.netezza_short}} instance on Azure or AWS and configure private endpoint access.
+Learn how to provision a {{site.data.keyword.netezza_short}} instance on Azure or AWS.
 {: shortdesc}
 
 ## Before you begin
 {: #provisioning_prereqs}
 
-You need a pay-as-you-go {{site.data.keyword.cloud_notm}} account to start the provisioning process.
+You need a pay-as-you-go {{site.data.keyword.cloud_notm}} account or a subscription to start the provisioning process.
 
 For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/docs/account?topic=account-account-getting-started) and [Upgrading your account](https://cloud.ibm.com/docs/account?topic=account-upgrading-account).
 
@@ -46,8 +46,8 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 1. Choose a corresponding location.
    Based on your selection of platform, {{site.data.keyword.netezza_short}} is available in different locations.
 1. Specify a name for your instance.
-1. Choose a workload contour, Netezza units (NZU) and storage values.
-   For more information about workload contours, Netezza Units (NZU) and available storage configuration, see [Architecture](/docs/netezza?topic=netezza-compute-isolation&interface=ui).  
+1. Choose a workload contour, Netezza units (NZU), and storage values.
+   For more information about workload contours, Netezza Units (NZU), and available storage configuration, see [Architecture](/docs/netezza?topic=netezza-compute-isolation&interface=ui).  
 1. Choose a performance profile and storage density.
 1. Choose an endpoint type.   
 1. Configure advanced features.  
@@ -61,9 +61,32 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 1. Go to **Resource list**.  
    After the provisioning process is finished, the instance status is `Active`. 
 
-## What to do next
-{: #wtdn}
 
-If you selected to connect to your instance by using private endpoints, see [Configuring private endpoints](/docs/netezza?topic=netezza-getstarted#creating-private-endpoints). 
-{: important}
+## Generating credentials
+{: #viewing_credentials}
+
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
+1. Go to **Resource list > Services and Software > Databases**.
+1. Click on your {{site.data.keyword.netezza_short}} instance.  
+   You are now on the **Service instance details** page where you can find information about endpoints for accessing the web console, the API server, and the database.
+1. Go to the **Service Credentials** tab.
+1. Click **New Credentials**.
+
+   1. Type a name to assing to your credentials.
+   1. Select the IAM role that was assigned to you to manage the instance.
+   1. Click Add??
+
+1. Expand your credential entry.
+   The following credentials were generated:
+
+   - `username: admin` - Specifies a local database `admin` user that was created for you to access the instance.
+   - `password: xxxx`  - Specifies the password that you must use when logging in to your instance as `admin`.  
+       After you log in to your instance for the first time, change your `admin` password.{: tip}
+
+   You can now [connect to your instance](/docs/netezza?topic=netezza-connecting-overview).
+
+
+   
+   
+   Go to Connecting to Netezza Performance Server  to get the URLs to user for connecting to your instance or how to configure Private link service to do the same.
 
