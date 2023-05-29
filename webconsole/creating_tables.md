@@ -23,6 +23,8 @@ subcollection: netezza
 # Tables
 {: #create-tables}
 
+In the table from the **Tables** tab, the value that is displayed in the row count column is an approximate. The exact row count is available after you run the `generate statistics on <table_name>` command. 
+
 ## Creating tables
 {: #creating-tables}
 
