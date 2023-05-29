@@ -34,14 +34,14 @@ Historical rows in temporal tables take up space on your {{site.data.keyword.net
 
 A longer retention time interval might be suitable for a slowly changing dimension table, but not for a table where the number of rows or bytes that are deleted or updated per day is large.
 
-For historical rows that are no longer visible to time travel queries, you can reclaim the space that is taken by these rows with the **GROOM TABLE RECORDS ALL** command. In some cases, not all rows can be reclaimed. For example, if the rows are also needed to support incremental backup. You can also schedule automatic grooming with AutoMaint.
+For historical rows that are no longer visible to time travel queries, you can reclaim the space that is taken by these rows with the **GROOM TABLE RECORDS ALL** command. In some cases, not all rows can be reclaimed. For example, if the rows are also needed to support incremental backup. You can also schedule automatic grooming with [AutoMaint](/docs/netezza?topic=netezza-autoadmin) in the web console.
 
-If you altered the **DATA_VERSION_RETENTION_TIME** for a temporal table and the table had historical rows that had been retained based on the earlier retention time interval (before you changed the retention time), you can groom the table to reclaim space.
+If you altered the retention time interval for a temporal table and the table had historical rows that had been retained based on the earlier retention time interval (before you changed the retention time), you can groom the table to reclaim space.
 
-You can estimate the space that might be reclaimed by running the **SHOW TEMPORAL HISTOGRAM** command. The command shows the space that is used by deleted rows per day or per range of days into the past.
+Run the **SHOW TEMPORAL HISTOGRAM** command or by use the web console to view the space that is used by deleted rows per day or per range of days into the past to estimate the space that might be reclaimed.
 
-## Showing space usage
-{: #showingspaceusage_tt}
+## Viewing space usage with the **SHOW TEMPORAL HISTOGRAM** command
+{: #viewing_spaceusage_cmd_tt}
 
 ```sql
 SHOW TEMPORAL HISTOGRAM <TEMPORAL TABLE> [DAYSPERROW <number of days>]
@@ -67,3 +67,15 @@ The virtual [_SYS_START and _SYS_END columns](/docs/netezza?topic=netezza-runnin
 {: note}
 
 See also [the SHOW TEMPORAL HISTOGRAM command](https://www.ibm.com/docs/en/netezza?topic=reference-show-temporal-histogram).
+
+## Viewing space usage with the web console
+{: #viewing_spaceusage_wc_tt}
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Go to **Databases**.
+1. Select the database in which the temporal table that you want to analyze is located.
+1. Select the schema in which the temporal table that you want to analyze is located.
+1. Select the table.
+1. Go to the **Time travel** tab.
+1. Analyze the data.  
+   You can view the information in a list or as a chart.
