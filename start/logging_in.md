@@ -94,3 +94,4 @@ To connect to the {{site.data.keyword.netezza_short}} instance from on-prem by u
    You are now on the service instance page.
 1. Click the Manage tab.
    You can now access information about your endpoints.
+   

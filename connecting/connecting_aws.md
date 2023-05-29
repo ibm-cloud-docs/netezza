@@ -73,9 +73,11 @@ To get the CRN name, follow the steps:
    The CRN name is displayed on the page.
 
 - To connect to the {{site.data.keyword.netezza_short}} instance from on-prem by using hostnames, you need to setup VPN or Express Route from your on-prem network to the VNET in your subscription.
+
 **DRAFT COMMENT: IS THIS ACCURATE?**
 
 See also:
+
 - [Assigning hostnames](/docs/netezza?topic=netezza-assing_hostnames)
 - [Retrieving information about endpoints for logging in](/docs/netezza?topic=netezza-next-endpoints)
 - [Generating credentials](/docs/netezza?topic=netezza-generate-credentials)

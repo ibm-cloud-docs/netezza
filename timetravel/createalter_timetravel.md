@@ -346,7 +346,6 @@ To alter a temporal database to nontemporal, set **retention time interval** to 
 
 1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
 1. Alter your table as described in [Updating retention time interval for databases](/docs/netezza?topic=netezza-databases#updating_retention_db).
-https://test.cloud.ibm.com
 
 ### Altering nontemporal databases to temporal with the web console
 {: #alterdbtemporalnon_wc_tt}

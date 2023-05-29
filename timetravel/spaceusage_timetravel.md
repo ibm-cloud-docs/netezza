@@ -79,3 +79,4 @@ See also [the SHOW TEMPORAL HISTOGRAM command](https://www.ibm.com/docs/en/netez
 1. Go to the **Time travel** tab.
 1. Analyze the data.  
    You can view the information in a list or as a chart.
+   
