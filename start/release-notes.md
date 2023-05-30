@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-29"
+lastupdated: "2023-05-30"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -33,6 +33,8 @@ subcollection: netezza
 - INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2). **https://jsw.ibm.com/browse/NEXTGEN-21556**
 - `go` package is upgraded to version 1.20.3.
 - Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt). **https://jsw.ibm.com/browse/NEXTGEN-18635**
+- A new entry-level workload contour, NC-Start, is available to support BI and UAT workloads. You can scale this instance to NC-0 performance profiles seamlessly as their workload increases. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
+
 
 ### Fixes
 {: #fmay2023}
