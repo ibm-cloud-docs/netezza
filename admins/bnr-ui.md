@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-05-30"
 
 keywords: bnr, backup and restore, backup, restore
 
@@ -19,7 +19,11 @@ subcollection: netezza
 # Backup and restore with the web console
 {: #bnr-webconsole}
 
-With the web console, you can run on demand backups, set, modify, and delete backup schedules, and restore backups. You can run differential and/or cumulative backups only after you run a full backup first. You can restore differential and/or cumulative backups only after you restore a full backup first.
+With the web console, you can run on demand backups, set, modify, and delete backup schedules, and restore backups.
+
+You can run differential and/or cumulative backups only after you run a full backup first. You can restore differential and/or cumulative backups only after you restore a full backup first.
+
+Schedule times of full, differential or cumulative backups of the same set of databases cannot overlap. You must schedule these backups in 30 minutes intervals.
 
 ## Running on demand backups
 {: #run-backups-ondemand}
