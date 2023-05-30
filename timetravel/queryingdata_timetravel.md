@@ -24,6 +24,8 @@ subcollection: netezza
 # Querying historical data
 {: #queryingdata_tt}
 
+You can run the queries by using the command-line or the [query editor inside the web console](/docs/netezza?topic=netezza-query-editor).
+
 The following table definition is used for the example queries.
 
 ```sql
