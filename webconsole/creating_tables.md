@@ -23,7 +23,7 @@ subcollection: netezza
 # Tables
 {: #create-tables}
 
-In the table from the **Tables** tab, the value that is displayed in the row count column is an approximate. The exact row count is available after you run the `generate statistics on <table_name>` command. 
+In the table from the **Tables** tab, the value that is displayed in the row count column is an approximate. The exact row count is available after you run the `GENERATE STATISTICS ON <table_name>` command. 
 
 ## Creating tables
 {: #creating-tables}
@@ -154,3 +154,14 @@ You can choose different modes when you groom tables.
 1. Select the table.
 1. From the overflow menu, click **Drop**.  
 1. Confirm your choice by clicking **Drop**.
+
+## Viewing space usage (time travel)
+{: #viewing_spaceusagett}
+
+1. Go to **Databases**.
+1. Select the database and schema in which the temporal table that you want to analyze is located.
+1. Select the table.
+1. Go to the **Time travel** tab.
+1. Analyze the data.  
+   You can view the information in a list or as a chart.
+   
