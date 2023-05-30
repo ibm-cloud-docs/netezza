@@ -36,7 +36,7 @@ After six hours of cool-down period passes, if you perform contour scaling from 
 ## Initiating on demand scaling
 {: #scaling-console-ondemand}
 
-1. Go to **Administration > Workload patterns**.
+1. Go to **Workload patterns**.
 1. Click **Scaling**.
 1. Type the name for your scaling job.
 1. Move the Netezza unit (NZU) slider to the required position, or select from the drop-down.
@@ -45,7 +45,7 @@ After six hours of cool-down period passes, if you perform contour scaling from 
 ## Scheduling scaling
 {: #scaling-console-scheduled}
 
-1. Go to **Administration > Workload patterns**.
+1. Go to **Workload patterns**.
 1. Click **Scaling**.
 1. Type the name for your scaling job.
 1. Select the **Schedule for a later time** checkbox.
@@ -55,7 +55,7 @@ After six hours of cool-down period passes, if you perform contour scaling from 
 ## Editing scheduled scaling
 {: #scaling-console-editing}
 
-1. Go to **Administration > Workload patterns > Schedules**.
+1. Go to **Workload patterns > Schedules**.
 1. Select the operation that you want to edit.
 1. Click **Edit**.
 1. Select the required parameters.
@@ -64,7 +64,7 @@ After six hours of cool-down period passes, if you perform contour scaling from 
 ## Deleting scheduled scaling
 {: #scaling-console-deleting}
 
-1. Go to **Administration > Workload patterns > Schedules**.
+1. Go to **Workload patterns > Schedules**.
 1. Select the operation that you want to delete.
 1. Click **Delete**.
 1. Click **Delete**.
@@ -72,7 +72,7 @@ After six hours of cool-down period passes, if you perform contour scaling from 
 ## Checking scaling history
 {: #scaling-console-history}
 
-1. Go to **Administration > Workload patterns > History**.
+1. Go to **Workload patterns > History**.
 1. Depending on your requirements, perform one of the following actions:
 
    - Filter by **Time completed** or **Owner**.
