@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2023-02-27"
+  years: 2023
+lastupdated: "2023-05-30"
 
 keywords: web console, administering web console, administering, pnr, pause and resume, netezza pause and resume, pause and resume by using netezza web console, pausing and resuming netezza performance server with the web console, netezza auto-pause and resume, netezza autopause and resume, netezza auto-pause and resume with the web console, scaling, netezza scaling with the web console, compute scaling, smartscaling, netezza smartscaling, netezza performance server smartscaling
 
@@ -21,6 +21,17 @@ subcollection: netezza
 {: #scaling-console}
 
 On the *Workload patterns* page, you can initiate, edit or delete your **Scaling** operations and check their **History**.
+
+On AWS, storage scaling has a cool-down period of six hours.
+
+Within six hours of cool-down period, you can perform contour scaling from NC-Start to NC0 with specific selected storage values. The following ranges are always allowed:
+
+- NC-Start 400 GB to NC0 2400 GB
+- NC-start 800 GB to NC0 4800 GB
+- NC-start 1200 GB to NC0 7200 GB
+
+After six hours of cool-down period passes, if you perform contour scaling from NC-Start to NC0, you can select any storage values from the available list.
+{:note: .note}
 
 ## Initiating on demand scaling
 {: #scaling-console-ondemand}
