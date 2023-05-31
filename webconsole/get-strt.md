@@ -30,8 +30,14 @@ subcollection: netezza
     
 If you use private endpoints, use the IP address that is associated with the private endpoint that was created with the console resource ID or alias to connect to your {{site.data.keyword.netezza_short}} web console on port 443.  
 
-To form the web console URL from the private endpoint IP address, append the CRN name to it.  You can retrieve the CRN name from **Resource list > Services and software**.
-For example: `https://<private endpoint IP>/#/?crn=CRN_NAME`
+To form the web console URL, append the Cloud Resource Name (CRN) to the private endpoint IP address. For example: `https://<private endpoint IP>/#/?crn=CRN_NAME`.  
+
+To get the CRN:
+
+1. Log in to the IBM Cloud catalog.
+1. Go to **Resource list > Services and Software > Databases**.
+1. Click on your {{site.data.keyword.netezza_short}} instance.  
+   You are now on the **Service instance details** page where the CRN is displayed.
 
 After you log in to the {{site.data.keyword.netezza_short}} web console, you are on the home page.
 
