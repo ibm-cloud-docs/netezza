@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-05-31"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -29,7 +29,7 @@ subcollection: netezza
 {: #nfmay2023}
 
 - {{site.data.keyword.netezza_short}} is now enabled on Amazon Web Services (AWS) for US-East-1 region. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
-- Smart scaling with confidence score and seed models display in now available in {{site.data.keyword.netezza_short}} web console. For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling_intro).
+- On AWS, smart scaling with confidence score and seed models display is now available in {{site.data.keyword.netezza_short}} web console. For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling_intro).
 - INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2). **https://jsw.ibm.com/browse/NEXTGEN-21556**
 - `go` package is upgraded to version 1.20.3.
 - Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt). **https://jsw.ibm.com/browse/NEXTGEN-18635**
@@ -50,7 +50,6 @@ subcollection: netezza
 {: #kimay2023}
 
 - Databases, schemas, and table names containing a dot character (".") do not show in the time travel statistics and graphs when you set the retention time interval to a nonzero value. **https://jsw.ibm.com/browse/NEXTGEN-21651**
-- Time Travel Console: Table Record Count Mismatch on Console. **per Emily Zhang this is working as designed, but Anna to confirm with Aditi. https://jsw.ibm.com/browse/NEXTGEN-21334**
 
 ## February 2023
 {: #feb2023}
