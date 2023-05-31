@@ -22,32 +22,32 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-## May 2023
-{: #may2023}
+## June 2023
+{: #june2023}
 
 ### New features and enhancements
-{: #nfmay2023}
+{: #nfjune2023}
 
 - {{site.data.keyword.netezza_short}} is now enabled on Amazon Web Services (AWS) for US-East-1 region. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
 - On AWS, smart scaling with confidence score and seed models display is now available in {{site.data.keyword.netezza_short}} web console. For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling_intro).
+- On AWS, a new entry-level workload contour called NC-Start is available to support lower volume BI and UAT workloads. You can scale this instance to NC0 performance profiles seamlessly as your workload increases. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
+- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt). **https://jsw.ibm.com/browse/NEXTGEN-18635**
 - INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2). **https://jsw.ibm.com/browse/NEXTGEN-21556**
 - `go` package is upgraded to version 1.20.3.
-- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt). **https://jsw.ibm.com/browse/NEXTGEN-18635**
-- On AWS, a new entry-level workload contour called NC-Start is available to support lower volume BI and UAT workloads. You can scale this instance to NC0 performance profiles seamlessly as your workload increases. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
 
 ### Fixes
-{: #fmay2023}
+{: #fjune2023}
 - Fixed the issue with SPU pod stuck in **terminating** state while scaling down. **https://jsw.ibm.com/browse/NEXTGEN-19913**
 - Fixed the issue with data slice expansion taking too much time. **https://jsw.ibm.com/browse/NEXTGEN-19580**
 
 ### Components
-{: #compsmay2023}
+{: #compsjune2023}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.7
 - Web console 4.0.14
 
 ### Known issues
-{: #kimay2023}
+{: #kijune2023}
 
 - Databases, schemas, and table names containing a dot character (".") do not show in the time travel statistics and graphs when you set the retention time interval to a nonzero value. **https://jsw.ibm.com/browse/NEXTGEN-21651**
 
