@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-24"
+lastupdated: "2023-05-29"
 
 keywords: connecting to Netezza Performance Server, connecting, private endpoint, public endpoint, public and private endpoints, web console,
 
@@ -22,48 +22,45 @@ subcollection: netezza
 # Connecting to {{site.data.keyword.netezza_short}}
 {: #connecting-overview}
 
-You can connect command-line interfaces, IBM or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance by using private or public endpoints. When you provisioned {{site.data.keyword.netezza_short}}, you selected the type of network that would be used to access the service.  
+You can connect command-line interfaces, IBM or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance by using private or public endpoints.
+{: shortdesc}
 
-For Azure, you could have selected both private and public endpoints or private endpoints only. 
+For Azure, you can provision {{site.data.keyword.netezza_short}} with a private endpoint only or both public and private endpoints.  
 
-For AWS, you could have selected private or public endpoints.
+For AWS, you can provision {{site.data.keyword.netezza_short}} with a private or a public endpoint.
 
-Each endpoint type provides a set of IP addresses or hostnames that you can use to log in to {{site.data.keyword.netezza_short}} by using the following components: 
+Each endpoint type provides a set of hostnames or IP addresses that you can use to log in to {{site.data.keyword.netezza_short}} by using the following components:
 
-- **The {{site.data.keyword.netezza_short}} web console**  
-   The web interface, which you can log in to on port 443, and use to manage and monitor your instace.  
-   See [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+- **[{{site.data.keyword.netezza_short}} web console](/docs/netezza?topic=netezza-getstarted-console)**  
+   The web interface, which you can use to manage and monitor your instance by using a standard HTTPS port 443.  
 
-- **The {{site.data.keyword.netezza_short}} software clients**  
-   The CLI clients that you can use to connect to the database on port 5480, and use to manage and monitor your instace.  
-   See [Client packages](https://www.ibm.com/docs/en/netezza?topic=npsda-installing-client-software-packages-2).
+- **{{site.data.keyword.netezza_short}} software clients**  
+   The command-line interface clients, which you can use to manage and monitor your instance by connecting to the database on port 5480 and the API server on a standard HTTPS port 443.
+   
+   - To connect to the database, download and install [the ODBC/JDBC/nzsql client packages](https://www.ibm.com/docs/en/netezza?topic=dls-installing-uninstalling-client-tools-software-2).  
+   - To connect to the API server to manage your instance, download [the nz tool](/docs/netezza?topic=netezza-nztool).
 
-   ![Connectivity options](../images/networking.png){: caption="Image 1. Ways to connect." caption-side="bottom"}
-
-## Connecting by using public endpoints
+## Connecting to {{site.data.keyword.netezza_short}} by using public endpoints
 {: #public_endpoints}
 
-A public endpoint can be accessed over the public network or internet. You can connect to your application by using a public hostname.  
+A public endpoint can be accessed over the public network or internet. You can connect to your application by using your public hostname details.
 
-To log in to your instance by using public endpoints, you need public hostname details. To get the details, follow these steps:
-
-1. Log in to the IBM Cloud catalog.
-1. Go to **Resource list > Services and Software**.
-1. Click on your {{site.data.keyword.netezza_short}} instance.  
-   You are now on the **Service instance details** page where you can find information about endpoints for accessing the web console, the API server, and the database. 
-1. Use your instance credentials to [log in on port 443 by using the web console](/docs/netezza?topic=netezza-getstarted-console) or [log in on port 5480 by using the {{site.data.keyword.netezza_short}} clients](https://www.ibm.com/docs/en/netezza?topic=npsda-installing-client-software-packages-2).
+1. Retrieve hostname details that are assigned to your instance:
    
-   To view your credentials, follow these steps.
+   1. Log in to your IBM Cloud account.
+   1. Go to **Resource list > Services and Software > Databases**.
+   1. Click on your {{site.data.keyword.netezza_short}} instance.  
+      You are now on the **Service instance details** page. In the **Public Endpoints** section, you can find information (URL details) about endpoints for accessing the web console, the API server, and the database.  
 
-   1. In the IBM Cloud catalog, go to **Service credentials**.
-   1. Expand **View credentials**.
-      Use the password to connect to the {{site.data.keyword.netezza_short}} database and web console as user admin.
+      Access to your data is protected by strong authentication, vast {{site.data.keyword.netezza_short}} authorization options and access controls, and encryption over the wire by using SSL and at rest. You can further restrict access to your instance by setting [network policies](/docs/netezza?topic=netezza-network-policies).
+  
+1. Connect to {{site.data.keyword.netezza_short}} with the credentials from [Generating credentials](/docs/netezza?topic=netezza-getstarted#viewing_credentials) by using one of the components:
 
-      See [Adding credentials](LINK).
+   - The {{site.data.keyword.netezza_short}} web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+   - The {{site.data.keyword.netezza_short}} software clients: [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) or [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
-Access to your data is protected by strong authentication, vast {{site.data.keyword.netezza_short}} authorization options and access controls, encryption over the wire by using SSL and at rest, and IBM security and compliance practices for development and operations.
 
-## Connecting by using private endpoints
+## Connecting to {{site.data.keyword.netezza_short}} by using private endpoints
 {: #private_endpoints} 
 
 A private endpoint offers you a way to connect over the cloud platform internal network and is not accessible from public networks.
@@ -72,26 +69,18 @@ For Azure, {{site.data.keyword.netezza_short}} supports private connectivity thr
 
 For AWS, {{site.data.keyword.netezza_short}} supports private connectivity through [AWS PrivateLink](https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html).  
 
-1. Log in to the IBM Cloud catalog.
-1. Go to **Resource list > Services and Software**.
-1. Click on your {{site.data.keyword.netezza_short}} instance.  
-   You are now on the **Service instance details** page where you can find information about endpoints for accessing the web console, the API server, and the database.
-1. Use your instance credentials to [log in on port 443 by using the web console](/docs/netezza?topic=netezza-getstarted-console) or [log in on port 5480 by using the {{site.data.keyword.netezza_short}} clients](https://www.ibm.com/docs/en/netezza?topic=npsda-installing-client-software-packages-2).
+1. Ensure that you set up your private link endpoint as desribed in [Configuring private endpoints](/docs/netezza?topic=netezza-creating-private-endpoints).
+1. Connect to {{site.data.keyword.netezza_short}} with the IP address or hostname that were assigned to your private link endpoint. 
+
+   - The {{site.data.keyword.netezza_short}} web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+   - The {{site.data.keyword.netezza_short}} software clients: [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) or [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
+
    
-   To form the web console URL from the private endpoint IP address, append the CRN name to it. These details are in **Resource list > Services and software > Service instance details**.
+You can also connect to your {{site.data.keyword.netezza_short}} instance private endpoint from on-prem with your Azure or AWS cloud account.
 
-   Example:  
-   `https://<private endpoint IP>/#/?crn=CRN_NAME`  
+For Azure, set up [a VPN or Express Route](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/) from your on-prem network to the VNET in your Azure subscription.  
 
-To connect to the {{site.data.keyword.netezza_short}} instance from on-prem by using the IP addresses or hostnames, you need to setup [VPN or Express Route](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/) from your on-prem network to the VNET in your subscription.
+For AWS, set up a [VPN](https://aws.amazon.com/vpn/) or [Direct Connect](https://aws.amazon.com/directconnect/) from your on-prem network to the VPC in your AWS account. For more information, see [Amazon Virtual Private Cloud Connectivity Options](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/introduction.html).
 
-## Viewing endpoints
-{: #view-endpoints}
 
-1. Log in to your IBM Cloud account.
-1. Go to Resource list > Services and software.
-1. Select your Netezza Performance Server instance.
-   You are now on the service instance page.
-1. Click the Manage tab.
-   You can now access information about your endpoints.
    

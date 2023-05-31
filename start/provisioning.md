@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-24"
+lastupdated: "2023-05-29"
 
 keywords: getting started with Netezza Performance Server, provisioning Netezza Performance Server
 
@@ -23,7 +23,7 @@ subcollection: netezza
 # Getting started with {{site.data.keyword.netezza_short}}
 {: #getstarted}
 
-{{site.data.keyword.netezza_full}} ({{site.data.keyword.netezza_short}}) is a fully managed, cloud native analytical data warehouse that is based on massively parallel processing (MPP) architecture. {{site.data.keyword.netezza_short}} is mainly used for analytical processing of historical data, and can process from 100TB up to a few petabytes of data with best in the class performance. Its array of SPUs processes disjoint dataset in parallel which is then aggregated to come up with final result set.
+{{site.data.keyword.netezza_full}} ({{site.data.keyword.netezza_short}}) is a fully managed, cloud native analytical data warehouse that is based on a massively parallel processing (MPP) architecture. {{site.data.keyword.netezza_short}} is mainly used for analytical processing of historical data. NPS can process from 100TB up to a few petabytes of data with best in the class performance. Its array of SPUs processes disjoint dataset in parallel which is then aggregated to come up with final result set.
 
 Learn how to provision a {{site.data.keyword.netezza_short}} instance on Azure or AWS.
 {: shortdesc}
@@ -61,6 +61,7 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 1. Go to **Resource list**.  
    After the provisioning process is finished, the instance status is `Active`. 
 
+Now, you can get the username and password that are necessary to log in to your instance.
 
 ## Generating credentials
 {: #viewing_credentials}
@@ -68,7 +69,7 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 1. Go to **Resource list > Services and Software > Databases**.
 1. Click on your {{site.data.keyword.netezza_short}} instance.  
-   You are now on the **Service instance details** page where you can find information about endpoints for accessing the web console, the API server, and the database.
+   You are now on the **Service instance details** page.
 1. Go to the **Service Credentials** tab.
 1. Click **New Credentials**.
 
@@ -84,5 +85,5 @@ For more information, see [Setting up your {{site.data.keyword.cloud_notm}} acco
    - `password: xxxx`  - Specifies the password that you must use when logging in to your instance as `admin`.  
        After you log in to your instance for the first time, change your `admin` password.{: tip}
 
-   You can now connect to your instance. See [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview).
+Now, you can connect to your instance as described in [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview).
 
