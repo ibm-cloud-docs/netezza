@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-05-31"
 
 keywords: bnr, backup and restore, backup, restore
 
@@ -23,7 +23,11 @@ With the web console, you can run on demand backups, set, modify, and delete bac
 
 You can run differential and/or cumulative backups only after you run a full backup first. You can restore differential and/or cumulative backups only after you restore a full backup first.
 
-Schedule times of full, differential or cumulative backups of the same set of databases cannot overlap. You must schedule these backups in 30 minutes intervals.
+Schedule times of full, differential and cumulative backups of the same set of databases cannot overlap. You must schedule these backups in 30 minutes intervals.
+
+If you want to take a backup of a specific database, you must first ensure that from the **Object privileges** overflow menu under *Users and groups*,   you selected **List**.   Select "GLOBAL - Object Privilege" and select "LIST" to show the Specific Database. Select "GLOBAL - Admin Privilege" and select "BACKUP " to the Specific Database for Taking Backup of the Specific Database.
+
+If you want to restore a specific database, you must ensure that from the **Admin privileges** overflow menu under *Users and groups*, you selected **Admin privileges > GLOBAL > Restore** along with **Admin privileges > *the database you want to restore* > Restore**  Select "GLOBAL - Admin Privilege" and select "RESTORE " to the "Specific Database"  alongwith  "Global Database" to give RESTORE permission for Specific Database   
 
 ## Running on demand backups
 {: #run-backups-ondemand}
