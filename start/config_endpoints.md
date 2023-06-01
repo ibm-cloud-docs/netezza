@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-24"
+lastupdated: "2023-06-01"
 
 keywords: getting started with Netezza Performance Server, provisioning Netezza Performance Server
 
@@ -30,14 +30,15 @@ If you want to connect to your {{site.data.keyword.netezza_short}} instance on A
 
 1. Provide your subscription IDs.
 
-   When you create your private endpoint connection, the private link service must approve the request. Your request is approved automatically if you provide the subscription IDs in which they are to be created.
+   When you create your private endpoint connection, the private link service must approve the request. If you provide the subscription IDs in which they are to be created, your request is approved automatically.  
 
-   - If you deployed your instance with private endpoints only, you must have provided your subscription IDs [during provisioning](/docs/netezza?topic=netezza-getstarted), in step **9. Configure advanced features**.  
+   - If you deployed your instance with private endpoints only, you provided your subscription IDs [during provisioning](/docs/netezza?topic=netezza-getstarted), in step **9. Configure advanced features**.  
 
    - If you deployed your instance with public and private endpoints and did not provide your subscription IDs during provisioning, log in to the web console by using the public endpoint and set up the private link service.
 
       1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console).
-      1. Go to **Administration > Settings > Private endpoints** and click **Create Private Link**.
+      1. Go to **Administration > Settings > Private endpoints**.
+      1. Click **Create Private Link**.
       1. Type the subscription IDs that you want to use to set up the private endpoints in your Azure account.  
 
          Use the **Private Link** page to update subscription IDs after private link is created.
@@ -46,10 +47,19 @@ If you want to connect to your {{site.data.keyword.netezza_short}} instance on A
       ![Connecting to {{site.data.keyword.netezza_short}}](../images/connecting2.png){: caption="Image 2. Configure advanced features during provisioning." caption-side="bottom"}
    
 2. Get resource ID or alias.  
-   You can get the resource ID or alias in one of the following ways:
+   You can get the resource ID either from the {{site.data.keyword.netezza_short}} web console or the IBM Cloud catalog.
 
-   - By going to **Private endpoints > Service instance details** page for the instance in the IBM Cloud catalog.
-   - By going to **Administration > Settings > Private Link** in the {{site.data.keyword.netezza_short}} web console.
+   - The {{site.data.keyword.netezza_short}} web console:
+      
+      1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console).
+      1. Go to **Administration > Settings > Private endpoints**.
+      1. Click **Create Private Link**.
+
+   - The IBM Cloud catalog:
+
+      1. Log in to your IBM Cloud account.
+      1. Go to **Private endpoints > Service instance details**.
+
 
 3. Create private endpoints.
 
@@ -78,4 +88,3 @@ To connect to your {{site.data.keyword.netezza_short}} on AWS by using [AWS Priv
 
    When the private endpoints are created, a private hostname is assigned to each of your private endpoints. Use these details to [log in to your instace by using private endpoints](/docs/netezza?topic=netezza-connecting-overview#private_endpoints).
 
-   **DRAFT COMMENT: NEEDS VERIFICATION**

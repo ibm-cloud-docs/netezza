@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-29"
+lastupdated: "2023-06-01"
 
 keywords: connecting to Netezza Performance Server, connecting, private endpoint, public endpoint, public and private endpoints, web console,
 
@@ -34,7 +34,7 @@ Each endpoint type provides a set of hostnames or IP addresses that you can use 
 - **[{{site.data.keyword.netezza_short}} web console](/docs/netezza?topic=netezza-getstarted-console)**  
    The web interface, which you can use to manage and monitor your instance by using a standard HTTPS port 443.  
 
-- **{{site.data.keyword.netezza_short}} software clients**  
+- **[{{site.data.keyword.netezza_short}} software clients](https://www.ibm.com/docs/en/netezza?topic=dls-installing-uninstalling-client-tools-software-2)**  
    The command-line interface clients, which you can use to manage and monitor your instance by connecting to the database on port 5480 and the API server on a standard HTTPS port 443.
    
    - To connect to the database, download and install [the ODBC/JDBC/nzsql client packages](https://www.ibm.com/docs/en/netezza?topic=dls-installing-uninstalling-client-tools-software-2).  

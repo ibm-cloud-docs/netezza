@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-19"
+lastupdated: "2023-06-01"
 
 keywords: connecting to Netezza Performance Server, connecting, private endpoint, public endpoint, public and private endpoints, web console,
 
@@ -25,18 +25,19 @@ subcollection: netezza
 You can connect command-line interfaces, IBM or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance by using private or public endpoints.
 {: shortdesc}
 
-For Azure, you can provision {{site.data.keyword.netezza_short}} with a private endpoint or both public and private endpoints.
+For Azure, you can provision {{site.data.keyword.netezza_short}} with a private endpoint only or both public and private endpoints.
 For AWS, you can provision {{site.data.keyword.netezza_short}} with a private or a public endpoint.
 
-Each endpoint type provides a set of hostnames that you can connect to one of the following {{site.data.keyword.netezza_short}} components:
+Each endpoint type provides a set of hostnames or IP addresses that you can use to log in to {{site.data.keyword.netezza_short}} by using the following components:
 
-- **[WEB CONSOLE](/docs/netezza?topic=netezza-getstarted-console)**  
-   The web interface, which you can use to manage and monitor the database.  
+- **[{{site.data.keyword.netezza_short}} web console](/docs/netezza?topic=netezza-getstarted-console)**  
+   The web interface, which you can use to manage and monitor your instance by using a standard HTTPS port 443.  
 
 - **{{site.data.keyword.netezza_short}} database (NZ host)**  
-   The hostname, which you can connect to the database on port 5480 by using [the ODBC, JDBC, OLE DB, .NET and Go Driver drivers](https://www.ibm.com/docs/en/netezza?topic=npsdu-drivers-language-support-2), [nzsql](https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2), and [nz](/docs/netezza?topic=netezza-nztool).  
-
-![Connectivity options](../images/networking.png){: caption="Image 1. Ways to connect." caption-side="bottom"}
+   The command-line interface clients, which you can use to manage and monitor your instance by connecting to the database on port 5480 and the API server on a standard HTTPS port 443.
+   
+   - To connect to the database, download and install [the ODBC/JDBC/nzsql client packages](https://www.ibm.com/docs/en/netezza?topic=icsp-client-software-packages-2).  
+   - To connect to the API server to manage your instance, download [the nz tool](/docs/netezza?topic=netezza-nztool).
 
 ## Public endpoint
 {: #public_endpoint}
