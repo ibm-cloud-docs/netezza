@@ -1,13 +1,17 @@
 {
     "title": "Netezza Performance Server",
-    "lastupdated": "2023-03-02",
+    "lastupdated": "2023-06-01",
     "introduction": "Welcome to the Netezza Performance Server for Cloud Pak for Data as a Service product documentation.",
     "section_recommended": [
       {
         "title": "Provision a service instance",
-        "description": "Create and deploy a Netezza Performance Server service instance.",
-        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-getting-started"
+        "description": "Learn how to create and deploy a Netezza Performance Server service instance.",
+        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-getstarted"
       },
+      {
+        "title": "Connecting to Netezza Performance Server",
+        "description": Learn how to connect to your instance.
+        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-connecting-overview"
       {
         "title": "Pause and resume instances",
         "description": "Learn how to pause and resume your Netezza Performance Server instances.",
@@ -19,7 +23,7 @@
         "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-overview_singularity"
       },
       {
-        "title": "Query historical data",
+        "title": "Query historical data (time travel)",
         "description": "Learn how to retrieve and analyze historical data without having to develop additional application logic such as history tables. With Netezza Performance Server time travel, you can access data that was changed or deleted at past points in time or within a past period of time.",
         "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-introducing_tt"
 
