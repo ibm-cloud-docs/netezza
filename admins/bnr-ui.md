@@ -27,9 +27,9 @@ Schedule times of full, differential and cumulative backups of the same set of d
 
 If you want to take a back up of and restore a specific database, you must ensure that:
 
-- From the *Users and groups* view, you select **Users > Object privileges > Database > GLOBAL** and **List** to show this database.
-- From the *Users and groups* view, you select **Users > Admin privileges > Database > GLOBAL** and **Backup** to back up this database.
-- From the *Users and groups* view, you select **Users > Admin privileges > Database > GLOBAL** along with the **name of the database you want to restore > Restore** to restore this database.
+- From the *Users and groups* view, you select **Users > Object privileges > Database > GLOBAL > List** to show this database.
+- From the *Users and groups* view, you select **Users > Admin privileges > Database > GLOBAL > Backup** to back up this database.
+- From the *Users and groups* view, you select **Users > Admin privileges > Database > GLOBAL > Restore** and **Users > Admin privileges > Database > *the name of the database you want to restore* > Restore** to restore this database.
 
 ## Running on demand backups
 {: #run-backups-ondemand}
