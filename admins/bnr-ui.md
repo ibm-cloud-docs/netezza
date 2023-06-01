@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2023
-lastupdated: "2023-05-31"
+lastupdated: "2023-06-01"
 
 keywords: bnr, backup and restore, backup, restore
 
@@ -27,13 +27,9 @@ Schedule times of full, differential and cumulative backups of the same set of d
 
 If you want to take a back up of and restore a specific database, you must ensure that:
 
-- From the *Users and groups* view, you select **Object privileges > GLOBAL** and select **List** to show this database.
-- From the *Users and groups* view, you select **Admin privileges > GLOBAL** and select **Backup** to back up this database.
-- From the *Users and groups* view, you select **Admin privileges > GLOBAL**, select **Restore** and **Global Database** to restore this database.
-
-User need to give "GLOBAL - Admin Privilege" of  "RESTORE " to the "Specific Database"  alongwith  "Global Database" to give RESTORE permission for Specific Database.
-
-If you want to restore a specific database, you must ensure that from the **Admin privileges** overflow menu under *Users and groups* left menu, you selected **Admin privileges > GLOBAL > Restore** along with **Admin privileges > *the database you want to restore* > Restore**  Select "GLOBAL - Admin Privilege" and select "RESTORE " to the "Specific Database"  alongwith  "Global Database" to give RESTORE permission for Specific Database   
+- From the *Users and groups* view, you select **Object privileges > GLOBAL** and **List** to show this database.
+- From the *Users and groups* view, you select **Admin privileges > GLOBAL** and **Backup** to back up this database.
+- From the *Users and groups* view, you select **Admin privileges > GLOBAL**, **Restore**, and **Global Database** to restore this database.
 
 ## Running on demand backups
 {: #run-backups-ondemand}
