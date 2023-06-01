@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-06-01"
 
 keywords:
 
@@ -42,11 +42,12 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
 - For `clientid`, see [How to: Get an Azure Application ID](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/msipcthin2/application-id?).
 - For `tenantid`, see [How to find your Azure Active Directory tenant ID](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
 
-## Procedure
+## Setting Azure AD authentication with the command-line
 {: #azureadprocedure}
 
-1. Log in to your {{site.data.keyword.netezza_short}} instance.
-1. Connect to the database by using `nzsql` as a user with administrative access.
+1. [Connect to {{site.data.keyword.netezza_short}}](docs/netezza?topic=netezza-connecting-overview) as an `admin` user.  
+
+   In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use the [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
     ```sql
     nzsql -u admin -pw XXXXX
@@ -66,7 +67,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
     ```
     {: codeblock}
 
-1. As admin, register an `AzureAD` external authentication system.  
+1. Register an `AzureAD` external authentication system.  
    Specify the `clientid` and `tenantid` parameters.
 
     ```sql
@@ -109,3 +110,24 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
     SYSTEM.ADMIN(xyz@example.example.com)=>
     ```
     {: codeblock}
+
+## Setting Azure AD authentication with the web console
+{: #setting_azuread_wc}
+
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
+1. Go to the **Query editor**.
+1. Register an `Azure AD` external authentication system.
+   Specify the `clientid` and `tenantid` parameters.
+
+    ```sql
+    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID' tenantid 'AZURE TENANT ID';
+    SET VARIABLE
+    ```
+    {: codeblock}
+
+1. Create a user or users with the external authentication method set to `AzureAD` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Verify whether the user was created successfully.  
+   
+   1. Go to **Users and groups > Users**.
+   1. Locate the user.
+   1. Check the **Authentication type** section for the user.

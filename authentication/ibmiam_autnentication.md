@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-06-01"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -38,11 +38,12 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
 ```
 {: codeblock}
 
-## Procedure
+## Setting IBM IAM authentication with the command-line
 {: #ibmiamprocedure}
 
-1. Log in to your {{site.data.keyword.netezza_short}} instance.
-1. Connect to the database by using `nzsql` as a user with administrative access.
+1. [Connect to {{site.data.keyword.netezza_short}}](docs/netezza?topic=netezza-connecting-overview) as an `admin` user.  
+
+   In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use the [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
     ```sql
     nzsql -u admin -pw XXXXX
@@ -111,3 +112,23 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
     SYSTEM.ADMIN(xyz@ibm.com)=>
     ```
     {: codeblock}
+
+## Setting IBM IAM authentication with the web console
+{: #setting_ibmiam_wc}
+
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
+1. Go to the **Query editor**.
+1. Register an `IBM IAM` external authentication system.
+   Specify the `PRODUCTION` environment type.
+
+    ```sql
+    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with 'PRODUCTION'
+    ```
+    {: codeblock}
+
+1. Create a user or users with the external authentication method set to `IBM IAM` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Verify whether the user was created successfully.  
+   
+   1. Go to **Users and groups > Users**.
+   1. Locate the user.
+   1. Check the **Authentication type** section for the user.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-06-01"
 
 keywords:
 
@@ -61,11 +61,12 @@ Where:
 | NAMECASE    | Indicates whether the LDAP server stores the user name in lowercase or uppercase. |
 {: caption="Table 1. REGISTER EXTERNAL AUTHENTICATION SYSTEM command config for LDAP." caption-side="bottom"}
 
-## Procedure
+## Setting LDAP authentication with the command-line
 {: #ldapprocedure}
 
-1. Log in to your {{site.data.keyword.netezza_short}} instance.
-1. Connect to the database by using `nzsql` as a user with administrative access.
+1. [Connect to {{site.data.keyword.netezza_short}}](docs/netezza?topic=netezza-connecting-overview) as an `admin` user.  
+
+   In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use the [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
     ```sql
     nzsql -u admin -pw XXXXX
@@ -85,9 +86,8 @@ Where:
     ```
     {: codeblock}
 
-1. As admin, register an `LDAP` external authentication system.  
+1. Register an `LDAP` external authentication system.
    Specify the necessary parameters.
-
 
     ```sql
     REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP' with base 'DC=cpsdevelopment,dc=fyre,dc=ibm,dc=com' namecase lowercase server 'windowsad-security1.fyre.ibm.com' ssl 'off' binddn 'CN=mannu,CN=Users,DC=cpsdevelopment,DC=fyre,DC=ibm,DC=com' bindpw 'Netezza@1234' attrname 'sAMAccountName';
@@ -128,3 +128,23 @@ Where:
     SYSTEM.ADMIN(user1)=>
     ```
     {: codeblock}
+
+## Setting LDAP authentication with the web console
+{: #setting_ldap_wc}
+
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
+1. Go to the **Query editor**.
+1. Register an `LDAP` external authentication system.
+   Specify the necessary parameters.
+
+    ```sql
+    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP' with base 'DC=cpsdevelopment,dc=fyre,dc=ibm,dc=com' namecase lowercase server 'windowsad-security1.fyre.ibm.com' ssl 'off' binddn 'CN=mannu,CN=Users,DC=cpsdevelopment,DC=fyre,DC=ibm,DC=com' bindpw 'Netezza@1234' attrname 'sAMAccountName';
+    ```
+    {: codeblock}
+
+1. Create a user or users with the external authentication method set to `LDAP` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Verify whether the user was created successfully.  
+   
+   1. Go to **Users and groups > Users**.
+   1. Locate the user.
+   1. Check the **Authentication type** section for the user.
