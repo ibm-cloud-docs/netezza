@@ -43,7 +43,8 @@ Each endpoint type provides a set of hostnames or IP addresses that you can use 
 ## Connecting to {{site.data.keyword.netezza_short}} by using public endpoints
 {: #public_endpoints}
 
-A public endpoint can be accessed over the public network or internet. You can connect to your application by using your public hostname details.
+A public endpoint can be accessed over the public network or internet.  
+To connect to your application by using your public hostname details if you are on Azure or AWS, follow the steps.
 
 1. Retrieve hostname details that are assigned to your instance:
    
@@ -68,6 +69,8 @@ A private endpoint offers you a way to connect over the cloud platform internal 
 For Azure, {{site.data.keyword.netezza_short}} supports private connectivity through [Azure Privatelink](https://azure.microsoft.com/en-us/pricing/details/private-link/#overview).  
 
 For AWS, {{site.data.keyword.netezza_short}} supports private connectivity through [AWS PrivateLink](https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html).  
+
+To connect to your application by using your private hostname details if you are on Azure or AWS, follow the steps.
 
 1. Ensure that you set up your private link endpoint as desribed in [Configuring private endpoints](/docs/netezza?topic=netezza-creating-private-endpoints).
 1. Connect to {{site.data.keyword.netezza_short}} with the IP address or hostname that were assigned to your private link endpoint. 
