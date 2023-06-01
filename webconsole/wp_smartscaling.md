@@ -78,6 +78,11 @@ The bars that are displayed on the right side of the current date line are sugge
 Contour profiles are suggested based on the predicted NZP during that time interval. If NZP exceeds 80%, it is suggested that contour profile is scaled up the next closest contour to increase compute and improve performance for heavy workload periods. When the algorithm predicts NZP at or below 20% for a time interval, the graph suggests to scale down to a lower profile.
 {: tip}
 
+### Confidence score
+{: #confidence_score}
+
+Confidence score reflects the accuracy of the predictions that are provided based on your system historical workload patterns. By analyzing the confidence score, you can choose how to use your system resources.
+
 ## Smart scaling example
 {: #smartscaling_example}
 
