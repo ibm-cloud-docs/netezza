@@ -45,25 +45,32 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
 ## Setting Azure AD authentication with the command-line
 {: #azureadprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](docs/netezza?topic=netezza-connecting-overview) as an `admin` user.  
+1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin` user.  
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use the [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
-    ```sql
-    nzsql -u admin -pw XXXXX
+        ```sql
+    nzsql -host <nps_host_ip> -u admin -pw XXXXX
     ```
     {: codeblock}
 
-    Example:
+   | Input          | Description |
+   | :-----------   | :---------- |
+   | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
+   | user           | Specifies the user name.      |
+   | password       | Specifies the password for the user. |
+   
+   Example:
 
     ```sql
-    nzsql
-    Welcome to nzsql, the IBM Netezza SQL interactive terminal.  
-    Type: \h for help with SQL commands
-    ? for help on internal slash commands
-    \g or terminate with semicolon to execute query
-    \q to quit  
-    SSL enabled connection. Cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol: TLSv1.2
+    nzsql -host X.XX.XXX.XXX -u admin -pw password
+    Welcome to nzsql, the IBM Netezza SQL interactive terminal.
+    Type:  \h for help with SQL commands
+           \? for help on internal slash commands
+           \g or terminate with semicolon to execute query
+           \q to quit
+           
+    SYSTEM.ADMIN(ADMIN)=> 
     ```
     {: codeblock}
 
