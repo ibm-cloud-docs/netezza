@@ -22,7 +22,7 @@ subcollection: netezza
 # Connecting to {{site.data.keyword.netezza_short}}
 {: #connecting-overview}
 
-You can connect command-line interfaces, IBM or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance by using private or public endpoints.
+You can connect command-line interfaces, IBM, or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance by using private or public endpoints.
 {: shortdesc}
 
 For Azure, you can provision {{site.data.keyword.netezza_short}} with a private endpoint only or both public and private endpoints.  
@@ -50,7 +50,7 @@ To connect to your application by using your public hostname details if you are 
    
    1. Log in to your IBM Cloud account.
    1. Go to **Resource list > Services and Software > Databases**.
-   1. Click on your {{site.data.keyword.netezza_short}} instance.  
+   1. Click your {{site.data.keyword.netezza_short}} instance.  
       You are now on the **Service instance details** page. In the **Public Endpoints** section, you can find information (URL details) about endpoints for accessing the web console, the API server, and the database.  
 
       Access to your data is protected by strong authentication, vast {{site.data.keyword.netezza_short}} authorization options and access controls, and encryption over the wire by using SSL and at rest. You can further restrict access to your instance by setting [network policies](/docs/netezza?topic=netezza-network-policies).
