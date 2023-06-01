@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2023-02-27"
+lastupdated: "2023-06-01"
 
 keywords: smart scaling, scaling, Netezza Performance Server smart scaling,
 subcollection: netezza
@@ -77,3 +77,18 @@ The bars that are displayed on the right side of the current date line are sugge
 
 Contour profiles are suggested based on the predicted NZP during that time interval. If NZP exceeds 80%, it is suggested that contour profile is scaled up the next closest contour to increase compute and improve performance for heavy workload periods. When the algorithm predicts NZP at or below 20% for a time interval, the graph suggests to scale down to a lower profile.
 {: tip}
+
+## Smart scaling example
+{: #smartscaling_example}
+
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Go to **Administering > Workload patterns**.  
+1. Review the smart scaling utilization graph.   
+   In this example, as a database administrator, you want to to get a deeper understanding of your system utilization over time.
+   
+   In this scenario, it turns out that every Sunday, your system utilization drops below average as compared to other days of the week. Basing on this information, you can update your scaling schedule to match anticipated peaks and dips in workloads.
+
+1. Configure the scheduler to scale down the instance for every Sunday as described in [Editing scheduled scaling](/docs/netezza?topic=netezza-scaling-console#scaling-console-editing).
+1. Configure the scheduler to scale up back starting every Monday as described in [Editing scheduled scaling](/docs/netezza?topic=netezza-scaling-console#scaling-console-editing).
+
+As a result, you will see performance improvement and reduction in resource waste and costs in the future.
