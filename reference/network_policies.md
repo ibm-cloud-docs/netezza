@@ -22,7 +22,7 @@ subcollection: netezza
 {: #network-policies}
 
 By default, you can connect to the {{site.data.keyword.netezza_short}} database or connect from the database to any device with any IP address or hostname.
-By using the network policies feature in the web console, you can control the set of the IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or can be connected from. Network policies feature is supported on Azure only. 
+By using the network policies feature in the web console, you can control the set of the IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or can be connected from. Network policies feature is supported on Azure only.
 
 - If you want to restrict the destination your {{site.data.keyword.netezza_short}} instance can reach out to or can be reached from, see [Allowing connections only from a defined set of sources with the specified IP addresses and hostnames](https://cloud.ibm.com/docs/netezza?topic=netezza-network-policies).
 
@@ -270,7 +270,7 @@ If you have storage accounts, for example, in the `East US 2` region with Azure 
 
    To retrieve the CIDR ranges that are used by the storage endpoints in a particular Azure region:
 
-   - Follow the instructions from [AWS IP address ranges notifications](https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkservicetag?view=azps-7.5.0).
+   - Follow the instructions from [Azure IP address ranges notifications](https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkservicetag?view=azps-7.5.0).
 
      ```she
      > $serviceTags = Get-AzNetworkServiceTag -Location eastus2
