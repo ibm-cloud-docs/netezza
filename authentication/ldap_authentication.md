@@ -61,6 +61,26 @@ Where:
 | NAMECASE    | Indicates whether the LDAP server stores the user name in lowercase or uppercase. |
 {: caption="Table 1. REGISTER EXTERNAL AUTHENTICATION SYSTEM command config for LDAP." caption-side="bottom"}
 
+## Setting LDAP authentication with the web console
+{: #setting_ldap_wc}
+
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
+1. Go to the **Query editor**.
+1. Register an `LDAP` external authentication system.
+   Specify the necessary parameters.
+
+    ```sql
+    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP' with base 'DC=cpsdevelopment,dc=fyre,dc=ibm,dc=com' namecase lowercase server 'windowsad-security1.fyre.ibm.com' ssl 'off' binddn 'CN=mannu,CN=Users,DC=cpsdevelopment,DC=fyre,DC=ibm,DC=com' bindpw 'Netezza@1234' attrname 'sAMAccountName';
+    ```
+    {: codeblock}
+
+1. Create a user or users with the external authentication method set to `LDAP` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Verify whether the user was created successfully.  
+   
+   1. Go to **Users and groups > Users**.
+   1. Locate the user.
+   1. Check the **Authentication type** section for the user.
+
 ## Setting LDAP authentication with the command-line
 {: #ldapprocedure}
 
@@ -136,22 +156,3 @@ Where:
     ```
     {: codeblock}
 
-## Setting LDAP authentication with the web console
-{: #setting_ldap_wc}
-
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
-1. Go to the **Query editor**.
-1. Register an `LDAP` external authentication system.
-   Specify the necessary parameters.
-
-    ```sql
-    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP' with base 'DC=cpsdevelopment,dc=fyre,dc=ibm,dc=com' namecase lowercase server 'windowsad-security1.fyre.ibm.com' ssl 'off' binddn 'CN=mannu,CN=Users,DC=cpsdevelopment,DC=fyre,DC=ibm,DC=com' bindpw 'Netezza@1234' attrname 'sAMAccountName';
-    ```
-    {: codeblock}
-
-1. Create a user or users with the external authentication method set to `LDAP` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
-1. Verify whether the user was created successfully.  
-   
-   1. Go to **Users and groups > Users**.
-   1. Locate the user.
-   1. Check the **Authentication type** section for the user.

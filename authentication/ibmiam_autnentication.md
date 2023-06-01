@@ -38,6 +38,26 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
 ```
 {: codeblock}
 
+## Setting IBM IAM authentication with the web console
+{: #setting_ibmiam_wc}
+
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
+1. Go to the **Query editor**.
+1. Register an `IBM IAM` external authentication system.
+   Specify the `PRODUCTION` environment type.
+
+    ```sql
+    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with 'PRODUCTION'
+    ```
+    {: codeblock}
+
+1. Create a user or users with the external authentication method set to `IBM IAM` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Verify whether the user was created successfully.  
+   
+   1. Go to **Users and groups > Users**.
+   1. Locate the user.
+   1. Check the **Authentication type** section for the user.
+
 ## Setting IBM IAM authentication with the command-line
 {: #ibmiamprocedure}
 
@@ -120,22 +140,3 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
     ```
     {: codeblock}
 
-## Setting IBM IAM authentication with the web console
-{: #setting_ibmiam_wc}
-
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
-1. Go to the **Query editor**.
-1. Register an `IBM IAM` external authentication system.
-   Specify the `PRODUCTION` environment type.
-
-    ```sql
-    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with 'PRODUCTION'
-    ```
-    {: codeblock}
-
-1. Create a user or users with the external authentication method set to `IBM IAM` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
-1. Verify whether the user was created successfully.  
-   
-   1. Go to **Users and groups > Users**.
-   1. Locate the user.
-   1. Check the **Authentication type** section for the user.
