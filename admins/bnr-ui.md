@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2023
-lastupdated: "2023-06-01"
+lastupdated: "2023-06-05"
 
 keywords: bnr, backup and restore, backup, restore
 
@@ -25,7 +25,7 @@ You can run differential and/or cumulative backups only after you run a full bac
 
 Schedule times of full, differential and cumulative backups of the same set of databases cannot overlap. You must schedule these backups in 30 minutes intervals.
 
-If you want to take a back up of and restore a specific database, you must ensure that:
+If you want to back up and restore a specific database, you must ensure that:
 
 - From the *Users and groups* view, you select **Users > Object privileges > Database > GLOBAL > List** to show this database.
 - From the *Users and groups* view, you select **Users > Admin privileges > Database > GLOBAL > Backup** to back up this database.
