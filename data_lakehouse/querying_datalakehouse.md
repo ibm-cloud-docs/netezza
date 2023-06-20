@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-11"
+lastupdated: "2023-06-20"
 
 keywords: netezza data lakehouse, data lake, querying data, connecting to a metastore
 subcollection: netezza
@@ -23,7 +23,7 @@ subcollection: netezza
 {:tip: .tip}
 {:note: .note}
 
-# Querying data from data lakes (or lakehouse?)
+# Querying data from data lakehouse
 {: #querying_datalakehouse}
 
 ## Before you begin

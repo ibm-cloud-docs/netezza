@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-11"
+lastupdated: "2023-06-20"
 
 keywords: data lakehouse, netezza data lakehouse, querying data, merging data
 subcollection: netezza
@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Merging and querying data within data lakehouse
+# Merging and querying data from data lakehouse
 {: #merging_datalakehouse}
 
 Learn how to query and merge data from a {{site.data.keyword.netezza_short}} table and a data lake table.

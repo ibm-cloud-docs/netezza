@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-05-11"
+lastupdated: "2023-06-20"
 
 keywords: data lakehouse, netezza data lakehouse, querying data, ingesting data
 subcollection: netezza
