@@ -35,6 +35,7 @@ In the examples, the publicly available [*New York taxi trip* record data](https
 {: #create_database}
 
 External datasources allow an administrator to grant access to S3 without providing the keys directly to a user.
+
 Example:
 
 ```sql
@@ -42,7 +43,7 @@ SYSTEM.ADMIN(ADMIN)=> create database mylake with metastoreuri 'thrift://mymetas
 ```
 {: codeblock}
 
-You can see there are 589 tables from the datalake available in **mylake**.
+You can see there are 589 tables from the data lake available in **mylake**.
 
 ## 2. Connect to the database.
 {: #connectdlh_database}
@@ -55,7 +56,7 @@ SYSTEM.ADMIN(ADMIN)=> \c mylake
 
 You are now connected to **mylake** database.
 
-## 3. Show schema by running:
+## 3. Show schema.
 {: #showschemadlh}
 
 ```sql
@@ -63,7 +64,7 @@ MYLAKE.NETEZZA_SCHEMA(ADMIN)=> show schema;
 ```
 {: codeblock}
 
-By default, you get connected to a reserved schema called NETEZZA_SCHEMA.
+By default, you get connected to a reserved schema called **NETEZZA_SCHEMA**.
 
 Output:
 
@@ -81,7 +82,7 @@ MYLAKE   | TEST                                       | ADMIN
 ```
 {: codeblock}
 
-## 4. From your metastore schemas list, set the schema you want to connect to. Run:
+## 4. From your schemas list, set the schema you want to connect to.
 {: #setschdlh}
 
 ```sql
@@ -90,7 +91,7 @@ SET SCHEMA
 ```
 {: codeblock}
 
-You can also query by using a full path select * from mydb.myschema.mytable)**
+You can also query your data by using a full path **SELECT * from mydb.myschema.mytable**.
 
 ## 5. Show the table.
 {: #showtabledlh}
@@ -111,7 +112,7 @@ MYLAKE   | TAXIDATA | YELLOW_TAXI_JANUARY_2021 | DATALAKE TABLE | ADMIN
 ```
 {: codeblock}
 
-## 6. Select * from the YELLOW_TAXI_TABLE table.
+## 6. **Select * from** the required table.
 {: #selectdlh_table}
 
 ```sql
