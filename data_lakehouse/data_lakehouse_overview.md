@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-06-22"
 
 keywords: netezza data lakehouse, metastore
 subcollection: netezza
@@ -23,7 +23,7 @@ subcollection: netezza
 # Overview
 {: #overview_datalakehouse}
 
-With {{site.data.keyword.netezza_full}} data lakehouse you can connect to the Hive Metastore (HMS) which is a datalake metastore server and query from Apache Iceberg and Hive tables that live on your data lake S3 object store.
+With {{site.data.keyword.netezza_full}} data lakehouse you can connect to the Hive Metastore (HMS) which is a datalake metastore server and query from Apache Iceberg that live on your data lake S3 object store.
 
 In technology preview, the following functionalities and data types are supported:
 
