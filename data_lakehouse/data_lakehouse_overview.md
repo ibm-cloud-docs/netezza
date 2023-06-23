@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-06-22"
+lastupdated: "2023-06-23"
 
 keywords: netezza data lakehouse, metastore
 subcollection: netezza
@@ -23,33 +23,29 @@ subcollection: netezza
 # Overview
 {: #overview_datalakehouse}
 
-With {{site.data.keyword.netezza_full}} data lakehouse you can connect to the Hive Metastore (HMS) which is a datalake metastore server and query from Apache Iceberg that live on your data lake S3 object store.
+With {{site.data.keyword.netezza_full}} data lakehouse you can connect to the Hive Metastore (HMS) which is a datalake metastore server and query from Apache Iceberg tables that live on your data lake S3 object store.
 
-In technology preview, the following functionalities and data types are supported:
+In technology preview:
 
-- Apache Iceberg tables with the `parquet` file format
-- `readonly` **SELECT**
-- `boolean`
-- `int`
-- `long`
-- `float`
-- `double`
-- `decimal`
-- `date`
-- `timestamp`
-- `string`
-
-## Data lakehouse limitations
-{: #datalakehouse_limitations}
-
-In technology preview, the following functionalities and data types are not supported:
-
-- reading Apache Iceberg tables that were previously deleted from or altered
-- **UPDATE**
-- schema evolution
-- `time`
-- `timestamptz`
-- `uuid`
+- You must use Apache Iceberg tables with the `parquet` file format.
+- Your queries are limited to **SELECT** operations.
+- Iceberg tables cannot be read if they were altered and underwent Iceberg schema evolution.
+- The following datatypes are supported:
+  - `boolean`
+  - `int`
+  - `long`
+  - `float`
+  - `double`
+  - `decimal`
+  - `date`
+  - `timestamp`
+  - `string`
+- The following datatypes are not supported:
+  - `timestamptz`
+  - `uuid`
+  - `struct`
+  - `list`
+  - `map`
 
 Use cases for data lakehouse include:
 

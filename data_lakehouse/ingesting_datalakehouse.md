@@ -40,7 +40,7 @@ MYLAKE.TAXIDATA(ADMIN)=> \c system
 ```
 {: codeblock}
 
-You are now connected to database system.
+You are now connected to database system. **DRAFT COMMENT: \c system in the command to be changed per Mike DeRoy.**  
 
 ## 2. Run a CTAS query with a cross database select on the datalake database.schema.table.
 {: #runctas_dlh}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-06-23"
 
 keywords: netezza data lakehouse, data lake, querying data, connecting to a metastore
 subcollection: netezza
@@ -39,17 +39,15 @@ External datasources allow an administrator to grant access to S3 without provid
 Example:
 
 ```sql
-SYSTEM.ADMIN(ADMIN)=> create database mylake with metastoreuri 'thrift://mymetastoreserverhostname:9083' catalogtype 'hive' on awss3 using ( ACCESSKEYID 'xxxx' SECRETACCESSKEY 'xxxx' BUCKET 'concerto-bnr-test' REGION 'us-east-1');
+SYSTEM.ADMIN(ADMIN)=> create database mylake with metastoreuri 'thrift://mymetastoreserverhostname:9083' catalogtype 'hive' on awss3 using ( ACCESSKEYID 'xxxx' SECRETACCESSKEY 'xxxx' BUCKET 'example-bucket' REGION 'us-east-1');
+NOTICE:  589 tables from the datalake are available in MYLAKE
 ```
 {: codeblock}
-
-You can see there are 589 tables from the data lake available in **mylake**.
 
 ## 2. Connect to the database.
 {: #connectdlh_database}
 
 ```sql
-CREATE DATABASE
 SYSTEM.ADMIN(ADMIN)=> \c mylake
 ```
 {: codeblock}
@@ -93,8 +91,8 @@ SET SCHEMA
 
 You can also query your data by using a full path **SELECT * from mydb.myschema.mytable**.
 
-## 5. Show the table.
-{: #showtabledlh}
+## 5. List the available tables.
+{: #listtabledlh}
 
 ```sql
 MYLAKE.TAXIDATA(ADMIN)=> show table;
