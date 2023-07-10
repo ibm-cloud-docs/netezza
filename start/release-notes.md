@@ -23,7 +23,7 @@ subcollection: netezza
 {: #my-service-relnotes}
 
 ## July 2023
-{: #june2023}
+{: #july12023}
 
 ### New features and enhancements
 {: #nfjune2023}
