@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-04-20"
 
 keywords: connecting, private endpoints
 
@@ -20,73 +20,58 @@ subcollection: netezza
 {:pre: .pre}
 {:caption: .caption}
 
-# Connecting to {{site.data.keyword.netezza_short}} by using private endpoints
-{: #connecting-private-endpoints}
+# Connecting to {{site.data.keyword.netezza_short}} on Azure by using private endpoints
+{: #connecting-azure}
 
-If you want to connect to {{site.data.keyword.netezza_short}} by using private endpoints, two [private link services](https://learn.microsoft.com/en-us/azure/private-link/private-link-service-overview) are created.  
+To connect to your {{site.data.keyword.netezza_short}} on Azure by using [Azure PrivateLink](https://learn.microsoft.com/en-us/azure/private-link/private-link-service-overview)), you must create [private endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) in your Azure subscriptions.
 
-To connect to your instance by using these private link services, you must create [private endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) in your Azure subscriptions.
-
-With these private endpoints, you can connect to:
+With these private endpoints, you can connect to the following components:
 
 - Your {{site.data.keyword.netezza_short}} database on port 5480, and the API server on port 443.
 - The web console on port 443.
 
-## Creating private endpoints
-{: #create_private_endpoints}
+1. Get subscription IDs.
 
-Learn how to create [private endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) in your Azure subscriptions.
+   When you create your private endpoint connection, the private link service must approve the request. Your request is approved automatically if you provide the subscription IDs in which they are to be created.
 
-### 1. Get subscription IDs.
-{: #providing-subscription-ids}
+   ![Providing subscription IDs](../images/conn_wc_d.png){: caption="Image 1. Ways to provide subscription IDs." caption-side="bottom"}
 
-When you create your private endpoint connection, the private link service must approve the request. Your request is approved automatically if you provide the subscription IDs in which they are to be created.
+   There are two ways in which you can provide the subscription IDs:  
 
-There are two ways in which you can provide the subscription IDs:
+   - **At deployment**  
 
-- At deployment
-- In the web console
+      If you deployed your instance with private endpoints only, you must have provided your subscription IDs [during provisioning](/docs/netezza?topic=netezza-getstarted), in step 9. Configure advanced features.  
 
-![Providing subscription IDs](../images/conn_wc_d.png){: caption="Image 1. Ways to provide subscription IDs." caption-side="bottom"}
+      ![Connecting to {{site.data.keyword.netezza_short}}](../images/connecting2.png){: caption="Image 2. Configure advanced features during provisioning." caption-side="bottom"}
 
-#### Providing subscription IDs at deployment
-{: #subscription-ids-deployment}
+   - **In the web console**
 
-You can provide the subscription IDs as input during provisioning, in the **Configure advanced feature** section.
+      If you deployed your instance with public and private endpoints, log in to the web console by using the public endpoint and set up the private link service on the **Private Link** page.  
 
-If you deploy your {{site.data.keyword.netezza_short}} instance with both private and public endpoints, you do not have to provide subscription IDs.
-If you deploy only with a private endpoint, you must provide subscription IDs.
-{: note}
+      1. Log in to the web console.  
 
-![Connecting to {{site.data.keyword.netezza_short}}](../images/connecting2.png){: caption="Image 2. The Configure advanced feature section of the IBM Cloud page." caption-side="bottom"}
+         1. [Retrieve information about endpoints to log in to the web console](/docs/netezza?topic=netezza-next-endpoints)
+         1. [Generate credentials to log in](/docs/netezza?topic=netezza-generate-credentials).
 
-#### Providing subscription IDs in the web console
-{: #subscription-ids-webconsole}
+      1. Go to **Administration > Settings > Private Link** and click **Create Private Link**.
+      1. Provide the subscription IDs that you want to use to set up the private endpoints in your Azure account.  
 
-If you deployed your instance with public and private endpoints, log in to the web console by using the public endpoint and set up the private link service on the **Private Link** page.  
+      Use the **Private Link** page to update subscription IDs after private link is created.
+      {: tip}
 
-1. Go to **Administration > Settings > Private Link** and click **Create Private Link**.
-1. Provide the subscription IDs which you want to use to set up the private endpoints in your Azure account.
+1. Get resource ID or alias.  
+   You can get the resource ID or alias in one of the following ways:
 
-Use the **Private Link** page to update subscription IDs after private link is created.
-{: tip}
+   - By going to **Private endpoints > Service instance details** page for the instance in the IBM Cloud dashboard.
+   - By going to **Administration > Settings > Private Link** in the web console.
 
-### 2. Get resource ID or alias.
-{: #getting-resourceid-alias}
+1. Create private endpoints.
 
-You can get the resource ID or alias in one of the following ways:
+   Follow the instructions described in [Create a private endpoint](https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-portal?tabs=dynamic-ip#create-a-private-endpoint).  
 
-- By going to **Private endpoints > Service instance details** page for the instance in the IBM Cloud dashboard.
-- By going to **Administration > Settings > Private Link** in the web console.
+   During Step 5, when you are in the _Resource_ pane, select **Connect to an Azure resource by resource ID or alias** and enter the resource ID or alias you retrieved in **2. Get resource ID or alias**.
 
-### 3. Create private endpoints.
-{: #create_private_link}
-
-Follow the instructions described in [Create a private endpoint](https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-portal?tabs=dynamic-ip#create-a-private-endpoint).  
-
-During Step 5, when you are in the _Resource_ pane, select **Connect to an Azure resource by resource ID or alias** and enter the resource ID or alias you retrieved in **2. Get resource ID or alias**.
-
-When the private endpoints are created, the status automatically changes to **Approved**. A private IP is assigned to each of your private endpoints. The IPs are displayed in Microsoft Azure Portal.
+   When the private endpoints are created, the status automatically changes to **Approved**. A private IP is assigned to each of your private endpoints. The IPs are displayed in Microsoft Azure Portal.
 
 ## Connecting to {{site.data.keyword.netezza_short}}
 {: #connecting_instance}
@@ -97,34 +82,22 @@ You can access the {{site.data.keyword.netezza_short}} instance by using the two
 
 - To connect to your {{site.data.keyword.netezza_short}} web console on port 443, you can use the IP address that is associated with the private endpoint that was created with the console resource ID or alias.  
 
-   To form the web console URL from the private endpoint IP address, append the CRN name to it.  
-   Example:  
-   `https://<private endpoint IP>/#/?crn=CRN_NAME`  
-   To get the CRN name, follow the steps:
+To form the web console URL from the private endpoint IP address, append the CRN name to it.  
 
-   1. Log in to your IBM Cloud account.
-   1. Go to **Resource list > Services and software**.
-   1. Select your {{site.data.keyword.netezza_short}} instance.  
-      The CRN name is displayed on the page.
+Example:  
+`https://<private endpoint IP>/#/?crn=CRN_NAME`  
+
+To get the CRN name, follow the steps:
+
+1. Log in to your IBM Cloud account.
+1. Go to **Resource list > Services and software**.
+1. Select your {{site.data.keyword.netezza_short}} instance.  
+   The CRN name is displayed on the page.
 
 - To connect to the {{site.data.keyword.netezza_short}} instance from on-prem by using the IP addresses or hostnames, you need to setup [VPN or Express Route](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/) from your on-prem network to the VNET in your subscription.
 
-## Assigning hostnames
-{: #assing_hostnames}
+See also:
 
-You can assign a hostname to the IP addresses from **3. Create private endpoints.** by following the steps.
-
-1. Log in to the web console.
-1. Go to **Administration > Settings > Private link**.
-1. Provide the IP address for each of the private endpoints that you created.  
-   The hostname or the URLS are displayed on the page now.
-1. Assign a hostname.
-
-## Retrieving database and web console details
-{: #retrieve_details}
-
-You can retrieve the database and web console URLs by following the steps.
-
-1. Log in to your IBM Cloud account.
-1. Go to **Private endpoints > Service instance details**.
-1. Select your instance.
+- [Assigning hostnames](/docs/netezza?topic=netezza-assing_hostnames)
+- [Retrieving information about endpoints for logging in](/docs/netezza?topic=netezza-next-endpoints)
+- [Generating credentials](/docs/netezza?topic=netezza-generate-credentials)

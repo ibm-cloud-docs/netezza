@@ -43,7 +43,7 @@ In this case, data is read from {{site.data.keyword.netezza_short}} through the 
 
 The following image illustrates the data flow {{site.data.keyword.netezza_short}} as a data source.
 
-![{{site.data.keyword.netezza_short}} as a data source](images/nzdatasource.png){: caption="Image 1. The diagram depicts how Kafka reads data from Netezza through the JDBC source connector and enables consumer apps to access it." caption-side="bottom"}
+![{{site.data.keyword.netezza_short}} as a data source](../images/nzdatasource.png){: caption="Image 1. The diagram depicts how Kafka reads data from Netezza through the JDBC source connector and enables consumer apps to access it." caption-side="bottom"}
 
 
 ## Using {{site.data.keyword.netezza_short}} as a data sink
@@ -58,7 +58,7 @@ After the data is processed, it is stored on {{site.data.keyword.netezza_short}}
 The following image illustrates the data flow for {{site.data.keyword.netezza_short}} as a data sink.
 
 
-![{{site.data.keyword.netezza_short}} as a data sink](images/nzsink.png){: caption="Image 2. The diagram depicts how incoming data from various producers is streamed and computed by Kafka through the JDBC driver and stored on Netezza." caption-side="bottom"}
+![{{site.data.keyword.netezza_short}} as a data sink](../images/nzsink.png){: caption="Image 2. The diagram depicts how incoming data from various producers is streamed and computed by Kafka through the JDBC driver and stored on Netezza." caption-side="bottom"}
 
 
 ## Integrating {{site.data.keyword.netezza_short}} and Kafka

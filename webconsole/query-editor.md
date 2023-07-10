@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-05-30"
 
 keywords: web console, query editor, SQL
 
@@ -32,6 +32,10 @@ If you do not pick a schema, the default database schema is selected.
 
 1. Type the SQL query that you want to run.  
 If your query is a select statement, a Set Limit option shows up to allow you to specify how many rows of data you would like to retrieve. The default is No limit.
+
+   In the **Worksheet settings** you can specify your **Default maximum number of rows limit in result**. If you decide, however, to add a limit clause in a select statement that is greater than your **Default maximum number of rows limit in result**, for example: `select * from table1 limit 10;`, the **Results** field shows the smaller value of these two parameters.
+
+   In the **Worksheet settings** you can also specify the **Statement separator** you want to use. A semicolon (";") is the default **Statement separator** and you must change it to an ampersand ("&") when your queries contain semicolons (";") to avoid errors.    
 
 1. When you input the information, you can do one of the following:
 

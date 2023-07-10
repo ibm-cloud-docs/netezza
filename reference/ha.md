@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-05-23"
 
 keywords: HA for Netezza Performance Server, high availability for Netezza Performance Server, HA
 
@@ -23,9 +23,8 @@ subcollection: netezza
 # Understanding high availability for {{site.data.keyword.netezza_short}}
 {: #ha}
 
-{{site.data.keyword.netezza_full}} leverages OpenShift to recover from node failures. It has a built-in self-healing mechanisms to recover from compute node (SPU) failures. It uses highly reliable storage (IBM Block Storage, Azure Premium SSD and others) for user data, and Cloud Object Storage (COS) for backups and staging.
-Netezza service however is zonal service. If the zone goes down, service will come up in another zone and then the user data needs to be restored after the service comes online.
-More details can be found [here](/docs/netezza?topic=netezza-understanding-bc-dr).
+{{site.data.keyword.netezza_full}} leverages OpenShift to recover from node failures. It has a built-in self-healing mechanisms to recover from compute node (SPU) failures. It uses highly reliable storage provided by hyperscalers for user data, Cloud Object Storage (COS) for staging and snapshot service for backups for BCDR.
+Netezza service however is a zonal service. If the zone goes down, the service will come up in another zone and then the user data needs to be restored after the service comes online. More details can be found [here](/docs/netezza?topic=netezza-understanding-bc-dr).
 {: shortdesc}
 
 ## Responsibilities

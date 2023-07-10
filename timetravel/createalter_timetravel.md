@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-05-26"
 
 keywords: netezza time travel, enabling time travel on netezza, creating tables, creating schemas, creating databases, altering schemas, altering databases, altering tables, time travel objects, retention time interval, create tables, create schemas, create databases, alter schemas, alter databases, alter tables,
 
@@ -21,6 +21,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 {:codeblock: .codeblock}
+{:note: .note}
 
 # Creating and altering objects for time travel
 {: #enablingdisabling_tt}
@@ -28,7 +29,7 @@ subcollection: netezza
 ## Overview
 {: #introtott}
 
-To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, schema, or database (time travel objects) by setting **DATA_VERSION_RETENTION_TIME** (retention time interval) to a nonzero value. To set **DATA_VERSION_RETENTION_TIME**, use the **CREATE** or **ALTER** command for these object types. You can select between 1 day and up to 99 days, or zero to alter a temporal object to nontemporal.
+To run time travel queries on {{site.data.keyword.netezza_short}}, create a time travel table, schema, or database (time travel objects) by setting **DATA_VERSION_RETENTION_TIME** (retention time interval) to a nonzero value. To set **DATA_VERSION_RETENTION_TIME**, use the **CREATE** or **ALTER** command for these object types or use the web console. You can select between 1 day and up to 99 days, or zero to alter a temporal object to nontemporal.
 
 Before you set the retention time intervals for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](/docs/netezza?topic=netezza-managing_tt).
 {: important}
@@ -70,10 +71,10 @@ This limitation affects the following commands:
 
 The [**GROOM TABLE VERSIONS**](https://www.ibm.com/docs/en/netezza?topic=npsscr-groom-table-2) command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
 
-## Creating time travel objects
+## Creating time travel objects with the command-line
 {: #temporaltables_tt}
 
-### Creating temporal tables
+### Creating temporal tables with the command-line
 {: #creatingtemporaltables_tt}
 
 To create a temporal table, set **DATA_VERSION_RETENTION_TIME** to a nonzero value.
@@ -96,7 +97,7 @@ When you insert a row into the table, the row receives a virtual insert timestam
 
 When you delete a row from the table, the row receives a virtual delete timestamp that is equal to the commit time of the deleting (or truncating) transaction.
 
-### Creating temporal schemas
+### Creating temporal schemas with the command-line
 {: #createschemas_tt}
 
 To create a temporal schema, set **DATA_VERSION_RETENTION_TIME** to a nonzero value.
@@ -115,7 +116,7 @@ CREATE SCHEMA SCHEMA1 DATA_VERSION_RETENTION_TIME 30;
 ```
 {: codeblock}
 
-### Creating temporal databases
+### Creating temporal databases with the command-line
 {: #createdb_tt}
 
 To create a temporal database, set **DATA_VERSION_RETENTION_TIME** to a nonzero value.
@@ -134,10 +135,44 @@ CREATE DATABASE DB1 DATA_VERSION_RETENTION_TIME 30;
 ```
 {: codeblock}
 
-## Altering time travel objects
+## Creating time travel objects with the web console
+{: #temporaltables_wc_tt}
+
+### Creating temporal tables with the web console
+{: #creatingtemporaltables_wc_tt}
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Create a temporal table as described in [Creating tables](/docs/netezza?topic=netezza-create-tables#creating-tables).
+
+You must set **retention time interval** to a nonzero value.
+
+Databases, schemas, and table names containing a dot character (".") do not show in the time travel statistics and graphs when you set the **retention time interval** to a nonzero value. When you do not set the **retention time interval**, all special characters are supported.
+{: note}
+
+When you insert a row into the table, the row receives a virtual insert timestamp that is equal to the commit time of the inserting transaction.
+
+When you delete a row from the table, the row receives a virtual delete timestamp that is equal to the commit time of the deleting (or truncating) transaction.
+
+### Creating temporal schemas with the web console
+{: #createschemas_wc_tt}
+
+To create a temporal schema, set **retention time interval** to a nonzero value.
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Create a temporal schema as described in [Creating schemas](/docs/netezza?topic=netezza-create-schemas).
+
+### Creating temporal databases with the command-line
+{: #createdb_wc_tt}
+
+To create a temporal database, set **retention time interval** to a nonzero value.
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Create a temporal database as described in [Creating databases](/docs/netezza?topic=netezza-create-db).
+
+## Altering time travel objects with the command-line
 {: #alteringobjects_tt}
 
-### Altering temporal tables to nontemporal
+### Altering temporal tables to nontemporal with the command-line
 {: #droppingtemporal_tt}
 
 To alter a temporal table to nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
@@ -158,7 +193,7 @@ ALTER TABLE PRODUCT DATA_VERSION_RETENTION_TIME 0;
 
 When you set **DATA_VERSION_RETENTION_TIME** to 0, you cannot run time travel queries and you do not have access to historical rows for that table anymore. You can reclaim some or all of the now inaccessible historical rows in the table with **GROOM TABLE**.
 
-### Altering nontemporal tables to temporal
+### Altering nontemporal tables to temporal with the command-line
 {: #convertingtemporal_tt}
 
 To alter a nontemporal table to temporal, set **DATA_VERSION_RETENTION_TIME**] to a nonzero value.
@@ -184,7 +219,7 @@ As with the **CREATE TABLE** command, a row that is inserted into the table rece
 
 Unlike the **CREATE TABLE** command, which does not have any existing rows, existing visible rows in the table are treated as if they were inserted by this **ALTER TABLE** transaction. The existing visible rows receive virtual insert timestamps that are equal to the retention start time. With these timestamps, the rows are potentially visible to time travel queries.
 
-### Altering temporal schemas to nontemporal
+### Altering temporal schemas to nontemporal with the command-line
 {: #alterschematemporal_tt}
 
 To alter a temporal schema to nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
@@ -203,7 +238,7 @@ ALTER SCHEMA SCHEMA DATA_VERSION_RETENTION_TIME 0 NOCASCADE;
 ```
 {: codeblock}
 
-### Altering nontemporal schemas to temporal
+### Altering nontemporal schemas to temporal with the command-line
 {: #alterschematemporalnon_tt}
 
 To alter a nontemporal schema to temporal, set **DATA_VERSION_RETENTION_TIME** to a nonzero value.
@@ -222,7 +257,7 @@ ALTER SCHEMA DB1 DATA_VERSION_RETENTION_TIME 30 NOCASCADE;
 ```
 {: codeblock}
 
-### Altering temporal databases to nontemporal
+### Altering temporal databases to nontemporal with the command-line
 {: #alterdbtemporal_tt}
 
 To alter a temporal database to nontemporal, set **DATA_VERSION_RETENTION_TIME** to 0.
@@ -241,7 +276,7 @@ ALTER DATABASE DB1 DATA_VERSION_RETENTION_TIME 0 NOCASCADE;
 ```
 {: codeblock}
 
-### Altering nontemporal databases to temporal
+### Altering nontemporal databases to temporal with the command-line
 {: #alterdbtemporalnon_tt}
 
 To alter a nontemporal database to temporal, set **DATA_VERSION_RETENTION_TIME** to a nonzero value.
@@ -259,6 +294,66 @@ Example:
 ALTER DATABASE DB1 DATA_VERSION_RETENTION_TIME 30 NOCASCADE;
 ```
 {: codeblock}
+
+## Altering time travel objects with the web console
+{: #alteringobjects_wc_tt}
+
+### Altering temporal tables to nontemporal with the web console
+{: #droppingtemporal_tt}
+
+To alter a temporal table to nontemporal, set **retention time interval** to 0.
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for tables](/docs/netezza?topic=netezza-create-tables#updating_retention_db).
+
+When you set **retention time interval** to 0, you cannot run time travel queries and you do not have access to historical rows for that table anymore. You can reclaim some or all of the now inaccessible historical rows in the table with **GROOM TABLE**.
+
+### Altering nontemporal tables to temporal with the web console
+{: #convertingtemporal_wc_tt}
+
+To alter a nontemporal table to temporal, set **retention time interval** to a nonzero value.
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for tables](/docs/netezza?topic=netezza-create-tables#updating_retention_db).
+
+If you first disabled your temporal table and then converted the same table to a temporal table, you do not have access to the prior historical rows for that table. Historical data is collected when rows are deleted or updated after the table is converted to temporal.
+{: important}
+
+Similarly to when you create a table, a row that is inserted into the table receives a virtual insert timestamp that is equal to the commit time of the inserting transaction. A row that is deleted from the table receives a virtual delete timestamp that is equal to the commit time of the deleting (or truncating) transaction. The table’s retention lower bound and retention start time are equal to or just before the commit time of this altering transaction.
+
+Unlike when you create a table, existing visible rows in the table are treated as if they were inserted by this altering transaction. The existing visible rows receive virtual insert timestamps that are equal to the retention start time. With these timestamps, the rows are potentially visible to time travel queries.
+
+### Altering temporal schemas to nontemporal with the web console
+{: #alterschematemporal_wc_tt}
+
+To alter a temporal schema to nontemporal, set **retention time interval** to 0.
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for schemas](/docs/netezza?topic=netezza-create-schemas#updating_rt_sch).
+
+### Altering nontemporal schemas to temporal with the web console
+{: #alterschematemporalnon_wc_tt}
+
+To alter a nontemporal schema to temporal, set **retention time interval** to a nonzero value.
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for schemas](/docs/netezza?topic=netezza-create-schemas#updating_rt_sch).
+
+### Altering temporal databases to nontemporal with the web console
+{: #alterdbtemporal_wc_tt}
+
+To alter a temporal database to nontemporal, set **retention time interval** to 0.
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for databases](/docs/netezza?topic=netezza-databases#updating_retention_db).
+
+### Altering nontemporal databases to temporal with the web console
+{: #alterdbtemporalnon_wc_tt}
+
+To alter a nontemporal database to temporal, set **retention time interval** to a nonzero value.
+
+1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Alter your table as described in [Updating retention time interval for databases](/docs/netezza?topic=netezza-databases#updating_retention_db).
 
 ## What to do next
 {: #next_tt}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-06-09"
 
 keywords: Netezza Performance Server frequently asked questions, signing up for Netezza Performance Server, generating credentials for Netezza Performance Server instance,
 
@@ -27,23 +27,47 @@ This is a collection of frequently asked questions (FAQ) about the {{site.data.k
 {: faq}
 {: support}
 
-You can [create a free IBM Cloud account](https://cloud.ibm.com/registration?target=%2Fcatalog%2Fservices%2Fdb2-warehouse).
-Once you have the account, you can provision an instance of {{site.data.keyword.netezza_short}} directly through the IBM Cloud® catalog.
+[Create a free IBM Cloud account](https://cloud.ibm.com/registration?target=%2Fcatalog%2Fservices%2Fdb2-warehouse).
+When you have the account, you can provision a {{site.data.keyword.netezza_short}} instance directly through the IBM Cloud® catalog.  
+For more information, see [Getting started with {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-getstarted).
 
-## How do I generate credentials for my instance?
+## How do I generate or view credentials for my {{site.data.keyword.netezza_short}} instance?
 {: #generating-credentials}
 {: faq}
 {: support}
 
-1. Log into [IBM Cloud](https://cloud.ibm.com/).
-1. Open your [Resource list](https://cloud.ibm.com/resources).
-1. Under **Services and Software**, locate your {{site.data.keyword.netezza_short}} instance and click on the service name.
-1. Select **Service credentials > New credentials+ > Add** to generate your API.
+To generate credentials, follow the steps: 
 
-   You need the API key to connect to the instance.
+1. Log in to [IBM Cloud](https://cloud.ibm.com/) account.
+1. Go to **Resource list > Services and Software > Databases**.
+1. Click on your {{site.data.keyword.netezza_short}} instance.  
+   You are now on the Service instance details page.
+1. Go to the **Service Credentials** tab.
+1. Click **New Credentials**.
+1. Type a name to assing to your credentials.
+1. Select the IAM role that was assigned to you to manage the instance.
+1. Click **Add**.  
+   If your credentials were generated successfully, you can view them now.
+   Expand your credential entry. The following credentials were generated:
 
-1. Expand **View credentials**, which displays your service connectivity information.
-1. You can use the API key to connect to both {{site.data.keyword.netezza_short}} and the web console.
+   - `username: admin` - Specifies a local database admin user that was created for you to access the instance.
+   - `password: xxxx` - Specifies the password that you must use when logging in to your instance as admin.
+
+   After you log in to your instance for the first time, change your admin password.
+
+To view credentials, follow the steps:
+
+1. Log in to [IBM Cloud](https://cloud.ibm.com/) account.
+1. Go to **Resource list > Services and Software > Databases**.
+1. Click on your {{site.data.keyword.netezza_short}} instance.  
+   You are now on the Service instance details page.
+1. Go to the **Service Credentials** tab.
+1. Expand the credential entry that is associated with the credentials that you generated previously.
+
+   - `username: admin` - Specifies a local database admin user that was created for you to access the instance.
+   - `password: xxxx` - Specifies the password that you must use when logging in to your instance as admin.
+
+   After you log in to your instance for the first time, change your admin password.
 
 ## Now that I've generated credentials, how do I access my {{site.data.keyword.netezza_short}} instance?
 {: #accessing-instance}
@@ -52,7 +76,13 @@ Once you have the account, you can provision an instance of {{site.data.keyword.
 
 You can access your {{site.data.keyword.netezza_short}} instance several ways, including a dedicated web console and a REST API.
 
-For more information, see [Endpoints](/docs/netezza?topic=netezza-endpoints) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting&interface=ui).
+For more information, see [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
+
+## Can I set up spending notifications for my {{site.data.keyword.netezza_short}} instance to keep track of my credit usage?
+{: #spending_notifs}
+
+If you have an IBM Cloud® Pay-As-You-Go or Subscription account, you can set up email spending notifications. After your account is configured, you can configure spending thresholds and choose to receive notifications when you reach 80%, 90%, and 100% of the thresholds.  
+For more information, see [Setting spending notifications](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-spending&interface=ui)
 
 ## What's managed for me with {{site.data.keyword.netezza_short}}?
 {: #whats-managed}
