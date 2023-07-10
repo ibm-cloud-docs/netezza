@@ -20,8 +20,10 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Creating tables
+# Tables
 {: #create-tables}
+
+In the table from the **Tables** tab, the value that is displayed in the row count column is an approximate. The exact row count is available after you run the `GENERATE STATISTICS ON <table_name>` command. 
 
 ## Creating tables
 {: #creating-tables}
@@ -32,9 +34,10 @@ subcollection: netezza
 1. Ensure that you are in the **DB Objects > Tables** tab.
 1. Click **Create table**.
 1. Type a name for the table.  
-   If the name contains special characters, enclose it in double quotation marks.  
+   If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.  
    You can select a name that has up to 128 characters. The name must begin with a letter or an underscore and can't contain embedded spaces. The name must be unique.
-1. Specify the retention time interval (in days) for the table.
+1. Optional: Specify the retention time interval (in days) for the table.  
+   You can select between 1 day and up to 99 days, or zero to alter a temporal table to nontemporal.
 1. Add columns to the table:
 
    1. In the **Columns** section, under **Name**, type a name for the column.
@@ -51,7 +54,7 @@ subcollection: netezza
 
 1. Click **Create**.
 
-## Column and table constraints
+### Column and table constraints
 {: #constraints-table-column}
 
 When you create a table, you can specify constraints for a column, table, or both.
@@ -110,3 +113,55 @@ You can choose different modes when you groom tables.
 |PAGES START | Identifies and marks the leading data pages in the table with no visible record as Empty. Stops when it finds a non-empty data page.|
 |VERSIONS | Migrates records from previous table versions. Dropped columns do not appear and added columns show default values.|
 {: caption="Table 1. The table lists modes-related values and their definitions." caption-side="bottom"}
+
+## Assigning owners to tables
+{: #assigning_tbl}
+
+1. Go to **Databases**.
+1. Select the database and schema in which the table that you want to update is.
+1. Select the table for which you want to assign an owner.
+1. From the overflow menu, click **Assign owner**.
+1. Select an owner for the table.  
+1. Click **Assign**.
+
+## Renaming tables
+{: #renaming_tbls}
+
+1. Go to **Databases**.
+1. Select the database and schema in which the table that you want to rename is.
+1. From the overflow menu, click **Rename**.
+1. Type a new name for the table.  
+   If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.
+1. Click **Rename**.
+
+## Updating retention time interval (time travel) for tables
+{: #updating_retention_db}
+
+1. Go to **Databases**.
+1. Select the database and schema in which the table that you want to update is.
+1. Select the table.
+1. From the overflow menu, click **Update interval**.
+1. Type a retention time interval.  
+   You can select between 1 day and up to 99 days, or zero to alter a temporal database to nontemporal. 
+   For more information on retention time interval and time travel, see [{{site.data.keyword.netezza_short}} time travel](/docs/netezza?topic=netezza-enablingdisabling_tt).
+1. Click **Save**.
+
+## Dropping tables
+{: #dropping_db}
+
+1. Go to **Databases**.
+1. Select the database and schema in which the table that you want to update is.
+1. Select the table.
+1. From the overflow menu, click **Drop**.  
+1. Confirm your choice by clicking **Drop**.
+
+## Viewing space usage (time travel)
+{: #viewing_spaceusagett}
+
+1. Go to **Databases**.
+1. Select the database and schema in which the temporal table that you want to analyze is located.
+1. Select the table.
+1. Go to the **Time travel** tab.
+1. Analyze the data.  
+   You can view the information in a list or as a chart.
+   

@@ -35,7 +35,6 @@ toc:
               label: Databases
               topics: 
               - webconsole/databases.md
-              - webconsole/creating_dbs.md
               - webconsole/creating_schemas.md
               - webconsole/creating_tables.md
               - webconsole/creating_views.md

@@ -20,8 +20,11 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Creating sequences
+# Sequences
 {: #create-sequences}
+
+## Creating sequences
+{: #creating_sq}
 
 1. Go to **Databases**
 1. Select the database in which you want to create a sequence.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-05-25"
 
 keywords: web console, netezza web console, ui
 
@@ -20,7 +20,10 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Creating aggregates
+# Aggregates
 {: #create-aggregates}
+
+## Creating aggregates
+{: #creating_agg}
 
 You cannot create aggregates with the web console. Instead, use the [CREATE {OR REPLACE} AGGREGATE](https://www.ibm.com/docs/en/netezza?topic=npssr-create-replace-aggregate-2) command.
