@@ -4,7 +4,7 @@ copyright:
   years:  2023
 lastupdated: "2023-07-23"
 
-keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data,
+keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data, watsonx.data witn nps
 subcollection: netezza
 
 ---
