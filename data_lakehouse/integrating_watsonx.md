@@ -9,7 +9,7 @@ subcollection: netezza
 
 ---
 
-new_window: target="_blank"}
+{new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
