@@ -35,8 +35,8 @@ Ensure that you obtained the IBM API key by following the steps:
 2. Click on IBM IAM.
 3. Create a service ID.
 4. Assign access.
-   - a. Select metastore.
-   - b. administrative priv. **draft comment: not sure what that is? A button in the UI?**
+   a. Select metastore.
+   b. administrative priv. **draft comment: not sure what that is? A button in the UI?**
 5. Create an API key.
 
 ## Run the following `nz` command on {{site.data.keyword.netezza_short}} instance or remote client by using `nzcli`.
