@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-07-23"
 
 keywords: data lakehouse, netezza data lakehouse, querying data, merging data
 subcollection: netezza
@@ -29,7 +29,7 @@ Learn how to query and merge data from a {{site.data.keyword.netezza_short}} tab
 ## Before you begin
 {: #prereqsdlh3}
 
-In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
+In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
 
 ## Run a cross database query with the table in the datalake database.
 {: #runcdqdlh}
@@ -39,7 +39,7 @@ In the examples, the publicly available [*New York taxi trip* record data](https
    Example:
 
    ```sql
-   SYSTEM.ADMIN(ADMIN)=> select ( select sum(PASSENGER_COUNT) from YELLOW_TAXI_JANUARY_2022_LOADED) as "passengers 2022",( select sum(PASSENGER_COUNT) from MYLAKE.TAXIDATA.YELLOW_TAXI_JANUARY_2021) as "passengers 2021";
+   LOCALDB.ADMIN(ADMIN)=> select ( select sum(PASSENGER_COUNT) from YELLOW_TAXI_JANUARY_2022_LOADED) as "passengers 2022",( select sum(PASSENGER_COUNT) from MYLAKE.TAXIDATA.YELLOW_TAXI_JANUARY_2021) as "passengers 2021";
    ```
    {: codeblock}
 
@@ -61,7 +61,7 @@ In the examples, the publicly available [*New York taxi trip* record data](https
    Example:
 
    ```sql
-   SYSTEM.ADMIN(ADMIN)=> select(select sum(PASSENGER_COUNT) from YELLOW_TAXI_JANUARY_2022_LOADED where TPEP_PICKUP_DATETIME::time > '1:00am' and TPEP_PICKUP_DATETIME::time < '6:00am') as "overnight passengers 2022", (select sum(PASSENGER_COUNT) from MYLAKE.TAXIDATA.YELLOW_TAXI_JANUARY_2021 where TPEP_PICKUP_DATETIME::time > '1:00am' and TPEP_PICKUP_DATETIME::time < '6:00am') as "overnight passengers 2021";
+   LOCALDB.ADMIN(ADMIN)=> select(select sum(PASSENGER_COUNT) from YELLOW_TAXI_JANUARY_2022_LOADED where TPEP_PICKUP_DATETIME::time > '1:00am' and TPEP_PICKUP_DATETIME::time < '6:00am') as "overnight passengers 2022", (select sum(PASSENGER_COUNT) from MYLAKE.TAXIDATA.YELLOW_TAXI_JANUARY_2021 where TPEP_PICKUP_DATETIME::time > '1:00am' and TPEP_PICKUP_DATETIME::time < '6:00am') as "overnight passengers 2021";
    ```
    {: codeblock}
 

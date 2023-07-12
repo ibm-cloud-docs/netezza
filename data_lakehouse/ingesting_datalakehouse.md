@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-07-23"
 
 keywords: data lakehouse, netezza data lakehouse, querying data, ingesting data
 subcollection: netezza
@@ -36,11 +36,11 @@ In the examples, the publicly available [*New York taxi trip* record data](https
 {: #connect_dlh}
 
 ```sql
-MYLAKE.TAXIDATA(ADMIN)=> \c system
+MYLAKE.TAXIDATA(ADMIN)=> \c localdb
 ```
 {: codeblock}
 
-You are now connected to database system. **DRAFT COMMENT: \c system in the command to be changed per Mike DeRoy.**  
+You are now connected to database localdb.
 
 ## 2. Run a CTAS query with a cross database select on the datalake database.schema.table.
 {: #runctas_dlh}
@@ -48,7 +48,7 @@ You are now connected to database system. **DRAFT COMMENT: \c system in the comm
 Example:
 
 ```sql
-SYSTEM.ADMIN(ADMIN)=> CREATE TABLE YELLOW_TAXI_JANUARY_2022_LOADED AS SELECT * FROM MYLAKE.TAXIDATA.YELLOW_TAXI_JANUARY_2022;
+LOCALDB.ADMIN(ADMIN)=> CREATE TABLE YELLOW_TAXI_JANUARY_2022_LOADED AS SELECT * FROM MYLAKE.TAXIDATA.YELLOW_TAXI_JANUARY_2022;
 INSERT 0 2463931
 ```
 {: codeblock}
