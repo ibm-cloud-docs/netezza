@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-23"
+lastupdated: "2023-07-23"
 
 keywords: netezza data lakehouse, data lake, querying data, connecting to a metastore
 subcollection: netezza
@@ -54,7 +54,7 @@ SYSTEM.ADMIN(ADMIN)=> \c mylake
 
 You are now connected to **mylake** database.
 
-## 3. Show schema.
+## 3. List the available schemas.
 {: #showschemadlh}
 
 ```sql

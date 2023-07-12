@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-06-23"
+lastupdated: "2023-07-23"
 
 keywords: netezza data lakehouse, metastore
 subcollection: netezza
@@ -30,16 +30,6 @@ In technology preview:
 - You must use Apache Iceberg tables with the `parquet` file format.
 - Your queries are limited to **SELECT** operations.
 - Iceberg tables cannot be read if they were altered and underwent Iceberg schema evolution.
-- The following datatypes are supported:
-  - `boolean`
-  - `int`
-  - `long`
-  - `float`
-  - `double`
-  - `decimal`
-  - `date`
-  - `timestamp`
-  - `string`
 - The following datatypes are not supported:
   - `timestamptz`
   - `uuid`
