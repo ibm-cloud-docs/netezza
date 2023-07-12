@@ -29,7 +29,7 @@ subcollection: netezza
 ## Before you begin
 {: #prereqsdlh1}
 
-In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
+In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into an Apache Iceberg table in the hive metastore server.
 
 ## 1. Create a database by using the required `metastoreuri`.
 {: #create_database}
@@ -39,7 +39,7 @@ External datasources allow an administrator to grant access to S3 without provid
 Example:
 
 ```sql
-SYSTEM.ADMIN(ADMIN)=> create database mylake with metastoreuri 'thrift://mymetastoreserverhostname:9083' catalogtype 'hive' on awss3 using ( ACCESSKEYID 'xxxx' SECRETACCESSKEY 'xxxx' BUCKET 'example-bucket' REGION 'us-east-1');
+LOCALDB.ADMIN(ADMIN)=> create database mylake with metastoreuri 'thrift://mymetastoreserverhostname:9083' catalogtype 'hive' on awss3 using ( ACCESSKEYID 'xxxx' SECRETACCESSKEY 'xxxx' BUCKET 'example-bucket' REGION 'us-east-1');
 NOTICE:  589 tables from the datalake are available in MYLAKE
 ```
 {: codeblock}
@@ -48,7 +48,7 @@ NOTICE:  589 tables from the datalake are available in MYLAKE
 {: #connectdlh_database}
 
 ```sql
-SYSTEM.ADMIN(ADMIN)=> \c mylake
+LOCALDB.ADMIN(ADMIN)=> \c mylake
 ```
 {: codeblock}
 

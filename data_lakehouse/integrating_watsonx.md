@@ -19,7 +19,6 @@ new_window: target="_blank"}
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
-{:tip: .tip}
 {:note: .note}
 
 # Integrating {{site.data.keyword.netezza_short}} with watsonx.data
