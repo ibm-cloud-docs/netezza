@@ -130,6 +130,7 @@ toc:
          - data_lakehouse/querying_datalakehouse.md
          - data_lakehouse/ingesting_datalakehouse.md
          - data_lakehouse/merging_datalakehouse.md
+         - data_lakehouse/integrating_watsonx.md
       - topicgroup:
          label: Time travel and historical data
          topics:
