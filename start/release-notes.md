@@ -40,7 +40,7 @@ Other available locations:
 ### Fixes
 {: #f1july2023}
 
-**DRAFT COMMENT: WIP**
+**DRAFT COMMENT: WIP** 
 
 ### Components
 {: #comps1july2023}
