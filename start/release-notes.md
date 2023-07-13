@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-11"
+lastupdated: "2023-07-13"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -21,6 +21,42 @@ subcollection: netezza
 
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
+
+## July 2023
+{: #july2023}
+
+### New features and enhancements
+{: #nf1july2023}
+
+- Technology preview support for **SELECT** operations from Apache Iceberg and Hive tables is available on {{site.data.keyword.netezza_short}} on AWS. Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.  
+For more information, see [Querying data from data lakehouse](/docs/netezza?topic=netezza-overview_datalakehouse).
+
+- Added a new availibility zone for {{site.data.keyword.netezza_short}} on AWS. Now, you can host your resources in the Frankfurt, Germany zone.    
+Other available locations: Northern Virginia, USA.
+
+### Fixes
+{: #f1july2023}
+
+**DRAFT COMMENT: WIP**
+
+### Components
+{: #comps1july2023}
+
+**DRAFT COMMENT: WIP**
+
+- {{site.data.keyword.netezza_short}} 11.2.2.8
+- Web console 4.0.15
+- Red Hat OpenShift Container Platform 4.10.54 **DRAFT COMMENT: As per the Slack thread**
+
+### Known issues
+{: #ki1july2023}
+
+**DRAFT COMMENT: As per the Slack thread**
+
+- Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization. **DRAFT COMMENT: Waiting to be confirmed. NEXTGEN-23966**
+- NEXTGEN-18753 **DRAFT COMMENT: TBD - looks like either to be fixed or a known issue**
+- NEXTGEN-18756 **DRAFT COMMENT: TBD - looks like fixed**
+
 
 ## July 2023
 {: #july12023}
