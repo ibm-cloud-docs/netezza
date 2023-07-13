@@ -32,7 +32,10 @@ subcollection: netezza
 For more information, see [Querying data from data lakehouse](/docs/netezza?topic=netezza-overview_datalakehouse).
 
 - Added a new availibility zone for {{site.data.keyword.netezza_short}} on AWS. Now, you can host your resources in the Frankfurt, Germany zone.    
-Other available locations: Northern Virginia, USA.
+Other available locations: 
+
+   - North America: Northern Virginia, Canada Central, Northern California.
+   - Asia Pacific: Tokyo, Seoul.
 
 ### Fixes
 {: #f1july2023}
