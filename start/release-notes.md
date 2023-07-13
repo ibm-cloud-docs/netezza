@@ -47,7 +47,7 @@ Other available locations:
 
 **DRAFT COMMENT: WIP**
 
-- {{site.data.keyword.netezza_short}} 11.2.2.8
+- {{site.data.keyword.netezza_short}} 11.2.2.8 
 - Web console 4.0.15
 - Red Hat OpenShift Container Platform 4.10.54 **DRAFT COMMENT: As per the Slack thread**
 
