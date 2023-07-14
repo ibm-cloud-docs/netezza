@@ -56,7 +56,7 @@ Other available locations:
 
 **DRAFT COMMENT: As per the Slack thread**
 
-- Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization. **DRAFT COMMENT: Waiting to be confirmed. NEXTGEN-23966**
+- Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization. 
 - NEXTGEN-18753 **DRAFT COMMENT: TBD - looks like either to be fixed or a known issue**
 - NEXTGEN-18756 **DRAFT COMMENT: TBD - looks like fixed**
 
