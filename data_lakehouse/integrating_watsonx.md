@@ -55,4 +55,4 @@ Where:
 - `--hms-user <user-name>` is the IBM IAM ID.
 - `--hms-token` is the IBM API key.
 
-After you registered to watsonx.data, you can follow the steps to create a remote database.
+After you registered to {{site.data.keyword.lakehouse_short}}, you can follow the steps to create a remote database.

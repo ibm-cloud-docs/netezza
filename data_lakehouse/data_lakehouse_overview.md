@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 
 # Overview
-{: #overview_datalakehouse}
+{: #overview_watsonx.data}
 
 With {{site.data.keyword.netezza_full}} and {{site.data.keyword.lakehouse_short}} you can connect to the Hive Metastore (HMS) which is a data lake metastore server and query from Apache Iceberg tables that live on your data lake S3 object store.
 
@@ -39,7 +39,7 @@ In technology preview:
 
 Use cases for {{site.data.keyword.lakehouse_short}} include:
 
-- [Integrating {{site.data.keyword.netezza_short}} with {{site.data.keyword.lakehouse_short}}].
+- [Integrating {{site.data.keyword.netezza_short}} with {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-integratenps_watsonx.data).
 - [Running queries against data that is stored in {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-querying_datalakehouse).
 - [Ingesting data from {{site.data.keyword.lakehouse_short}} into {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-ingest_datalakehouse).
 - [Querying both local and remote data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-merging_datalakehouse).

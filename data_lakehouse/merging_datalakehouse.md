@@ -22,7 +22,7 @@ subcollection: netezza
 {:note: .note}
 
 # Merging and querying data from {{site.data.keyword.lakehouse_short}}
-{: #merging_datalakehouse}
+{: #merging_watsonx.data}
 
 Learn how to query and merge data from a {{site.data.keyword.netezza_short}} and a data lake table.
 

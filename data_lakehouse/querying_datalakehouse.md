@@ -24,7 +24,7 @@ subcollection: netezza
 {:note: .note}
 
 # Querying data from {{site.data.keyword.lakehouse_short}}
-{: #querying_datalakehouse}
+{: #querying_watsonx.data}
 
 ## Before you begin
 {: #prereqsdlh1}

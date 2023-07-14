@@ -23,7 +23,7 @@ subcollection: netezza
 {:note: .note}
 
 # Ingesting data from {{site.data.keyword.lakehouse_short}}
-{: #ingest_datalakehouse}
+{: #ingest_watsonx.data}
 
 Learn how to ingest data into your local {{site.data.keyword.netezza_short}} table.
 

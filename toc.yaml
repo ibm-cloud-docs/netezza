@@ -124,7 +124,7 @@ toc:
              label: External tables
              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - topicgroup:
-         label: Querying data from {{site.data.keyword.lakehouse_short}}
+         label: Querying data from watsonx.data
          topics:
          - data_lakehouse/data_lakehouse_overview.md
          - data_lakehouse/integrating_watsonx.md
