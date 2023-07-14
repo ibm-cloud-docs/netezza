@@ -2,9 +2,9 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-23"
+lastupdated: "2023-07-14"
 
-keywords: netezza data lakehouse, data lake, querying data, connecting to a metastore
+keywords: netezza data lakehouse, data lake, querying data, connecting to a metastore, netezza watsonx.data
 subcollection: netezza
 
 ---
@@ -23,13 +23,13 @@ subcollection: netezza
 {:tip: .tip}
 {:note: .note}
 
-# Querying data from data lakehouse
+# Querying data from {{site.data.keyword.lakehouse_short}}
 {: #querying_datalakehouse}
 
 ## Before you begin
 {: #prereqsdlh1}
 
-In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into an Apache Iceberg table in the Hive Metastore server (HMS).
+In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into {{site.data.keyword.lakehouse_short}} into an Apache Iceberg table in the Hive Metastore server (HMS).
 
 ## 1. Create a database by using the required `metastoreuri`.
 {: #create_database}

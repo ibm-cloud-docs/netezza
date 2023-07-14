@@ -2,9 +2,9 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-07-23"
+lastupdated: "2023-07-14"
 
-keywords: netezza data lakehouse, metastore
+keywords: netezza data lakehouse, metastore, netezza with watsonx.data
 subcollection: netezza
 
 ---
@@ -23,7 +23,7 @@ subcollection: netezza
 # Overview
 {: #overview_datalakehouse}
 
-With {{site.data.keyword.netezza_full}} data lakehouse you can connect to the Hive Metastore (HMS) which is a datalake metastore server and query from Apache Iceberg tables that live on your data lake S3 object store.
+With {{site.data.keyword.netezza_full}} and {{site.data.keyword.lakehouse_short}} you can connect to the Hive Metastore (HMS) which is a data lake metastore server and query from Apache Iceberg tables that live on your data lake S3 object store.
 
 In technology preview:
 
@@ -37,8 +37,8 @@ In technology preview:
   - `list`
   - `map`
 
-Use cases for data lakehouse include:
+Use cases for {{site.data.keyword.lakehouse_short}} include:
 
-- [Running queries against data that is stored in a data lakehouse](/docs/netezza?topic=netezza-querying_datalakehouse).
-- [Ingesting data from data lakehouse into {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-ingest_datalakehouse).
-- [Querying both local and remote data from data lakehouse](/docs/netezza?topic=netezza-merging_datalakehouse).
+- [Running queries against data that is stored in {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-querying_datalakehouse).
+- [Ingesting data from {{site.data.keyword.lakehouse_short}} into {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-ingest_datalakehouse).
+- [Querying both local and remote data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-merging_datalakehouse).

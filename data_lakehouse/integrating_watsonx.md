@@ -2,9 +2,9 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-07-23"
+lastupdated: "2023-07-14"
 
-keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data, watsonx.data witn nps
+keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data, watsonx.data with nps
 subcollection: netezza
 
 ---
@@ -21,10 +21,10 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Integrating {{site.data.keyword.netezza_short}} with watsonx.data
+# Integrating {{site.data.keyword.netezza_short}} with {{site.data.keyword.lakehouse_short}}
 {: #integratenps_watsonx.data}
 
-You can integrate your {{site.data.keyword.netezza_full}} instance with watsonx.data.
+You can integrate your {{site.data.keyword.netezza_full}} instance with {{site.data.keyword.lakehouse_short}}.
 
 ## Before you begin
 {: #prereqswatsonx.data}
@@ -35,8 +35,11 @@ Ensure that you obtained the IBM API key by following the steps:
 2. Click on IBM IAM.
 3. Create a service ID.
 4. Assign access.
+
    a. Select metastore.
-   b. administrative priv. **draft comment: not sure what that is? A button in the UI?**
+
+   b. Select **Administrative privileges**.
+
 5. Create an API key.
 
 ## Run the following `nz` command on {{site.data.keyword.netezza_short}} instance or remote client by using `nzcli`.

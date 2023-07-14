@@ -2,9 +2,9 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-23"
+lastupdated: "2023-07-14"
 
-keywords: data lakehouse, netezza data lakehouse, querying data, merging data
+keywords: data lakehouse, netezza data lakehouse, querying data, merging data, netezza with watsonx.data
 subcollection: netezza
 
 ---
@@ -21,15 +21,15 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Merging and querying data from data lakehouse
+# Merging and querying data from {{site.data.keyword.lakehouse_short}}
 {: #merging_datalakehouse}
 
-Learn how to query and merge data from a {{site.data.keyword.netezza_short}} table and a data lake table.
+Learn how to query and merge data from a {{site.data.keyword.netezza_short}} and a data lake table.
 
 ## Before you begin
 {: #prereqsdlh3}
 
-In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into an Apache Iceberg table in the Hive Metastore server (HMS).
+In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into {{site.data.keyword.lakehouse_short}} into an Apache Iceberg table in the Hive Metastore server (HMS).
 
 ## Run a cross database query with the table in the datalake database.
 {: #runcdqdlh}
