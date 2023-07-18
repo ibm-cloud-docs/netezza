@@ -29,7 +29,7 @@ subcollection: netezza
 {: #nf1july2023}
 
 - Technology preview support for **SELECT** operations from Apache Iceberg and Hive tables is available on {{site.data.keyword.netezza_short}} on AWS. Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.  
-For more information, see [Querying data from data lakehouse](/docs/netezza?topic=netezza-overview_watsonx.data).
+For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).
 
 - Added a new availability zone for {{site.data.keyword.netezza_short}} on AWS. Now, you can host your resources in the Frankfurt, Europe zone.    
 Other available locations:
