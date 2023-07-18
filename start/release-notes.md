@@ -22,7 +22,7 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-## July 2023
+## July 2023 II
 {: #july2023}
 
 ### New features and enhancements
