@@ -40,7 +40,7 @@ Other regions where the service is available on AWS include:
 ### Fixes
 {: #f1july2023}
 
-- Fixed the issue with SQL Query Editor where commented out queries separated by a semicolon in the same line are getting executed. **NEXTGEN-18756 DRAFT COMMENT: TBD - looks like fixed**
+- Fixed the issue with SQL query editor where commented out queries separated by a semicolon in the same line are getting executed. **NEXTGEN-18756 DRAFT COMMENT: TBD - looks like fixed**
 **DRAFT COMMENT: WIP**
 
 ### Components
