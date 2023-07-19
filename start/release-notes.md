@@ -22,7 +22,7 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-## 21st July, 2023
+## July 21, 2023
 {: #july2023}
 
 ### New features and enhancements
@@ -60,7 +60,7 @@ Other regions where the service is available on AWS include:
 - Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization.
 - NEXTGEN-18753 **DRAFT COMMENT: TBD - looks like either to be fixed or a known issue**
 
-## 10th July, 2023
+## July 10, 2023
 {: #july12023}
 
 ### New features and enhancements
