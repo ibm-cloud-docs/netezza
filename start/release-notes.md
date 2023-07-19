@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-18"
+lastupdated: "2023-07-19"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -22,7 +22,7 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-## July 2023 II
+## 21st, July 2023
 {: #july2023}
 
 ### New features and enhancements
@@ -31,15 +31,16 @@ subcollection: netezza
 - Technology preview support for **SELECT** operations from Apache Iceberg and Hive tables is available on {{site.data.keyword.netezza_short}} on AWS. Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.  
 For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).
 
-- Added a new availability zone for {{site.data.keyword.netezza_short}} on AWS. Now, you can host your resources in the Frankfurt, Europe zone.    
-Other available locations:
+- {{site.data.keyword.netezza_short}} on AWS is now available in Europe (Frankfurt) region.    
+Other locations where the service is available on AWS include:
 
-   - North America: Northern Virginia, Canada Central, Northern California.
+   - North America: US East (Northern Virginia), US West (Northern California), and Canada (Central).
    - Asia Pacific: Tokyo, Seoul.
 
 ### Fixes
 {: #f1july2023}
 
+- Fixed the issue with SQL Query Editor where commented out queries separated by a semicolon in the same line are getting executed. **NEXTGEN-18756 DRAFT COMMENT: TBD - looks like fixed**
 **DRAFT COMMENT: WIP**
 
 ### Components
@@ -58,10 +59,8 @@ Other available locations:
 
 - Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization.
 - NEXTGEN-18753 **DRAFT COMMENT: TBD - looks like either to be fixed or a known issue**
-- NEXTGEN-18756 **DRAFT COMMENT: TBD - looks like fixed**
 
-
-## July 2023
+## 10th July, 2023
 {: #july12023}
 
 ### New features and enhancements
