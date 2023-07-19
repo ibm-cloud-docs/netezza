@@ -22,7 +22,7 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-## 21st, July 2023
+## 21st July, 2023
 {: #july2023}
 
 ### New features and enhancements
@@ -32,7 +32,7 @@ subcollection: netezza
 For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).
 
 - {{site.data.keyword.netezza_short}} on AWS is now available in Europe (Frankfurt) region.    
-Other locations where the service is available on AWS include:
+Other regions where the service is available on AWS include:
 
    - North America: US East (Northern Virginia), US West (Northern California), and Canada (Central).
    - Asia Pacific: Tokyo, Seoul.
