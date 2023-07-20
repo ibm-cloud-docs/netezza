@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-19"
+lastupdated: "2023-07-20"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -40,7 +40,8 @@ Other regions where the service is available on AWS include:
 ### Fixes
 {: #f1july2023}
 
-- Fixed the issue with SQL query editor where commented out queries separated by a semicolon in the same line are getting executed. **NEXTGEN-18756 DRAFT COMMENT: TBD - looks like fixed**
+- Fixed the issue with SQL query editor where commented out queries separated by a semicolon in the same line get executed. **DRAFT COMMENT: NEXTGEN-18756**
+- Fixed the issue with multiple pause/resume and scaling jobs with the same name get executed. **DRAFT COMMENT: NEXTGEN-18753**
 **DRAFT COMMENT: WIP**
 
 ### Components
@@ -58,7 +59,6 @@ Other regions where the service is available on AWS include:
 **DRAFT COMMENT: As per the Slack thread**
 
 - Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization.
-- NEXTGEN-18753 **DRAFT COMMENT: TBD - looks like either to be fixed or a known issue**
 
 ## July 10, 2023
 {: #july12023}
