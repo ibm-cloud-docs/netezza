@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-07-21"
 
 keywords: data lakehouse, netezza data lakehouse, querying data, ingesting data with nps and watsonx.data
 subcollection: netezza
@@ -40,9 +40,9 @@ MYLAKE.TAXIDATA(ADMIN)=> \c localdb
 ```
 {: codeblock}
 
-You are now connected to database localdb.
+You are now connected to **localdb** database.
 
-## 2. Run a CTAS query with a cross database select on the datalake database.schema.table.
+## 2. Run a CTAS query with a cross database **select** on the data lake database.schema.table.
 {: #runctas_dlh}
 
 Example:

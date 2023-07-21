@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-07-21"
 
 keywords: netezza data lakehouse, data lake, querying data, connecting to a metastore, netezza watsonx.data
 subcollection: netezza
