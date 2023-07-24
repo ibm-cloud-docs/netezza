@@ -40,23 +40,18 @@ Other regions where the service is available on AWS include:
 ### Fixes
 {: #f1july2023}
 
-- Fixed the issue with SQL query editor where commented out queries separated by a semicolon in the same line get executed. **DRAFT COMMENT: NEXTGEN-18756**
-- Fixed the issue with multiple pause/resume and scaling jobs with the same name get executed. **DRAFT COMMENT: NEXTGEN-18753**
-**DRAFT COMMENT: WIP**
+- Fixed the issue with SQL query editor where commented out queries separated by a semicolon in the same line get executed.
+- Fixed the issue with multiple pause/resume and scaling jobs with the same name get executed.
 
 ### Components
 {: #comps1july2023}
 
-**DRAFT COMMENT: WIP**
-
 - {{site.data.keyword.netezza_short}} 11.2.2.8
 - Web console 4.0.15
-- Red Hat OpenShift Container Platform 4.10.54 **DRAFT COMMENT: As per the Slack thread**
+- Red Hat OpenShift Container Platform 4.10.54
 
 ### Known issues
 {: #ki1july2023}
-
-**DRAFT COMMENT: As per the Slack thread**
 
 - Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization.
 
