@@ -109,6 +109,14 @@ toc:
              label: External tables
              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - topicgroup:
+         label: Querying data from watsonx.data
+         topics:
+         - data_lakehouse/data_lakehouse_overview.md
+         - data_lakehouse/integrating_watsonx.md
+         - data_lakehouse/querying_datalakehouse.md
+         - data_lakehouse/ingesting_datalakehouse.md
+         - data_lakehouse/merging_datalakehouse.md
+      - topicgroup:
          label: Time travel and historical data
          topics:
          - timetravel/introducing_timetravel.md
