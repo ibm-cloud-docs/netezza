@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2023
-lastupdated: "2023-06-05"
+lastupdated: "2023-07-24"
 
 keywords: bnr, backup and restore, backup, restore
 
