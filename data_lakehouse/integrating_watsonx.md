@@ -54,10 +54,35 @@ Ensure that you obtained the IBM API key by following the steps:
 
    You must name the API key as **ibmlhapikey**.
 
-## Run the following `nz` command on {{site.data.keyword.netezza_short}} instance or remote client by using `nzcli`.
+## Integrate your {{site.data.keyword.netezza_short}} instance or remote client with {{site.data.keyword.lakehouse_short}} by using `nzcli`.
+
+1. Download `nz` tool.
 
 ```sql
-nz setup-hms --url <thrift endpoint> --hms-user <user-name> --hms-token <apikey> --name <unique connection1> --user <nz db user> --password <nz db password>
+curl -o nz -k <Name of api server url from namespace provisioning page>/v2/download/nz-linux-amd64
+```
+{: codeblock}
+
+3. Set up the environment variables.
+
+```sql
+export NZ_HOST=<Name of api server url from namespace provisioning page>
+export NZ_USER=<admin user name>
+export NZ_PASSWORD=<admin user password>
+```
+{: codeblock}
+
+3. Change the permissions on `nzcli` executable.
+
+```sql
+chmod +x nz
+```
+{: codeblock}
+
+4. Set up HMS with `nz` tool.
+
+```sql
+ ./nz setup-hms create -connection-name lakehouse -hms-token <api key created in previous step> -hms-user ibmlhapikey -url <thrift url retrieved from previous step>
 ```
 {: codeblock}
 
