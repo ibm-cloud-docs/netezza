@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-07-26"
 
 keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data, watsonx.data with nps
 subcollection: netezza
@@ -34,7 +34,7 @@ Ensure that you obtained the IBM API key by following the steps:
 1. Go to https://cloud.ibm.com/.
 2. At the top of the page, from the **Manage** sub-menu, select **Access (IAM)**.
 3. Click **Service IDs** and **Create**.
-4. Provide the **Create service ID** details.
+4. Provide **Create service ID** details.
 5. On the **Access** tab, perform the following actions:
 
    a. Click **Assign group** and select the required access groups. Click **Add**. **DRAFT COMMENT: apparently, an access group must be created before you can assign/access groups. Is that step obligatory? Please clarify.**
@@ -48,9 +48,9 @@ Ensure that you obtained the IBM API key by following the steps:
    e. In the **Roles and actions** section, select **MetastoreAccess** and **Administrator**, and click **Next**.
 
    f. Click **Add** and **Assign**. **DRAFT COMMENT: I understand these are obligatory steps, correct? Please clarify**.
-   
+
 6. Click the **API keys** tab and click **Create**.
-7. Provide the **Create API key** details.
+7. Provide **Create API key** details.
    You must name the API key as **ibmlhapikey**.
 
 ## Run the following `nz` command on {{site.data.keyword.netezza_short}} instance or remote client by using `nzcli`.
