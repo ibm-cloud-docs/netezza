@@ -23,6 +23,8 @@ subcollection: netezza
 # Configuring private endpoints
 {: #creating-private-endpoints}
 
+![{{site.data.keyword.netezza_short}} network architecture diagram](../images/private_link.jpg){: caption="Image 1. Connectivity flow from a customer on-premises instance to customer cloud to Private Link to {{site.data.keyword.netezza_short}} as a Service." caption-side="bottom"}
+
 ## Configuring private endpoints for Azure
 {: #private-endpoints-azure}
 
@@ -80,7 +82,7 @@ To connect to your {{site.data.keyword.netezza_short}} on AWS by using [AWS Priv
 
    - If you deployed your instance with private endpoints, you must have provided your service principals [during provisioning](/docs/netezza?topic=netezza-getstarted), in step **9. Configure advanced features**.
 
-   ![Connecting to {{site.data.keyword.netezza_short}}](../images/aws_provisioning.png){: caption="Image 2. Configure advanced features during provisioning." caption-side="bottom"}   
+   ![Connecting to {{site.data.keyword.netezza_short}}](../images/aws_provisioning.png){: caption="Image 3. Configure advanced features during provisioning." caption-side="bottom"}   
 
 2. Create private endpoints.
 
