@@ -51,6 +51,7 @@ Ensure that you obtained the IBM API key by following the steps:
 
 6. Click the **API keys** tab and click **Create**.
 7. Provide **Create API key** details.
+
    You must name the API key as **ibmlhapikey**.
 
 ## Run the following `nz` command on {{site.data.keyword.netezza_short}} instance or remote client by using `nzcli`.
@@ -66,4 +67,7 @@ Where:
 - `hms-user <user-name>` is the IBM IAM ID.
 - `hms-token <apikey>` is the IBM API key.
 
-After you registered to {{site.data.keyword.lakehouse_short}}, you can follow the steps to create a remote database.
+After you registered to {{site.data.keyword.lakehouse_short}}, you can create a remote database.
+
+1. Log in to your {{site.data.keyword.netezza_short}} web console or download `nzsql` command line tool from [here](https://www.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7EWebSphere&product=ibm/WebSphere/IBM+Cloud+Private+for+Data+System&release=NPS_11.2&platform=All&function=fixId&fixids=11.2.2.7-WS-ICPDS-NPS-Clients-fp20684&includeRequisites=1&includeSupersedes=0&downloadMethod=http&login=true&login=true).
+2. Query your data from {{site.data.keyword.lakehouse_short}}. For more information, see [Querying data from watsonx.data](https://cloud.ibm.com/docs/netezza?topic=netezza-querying_watsonx.data).
