@@ -63,7 +63,7 @@ curl -o nz -k <Name of api server url from namespace provisioning page>/v2/downl
 ```
 {: codeblock}
 
-3. Set up the environment variables.
+2. Set up the environment variables.
 
 ```sql
 export NZ_HOST=<Name of api server url from namespace provisioning page>
