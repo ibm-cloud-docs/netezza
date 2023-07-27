@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-24"
+lastupdated: "2023-07-27"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -21,6 +21,31 @@ subcollection: netezza
 
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
+
+## August 28, 2023
+{: #aug2023}
+
+### New features and enhancements
+{: #nfaug2023}
+
+- **DRAFT COMNNET: WIP Need more details.** NPS 11.2.2.9 DLH GA GA items specifically and NPS associated functionality
+Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.  
+For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).
+
+- **DRAFT COMNNET: WIP Need more details.** api changes for nzrest compatibility
+
+### Fixes
+{: #faug2023}
+
+### Components
+{: #compsaug2023}
+
+{{site.data.keyword.netezza_short}} 11.2.2.9
+- Web console 4.0.16
+
+### Known issues
+{: #kiaug2023}
+
 
 ## July 24, 2023
 {: #july2023}
