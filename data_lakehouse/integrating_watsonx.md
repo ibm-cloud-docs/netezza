@@ -58,33 +58,33 @@ Ensure that you obtained the IBM API key by following the steps:
 
 1. Download `nz` tool.
 
-```sql
-curl -o nz -k <Name of api server url from namespace provisioning page>/v2/download/nz-linux-amd64
-```
-{: codeblock}
+   ```sql
+   curl -o nz -k <Name of api server url from namespace provisioning page>/v2/download/nz-linux-amd64
+   ```
+   {: codeblock}
 
 1. Set up the environment variables.
 
-```sql
-export NZ_HOST=<Name of api server url from namespace provisioning page>
-export NZ_USER=<admin user name>
-export NZ_PASSWORD=<admin user password>
-```
-{: codeblock}
+   ```sql
+   export NZ_HOST=<Name of api server url from namespace provisioning page>
+   export NZ_USER=<admin user name>
+   export NZ_PASSWORD=<admin user password>
+   ```
+   {: codeblock}
 
 1. Change the permissions on `nzcli` executable.
 
-```sql
-chmod +x nz
-```
-{: codeblock}
+   ```sql
+   chmod +x nz
+   ```
+   {: codeblock}
 
 1. Set up HMS with `nz` tool.
 
-```sql
- ./nz setup-hms create -connection-name lakehouse -hms-token <api key created in previous step> -hms-user ibmlhapikey -url <thrift url retrieved from previous step>
-```
-{: codeblock}
+   ```sql
+    ./nz setup-hms create -connection-name lakehouse -hms-token <api key created in previous step> -hms-user ibmlhapikey -url <thrift url retrieved from previous step>
+   ```
+   {: codeblock}
 
 Where:
 
