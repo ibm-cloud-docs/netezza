@@ -82,14 +82,14 @@ Ensure that you obtained the IBM API key by following the steps:
 1. Set up HMS with `nz` tool.
 
    ```sql
-    ./nz setup-hms create -connection-name "<your connection name>" -hms-token “<your API key obtained in the `Before you begin` section>” -hms-user "ibmlhapikey" -url “<thrift endpoint URL retrieved from {{site.data.keyword.lakehouse_short}} instance>”
+    ./nz setup-hms create -connection-name "<your connection name>" -hms-token “<your API key obtained in the `Before you begin` section>” -hms-user "ibmlhapikey" -url “<thrift endpoint URL retrieved from watsonx.data instance>”
    ```
    {: codeblock}
 
 Where:
 
-- `url` is the thrift endpoint URL which you must retrieve from {{site.data.keyword.lakehouse_short}} instance and ensure that it is in the following format:
-`thrift://<host>:<port>``
+- `url` is the thrift endpoint URL which you must retrieve from {{site.data.keyword.lakehouse_short}} instance. For more information, see [Getting the HMS endpoint](/docs/watsonxdata?topic=watsonxdata-hms#hms_url). You must ensure that the `url` is in the following format:
+`thrift://<host>:<port>`
 when you run `nz setup-hms` command.
 - `hms-user <user-name>` is the IBM IAM ID.
 - `hms-token <apikey>` is the IBM API key.
@@ -97,4 +97,4 @@ when you run `nz setup-hms` command.
 After you registered to {{site.data.keyword.lakehouse_short}}, you can create a remote database.
 
 1. Log in to your {{site.data.keyword.netezza_short}} web console or download `nzsql` command line tool from [here](https://www.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7EWebSphere&product=ibm/WebSphere/IBM+Cloud+Private+for+Data+System&release=NPS_11.2&platform=All&function=fixId&fixids=11.2.2.7-WS-ICPDS-NPS-Clients-fp20684&includeRequisites=1&includeSupersedes=0&downloadMethod=http&login=true&login=true).
-1. Query your data from {{site.data.keyword.lakehouse_short}}. For more information, see [Querying data from watsonx.data](https://cloud.ibm.com/docs/netezza?topic=netezza-querying_watsonx.data).
+1. Query your data from {{site.data.keyword.lakehouse_short}}. For more information, see [Querying data from watsonx.data](/docs/netezza?topic=netezza-querying_watsonx.data).
