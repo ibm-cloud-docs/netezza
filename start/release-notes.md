@@ -40,7 +40,7 @@ For more information, see [Querying data from {{site.data.keyword.lakehouse_shor
 ### Components
 {: #compsaug2023}
 
-{{site.data.keyword.netezza_short}} 11.2.2.9
+- {{site.data.keyword.netezza_short}} 11.2.2.9
 - Web console 4.0.16
 
 ### Known issues
