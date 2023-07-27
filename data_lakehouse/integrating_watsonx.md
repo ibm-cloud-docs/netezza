@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-07-26"
+lastupdated: "2023-07-27"
 
 keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data, watsonx.data with nps
 subcollection: netezza
@@ -51,10 +51,9 @@ Ensure that you obtained the IBM API key by following the steps:
 
 6. Click the **API keys** tab and click **Create**.
 7. Provide **Create API key** details.
-
    You must name the API key as **ibmlhapikey**.
 
-## Integrate your {{site.data.keyword.netezza_short}} instance or remote client with {{site.data.keyword.lakehouse_short}} by using `nzcli`.
+## Integrating {{site.data.keyword.netezza_short}} instance or remote client with {{site.data.keyword.lakehouse_short}} by using `nzcli`.
 {: #integratesteps_watsonx.data}
 
 1. Download `nz` tool.
