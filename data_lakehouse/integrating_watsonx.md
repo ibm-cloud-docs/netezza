@@ -26,7 +26,7 @@ subcollection: netezza
 
 You can integrate your {{site.data.keyword.netezza_full}} instance with {{site.data.keyword.lakehouse_short}}.
 
-## Before you begin
+### Before you begin
 {: #prereqswatsonx.data}
 
 Ensure that you obtained the IBM API key by following the steps:
@@ -55,6 +55,7 @@ Ensure that you obtained the IBM API key by following the steps:
    You must name the API key as **ibmlhapikey**.
 
 ## Integrate your {{site.data.keyword.netezza_short}} instance or remote client with {{site.data.keyword.lakehouse_short}} by using `nzcli`.
+{: #integratesteps_watsonx.data}
 
 1. Download `nz` tool.
 
