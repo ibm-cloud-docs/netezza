@@ -59,14 +59,14 @@ Ensure that you obtained the IBM API key by following the steps:
 1. Download `nz` tool.
 
    ```sql
-   curl -o nz -k <Name of api server url from namespace provisioning page>/v2/download/nz-linux-amd64
+   curl -o nz -k <name of the API server URL from namespace provisioning page>/v2/download/nz-linux-amd64
    ```
    {: codeblock}
 
 1. Set up the environment variables.
 
    ```sql
-   export NZ_HOST=<Name of api server url from namespace provisioning page>
+   export NZ_HOST=<name of the API server URL from namespace provisioning page>
    export NZ_USER=<admin user name>
    export NZ_PASSWORD=<admin user password>
    ```
@@ -82,13 +82,15 @@ Ensure that you obtained the IBM API key by following the steps:
 1. Set up HMS with `nz` tool.
 
    ```sql
-    ./nz setup-hms create -connection-name lakehouse -hms-token <api key created in previous step> -hms-user ibmlhapikey -url <thrift url retrieved from previous step>
+    ./nz setup-hms create -connection-name "<your connection name>" -hms-token “<your API key obtained in the `Before you begin` section>” -hms-user "ibmlhapikey" -url “<thrift endpoint URL retrieved from {{site.data.keyword.lakehouse_short}} instance>”
    ```
    {: codeblock}
 
 Where:
 
-- `<thrift endpoint>` must be fetched from watsonx.data instance.
+- `url` is the thrift endpoint URL which you must retrieve from {{site.data.keyword.lakehouse_short}} instance and ensure that it is in the following format:
+`thrift://<host>:<port>``
+when you run `nz setup-hms` command.
 - `hms-user <user-name>` is the IBM IAM ID.
 - `hms-token <apikey>` is the IBM API key.
 
