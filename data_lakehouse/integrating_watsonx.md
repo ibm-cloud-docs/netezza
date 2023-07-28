@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-07-27"
+lastupdated: "2023-07-28"
 
 keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data, watsonx.data with nps
 subcollection: netezza
@@ -37,17 +37,15 @@ Ensure that you obtained the IBM API key by following the steps:
 1. Provide **Create service ID** details.
 1. On the **Access** tab, perform the following actions:
 
-   a. Click **Assign group** and select the required access groups. Click **Add**. **DRAFT COMMENT: apparently, an access group must be created before you can assign/access groups. Is that step obligatory? Please clarify.**
+   a. Click **Assign access**.
 
-   b. Click **Assign access**.
+   b. In the **Service** search field, type watsonx.data and click it. Click **Next**.
 
-   c. In the **Service** search field, type watsonx.data and click it. Click **Next**.
+   c. In the **Resources** section, ensure that **All resources** is selected. Click **Next**.
 
-   d. In the **Resources** section, ensure that **All resources** is selected. Click **Next**.
+   d. In the **Roles and actions** section, select **MetastoreAccess** and **Administrator**, and click **Next**.
 
-   e. In the **Roles and actions** section, select **MetastoreAccess** and **Administrator**, and click **Next**.
-
-   f. Click **Add** and **Assign**. **DRAFT COMMENT: I understand these are obligatory steps, correct? Please clarify**.
+   e. Click **Add** and **Assign**. **DRAFT COMMENT: I understand these are obligatory steps, correct? Please clarify**.
 
 1. Click the **API keys** tab and click **Create**.
 1. Provide **Create API key** details.
@@ -82,15 +80,15 @@ Ensure that you obtained the IBM API key by following the steps:
 1. Set up HMS with `nz` tool.
 
    ```sql
-    ./nz setup-hms create -connection-name "<your connection name>" -hms-token “<your API key obtained in the `Before you begin` section>” -hms-user "ibmlhapikey" -url “<thrift endpoint URL retrieved from watsonx.data instance>”
+    ./nz setup-hms create -connection-name <your connection name> -hms-token <your API key obtained in the `Before you begin` section> -hms-user "ibmlhapikey" -url <thrift endpoint URL retrieved from watsonx.data instance>
    ```
    {: codeblock}
 
 Where:
 
-- `url` is the thrift endpoint URL which you retrieve from {{site.data.keyword.lakehouse_short}} instance. For more information, see [Getting the HMS endpoint](/docs/watsonxdata?topic=watsonxdata-hms#hms_url). You also must ensure that the `url` is in the following `"thrift://<host>:<port>"` format when you run `nz setup-hms` command.
-- `hms-user <user-name>` is the IBM IAM ID.
-- `hms-token <apikey>` is the IBM API key.
+- `url` is the thrift endpoint URL which you retrieve from {{site.data.keyword.lakehouse_short}} instance. For more information, see [Getting the HMS endpoint](/docs/watsonxdata?topic=watsonxdata-hms#hms_url). You also must ensure that the `url` is in the following `thrift://<host>:<port>` format when you run `nz setup-hms` command.
+- `hms-user` is by default `ibmlhapikey`.
+- `hms-token` is your API key obtained in the `Before you begin` section.
 
 After you registered to {{site.data.keyword.lakehouse_short}}, you can create a remote database.
 
