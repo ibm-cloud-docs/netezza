@@ -45,7 +45,7 @@ Ensure that you obtained the IBM API key by following the steps:
 
    d. In the **Roles and actions** section, select **MetastoreAccess** and **Administrator**, and click **Next**.
 
-   e. Click **Add** and **Assign**. **DRAFT COMMENT: I understand these are obligatory steps, correct? Please clarify**.
+   e. Click **Add** and **Assign**.
 
 1. Click the **API keys** tab and click **Create**.
 1. Provide **Create API key** details.
