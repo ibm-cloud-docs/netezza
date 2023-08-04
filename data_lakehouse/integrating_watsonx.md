@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-07-28"
+lastupdated: "2023-08-04"
 
 keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data, watsonx.data with nps
 subcollection: netezza
@@ -88,7 +88,7 @@ Where:
 
 - `url` is the thrift endpoint URL which you retrieve from {{site.data.keyword.lakehouse_short}} instance. For more information, see [Getting the HMS endpoint](/docs/watsonxdata?topic=watsonxdata-hms#hms_url). You also must ensure that the `url` is in the following `thrift://<host>:<port>` format when you run `nz setup-hms` command.
 - `hms-user` is by default `ibmlhapikey`.
-- `hms-token` is your API key obtained in the `Before you begin` section.
+- `hms-token` is your API key obtained in the **Before you begin** section.
 
 After you registered to {{site.data.keyword.lakehouse_short}}, you can create a remote database.
 
