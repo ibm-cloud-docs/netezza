@@ -23,3 +23,9 @@ subcollection: netezza
 
 # Watsonx.data SQL commands
 {: #sql_watsonx.data}
+
+The following SQL commands are supported with watsonx.data:
+
+-
+
+## 
