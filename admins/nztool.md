@@ -41,24 +41,33 @@ Supported platforms for the `nz` tool:
 Run the command:
 
 ```sh
-curl -o nz -k https://<external hostname>/<version number>/download/<platform specific package>
+curl -o nz -k https://<API Server URL>/<version number>/download/<platform specific package>
 chmod +x nz
 ```
 {: codeblock}
+
+   Where the API Server URL is **API Server** URL details that you must retrieve by following the steps:
+
+   1. Log in to your IBM Cloud account.
+
+   2. Go to **Resource list** > **Services and Software** > **Databases**.
+
+   3. Click your Netezza Performance Server instance.
+    You are now on the **Service instance details** page. In the **Public Endpoints** section, you can find information (URL details) about endpoints for accessing the web console, the API server, and the database.
 
 Examples:
 
 To download `nz` on a Linux box, run:
 
 ```sh
-curl -o nz -k https://<external hostname>/v2/download/nz-linux-amd64
+curl -o nz -k https://<API Server URL>/v2/download/nz-linux-amd64
 ```
 {: codeblock}
 
 To download `nz` on Windows, run:
 
 ```sh
-curl.exe -o nz.exe -k https://<external hostname>/v2/download/nz-windows-amd64
+curl.exe -o nz.exe -k https://<API Server URL>/v2/download/nz-windows-amd64
 ```
 {: codeblock}
 
