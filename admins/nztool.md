@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-08-18"
 
 keywords: nztool
 
@@ -46,7 +46,9 @@ chmod +x nz
 ```
 {: codeblock}
 
-   Where the API Server URL is **API Server** URL details that you must retrieve by following the steps:
+   where the API Server URL is **API Server** URL details.
+
+   To retrieve this information, follow the steps:
 
    1. Log in to your IBM Cloud account.
 
