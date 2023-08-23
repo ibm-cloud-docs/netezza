@@ -32,7 +32,6 @@ With 11.2.2.9 release, the following SQL commands and functionalities are suppor
 - [CREATE TEMPORARY TABLE] **draft comment: "temp tables only in NETEZZA_SCHEMA" - TBC with Brajesh/Mike -- do we mean temporary tables are only supported in NETEZZA_SCHEMA?**
 - [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
 - [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
-- [DELETE FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-delete-2)
 - [DESCRIBE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe-table) **draft comment: link to updated to prod**
 - [SELECT FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2)
 - [SHOW SCHEMA FOR TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-schema-2)
