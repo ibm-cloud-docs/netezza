@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-08-16"
+lastupdated: "2023-08-"
 
 keywords: data lakehouse, watosnx.data sql commands, netezza data lakehouse, watsonx, watsonx.data, watsonx.data with nps
 subcollection: netezza
@@ -24,39 +24,38 @@ subcollection: netezza
 # Watsonx.data SQL commands
 {: #sqlcommands_watsonx.data}
 
-The following SQL commands are supported with watsonx.data:
+With 11.2.2.9 release, the following SQL commands and functionalities are supported with watsonx.data:
 
 - [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
+- [CREATE EXTERNAL DATASOURCE] **draft comment: no info provided in the box note. TBD with Brajesh**
+- [CREATE GLOBAL TEMP TABLE] **draft comment: temp tables only in NETEZZA_SCHEMA per Brajesh -- TBC with Brajesh/Mike -- not sure what that means..**
+- [CREATE TEMP TABLE] **draft comment: temp tables only in NETEZZA_SCHEMA per Brajesh -- TBC with Brajesh/Mike -- not sure what that means..**
 - [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
 - [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
-- [SELECT FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2)
-- [INSERT INTO](https://www.ibm.com/docs/en/netezza?topic=npsscr-insert-2)
 - [DELETE FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-delete-2)
-- [DESCRIBE DATABASE] **draft comment: content to be provided**
-- [DESCRIBE TABLE] **draft comment: content to be provided**
-- [CREATE EXTERNAL DATASOURCE] **draft comment: no info provided in the box note. TBD with Brajesh**
+- [DESCRIBE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe-table) **draft comment: link to updated to prod**
+- [SELECT FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2)
 - [SHOW SCHEMA FOR TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-schema-2)
-- [CREATE TEMP TABLE]
-- [CREATE GLOBAL TEMP TABLE]
-- sequence
 - authentication and authorization for HIVE Kerberos, DLH (apache ranger)
-- storage
+- AUTOMAINT
 - backup and restore
 - replication
-- AUTOMAINT
+- sequence
+- storage
 - supported data types
 
 The following commands and functionalities are not supported:
 
-- multi-table transactions
-- [DELETE FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-delete-2)
-- [DROP SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-drop-schema-2)
-- [UPDATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-update-2)
-- [MERGE STMT](https://www.ibm.com/docs/en/netezza?topic=npsscr-merge-2)
-- [DROP DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-drop-database-2)
-- [TRUNCATE STMT](https://www.ibm.com/docs/en/netezza?topic=npsscr-truncate-2)
 - [ALTER SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-schema-2)
 - [ALTER TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)
-- time travel support
+- [DELETE FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-delete-2)
+- [DROP DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-drop-database-2)
+- [DROP SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-drop-schema-2)
+- [INSERT INTO](https://www.ibm.com/docs/en/netezza?topic=npsscr-insert-2)
+- [MERGE STMT](https://www.ibm.com/docs/en/netezza?topic=npsscr-merge-2)
+- [TRUNCATE STMT](https://www.ibm.com/docs/en/netezza?topic=npsscr-truncate-2)
+- [UPDATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-update-2)
+- multi-table transactions
 - HIVE DDL/DML restrictions
+- time travel support
 - Views/Mviews
