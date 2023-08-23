@@ -27,9 +27,9 @@ subcollection: netezza
 With 11.2.2.9 release, the following SQL commands and functionalities are supported with watsonx.data. For more information, see:
 
 - [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
-- [CREATE EXTERNAL DATASOURCE](https://www.ibm.com/docs/en/netezza?topic=tables-create-external-datasource-command) **draft comment: no info provided in the box note. TBD with Brajesh**
-- [CREATE GLOBAL TEMPORARY TABLE](https://www.ibm.com/docs/en/netezza?topic=mgtt-create-global-temporary-table-2) **draft comment: temp tables only in NETEZZA_SCHEMA per Brajesh -- TBC with Brajesh/Mike -- not sure what that means..**
-- [CREATE TEMPORARY TABLE] **draft comment: temp tables only in NETEZZA_SCHEMA per Brajesh -- TBC with Brajesh/Mike -- not sure what that means..**
+- [CREATE EXTERNAL DATASOURCE](https://www.ibm.com/docs/en/netezza?topic=tables-create-external-datasource-command) **draft comment: no info provided in the box note. Doesn't look like to be supported in 11.2.2.9. TBD with Brajesh**
+- [CREATE GLOBAL TEMPORARY TABLE](https://www.ibm.com/docs/en/netezza?topic=mgtt-create-global-temporary-table-2) **draft comment: "temp tables only in NETEZZA_SCHEMA" - TBC with Brajesh/Mike -- do we mean temporary tables are only supported in NETEZZA_SCHEMA?**
+- [CREATE TEMPORARY TABLE] **draft comment: "temp tables only in NETEZZA_SCHEMA" - TBC with Brajesh/Mike -- do we mean temporary tables are only supported in NETEZZA_SCHEMA?**
 - [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
 - [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
 - [DELETE FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-delete-2)
