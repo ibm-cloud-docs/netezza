@@ -24,7 +24,7 @@ subcollection: netezza
 # Watsonx.data SQL commands
 {: #sqlcommands_watsonx.data}
 
-With 11.2.2.9 release, the following SQL commands and functionalities are supported with watsonx.data:
+With 11.2.2.9 release, the following SQL commands and functionalities are supported with watsonx.data. For more information, see:
 
 - [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
 - [CREATE EXTERNAL DATASOURCE] **draft comment: no info provided in the box note. TBD with Brajesh**
