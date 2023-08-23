@@ -34,7 +34,7 @@ With 11.2.2.9 release, the following SQL commands and functionalities are suppor
 - [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
 - [DESCRIBE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe-table) **draft comment: link to updated to prod**
 - [SELECT FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2)
-- [SHOW SCHEMA FOR TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-schema-2)
+- [SHOW SCHEMA FOR TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-schema-2) **draft comment: Mike to confirm if to be removed for good, from all deployments docs topics.**
 - authentication and authorization for HIVE Kerberos, DLH (apache ranger)
 - AUTOMAINT
 - backup and restore
