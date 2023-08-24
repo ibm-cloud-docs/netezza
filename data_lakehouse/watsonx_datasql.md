@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-08-23"
+lastupdated: "2023-08-24"
 
 keywords: data lakehouse, watosnx.data sql commands, netezza data lakehouse, watsonx, watsonx.data, watsonx.data with nps
 subcollection: netezza
@@ -21,10 +21,11 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Watsonx.data SQL commands
+# {{site.data.keyword.lakehouse_short}} SQL commands
 {: #sqlcommands_watsonx.data}
 
-With 11.2.2.9 release, the following SQL commands and functionalities are supported with watsonx.data. For more information, see:
+With 11.2.2.9 release, the following SQL commands and functionalities are supported with {{site.data.keyword.lakehouse_short}}.
+For more information, see:
 
 - [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
 - [CREATE EXTERNAL DATASOURCE](https://www.ibm.com/docs/en/netezza?topic=tables-create-external-datasource-command) **draft comment: no info provided in the box note. Doesn't look like to be supported in 11.2.2.9. TBD with Brajesh**
@@ -35,11 +36,9 @@ With 11.2.2.9 release, the following SQL commands and functionalities are suppor
 - [DESCRIBE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe-table) **draft comment: link to updated to prod**
 - [SELECT FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2)
 - [SHOW SCHEMA FOR TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-schema-2) **draft comment: Mike to confirm if to be removed for good, from all deployments docs topics.**
-- authentication and authorization for HIVE Kerberos, DLH (apache ranger)
-- AUTOMAINT
-- backup and restore
-- replication
-- sequence
+- Certificate authentication for data lake on HDFS by using Kerberos.
+- Backup and restore is only supported for the login and reference information, not the data itself.
+- sequence **draft comment: do we mean [CREATE SEQUENCE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-sequence-2)?** all non-table objects cannot be made in the data lake schemas.
 - storage
 - supported data types
 
@@ -54,7 +53,8 @@ The following commands and functionalities are not supported:
 - [MERGE STMT](https://www.ibm.com/docs/en/netezza?topic=npsscr-merge-2)
 - [TRUNCATE STMT](https://www.ibm.com/docs/en/netezza?topic=npsscr-truncate-2)
 - [UPDATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-update-2)
-- multi-table transactions
+- Multi-table transactions are not supported. You cannot modify a native {{site.data.keyword.netezza_short}} and data lake table in a single transaction.
 - HIVE DDL/DML restrictions
+- replication services
 - time travel support
 - Views/Mviews
