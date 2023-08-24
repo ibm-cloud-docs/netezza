@@ -33,9 +33,8 @@ For more information, see:
 - [CREATE TEMPORARY TABLE] **draft comment: "temp tables only in NETEZZA_SCHEMA" - TBC with Brajesh/Mike -- do we mean temporary tables are only supported in NETEZZA_SCHEMA?**
 - [CREATE SCHEMA](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-schema-3)
 - [CREATE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-table-3)
-- [DESCRIBE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe-table) **draft comment: link to updated to prod**
+- [DESCRIBE tblname](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe-table)
 - [SELECT FROM](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-select-retrieve-rows-3)
-- [SHOW SCHEMA FOR TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-show-schema-3) **draft comment: Mike to confirm if to be removed for good, from all deployments docs topics.**
 - Backup and restore is only supported for the login and reference information, not the data itself.
 - sequence **draft comment: do we mean [CREATE SEQUENCE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-sequence-2)?** all non-table objects cannot be made in the data lake schemas.
 - AWS S3, IBM COS, minIO data sources are available as storage options or a data lake database.
