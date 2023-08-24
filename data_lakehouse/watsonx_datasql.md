@@ -27,20 +27,20 @@ subcollection: netezza
 With 11.2.2.9 release, the following SQL commands and functionalities are supported with {{site.data.keyword.lakehouse_short}}.
 For more information, see:
 
-- [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
-- [CREATE EXTERNAL DATASOURCE](https://www.ibm.com/docs/en/netezza?topic=tables-create-external-datasource-command) **draft comment: no info provided in the box note. Doesn't look like to be supported in 11.2.2.9. TBD with Brajesh**
-- [CREATE GLOBAL TEMPORARY TABLE](https://www.ibm.com/docs/en/netezza?topic=mgtt-create-global-temporary-table-2) **draft comment: "temp tables only in NETEZZA_SCHEMA" - TBC with Brajesh/Mike -- do we mean temporary tables are only supported in NETEZZA_SCHEMA?**
+- [CREATE DATABASE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-database-3)
+- [CREATE EXTERNAL DATASOURCE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=tables-create-external-datasource-command) **draft comment: no info provided in the box note. Doesn't look like to be supported in 11.2.2.9. TBD with Brajesh**
+- [CREATE GLOBAL TEMPORARY TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=mgtt-create-global-temporary-table-3) **draft comment: "temp tables only in NETEZZA_SCHEMA" - TBC with Brajesh/Mike -- do we mean temporary tables are only supported in NETEZZA_SCHEMA?**
 - [CREATE TEMPORARY TABLE] **draft comment: "temp tables only in NETEZZA_SCHEMA" - TBC with Brajesh/Mike -- do we mean temporary tables are only supported in NETEZZA_SCHEMA?**
-- [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
-- [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
+- [CREATE SCHEMA](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-schema-3)
+- [CREATE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-table-3)
 - [DESCRIBE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe-table) **draft comment: link to updated to prod**
-- [SELECT FROM](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2)
-- [SHOW SCHEMA FOR TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-show-schema-2) **draft comment: Mike to confirm if to be removed for good, from all deployments docs topics.**
-- Certificate authentication for data lake on HDFS by using Kerberos.
+- [SELECT FROM](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-select-retrieve-rows-3)
+- [SHOW SCHEMA FOR TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-show-schema-3) **draft comment: Mike to confirm if to be removed for good, from all deployments docs topics.**
 - Backup and restore is only supported for the login and reference information, not the data itself.
 - sequence **draft comment: do we mean [CREATE SEQUENCE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-sequence-2)?** all non-table objects cannot be made in the data lake schemas.
-- storage
-- supported data types
+- AWS S3, IBM COS, minIO data sources are available as storage options or a data lake database.
+- certificate authentication for data lake on HDFS by using Kerberos
+- supported data types **draft comment: for 11.2.2.8 we agreed to only list the following unsupported data types: list, struct, map, timestamptz, uuid. Do we now want to add the supported ones?**
 
 The following commands and functionalities are not supported:
 
@@ -54,7 +54,7 @@ The following commands and functionalities are not supported:
 - [TRUNCATE STMT](https://www.ibm.com/docs/en/netezza?topic=npsscr-truncate-2)
 - [UPDATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-update-2)
 - Multi-table transactions are not supported. You cannot modify a native {{site.data.keyword.netezza_short}} and data lake table in a single transaction.
-- HIVE DDL/DML restrictions
+- HIVE DDL/DML operations
 - replication services
-- time travel support
-- Views/Mviews
+- time travel queries
+- materialized views
