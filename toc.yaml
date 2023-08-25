@@ -117,6 +117,7 @@ toc:
          - data_lakehouse/ingesting_datalakehouse.md
          - data_lakehouse/merging_datalakehouse.md
          - data_lakehouse/watsonx_datasql.md
+         - data_lakehouse/hms_npskeywords.md
       - topicgroup:
          label: Time travel and historical data
          topics:
