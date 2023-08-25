@@ -39,7 +39,7 @@ SET SCHEMA "DEFAULT"
 ```
 {: codeblock}
 
-- Alternatively, reference the schema name in quotes with carets to convert to system case.
+- Alternatively, reference the schema name in double quotes with carets to convert to system case.
 
 ```sql
 SET SCHEMA "^default^";
