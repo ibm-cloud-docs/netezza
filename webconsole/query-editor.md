@@ -26,7 +26,7 @@ With the query editor, you can run SQL queries on a specific host and database. 
 ## Running queries with the query editor
 {: #create-queries}
 
-### Running multiple SQL statements in a single sessions
+### Running multiple SQL statements in a single session
 {: #single-session-queries}
 
 1. Go to **Query editor**.
