@@ -30,16 +30,16 @@ For these use cases, these schema names must be quoted in double quotation marks
 
 For example:
 
-`default` is a {{site.data.keyword.netezza_short}} keyword and it is a schema name in HMS. To use it in **SET SCHEMA** command you must:
+`default` is a {{site.data.keyword.netezza_short}} keyword and it is a schema name in HMS. To use it in **SET SCHEMA** command:
 
-- Reference the schema name in double quotes by using the system case, usually written in uppercase. 
+- Reference the schema name in double quotes by using the system case, usually written in uppercase.
 
 ```sql
 SET SCHEMA "DEFAULT"
 ```
 {: codeblock}
 
-- Alternatively, reference in quotes with carets to convert to system case.
+- Alternatively, reference the schema name in quotes with carets to convert to system case.
 
 ```sql
 SET SCHEMA "^default^";
