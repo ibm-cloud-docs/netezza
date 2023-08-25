@@ -21,5 +21,29 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Schema names in Hive Metastore that are NPS reserved keywords
+# Schema names in Hive Metastore (HMS) that are NPS reserved keywords
 {: #hms_npskeywords.data}
+
+If there are schema names in Hive Metastore that are NPS keywords, you cannot use those keywords as identifiers when using the schema either in **SET SCHEMA <name>** or cross schema reference in **SELECT col from <schema_name>.<tablename>** queries.
+
+For these use cases, these schema names must be quoted in double quotation marks to be used as identifiers.
+
+For example:
+
+`default` is a {{site.data.keyword.netezza_short}} keyword and it is a schema name in HMS. To use it in **SET SCHEMA** command you must:
+
+- Reference the schema name in double quotes by using the system case, usually written in uppercase. 
+
+```sql
+SET SCHEMA "DEFAULT"
+```
+{: codeblock}
+
+- Alternatively, reference in quotes with carets to convert to system case.
+
+```sql
+SET SCHEMA "^default^";
+```
+{: codeblock}
+
+For more information on {{site.data.keyword.netezza_short}} keywords, see [SQL reserved words and keywords](https://www.ibm.com/docs/en/netezza?topic=dud-sql-reserved-words-keywords-2).
