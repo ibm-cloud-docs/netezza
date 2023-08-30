@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-08-30"
 
 keywords: web console, query editor, SQL
 
@@ -22,26 +22,121 @@ subcollection: netezza
 
 With the query editor, you can run SQL queries on a specific host and database. You can also save any of the queries that you create.
 {: shortdesc}
+ 
 
-## Creating queries
+## Running queries with the query editor
 {: #create-queries}
 
 1. Go to **Query editor**.
 1. From **Data objects**, select the database and schema in which you want to run the query.  
-If you do not pick a schema, the default database schema is selected.
+   If you do not pick a database, the default database `SYSTEM` is selected.
+   If you select a database but do not pick a schema, the default schema for the database is selected.
 
-1. Type the SQL query that you want to run.  
-If your query is a select statement, a Set Limit option shows up to allow you to specify how many rows of data you would like to retrieve. The default is No limit.
+1. Type the SQL statements that you want to run.  
+    In the query editor, each SQL statement is separated by the default statement separator - a semicolon (`;`). When you run a query with the default setting, each SQL statement is run in its own session.
 
-   In the **Worksheet settings** you can specify your **Default maximum number of rows limit in result**. If you decide, however, to add a limit clause in a select statement that is greater than your **Default maximum number of rows limit in result**, for example: `select * from table1 limit 10;`, the **Results** field shows the smaller value of these two parameters.
+     Example:
+     
+     ```sql
+     set schema A1; create table TBL1 (COL1 int); 
+     ```
+     The statements from the example run in 2 separate sessions. 
 
-   In the **Worksheet settings** you can also specify the **Statement separator** you want to use. A semicolon (";") is the default **Statement separator** and you must change it to an ampersand ("&") when your queries contain semicolons (";") to avoid errors.    
+      - If you want to run queries that contain semicolons in a single session, see [Running SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries).  
+      - If you want to group queries that contain semicolons to run them in variuos sessions, see [Running multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries).
 
-1. When you input the information, you can do one of the following:
+1. If your query is a select statement, a `Set Limit` option shows up. With `Set Limit`, you can specify how many rows of data to retrieve. The default is `No limit`. In **Workheet settings**, you can add a limit clause in a select statement that is greater than your **Default maximum number of rows limit in result**.  
+
+   Example:
+   ```sql
+   select * from table1 limit 10;
+   ```
+   
+   The **Results** field shows the smaller value of these two parameters.
+
+1. Choose one of the following options:
 
    - Click **Run** to run the query.  
-     The results of the query are displayed in the panel.
+     The results of the query are displayed in the panel in one block.
 
+   - Click the floppy disk icon that is in the `SQLworksheet` toolbar to save the query as a template.  
+     The saved query is added to **Saved queries** and **Queries > Recent Queries**.
+
+   - Click **Clear** to clear the query.
+
+### Running multiple SQL statements in a single session
+{: #single-session-queries}
+
+1. Go to **Query editor**.
+1. From **Data objects**, select the database and schema in which you want to run the query.  
+   If you do not pick a database, the default database `SYSTEM` is selected.
+   If you select a database but do not pick a schema, the default schema for the database is selected.
+
+1. Type the SQL statements that you want to run.  
+   
+   Example:
+
+   ```sql
+   set schema A1; create table TBL1 (COL1 int); 
+   ```
+
+1. In **Worksheet settings**, set the `Statement separator` field to empty or type a separator other than the semicolon `;`. For example, you can pick the ampersand `&`.  
+   When you use an empty separator or a separator other than the default separator, all the statements in the current worksheet can run together, in the same session. Now, the 2 statements from the example from step 3 run in 1 session.
+
+3. If your query is a select statement, a `Set Limit` option shows up. With `Set Limit`, you can specify how many rows of data to retrieve. The default is `No limit`. Add a limit clause in a select statement that is greater than your **Default maximum number of rows limit in result**.  
+   
+   Example:
+
+   ```sql
+   select * from table1 limit 10;
+   ```
+   
+   The **Results** field shows the smaller value of these two parameters.
+
+1. Choose one of the following options:
+
+   - Click **Run** to run the query.  
+     The results of the query are displayed in the panel in one block.
+
+   - Click the floppy disk icon that is in the `SQLworksheet` toolbar to save the query as a template.  
+     The saved query is added to **Saved queries** and **Queries > Recent Queries**.
+
+   - Click **Clear** to clear the query.
+
+### Running multiple SQL statements in different sessions
+{: #multiple-sessions-queries}
+
+1. Go to **Query editor**.
+1. From **Data objects**, select the database and schema in which you want to run the query.  
+   If you do not pick a database, the default database `SYSTEM` is selected.
+   If you select a database but do not pick a schema, the default schema for the database is selected.
+
+1. Type the SQL statements that you want to run.  
+
+   Example:
+
+   ```sql
+   set schema A1; create table TBL1 (COL1 int) & select * from A1.TBL1
+   ```
+
+1. In **Worksheet settings**, set the `Statement separator` field to a separator to other than the semicolon `;`. For example, you can pick the ampersand `&`.  
+   Now, in the example from step 3, the first 2 statements run in the same session, and the third statement runs in a separate session. `&` is used to separate the third statement in the worksheet. 
+
+3. If your query is a select statement, a `Set Limit` option shows up. With `Set Limit`, you can specify how many rows of data to retrieve. The default is `No limit`. Add a limit clause in a select statement that is greater than your **Default maximum number of rows limit in result**.  
+   
+   Example:
+
+   ```sql
+   select * from table1 limit 10;
+   ```
+   
+   The **Results** field shows the smaller value of these two parameters.
+
+1. Choose one of the following options:
+
+   - Click **Run** to run the query.  
+     The results of the query are displayed in the panel in multiple blocks (depending on the number of sessions that you chose to run).
+ 
    - Click the floppy disk icon that is in the `SQLworksheet` toolbar to save the query as a template.  
      The saved query is added to **Saved queries** and **Queries > Recent Queries**.
 
