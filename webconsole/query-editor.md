@@ -4,7 +4,7 @@ copyright:
   years: 2023
 lastupdated: "2023-08-30"
 
-keywords: web console, query editor, SQL
+keywords: web console, query editor, SQL, running queries with the query editor, queries that contain semicolons in a single session
 
 subcollection: netezza
 
