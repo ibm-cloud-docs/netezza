@@ -40,6 +40,6 @@ In technology preview:
 Use cases for {{site.data.keyword.lakehouse_short}} include:
 
 - [Integrating {{site.data.keyword.netezza_short}} with {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-integratenps_watsonx.data).
-- [Running queries against data that is stored in {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-querying_datalakehouse).
-- [Ingesting data from {{site.data.keyword.lakehouse_short}} into {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-ingest_datalakehouse).
-- [Querying both local and remote data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-merging_datalakehouse).
+- [Running queries against data that is stored in {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-querying_watsonx.data).
+- [Ingesting data from {{site.data.keyword.lakehouse_short}} into {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-ingest_watsonx.data).
+- [Querying both local and remote data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-merging_watsonx.data).
