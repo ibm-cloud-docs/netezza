@@ -30,11 +30,12 @@ subcollection: netezza
 
 - **DRAFT COMNNET: WIP Need more details.** NPS 11.2.2.9 DLH GA GA items specifically and NPS associated functionality
 Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.  
-For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).
+For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).  
+You can also view your data lakehouse objects with the web console.
 
 - **DRAFT COMNNET: WIP Need more details.** api changes for nzrest compatibility
 
-- Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries).
+- Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console. 
 
 ### Fixes
 {: #faug2023}
