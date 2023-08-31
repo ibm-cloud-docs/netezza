@@ -34,6 +34,8 @@ For more information, see [Querying data from {{site.data.keyword.lakehouse_shor
 
 - **DRAFT COMNNET: WIP Need more details.** api changes for nzrest compatibility
 
+- Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries).
+
 ### Fixes
 {: #faug2023}
 
