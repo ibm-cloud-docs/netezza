@@ -38,7 +38,11 @@ With the query editor, you can run SQL queries on a specific host and database. 
      Example:
      
      ```sql
-     set schema A1; create table TBL1 (COL1 int); 
+     SELECT * FROM "TESTDB"."ADMIN"."TEST_TABLE" LIMIT 10;
+     
+     INSERT INTO "TESTDB"."ADMIN"."TEST_TABLE" ("COL1") VALUES (1);
+     
+     SELECT * FROM "TESTDB"."ADMIN"."TEST_TABLE" LIMIT 10;
      ```
      The statements from the example run in 2 separate sessions. 
 
@@ -57,6 +61,7 @@ With the query editor, you can run SQL queries on a specific host and database. 
 1. Choose one of the following options:
 
    - Click **Run** to run the query.  
+     You can run selection, run to cursor, or run from cursor.
      The results of the query are displayed in the panel in one block.
 
    - Click the floppy disk icon that is in the `SQLworksheet` toolbar to save the query as a template.  
@@ -96,6 +101,7 @@ With the query editor, you can run SQL queries on a specific host and database. 
 1. Choose one of the following options:
 
    - Click **Run** to run the query.  
+     You can run selection, run to cursor, or run from cursor.
      The results of the query are displayed in the panel in one block.
 
    - Click the floppy disk icon that is in the `SQLworksheet` toolbar to save the query as a template.  
@@ -135,6 +141,7 @@ With the query editor, you can run SQL queries on a specific host and database. 
 1. Choose one of the following options:
 
    - Click **Run** to run the query.  
+     You can run selection, run to cursor, or run from cursor.
      The results of the query are displayed in the panel in multiple blocks (depending on the number of sessions that you chose to run).
  
    - Click the floppy disk icon that is in the `SQLworksheet` toolbar to save the query as a template.  
