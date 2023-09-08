@@ -30,7 +30,7 @@ For more information, see:
 - [CREATE DATABASE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-database-3)
 - [CREATE SCHEMA](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-schema-3)
 - [CREATE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-table-3)
-- [DESCRIBE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe-table)
+- [DESCRIBE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe)
 - [SELECT QUERIES](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-select-retrieve-rows-3)
 - Backup and restore is only supported for the login and reference information, not the data itself.**draft comment: TBC in https://github.ibm.com/cloud-docs/netezza/issues/157**
 - AWS S3, IBM COS, minIO data sources are available as storage options or a data lake database.
