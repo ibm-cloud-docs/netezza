@@ -37,9 +37,10 @@ For more information, see:
 
 The following functionalities are not supported:
 
-- Creation of Netezza native objects (for example materialized views and sequences) in schemas other than NETEZZA_SCHEMA
+- Creation of {{site.data.keyword.lakehouse_short}} native objects (for example materialized views and sequences) in schemas other than NETEZZA_SCHEMA
 - Queries which update the contents of tables (Insert, Update, Merge, Truncate)
 - Queries which create, alter or drop tables and schemas
+- Accessing data lake tables that were created by using LZ4 compression format
 - Multi-table transactions
 - Time travel on Iceberg tables
 - `timestamptz` and `UUID` data types
