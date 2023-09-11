@@ -32,6 +32,8 @@ SELECT col from <schema_name>.<tablename>
 
 SELECT col from <schema_name><tablename>
 
+<b>SELECT col from <schema_name>.<tablename></b>
+
 For these use cases, these schema names must be quoted in double quotation marks to be used as identifiers.
 
 For example:
