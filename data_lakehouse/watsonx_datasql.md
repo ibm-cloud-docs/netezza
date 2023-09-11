@@ -42,4 +42,4 @@ The following functionalities are not supported:
 - Queries which create, alter or drop tables and schemas
 - Multi-table transactions
 - Time travel on Iceberg tables
-- `timestamptz` and `uuid` data types
+- `timestamptz` and `UUID` data types
