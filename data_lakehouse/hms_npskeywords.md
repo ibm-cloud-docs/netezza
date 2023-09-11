@@ -4,7 +4,7 @@ copyright:
   years:  2023
 lastupdated: "2023-09-11"
 
-keywords: data lakehouse, watosnx.data sql commands, netezza data lakehouse, watsonx, watsonx.data, watsonx.data with nps, hms keywords, nps keywords, nps reserved keywords
+keywords: data lakehouse, watsonx.data sql commands, netezza data lakehouse, watsonx, watsonx.data, watsonx.data with nps, hms keywords, nps keywords, nps reserved keywords
 subcollection: netezza
 
 ---
