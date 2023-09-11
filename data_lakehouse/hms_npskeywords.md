@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-08-25"
+lastupdated: "2023-09-11"
 
 keywords: data lakehouse, watosnx.data sql commands, netezza data lakehouse, watsonx, watsonx.data, watsonx.data with nps, hms keywords, nps keywords, nps reserved keywords
 subcollection: netezza
@@ -24,7 +24,7 @@ subcollection: netezza
 # Schema names in Hive Metastore (HMS) that are NPS reserved keywords
 {: #hms_npskeywords.data}
 
-If there are schema names in Hive Metastore that are NPS keywords, you cannot use those keywords as identifiers when using the schema either in **SET SCHEMA <name>** or cross schema reference in **SELECT col from <schema_name>.<tablename>** queries.
+If there are schema names in Hive Metastore that are NPS keywords, you cannot use those keywords as identifiers when using the schema either in **SET SCHEMA <name>** or cross schema reference in SELECT col from <schema_name>.<tablename> queries.
 
 For these use cases, these schema names must be quoted in double quotation marks to be used as identifiers.
 
