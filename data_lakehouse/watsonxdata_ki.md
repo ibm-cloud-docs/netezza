@@ -23,3 +23,9 @@ subcollection: netezza
 
 # {{site.data.keyword.lakehouse_short}} known issues
 {: #watsonx.data_knownissues}
+
+You might experience the following issues while using {{site.data.keyword.lakehouse_short}} with {{site.data.keyword.netezza_short}}:
+
+- Boolean fields written with RLE encoding cannot be read and result in error.
+
+`ERROR:  IOError: Unknown encoding type. : Encountered a problem during batch read:`
