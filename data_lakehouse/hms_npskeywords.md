@@ -38,8 +38,6 @@ SELECT col from <schema_name>.<tablename>
 ```
 {: codeblock}
 
- **SET SCHEMA name** or cross schema reference in **SELECT col from schema_name.tablename** queries.
-
 For these use cases, these schema names must be quoted in double quotation marks to be used as identifiers.
 
 For example:
