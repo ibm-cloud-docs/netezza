@@ -24,7 +24,7 @@ subcollection: netezza
 # Schema names in Hive Metastore (HMS) that are NPS reserved keywords
 {: #hms_npskeywords.data}
 
-If there are schema names in Hive Metastore that are NPS keywords, you cannot use those keywords as identifiers when using the schema either in **SET SCHEMA <name>** or cross schema reference in **SELECT col from <schema_name> <tablename>** queries.
+If there are schema names in Hive Metastore that are NPS keywords, you cannot use those keywords as identifiers when using the schema either in **SET SCHEMA <name>** or cross schema reference in **SELECT col from <schema_name>.<tablename>** queries.
 
 SELECT col from <schema_name> <tablename>
 
