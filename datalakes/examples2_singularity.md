@@ -86,7 +86,7 @@ a) Create an external table for the data that you want to load (`YELLOW_TAXI_JAN
    Example:
 
    ```sql
-   create EXTERNAL table YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATASOURCE
+   create EXTERNAL table YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATALAKE
    using ( 
      DATAOBJECT ('/yellow_tripdata_2022-01.parquet') FORMAT 'PARQUET' 
    );
