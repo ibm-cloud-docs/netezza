@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-24"
+lastupdated: "2023-10-05"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -48,7 +48,6 @@ Other regions where the service is available on AWS include:
 
 - {{site.data.keyword.netezza_short}} 11.2.2.8
 - Web console 4.0.15
-- Red Hat OpenShift Container Platform 4.10.54
 
 ### Known issues
 {: #ki1july2023}
