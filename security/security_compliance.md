@@ -20,14 +20,14 @@ subcollection: netezza
 # Security and compliance
 {: #security_compliance}
 
-{{site.data.keyword.netezza_full}} (NPSaaS) ensures that your data is secured and protected by adhering to the following security and compliance standards.
+{{site.data.keyword.netezza_full}} ensures that your data is secured and protected by adhering to the following security and compliance standards.
 
 ## Secure access control
 {: #access_control}
 
 **Authentication**
 
-Both [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoint) and [private](/docs/netezza?topic=netezza-connecting-overview#private_endpoint) NPSaaS endpoints are accessed through an HTTPS API. Where the API endpoint requires it, the user is authenticated for every HTTPS request that NPSaaS receives.
+Both [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoint) and [private](/docs/netezza?topic=netezza-connecting-overview#private_endpoint) {{site.data.keyword.netezza_short}} endpoints are accessed through an HTTPS API. Where the API endpoint requires it, the user is authenticated for every HTTPS request that {{site.data.keyword.netezza_short}} receives.
 
 **Encryption**
 
@@ -42,7 +42,7 @@ At rest, content is encrypted within the Cloud Data Center in the following ways
 ## ISO 27017, ISO 27018
 {: #iso}
 
-NPSaaS conforms to the security controls and technical and organizational measures (TOMs) that are defined in the following documents:
+{{site.data.keyword.netezza_short}} conforms to the security controls and technical and organizational measures (TOMs) that are defined in the following documents:
 
 - [ISO 27001](https://www.iso.org/standard/27001)
 - [ISO 27017](https://www.iso.org/standard/43757.html)
@@ -53,4 +53,4 @@ For more information, see the [IBM Compliance Support page](https://www.ibm.com/
 ## HIPAA
 {: #hipaa}
 
-NPSaaS implemented the necessary controls commensurate with the Health Insurance Portability and Accountability Act of 1996 (HIPAA) Security and Privacy Rule requirements. The controls include appropriate administrative, physical, and technical safeguards that are required of business associates in 45 CFR Part 160 and Subparts A and C of Part 164.
+{{site.data.keyword.netezza_short}} implemented the necessary controls commensurate with the Health Insurance Portability and Accountability Act of 1996 (HIPAA) Security and Privacy Rule requirements. The controls include appropriate administrative, physical, and technical safeguards that are required of business associates in 45 CFR Part 160 and Subparts A and C of Part 164.
