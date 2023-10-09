@@ -27,12 +27,12 @@ subcollection: netezza
 
 **Authentication**
 
-Both (public)[/docs/netezza?topic=netezza-connecting-overview#public_endpoint] and (private)[/docs/netezza?topic=netezza-connecting-overview#private_endpoint] NPSaaS endpoints are accessed through an HTTPS API. Where the API endpoint requires it, the user is authenticated for every HTTPS request that NPSaaS receives.
+Both [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoint) and [private](/docs/netezza?topic=netezza-connecting-overview#private_endpoint) NPSaaS endpoints are accessed through an HTTPS API. Where the API endpoint requires it, the user is authenticated for every HTTPS request that NPSaaS receives.
 
 **Encryption**
 
 When transmitted, content is encrypted on any public networks by using TLS 1.2 or later.  
-For more information, see (Data security and encryption)[/docs/netezza?topic=netezza-data-encryption].
+For more information, see [Data security and encryption](/docs/netezza?topic=netezza-data-encryption).
 
 At rest, content is encrypted within the Cloud Data Center in the following ways:
 
@@ -44,11 +44,11 @@ At rest, content is encrypted within the Cloud Data Center in the following ways
 
 NPSaaS conforms to the security controls and technical and organizational measures (TOMs) that are defined in the following documents:
 
-- (ISO 27001)[https://www.iso.org/standard/27001]
-- (ISO 27017)[https://www.iso.org/standard/43757.html]
-- (ISO 27018)[https://www.iso.org/standard/76559.html]
+- [ISO 27001](https://www.iso.org/standard/27001)
+- [ISO 27017](https://www.iso.org/standard/43757.html)
+- [ISO 27018](https://www.iso.org/standard/76559.html)
 
-For more information, see the (IBM Compliance Support page)[https://www.ibm.com/support/pages/compliance-request-tool/search?q=IBM%20Netezza%20Performance%20Server].
+For more information, see the [IBM Compliance Support page](https://www.ibm.com/support/pages/compliance-request-tool/search?q=IBM%20Netezza%20Performance%20Server).
 
 ## HIPAA
 {: #hipaa}
