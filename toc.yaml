@@ -160,13 +160,14 @@ toc:
       - topicgroup:
           label: Security
           topics:
+          - security/security_compliance.md
           - security/architecture-workload-isolation.md
           - security/endpoints.md
           - security/encryption.md
           - security/iam-docs.md
           - reference/network_policies.md
           - link:
-              label: Security and access control
+              label: For security experts
               href: https://www.ibm.com/docs/en/netezza?topic=service-netezza-performance-server-security-experts
       - link:
           label: Analytics
