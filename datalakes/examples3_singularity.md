@@ -85,7 +85,7 @@ The `DATAOBJECT` argument must reference a single file in the `parquet` format. 
 Example:
 
 ```sql
-create EXTERNAL table YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATASOURCE
+create EXTERNAL table YELLOW_TAXI_JANUARY_2022 on EXAMPLEDATALAKE
 using ( 
   DATAOBJECT ('/yellow_tripdata_2022-01.parquet') FORMAT 'PARQUET' 
 );
