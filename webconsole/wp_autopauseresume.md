@@ -20,7 +20,7 @@ subcollection: netezza
 # Auto-pausing and auto-resuming
 {: #autopnr-console}
 
-On the *Workload patterns* page, you can enable or disable your **Auto pause** operations and check their **History**.  
+On the *Workload patterns* page, you can enable or disable your **Auto-pause** operations and check their **History**.  
 The auto-pause and auto-resume feature is not enabled by default, you have to turn it on to start using it.
 
 ## Enabling auto-pause
@@ -29,7 +29,7 @@ The auto-pause and auto-resume feature is not enabled by default, you have to tu
 1. Go to **Workload patterns**.
 1. Click **Pause/resume**.
 1. Type the name for your auto-pause operation.
-1. Select the **Auto pause** checkbox.
+1. Select the **Auto-pause** checkbox.
 1. Click **Confirm**.
 
 ## Disabling auto-pause
