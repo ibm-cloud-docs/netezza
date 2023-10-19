@@ -2,9 +2,9 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-10-05"
+lastupdated: "2023-10-19"
 
-keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS 
+keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
 subcollection: netezza
 
@@ -76,6 +76,13 @@ Other regions where the service is available on AWS include:
 {: #kijuly12023}
 
 - Databases, schemas, and table names containing a dot character (".") do not show in the time travel statistics and graphs when you set the retention time interval to a nonzero value.
+- On demand (ad hoc) backup and restore for multiple large databases at one go is successful for only a few databases in the batch. For the rest of the databases you get an authentication error.
+
+  Workaround:
+
+  - Take a backup of a single large database at a time.
+  - Restore a single large database at a time.
+
 ## March 2023
 {: #march2023}
 
