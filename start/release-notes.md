@@ -11,8 +11,8 @@ subcollection: netezza
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
+{:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -22,6 +22,32 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
+## November 15, 2023
+{: #nov2023}
+
+### New features and enhancements
+{: #nfnov2023}
+
+- **DRAFT COMMENT: WIP Need more details.** NPS 11.2.2.10
+A new Scheduler type column is introduced in History page for past records.
+Scheduler types:
+- ad-hoc: Schedules executed within 5 minutes of creation.
+- scheduled: Schedules executed at a later time.
+
+### Fixes
+{: #fnov2023}
+
+### Components
+{: #compsnov2023}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.10
+- Web console 4.0.x
+
+### Known issues
+{: #kinov2023}
+
+- For expansion failure due to node procurement issues, the Ops team will restore the system to an online state using pre-expansion configuration. The Ops team will contact once the required nodes become available.
+
 ## August 28, 2023
 {: #aug2023}
 
@@ -29,13 +55,13 @@ subcollection: netezza
 {: #nfaug2023}
 
 - **DRAFT COMNNET: WIP Need more details.** NPS 11.2.2.9 DLH GA GA items specifically and NPS associated functionality
-Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.  
-For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).  
+Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.
+For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).
 You can also view your data lakehouse objects with the web console.
 
 - **DRAFT COMNNET: WIP Need more details.** api changes for nzrest compatibility
 
-- Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console. 
+- Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console.
 
 ### Fixes
 {: #faug2023}
@@ -45,13 +71,13 @@ You can also view your data lakehouse objects with the web console.
 
 - {{site.data.keyword.netezza_short}} 11.2.2.9
 - Web console 4.0.16
-- JDBC driver (on all platforms)  
+- JDBC driver (on all platforms)
    MD5 Auth requests are deprecated. All MD5 connections are dropped. https://jsw.ibm.com/browse/NEXTGEN-18693
 
-- OLEDB driver (only on Windows)  
+- OLEDB driver (only on Windows)
    TLS1.2 protocol is given preference for SSL connections. https://jsw.ibm.com/browse/NEXTGEN-22201
 
-- All Windows supported drivers (ODBC & OLEDB)  
+- All Windows supported drivers (ODBC & OLEDB)
    Visual Studio VC++ runtime redistributables are upgraded to 2022. https://jsw.ibm.com/browse/NEXTGEN-25381
 
 ### Known issues
@@ -64,10 +90,10 @@ You can also view your data lakehouse objects with the web console.
 ### New features and enhancements
 {: #nf1july2023}
 
-- Technology preview support for **SELECT** operations from Apache Iceberg and Hive tables is available on {{site.data.keyword.netezza_short}} on AWS. Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.  
+- Technology preview support for **SELECT** operations from Apache Iceberg and Hive tables is available on {{site.data.keyword.netezza_short}} on AWS. Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.
 For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).
 
-- {{site.data.keyword.netezza_short}} on AWS is now available in Europe (Frankfurt) region.    
+- {{site.data.keyword.netezza_short}} on AWS is now available in Europe (Frankfurt) region.
 Other regions where the service is available on AWS include:
 
    - North America: US East (Northern Virginia), US West (Northern California), and Canada (Central).
@@ -100,7 +126,7 @@ Other regions where the service is available on AWS include:
 - {{site.data.keyword.netezza_short}} is now enabled on Amazon Web Services (AWS) for US-East-1 region. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
 - On AWS, smart scaling with confidence score and seed models display is now available in {{site.data.keyword.netezza_short}} web console. For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling_intro).
 - On AWS, a new entry-level workload contour called NC-Start is available to support lower volume BI and UAT workloads. You can scale this instance to NC0 performance profiles seamlessly as your workload increases. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
-- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt).  
+- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt).
 - INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2).
 
 ### Components
@@ -177,7 +203,7 @@ Other regions where the service is available on AWS include:
 ### Known issues
 {: #kifeb2023}
 
-If a common table expression or derived table query contains column names or column aliases, which begin with an underscore, Netezza Performance Server deletes these columns in the query result set.  
+If a common table expression or derived table query contains column names or column aliases, which begin with an underscore, Netezza Performance Server deletes these columns in the query result set.
 If there are no columns to display, Netezza Performance Server returns the following error.
 
 ```sh
