@@ -116,6 +116,9 @@ Other regions where the service is available on AWS include:
 {: #ki1july2023}
 
 - Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization.
+- Ops team will apply below workaround on your system when backup or restore process is killed and is not displayed on console:
+   update _t_backup_history set status=2, batchstatus=2 where status=0  -> If backup aborted
+   update _t_restore_history set status=2, batchstatus=2 where status=0 -> If restore aborted
 
 ## July 10, 2023
 {: #july12023}
