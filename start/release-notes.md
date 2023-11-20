@@ -19,7 +19,7 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Release notes for {{site.data.keyword.netezza_full}}
+# Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
 
 ## December 8, 2023
@@ -28,7 +28,7 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfdec2023}
 
-- New {{site.data.keyword.netezza_short}} functionalities associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
+- New {{site.data.keyword.netezza_full}} functionalities associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
 You can also view your data lakehouse objects with the web console.
 
 - **DRAFT COMNNET: WIP Need more details.** api changes for nzrest compatibility
