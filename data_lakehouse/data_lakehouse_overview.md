@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-11-20"
 
 keywords: netezza data lakehouse, metastore, netezza with watsonx.data
 subcollection: netezza
@@ -30,6 +30,8 @@ In technology preview:
 - You must use Apache Iceberg tables with the `parquet` file format.
 - Your queries are limited to **SELECT** operations.
 - Iceberg tables cannot be read if they were altered and underwent Iceberg schema evolution.
+- LZ4 data compression format is not supported.
+- **NETEZZA_SCHEMA** is the default schema when you connect to a data lake database. It is a regular schema which contains Netezza objects like tables, external tables, and sequences. **NETEZZA_SCHEMA**, **DEFINITON_SCHEMA**, and **INFORMATION_SCHEMA** schema names are all reserved, and schemas of those names in the metastore are not exposed to {{site.data.keyword.netezza_short}} users.
 - The following datatypes are not supported:
   - `timestamptz`
   - `uuid`

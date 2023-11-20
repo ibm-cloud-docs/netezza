@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-11-20"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -22,26 +22,24 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-## August 28, 2023
-{: #aug2023}
+## December 8, 2023
+{: #dec2023}
 
 ### New features and enhancements
-{: #nfaug2023}
+{: #nfdec2023}
 
-- **DRAFT COMNNET: WIP Need more details.** NPS 11.2.2.9 DLH GA GA items specifically and NPS associated functionality
-Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.  
-For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).  
+- New {{site.data.keyword.netezza_short}} functionalities associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
 You can also view your data lakehouse objects with the web console.
 
 - **DRAFT COMNNET: WIP Need more details.** api changes for nzrest compatibility
 
-- Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console. 
+- Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console.
 
 ### Fixes
-{: #faug2023}
+{: #fdec2023}
 
 ### Components
-{: #compsaug2023}
+{: #compsdec2023}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.9
 - Web console 4.0.16
@@ -55,8 +53,9 @@ You can also view your data lakehouse objects with the web console.
    Visual Studio VC++ runtime redistributables are upgraded to 2022. https://jsw.ibm.com/browse/NEXTGEN-25381
 
 ### Known issues
-{: #kiaug2023}
+{: #kidec2023}
 
+- For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues)
 
 ## July 24, 2023
 {: #july2023}
