@@ -83,7 +83,6 @@ Other regions where the service is available on AWS include:
 
 - {{site.data.keyword.netezza_short}} 11.2.2.8
 - Web console 4.0.15
-- Red Hat OpenShift Container Platform 4.10.54
 
 ### Known issues
 {: #ki1july2023}
