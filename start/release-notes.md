@@ -19,7 +19,7 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Release notes for {{site.data.keyword.netezza_short}} as a Service
+# Release notes for {{site.data.keyword.netezza_full}}
 {: #my-service-relnotes}
 
 ## December 8, 2023
@@ -55,7 +55,7 @@ You can also view your data lakehouse objects with the web console.
 ### Known issues
 {: #kidec2023}
 
-- For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues)
+- For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues).
 
 ## July 24, 2023
 {: #july2023}
