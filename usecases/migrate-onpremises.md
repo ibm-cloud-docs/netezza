@@ -38,7 +38,7 @@ Follow these steps to migrate a backup image take on {{site.data.keyword.netezza
    ```
    {: codeblock}
 
-   Where the `-unique-id` flag's value is the cloud directory structure following the bucket to where the backup image (starting NPS directory) is stored. Since {{site.data.keyword.netezza_short}} controls backup/restore from the {{site.data.keyword.netezza_short}} web console, {{site.data.keyword.netezza_short}} creates a directory in the bucket named the same as the namespace name and puts the corresponding backup images in that directory. So the default {{site.data.keyword.netezza_short}} `UNIQUE-ID` is the namespace name, but if you are transferring backups from a filesystem to the bucket in the cloud, the `BACKUP-UNIQUE-ID` value is the path to the directory you store the backups in.
+   Where the `-unique-id` flag's value is the cloud directory structure following the bucket to where the backup image (starting NPS directory) is stored. Since {{site.data.keyword.netezza_short}} controls backup/restore from the {{site.data.keyword.netezza_short}} web console, {{site.data.keyword.netezza_short}} creates a directory in the bucket that is named the same as the namespace name and puts the corresponding backup images in that directory. So, the default {{site.data.keyword.netezza_short}} `UNIQUE-ID` is the namespace name, but if you are transferring backups from a filesystem to the bucket in the cloud, the `BACKUP-UNIQUE-ID` value is the path to the directory you store the backups in.
 
 1. Restore the backup by using the web console.
 
@@ -49,13 +49,15 @@ Follow these steps to migrate a backup image take on {{site.data.keyword.netezza
    - By using `az` connector:
 
    ```sql
-   ./nz nzrestore -v -db <targetdbname> -sourcedb <targetdbname -backupset <> -npshost <> -connector az -connectorArgs "UNIQUE_ID=<>:STORAGE_ACCOUNT=<>:KEY=<>:CONTAINER=<>:REGION=<>:BLOCK_SIZE_MB=25"
+   ./nz nzrestore -v -db <targetdbname> -sourcedb <targetdbname -backupset <> -npshost <> -connector az -connectorArgs "UNIQUE_ID=<>:STORAGE_ACCOUNT=<>:KEY=<>:CONTAINER=<>:REGION=<>:BLOCK_SIZE_MB=25" -u admin -pw <XXXX> -npshost <NPS HOSTNAME>
    ```
    {: codeblock}
 
    - For S3:
 
    ```sql
-   nzrestore -v -db <> -npshost <> -streams AUTO -connector s3 -connectorArgs BUCKET_URL=<>:UNIQUE_ID=<>:ACCESS_KEY_ID=<>:SECRET_ACCESS_KEY=<>:DEFAULT_REGION=<>
+   nzrestore -v -db <> -npshost <> -streams AUTO -connector s3 -connectorArgs BUCKET_URL=<>:UNIQUE_ID=<>:ACCESS_KEY_ID=<>:SECRET_ACCESS_KEY=<>:DEFAULT_REGION=<> -u admin -pw <XXXX> -npshost <NPS HOSTNAME>
    ```
    {: codeblock}
+
+   Where the `<NPS HOSTNAME>` is hostname that is specified in `/nz/data/config/backupHostname.txt` where backup was taken.
