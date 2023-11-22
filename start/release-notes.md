@@ -22,6 +22,38 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
+## November 15, 2023
+{: #nov2023}
+
+### Fixes
+{: #f1nov2023}
+
+- APIs are updated from V1 to V2 to avoid disruptions.
+
+### Components
+{: #comps1nov2023}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.8-IF4
+- Web console 4.0.15
+
+### Known issues
+{: #ki1nov2023}
+
+- The console might not display an abort confirmation when the backup or restore process is aborted and might show that the operation is still in progress. Apply the following workaround on your system to overcome this issue.
+   - If backup aborted
+
+      ```sql
+      update _t_backup_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
+
+   - If restore aborted
+
+      ```sql
+      update _t_restore_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
+
 ## July 24, 2023
 {: #july2023}
 
