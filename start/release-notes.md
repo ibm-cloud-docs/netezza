@@ -28,7 +28,7 @@ subcollection: netezza
 ### Fixes
 {: #f1nov2023}
 
-- APIs are updated from V1 to V2 to avoid disruptions.
+- Updated APIs from V1 to V2 to avoid unauthorized access.
 
 ### Components
 {: #comps1nov2023}
