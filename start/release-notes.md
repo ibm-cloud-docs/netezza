@@ -22,13 +22,13 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}} as a Service
 {: #my-service-relnotes}
 
-## November 15, 2023
+## November 9, 2023
 {: #nov2023}
 
 ### Fixes
 {: #f1nov2023}
 
-- Updated APIs from V1 to V2 to avoid unauthorized access.
+- Updated APIs for IBM cloud secret manager.
 
 ### Components
 {: #comps1nov2023}
