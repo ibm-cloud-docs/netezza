@@ -11,8 +11,8 @@ subcollection: netezza
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
+{:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -57,16 +57,48 @@ You can also view your data lakehouse objects with the web console.
 
 - For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues).
 
+## November 9, 2023
+{: #nov2023}
+
+### Fixes
+{: #f1nov2023}
+
+- Updated APIs for IBM cloud secret manager.
+
+### Components
+{: #comps1nov2023}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.8-IF4
+- Web console 4.0.15
+
+### Known issues
+{: #ki1nov2023}
+
+- The console might not display an abort confirmation when the backup or restore process is aborted and might show that the operation is still in progress. Apply the following workaround on your system to overcome this issue.
+   - If backup aborted
+
+      ```sql
+      update _t_backup_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
+
+   - If restore aborted
+
+      ```sql
+      update _t_restore_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
+
 ## July 24, 2023
 {: #july2023}
 
 ### New features and enhancements
 {: #nf1july2023}
 
-- Technology preview support for **SELECT** operations from Apache Iceberg and Hive tables is available on {{site.data.keyword.netezza_short}} on AWS. Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.  
+- Technology preview support for **SELECT** operations from Apache Iceberg and Hive tables is available on {{site.data.keyword.netezza_short}} on AWS. Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.
 For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).
 
-- {{site.data.keyword.netezza_short}} on AWS is now available in Europe (Frankfurt) region.    
+- {{site.data.keyword.netezza_short}} on AWS is now available in Europe (Frankfurt) region.
 Other regions where the service is available on AWS include:
 
    - North America: US East (Northern Virginia), US West (Northern California), and Canada (Central).
@@ -88,6 +120,20 @@ Other regions where the service is available on AWS include:
 {: #ki1july2023}
 
 - Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization.
+- The console might not display an abort confirmation when the backup or restore process is aborted and might show that the operation is still in progress. Apply the following workaround on your system to overcome this issue.
+   - If backup aborted
+
+      ```sql
+      update _t_backup_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
+
+   - If restore aborted
+
+      ```sql
+      update _t_restore_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
 
 ## July 10, 2023
 {: #july12023}
@@ -98,7 +144,7 @@ Other regions where the service is available on AWS include:
 - {{site.data.keyword.netezza_short}} is now enabled on Amazon Web Services (AWS) for US-East-1 region. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
 - On AWS, smart scaling with confidence score and seed models display is now available in {{site.data.keyword.netezza_short}} web console. For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling_intro).
 - On AWS, a new entry-level workload contour called NC-Start is available to support lower volume BI and UAT workloads. You can scale this instance to NC0 performance profiles seamlessly as your workload increases. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
-- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt).  
+- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt).
 - INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2).
 
 ### Components
@@ -111,6 +157,13 @@ Other regions where the service is available on AWS include:
 {: #kijuly12023}
 
 - Databases, schemas, and table names containing a dot character (".") do not show in the time travel statistics and graphs when you set the retention time interval to a nonzero value.
+- On demand (ad hoc) backup and restore for multiple large databases at one go is successful for only a few databases in the batch. For the rest of the databases you get an authentication error.
+
+  Workaround:
+
+  - Take a backup of a single large database at a time.
+  - Restore a single large database at a time.
+
 ## March 2023
 {: #march2023}
 
@@ -175,7 +228,7 @@ Other regions where the service is available on AWS include:
 ### Known issues
 {: #kifeb2023}
 
-If a common table expression or derived table query contains column names or column aliases, which begin with an underscore, Netezza Performance Server deletes these columns in the query result set.  
+If a common table expression or derived table query contains column names or column aliases, which begin with an underscore, Netezza Performance Server deletes these columns in the query result set.
 If there are no columns to display, Netezza Performance Server returns the following error.
 
 ```sh
