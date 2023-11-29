@@ -89,7 +89,7 @@ When you are on the **Query history** page, you can do the following:
 
   Click the settings icon next to the **Find query history** field to edit columns.
 
-- View metrics and View statistics status.
+- View metrics and statistics status.
 
 ### Query history columns
 {: #query-history-columns}
