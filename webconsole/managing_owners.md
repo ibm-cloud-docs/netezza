@@ -43,7 +43,7 @@ subcollection: netezza
 To drop an owner, you must be the object owner, the admin user, or have appropriate object privileges. If you don’t have the privilege, you can request your admin to grant it to you.
 
 1. Go to **Databases**.
-1. Select the database in which you want to create a function.
+1. Select the database.
 1. Select an object type and object.  
    For example, *Synonyms*.
 
