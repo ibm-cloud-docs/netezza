@@ -28,13 +28,11 @@ On the page, you can see the most recent 2000 queries.
 
 You do not need to have the administrator privileges to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements. 
 
-## Stored queries
-{: #stored-queries}
 
-### Creating stored queries
-{: #create-stored-queries}
+### Creating queries
+{: #create-queries}
 
-1. Go to **Queries > Stored queries**.
+1. Go to **Queries**.
 1. Type a name for your query.
 1. Select the database in which you want to run the query.
 1. Select the schema where you want to run the query.
@@ -57,16 +55,16 @@ You do not need to have the administrator privileges to view recent queries. You
 
    - Click **Clear** to clear the query.
 
-### Finding stored queries
-{: #find-stored-queries}
+### Finding queries
+{: #find-queries}
 
 1. Go to **Queries > Recent queries**.
 1. Type the name of the query you are looking for in the search bar.
 
-### Deleting stored queries
-{: #delete-stores-queries}
+### Deleting queries
+{: #delete-queries}
 
-1. Go to **Queries > Stored queries**.
+1. Go to **Queries**.
 1. Select a query.
 1. From the overflow menu, click **Remove**.
 1. Confirm your choice by clicking **Remove** again.
@@ -91,7 +89,7 @@ When you are on the **Query history** page, you can do the following:
 
   Click the settings icon next to the **Find query history** field to edit columns.
 
-- View metrics, access the explain graph, explain summary, explain verbose, explain distribution pages, and view the plan file and statistics status.
+- View metrics and View statistics status.
 
 ### Query history columns
 {: #query-history-columns}

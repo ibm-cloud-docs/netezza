@@ -29,8 +29,6 @@ subcollection: netezza
 1. Go to **Databases**
 1. Select the database in which you want to create a view.
 1. Go to **DB Objects > Libraries**.
-1. Click **Create library**.
-1. Select the schema where you want to create a library.
 1. Type a name for the library.  
 1. Specify the external host object filename.
 

@@ -27,7 +27,7 @@ subcollection: netezza
 {: #assign-owner}
 
 1. Go to **Databases**.
-1. Select the database in which you want to create a function.
+1. Select the database.
 1. Select an object type and object.  
    For example, *Synonyms*.
 

@@ -4,8 +4,7 @@ copyright:
   years: 2021
 lastupdated: "2022-12-09"
 
-keywords: web console, current activity
-
+keywords: web console, 
 subcollection: netezza
 
 ---
@@ -17,8 +16,7 @@ subcollection: netezza
 {:important: .important}
 {:note: .note}
 
-# Current activity
-{: #current-activity}
+# {: #current-activity}
 
 ## Queries
 {: #active-queries}
@@ -28,12 +26,9 @@ To see a list of active queries, go to **Current activity > Queries** from the m
 When you select **Queries**, you can do the following:
 - View queries
 - View statistics
-- View graphs
-- View graphs summaries
-- View verbose information
-- View distribution information
 - View plan file
 - View plan details
+- End transactions
 
 You can also export information about queries by clicking **Export** or refresh your view by clicking the refresh button next to **Export**.
 
