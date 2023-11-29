@@ -16,7 +16,8 @@ subcollection: netezza
 {:important: .important}
 {:note: .note}
 
-# {: #current-activity}
+# Current activity
+{: #current-activity}
 
 ## Queries
 {: #active-queries}
