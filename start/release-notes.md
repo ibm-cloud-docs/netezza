@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-20"
+lastupdated: "2023-11-30"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -28,15 +28,12 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfdec2023}
 
-- New {{site.data.keyword.netezza_full}} functionalities associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
+- New {{site.data.keyword.netezza_short}} functionalities associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
 You can also view your data lakehouse objects with the web console.
 
 - **DRAFT COMNNET: WIP Need more details.** api changes for nzrest compatibility
 
 - Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console.
-
-### Fixes
-{: #fdec2023}
 
 ### Components
 {: #compsdec2023}
@@ -56,6 +53,7 @@ You can also view your data lakehouse objects with the web console.
 {: #kidec2023}
 
 - For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues).
+- If you encounter SPU restart issue on AWS,  you must update 'ext4' file and ensure that 'spuVmConfigureDirty' parameter reads 'spuVmConfigureDirty=no'
 
 ## November 9, 2023
 {: #nov2023}
