@@ -53,7 +53,7 @@ You can also view your data lakehouse objects with the web console.
 {: #kidec2023}
 
 - For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues).
-- If you encounter SPU restart issue on AWS,  you must update 'ext4' file and ensure that `spuVmConfigureDirty` parameter reads `spuVmConfigureDirty=no`
+- If you encounter SPU restart issue on AWS,  you must update `ext4` file and ensure that `spuVmConfigureDirty` parameter reads `spuVmConfigureDirty=no`
 
 ## November 9, 2023
 {: #nov2023}
