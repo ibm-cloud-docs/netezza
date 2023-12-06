@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2023
-lastupdated: "2023-07-24"
+lastupdated: "2023-12-06"
 
 keywords: bnr, backup and restore, backup, restore
 
@@ -25,7 +25,7 @@ You can run differential and/or cumulative backups only after you run a full bac
 
 Schedule times of full, differential and cumulative backups of the same set of databases cannot overlap. You must schedule these backups in 30 minutes intervals.
 
-If you want to back up and restore a specific database, you must ensure that:
+If you want to back up and restore a specific database, you must ensure the following:
 
 - From the *Users and groups* view, you select **Users > Object privileges > Database > GLOBAL > List** to show this database.
 - From the *Users and groups* view, you select **Users > Admin privileges > Database > GLOBAL > Backup** to back up this database.
@@ -35,14 +35,14 @@ If you want to back up and restore a specific database, you must ensure that:
 {: #run-backups-ondemand}
 
 1. Go to **Backup and restore > Backup**.
-1. Make sure that a destination bucket for the backups is created.  
-  For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).   
+1. Make sure that a destination bucket for the backups is created.
+  For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).
 
 1. Select a destination bucket for your backup.
-1. Select the backup type.  
+1. Select the backup type.
    You can choose a full, differential or cumulative backup type.
 
-1. Specify the multipart block size value.  
+1. Specify the multipart block size value.
    Multipart block size value is an integer between 50 and 250. The default is 50.
 1. Specify whether you want to back up all databases or select databases.
 1. Click **Back up now**.
@@ -51,20 +51,20 @@ If you want to back up and restore a specific database, you must ensure that:
 {: #schedule-backups}
 
 1. Go to **Backup and restore > Backup**.
-1. Make sure that a destination bucket for the backups is created.  
-   For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).  
+1. Make sure that a destination bucket for the backups is created.
+   For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).
 
 1. Select a destination bucket for your backup.
 1. Select the backup type.
-1. Specify the multipart block size value.  
+1. Specify the multipart block size value.
    Multipart block size value is an integer between 50 and 250. The default is 50.
-   
+
 1. Specify whether you want to back up all databases or select databases.
 1. Check the *Schedule for a later time* box.
 1. Specify the starting date.
 1. Specify the starting hour.
-1. Specify the frequency.  
-   You can choose between daily, weekly, and monthly intervals.  
+1. Specify the frequency.
+   You can choose between daily, weekly, and monthly intervals.
 
 1. Click **Create schedule**.
 
