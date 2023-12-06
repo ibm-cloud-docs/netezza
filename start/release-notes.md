@@ -28,32 +28,32 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfdec2023}
 
-- New {{site.data.keyword.netezza_short}} functionalities associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
+- New {{site.data.keyword.netezza_short}} functionalities that are associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
 You can also view your data lakehouse objects with the web console.
 
-- **DRAFT COMNNET: WIP Need more details.** api changes for nzrest compatibility
-
 - Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console.
+
+- Updated the algorithm to calculate the profile of the day. The calculation is now made by subtracting two subsequent records timestamp values if they are of the same day and appending the `timedelta` to that profile. For each of the day, the system compares which profile has the maximum time duration and declare that profile to be the profile of the day.
 
 ### Components
 {: #compsdec2023}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.9
 - Web console 4.0.16
-- JDBC driver (on all platforms)  
+- JDBC driver (on all platforms)
    MD5 Auth requests are deprecated. All MD5 connections are dropped. https://jsw.ibm.com/browse/NEXTGEN-18693
 
-- OLEDB driver (only on Windows)  
+- OLEDB driver (only on Windows)
    TLS1.2 protocol is given preference for SSL connections. https://jsw.ibm.com/browse/NEXTGEN-22201
 
-- All Windows supported drivers (ODBC & OLEDB)  
+- All Windows supported drivers (ODBC & OLEDB)
    Visual Studio VC++ runtime redistributables are upgraded to 2022. https://jsw.ibm.com/browse/NEXTGEN-25381
 
 ### Known issues
 {: #kidec2023}
 
 - For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues).
-- If you encounter SPU restart issue on AWS,  you must update `ext4` file and ensure that `spuVmConfigureDirty` parameter reads `spuVmConfigureDirty=no`
+- If you encounter SPU restart issue on AWS, you must update `ext4` file and ensure that `spuVmConfigureDirty` parameter reads `spuVmConfigureDirty=no`
 
 ## November 9, 2023
 {: #nov2023}
