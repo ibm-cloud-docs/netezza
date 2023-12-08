@@ -43,7 +43,7 @@ If you want to back up and restore a specific database, you must ensure the foll
    You can choose a full, differential or cumulative backup type.
 
 1. Specify the multipart block size value.
-   Multipart block size value is an integer between 50 and 250. The default is 50.
+   Multipart block size value is an integer between 50 and 100. The default is 50.
 1. Specify whether you want to back up all databases or select databases.
 1. Click **Back up now**.
 
@@ -57,7 +57,7 @@ If you want to back up and restore a specific database, you must ensure the foll
 1. Select a destination bucket for your backup.
 1. Select the backup type.
 1. Specify the multipart block size value.
-   Multipart block size value is an integer between 50 and 250. The default is 50.
+   Multipart block size value is an integer between 50 and 100. The default is 50.
 
 1. Specify whether you want to back up all databases or select databases.
 1. Check the *Schedule for a later time* box.
