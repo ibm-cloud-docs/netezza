@@ -34,7 +34,7 @@ subcollection: netezza
 
 - Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console.
 
-- Updated the algorithm to calculate the profile of the day. The calculation is now made by subtracting two subsequent records timestamp values if they are of the same day and appending the `timedelta` to that profile. For each of the day, the system compares which profile has the maximum time duration and declare that profile to be the profile of the day.
+- Updated the algorithm to calculate the profile of the day. The calculation is now made by subtracting two subsequent records' timestamp values if they are of the same day and appending the `timedelta` to that profile. For each day, the system compares which profile has the maximum time duration and declares that profile to be the profile of the day.
 
 ### Components
 {: #compsdec2023}
