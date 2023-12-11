@@ -42,13 +42,13 @@ subcollection: netezza
 - {{site.data.keyword.netezza_short}} 11.2.2.9
 - Web console 4.0.16
 - JDBC driver (on all platforms)
-   MD5 Auth requests are deprecated. All MD5 connections are dropped. https://jsw.ibm.com/browse/NEXTGEN-18693
+   MD5 Auth requests are deprecated. All MD5 connections are dropped.
 
 - OLEDB driver (only on Windows)
-   TLS1.2 protocol is given preference for SSL connections. https://jsw.ibm.com/browse/NEXTGEN-22201
+   TLS1.2 protocol is given preference for SSL connections.
 
 - All Windows supported drivers (ODBC & OLEDB)
-   Visual Studio VC++ runtime redistributables are upgraded to 2022. https://jsw.ibm.com/browse/NEXTGEN-25381
+   Visual Studio VC++ runtime redistributables are upgraded to 2022.
 
 ### Known issues
 {: #kidec2023}
