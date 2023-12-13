@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-18"
+lastupdated: "2023-12-07"
 
 keywords: nztool
 
@@ -11,8 +11,8 @@ subcollection: netezza
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
+{:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -79,7 +79,7 @@ curl.exe -o nz.exe -k https://<API Server URL>/v2/download/nz-windows-amd64
 The `nz` command syntax can take two forms, depending on whether you created shortcuts for commonly used commands or not.
 
 1. For more information about shortcuts and a list of commands that can have shortcuts, see [Creating nz shortcuts with the nz install command](/docs/netezza?topic=netezza-nztool#nzinstall-shortcuts).
-1. You can set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the `-host`, `-u`, and `-pw` options when you are running `nz` commands.
+1. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
 {: tip}
 
 - Full syntax:

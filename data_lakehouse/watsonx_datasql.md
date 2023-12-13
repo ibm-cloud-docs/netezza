@@ -27,12 +27,12 @@ subcollection: netezza
 With 11.2.2.9 release, the following SQL commands and functionalities are supported with {{site.data.keyword.lakehouse_short}}.
 For more information, see:
 
-- [CREATE DATABASE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-database-3)
-- [CREATE SCHEMA](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-schema-3)
-- [CREATE TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-create-table-3)
-- [DESCRIBE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-describe)
-- [SELECT QUERIES](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-select-retrieve-rows-3)
-- Backup and restore is only supported for the login and reference information, not the data itself.**draft comment: TBC in https://github.ibm.com/cloud-docs/netezza/issues/157**
+- [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
+- [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
+- [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
+- [DESCRIBE](https://www.ibm.com/docs/en/netezza?topic=reference-describe)
+- [SELECT QUERIES](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2)
+- Backup and restore is only supported for the login and reference information, not the data itself.
 - AWS S3, IBM COS, minIO data sources are available as storage options or a data lake database.
 
 The following functionalities are not supported:

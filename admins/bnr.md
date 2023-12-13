@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-12-06"
 
 keywords: bnr, backup and restore, backup, restore
 
@@ -20,7 +20,9 @@ subcollection: netezza
 # Overview
 {: #bnr-overview}
 
-{{site.data.keyword.netezza_full}} supports full, differential, and cumulative backups that can be performed on demand or according to a schedule. You can run differential and/or cumulative backups only after you run a full backup first. You can restore differential and/or cumulative backups only after you restore a full backup first.
+{{site.data.keyword.netezza_full}} supports full, differential, and cumulative backups that you might run on demand or according to a schedule.
+If you want to run differential and/or cumulative backups, run a full backup first.
+If you want to restore differential and/or cumulative backups, restore a full backup first.
 
 You cannot backup (**nzbackup**) and restore (**nzrestore**) external data source objects.
 {: note}
@@ -80,7 +82,7 @@ You can create a destination bucket for Amazon S3, Azure Blob Storage, and IBM C
 {: #amazon-bucket}
 
 1. Log in to the web console.
-1. Go to the **Backup and restore > Destinations**.
+1. Go to **Backup and restore > Destinations**.
 1. Select `Amazon S3` as your destination bucket.
 1. Type a bucket name.
 1. Provide an access key ID.
@@ -92,18 +94,18 @@ You can create a destination bucket for Amazon S3, Azure Blob Storage, and IBM C
 {: #azure-bucket}
 
 1. Log in to the web console.
-1. Go to the **Backup and restore > Destinations**.
+1. Go to **Backup and restore > Destinations**.
 1. Select `Azure Blob Storage` as your destination bucket.
 1. Type a container name.
+   To view the container name, in the Azure portal, go to **Storage accounts -> Containers**.
+
 1. Select a blob type.
 1. Select a region.
 1. Type an account name.
-
-   You can found the account name in the Azure portal, under **Storage accounts**.
+   To view the account name, in the Azure portal, go to **Storage accounts**.
 
 1. Type your account key.
-
-   In the Azure portal, goto **Storage Accounts > your_account > Access keys > Show keys > key1 > Key**.
+   To view your account key, in the Azure portal, go to **Storage Accounts > your_account > Access keys > Show keys > key1 > Key**.
 
 1. Click **Save**.
 
@@ -111,7 +113,7 @@ You can create a destination bucket for Amazon S3, Azure Blob Storage, and IBM C
 {: #cos-bucket}
 
 1. Log in to the web console.
-1. Go to the **Backup and restore > Destinations**.
+1. Go to **Backup and restore > Destinations**.
 1. Select `IBM Cloud Object Storage` as your destination bucket.
 1. Type a bucket name.
 1. Type your access key ID.

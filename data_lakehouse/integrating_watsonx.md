@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-08-04"
+lastupdated: "2023-11-21"
 
 keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data, watsonx.data with nps
 subcollection: netezza
@@ -64,7 +64,7 @@ Ensure that you obtained the IBM API key by following the steps:
 1. Set up the environment variables.
 
    ```sql
-   export NZ_HOST=<name of the API server URL from namespace provisioning page>
+   export APISERVER_URL=<name of the API server URL from namespace provisioning page>
    export NZ_USER=<admin user name>
    export NZ_PASSWORD=<admin user password>
    ```

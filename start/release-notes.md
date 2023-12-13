@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-12-09"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -19,7 +19,7 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Release notes for {{site.data.keyword.netezza_short}} as a Service
+# Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
 
 ## November 15, 2023
@@ -51,38 +51,71 @@ Scheduler types:
 ## August 28, 2023
 {: #aug2023}
 
+## December 8, 2023
+{: #dec2023}
+
 ### New features and enhancements
-{: #nfaug2023}
+{: #nfdec2023}
 
-- **DRAFT COMNNET: WIP Need more details.** NPS 11.2.2.9 DLH GA GA items specifically and NPS associated functionality
-Apache Iceberg is an open table format that helps simplify data processing on large datasets that are stored in data lakes. With Hive table support, you can access Hive tables directly from your {{site.data.keyword.netezza_short}} instance and perform complex analytics operations by joining the tables with {{site.data.keyword.netezza_short}} tables.
-For more information, see [Querying data from {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-overview_watsonx.data).
-You can also view your data lakehouse objects with the web console.
+- New {{site.data.keyword.netezza_short}} functionalities that are associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
 
-- **DRAFT COMNNET: WIP Need more details.** api changes for nzrest compatibility
+   You can also view your data lakehouse objects with the web console.
 
 - Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console.
 
-### Fixes
-{: #faug2023}
+- Updated the algorithm to calculate the profile of the day. The calculation is now made by subtracting two subsequent records' timestamp values if they are of the same day and appending the `timedelta` to that profile. For each day, the system compares which profile has the maximum time duration and declares that profile to be the profile of the day.
 
 ### Components
-{: #compsaug2023}
+{: #compsdec2023}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.9
 - Web console 4.0.16
 - JDBC driver (on all platforms)
-   MD5 Auth requests are deprecated. All MD5 connections are dropped. https://jsw.ibm.com/browse/NEXTGEN-18693
+   MD5 Auth requests are deprecated. All MD5 connections are dropped.
 
 - OLEDB driver (only on Windows)
-   TLS1.2 protocol is given preference for SSL connections. https://jsw.ibm.com/browse/NEXTGEN-22201
+   TLS1.2 protocol is given preference for SSL connections.
 
 - All Windows supported drivers (ODBC & OLEDB)
-   Visual Studio VC++ runtime redistributables are upgraded to 2022. https://jsw.ibm.com/browse/NEXTGEN-25381
+   Visual Studio VC++ runtime redistributables are upgraded to 2022.
 
 ### Known issues
-{: #kiaug2023}
+{: #kidec2023}
 
+- For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues).
+- The `Word_diff` function in the SQL extension toolkit does not support string input.
+
+## November 9, 2023
+{: #nov2023}
+
+### Fixes
+{: #f1nov2023}
+
+- Updated APIs for IBM cloud secret manager.
+
+### Components
+{: #comps1nov2023}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.8-IF4
+- Web console 4.0.15
+
+### Known issues
+{: #ki1nov2023}
+
+- The console might not display an abort confirmation when the backup or restore process is aborted and might show that the operation is still in progress. Apply the following workaround on your system to overcome this issue.
+   - If backup aborted
+
+      ```sql
+      update _t_backup_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
+
+   - If restore aborted
+
+      ```sql
+      update _t_restore_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
 
 ## July 24, 2023
 {: #july2023}
@@ -110,15 +143,25 @@ Other regions where the service is available on AWS include:
 
 - {{site.data.keyword.netezza_short}} 11.2.2.8
 - Web console 4.0.15
-- Red Hat OpenShift Container Platform 4.10.54
 
 ### Known issues
 {: #ki1july2023}
 
 - Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization.
-- Ops team will apply below workaround on your system when backup or restore process is killed and is not displayed on console:
-   update _t_backup_history set status=2, batchstatus=2 where status=0  -> If backup aborted
-   update _t_restore_history set status=2, batchstatus=2 where status=0 -> If restore aborted
+- The console might not display an abort confirmation when the backup or restore process is aborted and might show that the operation is still in progress. Apply the following workaround on your system to overcome this issue.
+   - If backup aborted
+
+      ```sql
+      update _t_backup_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
+
+   - If restore aborted
+
+      ```sql
+      update _t_restore_history set status=2, batchstatus=2 where status=0
+      ```
+      {: codeblock}
 
 ## July 10, 2023
 {: #july12023}
@@ -142,6 +185,13 @@ Other regions where the service is available on AWS include:
 {: #kijuly12023}
 
 - Databases, schemas, and table names containing a dot character (".") do not show in the time travel statistics and graphs when you set the retention time interval to a nonzero value.
+- On demand (ad hoc) backup and restore for multiple large databases at one go is successful for only a few databases in the batch. For the rest of the databases you get an authentication error.
+
+  Workaround:
+
+  - Take a backup of a single large database at a time.
+  - Restore a single large database at a time.
+
 ## March 2023
 {: #march2023}
 
