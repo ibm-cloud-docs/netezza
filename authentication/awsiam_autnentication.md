@@ -2,9 +2,9 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-06-01"
+lastupdated: "2023-12-20"
 
-keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
+keywords: AWS IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
 subcollection: netezza
 
@@ -24,7 +24,7 @@ subcollection: netezza
 # Setting AWS IAM authentication
 {: #awsiamauth}
 
-Set your authentication method to `AWSIAM` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
+Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
 {: shortdesc}
 
 An external authentication system does not support two-factor authentication.
@@ -43,7 +43,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
 1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
 1. Go to the **Query editor**.
-1. Register an `AWS IAM` external authentication system.
+1. Register an AWS IAM external authentication system.
    Specify the `PRODUCTION` environment type.
 
     ```sql
@@ -51,14 +51,14 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     ```
     {: codeblock}
 
-1. Create a user or users with the external authentication method set to `AWS IAM` as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Create a user or users with the external authentication method set to AWS IAM as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
 1. Verify whether the user was created successfully.
 
    1. Go to **Users and groups > Users**.
    1. Locate the user.
    1. Check the **Authentication type** section for the user.
 
-## Setting IBM IAM authentication with the command-line
+## Setting AWS IAM authentication with the command-line
 {: #awsiamprocedure}
 
 1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin` user.
@@ -74,7 +74,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
    | :-----------   | :---------- |
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
    | user           | Specifies the username.      |
-   | password       | When the user does not configured MFA: \n When nziamops user is configured, specifies the “secret-key account-id” for the user. \n When nziamops user is not configured, specifies the “access-key:secret-key”. \n \n When user configures MFA: \n When nziamops user is configured, specifies the “secret-key account-id mfa-code” for the user. \n When nziamops user is not configured, specifies the “access-key :secret-key mfa-code” for the user.|
+   | password       | **When MFA is not configured:** \n When `nziamops` user is configured, specify the `secret-key` and   `account-id` for the user. \n When `nziamops` user is not configured, specify the `access-key` and `secret-key`. \n **When MFA is configured:** \n When `nziamops` user is configured, specify the `secret-key`, `account-id`, and `mfa-code` for the user. \n When `nziamops` user is not configured, specify the `access-key`, `secret-key`, and `mfa-code` for the user.|
 
    Example:
 
@@ -120,28 +120,30 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     ```
     {: codeblock}
 
-    When the user does not configured MFA:
-    When nziamops user is configured, specify the “secret-key account-id” for the user.
+    #### When MFA is not configured
+
+    When `nziamops` user is configured, specify the `secret-key` and  `account-id` for the user.
     ```sql
     nzsql -u '"AWSUSER"' -pw "SECRET-KEY ACCOUNT-ID"
     ```
     {: codeblock}
 
-    When nziamops user is not configured, specify the “access-key:secret-key”.
+    When `nziamops` user is not configured, specify the `access-key` and `secret-key`.
     ```sql
     nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY"
     ```
     {: codeblock}
 
 
-    When the user configures MFA:
-    When nzops user is configured, specify the “secret-key account-id mfa-code” for the user.
+    #### When MFA is configured
+
+    When `nzops` user is configured, specify the `secret-key`,  `account-id`, and `mfa-code` for the user.
     ```sql
     nzsql -u '"AWSUSER"' -pw "SECRET-KEY MFA-CODE ACCOUNT-ID"
     ```
     {: codeblock}
 
-    When nzops user is not configured, specifies the “access-key :secret-key mfa-code” for the user.
+    When `nzops` user is not configured, specifies the `access-key`, `secret-key` and `mfa-code` for the user.
     ```sql
     nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY MFA-CODE"
     ```
