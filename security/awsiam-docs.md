@@ -35,19 +35,22 @@ Follow the manual instructions to set up an AWS IAM role (`NzCrossAccountRole`) 
 #### Policy for `NzCrossAccountRole`
 ```json
 {
-"Version": "2012-10-17",
-"Statement": [
-{
-"Sid": "VisualEditor0",
-"Effect": "Allow",
-"Action": [
-"iam:ListGroupsForUser",
-"iam:ListMFADevices",
-"iam:ListAccessKeys"
-],
-"Resource": [ "<ARN of IAM user in customer account>", "<ARN of IAM user in customer account>"]
-}
-]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListGroupsForUser",
+                "iam:ListMFADevices",
+                "iam:ListAccessKeys"
+            ],
+            "Resource": [
+                "<ARN of IAM user in customer account>",
+                "<ARN of IAM user in customer account>"
+            ]
+        }
+    ]
 }
 ```
 {: codeblock}
@@ -59,16 +62,16 @@ The Netezza AWS account must be added under the Trusted entities.
 
 ```json
 {
-"Version": "2012-10-17",
-"Statement": [
-{
-"Effect": "Allow",
-"Principal": {
-"AWS": "arn:aws:iam::<Netezza_AWS_ACCOUNT_ID>:user/nziamopsuser"
-},
-"Action": "sts:AssumeRole"
-}
-]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::<Netezza_AWS_ACCOUNT_ID>:user/nziamopsuser"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
 }
 ```
 {: codeblock}
@@ -80,15 +83,15 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 #### Policy for the `NzAdminUsers` group
 ```json
 {
-"Version": "2012-10-17",
-"Statement": [
-{
-"Sid": "VisualEditor0",
-"Effect": "Allow",
-"Action": "iam: ListGroupsForUser",
-"Resource": "*"
-}
-]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "iam: ListGroupsForUser",
+            "Resource": "*"
+        }
+    ]
 }
 ```
 {: codeblock}
@@ -98,18 +101,18 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 #### `ListMFADevices`, `GetSessionToken` API
 ```json
 {
-"Version": "2012-10-17",
-"Statement": [
-{
-"Sid": "VisualEditor0",
-"Effect": "Allow",
-"Action": [
-"iam:ListMFADevices",
-"sts:GetSessionToken"
-],
-"Resource": "*"
-}
-]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListMFADevices",
+                "sts:GetSessionToken"
+            ],
+            "Resource": "*"
+        }
+    ]
 }
 ```
 {: codeblock}
