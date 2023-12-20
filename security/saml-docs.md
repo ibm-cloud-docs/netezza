@@ -21,8 +21,8 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Managing AWS IAM access for {{site.data.keyword.netezza_short}}
-{: #awsiam-docs}
+# Managing SAML access for {{site.data.keyword.netezza_short}}
+{: #saml-docs}
 
 ## AWS IAM `nziamops` user
 An AWS IAM ops user (`nziamops`) is created in the NzSAAS AWS account if Cyclops is configured to authenticate by using `nziamops` user. The `nziamops` user executes AWS APIs to fetch IAM user details like the access key ID and MFA device during the authentication process. Your AWS account must provide cross-account access to the `nziamops` user in the NzSAAS account to execute the API calls on the Netezza IAM users by manually defining the IAM role and setting trust relationship between the AWS accounts.
