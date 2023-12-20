@@ -30,8 +30,6 @@ Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTIC
 Two-factor authentication is supported by SAML external authentication system. User needs to be configured with MFA on IDP (Identity Provider), for example, Ping Identity.
 {: important}
 
-See also [Managing IAM access](/docs/netezza?topic=netezza-iam-docs).
-
 ## Syntax
 {: #samlsyntax}
 
