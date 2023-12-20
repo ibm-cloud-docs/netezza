@@ -27,7 +27,7 @@ subcollection: netezza
 Set your authentication method to `AWSIAM` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
 {: shortdesc}
 
-Two factor authentication is not supported with an external authentication system.
+An external authentication system does not support two-factor authentication.
 {: important}
 
 ## Syntax
@@ -51,7 +51,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     ```
     {: codeblock}
 
-1. Create a user or users with the external authentication method set to `AWS IAM` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Create a user or users with the external authentication method set to `AWS IAM` as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
 1. Verify whether the user was created successfully.
 
    1. Go to **Users and groups > Users**.
@@ -73,8 +73,8 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
    | Input          | Description |
    | :-----------   | :---------- |
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
-   | user           | Specifies the user name.      |
-   | password       | When user has not configured MFA: \n When nziamops user is configured, specifies the “secret-key account-id” for the user. \n When nziamops user is not configured, specifies the “access-key:secret-key”. \n \n  When user has configured MFA: \n When nziamops user is configured, specifies the “secret-key account-id mfa-code” for the user. \n When nziamops user is not configured, specifies the “access-key :secret-key mfa-code” for the user.|
+   | user           | Specifies the username.      |
+   | password       | When the user does not configured MFA: \n When nziamops user is configured, specifies the “secret-key account-id” for the user. \n When nziamops user is not configured, specifies the “access-key:secret-key”. \n \n When user configures MFA: \n When nziamops user is configured, specifies the “secret-key account-id mfa-code” for the user. \n When nziamops user is not configured, specifies the “access-key :secret-key mfa-code” for the user.|
 
    Example:
 
@@ -90,25 +90,24 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     ```
     {: codeblock}
 
-1. As admin, register an `IBMIAM` external authentication system.
-   Specify the `PRODUCTION` environment type.
+1. As admin, register an `AWSIAM` external authentication system.
 
     ```sql
-    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with 'PRODUCTION'
+    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM';
     ```
     {: codeblock}
 
-1. Create a user or users with the external authentication method set to `IBMIAM`.
+1. Create a user or users with the external authentication method set to `AWSIAM`.
 
     ```sql
-    CREATE USER USER AUTH EXTERNAL 'IBMIAM';
+    CREATE USER USER AUTH EXTERNAL 'AWSIAM';
     ```
     {: codeblock}
 
     Example:
 
     ```sql
-    CREATE USER xyz@ibm.com AUTH EXTERNAL 'IBMIAM';
+    CREATE USER AWSUSER AUTH EXTERNAL 'AWSIAM';
     ```
     {: codeblock}
 
@@ -117,16 +116,44 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     ```sql
     \q
 
-    nzsql -u '"USER"' -pw PASSWORD
+    nzsql -u '"AWSUSER"' -pw PASSWORD
     ```
     {: codeblock}
+
+    When the user does not configured MFA:
+    When nziamops user is configured, specify the “secret-key account-id” for the user.
+    ```sql
+    nzsql -u '"AWSUSER"' -pw "SECRET-KEY ACCOUNT-ID"
+    ```
+    {: codeblock}
+
+    When nziamops user is not configured, specify the “access-key:secret-key”.
+    ```sql
+    nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY"
+    ```
+    {: codeblock}
+
+
+    When the user configures MFA:
+    When nzops user is configured, specify the “secret-key account-id mfa-code” for the user.
+    ```sql
+    nzsql -u '"AWSUSER"' -pw "SECRET-KEY MFA-CODE ACCOUNT-ID"
+    ```
+    {: codeblock}
+
+    When nzops user is not configured, specifies the “access-key :secret-key mfa-code” for the user.
+    ```sql
+    nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY MFA-CODE"
+    ```
+    {: codeblock}
+
 
     Example:
 
     ```sql
     \q
 
-    nzsql -u '"xyz@ibm.com"' -pw XXXXXXXXXXXXX
+    nzsql -u '"AWSUSER"' -pw XXXXXXXXXXXXX
     Welcome to nzsql, the IBM Netezza SQL interactive terminal.
 
     Type: \h for help with SQL commands
