@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-12-20"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -21,32 +21,296 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Managing IAM access for {{site.data.keyword.netezza_short}}
+# Managing AWS IAM access for {{site.data.keyword.netezza_short}}
 {: #iam-docs}
 
-Identity and Access Management (IAM) enables you to securely authenticate users for platform services and control access to resources consistently across the IBM Cloud platform. For example, with only a single login to {{site.data.keyword.cloud}} with your IBMid, you have access to any of your service consoles and their applications without having to log in to each of them separately.
+## AWS IAM `nziamops` user
+An AWS IAM ops user (`nziamops`) is created in the NzSAAS AWS account if Cyclops is configured to authenticate by using `nziamops` user. The `nziamops` user executes AWS APIs to fetch IAM user details like the access key ID and MFA device during the authentication process. Your AWS account must provide cross-account access to the `nziamops` user in the NzSAAS account to execute the API calls on the Netezza IAM users by manually defining the IAM role and setting trust relationship between the AWS accounts.
 
-Access to the {{site.data.keyword.netezza_full}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} (IAM). Every user that accesses the {{site.data.keyword.netezza_short}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.netezza_short}}.
+Follow the manual instructions for setting up an AWS IAM role `NzCrossAccountRole` and trust relationship. Configure the IAM role and user group in the AWS account when authenticating by using the `nziamops` user.
 {: shortdesc}
 
-## Roles and actions
-{: #roles-actions}
+### IAM role `NzCrossAccountRole` and trust relationship
 
-The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by {{site.data.keyword.netezza_short}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform that you can assign to a user.
+#### Policy for `NzCrossAccountRole`
+```json
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Sid": "VisualEditor0",
+"Effect": "Allow",
+"Action": [
+"iam:ListGroupsForUser",
+"iam:ListMFADevices",
+"iam:ListAccessKeys"
+],
+"Resource": [ "<ARN of IAM user in customer account>", "<ARN of IAM user in customer account>"]
+}
+]
+}
+```
 
-If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles) and pick the actions to include.
-{: tip}
+{: codeblock}
 
-IAM access policies enable access to be granted at different levels.
+The `Resource` section must have the ARN of IAM users from the account.
 
-| Role                      | Connect | User Management | Scaling | Backup and Restore | Monitoring | DR      |
-|:--------------------------|:--------|:----------------|:--------|:-------------------|:-----------|---------|
-|IAM Platform Administrator | Y       | Y               | Y       | Y                  | Y          | Y       |
-|IAM Platform Operator      | Y       | Y               | Y       | Y                  | Y          | Y       |
-|IAM Platform Editor        | Y       | Y               | Y       | Y                  | Y          | Y       |
-|IAM Platform Viewer        | Y       | N               | N       | N                  | N          | N       |
-{: caption="Table 1. The table outlines what types of tasks each role allows for when you're working with the {{site.data.keyword.netezza_short}} service." caption-side="bottom"}
+#### Trust relationship
+The Netezza AWS account must be added under the Trusted entities.
 
-{{site.data.keyword.netezza_short}} does not use IAM Service roles.
+```json
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Effect": "Allow",
+"Principal": {
+"AWS": "arn:aws:iam::<Netezza_AWS_ACCOUNT_ID>:user/nziamopsuser"
+},
+"Action": "sts:AssumeRole"
+}
+]
+}
+```
 
-For information about the steps to assign IAM access, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+{: codeblock}
+
+The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
+
+### IAM admin user group `NzIAMAdminUsers`
+
+#### Policy for the `NzAdminUsers` group
+```json
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Sid": "VisualEditor0",
+"Effect": "Allow",
+"Action": "iam: ListGroupsForUser",
+"Resource": "*"
+}
+]
+}
+```
+
+{: codeblock}
+
+### IAM policy attached to user group to give permission to the user to execute APIs
+
+#### `ListMFADevices`, `GetSessionToken` API
+```json
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Sid": "VisualEditor0",
+"Effect": "Allow",
+"Action": [
+"iam:ListMFADevices",
+"sts:GetSessionToken"
+],
+"Resource": "*"
+}
+]
+}
+```
+
+{: codeblock}
+
+## Usage of `nzcli` with AWS IAM authentication
+```bash
+./nzcli ops run awsiam --help
+```
+
+{: codeblock}
+
+```bash
+nz ops run awsiam [options]
+```
+
+{: codeblock}
+
+**_NOTE:_** Authenticator is AWSIAM
+
+### Options
+| Options     | Description |
+| ----------- | ----------- |
+| -access-key      | The access key for the `awsiam` user [AWS_ACCESS_KEY_ID] (required)       |
+| -apiserver    | The url of the api server [APISERVER_URL] (required)        |
+| -format | Output Format [FORMAT]|
+| --h | Show help of nz command |
+ |-hc  |Show details of nz command |
+| -mfa-code  |The MFA code for the awsiam user |
+| -secret-key | The secret key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
+| -u NPS  | Username [NZ_USER] (required) |
+
+**_NOTE:_** `nzcli` for `nziamops` configuration is not supported.
+
+`nzcli` without `nziamops` configuration is supported as follows:
+
+```bash
+./nzcli ops run awsiam -access-key <access-key-value> -secret-key <secret-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver NPS-IP nzcommand
+```
+
+{: codeblock}
+
+```bash
+./nzcli ops run awsiam -access-key <access-key-value> -secret-key <secret-key-value>  -u AWSUSER -apiserver NPS-IP nzcommand
+```
+
+{: codeblock}
+
+**_NOTE:_** `nzcli` requests MFA code.
+
+Following is the list of `nzcommand`.
+
+ ```bash
+nzsystem showRegistry -local
+```
+
+{: codeblock}
+
+ ```bash
+nzsystem showIssues -local
+```
+
+{: codeblock}
+
+ ```bash
+nzstate -local
+```
+
+{: codeblock}
+
+ ```bash
+nzsystem showRev -local
+```
+
+{: codeblock}
+
+ ```bash
+nzsystem showRev -build -local
+```
+
+{: codeblock}
+
+ ```bash
+nzsystem showRev -label -local
+```
+
+{: codeblock}
+
+ ```bash
+nzstats -local
+```
+
+{: codeblock}
+
+ ```bash
+nzds show -local
+```
+
+{: codeblock}
+
+ ```bash
+nzds show -regenstatus -local
+```
+
+{: codeblock}
+
+ ```bash
+nzds show -issues -local
+```
+
+{: codeblock}
+
+ ```bash
+nzhw show -local
+```
+
+{: codeblock}
+
+ ```bash
+nzhw listTypes -local
+```
+
+{: codeblock}
+
+ ```bash
+nzhw show -issues -detail -local
+```
+
+{: codeblock}
+
+ ```bash
+nzhw show -type spu -local
+```
+
+{: codeblock}
+
+ ```bash
+nzsession show -local
+```
+
+{: codeblock}
+
+ ```bash
+nzrev -dirSuffix
+```
+
+{: codeblock}
+
+ ```bash
+nzrev -rev
+```
+
+{: codeblock}
+
+ ```bash
+nzrev -shortLabel
+```
+
+{: codeblock}
+
+ ```bash
+nzrev -buildType
+```
+
+{: codeblock}
+
+## Usage of `v2/signin` API with AWS IAM authentication
+
+### When MFA is not configured
+When `nziamops` user is configured:
+ ```bash
+curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue" }'
+```
+
+{: codeblock}
+
+When `nziamops` user is not configured:
+
+ ```bash
+curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key" }'
+```
+
+{: codeblock}
+
+### When MFA is configured
+When `nziamops` user is configured, specify the `secret-key`, `account-id`, and `mfa-code` for the user.
+
+ ```bash
+curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue", "mfacode":"mfacodevalue" }'
+```
+
+{: codeblock}
+
+When `nziamops` user is not configured, specify the `access-key :secret-key` and `mfa-code` for the user.
+
+ ```bash
+curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key", "mfacode":"mfacodevalue" }'
+```
+
+{: codeblock}
+
