@@ -44,7 +44,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
 1. Go to the **Query editor**.
 1. Register an AWS IAM external authentication system.
-   Specify the `PRODUCTION` environment type.
 
     ```sql
     REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
