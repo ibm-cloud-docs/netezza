@@ -62,7 +62,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
 1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin` user.
 
-   In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use the [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
+   In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
     ```sql
     nzsql -host <nps_host_ip> -u admin -pw XXXXX
@@ -71,7 +71,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
    | Input          | Description |
    | :-----------   | :---------- |
-   | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
+   | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
    | user           | Specifies the username.      |
    | password       | **When MFA is not configured:** \n When `nziamops` user is configured, specify the `secret-key` and   `account-id` for the user. \n When `nziamops` user is not configured, specify the `access-key` and `secret-key`. \n **When MFA is configured:** \n When `nziamops` user is configured, specify the `secret-key`, `account-id`, and `mfa-code` for the user. \n When `nziamops` user is not configured, specify the `access-key`, `secret-key`, and `mfa-code` for the user.|
 
@@ -89,7 +89,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     ```
     {: codeblock}
 
-1. As admin, register an `AWSIAM` external authentication system.
+1. As an admin, register an `AWSIAM` external authentication system.
 
     ```sql
     REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM';
@@ -110,7 +110,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     ```
     {: codeblock}
 
-1. Verify whether the user was created successfully.
+1. Verify whether the user is created successfully.
 
     ```sql
     \q
@@ -121,13 +121,13 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
     #### When MFA is not configured
 
-    When `nziamops` user is configured, specify the `secret-key` and  `account-id` for the user.
+    When `nziamops` user is configured, specify the `SECRET-KEY` and `ACCOUNT-ID` for the user.
     ```sql
     nzsql -u '"AWSUSER"' -pw "SECRET-KEY ACCOUNT-ID"
     ```
     {: codeblock}
 
-    When `nziamops` user is not configured, specify the `access-key` and `secret-key`.
+    When `nziamops` user is not configured, specify the `ACCESS-KEY:SECRET-KEY`.
     ```sql
     nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY"
     ```
@@ -136,13 +136,13 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
     #### When MFA is configured
 
-    When `nzops` user is configured, specify the `secret-key`,  `account-id`, and `mfa-code` for the user.
+    When `nzops` user is configured, specify the `SECRET-KEY`, `ACCOUNT-ID`, and `MFA-CODE` for the user.
     ```sql
     nzsql -u '"AWSUSER"' -pw "SECRET-KEY MFA-CODE ACCOUNT-ID"
     ```
     {: codeblock}
 
-    When `nzops` user is not configured, specifies the `access-key`, `secret-key` and `mfa-code` for the user.
+    When `nzops` user is not configured, specify the `ACCESS-KEY:SECRET-KEY`, and `MFA-CODE` for the user.
     ```sql
     nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY MFA-CODE"
     ```
@@ -164,6 +164,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
     SSL enabled connection. Cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol: TLSv1.2
 
-    SYSTEM.ADMIN(xyz@ibm.com)=>
+    SYSTEM.ADMIN(AWSUSER)=>
     ```
     {: codeblock}

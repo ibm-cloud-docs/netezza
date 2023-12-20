@@ -27,7 +27,7 @@ subcollection: netezza
 ## AWS IAM `nziamops` user
 An AWS IAM ops user (`nziamops`) is created in the NzSAAS AWS account if Cyclops is configured to authenticate by using `nziamops` user. The `nziamops` user executes AWS APIs to fetch IAM user details like the access key ID and MFA device during the authentication process. Your AWS account must provide cross-account access to the `nziamops` user in the NzSAAS account to execute the API calls on the Netezza IAM users by manually defining the IAM role and setting trust relationship between the AWS accounts.
 
-Follow the manual instructions for setting up an AWS IAM role `NzCrossAccountRole` and trust relationship. Configure the IAM role and user group in the AWS account when authenticating by using the `nziamops` user.
+Follow the manual instructions to set up an AWS IAM role (`NzCrossAccountRole`) and trust relationship. Configure the IAM role and user group in the AWS account during the authentication by using `nziamops` user.
 {: shortdesc}
 
 ### IAM role `NzCrossAccountRole` and trust relationship
@@ -50,7 +50,6 @@ Follow the manual instructions for setting up an AWS IAM role `NzCrossAccountRol
 ]
 }
 ```
-
 {: codeblock}
 
 The `Resource` section must have the ARN of IAM users from the account.
@@ -72,7 +71,6 @@ The Netezza AWS account must be added under the Trusted entities.
 ]
 }
 ```
-
 {: codeblock}
 
 The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
@@ -93,7 +91,6 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 ]
 }
 ```
-
 {: codeblock}
 
 ### IAM policy attached to user group to give permission to the user to execute APIs
@@ -115,35 +112,32 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 ]
 }
 ```
-
 {: codeblock}
 
 ## Usage of `nzcli` with AWS IAM authentication
 ```bash
 ./nzcli ops run awsiam --help
 ```
-
 {: codeblock}
 
 ```bash
 nz ops run awsiam [options]
 ```
-
 {: codeblock}
 
-**_NOTE:_** Authenticator is AWSIAM
+**_NOTE:_** Authenticator is `AWSIAM`.
 
 ### Options
 | Options     | Description |
 | ----------- | ----------- |
-| -access-key      | The access key for the `awsiam` user [AWS_ACCESS_KEY_ID] (required)       |
-| -apiserver    | The url of the api server [APISERVER_URL] (required)        |
-| -format | Output Format [FORMAT]|
-| --h | Show help of nz command |
- |-hc  |Show details of nz command |
-| -mfa-code  |The MFA code for the awsiam user |
-| -secret-key | The secret key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
-| -u NPS  | Username [NZ_USER] (required) |
+| `-access-key`     | The access key for the `awsiam` user [AWS_ACCESS_KEY_ID] (required)       |
+| `-apiserver`    | The url of the api server [APISERVER_URL] (required)        |
+| `-format` | Output Format [FORMAT]|
+| `--h` | Show help of nz command |
+ |`-hc`  |Show details of nz command |
+| `-mfa-code`  |The MFA code for the awsiam user |
+| `-secret-key` | The secret key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
+| `-u NPS`  | Username [NZ_USER] (required) |
 
 **_NOTE:_** `nzcli` for `nziamops` configuration is not supported.
 
@@ -152,13 +146,11 @@ nz ops run awsiam [options]
 ```bash
 ./nzcli ops run awsiam -access-key <access-key-value> -secret-key <secret-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver NPS-IP nzcommand
 ```
-
 {: codeblock}
 
 ```bash
 ./nzcli ops run awsiam -access-key <access-key-value> -secret-key <secret-key-value>  -u AWSUSER -apiserver NPS-IP nzcommand
 ```
-
 {: codeblock}
 
 **_NOTE:_** `nzcli` requests MFA code.
@@ -168,115 +160,96 @@ Following is the list of `nzcommand`.
  ```bash
 nzsystem showRegistry -local
 ```
-
 {: codeblock}
 
  ```bash
 nzsystem showIssues -local
 ```
-
 {: codeblock}
 
  ```bash
 nzstate -local
 ```
-
 {: codeblock}
 
  ```bash
 nzsystem showRev -local
 ```
-
 {: codeblock}
 
  ```bash
 nzsystem showRev -build -local
 ```
-
 {: codeblock}
 
  ```bash
 nzsystem showRev -label -local
 ```
-
 {: codeblock}
 
  ```bash
 nzstats -local
 ```
-
 {: codeblock}
 
  ```bash
 nzds show -local
 ```
-
 {: codeblock}
 
  ```bash
 nzds show -regenstatus -local
 ```
-
 {: codeblock}
 
  ```bash
 nzds show -issues -local
 ```
-
 {: codeblock}
 
  ```bash
 nzhw show -local
 ```
-
 {: codeblock}
 
  ```bash
 nzhw listTypes -local
 ```
-
 {: codeblock}
 
  ```bash
 nzhw show -issues -detail -local
 ```
-
 {: codeblock}
 
  ```bash
 nzhw show -type spu -local
 ```
-
 {: codeblock}
 
  ```bash
 nzsession show -local
 ```
-
 {: codeblock}
 
  ```bash
 nzrev -dirSuffix
 ```
-
 {: codeblock}
 
  ```bash
 nzrev -rev
 ```
-
 {: codeblock}
 
  ```bash
 nzrev -shortLabel
 ```
-
 {: codeblock}
 
  ```bash
 nzrev -buildType
 ```
-
 {: codeblock}
 
 ## Usage of `v2/signin` API with AWS IAM authentication
@@ -286,7 +259,6 @@ When `nziamops` user is configured:
  ```bash
 curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue" }'
 ```
-
 {: codeblock}
 
 When `nziamops` user is not configured:
@@ -294,22 +266,19 @@ When `nziamops` user is not configured:
  ```bash
 curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key" }'
 ```
-
 {: codeblock}
 
 ### When MFA is configured
-When `nziamops` user is configured, specify the `secret-key`, `account-id`, and `mfa-code` for the user.
+When `nziamops` user is configured, specify the `Secret-Key`, `accountid`, and `mfacode` for the user.
 
  ```bash
 curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue", "mfacode":"mfacodevalue" }'
 ```
-
 {: codeblock}
 
-When `nziamops` user is not configured, specify the `access-key :secret-key` and `mfa-code` for the user.
+When `nziamops` user is not configured, specify the `Access-Id:Secret-Key` and `mfacode` for the user.
 
  ```bash
 curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key", "mfacode":"mfacodevalue" }'
 ```
-
 {: codeblock}
