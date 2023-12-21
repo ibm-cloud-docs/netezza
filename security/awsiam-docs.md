@@ -119,12 +119,12 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 
 ## Usage of `nzcli` with AWS IAM authentication
 ```bash
-./nzcli ops run awsiam --help
+./nzcli awsiam --help
 ```
 {: codeblock}
 
 ```bash
-nz ops run awsiam [options]
+nz awsiam [options]
 ```
 {: codeblock}
 
@@ -147,12 +147,12 @@ nz ops run awsiam [options]
 `nzcli` without `nziamops` configuration is supported as follows:
 
 ```bash
-./nzcli ops run awsiam -access-key <access-key-value> -secret-key <secret-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver NPS-IP nzcommand
+./nzcli awsiam -access-key <access-key-value> -secret-key <secret-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver NPS-IP nzcommand
 ```
 {: codeblock}
 
 ```bash
-./nzcli ops run awsiam -access-key <access-key-value> -secret-key <secret-key-value>  -u AWSUSER -apiserver NPS-IP nzcommand
+./nzcli awsiam -access-key <access-key-value> -secret-key <secret-key-value>  -u AWSUSER -apiserver NPS-IP nzcommand
 ```
 {: codeblock}
 
