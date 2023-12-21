@@ -23,7 +23,7 @@ subcollection: netezza
 
 # Managing SAML IDP configuration for {{site.data.keyword.netezza_short}}
 {: #saml-docs}
-Set the following configurations for Cyclops endpoints On IDP:
+Set the following configurations for Cyclops endpoints on IDP:
 {: shortdesc}
 
  ```bash
@@ -67,7 +67,7 @@ Admin users can configure the following SAML configurations by using Cyclops:
 ```
 {: codeblock}
 
-After successful configuration of Cyclops and Identity Provider, you will get JWT token on Cyclops GUI. You can use the JWT token to execute `nzcli` commands as follows:
+After successful configuration of Cyclops and Identity Provider, you will get a JWT token on Cyclops GUI. You can use the JWT token to execute `nzcli` commands as follows:
 
 ```bash
 ./nzcli nzstate  -u SAMLUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
