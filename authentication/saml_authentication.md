@@ -24,7 +24,7 @@ subcollection: netezza
 # Setting SAML authentication
 {: #samliamauth}
 
-Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
+Set your authentication method to `SAML` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
 {: shortdesc}
 
 Two-factor authentication is supported by SAML external authentication system. User needs to be configured with MFA on IDP (Identity Provider), for example, Ping Identity.
@@ -45,15 +45,15 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML'
 
 1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
 1. Go to the **Query editor**.
-1. Register a SAML external authentication system.
+1. Register a `SAML` external authentication system.
 
     ```sql
     REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML'
     ```
     {: codeblock}
 
-1. Create a user or users with the external authentication method set to SAML as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
-1. Verify whether the user was created successfully.
+1. Create a user or users with the external authentication method set to `SAML` as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Verify whether the user is created successfully.
 
    1. Go to **Users and groups > Users**.
    1. Locate the user.
