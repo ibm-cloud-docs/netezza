@@ -27,12 +27,12 @@ Set the following configurations for Cyclops endpoints on IDP:
 {: shortdesc}
 
  ```bash
-//"service_provider_slo_url": "https://localhost:10443/v1/samlsloresponse"
+"service_provider_slo_url": "https://localhost:10443/v1/samlsloresponse"
 ```
 {: codeblock}
 
  ```bash
-//"assertion_consumer_service_url": "https://localhost:10443/v1/samlacsendpoint"
+"assertion_consumer_service_url": "https://localhost:10443/v1/samlacsendpoint"
 ```
 {: codeblock}
 
@@ -44,9 +44,9 @@ Admin users can configure the following SAML configurations by using Cyclops:
       "service_provider_private_key": "/nz/crypto-keys/signing-private.key",
       "service_provider_certificate": "/nz/crypto-keys/signing-certificate.crt"
       //Below parameters required to be configured for SAML SSO
-      //"idp_metadata_url": "https://auth.pingone.asia/793adfb9-e7c9-4e80-a1a2-335f27066ffe/saml20/metadata/caf77459-5b2b-400d-bcb1-7b71f85d25c1"
-      //"service_provider_slo_url": "https://localhost:10443/v1/samlsloresponse"
-      //"assertion_consumer_service_url": "https://localhost:10443/v1/samlacsendpoint"
+      "idp_metadata_url": "https://auth.pingone.asia/793adfb9-e7c9-4e80-a1a2-335f27066ffe/saml20/metadata/caf77459-5b2b-400d-bcb1-7b71f85d25c1"
+      "service_provider_slo_url": "https://localhost:10443/v1/samlsloresponse"
+      "assertion_consumer_service_url": "https://localhost:10443/v1/samlacsendpoint"
       //Optional parameters for SAML, If not configured default values would be used
       //"force_authn": "false"
       //"is_passive": "false"
@@ -67,7 +67,7 @@ Admin users can configure the following SAML configurations by using Cyclops:
 ```
 {: codeblock}
 
-After successful configuration of Cyclops and Identity Provider, you will get a JWT token on Cyclops GUI. You can use the JWT token to execute `nzcli` commands as follows:
+After successful authentication from Cyclops and Identity Provider, you will get a JWT token on Cyclops GUI. You can use the JWT token to execute `nzcli` commands as follows:
 
 ```bash
 ./nzcli nzstate  -u SAMLUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
