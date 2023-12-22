@@ -83,9 +83,7 @@ There are exceptions for {{site.data.keyword.lakehouse_short}} related to **DATA
 |CREATE TABLE with **DATA_VERSION_RETENTION_TIME** (temporal) table|Allowed under NETEZZA_SCHEMA (Only)|
 |ALTER TABLE with **DATA_VERSION_RETENTION_TIME** (temporal) table|Allowed under NETEZZA_SCHEMA (Only)|
 
-- If SYSTEM DEFAULT **DATA_VERSION_RETENTION_TIME** is nonzero , CREATE DATABASE will not inherit the property from SYSTEM DEFAULT.
-- CREATE SCHEMA including NETEZZA_SCHEMA will not inherit DB property.
-- There will be no impact or changes needed for Time Travel related automaint task for Lakehouse DB.
+If SYSTEM DEFAULT **DATA_VERSION_RETENTION_TIME** is nonzero , CREATE DATABASE will not inherit the property from SYSTEM DEFAULT. CREATE SCHEMA including NETEZZA_SCHEMA will not inherit DB property. There will be no impact or changes needed for Time Travel related automaint task for Lakehouse DB.
 {: note}
 
 
