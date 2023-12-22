@@ -37,19 +37,19 @@ Follow the manual instructions to set up an AWS IAM role (`NzCrossAccountRole`) 
 {
     "Version": "2012-10-17",
     "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
+    {
+        "Sid": "VisualEditor0",
+        "Effect": "Allow",
+        "Action": [
                 "iam:ListGroupsForUser",
                 "iam:ListMFADevices",
                 "iam:ListAccessKeys"
-            ],
-            "Resource": [
-                "<ARN of IAM user in customer account>",
-                "<ARN of IAM user in customer account>"
-            ]
-        }
+        ],
+        "Resource": [
+            "<ARN of IAM user in customer account>",
+            "<ARN of IAM user in customer account>"
+        ]
+    }
     ]
 }
 ```
@@ -64,13 +64,13 @@ The Netezza AWS account must be added under the Trusted entities.
 {
     "Version": "2012-10-17",
     "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::<Netezza_AWS_ACCOUNT_ID>:user/nziamopsuser"
-            },
-            "Action": "sts:AssumeRole"
-        }
+    {
+        "Effect": "Allow",
+        "Principal": {
+            "AWS": "arn:aws:iam::<Netezza_AWS_ACCOUNT_ID>:user/nziamopsuser"
+        },
+        "Action": "sts:AssumeRole"
+    }
     ]
 }
 ```
@@ -85,12 +85,12 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 {
     "Version": "2012-10-17",
     "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": "iam: ListGroupsForUser",
-            "Resource": "*"
-        }
+    {
+        "Sid": "VisualEditor0",
+        "Effect": "Allow",
+        "Action": "iam: ListGroupsForUser",
+        "Resource": "*"
+    }
     ]
 }
 ```
@@ -103,15 +103,15 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 {
     "Version": "2012-10-17",
     "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "iam:ListMFADevices",
-                "sts:GetSessionToken"
-            ],
-            "Resource": "*"
-        }
+    {
+        "Sid": "VisualEditor0",
+        "Effect": "Allow",
+        "Action": [
+            "iam:ListMFADevices",
+            "sts:GetSessionToken"
+        ],
+        "Resource": "*"
+    }
     ]
 }
 ```
@@ -140,7 +140,7 @@ nz awsiam [options]
  |`-hc`  |Show details of nz command |
 | `-mfa-code`  |The MFA code for the awsiam user |
 | `-secret-key` | The secret key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
-| `-u NPS`  | Username [NZ_USER] (required) |
+| `-u`  |  NPS Username [NZ_USER] (required) |
 
 **_NOTE:_** `nzcli` for `nziamops` configuration is not supported.
 
