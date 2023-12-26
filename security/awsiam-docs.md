@@ -128,6 +128,18 @@ nz awsiam [options]
 ```
 {: codeblock}
 
+```bash
+./nzcli nzcommand -u AWSUSER -pw  jwttoken -apiserver ip
+```
+{: codeblock}
+
+After successful authentication of AWSIAM user on either Cyclops or v3/signin REST API, you will get a JWT token on Cyclops GUI or on REST API response. You can use this JWT token to execute `nzcli` commands as follows.
+
+```bash
+./nzcli nzcommand -u AWSUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
+```
+{: codeblock}
+
 **_NOTE:_** Authenticator is `AWSIAM`.
 
 ### Options
@@ -285,19 +297,19 @@ When `nziamops` user user is not configured, specify the `access-key:secret-key 
 ```
 {: codeblock}
 
-## Usage of `v2/signin` API with AWS IAM authentication
+## Usage of `/signin` API with AWS IAM authentication
 
 ### When MFA is not configured
 When `nziamops` user is configured:
  ```bash
-curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue" }'
+curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue" }'
 ```
 {: codeblock}
 
 When `nziamops` user is not configured:
 
  ```bash
-curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key" }'
+curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key" }'
 ```
 {: codeblock}
 
@@ -305,14 +317,14 @@ curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/j
 When `nziamops` user is configured, specify the `Secret-Key`, `accountid`, and `mfacode` for the user.
 
  ```bash
-curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue", "mfacode":"mfacodevalue" }'
+curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue", "mfacode":"mfacodevalue" }'
 ```
 {: codeblock}
 
 When `nziamops` user is not configured, specify the `Access-Id:Secret-Key` and `mfacode` for the user.
 
  ```bash
-curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key", "mfacode":"mfacodevalue" }'
+curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key", "mfacode":"mfacodevalue" }'
 ```
 {: codeblock}
 
