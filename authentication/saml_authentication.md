@@ -115,7 +115,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML'
 1. Verify whether the user is created successfully.
 
     ```sql
-    \q
 
     nzsql -u '"SAMLUSER"' -pw JWTTOKEN
     ```
@@ -124,7 +123,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML'
     Example:
 
     ```sql
-    \q
 
     nzsql -u '"SAMLUSER"' -pw XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     Welcome to nzsql, the IBM Netezza SQL interactive terminal.

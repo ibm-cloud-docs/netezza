@@ -48,8 +48,8 @@ Admin users can configure the following SAML configurations by using Cyclops:
       "service_provider_slo_url": "https://localhost:10443/v1/samlsloresponse"
       "assertion_consumer_service_url": "https://localhost:10443/v1/samlacsendpoint"
       //Optional parameters for SAML, If not configured default values would be used
-      //"force_authn": "false"
-      //"is_passive": "false"
+      //"force_authn": false
+      //"is_passive": false
       //"canonicalizer_id": "http://www.w3.org/2001/10/xml-exc-c14n# " //This value is required for ADFS
  
 ```
