@@ -97,6 +97,8 @@ toc:
               topics:
               - authentication/awsiam_autnentication.md
               - security/awsiam-docs.md
+              - security/usageofnzcliawsiam.md
+              - security/usageofv3signinawsiam.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:

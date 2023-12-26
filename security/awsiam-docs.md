@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-12-20"
+lastupdated: "2023-12-26"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -125,18 +125,6 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 
 ```bash
 nz awsiam [options]
-```
-{: codeblock}
-
-```bash
-./nzcli nzcommand -u AWSUSER -pw  jwttoken -apiserver ip
-```
-{: codeblock}
-
-After successful authentication of AWSIAM user on either Cyclops or v3/signin REST API, you will get a JWT token on Cyclops GUI or on REST API response. You can use this JWT token to execute `nzcli` commands as follows.
-
-```bash
-./nzcli nzcommand -u AWSUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
 ```
 {: codeblock}
 
@@ -297,7 +285,7 @@ When `nziamops` user user is not configured, specify the `access-key:secret-key 
 ```
 {: codeblock}
 
-## Usage of `/signin` API with AWS IAM authentication
+## Usage of `v3/signin` API with AWS IAM authentication
 
 ### When MFA is not configured
 When `nziamops` user is configured:
@@ -325,6 +313,19 @@ When `nziamops` user is not configured, specify the `Access-Id:Secret-Key` and `
 
  ```bash
 curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key", "mfacode":"mfacodevalue" }'
+```
+{: codeblock}
+
+### nzcli with JWT token authentication
+```bash
+./nzcli nzcommand -u AWSUSER -pw  jwttoken -apiserver ip
+```
+{: codeblock}
+
+After successful authentication of AWSIAM user on either Cyclops or v3/signin REST API, you will get a JWT token on Cyclops GUI or on REST API response. You can use this JWT token to execute `nzcli` commands as follows.
+
+```bash
+./nzcli nzcommand -u AWSUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
 ```
 {: codeblock}
 
