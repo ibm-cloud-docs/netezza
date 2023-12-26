@@ -102,6 +102,8 @@ toc:
               topics:
               - authentication/saml_authentication.md
               - security/saml-docs.md
+              - usagenzclisamlauth.md
+              - usagev3signinsaml.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
