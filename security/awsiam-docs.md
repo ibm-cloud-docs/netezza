@@ -315,3 +315,101 @@ When `nziamops` user is not configured, specify the `Access-Id:Secret-Key` and `
 curl -k -X POST https://localhost:3344/v2/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key", "mfacode":"mfacodevalue" }'
 ```
 {: codeblock}
+
+### List of `nzcommand`
+Following is the list of `nzcommand`.
+
+ ```bash
+nzsystem showRegistry
+```
+{: codeblock}
+
+ ```bash
+nzsystem showIssues
+```
+{: codeblock}
+
+ ```bash
+nzstate
+```
+{: codeblock}
+
+ ```bash
+nzsystem showRev
+```
+{: codeblock}
+
+ ```bash
+nzsystem showRev -build
+```
+{: codeblock}
+
+ ```bash
+nzsystem showRev -label
+```
+{: codeblock}
+
+ ```bash
+nzstats
+```
+{: codeblock}
+
+ ```bash
+nzds show
+```
+{: codeblock}
+
+ ```bash
+nzds show -regenstatus
+```
+{: codeblock}
+
+ ```bash
+nzds show -issues
+```
+{: codeblock}
+
+ ```bash
+nzhw show
+```
+{: codeblock}
+
+ ```bash
+nzhw listTypes
+```
+{: codeblock}
+
+ ```bash
+nzhw show -issues -detail
+```
+{: codeblock}
+
+ ```bash
+nzhw show -type spu
+```
+{: codeblock}
+
+ ```bash
+nzsession show
+```
+{: codeblock}
+
+ ```bash
+nzrev -dirSuffix
+```
+{: codeblock}
+
+ ```bash
+nzrev -rev
+```
+{: codeblock}
+
+ ```bash
+nzrev -shortLabel
+```
+{: codeblock}
+
+ ```bash
+nzrev -buildType
+```
+{: codeblock}
