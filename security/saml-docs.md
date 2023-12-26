@@ -129,7 +129,47 @@ nzds show -issues
 {: codeblock}
 
 ```bash
-nzds show -issues
+nzhw show
+```
+{: codeblock}
+
+```bash
+nzhw listTypes
+```
+{: codeblock}
+
+```bash
+nzhw show -issues -detail
+```
+{: codeblock}
+
+```bash
+nzhw show -type spu
+```
+{: codeblock}
+
+```bash
+nzsession show
+```
+{: codeblock}
+
+```bash
+nzrev -dirSuffix
+```
+{: codeblock}
+
+```bash
+nzrev -rev
+```
+{: codeblock}
+
+```bash
+nzrev -shortLabel
+```
+{: codeblock}
+
+```bash
+nzrev -buildType
 ```
 {: codeblock}
 
