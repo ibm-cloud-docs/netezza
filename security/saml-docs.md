@@ -63,18 +63,75 @@ Admin users can configure the following SAML configurations by using Cyclops:
 {: codeblock}
 
  ```bash
-./nzcli nzstate  -u admin -pw  jwttoken -apiserver ip
+./nzcli nzcommand  -u admin -pw  jwttoken -apiserver ip
 ```
 {: codeblock}
 
 After successful authentication from Cyclops and Identity Provider, you will get a JWT token on Cyclops GUI. You can use the JWT token to execute `nzcli` commands as follows:
 
 ```bash
-./nzcli nzstate  -u SAMLUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
+./nzcli nzcommand  -u SAMLUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
 ```
 {: codeblock}
 
 **_NOTE:_** Similarly, you can use many `nzcli` commands.
+
+Following is list of `nzcommand`:
+
+```bash
+nzsystem showRegistry
+```
+{: codeblock}
+
+```bash
+nzsystem showIssues
+```
+{: codeblock}
+
+```bash
+nzstate
+```
+{: codeblock}
+
+```bash
+nzsystem showRev
+```
+{: codeblock}
+
+```bash
+nzsystem showRev -build
+```
+{: codeblock}
+
+```bash
+nzsystem showRev -label
+```
+{: codeblock}
+
+```bash
+nzstats
+```
+{: codeblock}
+
+```bash
+nzds show
+```
+{: codeblock}
+
+```bash
+nzds show -regenstatus
+```
+{: codeblock}
+
+```bash
+nzds show -issues
+```
+{: codeblock}
+
+```bash
+nzds show -issues
+```
+{: codeblock}
 
 ## Usage of `v2/signin` API with SAML authentication
 `v2/signin` API is not supported for SAML authentication.
