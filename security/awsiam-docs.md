@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-12-26"
+lastupdated: "2023-12-27"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -20,6 +20,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
 # Managing AWS IAM access for {{site.data.keyword.netezza_short}}
 {: #awsiam-docs}
@@ -128,7 +129,8 @@ nz awsiam [options]
 ```
 {: codeblock}
 
-**_NOTE:_** Authenticator is `AWSIAM`.
+Authenticator is `AWSIAM`.
+{: note}
 
 ### Options
 | Options     | Description |
@@ -142,7 +144,8 @@ nz awsiam [options]
 | `-secret-key` | The secret key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
 | `-u`  |  NPS Username [NZ_USER] (required) |
 
-**_NOTE:_** `nzcli` for `nziamops` configuration is not supported.
+`nzcli` for `nziamops` configuration is not supported.
+{: note}
 
 `nzcli` without `nziamops` configuration is supported as follows:
 
@@ -156,4 +159,5 @@ nz awsiam [options]
 ```
 {: codeblock}
 
-**_NOTE:_** `nzcli` requests MFA code.
+`nzcli` requests MFA code.
+{: note}
