@@ -41,8 +41,8 @@ Admin users can configure the following SAML configurations by using Cyclops:
  ```bash
 //SAML Configuration
       "service_provider_entity_id": "http://netezza.com/saml/acs/example",
-      "service_provider_private_key": "/nz/crypto-keys/signing-private.key",
-      "service_provider_certificate": "/nz/crypto-keys/signing-certificate.crt"
+      "service_provider_private_key": "/ips/ssl-secret/server.key",
+      "service_provider_certificate": "/ips/ssl-secret/server.pem"
       //Below parameters required to be configured for SAML SSO
       "idp_metadata_url": "https://auth.pingone.asia/793adfb9-e7c9-4e80-a1a2-335f27066ffe/saml20/metadata/caf77459-5b2b-400d-bcb1-7b71f85d25c1"
       "service_provider_slo_url": "https://localhost:10443/v1/samlsloresponse"
