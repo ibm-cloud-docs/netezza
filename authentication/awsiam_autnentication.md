@@ -114,8 +114,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 1. Verify whether the user is created successfully.
 
     ```sql
-    \q
-
     nzsql -u '"AWSUSER"' -pw PASSWORD
     ```
     {: codeblock}
@@ -153,8 +151,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     Example:
 
     ```sql
-    \q
-
     nzsql -u '"AWSUSER"' -pw XXXXXXXXXXXXX
     Welcome to nzsql, the IBM Netezza SQL interactive terminal.
 
