@@ -20,6 +20,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
 # Usage of `nzcli` with SAML authentication
 
@@ -40,7 +41,8 @@ After successful authentication from Cyclops and Identity Provider, you will get
 ```
 {: codeblock}
 
-**_NOTE:_** Similarly, you can use many `nzcli` commands.
+Similarly, you can use many `nzcli` commands.
+{: note}
 
 Following is list of `nzcommand`:
 
