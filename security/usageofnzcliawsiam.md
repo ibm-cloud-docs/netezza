@@ -62,6 +62,39 @@ nz awsiam [options]
 
 **_NOTE:_** `nzcli` requests MFA code.
 
+## When MFA is not configured
+When `nziamops` user is configured, specify the `secret-key account-id` as password.
+
+ ```bash
+./nzcli nzcommand -u AWSUSER -pw "secret-key account-id" -apiserver NPS-IP
+```
+{: codeblock}
+
+When `nziamops` user user is not configured, specifiy the `access-id:secret-key` as password.
+
+ ```bash
+./nzcli nzcommand -u AWSUSER -pw "access-id:secret-key" -apiserver NPS-IP
+```
+{: codeblock}
+
+## When MFA is configured
+When `nziamops` user is configured, specifiy the `secret-key mfa-code account-id` as password.
+
+ ```bash
+./nzcli nzcommand -u AWSUSER -pw "secret-key mfa-code account-id" -apiserver NPS-IP
+```
+{: codeblock}
+
+When `nziamops` user user is not configured, specify the `access-key:secret-key mfa-code` as password.
+
+ ```bash
+./nzcli nzcommand -u AWSUSER -pw "access-id:secret-key mfa-code" -apiserver NPS-IP
+```
+{: codeblock}
+
+AWS users can authenticate without `mfa-code` using `nzcli`.
+{: note}
+
 Following is the list of `nzcommand`.
 
  ```bash
@@ -156,35 +189,5 @@ nzrev -shortLabel
 
  ```bash
 nzrev -buildType
-```
-{: codeblock}
-
-## When MFA is not configured
-When `nziamops` user is configured, specify the `secret-key account-id` as password.
-
- ```bash
-./nzcli nzcommand -u AWSUSER -pw "secret-key account-id" -apiserver NPS-IP
-```
-{: codeblock}
-
-When `nziamops` user user is not configured, specifiy the `access-id:secret-key` as password.
-
- ```bash
-./nzcli nzcommand -u AWSUSER -pw "access-id:secret-key" -apiserver NPS-IP
-```
-{: codeblock}
-
-## When MFA is configured
-When `nziamops` user is configured, specifiy the `secret-key mfa-code account-id` as password.
-
- ```bash
-./nzcli nzcommand -u AWSUSER -pw "secret-key mfa-code account-id" -apiserver NPS-IP
-```
-{: codeblock}
-
-When `nziamops` user user is not configured, specify the `access-key:secret-key mfa-code` as password.
-
- ```bash
-./nzcli nzcommand -u AWSUSER -pw "access-id:secret-key mfa-code" -apiserver NPS-IP
 ```
 {: codeblock}

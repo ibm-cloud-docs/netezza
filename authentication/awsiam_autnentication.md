@@ -20,6 +20,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
 # Setting AWS IAM authentication
 {: #awsiamauth}
@@ -167,3 +168,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     SYSTEM.ADMIN(AWSUSER)=>
     ```
     {: codeblock}
+
+AWS users can authenticate without `mfa-code` using `nzsql`.
+{: note}
