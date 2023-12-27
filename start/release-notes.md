@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-12-09"
+lastupdated: "2023-12-27"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -22,7 +22,7 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
 
-## November 15, 2023
+## January 15, 2024
 {: #nov2023}
 
 ### New features and enhancements
@@ -47,6 +47,7 @@ Scheduler types:
 {: #kinov2023}
 
 - For expansion failure due to node procurement issues, the Ops team will restore the system to an online state using pre-expansion configuration. The Ops team will contact once the required nodes become available.
+- Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup. **draft comment https://jsw.ibm.com/browse/NEXTGEN-64249**
 
 ## August 28, 2023
 {: #aug2023}
