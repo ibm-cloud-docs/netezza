@@ -167,3 +167,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
 AWS users can authenticate without `mfa-code` using `nzsql`.
 {: note}
+
+When using `nziamops` user, the user must be created in your AWS account and credentials configured using Cyclops.
+{: note}
