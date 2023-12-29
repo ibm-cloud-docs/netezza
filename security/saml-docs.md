@@ -59,9 +59,9 @@ Admin users can configure the following SAML configurations by using Cyclops:
 ```
 {: codeblock}
 
-## Steps to get SAML slo and acs URL from NPS
+## Steps to get SAML `slo` and `acs` URL from NPS
 
-1. Execute below command from `k8s` prompt:
+1. Execute the following command from `k8s` prompt:
 
     ```bash
     #k get dns -n ibm-nz-cyclops
