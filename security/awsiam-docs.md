@@ -23,17 +23,53 @@ subcollection: netezza
 {:note: .note}
 
 # Managing AWS IAM access for {{site.data.keyword.netezza_short}}
+
 {: #awsiam-docs}
 
 ## AWS IAM `nziamops` user
-An AWS IAM ops user (`nziamops`) is created in the NzSAAS AWS account if Cyclops is configured to authenticate by using `nziamops` user. The `nziamops` user executes AWS APIs to fetch IAM user details like the access key ID and MFA device during the authentication process. Your AWS account must provide cross-account access to the `nziamops` user in the NzSAAS account to execute the API calls on the Netezza IAM users by manually defining the IAM role and setting trust relationship between the AWS accounts.
 
-Follow the manual instructions to set up an AWS IAM role (`NzCrossAccountRole`) and trust relationship. Configure the IAM role and user group in the AWS account during the authentication by using `nziamops` user.
-{: shortdesc}
+An AWS IAM ops user (`nziamops`) must be created in your AWS account if Cyclops is configured to authenticate by using `nziamops` user. This is a fallback mechanism for authentication if the default mechanism does not work. Update the IAM credentials of the `nziamops` user using the Cyclops UI.
+The `nziamops` user executes AWS APIs to fetch IAM user details like the access key ID and MFA device during the authentication process.
 
 ### IAM role `NzCrossAccountRole` and trust relationship
 
+Follow the manual instructions to set up the required AWS IAM policies.
+
+If customer `IAM` users and `NzIAMOps` user are in same AWS account, the policy required:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "iam:ListAccessKeys",
+            "Resource": "arn_for_customeruser"
+        }
+    ]
+}
+```
+
+If customer `IAM` users and `NzIAMOps` user are in different customer AWS accounts, the policy Required:
+
+```json
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Sid": "VisualEditor0",
+"Effect": "Allow",
+"Action": "sts:AssumeRole",
+"Resource": [
+“arn_for_customeruser”
+]
+}
+]
+} 
+
 #### Policy for `NzCrossAccountRole`
+
 ```json
 {
     "Version": "2012-10-17",
@@ -54,11 +90,13 @@ Follow the manual instructions to set up an AWS IAM role (`NzCrossAccountRole`) 
     ]
 }
 ```
+
 {: codeblock}
 
 The `Resource` section must have the ARN of IAM users from the account.
 
 #### Trust relationship
+
 The Netezza AWS account must be added under the Trusted entities.
 
 ```json
@@ -75,6 +113,7 @@ The Netezza AWS account must be added under the Trusted entities.
     ]
 }
 ```
+
 {: codeblock}
 
 The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
@@ -82,6 +121,7 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 ### IAM admin user group `NzIAMAdminUsers`
 
 #### Policy for the `NzAdminUsers` group
+
 ```json
 {
     "Version": "2012-10-17",
@@ -95,11 +135,13 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
     ]
 }
 ```
+
 {: codeblock}
 
 ### IAM policy attached to user group to give permission to the user to execute APIs
 
 #### `ListMFADevices`, `GetSessionToken` API
+
 ```json
 {
     "Version": "2012-10-17",
@@ -116,4 +158,5 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
     ]
 }
 ```
+
 {: codeblock}
