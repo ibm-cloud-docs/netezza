@@ -29,7 +29,7 @@ subcollection: netezza
 {: codeblock}
 
 ```bash
-nz awsiam [options]
+nz awsiam [options] nzcommand
 ```
 {: codeblock}
 
