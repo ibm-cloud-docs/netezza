@@ -70,7 +70,7 @@ Admin users can configure the following SAML configurations by using Cyclops:
 
 1. From the following output, you can form the URL as `HOSTNAME.DOMAIN`.
 
-   | NAME | HOSTNAME |RECORD TYPE | DOMAIN |
+   | NAME | HOSTNAME | DOMAIN | RECORD TYPE |
    | :----------- | :----------- | :----------- | :----------- |
    | **console-public-dns** | **console-nz-dev-eks-cluster.us-east** | `data-warehouse.test.cloud.ibm.com` | **CNAME** |
 
