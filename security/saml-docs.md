@@ -63,37 +63,37 @@ Admin users can configure the following SAML configurations by using Cyclops:
 
 1. Execute below command from `k8s` prompt:
 
-  ```bash
-  #k get dns -n ibm-nz-cyclops
-  ```
-  {: codeblock}
+    ```bash
+    #k get dns -n ibm-nz-cyclops
+    ```
+    {: codeblock}
 
 1. From the following output, you can form the URL as `HOSTNAME.DOMAIN`.
 
-  | NAME | HOSTNAME |RECORD TYPE | DOMAIN |
-  | :----------- | :----------- | :----------- | :----------- |
-  | **console-public-dns** | **console-nz-dev-eks-cluster.us-east** | `data-warehouse.test.cloud.ibm.com` | **CNAME** |
+   | NAME | HOSTNAME |RECORD TYPE | DOMAIN |
+   | :----------- | :----------- | :----------- | :----------- |
+   | **console-public-dns** | **console-nz-dev-eks-cluster.us-east** | `data-warehouse.test.cloud.ibm.com` | **CNAME** |
 
-  URL:
+   URL:
 
    ```bash
    console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com
    ```
-  {: codeblock}
+   {: codeblock}
 
 1. For generating a URL specific to the namespace, add the CRN number as shown:
 
-  ```bash
-  https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>
-  ```
-  {: codeblock}
+   ```bash
+   https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>
+   ```
+   {: codeblock}
 
-  ```bash
-  "service_provider_slo_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>/v1/samlsloresponse"
-  ```
-  {: codeblock}
+   ```bash
+   "service_provider_slo_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>/v1/samlsloresponse"
+   ```
+   {: codeblock}
 
-  ```bash
-  "assertion_consumer_service_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>/v1/samlacsendpoint"
-  ```
-  {: codeblock}
+   ```bash
+   "assertion_consumer_service_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>/v1/samlacsendpoint"
+   ```
+   {: codeblock}
