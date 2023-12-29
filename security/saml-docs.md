@@ -55,3 +55,43 @@ Admin users can configure the following SAML configurations by using Cyclops:
 ```
 {: codeblock}
 
+## Steps to get SAML slo and acs URL from NPS
+1. Execute below command from `k8s` prompt:
+
+```bash
+#k get dns -n ibm-nz-cyclops
+```
+{: codeblock}
+
+1. From the following outout, you can form the URL as HOSTNAME.DOMAIN.
+
+```
+| NAME | HOSTNAME |RECORD TYPE | DOMAIN |
+| :-----------   | :-----------   | :-----------   | :-----------   |
+| console-public-dns | console-nz-dev-eks-cluster.us-east | data-warehouse.test.cloud.ibm.com | CNAME |
+```
+{: screen}
+
+URL:
+
+```bash
+console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com
+```
+{: codeblock}
+
+1. For generating URL specific to namespace, add CRN number as shown:
+
+```bash
+https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>
+```
+{: codeblock}
+
+```bash
+"service_provider_slo_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>/v1/samlsloresponse"
+```
+{: codeblock}
+
+```bash
+"assertion_consumer_service_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>/v1/samlacsendpoint"
+```
+{: codeblock}
