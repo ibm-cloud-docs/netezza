@@ -53,17 +53,17 @@ If customer `IAM` users and `NzIAMOps` user are in different customer AWS accoun
 
 ```json
 {
-"Version": "2012-10-17",
-"Statement": [
-{
-"Sid": "VisualEditor0",
-"Effect": "Allow",
-"Action": "sts:AssumeRole",
-"Resource": [
-“arn_for_customeruser”
-]
-}
-]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "sts:AssumeRole",
+            "Resource": [
+                "arn_for_customeruser"
+            ]
+        }
+    ]
 } 
 
 #### Policy for `NzCrossAccountRole`
