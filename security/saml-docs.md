@@ -36,7 +36,7 @@ Set the following configurations for Cyclops endpoints on IDP:
 ```
 {: codeblock}
 
-`/ips/ssl-secret/server.pem` certificate should be configured on IDP.
+`/ips/ssl-secret/server.pem` certificate must be configured on IDP.
 
 Admin users can configure the following SAML configurations by using Cyclops:
 
@@ -68,11 +68,11 @@ Admin users can configure the following SAML configurations by using Cyclops:
   ```
   {: codeblock}
 
-1. From the following outout, you can form the URL as HOSTNAME.DOMAIN.
+1. From the following output, you can form the URL as `HOSTNAME.DOMAIN`.
 
   | NAME | HOSTNAME |RECORD TYPE | DOMAIN |
   | :----------- | :----------- | :----------- | :----------- |
-  | console-public-dns | console-nz-dev-eks-cluster.us-east | data-warehouse.test.cloud.ibm.com | CNAME |
+  | **console-public-dns** | **console-nz-dev-eks-cluster.us-east** | `data-warehouse.test.cloud.ibm.com` | **CNAME** |
 
   URL:
 
@@ -81,7 +81,7 @@ Admin users can configure the following SAML configurations by using Cyclops:
    ```
   {: codeblock}
 
-1. For generating URL specific to namespace, add CRN number as shown:
+1. For generating a URL specific to the namespace, add the CRN number as shown:
 
   ```bash
   https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>
