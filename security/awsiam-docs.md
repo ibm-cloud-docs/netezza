@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-12-27"
+lastupdated: "2023-12-29"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -27,12 +27,10 @@ subcollection: netezza
 {: #awsiam-docs}
 
 ## AWS IAM `nziamops` user
-
 An AWS IAM ops user (`nziamops`) must be created in your AWS account if Cyclops is configured to authenticate by using `nziamops` user. This is a fallback mechanism for authentication if the default mechanism does not work. Update the IAM credentials of the `nziamops` user using the Cyclops UI.
 The `nziamops` user executes AWS APIs to fetch IAM user details like the access key ID and MFA device during the authentication process.
 
 ### IAM role `NzCrossAccountRole` and trust relationship
-
 Follow the manual instructions to set up the required AWS IAM policies.
 
 If customer `IAM` users and `NzIAMOps` user are in same AWS account, the policy required:
