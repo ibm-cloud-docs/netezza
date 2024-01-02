@@ -55,11 +55,13 @@ After six hours of cool-down period passes and you want to perform contour scali
 1. Move the **Storage density** slider to the required position, or select from the drop-down.
 1. Click **Scale**.
 
-On clicking **Scale**, you might get the following error message due to lack of free space in the current storage.\n
-```Couldn't initiate scaling due to lack of free space in the current storage. Refer to documentation for next steps or contact IBM support.```\nYou can chose one of the following options to overcome this issue.
-{: note}
+On clicking **Scale**, you might get the following error message due to lack of free space in the current storage.
 
-If you choose [option 2](#scaling-option2) where storage scaling must be performed, you might have to incur additional cost because after storage scaling within `nc-start`, the minimum storage changes.
+```Couldn't initiate scaling due to lack of free space in the current storage. Refer to documentation for next steps or contact IBM support.```
+
+You can chose one of the following options to overcome this issue.
+
+[Option 2](#scaling-option2) where storage scaling must be performed, might add additional cost because after storage scaling within `nc-start`, the minimum storage changes.
 {: important}
 
 ### Option 1
@@ -70,7 +72,7 @@ If you choose [option 2](#scaling-option2) where storage scaling must be perform
 1. Take a backup of data to a different storage like NFS server.
 1. Delete the data from DB after successful backup and restore them after scaling is complete.
 
-### option 2
+### Option 2
 {: #scaling-option2}
 
 Expand current storage before profile scaling.
