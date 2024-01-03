@@ -23,7 +23,7 @@ subcollection: netezza
 {: #my-service-relnotes}
 
 ## January 15, 2024
-{: #nov2023}
+{: #jan2023}
 
 ### New features and enhancements
 {: #nfnov2023}
@@ -33,7 +33,7 @@ A new Scheduler type column is introduced in History page for past records.
 Scheduler types:
 - ad-hoc: Schedules executed within 5 minutes of creation.
 - scheduled: Schedules executed at a later time.
-
+draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761
 ### Fixes
 {: #fnov2023}
 
