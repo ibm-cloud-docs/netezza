@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-12-27"
+  years: 2024
+lastupdated: "2024-01-03"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,30 +23,31 @@ subcollection: netezza
 {: #my-service-relnotes}
 
 ## January 15, 2024
-{: #jan2023}
+{: #jan2024}
 
 ### New features and enhancements
-{: #nfnov2023}
+{: #nfjan2024}
 
-- **DRAFT COMMENT: WIP Need more details.** NPS 11.2.2.10
-A new Scheduler type column is introduced in History page for past records.
-Scheduler types:
-- ad-hoc: Schedules executed within 5 minutes of creation.
-- scheduled: Schedules executed at a later time.
-draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761
+- A new `Scheduler type` column is introduced in the **History** page for past records.\n
+  Scheduler types:
+  - Ad hoc: Schedules executed within 5 minutes of creation.
+  - Scheduled: Schedules executed at a later time.
+
+For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
+**draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761**
 ### Fixes
-{: #fnov2023}
+{: #fjan2024}
 
 ### Components
-{: #compsnov2023}
+{: #compsjan2024}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.10
 - Web console 4.0.x
 
 ### Known issues
-{: #kinov2023}
+{: #kijan2024}
 
-- For expansion failure due to node procurement issues, the Ops team will restore the system to an online state using pre-expansion configuration. The Ops team will contact once the required nodes become available.
+- For expansion failure due to node procurement issues, the Ops team restores the system to online state using pre-expansion configuration. The Ops team contacts you once the required nodes become available. The created expansion will be available in **Suspended** state under **Workload Patterns -> Scaling**. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion). **draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761**
 - Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup. **draft comment https://jsw.ibm.com/browse/NEXTGEN-64249**
 
 ## August 28, 2023

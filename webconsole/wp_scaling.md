@@ -128,3 +128,15 @@ Storage shrinking is not supported. You can't do storage scaling from higher to 
    - Filter by **Time completed** or **Owner**.
 
    - In **Find history**, type the name of the operation.
+
+   - Filter by **Scheduler type**. The two options available are:
+      - Ad hoc: Schedules executed within 5 minutes of creation.
+      - Scheduled: Schedules executed at a later time.
+
+
+## Viewing suspended expansion
+{: #view-suspended-expansion}
+
+After the Ops team confirms the availability of nodes for expansion, you can see the created expansion in the **Suspended** state under **Workload Patterns -> Scaling**.
+If new scheduler is created when existing scheduler is in **Suspended** state, then the newly created scheduler also goes into **Suspended** state.
+After confirmation from Ops team, you can retry or delete the existing **Suspended** schedulers in the same order of their creation.
