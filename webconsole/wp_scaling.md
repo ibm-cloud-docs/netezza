@@ -137,6 +137,6 @@ Storage shrinking is not supported. You can't do storage scaling from higher to 
 ## Viewing suspended expansion
 {: #view-suspended-expansion}
 
-After the Ops team confirms the availability of nodes for expansion, you can see the created expansion in the **Suspended** state under **Workload Patterns -> Scaling**.
-If new scheduler is created when existing scheduler is in **Suspended** state, then the newly created scheduler also goes into **Suspended** state.
+After Ops team confirms the availability of nodes for expansion, you can see the created expansion in **Suspended** state under **Workload Patterns -> Scaling**.
+If a new scheduler is created when existing scheduler is in **Suspended** state, then the newly created scheduler also goes into **Suspended** state.
 After confirmation from Ops team, you can retry or delete the existing **Suspended** schedulers in the same order of their creation.

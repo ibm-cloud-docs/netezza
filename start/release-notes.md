@@ -28,7 +28,7 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfjan2024}
 
-- A new `Scheduler type` column is introduced in the **History** page for past records.\n
+- A new **Scheduler type** column is introduced in the **History** page for past records.\
   Scheduler types:
   - Ad hoc: Schedules executed within 5 minutes of creation.
   - Scheduled: Schedules executed at a later time.
