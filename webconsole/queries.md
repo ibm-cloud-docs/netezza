@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-14"
+lastupdated: "2024-01-03"
 
 keywords: web console, queries
 

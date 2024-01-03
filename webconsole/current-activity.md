@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2022-12-09"
+lastupdated: "2024-01-03"
 
 keywords: web console, 
 subcollection: netezza
