@@ -57,8 +57,7 @@ After six hours of cool-down period passes and you want to perform contour scali
 
 On clicking **Scale**, you might get the following error message due to lack of free space in the current storage.
 
-Failed to create scheduler: Couldn't initiate scaling due to lack of free space in the current storage. Refer to documentation for next steps or contact IBM support.
-{: screen}
+```Failed to create scheduler: Couldn't initiate scaling due to lack of free space in the current storage. Refer to documentation for next steps or contact IBM support.```
 
 You can choose one of the following options to overcome this issue.
 
