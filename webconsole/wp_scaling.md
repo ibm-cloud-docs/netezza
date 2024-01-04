@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-01-02"
+lastupdated: "2024-01-04"
 
 keywords: web console, administering web console, administering, pnr, pause and resume, netezza pause and resume, pause and resume by using netezza web console, pausing and resuming netezza performance server with the web console, netezza auto-pause and resume, netezza autopause and resume, netezza auto-pause and resume with the web console, scaling, netezza scaling with the web console, compute scaling, smartscaling, netezza smartscaling, netezza performance server smartscaling
 
@@ -16,7 +16,7 @@ subcollection: netezza
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
-
+{:screen: .screen}
 # Scaling
 {: #scaling-console}
 
@@ -57,9 +57,13 @@ After six hours of cool-down period passes and you want to perform contour scali
 
 On clicking **Scale**, you might get the following error message due to lack of free space in the current storage.
 
-```Couldn't initiate scaling due to lack of free space in the current storage. Refer to documentation for next steps or contact IBM support.```
+Failed to create scheduler: Couldn't initiate scaling due to lack of free space in the current storage. Refer to documentation for next steps or contact IBM support.
+{: screen}
 
-You can chose one of the following options to overcome this issue.
+You can choose one of the following options to overcome this issue.
+
+- [Option 1](#scaling-option1)
+- [Option 2](#scaling-option2)
 
 [Option 2](#scaling-option2) where storage scaling must be performed, might add additional cost because after storage scaling within `nc-start`, the minimum storage changes.
 {: important}
