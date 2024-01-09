@@ -26,7 +26,7 @@ On the *Settings* page, you can manage the following items:
 - Monitoring profile
 - Database maintenance
 
-## Network policies 
+## Network policies
 {: #wc-nwpolicies}
 
 On the *Network policies* page, you can add policies and view existing policies.
@@ -45,8 +45,8 @@ For more information about domain standards, see [Defining network policies with
 {: #wc-nwpolicies-adding}
 
 1. Go to **Administration > Settings > Network policies**.
-1. In the *Add policy* section, type your Classless Inter-Domain Routing (CIDR) or hostname.  
-   The IP address must conform to the domain standards.  
+1. In the *Add policy* section, type your Classless Inter-Domain Routing (CIDR) or hostname.
+   The IP address must conform to the domain standards.
 1. Select whether the policy is `Allowed` or `Blocked`.
 1. Click **Save**.
 
@@ -84,7 +84,6 @@ On the *Maintenance*  page, you can schedule a database maintenance and view inf
 To schedule a database maintenance slot:
 
 1. Go to **Administration > Settings > Maintenance**.
-1. Click **Edit**.
-1. Select a time for the maintenance job.
-1. Select a day or days for the maintenance job.
+1. Under the **Schedule data maintenance** section, click **Enable** for enabling either **Grooms** or **Genstats** or both.
+1. Select the date and time for **Grooms** or **Genstats** or both.
 1. Click **Save**.
