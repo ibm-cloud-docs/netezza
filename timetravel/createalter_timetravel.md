@@ -79,7 +79,7 @@ There are exceptions for {{site.data.keyword.lakehouse_short}} related to **DATA
 |CREATE DATABASE with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed|
 |ALTER DATABASE with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed|
 |CREATE SCHEMA with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed|
-|ALTER SCHEMA with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed|
+|ALTER SCHEMA with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed except for NETEZZA_SCHEMA|
 |CREATE TABLE with **DATA_VERSION_RETENTION_TIME** (temporal) table|Allowed under NETEZZA_SCHEMA only|
 |ALTER TABLE with **DATA_VERSION_RETENTION_TIME** (temporal) table|Allowed under NETEZZA_SCHEMA only|
 
