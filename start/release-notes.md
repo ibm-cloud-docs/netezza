@@ -35,8 +35,22 @@ subcollection: netezza
 
 For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761**
+
+#### Connectivity improvements
+{: #cijan2024}
+
+- OpenSSL library upgraded to 1.1.1t
+- TLSv1.3 connection protocol enabled in clients
+- New Ciphers supported for TLSv1.3
+- AIX 7.3 and SUSE 15 SP3 support added from version 11.2.2.10 and later
+- All 32 bit client are now deprecated
+- HP and Solaris clients are deprecated altogether
+- ConnRetry feature added in ODBC
+
 ### Fixes
 {: #fjan2024}
+
+- `.Net` login timeout overflow is fixed
 
 ### Components
 {: #compsjan2024}
