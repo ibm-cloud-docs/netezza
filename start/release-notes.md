@@ -40,7 +40,7 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 {: #cijan2024}
 
 - OpenSSL library upgraded to 1.1.1t
-- TLSv1.3 connection protocol enabled in clients
+- TLSv1.3 connection protocol supported
 - New Ciphers supported for TLSv1.3
 - AIX 7.3 and SUSE 15 SP3 support added from version 11.2.2.10 and later
 - All 32 bit client are now deprecated
