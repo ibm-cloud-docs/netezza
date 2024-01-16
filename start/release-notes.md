@@ -33,10 +33,12 @@ subcollection: netezza
   - Ad hoc: Schedules executed within 5 minutes of creation.
   - Scheduled: Schedules executed at a later time.
 
-For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
+  For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761**
+- Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
+**draft comment: https://jsw.ibm.com/browse/NEXTGEN-64392**
 
-#### Connectivity improvements
+#### Connectivity improvements 
 {: #cijan2024}
 
 - OpenSSL library upgraded to 1.1.1t
@@ -51,6 +53,7 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 {: #fjan2024}
 
 - `.Net` login timeout overflow is fixed
+**draft comment: https://jsw.ibm.com/browse/NEXTGEN-64390**
 
 ### Components
 {: #compsjan2024}
