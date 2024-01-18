@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-01-03"
+lastupdated: "2024-01-18"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -22,11 +22,11 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
 
-## January 15, 2024
-{: #jan2024}
+## February 2, 2024
+{: #feb2024}
 
 ### New features and enhancements
-{: #nfjan2024}
+{: #nffeb2024}
 
 - A new **Scheduler type** column is introduced in the **History** page for past records.\
   Scheduler types:
@@ -37,9 +37,12 @@ subcollection: netezza
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761**
 - Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-64392**
-
+- **RHEL8/GCC9 upgrade**:
+Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.\
+GCC9 supports only 64-bit, NPS no longer provides 32-bit client builds.
+**draft comment: https://jsw.ibm.com/browse/NEXTGEN-48128**
 #### Connectivity improvements 
-{: #cijan2024}
+{: #cifeb2024}
 
 - OpenSSL library upgraded to 1.1.1t
 - TLSv1.3 connection protocol supported
@@ -50,19 +53,19 @@ subcollection: netezza
 - ConnRetry feature added in ODBC
 
 ### Fixes
-{: #fjan2024}
+{: #ffeb2024}
 
 - `.Net` login timeout overflow is fixed
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-64390**
 
 ### Components
-{: #compsjan2024}
+{: #compsfeb2024}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.10
 - Web console 4.0.x
 
 ### Known issues
-{: #kijan2024}
+{: #kifeb2024}
 
 - For expansion failure due to node procurement issues, the Ops team restores the system to online state using pre-expansion configuration. The Ops team contacts you once the required nodes become available. The created expansion will be available in **Suspended** state under **Workload Patterns -> Scaling**. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion). **draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761**
 - Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup. **draft comment https://jsw.ibm.com/browse/NEXTGEN-64249**
