@@ -39,7 +39,7 @@ subcollection: netezza
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-64392**
 - **RHEL8/GCC9 upgrade**:
    - Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.
-   - GCC9 supports only 64-bit, NPS no longer provides 32-bit client builds.
+   - GCC9 supports only 64-bit. NPS no longer provides 32-bit client builds.
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-48128**
 #### Connectivity improvements 
 {: #cifeb2024}
