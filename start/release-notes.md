@@ -30,16 +30,16 @@ subcollection: netezza
 
 - A new **Scheduler type** column is introduced in the **History** page for past records.\
   Scheduler types:
-  - Ad hoc: Schedules executed within 5 minutes of creation.
-  - Scheduled: Schedules executed at a later time.
+   - Ad hoc: Schedules executed within 5 minutes of creation.
+   - Scheduled: Schedules executed at a later time.
 
   For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761**
 - Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-64392**
 - **RHEL8/GCC9 upgrade**:
-Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.\
-GCC9 supports only 64-bit, NPS no longer provides 32-bit client builds.
+   - Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.
+   - GCC9 supports only 64-bit, NPS no longer provides 32-bit client builds.
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-48128**
 #### Connectivity improvements 
 {: #cifeb2024}
