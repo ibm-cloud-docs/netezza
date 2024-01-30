@@ -41,7 +41,9 @@ subcollection: netezza
    - Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.
    - GCC9 supports only 64-bit. NPS no longer provides 32-bit client builds.
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-48128**
-#### Connectivity improvements 
+- **Netezza client:**\
+   Support to initiate, view,  and manipulate schedules for Ad hoc, pause, resume, and scaling.
+#### Connectivity improvements
 {: #cifeb2024}
 
 - OpenSSL library upgraded to 1.1.1t
