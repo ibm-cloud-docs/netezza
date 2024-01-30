@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-01-30"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -43,6 +43,12 @@ subcollection: netezza
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-48128**
 - **Netezza client:**\
    Support to initiate, view,  and manipulate schedules for Ad hoc, pause, resume, and scaling.
+- Introduced **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
+- Introduced following options for creating databases.
+   - Netezza
+   - Lakehouse
+
+   For more information, see [Create databases](https://test.cloud.ibm.com/docs/netezza?topic=netezza-databases#create-db).
 #### Connectivity improvements
 {: #cifeb2024}
 

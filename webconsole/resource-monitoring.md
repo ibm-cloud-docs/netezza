@@ -20,7 +20,7 @@ subcollection: netezza
 # Resource monitoring
 {: #resource_mon}
 
-## Dasboard
+## Dashboard
 {: #dashboard}
 
 On the *Dashboard* page, you can view graphs for the following items:
