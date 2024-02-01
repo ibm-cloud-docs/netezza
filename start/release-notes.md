@@ -38,9 +38,11 @@ subcollection: netezza
 - Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-64392**
 - **RHEL8/GCC9 upgrade**:
-   - Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.
-   - GCC9 supports only 64-bit. NPS no longer provides 32-bit client builds.
+   Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.
+   GCC9 supports only 64-bit. NPS no longer provides 32-bit client builds.
 **draft comment: https://jsw.ibm.com/browse/NEXTGEN-48128**
+- **INZA**\
+   `python2` and its adapter are no longer supported.
 - **Netezza client:**\
    Support to initiate, view,  and manipulate schedules for Ad hoc, pause, resume, and scaling.
 - Introduced **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
