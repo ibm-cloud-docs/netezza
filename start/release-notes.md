@@ -34,13 +34,12 @@ subcollection: netezza
    - Scheduled: Schedules executed at a later time.
 
   For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
-**draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761**
 - Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
-**draft comment: https://jsw.ibm.com/browse/NEXTGEN-64392**
+
 - **RHEL8/GCC9 upgrade**:\
    Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.\
    GCC9 supports only 64-bit. NPS no longer provides 32-bit client builds.
-**draft comment: https://jsw.ibm.com/browse/NEXTGEN-48128**
+
 - **INZA**\
    `python2` and its adapter are no longer supported.
 - **Netezza client:**\
@@ -67,20 +66,19 @@ subcollection: netezza
 ### Fixes
 {: #ffeb2024}
 
-- `.Net` login timeout overflow is fixed
-**draft comment: https://jsw.ibm.com/browse/NEXTGEN-64390**
+- `.Net` login timeout overflow is fixed.
 
 ### Components
 {: #compsfeb2024}
 
-- {{site.data.keyword.netezza_short}} 11.2.2.10
-- Web console 4.0.x
+- {{site.data.keyword.netezza_short}} 11.2.2.10.
+- Web console 4.0.x.
 
 ### Known issues
 {: #kifeb2024}
 
-- For expansion failure due to node procurement issues, the Ops team restores the system to online state using pre-expansion configuration. The Ops team contacts you once the required nodes become available. The created expansion will be available in **Suspended** state under **Workload Patterns -> Scaling**. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion). **draft comment: https://jsw.ibm.com/browse/NEXTGEN-47761**
-- Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup. **draft comment https://jsw.ibm.com/browse/NEXTGEN-64249**
+- For expansion failure due to node procurement issues, the Ops team restores the system to online state using pre-expansion configuration. The Ops team contacts you once the required nodes become available. The created expansion will be available in **Suspended** state under **Workload Patterns -> Scaling**. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion).
+- Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup.
 
 ## August 28, 2023
 {: #aug2023}
