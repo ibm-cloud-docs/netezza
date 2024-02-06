@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-01-30"
+lastupdated: "2024-02-06"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -22,7 +22,7 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
 
-## February 2, 2024
+## February 7, 2024
 {: #feb2024}
 
 ### New features and enhancements
@@ -51,6 +51,8 @@ subcollection: netezza
    - Lakehouse
 
    For more information, see [Create databases](https://test.cloud.ibm.com/docs/netezza?topic=netezza-databases#create-db).
+- `CREATE TABLE` support for unpartitioned Iceberg table.
+- `INSERT` support for Iceberg table.
 #### Connectivity improvements
 {: #cifeb2024}
 
