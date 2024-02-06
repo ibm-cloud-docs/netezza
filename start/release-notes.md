@@ -28,12 +28,9 @@ subcollection: netezza
 ### New features and enhancements
 {: #nffeb2024}
 
-- A new **Scheduler type** column is introduced in the **History** page for past records.\
-  Scheduler types:
-   - Ad hoc: Schedules executed within 5 minutes of creation.
-   - Scheduled: Schedules executed at a later time.
+- A new **Scheduler type** column is introduced in the **History** page for past records.
 
-  For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
+   For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
 - Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
 
 - **RHEL8/GCC9 upgrade**:\
@@ -43,13 +40,13 @@ subcollection: netezza
 - **INZA**\
    `python2` and its adapter are no longer supported.
 - **Netezza client:**\
-   Support to initiate, view,  and manipulate schedules for Ad hoc, pause, resume, and scaling.
+   Support to initiate, view,  and manipulate schedules for ad hoc, pause, resume, and scaling.
 - Introduced **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
-- Introduced following options for creating databases.
+- Introduced the following options to create databases.
    - Netezza
    - Lakehouse
 
-   For more information, see [Create databases](https://test.cloud.ibm.com/docs/netezza?topic=netezza-databases#create-db).
+   For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
 - `CREATE TABLE` support for unpartitioned Iceberg table.
 - `INSERT` support for Iceberg table.
 #### Connectivity improvements
