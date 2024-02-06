@@ -29,8 +29,8 @@ subcollection: netezza
 {: #nffeb2024}
 
 - A new **Scheduler type** column is introduced in the **History** page for past records.
+For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
 
-   For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
 - Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
 
 - **RHEL8/GCC9 upgrade**:\
