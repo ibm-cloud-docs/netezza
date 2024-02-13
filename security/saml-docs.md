@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-12-29"
+lastupdated: "2024-02-13"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
