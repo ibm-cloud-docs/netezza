@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-02-06"
+lastupdated: "2024-02-15"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -33,11 +33,11 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 
 - Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
 
-- **RHEL8/GCC9 upgrade**:\
+- **RHEL8/GCC9 upgrade:**\
    Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.\
    GCC9 supports only 64-bit. NPS no longer provides 32-bit client builds.
 
-- **INZA**\
+- **INZA:**\
    `python2` and its adapter are no longer supported.
 - **Netezza client:**\
    Support to initiate, view,  and manipulate schedules for ad hoc, pause, resume, and scaling.
@@ -52,13 +52,13 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 #### Connectivity improvements
 {: #cifeb2024}
 
-- OpenSSL library upgraded to 1.1.1t
-- TLSv1.3 connection protocol supported
-- New Ciphers supported for TLSv1.3
-- AIX 7.3 and SUSE 15 SP3 support added from version 11.2.2.10 and later
-- All 32 bit client are now deprecated
-- HP and Solaris clients are deprecated altogether
-- ConnRetry feature added in ODBC
+- OpenSSL library upgraded to 1.1.1t.
+- TLSv1.3 connection protocol supported.
+- New Ciphers supported for TLSv1.3.
+- AIX 7.3 and SUSE 15 SP3 support added from version 11.2.2.10 and later.
+- All 32 bit client are now deprecated.
+- HP and Solaris clients are deprecated altogether.
+- ConnRetry feature added in ODBC.
 
 ### Fixes
 {: #ffeb2024}
@@ -68,8 +68,8 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 ### Components
 {: #compsfeb2024}
 
-- {{site.data.keyword.netezza_short}} 11.2.2.10.
-- Web console 4.0.x.
+- {{site.data.keyword.netezza_short}} 11.2.2.10
+- Web console 4.0.x
 
 ### Known issues
 {: #kifeb2024}
