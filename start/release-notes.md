@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-02-15"
+lastupdated: "2024-02-16"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -36,6 +36,9 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 - **RHEL8/GCC9 upgrade:**\
    Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.\
    GCC9 supports only 64-bit. NPS no longer provides 32-bit client builds.
+
+   GCC9 upgrade has no impact on custom UDX. If you face any issues, contact IBM support.
+   {: note}
 
 - **INZA:**\
    `python2` and its adapter are no longer supported.
