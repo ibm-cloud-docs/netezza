@@ -64,7 +64,7 @@ If customer `IAM` users and `NzIAMOps` user are in different customer AWS accoun
             ]
         }
     ]
-} 
+}
 #### Policy for `NzCrossAccountRole`
 
 ```json
@@ -93,7 +93,6 @@ If customer `IAM` users and `NzIAMOps` user are in different customer AWS accoun
 The `Resource` section must have the ARN of IAM users from the account.
 
 #### Trust relationship
-
 The Netezza AWS account must be added under the Trusted entities.
 
 ```json
@@ -118,7 +117,6 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
 ### IAM admin user group `NzIAMAdminUsers`
 
 #### Policy for the `NzAdminUsers` group
-
 ```json
 {
     "Version": "2012-10-17",

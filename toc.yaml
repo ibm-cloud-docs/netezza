@@ -97,8 +97,13 @@ toc:
               topics:
               - authentication/awsiam_autnentication.md
               - security/awsiam-docs.md
-              - security/usageofnzcliawsiam.md
-              - security/usageofv3signinawsiam.md
+          - topicgroup:
+              label: Setting SAML authentication
+              topics:
+              - authentication/saml_authentication.md
+              - security/saml-docs.md
+              - security/usagenzclisamlauth.md
+              - security/usagev3signinsaml.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
