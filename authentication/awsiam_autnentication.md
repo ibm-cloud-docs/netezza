@@ -114,8 +114,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 1. Verify whether the user is created successfully.
 
     ```sql
-    \q
-
     nzsql -u '"AWSUSER"' -pw PASSWORD
     ```
     {: codeblock}
