@@ -37,7 +37,7 @@ You can also export information about queries by clicking **Export** or refresh 
 ## Sessions
 {: #active-sessions}
 
-To see a list of active queries, go to **Current activity > Sessions** from the menu or homepage.
+To see a list of sessions, go to **Current activity > Sessions** from the menu or homepage.
 
 When you select **Sessions**, you can do the following:
 - View queries

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-12-09"
+  years: 2024
+lastupdated: "2024-02-16"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -21,6 +21,64 @@ subcollection: netezza
 
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
+
+## February 7, 2024
+{: #feb2024}
+
+### New features and enhancements
+{: #nffeb2024}
+
+- A new **Scheduler type** column is introduced in the **History** page for past records.
+For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
+
+- Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
+
+- **RHEL8/GCC9 upgrade:**\
+   Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.\
+   GCC9 supports only 64-bit. NPS no longer provides 32-bit client builds.
+
+   GCC9 upgrade has no impact on custom UDX. If you face any issues, contact IBM support.
+   {: note}
+
+- **INZA:**\
+   `python2` and its adapter are no longer supported.
+- **Netezza client:**\
+   Support to initiate, view,  and manipulate schedules for ad hoc, pause, resume, and scaling.
+- Introduced **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
+- Introduced the following options to create databases.
+   - Netezza
+   - Lakehouse
+
+   For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
+- `CREATE TABLE` support for unpartitioned Iceberg table.
+- `INSERT` support for Iceberg table.
+#### Connectivity improvements
+{: #cifeb2024}
+
+- OpenSSL library upgraded to 1.1.1t.
+- TLSv1.3 connection protocol supported.
+- New Ciphers supported for TLSv1.3.
+- AIX 7.3 and SUSE 15 SP3 support added from version 11.2.2.10 and later.
+- All 32 bit client are now deprecated.
+- HP and Solaris clients are deprecated altogether.
+- ConnRetry feature added in ODBC.
+
+### Fixes
+{: #ffeb2024}
+
+- `.Net` login timeout overflow is fixed.
+
+### Components
+{: #compsfeb2024}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.10
+- Web console 4.0.x
+
+### Known issues
+{: #kifeb2024}
+
+- For expansion failure due to node procurement issues, the Ops team restores the system to online state using pre-expansion configuration. The Ops team contacts you once the required nodes become available. The created expansion will be available in **Suspended** state under **Workload Patterns -> Scaling**. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion).
+- Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup.
 
 ## December 8, 2023
 {: #dec2023}

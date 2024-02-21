@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-12-22"
 
 keywords: netezza time travel, enabling time travel on netezza, creating tables, creating schemas, creating databases, altering schemas, altering databases, altering tables, time travel objects, retention time interval, create tables, create schemas, create databases, alter schemas, alter databases, alter tables,
 
@@ -70,6 +70,23 @@ This limitation affects the following commands:
     If the table has a nonzero **DATA_VERSION_RETENTION_TIME** specified, the command fails.
 
 The [**GROOM TABLE VERSIONS**](https://www.ibm.com/docs/en/netezza?topic=npsscr-groom-table-2) command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
+
+### Exceptions related to DATA_VERSION_RETENTION_TIME for {{site.data.keyword.lakehouse_short}}
+There are exceptions for {{site.data.keyword.lakehouse_short}} related to **DATA_VERSION_RETENTION_TIME**. The following table covers the behavior of the **DATA_VERSION_RETENTION_TIME** property for databases, schemas, and tables for {{site.data.keyword.lakehouse_short}}.
+
+|Behavior|Exception|
+|----|-----|
+|CREATE DATABASE with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed|
+|ALTER DATABASE with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed|
+|CREATE SCHEMA with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed|
+|ALTER SCHEMA with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed except for NETEZZA_SCHEMA|
+|CREATE TABLE with **DATA_VERSION_RETENTION_TIME** (temporal) table|Allowed under NETEZZA_SCHEMA only|
+|ALTER TABLE with **DATA_VERSION_RETENTION_TIME** (temporal) table|Allowed under NETEZZA_SCHEMA only|
+
+If SYSTEM DEFAULT **DATA_VERSION_RETENTION_TIME** is nonzero , CREATE DATABASE will not inherit the property from SYSTEM DEFAULT. CREATE SCHEMA including NETEZZA_SCHEMA will not inherit DB property. There will be no impact or changes needed for time travel related automaint task for {{site.data.keyword.lakehouse_short}}.
+{: note}
+
+
 
 ## Creating time travel objects with the command-line
 {: #temporaltables_tt}
