@@ -67,14 +67,7 @@ Authenticator is `AWSIAM`.
 {: note}
 
 ## When MFA is configured or not for both types of AWSIAM users
-When `nziamops` user is configured, specify the `secret-key account-id` as password.
-
- ```bash
-./nzcli nzcommand -u AWSUSER -pw "secret-key account-id" -apiserver NPS-IP
-```
-{: codeblock}
-
-When `nziamops` user user is not configured, specifiy the `access-id:secret-key` as password.
+When the AWSIAM option is not used, MFA code is not needed. Only specify the `access-id`:`secret-key` as password.
 
  ```bash
 ./nzcli nzcommand -u AWSUSER -pw "access-id:secret-key" -apiserver NPS-IP
