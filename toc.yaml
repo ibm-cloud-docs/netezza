@@ -96,7 +96,6 @@ toc:
               label: Setting AWS IAM authentication
               topics:
               - authentication/awsiam_autnentication.md
-              - security/awsiam-docs.md
           - topicgroup:
               label: Setting SAML authentication
               topics:
