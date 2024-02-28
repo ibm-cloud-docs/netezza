@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-12-09"
+  years: 2024
+lastupdated: "2024-02-21"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -22,6 +22,64 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
 
+## February 21, 2024
+{: #feb2024}
+
+### New features and enhancements
+{: #nffeb2024}
+
+- A new **Scheduler type** column is introduced in the **History** page for past records.This column indicates whether the respective schedule is **ad-hoc** or **scheduled**.
+For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
+
+- Enhanced system stability for smooth operations.
+
+- **RHEL8/GCC9 upgrade:**\
+   Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.\
+   GCC9 supports only 64-bit. NPS no longer provides 32-bit client builds.
+
+   GCC9 upgrade has no impact on custom UDX. If you face any issues, contact IBM support.
+   {: note}
+
+- **INZA:**\
+   `python2` and its adapter are no longer supported.
+- **Netezza client:**\
+   Support to initiate, view,  and manipulate schedules for ad hoc, pause, resume, and scaling. Fore more information, see [Pausing and resuming instances](/docs/netezza?topic=netezza-pauseresume) and [Scaling](/docs/netezza?topic=netezza-scaling-topic).
+- Introduced new maintanence job types **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
+- Introduced a new option **Lakehouse** to create databases. For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
+- `CREATE TABLE` support for unpartitioned Iceberg table.
+- `INSERT` support for Iceberg table.
+#### Connectivity improvements
+{: #cifeb2024}
+
+- OpenSSL library upgraded to 1.1.1t.
+- TLSv1.3 connection protocol supported.
+- New Ciphers supported for TLSv1.3:
+    - TLS_AES_128_GCM_SHA256
+    - TLS_AES_256_GCM_SHA384
+    - TLS_CHACHA20_POLY1305_SHA256
+- AIX 7.3 and SUSE 15 SP3 support added from version 11.2.2.10 and later.
+- All 32 bit client are now deprecated.
+- HP and Solaris clients are deprecated altogether.
+- ConnRetry feature added in ODBC. Fore more information, see [Configuring the DSN and driver options with ODBC Driver Setup](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-2).
+
+### Fixes
+{: #ffeb2024}
+
+- `.Net` login timeout overflow is fixed.
+
+### Components
+{: #compsfeb2024}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.10
+- Web console 4.0.1.7
+
+### Known issues
+{: #kifeb2024}
+
+- For expansion failure due to node procurement issues, the Ops team restores the system to online state. You will see the state of Expansion scheduler as **Suspended** in Workload Patterns -> Scaling section. The Ops team will contact you once the required nodes becomes available. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion).
+
+- Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup.
+
 ## December 8, 2023
 {: #dec2023}
 
@@ -40,7 +98,7 @@ subcollection: netezza
 {: #compsdec2023}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.9
-- Web console 4.0.16
+- Web console 4.0.1.6
 - JDBC driver (on all platforms)
    MD5 Auth requests are deprecated. All MD5 connections are dropped.
 
