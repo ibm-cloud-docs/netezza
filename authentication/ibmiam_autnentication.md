@@ -76,12 +76,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
    | :-----------   | :---------- |
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
    | user           | Specifies the user name.      |
-   | password       | **When MFA is not configured:** \n specify the `access-key` and `secret-key` for the user. \n **When MFA is configured:**, specify the `access-key`, `secret-key`, and `mfa-code`. |
-
-
-   When MFA is not configured specify the access-key and secret-key.
-When MFA is configured specify the access-key, secret-key, and mfa-code for the user.
-
+   | password       | **When MFA is not configured:** \n specify the `access-key` and `secret-key` for the user. \n **When MFA is configured:** \n specify the `access-key`, `secret-key`, and `mfa-code`.|
 
    Example:
 
