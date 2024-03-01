@@ -21,6 +21,43 @@ subcollection: netezza
 
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
+## March 29, 2024
+{: #mar2024}
+
+### New features and enhancements
+{: #nfmar2024}
+
+- `AWSIAM` user authentication support is added. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
+- Resolve CSI snapshot issue on Azure: statically provision disks and PVs in order to maintain PV name.
+- Resolve issue with making requests to NzREST on AWS private instances.
+
+#### Connectivity improvements
+{: #cimar2024}
+
+
+### Fixes
+{: #fmar2024}
+
+
+
+### Components
+{: #compsmar2024}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.11
+- Web console 4.0.1.7
+
+### Known issues
+{: #kimar2024}
+
+- NPS release upgrading to 11.2.2.11 version might have following error.
+
+   ``` error
+   [nz@ipshost-0 postgres]$ nzsql
+   nzsql: PQconnectPoll() -- couldn't establish SSL connection: err is 1, errno is 0  : sslv3 alert handshake failure
+   ```
+   {: codeblock}
+
+   For more information, see [Enabling and disabling ciphers](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=t1c-enabling-disabling-ciphers).
 
 ## February 21, 2024
 {: #feb2024}
