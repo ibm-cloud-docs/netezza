@@ -27,9 +27,7 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmar2024}
 
-- `AWSIAM` user authentication support is added. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
-- Resolve CSI snapshot issue on Azure: statically provision disks and PVs in order to maintain PV name.
-- Resolve issue with making requests to NzREST on AWS private instances.
+- `AWSIAM` user authentication support is added. You can now create users as well as login with `AWSIAM` as authentication type. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
 
 #### Connectivity improvements
 {: #cimar2024}
@@ -38,6 +36,10 @@ subcollection: netezza
 ### Fixes
 {: #fmar2024}
 
+- Resolved the scaling issue in CSI snapshot on Azure.
+- Resolved the issue of making requests for listing, scheduling, or creating ad-hoc snapshots to NzREST on AWS private instances.
+- **Timezone issues:** Fixed the incorrect timezone display issue across all screens. Now, only the database timezone and local timezone can be selected. All the timestamps are now displayed in database timezone.
+- **Scaling issues:** Resolved issues with scale and shrink operations and enables the scaling once the database capacity has been increased.
 
 
 ### Components
