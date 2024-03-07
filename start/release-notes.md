@@ -51,15 +51,6 @@ subcollection: netezza
 ### Known issues
 {: #kimar2024}
 
-- NPS release upgrading to 11.2.2.11 version might have following error.
-
-   ``` error
-   [nz@ipshost-0 postgres]$ nzsql
-   nzsql: PQconnectPoll() -- couldn't establish SSL connection: err is 1, errno is 0  : sslv3 alert handshake failure
-   ```
-   {: codeblock}
-
-   For more information, see [Enabling and disabling ciphers](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=t1c-enabling-disabling-ciphers).
 
 ## February 21, 2024
 {: #feb2024}
