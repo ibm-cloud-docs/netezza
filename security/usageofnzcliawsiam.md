@@ -48,10 +48,6 @@ Authenticator is `AWSIAM`.
 | `-secret-key` | The secret key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
 | `-u`  |  NPS Username [NZ_USER] (required) |
 
-`nzcli` for `nziamops` configuration is not supported.
-{: note}
-
-`nzcli` without `nziamops` configuration is supported as follows:
 
 ```bash
 ./nzcli awsiam -access-key <access-key-value> -secret-key <secret-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver NPS-IP nzcommand

@@ -74,7 +74,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
    | :-----------   | :---------- |
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
    | user           | Specifies the username.      |
-   | password       | **When MFA is not configured:** \n When `nziamops` user is configured, specify the `secret-key` and   `account-id` for the user. \n When `nziamops` user is not configured, specify the `access-key` and `secret-key`. \n **When MFA is configured:** \n When `nziamops` user is configured, specify the `secret-key`, `account-id`, and `mfa-code` for the user. \n When `nziamops` user is not configured, specify the `access-key`, `secret-key`, and `mfa-code` for the user.|
+   | password       | **When MFA is not configured:** \n  specify the `access-key` and `secret-key`. \n **When MFA is configured:** \n specify the `access-key`, `secret-key`, and `mfa-code` for the user.|
 
    Example:
 
@@ -120,13 +120,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
     #### When MFA is not configured
 
-    When `nziamops` user is configured, specify the `SECRET-KEY` and `ACCOUNT-ID` for the user.
-    ```sql
-    nzsql -u '"AWSUSER"' -pw "SECRET-KEY ACCOUNT-ID"
-    ```
-    {: codeblock}
-
-    When `nziamops` user is not configured, specify the `ACCESS-KEY:SECRET-KEY`.
+    Specify the `ACCESS-KEY:SECRET-KEY`.
     ```sql
     nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY"
     ```
@@ -135,13 +129,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
     #### When MFA is configured
 
-    When `nzops` user is configured, specify the `SECRET-KEY`, `ACCOUNT-ID`, and `MFA-CODE` for the user.
-    ```sql
-    nzsql -u '"AWSUSER"' -pw "SECRET-KEY MFA-CODE ACCOUNT-ID"
-    ```
-    {: codeblock}
-
-    When `nzops` user is not configured, specify the `ACCESS-KEY:SECRET-KEY`, and `MFA-CODE` for the user.
+    Specify the `ACCESS-KEY:SECRET-KEY`, and `MFA-CODE` for the user.
     ```sql
     nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY MFA-CODE"
     ```
@@ -168,7 +156,4 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     {: codeblock}
 
 AWS users can authenticate without `mfa-code` using `nzsql`.
-{: note}
-
-When using `nziamops` user, the user must be created in your AWS account and credentials configured using Cyclops.
 {: note}

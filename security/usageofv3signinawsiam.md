@@ -24,13 +24,6 @@ subcollection: netezza
 # Usage of `v3/signin` API with AWS IAM authentication
 
 ## When MFA is not configured
-When `nziamops` user is configured:
- ```bash
-curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue" }'
-```
-{: codeblock}
-
-When `nziamops` user is not configured:
 
  ```bash
 curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key" }'
@@ -38,14 +31,7 @@ curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/j
 {: codeblock}
 
 ## When MFA is configured
-When `nziamops` user is configured, specify the `Secret-Key`, `accountid`, and `mfacode` for the user.
-
- ```bash
-curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d ' { "username":"AWSUSER", "password":"Secret-Key", "accountid":"accountidvalue", "mfacode":"mfacodevalue" }'
-```
-{: codeblock}
-
-When `nziamops` user is not configured, specify the `Access-Id:Secret-Key` and `mfacode` for the user.
+Specify the `Access-Id:Secret-Key` and `mfacode` for the user.
 
  ```bash
 curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key", "mfacode":"mfacodevalue" }'
