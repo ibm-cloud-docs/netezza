@@ -24,6 +24,7 @@ subcollection: netezza
 # Usage of `v3/signin` API with AWS IAM authentication
 
 ## When MFA is not configured
+Specify the `Access-Id:Secret-Key` for the user.
 
  ```bash
 curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/json' -d '{ "username":"AWSUSER", "password":"Access-Id:Secret-Key" }'
