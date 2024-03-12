@@ -27,7 +27,7 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmar2024}
 
-- `AWSIAM` user authentication support is added. You can now create users as well as login with `AWSIAM` as authentication type. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
+- `AWS IAM` user authentication support is added. You can now create users as well as login with `AWS IAM` as authentication type. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
 
 #### Connectivity improvements
 {: #cimar2024}
