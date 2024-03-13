@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-03-13"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
