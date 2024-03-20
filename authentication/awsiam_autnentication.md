@@ -74,7 +74,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
    | :-----------   | :---------- |
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
    | user           | Specifies the username.      |
-   | password       | **When MFA is not configured:** \n  specify the `access-key` and `secret-key`. \n **When MFA is configured:** \n specify the `access-key`, `secret-key`, and `mfa-code` for the user.|
+   | password       | Specifies the password. |
 
    Example:
 
@@ -90,7 +90,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     ```
     {: codeblock}
 
-1. As an admin, register an `AWSIAM` external authentication system.
+1. As an admin, set up the `AWSIAM` external authentication system for initial registration only.
 
     ```sql
     REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM';
@@ -118,30 +118,30 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
     ```
     {: codeblock}
 
-    #### When MFA is not configured
+    ### Password for AWS IAM users:
 
-    Specify the `ACCESS-KEY:SECRET-KEY`.
-    ```sql
-    nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY"
-    ```
-    {: codeblock}
+    - #### When MFA is not configured
 
+        Specify the `ACCESS-KEY:SECRET-KEY` as password.
+        ```sql
+        nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY"
+        ```
+        {: codeblock}
 
-    #### When MFA is configured
+    - #### When MFA is configured
 
-    Specify the `ACCESS-KEY:SECRET-KEY`, and `MFA-CODE` for the user.
-    ```sql
-    nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY MFA-CODE"
-    ```
-    {: codeblock}
-
+        Specify the `ACCESS-KEY:SECRET-KEY` `MFA-CODE` as password.
+        ```sql
+        nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY MFA-CODE"
+        ```
+        {: codeblock}
 
     Example:
 
     ```sql
     \q
 
-    nzsql -u '"AWSUSER"' -pw XXXXXXXXXXXXX
+    nzsql -u '"AWSUSER"' -pw XXXXXX:XXXXXXX
     Welcome to nzsql, the IBM Netezza SQL interactive terminal.
 
     Type: \h for help with SQL commands

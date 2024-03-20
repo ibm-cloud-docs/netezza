@@ -50,12 +50,12 @@ Authenticator is `AWSIAM`.
 
 
 ```bash
-./nzcli awsiam -access-key <access-key-value> -secret-key <secret-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver NPS-IP nzcommand
+./nzcli awsiam -access-key <access-key-value> -secret-key <secret-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver APISERVER_URL nzcommand
 ```
 {: codeblock}
 
 ```bash
-./nzcli awsiam -access-key <access-key-value> -secret-key <secret-key-value>  -u AWSUSER -apiserver NPS-IP nzcommand
+./nzcli awsiam -access-key <access-key-value> -secret-key <secret-key-value>  -u AWSUSER -apiserver APISERVER_URL nzcommand
 ```
 {: codeblock}
 
@@ -63,109 +63,12 @@ Authenticator is `AWSIAM`.
 {: note}
 
 ## When MFA is configured or not for both types of AWSIAM users
-When the AWSIAM option is not used, MFA code is not needed. Only specify the `access-id`:`secret-key` as password.
+When using nzcli without `AWSIAM` option, MFA code is not required. Specify only the `access-id:secret-key` as password.
 
  ```bash
-./nzcli nzcommand -u AWSUSER -pw "access-id:secret-key" -apiserver NPS-IP
+./nzcli nzcommand -u AWSUSER -pw "access-id:secret-key" -apiserver APISERVER_URL
 ```
 {: codeblock}
 
 AWS users can authenticate without `mfa-code` using `nzcli`.
 {: note}
-
-Following is the list of `nzcommand`.
-
- ```bash
-nzsystem showRegistry -local
-```
-{: codeblock}
-
- ```bash
-nzsystem showIssues -local
-```
-{: codeblock}
-
- ```bash
-nzstate -local
-```
-{: codeblock}
-
- ```bash
-nzsystem showRev -local
-```
-{: codeblock}
-
- ```bash
-nzsystem showRev -build -local
-```
-{: codeblock}
-
- ```bash
-nzsystem showRev -label -local
-```
-{: codeblock}
-
- ```bash
-nzstats -local
-```
-{: codeblock}
-
- ```bash
-nzds show -local
-```
-{: codeblock}
-
- ```bash
-nzds show -regenstatus -local
-```
-{: codeblock}
-
- ```bash
-nzds show -issues -local
-```
-{: codeblock}
-
- ```bash
-nzhw show -local
-```
-{: codeblock}
-
- ```bash
-nzhw listTypes -local
-```
-{: codeblock}
-
- ```bash
-nzhw show -issues -detail -local
-```
-{: codeblock}
-
- ```bash
-nzhw show -type spu -local
-```
-{: codeblock}
-
- ```bash
-nzsession show -local
-```
-{: codeblock}
-
- ```bash
-nzrev -dirSuffix
-```
-{: codeblock}
-
- ```bash
-nzrev -rev
-```
-{: codeblock}
-
- ```bash
-nzrev -shortLabel
-```
-{: codeblock}
-
- ```bash
-nzrev -buildType
-```
-{: codeblock}

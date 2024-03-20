@@ -27,7 +27,7 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmar2024}
 
-- `AWS IAM` user authentication support is added. You can now create users as well as login with `AWS IAM` as authentication type. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
+- `AWS IAM` user authentication allows you to create and log in to your account using your `AWS IAM` credentials. This means that you can use your existing AWS access and secret keys to sign in to your account with no additional steps required. Additionally, you can now use multi-factor authentication (MFA) to secure your account even further. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
 
 #### Connectivity improvements
 {: #cimar2024}
@@ -36,10 +36,9 @@ subcollection: netezza
 ### Fixes
 {: #fmar2024}
 
-- Resolved the scaling issue in CSI snapshot on Azure.
-- Resolved the issue of making requests for listing, scheduling, or creating ad-hoc snapshots to NzREST on AWS private instances.
-- **Timezone issues:** Fixed the incorrect timezone display issue across all screens. Now, only the database timezone and local timezone can be selected. All the timestamps are now displayed in database timezone.
-- **Scaling issues:** Resolved issues with scale and shrink operations and enables the scaling once the database capacity has been increased.
+- **Timezone issues:** Fixed the incorrect timezone display issue. Only the database timezone and local timezone can be selected.
+All timestamps are now displayed in database timezone.
+- **Scaling issues:** Resolved issues with scale and shrink operations. Once the database capacity has been increased, scaling is enabled.
 
 
 ### Components
@@ -47,9 +46,6 @@ subcollection: netezza
 
 - {{site.data.keyword.netezza_short}} 11.2.2.11
 - Web console 4.0.1.7
-
-### Known issues
-{: #kimar2024}
 
 
 ## February 21, 2024
