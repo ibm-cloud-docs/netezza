@@ -66,13 +66,13 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
     ```sql
-    nzsql -host <nps_host_ip> -u admin -pw XXXXX
+    nzsql -host <nps_hostname> -u admin -pw XXXXX
     ```
     {: codeblock}
 
    | Input          | Description |
    | :-----------   | :---------- |
-   | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
+   | nps_hostname    | Specifies the IP address of your instance.  \n To retrieve `NPS HOSTNAME`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
    | user           | Specifies the username.      |
    | password       | Specifies the password. |
 
