@@ -22,7 +22,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Setting AWS IAM authentication
+# Configuring AWS IAM authentication
 {: #awsiamauth}
 
 Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
