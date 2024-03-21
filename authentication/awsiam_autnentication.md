@@ -28,9 +28,6 @@ subcollection: netezza
 Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
 {: shortdesc}
 
-An external authentication system does not support two-factor authentication.
-{: important}
-
 ## Syntax
 {: #awsiamsyntax}
 
@@ -42,7 +39,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 ## Setting AWS IAM authentication with the web console
 {: #setting_awsiam_wc}
 
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as a user who is part of administrative group.
 1. Go to the **Query editor**.
 1. Register an AWS IAM external authentication system.
 
@@ -100,7 +97,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 1. Create a user or users with the external authentication method set to `AWSIAM`.
 
     ```sql
-    CREATE USER USER AUTH EXTERNAL 'AWSIAM';
+    CREATE USER <USERNAME> AUTH EXTERNAL 'AWSIAM';
     ```
     {: codeblock}
 
