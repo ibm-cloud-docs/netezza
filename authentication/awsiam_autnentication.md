@@ -58,7 +58,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 ## Setting AWS IAM authentication with the command-line
 {: #awsiamprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin` user.
+1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as a user who is part of administrative group.
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
