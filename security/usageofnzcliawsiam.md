@@ -62,7 +62,8 @@ Authenticator is `AWSIAM`.
 `nzcli` requests MFA code.
 {: note}
 
-## When MFA is configured or not for both types of AWSIAM users
+## Using nzcli without AWSIAM option
+
 When using nzcli without `AWSIAM` option, MFA code is not required. Specify only the `access-id:secret-key` as password.
 
  ```bash
