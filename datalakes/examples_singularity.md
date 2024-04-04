@@ -34,10 +34,10 @@ In the example, two publicly available datasets are used: [*New York taxi trip* 
 To access S3 files, you need to have an AWS account with proper permissions to provide your access key ID and secret access key.
 {: note}
 
-# AWS S3 example
+## AWS S3 example
 {: #aws_s3_example}
 
-## 1. Create an external data source.
+### 1. Create an external data source.
 {: #create_ds1}
 
 External datasources allow an administrator to grant access to S3 without providing the keys directly to a user.
@@ -73,7 +73,7 @@ b) Create an external data source.
 
    For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=tables-create-external-datasource-command).
 
-## 2. Create an external table.
+### 2. Create an external table.
 {: #create_table1}
 
 After you created an external data source, you can create an external table that accesses the yellow taxi data from January 2022.
@@ -102,7 +102,7 @@ using ( 
 {: codeblock}
 
 
-## 3. Query your data.
+### 3. Query your data.
 {: #query1}
 
 You can query external parquet format tables like any other {{site.data.keyword.netezza_short}} table without having to load the data into the database.
@@ -163,7 +163,7 @@ The *parquet* column names are case-insensitive unless it introduces a collision
    {: tip}
 
 
-# Azure BLOB example
+## Azure BLOB example
 {: #azure_blob_example}
 
 Set **ENABLE_AZURE_DATALAKE_SUPPORT**.
@@ -173,7 +173,7 @@ Set **ENABLE_AZURE_DATALAKE_SUPPORT**.
    ```
    {: codeblock}
 
-## 1. Create an external data source.
+### 1. Create an external data source.
 {: #create_ds1_azure}
 
  ```sql
@@ -196,7 +196,7 @@ ACCOUNTKEY might be omitted for anonymous access.
 
 For more information, see [CREATE EXTERNAL DATASOURCE command](/docs/netezza?topic=tables-create-external-datasource-command).
 
-## 2. Create an external table.
+### 2. Create an external table.
 {: #create_table1_azure}
 
 After you created an external data source, you can create an external table that accesses the green taxi data from January 2018.
@@ -213,7 +213,7 @@ using (
 ```
 {: codeblock}
 
-## 3. Query your data.
+### 3. Query your data.
 {: #query1_azure}
 
 You can query external parquet format tables like any other {{site.data.keyword.netezza_short}} table without having to load the data into the database.
