@@ -22,29 +22,38 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Configuring AWS IAM authentication
+# AWS IAM authentication
 {: #awsiamauth}
 
-Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
+NPSaaS now supports AWS IAM authentication. For authenticating with IAM users, you need `ACCESS-KEY` and  `SECRET-ACCESS-KEY` associated with your AWS account. Please refer [this](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) to create/manage AWS access keys.
+
+Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
 
-## Syntax
+<!-- ## Syntax
 {: #awsiamsyntax}
 
 ```sql
 REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 ```
-{: codeblock}
+{: codeblock} -->
 
-## Setting AWS IAM authentication with the web console
+## Enabling AWS IAM authentication
+{: #enabling_awsauthentication}
+
+You can use two methods for enabling AWS IAM authentication:
+- [Using web console.](/docs/netezza?topic=netezza-awsiamauth#setting_awsiam_wc)
+- [Using command-line.](/docs/netezza?topic=netezza-awsiamauth#awsiamprocedure)
+
+### AWS IAM authentication with the web console
 {: #setting_awsiam_wc}
 
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as a user who is part of administrative group.
+1.  [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as a user who is part of administrative group.
 1. Go to the **Query editor**.
 1. Register an AWS IAM external authentication system.
 
     ```sql
-    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
+    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM';
     ```
     {: codeblock}
 
@@ -55,7 +64,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
    1. Locate the user.
    1. Check the **Authentication type** section for the user.
 
-## Setting AWS IAM authentication with the command-line
+### AWS IAM authentication with the command-line
 {: #awsiamprocedure}
 
 1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as a user who is part of administrative group.
@@ -154,3 +163,13 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
 
 AWS users can authenticate without `mfa-code` using `nzsql`.
 {: note}
+
+## Disabling AWS IAM authentication
+{: #disabling_awsauthentication}
+
+Run the following query to disable AWS IAM external authentication system from web console or nzsql client or any client of your choice.
+
+ ```sql
+ DEREGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM';
+ ```
+{: codeblock}
