@@ -27,7 +27,7 @@ subcollection: netezza
 
 NPSaaS now supports AWS IAM authentication. For authenticating with IAM users, you need `ACCESS-KEY` and `SECRET-ACCESS-KEY` associated with your AWS account. Refer to [create/manage AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for details.
 
-Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
+Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
 
 ## Enabling AWS IAM authentication
