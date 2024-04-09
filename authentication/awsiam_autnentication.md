@@ -25,18 +25,10 @@ subcollection: netezza
 # AWS IAM authentication
 {: #awsiamauth}
 
-NPSaaS now supports AWS IAM authentication. For authenticating with IAM users, you need `ACCESS-KEY` and  `SECRET-ACCESS-KEY` associated with your AWS account. Please refer [this](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) to create/manage AWS access keys.
+NPSaaS now supports AWS IAM authentication. For authenticating with IAM users, you need `ACCESS-KEY` and `SECRET-ACCESS-KEY` associated with your AWS account. Refer to [create/manage AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for details.
 
 Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
-
-<!-- ## Syntax
-{: #awsiamsyntax}
-
-```sql
-REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM'
-```
-{: codeblock} -->
 
 ## Enabling AWS IAM authentication
 {: #enabling_awsauthentication}
@@ -67,7 +59,7 @@ You can use two methods for enabling AWS IAM authentication:
 ### AWS IAM authentication with the command-line
 {: #awsiamprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as a user who is part of administrative group.
+1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as a user who is part of the administrative group.
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
@@ -161,13 +153,13 @@ You can use two methods for enabling AWS IAM authentication:
     ```
     {: codeblock}
 
-AWS users can authenticate without `mfa-code` using `nzsql`.
+AWS users can authenticate without `mfa-code` by using `nzsql`.
 {: note}
 
 ## Disabling AWS IAM authentication
 {: #disabling_awsauthentication}
 
-Run the following query to disable AWS IAM external authentication system from web console or nzsql client or any client of your choice.
+Run the following query to disable AWS IAM external authentication system from web console or `nzsql` client or any client of your choice.
 
  ```sql
  DEREGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM';
