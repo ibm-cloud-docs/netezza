@@ -25,7 +25,7 @@ subcollection: netezza
 # AWS IAM authentication
 {: #awsiamauth}
 
-NPSaaS now supports AWS IAM authentication. For authenticating with IAM users, you need `ACCESS-KEY` and `SECRET-ACCESS-KEY` associated with your AWS account. Refer to [create/manage AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for details.
+NPSaaS now supports AWS IAM authentication. For authenticating with IAM users, you need `ACCESS-KEY` and `SECRET-ACCESS-KEY` associated with your AWS account. Refer [create/manage AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for details.
 
 Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
@@ -34,10 +34,10 @@ Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTIC
 {: #enabling_awsauthentication}
 
 You can use two methods for enabling AWS IAM authentication:
-- [Using web console.](/docs/netezza?topic=netezza-awsiamauth#setting_awsiam_wc)
-- [Using command-line.](/docs/netezza?topic=netezza-awsiamauth#awsiamprocedure)
+- [Through web console.](/docs/netezza?topic=netezza-awsiamauth#setting_awsiam_wc)
+- [From command-line.](/docs/netezza?topic=netezza-awsiamauth#awsiamprocedure)
 
-### AWS IAM authentication with the web console
+### AWS IAM authentication through web console
 {: #setting_awsiam_wc}
 
 1.  [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as a user who is part of administrative group.
@@ -56,7 +56,7 @@ You can use two methods for enabling AWS IAM authentication:
    1. Locate the user.
    1. Check the **Authentication type** section for the user.
 
-### AWS IAM authentication with the command-line
+### AWS IAM authentication from command-line
 {: #awsiamprocedure}
 
 1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as a user who is part of the administrative group.
@@ -120,17 +120,17 @@ You can use two methods for enabling AWS IAM authentication:
 
     - #### When MFA is not configured
 
-        Specify the `ACCESS-KEY:SECRET-KEY` as password.
+        Specify the `ACCESS-KEY:SECRET-ACCESS-KEY` as password.
         ```sql
-        nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY"
+        nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY"
         ```
         {: codeblock}
 
     - #### When MFA is configured
 
-        Specify the `ACCESS-KEY:SECRET-KEY` `MFA-CODE` as password.
+        Specify the `ACCESS-KEY:SECRET-ACCESS-KEY` `MFA-CODE` as password.
         ```sql
-        nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-KEY MFA-CODE"
+        nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY MFA-CODE"
         ```
         {: codeblock}
 
