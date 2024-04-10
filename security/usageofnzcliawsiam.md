@@ -45,17 +45,17 @@ Authenticator is `AWSIAM`.
 | `--h` | Show help of nz command |
  |`-hc`  |Show details of nz command |
 | `-mfa-code`  |The MFA code for the awsiam user |
-| `-secret-key` | The secret key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
+| `-secret-access-key` | The secret key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
 | `-u`  |  NPS Username [NZ_USER] (required) |
 
 
 ```bash
-./nzcli awsiam -access-key <access-key-value> -secret-key <secret-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver APISERVER_URL nzcommand
+./nzcli awsiam -access-key <access-key-value> -secret-access-key <secret-access-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver APISERVER_URL nzcommand
 ```
 {: codeblock}
 
 ```bash
-./nzcli awsiam -access-key <access-key-value> -secret-key <secret-key-value>  -u AWSUSER -apiserver APISERVER_URL nzcommand
+./nzcli awsiam -access-key <access-key-value> -secret-access-key <secret-access-key-value>  -u AWSUSER -apiserver APISERVER_URL nzcommand
 ```
 {: codeblock}
 
@@ -64,10 +64,10 @@ Authenticator is `AWSIAM`.
 
 ## Using nzcli without AWSIAM option
 
-When using nzcli without `AWSIAM` option, MFA code is not required. Specify only the `access-id:secret-key` as password.
+When using nzcli without `AWSIAM` option, MFA code is not required. Specify only the `access-id:secret-access-key` as password.
 
  ```bash
-./nzcli nzcommand -u AWSUSER -pw "access-id:secret-key" -apiserver APISERVER_URL
+./nzcli nzcommand -u AWSUSER -pw "access-id:secret-access-key" -apiserver APISERVER_URL
 ```
 {: codeblock}
 
