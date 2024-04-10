@@ -137,8 +137,6 @@ You can use two methods for enabling AWS IAM authentication:
     Example:
 
     ```sql
-    \q
-
     nzsql -u '"AWSUSER"' -pw XXXXXX:XXXXXXX
     Welcome to nzsql, the IBM Netezza SQL interactive terminal.
 
@@ -165,3 +163,8 @@ Run the following query to disable AWS IAM external authentication system from w
  DEREGISTER EXTERNAL AUTHENTICATION SYSTEM 'AWSIAM';
  ```
 {: codeblock}
+
+## Limitations
+{: #aws_limitations}
+
+- AWS IAM authentication does not work for federated IAM users or where session token is also required for authentication.

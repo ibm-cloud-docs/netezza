@@ -45,7 +45,7 @@ Authenticator is `AWSIAM`.
 | `--h` | Show help of nz command |
  |`-hc`  |Show details of nz command |
 | `-mfa-code`  |The MFA code for the awsiam user |
-| `-secret-access-key` | The secret key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
+| `-secret-access-key` | The secret access key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
 | `-u`  |  NPS Username [NZ_USER] (required) |
 
 
