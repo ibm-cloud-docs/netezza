@@ -62,12 +62,12 @@ Authenticator is `AWSIAM`.
 `nzcli` requests MFA code.
 {: note}
 
-## Using nzcli without AWSIAM option
+## Using nzcli without AWS IAM option
 
-When using nzcli without `AWSIAM` option, MFA code is not required. Specify only the `access-id:secret-access-key` as password.
+When using nzcli without `AWSIAM` option, MFA code is not required. Specify only the `access-key:secret-access-key` as password.
 
  ```bash
-./nzcli nzcommand -u AWSUSER -pw "access-id:secret-access-key" -apiserver APISERVER_URL
+./nzcli nzcommand -u AWSUSER -pw "access-key:secret-access-key" -apiserver APISERVER_URL
 ```
 {: codeblock}
 
