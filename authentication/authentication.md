@@ -34,6 +34,8 @@ subcollection: netezza
 1. LDAP authentication
 1. Azure Active Directory (Azure AD) authentication
 1. IBM IAM authentication
+1. SAML
+1. OIDC
 
 By default, local authentication and `IBM IAM` are enabled on the system. You can set your authentication method by running the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
 
