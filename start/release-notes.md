@@ -45,7 +45,7 @@ All timestamps are now displayed in database timezone.
 {: #compsmar2024}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.11
-- Web console 4.0.1.7
+- Web console 4.0.3.1
 
 
 ## February 21, 2024
