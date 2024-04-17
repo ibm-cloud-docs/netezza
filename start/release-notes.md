@@ -37,7 +37,7 @@ subcollection: netezza
 ### Fixes
 {: #fmar2024}
 
-- **Timezone issues:** Fixed the incorrect timezone display issue. By default, all the timestamps are now displayed in database timezone. You can choose between database and local timezone for scheduling automaintanence, BnR and pause/resume job.
+- **Timezone issues:** Fixed the incorrect timezone display issue. By default, all the timestamps are now displayed in database timezone. You can choose between database and local timezone for scheduling automaintenance, BnR and pause/resume job.
 - **Scaling issues:** Enables scaling from console after the database capacity has been increased.
 
 
