@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-04-17"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -21,7 +21,8 @@ subcollection: netezza
 
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
-## March 29, 2024
+
+## April 30, 2024
 {: #mar2024}
 
 ### New features and enhancements
@@ -36,9 +37,8 @@ subcollection: netezza
 ### Fixes
 {: #fmar2024}
 
-- **Timezone issues:** Fixed the incorrect timezone display issue. Only the database timezone and local timezone can be selected.
-All timestamps are now displayed in database timezone.
-- **Scaling issues:** Resolved issues with scale and shrink operations. Once the database capacity has been increased, scaling is enabled.
+- **Timezone issues:** Fixed the incorrect timezone display issue. By default, all the timestamps are now displayed in database timezone. You can choose between database and local timezone for scheduling automaintanence, BnR and pause/resume job.
+- **Scaling issues:** Enables scaling from console after the database capacity has been increased.
 
 
 ### Components
