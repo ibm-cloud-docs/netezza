@@ -19,6 +19,7 @@ toc:
       id: learn
       topics:
       - start/release-notes.md
+    #   - start/release-notes-new.md
       - start/provisioning.md
       - topicgroup:
           label: Connecting to Netezza Performance Server with private and public endpoints
@@ -92,6 +93,23 @@ toc:
               topics:
               - authentication/ibmiam_autnentication.md
               - security/iam-docs.md
+          - topicgroup:
+              label: Setting AWS IAM authentication
+              topics:
+              - authentication/awsiam_autnentication.md
+              - security/usageofnzcliawsiam.md
+          - topicgroup:
+              label: Setting SAML authentication
+              topics:
+              - authentication/saml_authentication.md
+              - security/saml-docs.md
+              - security/usagenzclisamlauth.md
+          - topicgroup:
+              label: Setting OIDC authentication
+              topics:
+              - authentication/oidc_authentication.md
+              - security/oidc-docs.md
+              - security/usagenzclioidcauth.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
@@ -161,7 +179,7 @@ toc:
               label: Backup and restore best practices
               href: https://www.ibm.com/docs/en/netezza?topic=service-backup-restore-best-practices
       - topicgroup:
-          label: Security 
+          label: Security
           topics:
           - security/security_compliance.md
           - security/architecture-workload-isolation.md
