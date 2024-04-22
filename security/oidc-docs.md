@@ -39,7 +39,7 @@ Admin users can configure the following OIDC configurations by using Cyclops:
 1. Enable/Activate the option Azure-OIDC.
 1. Add clientId, tenant Id, client secret.
 
-## Steps to get OIDC `slo` and `acs` URL from NPS
+## Steps to get OIDC redirect URL from NPS
 
 1. Execute the following command from `k8s` prompt:
 

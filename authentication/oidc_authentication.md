@@ -27,7 +27,7 @@ subcollection: netezza
 Set your authentication method to `OIDC` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
 
-Two-factor authentication is supported by OIDC external authentication system. User needs to be configured with MFA on IDP (Identity Provider), for example, Ping Identity.
+Two-factor authentication is supported by OIDC external authentication system. User needs to be configured with MFA on IDP (Identity Provider), for example, Microsoft Azure.
 {: important}
 
 See also [Managing IAM access](/docs/netezza?topic=netezza-iam-docs).
