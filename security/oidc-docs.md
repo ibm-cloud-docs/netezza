@@ -24,17 +24,9 @@ subcollection: netezza
 # Managing OIDC IDP configuration for {{site.data.keyword.netezza_short}}
 {: #oidc-docs}
 
-Set the following configurations for Cyclops endpoints on IDP:
-{: shortdesc}
-
- ```bash
-"": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/oidcredirect?crn=<crn_of_namespace>"
-```
-{: codeblock}
-
 Admin users can configure the following OIDC configurations by using Cyclops:
 
-1. login to cyclops as an admin user.
+1. Login to cyclops as an admin user.
 1. Select `IDP configurations` topic.
 1. Enable/Activate the option Azure-OIDC.
 1. Add clientId, tenant Id, client secret.
