@@ -33,9 +33,12 @@ Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTIC
 ## Enabling AWS IAM authentication
 {: #enabling_awsauthentication}
 
-You can use two methods for enabling AWS IAM authentication:
+You can use two methods for enabling AWS IAM authentication. :
 - [Through web console.](/docs/netezza?topic=netezza-awsiamauth#setting_awsiam_wc)
 - [From command-line.](/docs/netezza?topic=netezza-awsiamauth#awsiamprocedure)
+
+Enabling AWS IAM authentication only needs to be done once.
+{: note}
 
 ### AWS IAM authentication through web console
 {: #setting_awsiam_wc}
