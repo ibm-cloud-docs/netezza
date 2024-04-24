@@ -41,18 +41,18 @@ An AWS IAM user can use the below methods to login:
 {: #loginaws_cmd}
 
 ### Without MFA
+{: #awsiamwithoutmfa}
 
-    ```sql
-    nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY"
-    ```
-    {: codeblock}
+```sql
+nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY"
+```
 
 ### With MFA
+{: #awsiamwithmfa}
 
-    ```sql
-    nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY MFA-CODE"
-    ```
-    {: codeblock}
+```sql
+nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY MFA-CODE"
+```
 
 AWS users can authenticate without `mfa-code` by using `nzsql`.
 {: note}
