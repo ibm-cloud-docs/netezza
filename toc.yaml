@@ -96,6 +96,7 @@ toc:
               label: Setting AWS IAM authentication
               topics:
               - authentication/awsiam_autnentication.md
+              - authentication/loginawsiam_user.md
               - security/usageofnzcliawsiam.md
           - topicgroup:
               label: Setting SAML authentication

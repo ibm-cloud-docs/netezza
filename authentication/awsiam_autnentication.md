@@ -59,6 +59,7 @@ Enabling AWS IAM authentication only needs to be done once.
    1. Locate the user.
    1. Check the **Authentication type** section for the user.
 
+
 ### AWS IAM authentication from command-line
 {: #awsiamprocedure}
 
@@ -76,20 +77,6 @@ Enabling AWS IAM authentication only needs to be done once.
    | nps_hostname    | Specifies the IP address of your instance.  \n To retrieve `NPS HOSTNAME`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
    | user           | Specifies the username.      |
    | password       | Specifies the password. |
-
-   Example:
-
-    ```sql
-    nzsql -host X.XX.XXX.XXX -u admin -pw password
-    Welcome to nzsql, the IBM Netezza SQL interactive terminal.
-    Type:  \h for help with SQL commands
-           \? for help on internal slash commands
-           \g or terminate with semicolon to execute query
-           \q to quit
-
-    SYSTEM.ADMIN(ADMIN)=>
-    ```
-    {: codeblock}
 
 1. As an admin, set up the `AWSIAM` external authentication system for initial registration only.
 
@@ -111,51 +98,6 @@ Enabling AWS IAM authentication only needs to be done once.
     CREATE USER AWSUSER AUTH EXTERNAL 'AWSIAM';
     ```
     {: codeblock}
-
-1. Verify whether the user is created successfully.
-
-    ```sql
-    nzsql -u '"AWSUSER"' -pw PASSWORD
-    ```
-    {: codeblock}
-
-    ### Password for AWS IAM users:
-
-    - #### When MFA is not configured
-
-        Specify the `ACCESS-KEY:SECRET-ACCESS-KEY` as password.
-        ```sql
-        nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY"
-        ```
-        {: codeblock}
-
-    - #### When MFA is configured
-
-        Specify the `ACCESS-KEY:SECRET-ACCESS-KEY` `MFA-CODE` as password.
-        ```sql
-        nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY MFA-CODE"
-        ```
-        {: codeblock}
-
-    Example:
-
-    ```sql
-    nzsql -u '"AWSUSER"' -pw XXXXXX:XXXXXXX
-    Welcome to nzsql, the IBM Netezza SQL interactive terminal.
-
-    Type: \h for help with SQL commands
-    ? for help on internal slash commands
-    \g or terminate with semicolon to execute query
-    \q to quit
-
-    SSL enabled connection. Cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol: TLSv1.2
-
-    SYSTEM.ADMIN(AWSUSER)=>
-    ```
-    {: codeblock}
-
-AWS users can authenticate without `mfa-code` by using `nzsql`.
-{: note}
 
 ## Disabling AWS IAM authentication
 {: #disabling_awsauthentication}
