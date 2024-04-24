@@ -25,9 +25,9 @@ subcollection: netezza
 # Login AWS IAM user
 {: #loginawsiamauth}
 
-An AWS IAM user can use belpw methods to login:
-- [Through web console.](/docs/netezza?topic=netezza-awsiamauth#login_awsiam_wc)
-- [From command-line.](/docs/netezza?topic=netezza-awsiamauth#loginaws_cmd)
+An AWS IAM user can use the below methods to login:
+- [Through web console.](/docs/netezza?topic=netezza-loginawsiamauth#login_awsiam_wc)
+- [From command-line.](/docs/netezza?topic=netezza-loginawsiamauth#loginaws_cmd)
 
 ## Login AWS IAM user through web console
 {: #login_awsiam_wc}
@@ -42,16 +42,12 @@ An AWS IAM user can use belpw methods to login:
 
 ### Without MFA
 
-1. Login using below command.
-
     ```sql
     nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY"
     ```
     {: codeblock}
 
 ### With MFA
-
-1. Login using below command.
 
     ```sql
     nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY MFA-CODE"
