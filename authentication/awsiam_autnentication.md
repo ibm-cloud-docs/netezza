@@ -25,7 +25,7 @@ subcollection: netezza
 # AWS IAM authentication
 {: #awsiamauth}
 
-NPSaaS now supports AWS IAM authentication. For authenticating with IAM users, you need `ACCESS-KEY` and `SECRET-ACCESS-KEY` associated with your AWS account. Refer [create/manage AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for details.
+NPSaaS now supports AWS IAM authentication from NPS version 11.2.2.11 onwards. For authenticating with IAM users, you need `ACCESS-KEY` and `SECRET-ACCESS-KEY` associated with your AWS account. Refer to [create/manage AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for details.
 
 Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
@@ -40,10 +40,10 @@ You can use two methods for enabling AWS IAM authentication. :
 Enabling AWS IAM authentication only needs to be done once.
 {: note}
 
-### AWS IAM authentication through web console
+### Enabling AWS IAM authentication through web console
 {: #setting_awsiam_wc}
 
-1.  [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as a user who is part of administrative group.
+1.  [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as a user who is part of an administrative group.
 1. Go to the **Query editor**.
 1. Register an AWS IAM external authentication system.
 
@@ -60,7 +60,7 @@ Enabling AWS IAM authentication only needs to be done once.
    1. Check the **Authentication type** section for the user.
 
 
-### AWS IAM authentication from command-line
+### Enabling AWS IAM authentication from command-line
 {: #awsiamprocedure}
 
 1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as a user who is part of the administrative group.
