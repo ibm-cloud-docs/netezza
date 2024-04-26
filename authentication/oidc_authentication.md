@@ -77,20 +77,6 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
    | user           | Specifies the username.      |
    | password       | Specifies the JWT token that is generated for this user after Cyclops and IDP (Identity Provider) authentication. |
 
-   Example:
-
-    ```sql
-    nzsql -host X.XX.XXX.XXX -u admin -pw password
-    Welcome to nzsql, the IBM Netezza SQL interactive terminal.
-    Type:  \h for help with SQL commands
-           \? for help on internal slash commands
-           \g or terminate with semicolon to execute query
-           \q to quit
-
-    SYSTEM.ADMIN(ADMIN)=>
-    ```
-    {: codeblock}
-
 1. As an admin, register an `OIDC` external authentication system.
 
     ```sql
@@ -109,31 +95,5 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
 
     ```sql
     CREATE USER OIDCUSER AUTH EXTERNAL 'OIDC';
-    ```
-    {: codeblock}
-
-1. Verify whether the user is created successfully.
-
-    ```sql
-
-    nzsql -u '"OIDCUSER"' -pw JWTTOKEN
-    ```
-    {: codeblock}
-
-    Example:
-
-    ```sql
-
-    nzsql -u '"OIDCUSER"' -pw XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    Welcome to nzsql, the IBM Netezza SQL interactive terminal.
-
-    Type: \h for help with SQL commands
-    ? for help on internal slash commands
-    \g or terminate with semicolon to execute query
-    \q to quit
-
-    SSL enabled connection. Cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol: TLSv1.2
-
-    SYSTEM.ADMIN(OIDCUSER)=>
     ```
     {: codeblock}

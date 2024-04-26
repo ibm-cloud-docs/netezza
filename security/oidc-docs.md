@@ -28,8 +28,8 @@ Admin users can configure the following OIDC configurations by using Cyclops:
 
 1. Login to cyclops as an admin user.
 1. Select `IDP configurations` topic.
-1. Enable/Activate the option Azure-OIDC.
-1. Add clientId, tenant Id, client secret.
+1. Enable Azure OIDC configuration.
+1. Add Client ID, Tenant ID, Client Secret.
 
 ## Steps to get OIDC redirect URL from NPS
 
