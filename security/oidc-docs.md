@@ -24,6 +24,41 @@ subcollection: netezza
 # Managing OIDC IDP configuration for {{site.data.keyword.netezza_short}}
 {: #oidc-docs}
 
+Admin user can manage OIDC configurations from web console.
+
+## How to get Client ID, Tenant ID, Client Secret.
+
+1. Login to the Azure Portal.
+2. Navigate to Azure Active Directory.
+3. Select App Registrations, locate the Azure AD App that you're trying to find the Client ID and Client Secret Key for.
+4. Within the Azure AD App, select Certificates & Secrets.
+
+## Configure OIDC user authentication at NPS
+
+1. Login to cyclops as an admin user.
+2. Select `IDP configuration` topic.
+3. Enable Azure OIDC configuration.
+4. Add Client ID, Tenant ID, Client Secret.
+
+## Steps to get OIDC redirect URI
+
+1. Use console base URL and append `v1/oidcredirect?crn=<crn_of_namespace>`.
+
+Example:
+
+For console base URL : https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>.
+
+OIDC redirect URI is : https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/oidcredirect?crn=<crn_of_namespace>.
+
+## Configure redirect URI on Azure IDP
+
+1. Login to the Azure portal.
+2. Navigate to Azure active directory.
+3. Select App registrations, locate the Azure AD App.
+3. Navigate to authentication action.
+4. Update "Redirect URIs" with above generated URI.
+
+
 Admin users can configure the following OIDC configurations by using Cyclops:
 
 1. Login to cyclops as an admin user.
@@ -33,7 +68,7 @@ Admin users can configure the following OIDC configurations by using Cyclops:
 
 ## Steps to get OIDC redirect URL from NPS
 
-1. Execute the following command from `k8s` prompt:
+1. Run the following command from `k8s` prompt:
 
     ```bash
     #k get dns -n ibm-nz-cyclops
