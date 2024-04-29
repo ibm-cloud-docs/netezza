@@ -75,37 +75,3 @@ Admin users can configure the following OIDC configurations by using Cyclops:
 1. Select `IDP configurations` topic.
 1. Enable Azure OIDC configuration.
 1. Add Client ID, Tenant ID, Client Secret.
-
-## Steps to get OIDC redirect URL from NPS
-
-1. Run the following command from `k8s` prompt:
-
-    ```bash
-    #k get dns -n ibm-nz-cyclops
-    ```
-    {: codeblock}
-
-1. From the following output, you can form the URL as `HOSTNAME.DOMAIN`.
-
-   | NAME | HOSTNAME | DOMAIN | RECORD TYPE |
-   | :----------- | :----------- | :----------- | :----------- |
-   | **console-public-dns** | **console-nz-dev-eks-cluster.us-east** | `data-warehouse.test.cloud.ibm.com` | **CNAME** |
-
-   URL:
-
-   ```bash
-   console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com
-   ```
-   {: codeblock}
-
-1. For generating a URL specific to the namespace, add the CRN number as shown:
-
-   ```bash
-   https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>
-   ```
-   {: codeblock}
-
-   ```bash
-   "": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/oidcredirect?crn=<crn_of_namespace>"
-   ```
-   {: codeblock}
