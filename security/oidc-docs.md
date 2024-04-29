@@ -42,13 +42,23 @@ Admin user can manage OIDC configurations from web console.
 
 ## Steps to get OIDC redirect URI
 
-1. Use console base URL and append `v1/oidcredirect?crn=<crn_of_namespace>`.
+Use console base URL and append `v1/oidcredirect?crn=<crn_of_namespace>`.
 
 Example:
 
-For console base URL : https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>.
+For console base URL :
 
-OIDC redirect URI is : https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/oidcredirect?crn=<crn_of_namespace>.
+   ```
+   https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>
+   ```
+   {: codeblock}
+
+OIDC redirect URI is :
+
+   ```
+   https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/oidcredirect?crn=<crn_of_namespace>
+   ```
+   {: codeblock}
 
 ## Configure redirect URI on Azure IDP
 
