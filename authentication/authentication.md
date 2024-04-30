@@ -30,13 +30,15 @@ subcollection: netezza
 
 {{site.data.keyword.netezza_full}} on both Azure and AWS offers the following authentication methods for database users:
 
-1. Local authentication 
+1. Local authentication
 1. LDAP authentication
 1. Azure Active Directory (Azure AD) authentication
 1. IBM IAM authentication
+1. AWS IAM authentication
+
 
 By default, local authentication and `IBM IAM` are enabled on the system. You can set your authentication method by running the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
 
 
-Two factor authentication is not supported with an external authentication system.
-{: important}
+<!-- Two factor authentication is not supported with an external authentication system.
+{: important} -->

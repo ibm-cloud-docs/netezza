@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-04-30"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -22,16 +22,41 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
 
-## February 21, 2024
+## 11.2.2.11 - April 30, 2024
+{: #mar2024}
+
+### New features and enhancements
+{: #nfmar2024}
+
+- `AWS IAM` user authentication allows you to create and log in to your account using your `AWS IAM` credentials. This means that you can use your existing AWS access and secret keys to sign in to your account with no additional steps required. Additionally, you can now use multi-factor authentication (MFA) to secure your account even further. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
+
+#### Connectivity improvements
+{: #cimar2024}
+
+
+### Fixes
+{: #fmar2024}
+
+- **Timezone issues:** Fixed the incorrect timezone display issue. By default, all the timestamps are now displayed in database timezone. You can choose between database and local timezone for scheduling automaintenance, BnR and pause/resume job.
+
+
+### Components
+{: #compsmar2024}
+
+- {{site.data.keyword.netezza_short}} 11.2.2.11
+- Web console 4.0.3.1
+
+
+## 11.2.2.10 - February 21, 2024
 {: #feb2024}
 
 ### New features and enhancements
 {: #nffeb2024}
 
-- A new **Scheduler type** column is introduced in the **History** page for past records.
+- A new **Scheduler type** column is introduced in the **History** page for past records.This column indicates whether the respective schedule is **ad-hoc** or **scheduled**.
 For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
 
-- Enhanced system stability by implementing Influx DB checks before smart scaling tasks for smooth operations.
+- Enhanced system stability for smooth operations.
 
 - **RHEL8/GCC9 upgrade:**\
    Version 11.2.2.10 incorporates an upgrade to RHEL8/GCC9.\
@@ -43,13 +68,9 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 - **INZA:**\
    `python2` and its adapter are no longer supported.
 - **Netezza client:**\
-   Support to initiate, view,  and manipulate schedules for ad hoc, pause, resume, and scaling.
-- Introduced **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
-- Introduced the following options to create databases.
-   - Netezza
-   - Lakehouse
-
-   For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
+   Support to initiate, view,  and manipulate schedules for ad hoc, pause, resume, and scaling. Fore more information, see [Pausing and resuming instances](/docs/netezza?topic=netezza-pauseresume) and [Scaling](/docs/netezza?topic=netezza-scaling-topic).
+- Introduced new maintanence job types **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
+- Introduced a new option **Lakehouse** to create databases. For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
 - `CREATE TABLE` support for unpartitioned Iceberg table.
 - `INSERT` support for Iceberg table.
 #### Connectivity improvements
@@ -57,11 +78,14 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 
 - OpenSSL library upgraded to 1.1.1t.
 - TLSv1.3 connection protocol supported.
-- New Ciphers supported for TLSv1.3.
+- New Ciphers supported for TLSv1.3:
+    - TLS_AES_128_GCM_SHA256
+    - TLS_AES_256_GCM_SHA384
+    - TLS_CHACHA20_POLY1305_SHA256
 - AIX 7.3 and SUSE 15 SP3 support added from version 11.2.2.10 and later.
 - All 32 bit client are now deprecated.
 - HP and Solaris clients are deprecated altogether.
-- ConnRetry feature added in ODBC.
+- ConnRetry feature added in ODBC. Fore more information, see [Configuring the DSN and driver options with ODBC Driver Setup](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-2).
 
 ### Fixes
 {: #ffeb2024}
@@ -72,15 +96,16 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 {: #compsfeb2024}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.10
-- Web console 4.0.x
+- Web console 4.0.1.7
 
 ### Known issues
 {: #kifeb2024}
 
-- For expansion failure due to node procurement issues, the Ops team restores the system to online state using pre-expansion configuration. The Ops team contacts you once the required nodes become available. The created expansion will be available in **Suspended** state under **Workload Patterns -> Scaling**. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion).
+- For expansion failure due to node procurement issues, the Ops team restores the system to online state. You will see the state of Expansion scheduler as **Suspended** in Workload Patterns -> Scaling section. The Ops team will contact you once the required nodes becomes available. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion).
+
 - Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup.
 
-## December 8, 2023
+## 11.2.2.9 - December 8, 2023
 {: #dec2023}
 
 ### New features and enhancements
@@ -98,7 +123,7 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 {: #compsdec2023}
 
 - {{site.data.keyword.netezza_short}} 11.2.2.9
-- Web console 4.0.16
+- Web console 4.0.1.6
 - JDBC driver (on all platforms)
    MD5 Auth requests are deprecated. All MD5 connections are dropped.
 
@@ -114,7 +139,7 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 - For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues).
 - The `Word_diff` function in the SQL extension toolkit does not support string input.
 
-## November 9, 2023
+## 11.2.2.8 - IF4 - November 9, 2023
 {: #nov2023}
 
 ### Fixes
@@ -146,7 +171,7 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
       ```
       {: codeblock}
 
-## July 24, 2023
+## 11.2.2.8 - July 24, 2023
 {: #july2023}
 
 ### New features and enhancements
@@ -192,7 +217,7 @@ Other regions where the service is available on AWS include:
       ```
       {: codeblock}
 
-## July 10, 2023
+## 11.2.2.7 - July 10, 2023
 {: #july12023}
 
 ### New features and enhancements
@@ -221,7 +246,7 @@ Other regions where the service is available on AWS include:
   - Take a backup of a single large database at a time.
   - Restore a single large database at a time.
 
-## March 2023
+## 11.2.2.6 - March 2023
 {: #march2023}
 
 ### New features and enhancements
@@ -256,7 +281,7 @@ Other regions where the service is available on AWS include:
      The settings change from **false** to **true**.
   1. Refresh the web console page.
 
-## February 2023
+## 11.2.2.5 - February 2023
 {: #feb2023}
 
 ### New features and enhancements
@@ -303,7 +328,7 @@ select tab1.* from ( select c1 as _c1 , c2 as _c2 from t1 ) as tab1; ERROR:  No 
 ```
 {: screen}
 
-## July 2022
+## 11.2.2.4 - July 2022
 {: #july2022}
 
 As of July 28, 2022, you can access data from data lakes and move data between applications with Kafka.
@@ -328,7 +353,7 @@ CREATE TABLE
 ```
 {: codeblock}
 
-## June 2022
+## 11.2.2.3 - June 2022
 {: #june2022}
 
 As of June 14, 2022, several fixes, and a stability patch for critical issues.

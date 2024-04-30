@@ -92,6 +92,19 @@ toc:
               topics:
               - authentication/ibmiam_autnentication.md
               - security/iam-docs.md
+          - topicgroup:
+              label: Setting AWS IAM authentication
+              topics:
+              - authentication/awsiam_autnentication.md
+              - authentication/loginawsiam_user.md
+              - security/usageofnzcliawsiam.md
+          - topicgroup:
+              label: Setting SAML authentication
+              topics:
+              - authentication/saml_authentication.md
+              - security/saml-docs.md
+              - security/usagenzclisamlauth.md
+              - security/usagev3signinsaml.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
@@ -161,7 +174,7 @@ toc:
               label: Backup and restore best practices
               href: https://www.ibm.com/docs/en/netezza?topic=service-backup-restore-best-practices
       - topicgroup:
-          label: Security 
+          label: Security
           topics:
           - security/security_compliance.md
           - security/architecture-workload-isolation.md

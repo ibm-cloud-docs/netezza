@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-06-01"
+lastupdated: "2023-08-02"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -24,11 +24,13 @@ subcollection: netezza
 # Setting IBM IAM authentication
 {: #ibmiamauth}
 
-Set your authentication method to `IBMIAM` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
+Set your authentication method to `IBMIAM` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
 
 Two factor authentication is not supported with an external authentication system.
 {: important}
+
+See also [Managing IAM access](docs/netezza?topic=netezza-iam-docs).
 
 ## Syntax
 {: #ibmiamsyntax}
@@ -52,8 +54,8 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
     {: codeblock}
 
 1. Create a user or users with the external authentication method set to `IBM IAM` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
-1. Verify whether the user was created successfully.  
-   
+1. Verify whether the user was created successfully.
+
    1. Go to **Users and groups > Users**.
    1. Locate the user.
    1. Check the **Authentication type** section for the user.
@@ -61,7 +63,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
 ## Setting IBM IAM authentication with the command-line
 {: #ibmiamprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin` user.  
+1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin` user.
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use the [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
@@ -74,8 +76,8 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
    | :-----------   | :---------- |
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
    | user           | Specifies the user name.      |
-   | password       | Specifies the password for the user. |
-   
+   | password       | **When MFA is not configured:** \n specify the `access-key` and `secret-key` for the user. \n **When MFA is configured:** \n specify the `access-key`, `secret-key`, and `mfa-code`.|
+
    Example:
 
     ```sql
@@ -85,8 +87,8 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
            \? for help on internal slash commands
            \g or terminate with semicolon to execute query
            \q to quit
-           
-    SYSTEM.ADMIN(ADMIN)=> 
+
+    SYSTEM.ADMIN(ADMIN)=>
     ```
     {: codeblock}
 
@@ -139,4 +141,3 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
     SYSTEM.ADMIN(xyz@ibm.com)=>
     ```
     {: codeblock}
-
