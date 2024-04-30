@@ -22,7 +22,7 @@ subcollection: netezza
 # Release notes for {{site.data.keyword.netezza_short}}
 {: #my-service-relnotes}
 
-## April 30, 2024
+## 11.2.2.11 - April 30, 2024
 {: #mar2024}
 
 ### New features and enhancements
@@ -47,7 +47,7 @@ subcollection: netezza
 - Web console 4.0.3.1
 
 
-## February 21, 2024
+## 11.2.2.10 - February 21, 2024
 {: #feb2024}
 
 ### New features and enhancements
@@ -105,7 +105,7 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 
 - Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup.
 
-## December 8, 2023
+## 11.2.2.9 - December 8, 2023
 {: #dec2023}
 
 ### New features and enhancements
@@ -139,7 +139,7 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
 - For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues).
 - The `Word_diff` function in the SQL extension toolkit does not support string input.
 
-## November 9, 2023
+## 11.2.2.8 - IF4 - November 9, 2023
 {: #nov2023}
 
 ### Fixes
@@ -171,7 +171,7 @@ For more information, see [Checking scaling history](/docs/netezza?topic=netezza
       ```
       {: codeblock}
 
-## July 24, 2023
+## 11.2.2.8 - July 24, 2023
 {: #july2023}
 
 ### New features and enhancements
@@ -217,7 +217,7 @@ Other regions where the service is available on AWS include:
       ```
       {: codeblock}
 
-## July 10, 2023
+## 11.2.2.7 - July 10, 2023
 {: #july12023}
 
 ### New features and enhancements
@@ -246,7 +246,7 @@ Other regions where the service is available on AWS include:
   - Take a backup of a single large database at a time.
   - Restore a single large database at a time.
 
-## March 2023
+## 11.2.2.6 - March 2023
 {: #march2023}
 
 ### New features and enhancements
@@ -281,7 +281,7 @@ Other regions where the service is available on AWS include:
      The settings change from **false** to **true**.
   1. Refresh the web console page.
 
-## February 2023
+## 11.2.2.5 - February 2023
 {: #feb2023}
 
 ### New features and enhancements
@@ -328,7 +328,7 @@ select tab1.* from ( select c1 as _c1 , c2 as _c2 from t1 ) as tab1; ERROR:  No 
 ```
 {: screen}
 
-## July 2022
+## 11.2.2.4 - July 2022
 {: #july2022}
 
 As of July 28, 2022, you can access data from data lakes and move data between applications with Kafka.
@@ -353,7 +353,7 @@ CREATE TABLE
 ```
 {: codeblock}
 
-## June 2022
+## 11.2.2.3 - June 2022
 {: #june2022}
 
 As of June 14, 2022, several fixes, and a stability patch for critical issues.
