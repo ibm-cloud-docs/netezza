@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-04-09"
+  years: 2024
+lastupdated: "2024-04-20"
 
 keywords:
 
@@ -35,9 +35,10 @@ subcollection: netezza
 1. Azure Active Directory (Azure AD) authentication
 1. IBM IAM authentication
 1. AWS IAM authentication
+1. SAML authentication
+1. OIDC authentication
 
-
-By default, local authentication and `IBM IAM` are enabled on the system. You can set your authentication method by running the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
+By default, local authentication and `IBM IAM` are enabled on the system. You can set your authentication method by running the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 
 
 <!-- Two factor authentication is not supported with an external authentication system.

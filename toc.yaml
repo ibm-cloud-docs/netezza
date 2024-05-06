@@ -19,6 +19,7 @@ toc:
       id: learn
       topics:
       - start/release-notes.md
+    #   - start/release-notes-new.md
       - start/provisioning.md
       - topicgroup:
           label: Connecting to Netezza Performance Server with private and public endpoints
@@ -104,7 +105,12 @@ toc:
               - authentication/saml_authentication.md
               - security/saml-docs.md
               - security/usagenzclisamlauth.md
-              - security/usagev3signinsaml.md
+          - topicgroup:
+              label: Setting OIDC authentication
+              topics:
+              - authentication/oidc_authentication.md
+              - security/oidc-docs.md
+              - security/usagenzclioidcauth.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
