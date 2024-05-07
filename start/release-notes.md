@@ -47,7 +47,7 @@ subcollection: netezza
 - Web console 4.0.3.1
 
 
-A tech preview of the {{site.data.keyword.lakehouse_short}} integration is available for CPDS 1.0.X. If you are interested in the tech preview, please get in touch with IBM.
+Private preview of {{site.data.keyword.lakehouse_short}} integration is available for CPDS 1.0.7.8 and later 1.0.X versions. For more information, contact IBM.
 {: note}
 
 ## 11.2.2.10 - February 21, 2024
