@@ -74,8 +74,8 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
    | Input          | Description |
    | :-----------   | :---------- |
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
-   | user           | Specifies the username.      |
-   | password       | Specifies the JWT token that is generated for this user after Cyclops and IDP (Identity Provider) authentication. |
+   | user           | Specifies the username. |
+   | password       | Specifies the password. |
 
 1. As an admin, register an `OIDC` external authentication system.
 
