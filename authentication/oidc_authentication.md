@@ -67,14 +67,14 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
     ```sql
-    nzsql -host <nps_host_ip> -u <admin privileged user> -pw XXXXX
+    nzsql -host <nps_host_ip> -u <admin user> -pw XXXXX
     ```
     {: codeblock}
 
    | Input          | Description |
    | :-----------   | :---------- |
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
-   | user           | Specifies the username. |
+   | admin user     | Specifies the admin privileged user. |
    | password       | Specifies the password. |
 
 1. As an admin, register an `OIDC` external authentication system.
