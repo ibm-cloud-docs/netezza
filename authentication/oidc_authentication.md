@@ -43,7 +43,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
 ## Setting OIDC authentication with the web console
 {: #setting_oidc_wc}
 
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin`.
 1. Go to the **Query editor**.
 1. Register a `OIDC` external authentication system.
 
