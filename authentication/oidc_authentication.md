@@ -62,12 +62,12 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
 ## Setting OIDC authentication with the command-line
 {: #oidcmprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin` user.
+1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin`.
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
     ```sql
-    nzsql -host <nps_host_ip> -u admin -pw XXXXX
+    nzsql -host <nps_host_ip> -u <admin privileged user> -pw XXXXX
     ```
     {: codeblock}
 
