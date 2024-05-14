@@ -28,7 +28,10 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmay2024}
 
-- `AWS IAM` user authentication allows you to create and log in to your account using your `AWS IAM` credentials. This means that you can use your existing AWS access and secret keys to sign in to your account with no additional steps required. Additionally, you can now use multi-factor authentication (MFA) to secure your account even further. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
+- NPS 11.2.3.0 supports multi-factor authentication:
+    - [SAML](/docs/netezza?topic=netezza-samliamauth)
+    - [OIDC (Azure)]((/docs/netezza?topic=netezza-oidciamauth))
+
 
 #### Connectivity improvements
 {: #cimay2024}
