@@ -46,7 +46,6 @@ subcollection: netezza
 - {{site.data.keyword.netezza_short}} 11.2.2.11
 - Web console 4.0.3.1
 
-
 ## 11.2.2.10 - February 21, 2024
 {: #feb2024}
 
