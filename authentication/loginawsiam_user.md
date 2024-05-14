@@ -54,6 +54,3 @@ nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY"
 ```sql
 nzsql -u '"AWSUSER"' -pw "ACCESS-KEY:SECRET-ACCESS-KEY MFA-CODE"
 ```
-
-AWS users can authenticate without `mfa-code` by using `nzsql`.
-{: note}
