@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-04-20"
+  years:  2023
+lastupdated: "2023-12-26"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -22,7 +22,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Usage of `nzcli` with OIDC authentication
+# Usage of `nzcli` with SAML authentication
 
  ```bash
 ./nzcli --help
@@ -37,7 +37,7 @@ subcollection: netezza
 After successful authentication from Cyclops and Identity Provider, you will get a JWT token on Cyclops GUI. You can use the JWT token to execute `nzcli` commands as follows:
 
 ```bash
-./nzcli nzcommand  -u OIDCUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
+./nzcli nzcommand  -u SAMLUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
 ```
 {: codeblock}
 

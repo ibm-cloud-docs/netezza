@@ -111,29 +111,3 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML'
     CREATE USER SAMLUSER AUTH EXTERNAL 'SAML';
     ```
     {: codeblock}
-
-1. Verify whether the user is created successfully.
-
-    ```sql
-
-    nzsql -u '"SAMLUSER"' -pw JWTTOKEN
-    ```
-    {: codeblock}
-
-    Example:
-
-    ```sql
-
-    nzsql -u '"SAMLUSER"' -pw XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    Welcome to nzsql, the IBM Netezza SQL interactive terminal.
-
-    Type: \h for help with SQL commands
-    ? for help on internal slash commands
-    \g or terminate with semicolon to execute query
-    \q to quit
-
-    SSL enabled connection. Cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, protocol: TLSv1.2
-
-    SYSTEM.ADMIN(SAMLUSER)=>
-    ```
-    {: codeblock}
