@@ -11,8 +11,8 @@ subcollection: netezza
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
+{:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -28,7 +28,7 @@ subcollection: netezza
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 1. Go to **Resource list > Services and Software > Databases**.
-1. Click on your {{site.data.keyword.netezza_short}} instance.  
+1. Click on your {{site.data.keyword.netezza_short}} instance.
    You are now on the **Service instance details** page where you can find information about endpoints for accessing the web console, the API server, and the database.
 1. Go to the **Service Credentials** tab.
 1. Click **New Credentials**.
@@ -44,13 +44,12 @@ If your credentials were generated successfully, you can expand the newly create
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 1. Go to **Resource list > Services and Software > Databases**.
-1. Click on your {{site.data.keyword.netezza_short}} instance.  
+1. Click on your {{site.data.keyword.netezza_short}} instance.
    You are now on the **Service instance details** page where you can find information about endpoints for accessing the web console, the API server, and the database.
 1. Go to the **Service Credentials** tab.
-1. Expand **View credentials**.   
+1. Expand **View credentials**.
 1. Expand your credential entry.
    The following credentials are displayed:
 
-   - `username: admin` - Specifies a local database `admin` user that was created for you to access the instance.
-   - `password: xxxx`  - Specifies the password that you must use when logging in to your instance as `admin`.  
-   
+   - `username: admin` - Specifies a local database `admin` that was created for you to access the instance.
+   - `password: xxxx`  - Specifies the password that you must use when logging in to your instance as `admin`.
