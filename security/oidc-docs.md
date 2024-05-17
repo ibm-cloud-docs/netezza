@@ -66,11 +66,7 @@ OIDC redirect URI is :
 2. Navigate to Azure active directory.
 3. Select App registrations, locate the Azure AD App.
 3. Navigate to authentication action.
-4. Update "Redirect URIs" with the following URI.
-
-   ```url
-   https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/oidcredirect?crn=<crn_of_namespace>
-   ```
+4. You can copy OIDC redirect URI displayed on the console. Update "Redirect URIs" with this copied URI.
 
 
 Admin users can configure the following OIDC configurations by using Cyclops:
