@@ -22,7 +22,7 @@ subcollection: netezza
 {:caption: .caption}
 
 # Overview
-{: #samloverview}
+{: #oidcoverview}
 
-- [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
-- [Configuring SAML authentication in IDP](/docs/netezza?topic=netezza-saml-docs).
+- [Enabling OIDC authentication](/docs/netezza?topic=netezza-oidciamauth).
+- [Configuring OIDC authentication in IDP](/docs/netezza?topic=netezza-oidc-docs).

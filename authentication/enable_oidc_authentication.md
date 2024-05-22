@@ -21,8 +21,8 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Setting OIDC authentication
-{: #oidciamauth}
+# Enabling OIDC authentication
+{: #enable_oidciamauth}
 
 Set your authentication method to `OIDC` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
@@ -39,6 +39,10 @@ See also [Managing IAM access](/docs/netezza?topic=netezza-iam-docs).
 REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
 ```
 {: codeblock}
+
+You can use two methods for enabling OIDC authentication:
+- [Through web console.](/docs/netezza?topic=netezza-oidciamauth#setting_oidc_wc)
+- [From command-line.](/docs/netezza?topic=netezza-oidciamauth#oidcmprocedure)
 
 ## Setting OIDC authentication with the web console
 {: #setting_oidc_wc}

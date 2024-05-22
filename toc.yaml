@@ -108,7 +108,8 @@ toc:
           - topicgroup:
               label: Setting OIDC authentication
               topics:
-              - authentication/oidc_authentication.md
+              - authentication/oidc_overview.md
+              - authentication/enable_oidc_authentication.md
               - security/oidc-docs.md
               - security/usagenzclioidcauth.md
           - authentication/azuread_authenticating.md

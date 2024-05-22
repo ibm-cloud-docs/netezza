@@ -21,12 +21,12 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Managing OIDC IDP configuration for {{site.data.keyword.netezza_short}}
+# Configuring OIDC authentication in IDP
 {: #oidc-docs}
 
 Admin user can manage OIDC configurations from web console.
 
-## How to get Client ID, Tenant ID, Client Secret.
+## How to get `Client ID`, `Tenant ID`, `Client Secret`.
 
 1. Login to the Azure Portal.
 2. Navigate to Azure Active Directory.
@@ -38,7 +38,7 @@ Admin user can manage OIDC configurations from web console.
 1. Login to cyclops as an admin user.
 2. Select `IDP configuration` topic.
 3. Enable Azure OIDC configuration.
-4. Add Client ID, Tenant ID, Client Secret.
+4. Add `Client ID`, `Tenant ID`, `Client Secret`.
 
 <!-- ## Steps to get OIDC redirect URI
 
@@ -67,11 +67,3 @@ OIDC redirect URI is :
 3. Select App registrations, locate the Azure AD App.
 3. Navigate to authentication action.
 4. You can copy OIDC redirect URI displayed on the console. Update "Redirect URIs" with this copied URI.
-
-
-Admin users can configure the following OIDC configurations by using Cyclops:
-
-1. Login to cyclops as an admin user.
-1. Select `IDP configurations` topic.
-1. Enable Azure OIDC configuration.
-1. Add Client ID, Tenant ID, Client Secret.
