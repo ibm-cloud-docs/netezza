@@ -24,5 +24,5 @@ subcollection: netezza
 # Overview
 {: #samloverview}
 
-[Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
-[Configuring SAML authentication in IDP](/docs/netezza?topic=netezza-saml-docs).
+- [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
+- [Configuring SAML authentication in IDP](/docs/netezza?topic=netezza-saml-docs).
