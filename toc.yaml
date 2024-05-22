@@ -101,7 +101,8 @@ toc:
           - topicgroup:
               label: Setting SAML authentication
               topics:
-              - authentication/saml_authentication.md
+              - authentication/saml_overview.md
+              - authentication/enable_saml_authentication.md
               - security/saml-docs.md
               - security/usagenzclisamlauth.md
           - topicgroup:

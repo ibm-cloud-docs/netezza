@@ -21,7 +21,7 @@ subcollection: netezza
 {:important: .important}
 {:caption: .caption}
 
-# Setting SAML authentication
+# Enabling SAML authentication
 {: #samliamauth}
 
 Set your authentication method to `SAML` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
@@ -39,6 +39,12 @@ See also [Managing IAM access](/docs/netezza?topic=netezza-iam-docs).
 REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML'
 ```
 {: codeblock}
+
+
+You can use two methods for enabling SAML authentication:
+- [Through web console.](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc)
+- [From command-line.](/docs/netezza?topic=netezza-samliamauth#samlmprocedure)
+
 
 ## Setting SAML authentication with the web console
 {: #setting_saml_wc}

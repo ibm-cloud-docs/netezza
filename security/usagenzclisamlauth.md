@@ -30,7 +30,7 @@ subcollection: netezza
 {: codeblock}
 
  ```bash
-./nzcli nzcommand  -u admin -pw  jwttoken -apiserver ip
+./nzcli nzcommand  -u username -pw  jwttoken -apiserver ip
 ```
 {: codeblock}
 
@@ -40,6 +40,3 @@ After successful authentication from Cyclops and Identity Provider, you will get
 ./nzcli nzcommand  -u SAMLUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
 ```
 {: codeblock}
-
-Similarly, you can use many `nzcli` commands.
-{: note}
