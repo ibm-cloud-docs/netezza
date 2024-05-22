@@ -28,7 +28,7 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmay2024}
 
-- NPS 11.2.3.0 supports multi-factor authentication:
+- NPS 11.2.3.0 supports SSO (Single sign-on) with multi-factor authentication:
     - [SAML](/docs/netezza?topic=netezza-samliamauth)
     - [OIDC (Azure)](/docs/netezza?topic=netezza-oidciamauth)
 
