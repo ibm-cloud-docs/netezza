@@ -30,7 +30,7 @@ subcollection: netezza
 
 - NPS 11.2.3.0 supports multi-factor authentication:
     - [SAML](/docs/netezza?topic=netezza-samliamauth)
-    - [OIDC (Azure)]((/docs/netezza?topic=netezza-oidciamauth))
+    - [OIDC (Azure)](/docs/netezza?topic=netezza-oidciamauth)
 
 
 #### Connectivity improvements
