@@ -33,10 +33,10 @@ Admin user can manage SAML configurations from web console.
 2. Navigate to your SAML application.
 3. In the app details, you can find `IDPMetadataURL`, `EntityId`.
 
-## Configure SAML user authentication at NPS
+## Configure IDP details
 {: #config_saml}
 
-1. Login to cyclops as an admin.
+1. Login to cyclops as a user who is part of the administrative group.
 2. Select IDP configuration topic.
 3. Enable SAML configuration.
 4. Add `IDPMetadataURL`, `EntityId`.
@@ -45,8 +45,8 @@ Admin user can manage SAML configurations from web console.
 ## Configure ACS url and SLO endpoint on IDP
 {: #config_acsurl}
 
-1. Login to Cyclops as an admin.
-1. Select IDP configuration topic. You can see ACS url and SLO endpoint on this page.
+1. Login to cyclops as a user who is part of the administrative group.
+1. Select IDP configuration topic. Copy ACS url and SLO endpoint seen on this page.
 1. Login to the IDP portal.
 1. Navigate to your SAML application.
-1. Edit app configuration and update the ACS url and Slo endpoint that is displayed in the console.
+1. Edit app configuration and add the ACS url and SLO endpoint from step 2.

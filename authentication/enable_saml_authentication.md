@@ -30,8 +30,6 @@ Set your authentication method to `SAML` with the [`REGISTER EXTERNAL AUTHENTICA
 Two-factor authentication is supported by SAML external authentication system. User needs to be configured with MFA on IDP (Identity Provider), for example, Ping Identity.
 {: important}
 
-See also [Managing IAM access](/docs/netezza?topic=netezza-iam-docs).
-
 ## Syntax
 {: #samlsyntax}
 
@@ -49,7 +47,7 @@ You can use two methods for enabling SAML authentication:
 ## Setting SAML authentication with the web console
 {: #setting_saml_wc}
 
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin`.
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as a user who is part of an administrative group.
 1. Go to the **Query editor**.
 1. Register a `SAML` external authentication system.
 
@@ -68,12 +66,12 @@ You can use two methods for enabling SAML authentication:
 ## Setting SAML authentication with the command-line
 {: #samlmprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin`.
+1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as a user who is part of an administrative group.
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
     ```sql
-    nzsql -host <nps_host_ip> -u admin -pw XXXXX
+    nzsql -host <nps_host_ip> -u user -pw XXXXX
     ```
     {: codeblock}
 
@@ -81,7 +79,7 @@ You can use two methods for enabling SAML authentication:
    | :-----------   | :---------- |
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
    | user           | Specifies the username.      |
-   | password       | Specifies the JWT token that is generated for this user after Cyclops and IDP (Identity Provider) authentication. |
+   | password       | Specifies the password. |
 
    Example:
 
@@ -97,7 +95,7 @@ You can use two methods for enabling SAML authentication:
     ```
     {: codeblock}
 
-1. As an admin, register an `SAML` external authentication system.
+1. As an admin, register `SAML` external authentication system.
 
     ```sql
     REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML';
@@ -107,7 +105,7 @@ You can use two methods for enabling SAML authentication:
 1. Create a user or users with the external authentication method set to `SAML`.
 
     ```sql
-    CREATE USER USER AUTH EXTERNAL 'SAML';
+    CREATE USER <USER> AUTH EXTERNAL 'SAML';
     ```
     {: codeblock}
 
