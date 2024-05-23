@@ -33,13 +33,14 @@ Admin user can manage OIDC configurations from web console.
 2. Navigate to the Azure AD (Active Directory).
 3. Select App registrations and locate the Azure AD application to find the Client ID and Client Secret Key.
 4. In the Overview section, you will find Application (client) ID and Tenant ID.
-1. In Azure AD application, select Certificates & Secrets from the Manage sidebar.
+1. In Azure AD application, select **Certificates & Secrets** from the **Manage** sidebar.
    1.	If you already have secret, go to [Configure redirect URI on Azure IdP](/docs/netezza?topic=netezza-oidc-docs#cruai) to get OIDC redirect URI .
    2.	If you are creating secret for the first time, click **New client secret** and fill the secret details.
 6.	Copy the client Secret value and store it for later use.
 
-Ensure to copy the `Value`, not the `Secret ID`.
-{: note}
+    Ensure to copy the `Value`, not the `Secret ID`.
+    {: note}
+
 
 ## Configure Azure OIDC details
 {: #couan}
