@@ -50,6 +50,6 @@ Admin user can manage `SAML` configurations from web console.
 1. Copy ACS url and SLO endpoint from the `IdP configuration` page.
 {: #step3saml}
 
-1. Login to the IdPportal.
+1. Login to the IdP Portal.
 1. Navigate to your `SAML` application.
 1. Edit application configuration and add the ACS url and SLO endpoint from [step 3](/docs/netezza?topic=netezza-saml-docs#step3saml).

@@ -55,6 +55,9 @@ You can use two methods for enabling OIDC authentication:
     ```
     {: codeblock}
 
+    This action has to be performed only once.
+    {: note}
+
 1. Create a user (or users) with the external authentication method set to `OIDC`, as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
 1. Verify whether the user is created successfully.
 
@@ -86,6 +89,9 @@ You can use two methods for enabling OIDC authentication:
     REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC';
     ```
     {: codeblock}
+
+    This action has to be performed only once.
+    {: note}
 
 1. Create a user (or users) with the external authentication method set to `OIDC`.
 

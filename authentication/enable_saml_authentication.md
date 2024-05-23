@@ -56,6 +56,9 @@ You can use two methods for enabling SAML authentication:
     ```
     {: codeblock}
 
+    This action has to be performed only once.
+    {: note}
+
 1. Create a user (or users) with the external authentication method set to `SAML`, as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
 1. Verify whether the user is created successfully.
 
@@ -95,12 +98,15 @@ You can use two methods for enabling SAML authentication:
     ```
     {: codeblock}
 
-1. As an admin, register `SAML` external authentication system.
+1. As an admin, register `SAML` external authentication system only once.
 
     ```sql
     REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML';
     ```
     {: codeblock}
+
+    This action has to be performed only once.
+    {: note}
 
 1. Create a user (or users) with the external authentication method set to `SAML`.
 
