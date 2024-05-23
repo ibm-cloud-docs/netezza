@@ -36,9 +36,7 @@ Admin user can manage OIDC configurations from web console.
 1. In Azure AD application, select **Certificates & Secrets** from the **Manage** sidebar.
    1.	If you already have secret, go to [Configure redirect URI on Azure IdP](/docs/netezza?topic=netezza-oidc-docs#cruai) to get OIDC redirect URI .
    2.	If you are creating secret for the first time, click **New client secret** and fill the secret details.
-6. Copy the client Secret value and store it for later use.
-
-
+6. Copy the client Secret value and store it for later use.\
     Ensure to copy the `Value`, not the `Secret ID`.
     {: note}
 
