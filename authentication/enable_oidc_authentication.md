@@ -39,8 +39,9 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
 {: codeblock}
 
 You can use two methods for enabling OIDC authentication:
-- [Through web console.](/docs/netezza?topic=netezza-oidciamauth#setting_oidc_wc)
-- [From command-line.](/docs/netezza?topic=netezza-oidciamauth#oidcmprocedure)
+- [Through web console.](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc)
+- [From command-line.](/docs/netezza?topic=netezza-enable_oidciamauth#oidcmprocedure)
+
 
 ## Setting OIDC authentication with the web console
 {: #setting_oidc_wc}

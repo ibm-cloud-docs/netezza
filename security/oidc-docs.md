@@ -41,7 +41,7 @@ Admin user can manage OIDC configurations from web console.
 Ensure to copy the `Value`, not the `Secret ID`.
 {: note}
 
-## Configure OIDC user authentication at NPS
+## Configure Azure OIDC details
 {: #couan}
 
 1. Login to Cyclops as a user who is part of the administrative group.
