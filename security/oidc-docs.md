@@ -20,6 +20,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
 # Configuring OIDC authentication in IdP
 {: #oidc-docs}

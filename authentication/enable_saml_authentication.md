@@ -20,6 +20,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
 # Enabling SAML authentication
 {: #samliamauth}
