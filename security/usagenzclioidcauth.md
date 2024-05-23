@@ -40,6 +40,3 @@ After successful authentication from Cyclops and Identity Provider, you will get
 ./nzcli nzcommand  -u OIDCUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
 ```
 {: codeblock}
-
-Similarly, you can use many `nzcli` commands.
-{: note}
