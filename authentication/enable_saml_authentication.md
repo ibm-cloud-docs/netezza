@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-12-26"
+  years:  2024
+lastupdated: "2024-05-23"
 
 keywords: SAML access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -27,7 +27,7 @@ subcollection: netezza
 Set your authentication method to `SAML` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
 
-Two-factor authentication is supported by SAML external authentication system. User needs to be configured with MFA on IDP (Identity Provider), for example, Ping Identity.
+`SAML` external authentication system supports two-factor authentication. User needs to be configured with MFA (Multi-factor authentication) on IdP(Identity Provider); for example, Ping Identity.
 {: important}
 
 ## Syntax
@@ -47,7 +47,7 @@ You can use two methods for enabling SAML authentication:
 ## Setting SAML authentication with the web console
 {: #setting_saml_wc}
 
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as a user who is part of an administrative group.
+1. Log in to the web console as a user who is part of an administrative group. See, [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
 1. Go to the **Query editor**.
 1. Register a `SAML` external authentication system.
 
@@ -56,7 +56,7 @@ You can use two methods for enabling SAML authentication:
     ```
     {: codeblock}
 
-1. Create a user or users with the external authentication method set to `SAML` as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Create a user (or users) with the external authentication method set to `SAML`, as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
 1. Verify whether the user is created successfully.
 
    1. Go to **Users and groups > Users**.
@@ -66,7 +66,7 @@ You can use two methods for enabling SAML authentication:
 ## Setting SAML authentication with the command-line
 {: #samlmprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as a user who is part of an administrative group.
+1. Connect to {{site.data.keyword.netezza_short}} as a user who is part of an administrative group. See, [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview).
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
@@ -102,7 +102,7 @@ You can use two methods for enabling SAML authentication:
     ```
     {: codeblock}
 
-1. Create a user or users with the external authentication method set to `SAML`.
+1. Create a user (or users) with the external authentication method set to `SAML`.
 
     ```sql
     CREATE USER <USER> AUTH EXTERNAL 'SAML';

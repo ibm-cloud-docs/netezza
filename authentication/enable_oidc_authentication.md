@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-20"
+lastupdated: "2024-05-23"
 
 keywords: OIDC access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -27,10 +27,8 @@ subcollection: netezza
 Set your authentication method to `OIDC` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
 
-Two-factor authentication is supported by OIDC external authentication system. User needs to be configured with MFA on IDP (Identity Provider), for example, [Microsoft Azure](https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-provider-openid-connect).
+`OIDC` external authentication system supports two-factor authentication. User needs to be configured with MFA on IdP(Identity Provider); for example, [Microsoft Azure](https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-provider-openid-connect).
 {: important}
-
-See also [Managing IAM access](/docs/netezza?topic=netezza-iam-docs).
 
 ## Syntax
 {: #oidcsyntax}
@@ -47,16 +45,16 @@ You can use two methods for enabling OIDC authentication:
 ## Setting OIDC authentication with the web console
 {: #setting_oidc_wc}
 
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin`.
+1. Log in to the web console as a user who is part of an administrative group. See, [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
 1. Go to the **Query editor**.
-1. Register a `OIDC` external authentication system.
+1. Register an `OIDC` external authentication system.
 
     ```sql
     REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
     ```
     {: codeblock}
 
-1. Create a user or users with the external authentication method set to `OIDC` as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
+1. Create a user (or users) with the external authentication method set to `OIDC`, as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
 1. Verify whether the user is created successfully.
 
    1. Go to **Users and groups > Users**.
@@ -66,7 +64,7 @@ You can use two methods for enabling OIDC authentication:
 ## Setting OIDC authentication with the command-line
 {: #oidcmprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin`.
+1. Connect to {{site.data.keyword.netezza_short}} as a user who is part of an administrative group. See, [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview).
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
@@ -88,10 +86,10 @@ You can use two methods for enabling OIDC authentication:
     ```
     {: codeblock}
 
-1. Create a user or users with the external authentication method set to `OIDC`.
+1. Create a user (or users) with the external authentication method set to `OIDC`.
 
     ```sql
-    CREATE USER USER AUTH EXTERNAL 'OIDC';
+    CREATE USER <USER> AUTH EXTERNAL 'OIDC';
     ```
     {: codeblock}
 

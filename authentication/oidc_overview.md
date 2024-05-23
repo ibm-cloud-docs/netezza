@@ -25,4 +25,4 @@ subcollection: netezza
 {: #oidcoverview}
 
 - [Enabling OIDC authentication](/docs/netezza?topic=netezza-oidciamauth).
-- [Configuring OIDC authentication in IDP](/docs/netezza?topic=netezza-oidc-docs).
+- [Configuring OIDC authentication in IdP](/docs/netezza?topic=netezza-oidc-docs).

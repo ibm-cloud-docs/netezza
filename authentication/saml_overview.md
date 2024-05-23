@@ -24,19 +24,19 @@ subcollection: netezza
 # Overview
 {: #samloverview}
 
-With SAML, you can enable a single sign-on experience for users across many SAML-enabled applications and services.
-Users authenticate with the IdP once using a single set of credentials, and then get access to multiple applications and services without additional sign-ins.
+With `SAML` authentication, you can enable a single sign-on experience for users across multiple SAML-enabled applications and services.
+Users authenticating with the IdP(Identity provider) using a single set of credentials get access to multiple applications and services without additional sign-ins.
 
-- With this feature, customer using SAML compliant IdP providers will be able to authenticate to Netezza using the Cyclops UI.
-- If supported by the Identity Provider and enabled by administrator, SAML users will be able to use MFA which will provide an additional layer of security.
+- With this feature, users using SAML-compliant IdPproviders can authenticate into Netezza using the Cyclops UI.
+- If supported by the IdPand enabled by the administrator, `SAML` users can use MFA (Multi-factor authentication), which provides an additional layer of security.
 
 
-Please follow below steps to setup SAML authentication :
+Follow the steps to setup `SAML` authentication:
 
 - [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
-- [Configuring SAML authentication in IDP](/docs/netezza?topic=netezza-saml-docs).
+- [Configuring SAML authentication in IdP](/docs/netezza?topic=netezza-saml-docs).
 
 ## Limitation
 {: #saml_limitation}
 
-SAML does not support signed authentication. Support for this will be added in upcoming release.
+`SAML` does not support signed authentication. Support for signed authentication will be added in the upcoming release.
