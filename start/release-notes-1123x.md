@@ -31,18 +31,19 @@ subcollection: netezza
 - NPS 11.2.3.0 supports SSO (Single sign-on) with multi-factor authentication:
     - [SAML](/docs/netezza?topic=netezza-samliamauth)
     - [OIDC (Azure)](/docs/netezza?topic=netezza-oidciamauth)
-- Added NC-START Support On Azure UI
-- Improved UX for login
+- Added nzstart support On Azure UI.
+- Improved UX for login. *Details to be added*
 
 #### Connectivity improvements
 {: #cimay2024}
 
+*No inputs.*
 
 ### Fixes
 {: #fmay2024}
 
 - Removed schema level backup from console UI (backup and restore tab).
-- Resolved the issue of backup objects getting deleted from cloud (S3/AZ) when "Delete object from Cloud" checkbox is checked on console when deleting backups.
+- Resolved the issue of backup objects getting deleted from cloud (S3/AZ) when **Delete object from Cloud** checkbox is checked on console when deleting backups.
 
 ### Components
 {: #compsmay2024}
