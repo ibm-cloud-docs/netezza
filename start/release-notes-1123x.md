@@ -37,7 +37,6 @@ subcollection: netezza
 {: #fmay2024}
 
 - Removed schema level backup from console UI (backup and restore tab).
-- Resolved the issue of backup objects getting deleted from cloud (S3/AZ) when **Delete object from Cloud** checkbox is checked on console when deleting backups.
 - Fixed the issue where backup objects were not being deleted from Cloud Storage (S3/AZ). 
   - Added a new checkbox, when selected, will delete backup objects from the cloud.
 
