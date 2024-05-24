@@ -32,7 +32,6 @@ subcollection: netezza
     - [SAML](/docs/netezza?topic=netezza-samliamauth)
     - [OIDC (Azure)](/docs/netezza?topic=netezza-oidciamauth)
 - Added nzstart support On Azure UI.
-- Improved UX for login. *Details to be added*
 
 #### Connectivity improvements
 {: #cimay2024}
