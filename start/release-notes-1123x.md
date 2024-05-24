@@ -33,11 +33,6 @@ subcollection: netezza
     - [OIDC (Azure)](/docs/netezza?topic=netezza-oidciamauth)
 - Added nzstart support On Azure UI.
 
-#### Connectivity improvements
-{: #cimay2024}
-
-*No inputs.*
-
 ### Fixes
 {: #fmay2024}
 
