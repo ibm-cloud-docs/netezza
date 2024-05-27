@@ -104,14 +104,14 @@ toc:
               - authentication/saml_overview.md
               - authentication/enable_saml_authentication.md
               - security/saml-docs.md
-              - security/usagenzclisamlauth.md
+            #   - security/usagenzclisamlauth.md
           - topicgroup:
               label: Setting OIDC authentication
               topics:
               - authentication/oidc_overview.md
               - authentication/enable_oidc_authentication.md
               - security/oidc-docs.md
-              - security/usagenzclioidcauth.md
+            #   - security/usagenzclioidcauth.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
