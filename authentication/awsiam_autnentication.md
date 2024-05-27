@@ -30,6 +30,16 @@ NPSaaS now supports AWS IAM authentication from NPS version 11.2.2.11 onwards. F
 Set your authentication method to AWS IAM with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
 {: shortdesc}
 
+## Before you begin
+{: #bub}
+
+Make sure AWS IAM user has following minimal permissions on AWS side:
+- ListAccessKeys
+- GetUser
+- ListGroupsForUser
+- ListMFADevices
+
+
 ## Enabling AWS IAM authentication
 {: #enabling_awsauthentication}
 
@@ -38,11 +48,6 @@ You can use two methods for enabling AWS IAM authentication. :
 - [From command-line.](/docs/netezza?topic=netezza-awsiamauth#awsiamprocedure)
 
 Enabling AWS IAM authentication only needs to be done once.
-Make sure AWS IAM user has following minimal permissions on AWS side:
-- ListAccessKeys
-- GetUser
-- ListGroupsForUser
-- ListMFADevices
 {: note}
 
 ### Enabling AWS IAM authentication through web console

@@ -27,11 +27,6 @@ subcollection: netezza
 After successful authentication from Cyclops and Identity Provider, you will get a JWT token on Cyclops GUI. You can use the JWT token to execute `nzcli` commands as follows:
 
  ```bash
-./nzcli --help
-```
-{: codeblock}
-
- ```bash
 ./nzcli nzcommand  -u username -pw  jwttoken -apiserver ip
 ```
 {: codeblock}
