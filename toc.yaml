@@ -135,14 +135,14 @@ toc:
       - topicgroup:
          label: Querying data from watsonx.data software as a service
          topics:
-         - data_lakehouse/data_lakehouse_overview_mcsp.md
-         - data_lakehouse/integrating_watsonx_mcsp.md
-         - data_lakehouse/querying_datalakehouse_mcsp.md
-         - data_lakehouse/ingesting_datalakehouse_mcsp.md
-         - data_lakehouse/merging_datalakehouse_mcsp.md
-         - data_lakehouse/watsonx_datasql_mcsp.md
-         - data_lakehouse/hms_npskeywords_mcsp.md
-         - data_lakehouse/watsonxdata_ki_mcspi.md
+         - data_lakehouse_mcsp/data_lakehouse_overview_mcsp.md
+         - data_lakehouse_mcsp/integrating_watsonx_mcsp.md
+         - data_lakehouse_mcsp/querying_datalakehouse_mcsp.md
+         - data_lakehouse_mcsp/ingesting_datalakehouse_mcsp.md
+         - data_lakehouse_mcsp/merging_datalakehouse_mcsp.md
+         - data_lakehouse_mcsp/watsonx_datasql_mcsp.md
+         - data_lakehouse_mcsp/hms_npskeywords_mcsp.md
+         - data_lakehouse_mcsp/watsonxdata_ki_mcspi.md
       - topicgroup:
          label: Time travel and historical data
          topics:
