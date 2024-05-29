@@ -22,12 +22,12 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Configuring OIDC authentication in IdP
+# Configuring Azure OIDC authentication in an external IdP
 {: #oidc-docs}
 
-Admin user can manage OIDC configurations from web console.
+Admin user can manage OIDC configurations from Netezza UI. To configure Azure OIDC on Netezza UI, `Client ID`, `Tenant ID`, and `Client Secret` are required. These details are available on Azure portal.
 
-## How to get `Client ID`, `Tenant ID`, `Client Secret`
+## How to get `Client ID`, `Tenant ID`, and `Client Secret`
 {: #htgctc}
 
 1. Login to the Azure Portal.

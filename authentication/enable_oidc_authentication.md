@@ -22,7 +22,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Enabling OIDC authentication
+# Enabling Azure OIDC authentication
 {: #enable_oidciamauth}
 
 Set your authentication method to `OIDC` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
