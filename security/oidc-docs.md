@@ -47,7 +47,7 @@ Ensure to copy the `Value`, not the `Secret ID`.
 ## Configure Azure OIDC details
 {: #couan}
 
-1. Login to Cyclops as a user who is part of the administrative group.
+1. Login to Netezza UI as a user who is part of the administrative group.
 2. Select `IdPconfiguration` topic.
 3. Enable `Azure OIDC` configuration.
 4. Add `Client ID`, `Tenant ID`, `Client Secret` and click the `Save` button.

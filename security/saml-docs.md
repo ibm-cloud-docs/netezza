@@ -20,11 +20,21 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
 # Configuring SAML authentication in IdP
 {: #saml-docs}
 
 Admin user can manage `SAML` configurations from web console.
+
+## Before you begin
+{: #bubsaml}
+
+- `IdP Metadata URL` and `EntityId` are required to setup SAML on Netezza UI.
+- Add `ACS url` and `SLO endpoint` on IdP.
+
+The following `SAML` configuration steps are generic. Users can follow similar steps depending on the choice of IdP.
+{: note}
 
 ## How to get `IdP Metadata URL` and `EntityId`
 {: #htg_params}
@@ -36,7 +46,7 @@ Admin user can manage `SAML` configurations from web console.
 ## Configure IdP details
 {: #config_saml}
 
-1. Login to Cyclops as a user who is part of the administrative group.
+1. Login to Netezza UI as a user who is part of the administrative group.
 2. Select `IdP configuration` topic.
 3. Enable `SAML` configuration.
 4. Add `IdP Metadata URL` and `EntityId`.
@@ -45,9 +55,9 @@ Admin user can manage `SAML` configurations from web console.
 ## Configure ACS url and SLO endpoint on IdP
 {: #config_acsurl}
 
-1. Login to Cyclops as a user who is part of the administrative group.
+1. Login to Netezza UI as a user who is part of the administrative group.
 1. Select `IdP configuration` topic.
-1. Copy ACS url and SLO endpoint from the `IdP configuration` page.
+1. Copy the `ACS url` and `SLO endpoint` from the `IdP configuration` page.
 {: #step3saml}
 
 1. Login to the IdP Portal.

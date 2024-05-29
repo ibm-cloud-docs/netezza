@@ -26,7 +26,7 @@ subcollection: netezza
 
 {{site.data.keyword.netezza_short}} on AWS now supports `SAML` (Security Assertion Markup Language). This allows for seamless integration with SSO (single sign-on) systems, providing users with a more secure and efficient authentication process. With `SAML` support, users can leverage centralized identity management, reduce password fatigue, and enhance overall security by utilizing their existing IdP (identity provider ) frameworks.
 
-- Using SAML-compliant IdP providers, user can authenticate into Netezza using the Cyclops UI.
+- Using SAML-compliant IdP providers, user can authenticate into Netezza using the Netezza UI.
 - If supported by the IdP and enabled by the administrator, `SAML` users can use MFA (Multi-factor authentication), which provides an additional layer of security.
 
 

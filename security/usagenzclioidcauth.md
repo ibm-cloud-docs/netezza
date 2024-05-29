@@ -24,7 +24,7 @@ subcollection: netezza
 
 # Usage of `nzcli` with OIDC authentication
 
-After successful authentication from Cyclops and Identity Provider, you will get a JWT token on Cyclops GUI. You can use the JWT token to execute `nzcli` commands as follows:
+After successful authentication from Netezza UI and Identity Provider, you will get a JWT token on Netezza UI GUI. You can use the JWT token to execute `nzcli` commands as follows:
 
  ```bash
 ./nzcli nzcommand  -u username -pw  jwttoken -apiserver ip
