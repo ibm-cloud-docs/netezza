@@ -22,25 +22,25 @@ subcollection: netezza
 {:note: .note}
 
 # Integrating {{site.data.keyword.netezza_short}} with {{site.data.keyword.lakehouse_short}}
-{: #integratenps_watsonx.data}
+{: #integratenps_watsonx.data_mcsp}
 
 You can integrate your {{site.data.keyword.netezza_full}} instance with {{site.data.keyword.lakehouse_short}}.
 
 ## Before you begin
-{: #prereqswatsonx.data}
+{: #prereqswatsonx.data_mcsp}
 
 Ensure that you obtained the IBM API key by following the steps:
 
 1. Log in to the IBM SaaS Console.
-1. Select the account that is associated with your subscription. The Subscriptions page opens.
-1. From the Subscriptions page, find the subscription for the instance that you want to add a service ID to. Then, click View subscription details.
-1. Click the instance where you want to add a service ID. The Instance details tab opens.
-1. Select the Service IDs tab and click Create service ID. The Create service ID window opens.
+1. Select the account that is associated with your subscription. The **Subscriptions** page opens.
+1. From the **Subscriptions** page, find the subscription for the instance that you want to add a service ID to. Then, click **View subscription details**.
+1. Click the instance where you want to add a service ID. The **Instance details** tab opens.
+1. Select the **Service IDs** tab and click **Create service ID**. The **Create service ID** window opens.
 1. In the window, enter a name and choose a role for your service ID.
-   - The Service admin role can view, create, update, and delete users, roles, and groups for an instance.
-   - The Service owner role can take the same actions as the Service admin.
-   - The Service user role can view the instance, but this role doesn't include permissions that are related to user management like adding more users.
-1. Click Create. The service ID is created and appears in the table on the Service IDs tab.
+   - The **Service admin** role can view, create, update, and delete users, roles, and groups for an instance.
+   - The **Service owner** role can take the same actions as the Service admin.
+   - The **Service user** role can view the instance, but this role doesn't include permissions that are related to user management like adding more users.
+1. Click **Create**. The service ID is created and appears in the table on the **Service IDs** tab.
 
 
 1. Click the **API keys** tab and click **Create**.
@@ -48,7 +48,7 @@ Ensure that you obtained the IBM API key by following the steps:
    You must name the API key as **ibmlhapikey**.
 
 ## Integrating {{site.data.keyword.netezza_short}} instance or remote client with {{site.data.keyword.lakehouse_short}} by using `nzcli`.
-{: #integratesteps_watsonx.data}
+{: #integratesteps_watsonx.data_mcsp}
 
 1. Download `nz` tool.
 
