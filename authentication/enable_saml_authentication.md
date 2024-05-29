@@ -41,14 +41,14 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML'
 
 
 You can use two methods for enabling SAML authentication:
-- [Through web console.](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc)
+- [Through Netezza UI.](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc)
 - [From command-line.](/docs/netezza?topic=netezza-samliamauth#samlmprocedure)
 
 
-## Setting SAML authentication with the web console
+## Setting SAML authentication with the Netezza UI
 {: #setting_saml_wc}
 
-1. Log in to the web console as a user who is part of an administrative group. See, [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
+1. Log in to the Netezza UI as a user who is part of an administrative group. See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).
 1. Go to the **Query editor**.
 1. Register a `SAML` external authentication system.
 

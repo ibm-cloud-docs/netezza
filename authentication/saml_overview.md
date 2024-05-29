@@ -20,6 +20,7 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
 # Overview
 {: #samloverview}
@@ -35,7 +36,5 @@ Follow the steps to setup `SAML` authentication:
 - [Configuring SAML authentication in IdP](/docs/netezza?topic=netezza-saml-docs).
 - [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
 
-## Limitation
-{: #saml_limitation}
-
-`SAML` does not support signed authentication. Support for signed authentication will be added in the upcoming release.
+In the current NPSaaS implementation of `SAML`, signed authentication is not supported. However, support for signed authentication will be introduced in a future NPSaaS release.
+{: note}

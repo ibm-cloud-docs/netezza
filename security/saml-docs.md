@@ -25,15 +25,9 @@ subcollection: netezza
 # Configuring SAML authentication in IdP
 {: #saml-docs}
 
-Admin user can manage `SAML` configurations from web console.
+Admin user can manage `SAML` configurations from Netezza UI. `IdP Metadata URL` and `EntityId` are required to setup SAML on Netezza UI. Update `ACS url` and `SLO endpoint` on IdP.
 
-## Before you begin
-{: #bubsaml}
-
-- `IdP Metadata URL` and `EntityId` are required to setup SAML on Netezza UI.
-- Add `ACS url` and `SLO endpoint` on IdP.
-
-The following `SAML` configuration steps are generic. Users can follow similar steps depending on the choice of IdP.
+The following `SAML` configuration steps are generic. Users can follow similar steps on respective IdP.
 {: note}
 
 ## How to get `IdP Metadata URL` and `EntityId`
@@ -42,24 +36,25 @@ The following `SAML` configuration steps are generic. Users can follow similar s
 1. Login to the IdP Portal.
 2. Navigate to your `SAML` application.
 3. In the application details, you can find `IdP Metadata URL` and `EntityId`.
+{: #step3samlhtg}
 
 ## Configure IdP details
 {: #config_saml}
 
 1. Login to Netezza UI as a user who is part of the administrative group.
-2. Select `IdP configuration` topic.
+2. Select `IdP configuration` topic from the left pane.
 3. Enable `SAML` configuration.
-4. Add `IdP Metadata URL` and `EntityId`.
+4. Add `IdP Metadata URL` and `EntityId` from [step 3](/docs/netezza?topic=netezza-saml-docs#step3samlhtg).
 
 
 ## Configure ACS url and SLO endpoint on IdP
 {: #config_acsurl}
 
 1. Login to Netezza UI as a user who is part of the administrative group.
-1. Select `IdP configuration` topic.
+1. Select `IdP configuration` topic from the left pane.
 1. Copy the `ACS url` and `SLO endpoint` from the `IdP configuration` page.
 {: #step3saml}
 
 1. Login to the IdP Portal.
 1. Navigate to your `SAML` application.
-1. Edit application configuration and add the ACS url and SLO endpoint from [step 3](/docs/netezza?topic=netezza-saml-docs#step3saml).
+1. Edit the application configuration and add the ACS url and SLO endpoint from [step 3](/docs/netezza?topic=netezza-saml-docs#step3saml).
