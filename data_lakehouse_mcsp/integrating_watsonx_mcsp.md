@@ -49,7 +49,7 @@ Ensure that you obtained the IBM API key by following the steps:
    {: note}
 1. Copy the API key from the window.
    
-## Integrating {{site.data.keyword.netezza_short}} instance or remote client with {{site.data.keyword.lakehouse_short}} by using `nzcli`.
+## Integrating {{site.data.keyword.netezza_short}} instance or remote client with {{site.data.keyword.lakehouse_short}} by using `nzcli`
 {: #integratesteps_watsonx.data_mcsp}
 
 1. Download `nz` tool.
