@@ -22,17 +22,17 @@ subcollection: netezza
 {:note: .note}
 
 # Merging and querying data from {{site.data.keyword.lakehouse_short}}
-{: #merging_watsonx.data}
+{: #merging_watsonx.data_mcsp}
 
 Learn how to query and merge data from a {{site.data.keyword.netezza_short}} and a data lake table.
 
 ## Before you begin
-{: #prereqsdlh3}
+{: #prereqsdlh3_mcsp}
 
 In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into {{site.data.keyword.lakehouse_short}} into an Apache Iceberg table in the Hive Metastore server (HMS).
 
 ## Run a cross database query with the table in the data lake database.
-{: #runcdqdlh}
+{: #runcdqdlh_mcsp}
 
 - To identify which year had the most passengers, run:
 

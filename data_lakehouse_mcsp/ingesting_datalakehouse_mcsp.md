@@ -23,17 +23,17 @@ subcollection: netezza
 {:note: .note}
 
 # Ingesting data from {{site.data.keyword.lakehouse_short}}
-{: #ingest_watsonx.data}
+{: #ingest_watsonx.data_mcsp}
 
 Learn how to ingest data into your local {{site.data.keyword.netezza_short}} table.
 
 ## Before you begin
-{: #prereqsdlh2}
+{: #prereqsdlh2_mcsp}
 
 In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into {{site.data.keyword.lakehouse_short}} into an Apache Iceberg table in the Hive Metastore server (HMS).
 
 ## 1. Connect to {{site.data.keyword.netezza_short}} database.
-{: #connect_dlh}
+{: #connect_dlh_mcsp}
 
 ```sql
 MYLAKE.TAXIDATA(ADMIN)=> \c localdb
@@ -43,7 +43,7 @@ MYLAKE.TAXIDATA(ADMIN)=> \c localdb
 You are now connected to **localdb** database.
 
 ## 2. Run a CTAS query with a cross database **select** on the data lake database.schema.table.
-{: #runctas_dlh}
+{: #runctas_dlh_mcsp}
 
 Example:
 

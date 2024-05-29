@@ -22,7 +22,7 @@ subcollection: netezza
 {:note: .note}
 
 # {{site.data.keyword.lakehouse_short}} known issues
-{: #watsonx.data_knownissues}
+{: #watsonx.data_knownissues_mcsp}
 
 You might experience the following issues while using {{site.data.keyword.lakehouse_short}} with {{site.data.keyword.netezza_short}}:
 

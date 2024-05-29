@@ -22,7 +22,7 @@ subcollection: netezza
 {:note: .note}
 
 # Schema names in Hive Metastore (HMS) that are NPS reserved keywords
-{: #hms_npskeywords.data}
+{: #hms_npskeywords.data_mcsp}
 
 If there are schema names in Hive Metastore that are NPS keywords, you cannot use those keywords as identifiers when using the schema in:
 

@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 
 # Overview
-{: #overview_watsonx.data}
+{: #overview_watsonx.data_mcsp}
 
 With {{site.data.keyword.netezza_full}} and {{site.data.keyword.lakehouse_short}} you can connect to the Hive Metastore (HMS) which is a data lake metastore server and query from Apache Iceberg tables that live on your data lake S3 object store.
 

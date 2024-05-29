@@ -24,15 +24,15 @@ subcollection: netezza
 {:note: .note}
 
 # Querying data from {{site.data.keyword.lakehouse_short}}
-{: #querying_watsonx.data}
+{: #querying_watsonx.data_mcsp}
 
 ## Before you begin
-{: #prereqsdlh1}
+{: #prereqsdlh1_mcsp}
 
 In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into {{site.data.keyword.lakehouse_short}} into an Apache Iceberg table in the Hive Metastore server (HMS).
 
 ## 1. Create a database by using the required `metastoreuri`.
-{: #create_database}
+{: #create_database_mcsp}
 
 External datasources allow an administrator to grant access to S3 without providing the keys directly to a user.
 
@@ -45,7 +45,7 @@ NOTICE:  589 tables from the datalake are available in MYLAKE
 {: codeblock}
 
 ## 2. Connect to the database.
-{: #connectdlh_database}
+{: #connectdlh_database_mcsp}
 
 ```sql
 LOCALDB.ADMIN(ADMIN)=> \c mylake
@@ -55,7 +55,7 @@ LOCALDB.ADMIN(ADMIN)=> \c mylake
 You are now connected to **mylake** database.
 
 ## 3. List the available schemas.
-{: #showschemadlh}
+{: #showschemadlh_mcsp}
 
 ```sql
 MYLAKE.NETEZZA_SCHEMA(ADMIN)=> show schema;
@@ -81,7 +81,7 @@ MYLAKE   | TEST                                       | ADMIN
 {: codeblock}
 
 ## 4. From your schemas list, set the schema you want to connect to.
-{: #setschdlh}
+{: #setschdlh_mcsp}
 
 ```sql
 MYLAKE.NETEZZA_SCHEMA(ADMIN)=> set schema taxidata;
@@ -92,7 +92,7 @@ SET SCHEMA
 You can also query your data by using a full path **SELECT * from mydb.myschema.mytable**.
 
 ## 5. List the available tables.
-{: #listtabledlh}
+{: #listtabledlh_mcsp}
 
 ```sql
 MYLAKE.TAXIDATA(ADMIN)=> show table;
@@ -111,7 +111,7 @@ MYLAKE   | TAXIDATA | YELLOW_TAXI_JANUARY_2021 | DATALAKE TABLE | ADMIN
 {: codeblock}
 
 ## 6. **Select * from** the required table.
-{: #selectdlh_table}
+{: #selectdlh_table_mcsp}
 
 ```sql
 MYLAKE.TAXIDATA(ADMIN)=> select * from YELLOW_TAXI_JANUARY_2021 limit 1;
