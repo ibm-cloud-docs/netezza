@@ -24,9 +24,9 @@ subcollection: netezza
 # Overview
 {: #oidcoverview}
 
-`Azure OIDC` support has been integrated into {{site.data.keyword.netezza_short}}, enabling seamless and secure user authentication using Azure Active Directory. This addition enhances the product's security features by allowing users to authenticate using their Azure credentials, thereby streamlining access.
+{{site.data.keyword.netezza_short}} on Azure now supports `Azure OIDC`, enabling seamless and secure user authentication using Azure Active Directory. This addition enhances the product's security features by allowing users to authenticate using their Azure credentials, thereby streamlining access.
 
 Follow the steps to setup `Azure OIDC` authentication:
 
-- [Enabling Azure OIDC authentication](/docs/netezza?topic=netezza-enable_oidciamauth).
 - [Configuring Azure OIDC authentication in IdP](/docs/netezza?topic=netezza-oidc-docs).
+- [Enabling Azure OIDC authentication](/docs/netezza?topic=netezza-enable_oidciamauth).
