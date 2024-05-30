@@ -141,6 +141,7 @@ toc:
          - data_lakehouse/watsonx_datasql.md
          - data_lakehouse/hms_npskeywords.md
          - data_lakehouse/watsonxdata_ki.md
+         - data_lakehouse/watsonxdata_timetravel.md
       - topicgroup:
          label: Time travel and historical data
          topics:
