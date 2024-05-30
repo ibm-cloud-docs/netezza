@@ -133,7 +133,7 @@ toc:
          - data_lakehouse/hms_npskeywords.md
          - data_lakehouse/watsonxdata_ki.md
       - topicgroup:
-         label: Querying data from watsonx.data software as a service
+         label: Querying data from watsonx.data Software as a Service
          topics:
          - data_lakehouse_mcsp/data_lakehouse_overview_mcsp.md
          - data_lakehouse_mcsp/integrating_watsonx_mcsp.md
