@@ -18,8 +18,11 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - start/release-notes.md
-    #   - start/release-notes-new.md
+      - topicgroup:
+          label: Release notes for NPSaaS
+          topics:
+          - start/release-notes-1123x.md
+          - start/release-notes.md
       - start/provisioning.md
       - topicgroup:
           label: Connecting to Netezza Performance Server with private and public endpoints
