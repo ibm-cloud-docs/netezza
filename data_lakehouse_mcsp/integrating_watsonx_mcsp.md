@@ -48,9 +48,7 @@ Ensure that you obtained the IBM API key by following the steps:
 1. From the **Service ID** page, click **Generate key**.
 1. In the **Generate API key** window, enter an API key name and the expiration date and click **Generate key**. 
 
-   You must name the API key as `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CREATED>`. The `ID_OF_THE_NEW_SERVICE_ID_CREATED` can be obtained from the MCSP SaaS console. 
-
-   Example: `ibmlhapikey_Serviceid-b8fd5bbf-a95e-4664-85f7-282047433195`
+   You must name the API key as `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CREATED>`. The `ID_OF_THE_NEW_SERVICE_ID_CREATED` can be obtained from the MCSP SaaS console. For example: `ibmlhapikey_Serviceid-b8fd5bbf-a95e-4664-85f7-282047433195`
    {: note}
 1. Copy the API key from the window.
    
