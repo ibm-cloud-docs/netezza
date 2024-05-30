@@ -33,6 +33,7 @@ subcollection: netezza
     - [OIDC (Azure)](/docs/netezza?topic=netezza-oidciamauth)
 - Introduced `nc-start` configuration on Azure which provides entry-level configuration for BI and UAT workloads. 
 - A new checkbox option has been added to the console for deleting backups. When seleceted this option will also remove the backup from the underlying cloud object store (S3/Azure blob).
+- Introduced capability for performing time travel in watsonx.data.
 
 ### Components
 {: #compsmay2024}
