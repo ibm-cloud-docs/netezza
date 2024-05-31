@@ -24,119 +24,19 @@ subcollection: netezza
 
 # Usage of `nzcli` with OIDC authentication
 
+After successful authentication from Netezza UI and Identity Provider, you will get a JWT token on Netezza UI GUI. You can use the JWT token to execute `nzcli` commands as follows:
+
  ```bash
-./nzcli --help
+./nzcli nzcommand  -u username -pw  jwttoken -apiserver ip
 ```
 {: codeblock}
 
- ```bash
-./nzcli nzcommand  -u admin -pw  jwttoken -apiserver ip
-```
-{: codeblock}
-
-After successful authentication from Cyclops and Identity Provider, you will get a JWT token on Cyclops GUI. You can use the JWT token to execute `nzcli` commands as follows:
 
 ```bash
 ./nzcli nzcommand  -u OIDCUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X
 ```
 {: codeblock}
 
-Similarly, you can use many `nzcli` commands.
+
+This JWT token is valid for 15 minutes.
 {: note}
-
-Following is list of `nzcommand`:
-
-```bash
-nzsystem showRegistry
-```
-{: codeblock}
-
-```bash
-nzsystem showIssues
-```
-{: codeblock}
-
-```bash
-nzstate
-```
-{: codeblock}
-
-```bash
-nzsystem showRev
-```
-{: codeblock}
-
-```bash
-nzsystem showRev -build
-```
-{: codeblock}
-
-```bash
-nzsystem showRev -label
-```
-{: codeblock}
-
-```bash
-nzstats
-```
-{: codeblock}
-
-```bash
-nzds show
-```
-{: codeblock}
-
-```bash
-nzds show -regenstatus
-```
-{: codeblock}
-
-```bash
-nzds show -issues
-```
-{: codeblock}
-
-```bash
-nzhw show
-```
-{: codeblock}
-
-```bash
-nzhw listTypes
-```
-{: codeblock}
-
-```bash
-nzhw show -issues -detail
-```
-{: codeblock}
-
-```bash
-nzhw show -type spu
-```
-{: codeblock}
-
-```bash
-nzsession show
-```
-{: codeblock}
-
-```bash
-nzrev -dirSuffix
-```
-{: codeblock}
-
-```bash
-nzrev -rev
-```
-{: codeblock}
-
-```bash
-nzrev -shortLabel
-```
-{: codeblock}
-
-```bash
-nzrev -buildType
-```
-{: codeblock}
