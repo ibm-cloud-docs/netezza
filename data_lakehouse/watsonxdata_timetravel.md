@@ -45,7 +45,6 @@ Following constraints will be enforced:
    - As of <timestamp value> can be an expression but it eventually needs to be evaluated to a constant value.
    - As of <timetamp value> cannot refer attributes or subqueries.
    - As of <timestamp value> can not be before the time associated with the very first available snapshot id of the table.  
-{: note}
 
 ## Querying data for a specific time with `BEFORE`
 {: #querying_data_tt_before}
