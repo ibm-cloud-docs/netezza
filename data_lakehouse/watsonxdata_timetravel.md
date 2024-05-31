@@ -31,7 +31,7 @@ Time-related data is core to most application databases. With the {{site.data.ke
 By using {{site.data.keyword.lakehouse_short}} time travel, you can access historical data (data that was changed) at past points in time. 
 
 
-# Querying data for a specific time with `AS OF`
+## Querying data for a specific time with `AS OF`
 {: #querying_data_tt_asof}
 
 ```sql
@@ -45,8 +45,9 @@ Following constraints will be enforced:
    - As of <timestamp value> can be an expression but it eventually needs to be evaluated to a constant value.
    - As of <timetamp value> cannot refer attributes or subqueries.
    - As of <timestamp value> can not be before the time associated with the very first available snapshot id of the table.  
+{: note}
 
-# Querying data for a specific time with `BEFORE`
+## Querying data for a specific time with `BEFORE`
 {: #querying_data_tt_before}
 
 ```sql
@@ -57,7 +58,7 @@ SELECT product_id, product_name, product_price FROM product FOR SYSTEM_TIME BEFO
 The BEFORE subclause expect timestamp value and it returns the state of the table in terms of data before the given timestamp.
 {: note}
 
-# Querying data for a specific snapshot with `SYSTEM_VERSION`
+## Querying data for a specific snapshot with `SYSTEM_VERSION`
 {: #querying_data_tt_system_version}
 
 ```sql
