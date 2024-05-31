@@ -24,11 +24,12 @@ subcollection: netezza
 {:note: .note}
 
 # Time travel for {{site.data.keyword.lakehouse_short}}
-{: #timetravel_watsonx.data}
+{: #timetravel_watsonxdata}
 
 Time-related data is core to most application databases. With the {{site.data.keyword.lakehouse_short}} time travel feature that is available starting from version 11.2.3, you can retrieve and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data.
 
-By using {{site.data.keyword.lakehouse_short}} time travel, you can access historical data (data that was changed) at past points in time.
+By using {{site.data.keyword.lakehouse_short}} time travel, you can access historical data (data that was changed) at past points in time. 
+
 
 # Querying data for a specific time with `AS OF`
 {: #querying_data_tt_asof}
