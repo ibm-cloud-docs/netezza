@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-07-21"
+  years: 2024
+lastupdated: "2024-05-31"
 
 keywords: netezza data lakehouse, data lake, querying data, connecting to a metastore, netezza watsonx.data
 subcollection: netezza
@@ -33,20 +33,25 @@ By using {{site.data.keyword.lakehouse_short}} time travel, you can access histo
 # Querying data for a specific time with `AS OF`
 {: #querying_data_tt_asof}
 
-SELECT product_id, product_name FROM product for SYSTEM_TIME AS OF "2023-10-23 10:00:00". 
+```sql
+SELECT product_id, product_name FROM product for SYSTEM_TIME AS OF "2023-10-23 10:00:00"
+```
+{: codeblock}
 
 Following constraints will be enforced:
    - Only AS OF/BEFORE  subclause of system_time will be supported for {{site.data.keyword.lakehouse_short}} table of Iceberg type format.
    - As of <timestamp value> can only be of timestamp type or promotable to timestamp value.
    - As of <timestamp value> can be an expression but it eventually needs to be evaluated to a constant value.
    - As of <timetamp value> cannot refer attributes or subqueries.
-   - As of <timestamp value> can not be before the time associated with the very first available snapshot id of the table.
-{: note}   
+   - As of <timestamp value> can not be before the time associated with the very first available snapshot id of the table.  
 
 # Querying data for a specific time with `BEFORE`
 {: #querying_data_tt_before}
 
-SELECT product_id, product_name, product_price FROM product FOR SYSTEM_TIME BEFORE '2023-12-01 12:00:00'.
+```sql
+SELECT product_id, product_name, product_price FROM product FOR SYSTEM_TIME BEFORE '2023-12-01 12:00:00'
+```
+{: codeblock}
 
 The BEFORE subclause expect timestamp value and it returns the state of the table in terms of data before the given timestamp.
 {: note}
@@ -54,7 +59,10 @@ The BEFORE subclause expect timestamp value and it returns the state of the tabl
 # Querying data for a specific snapshot with `SYSTEM_VERSION`
 {: #querying_data_tt_system_version}
 
-SELECT product_id, product_name, product_price FROM product FOR SYSTEM_VERSION AS OF 1887396386633333444;
+```sql
+SELECT product_id, product_name, product_price FROM product FOR SYSTEM_VERSION AS OF 1887396386633333444
+```
+{: codeblock}
 
 With SYSTEM_VERSION AS OF subclause, one can provide the snapshot id to request the state of the table based on the given snapshot id. This time travel query using SYSTEM_VERSION clause is only allowed on watsonx.data tables of Iceberg format.
 {: note}
