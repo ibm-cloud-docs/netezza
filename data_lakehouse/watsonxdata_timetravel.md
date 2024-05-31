@@ -33,7 +33,7 @@ By using {{site.data.keyword.lakehouse_short}} time travel, you can access histo
 # Querying data for a specific time with AS OF
 {: #querying_data_tt_asof}
 
-1. SELECT product_id, product_name FROM product for SYSTEM_TIME AS OF "2023-10-23 10:00:00". 
+SELECT product_id, product_name FROM product for SYSTEM_TIME AS OF "2023-10-23 10:00:00". 
 
 Following constraints will be enforced:
    - Only AS OF/BEFORE  subclause of system_time will be supported for {{site.data.keyword.lakehouse_short}} table of Iceberg type format.
@@ -41,7 +41,7 @@ Following constraints will be enforced:
    - As of <timestamp value> can be an expression but it eventually needs to be evaluated to a constant value.
    - As of <timetamp value> cannot refer attributes or subqueries.
    - As of <timestamp value> can not be before the time associated with the very first available snapshot id of the table.
-{: #note}
+{: note}
 
 # Querying data for a specific time with BEFORE
 {: #querying_data_tt_before}
@@ -49,7 +49,7 @@ Following constraints will be enforced:
 SELECT product_id, product_name, product_price FROM product FOR SYSTEM_TIME BEFORE '2023-12-01 12:00:00'.
 
 The BEFORE subclause expect timestamp value and it returns the state of the table in terms of data before the given timestamp.
-{: #note}
+{: note}
 
 # Querying data for a specific snapshot with SYSTEM_VERSION
 {: #querying_data_tt_system_version}
@@ -57,7 +57,7 @@ The BEFORE subclause expect timestamp value and it returns the state of the tabl
 SELECT product_id, product_name, product_price FROM product FOR SYSTEM_VERSION AS OF 1887396386633333444;
 
 With SYSTEM_VERSION AS OF subclause, one can provide the snapshot id to request the state of the table based on the given snapshot id. This time travel query using SYSTEM_VERSION clause is only allowed on watsonx.data tables of Iceberg format.
-{: #note}
+{: note}
 
 ### SHOW SNAPSHOTS FOR <table-name>
 
@@ -82,7 +82,7 @@ SHOW SNAPSHOTS FOR PRODUCT:
 {: codeblock}
 
 This show snapshots statement will list out all the snaphosts associated with a given watsonx.data table. This Information can be useful for doing Time Travel queries using the AS OF timestamp or AS OF snapshot id. Also this show command is only allowed on watsonx.data tables of Iceberg format.
-{: #note}
+{: note}
 
 ## Reference
 
