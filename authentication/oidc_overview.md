@@ -28,5 +28,5 @@ subcollection: netezza
 
 Follow the steps to setup `Azure OIDC` authentication:
 
-- [Configuring Azure OIDC authentication in IdP](/docs/netezza?topic=netezza-oidc-docs).
 - [Enabling Azure OIDC authentication](/docs/netezza?topic=netezza-enable_oidciamauth).
+- [Configuring Azure OIDC authentication in IdP](/docs/netezza?topic=netezza-oidc-docs).
