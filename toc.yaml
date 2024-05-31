@@ -108,14 +108,14 @@ toc:
               - authentication/saml_overview.md
               - security/saml-docs.md
               - authentication/enable_saml_authentication.md
-              - security/usagenzclisamlauth.md
+            #   - security/usagenzclisamlauth.md
           - topicgroup:
               label: Setting Azure OIDC authentication
               topics:
               - authentication/oidc_overview.md
               - security/oidc-docs.md
               - authentication/enable_oidc_authentication.md
-              - security/usagenzclioidcauth.md
+            #   - security/usagenzclioidcauth.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
