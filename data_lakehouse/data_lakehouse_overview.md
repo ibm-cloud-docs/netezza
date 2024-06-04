@@ -28,7 +28,7 @@ With {{site.data.keyword.netezza_full}} and {{site.data.keyword.lakehouse_short}
 In technology preview:
 
 - You must use Apache Iceberg tables with the `parquet` file format.
-- Your queries are limited to **SELECT** operations.
+- **SELECT** and **INSERT** operations are supported.
 - Iceberg tables cannot be read if they were altered and underwent Iceberg schema evolution.
 - LZ4 data compression format is supported.
 - **NETEZZA_SCHEMA** is the default schema when you connect to a data lake database. It is a regular schema which contains Netezza objects like tables, external tables, and sequences. **NETEZZA_SCHEMA**, **DEFINITON_SCHEMA**, and **INFORMATION_SCHEMA** schema names are all reserved, and schemas of those names in the metastore are not exposed to {{site.data.keyword.netezza_short}} users.
