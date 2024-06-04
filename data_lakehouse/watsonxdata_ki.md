@@ -26,10 +26,6 @@ subcollection: netezza
 
 You might experience the following issues while using {{site.data.keyword.lakehouse_short}} with {{site.data.keyword.netezza_short}}:
 
-- Boolean fields written with RLE encoding cannot be read and result in error.
-
-`ERROR:  IOError: Unknown encoding type. : Encountered a problem during batch read:`
-
 - **INSERT** is only supported for unpartitioned tables. You will not be able to insert into partitioned iceberg tables created by other engines.
 
 - **CTAS (CREATE TABLE AS SELECT)** within a single SQL statement is not supported when the target table is an iceberg table.
