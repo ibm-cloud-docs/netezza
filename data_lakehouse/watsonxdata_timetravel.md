@@ -23,12 +23,12 @@ subcollection: netezza
 {:tip: .tip}
 {:note: .note}
 
-# Time travel for {{site.data.keyword.lakehouse_short}}
+# Time travel for Iceberg table
 {: #timetravel_watsonxdata}
 
 Time-related data is core to most application databases. With the {{site.data.keyword.lakehouse_short}} time travel feature that is available starting from version 11.2.3, you can retrieve and analyze historical data without having to develop additional application logic such as history tables. This powerful tool comes in handy when you want to track the history of data changes or reconstruct your data.
 
-By using {{site.data.keyword.lakehouse_short}} time travel, you can access historical data (data that was changed) at past points in time. 
+By using {{site.data.keyword.lakehouse_short}} time travel, you can access historical data (data that was changed) at past points in time.
 
 
 ## Querying data for a specific time with `AS OF`
@@ -44,7 +44,7 @@ Following constraints will be enforced:
    - As of <timestamp value> can only be of timestamp type or promotable to timestamp value.
    - As of <timestamp value> can be an expression but it eventually needs to be evaluated to a constant value.
    - As of <timetamp value> cannot refer attributes or subqueries.
-   - As of <timestamp value> can not be before the time associated with the very first available snapshot id of the table.  
+   - As of <timestamp value> can not be before the time associated with the very first available snapshot id of the table.
 
 ## Querying data for a specific time with `BEFORE`
 {: #querying_data_tt_before}
@@ -90,7 +90,7 @@ SHOW SNAPSHOTS FOR PRODUCT:
 ```
 {: codeblock}
 
-This show snapshots statement will list out all the snaphosts associated with a given watsonx.data table. This Information can be useful for doing Time Travel queries using the AS OF timestamp or AS OF snapshot id. Also this show command is only allowed on watsonx.data tables of Iceberg format.
+This show snapshots statement will list out all the snaphosts associated with a given iceberg table. This Information can be useful for doing Time Travel queries using the AS OF timestamp or AS OF snapshot id. Also this show command is only allowed on watsonx.data tables of Iceberg format.
 {: note}
 
 ## Reference
