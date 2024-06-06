@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# {{site.data.keyword.lakehouse_short}} known issues
+# Known issues
 {: #watsonx.data_knownissues}
 
 You might experience the following issues while using {{site.data.keyword.lakehouse_short}} with {{site.data.keyword.netezza_short}}:

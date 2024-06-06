@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# {{site.data.keyword.lakehouse_short}} SQL commands
+# Supported SQL commands
 {: #sqlcommands_watsonx.data}
 
 With 11.2.2.9 release, the following SQL commands and functionalities are supported with {{site.data.keyword.lakehouse_short}}.
