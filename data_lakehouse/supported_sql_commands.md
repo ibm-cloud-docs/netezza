@@ -24,7 +24,7 @@ subcollection: netezza
 # Supported SQL commands
 {: #sqlcommands_watsonx.data}
 
-With 11.2.2.9 release, the following SQL commands and functionalities are supported with {{site.data.keyword.lakehouse_short}}.
+With 11.2.2.9 release, the following SQL commands and functionalities are supported with lakehouse database/tables.
 For more information, see:
 
 - [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
@@ -37,7 +37,7 @@ For more information, see:
 
 The following functionalities are not supported:
 
-- Creation of {{site.data.keyword.lakehouse_short}} native objects (for example materialized views and sequences) in schemas other than NETEZZA_SCHEMA
+- Creation of lakehouse native objects (for example materialized views and sequences) in schemas other than NETEZZA_SCHEMA
 - Queries which update the contents of tables (Insert, Update, Merge, Truncate)
 - Queries which create, alter or drop tables and schemas
 - Accessing data lake tables that were created by using LZ4 compression format
