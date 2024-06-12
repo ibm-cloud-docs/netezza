@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-06-12"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -32,7 +32,7 @@ subcollection: netezza
     - [SAML](/docs/netezza?topic=netezza-samliamauth)
     - [OIDC (Azure)](/docs/netezza?topic=netezza-oidciamauth)
 - Introduced `nc-start` configuration on Azure which provides entry-level configuration for BI and UAT workloads. 
-- A new checkbox option has been added to the console for deleting backups. When seleceted this option will also remove the backup from the underlying cloud object store (S3/Azure blob).
+- A new checkbox option has been added to the console for deleting backups. When selected this option will also remove the backup from the underlying cloud object store (S3/Azure blob).
 - Introduced capability for performing time travel in watsonx.data. For details, see [Time travel for {{site.data.keyword.lakehouse_short}}](/docs/netezza?topic=netezza-timetravel_watsonxdata).
 
 ### Components
