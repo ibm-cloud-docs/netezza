@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2024-02-13"
+  years:  2024
+lastupdated: "2024-05-23"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -20,80 +20,41 @@ subcollection: netezza
 {:download: .download}
 {:important: .important}
 {:caption: .caption}
+{:note: .note}
 
-# Managing SAML IDP configuration for {{site.data.keyword.netezza_short}}
+# Configuring SAML authentication in IdP
 {: #saml-docs}
-Set the following configurations for Cyclops endpoints on IDP:
-{: shortdesc}
 
- ```bash
-"service_provider_slo_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/samlsloresponse?crn=<crn_of_namespace>"
-```
-{: codeblock}
+Admin user can manage `SAML` configurations from Netezza UI. `IdP Metadata URL` and `EntityId` are required to setup SAML on Netezza UI. Update `ACS url` and `SLO endpoint` on IdP.
 
- ```bash
-"assertion_consumer_service_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/samlacsendpoint?crn=<crn_of_namespace>"
-```
-{: codeblock}
+The following `SAML` configuration steps are generic. Users can follow similar steps on respective IdP.
+{: note}
 
-`/ips/ssl-secret/server.pem` certificate must be configured on IDP.
+## How to get `IdP Metadata URL` and `EntityId`
+{: #htg_params}
 
-Admin users can configure the following SAML configurations by using Cyclops:
+1. Login to the IdP Portal.
+2. Navigate to your `SAML` application.
+3. In the application details, you can find `IdP Metadata URL` and `EntityId`.
+{: #step3samlhtg}
 
- ```bash
-//SAML Configuration
-     "service_provider_entity_id": "http://netezza.com/saml/acs/example"
-     "service_provider_private_key": "/ips/ssl-secret/server.key"
-     "service_provider_certificate": "/ips/ssl-secret/server.pem"
+## Configure IdP details
+{: #config_saml}
 
-//Below parameters required to be configured for SAML SSO
-     "idp_metadata_url": "https://auth.pingone.asia/793adfb9-e7c9-4e80-a1a2-335f27066ffe/saml20/metadata/caf77459-5b2b-400d-bcb1-7b71f85d25c1"
-     "service_provider_slo_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/samlsloresponse?crn=<crn_of_namespace>"
-     "assertion_consumer_service_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/samlacsendpoint?crn=<crn_of_namespace>"
+1. Login to Netezza UI as a user who is part of the administrative group.
+2. Select `IdP configuration` topic from the left pane.
+3. Enable `SAML` configuration.
+4. Add `IdP Metadata URL` and `EntityId` from [step 3](/docs/netezza?topic=netezza-saml-docs#step3samlhtg).
 
-//Optional parameters for SAML, If not configured default values would be used
-//"force_authn": false
-//"is_passive": false
-//"canonicalizer_id": "http://www.w3.org/2001/10/xml-exc-c14n#"
-//This value is required for ADFS
-```
-{: codeblock}
 
-## Steps to get SAML `slo` and `acs` URL from NPS
+## Configure ACS url and SLO endpoint on IdP
+{: #config_acsurl}
 
-1. Execute the following command from `k8s` prompt:
+1. Login to Netezza UI as a user who is part of the administrative group.
+1. Select `IdP configuration` topic from the left pane.
+1. Copy the `ACS url` and `SLO endpoint` from the `IdP configuration` page.
+{: #step3saml}
 
-    ```bash
-    #k get dns -n ibm-nz-cyclops
-    ```
-    {: codeblock}
-
-1. From the following output, you can form the URL as `HOSTNAME.DOMAIN`.
-
-   | NAME | HOSTNAME | DOMAIN | RECORD TYPE |
-   | :----------- | :----------- | :----------- | :----------- |
-   | **console-public-dns** | **console-nz-dev-eks-cluster.us-east** | `data-warehouse.test.cloud.ibm.com` | **CNAME** |
-
-   URL:
-
-   ```bash
-   console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com
-   ```
-   {: codeblock}
-
-1. For generating a URL specific to the namespace, add the CRN number as shown:
-
-   ```bash
-   https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/#/?crn=<crn_of_namespace>
-   ```
-   {: codeblock}
-
-   ```bash
-   "service_provider_slo_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/samlsloresponse?crn=<crn_of_namespace>"
-   ```
-   {: codeblock}
-
-   ```bash
-   "assertion_consumer_service_url": "https://console-nz-dev-eks-cluster.us-east.data-warehouse.test.cloud.ibm.com/v1/samlacsendpoint?crn=<crn_of_namespace>"
-   ```
-   {: codeblock}
+1. Login to the IdP Portal.
+1. Navigate to your `SAML` application.
+1. Edit the application configuration and add the ACS url and SLO endpoint from [step 3](/docs/netezza?topic=netezza-saml-docs#step3saml).

@@ -27,7 +27,7 @@ subcollection: netezza
 {: #awsiam-docs}
 
 ## AWS IAM `nziamops` user
-An AWS IAM ops user (`nziamops`) must be created in your AWS account if Cyclops is configured to authenticate by using `nziamops` user. This is a fallback mechanism for authentication if the default mechanism does not work. Update the IAM credentials of the `nziamops` user by using the Cyclops UI.
+An AWS IAM ops user (`nziamops`) must be created in your AWS account if Netezza UI is configured to authenticate by using `nziamops` user. This is a fallback mechanism for authentication if the default mechanism does not work. Update the IAM credentials of the `nziamops` user by using the Netezza UI.
 The `nziamops` user executes AWS APIs to fetch IAM user details like the access key ID and MFA device during the authentication process.
 
 ### IAM role `NzCrossAccountRole` and trust relationship

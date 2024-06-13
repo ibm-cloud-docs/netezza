@@ -43,7 +43,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
 ## Setting IBM IAM authentication with the web console
 {: #setting_ibmiam_wc}
 
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin`.
 1. Go to the **Query editor**.
 1. Register an `IBM IAM` external authentication system.
    Specify the `PRODUCTION` environment type.
@@ -63,7 +63,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
 ## Setting IBM IAM authentication with the command-line
 {: #ibmiamprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin` user.
+1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin`.
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use the [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 

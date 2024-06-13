@@ -45,7 +45,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
 ## Setting Azure AD authentication with the web console
 {: #setting_azuread_wc}
 
-1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin` user.
+1. [Log in to the web console](/docs/netezza?topic=netezza-getstarted-console) as an `admin`.
 1. Go to the **Query editor**.
 1. Register an `Azure AD` external authentication system.
    Specify the `clientid` and `tenantid` parameters.
@@ -57,8 +57,8 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
     {: codeblock}
 
 1. Create a user or users with the external authentication method set to `AzureAD` as desribed in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
-1. Verify whether the user was created successfully.  
-   
+1. Verify whether the user was created successfully.
+
    1. Go to **Users and groups > Users**.
    1. Locate the user.
    1. Check the **Authentication type** section for the user.
@@ -66,11 +66,11 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
 ## Setting Azure AD authentication with the command-line
 {: #azureadprocedure}
 
-1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin` user.  
+1. [Connect to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview) as an `admin`.
 
    In the example, the ['nzsql' command](https://www.ibm.com/docs/en/netezza?topic=anpssbun-log-2) is used. You can also use the [the ODBC or JDBC drivers](https://www.ibm.com/docs/en/netezza?topic=dls-overview-odbc-jdbc-ole-db-net-go-driver-3).
 
-        ```sql
+    ```sql
     nzsql -host <nps_host_ip> -u admin -pw XXXXX
     ```
     {: codeblock}
@@ -80,7 +80,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
    | user           | Specifies the user name.      |
    | password       | Specifies the password for the user. |
-   
+
    Example:
 
     ```sql
@@ -90,12 +90,12 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
            \? for help on internal slash commands
            \g or terminate with semicolon to execute query
            \q to quit
-           
-    SYSTEM.ADMIN(ADMIN)=> 
+
+    SYSTEM.ADMIN(ADMIN)=>
     ```
     {: codeblock}
 
-1. Register an `AzureAD` external authentication system.  
+1. Register an `AzureAD` external authentication system.
    Specify the `clientid` and `tenantid` parameters.
 
     ```sql
@@ -138,4 +138,3 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'AzureAD' with clientid 'AZURE CLIENT ID
     SYSTEM.ADMIN(xyz@example.example.com)=>
     ```
     {: codeblock}
-

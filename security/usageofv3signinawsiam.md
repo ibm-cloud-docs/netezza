@@ -45,7 +45,7 @@ curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/j
 ```
 {: codeblock}
 
-After successful authentication of AWSIAM user on either Cyclops or v3/signin REST API, you will get a JWT token on Cyclops GUI or on REST API response. You can use this JWT token to execute `nzcli` commands as follows.
+After successful authentication of AWSIAM user on either Netezza UI or v3/signin REST API, you will get a JWT token on Netezza UI GUI or on REST API response. You can use this JWT token to execute `nzcli` commands as follows.
 
 ```bash
 ./nzcli nzcommand -u AWSUSER -pw  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -apiserver X.X.X.X

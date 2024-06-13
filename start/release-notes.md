@@ -19,7 +19,7 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Release notes for {{site.data.keyword.netezza_short}}
+# 11.2.2.x
 {: #my-service-relnotes}
 
 ## 11.2.2.11 - April 30, 2024

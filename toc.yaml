@@ -18,7 +18,11 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - start/release-notes.md
+      - topicgroup:
+          label: Release notes for NPSaaS
+          topics:
+          - start/release-notes-1123x.md
+          - start/release-notes.md
       - start/provisioning.md
       - topicgroup:
           label: Connecting to Netezza Performance Server with private and public endpoints
@@ -101,10 +105,17 @@ toc:
           - topicgroup:
               label: Setting SAML authentication
               topics:
-              - authentication/saml_authentication.md
+              - authentication/saml_overview.md
+              - authentication/enable_saml_authentication.md
               - security/saml-docs.md
-              - security/usagenzclisamlauth.md
-              - security/usagev3signinsaml.md
+            #   - security/usagenzclisamlauth.md
+          - topicgroup:
+              label: Setting Azure OIDC authentication
+              topics:
+              - authentication/oidc_overview.md
+              - authentication/enable_oidc_authentication.md
+              - security/oidc-docs.md
+            #   - security/usagenzclioidcauth.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
@@ -129,9 +140,10 @@ toc:
          - data_lakehouse/querying_datalakehouse.md
          - data_lakehouse/ingesting_datalakehouse.md
          - data_lakehouse/merging_datalakehouse.md
-         - data_lakehouse/watsonx_datasql.md
+         - data_lakehouse/supported_sql_commands.md
          - data_lakehouse/hms_npskeywords.md
          - data_lakehouse/watsonxdata_ki.md
+         - data_lakehouse/watsonxdata_timetravel.md
       - topicgroup:
          label: Querying data from watsonx.data Software as a Service
          topics:
