@@ -22,6 +22,19 @@ subcollection: netezza
 # 11.2.3.x
 {: #my-service-relnotes1123x}
 
+## 11.2.3.1 - July 15, 2024
+{: #jul2024}
+
+### New features and enhancements
+{: #nfjul2024}
+
+
+### Components
+{: #compsjul2024}
+
+- {{site.data.keyword.netezza_short}} 11.2.3.1
+- Web console 4.0.3.2
+
 ## 11.2.3.0 - May 29, 2024
 {: #may2024}
 
@@ -39,18 +52,4 @@ subcollection: netezza
 {: #compsmay2024}
 
 - {{site.data.keyword.netezza_short}} 11.2.3
-- Web console 4.0.3.2
-
-
-## 11.2.3.1 - July 15, 2024
-{: #jul2024}
-
-### New features and enhancements
-{: #nfjul2024}
-
-
-### Components
-{: #compsjul2024}
-
-- {{site.data.keyword.netezza_short}} 11.2.3.1
 - Web console 4.0.3.2
