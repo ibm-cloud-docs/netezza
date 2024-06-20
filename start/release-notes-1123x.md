@@ -22,6 +22,14 @@ subcollection: netezza
 # 11.2.3.x
 {: #my-service-relnotes1123x}
 
+## 11.2.3.0 IF 1 - June 20, 2024
+{: #june2024}
+
+### Fixes
+{: #fjun2024}
+
+- Fixed the incorrect result issue when table DDL has `CHAR`, `VARCHAR`, `NCHAR`, and `NVARCHAR` columns with organize `ON` clause.
+
 ## 11.2.3.0 - May 29, 2024
 {: #may2024}
 
