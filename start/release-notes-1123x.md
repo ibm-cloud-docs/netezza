@@ -34,7 +34,7 @@ subcollection: netezza
 ### Fixes
 {: #fjun2024}
 
-- Fixed the incorrect result issue when table DDL has `CHAR`, `VARCHAR`, `NCHAR`, and `NVARCHAR` columns with organize `ON` clause.
+- Fixed the incorrect result issue with restrictions on `CHAR`/`VARCHAR`/`NCHAR`/`NVARCHAR` columns when a table is organized on those columns.
 
 ## 11.2.3.0 - May 29, 2024
 {: #may2024}
