@@ -34,7 +34,7 @@ subcollection: netezza
 ### Fixes
 {: #fjun2024}
 
-- Fixed the incorrect result issue with restrictions on `CHAR`/`VARCHAR`/`NCHAR`/`NVARCHAR` columns when a table is organized on those columns.
+- Fixed the incorrect result issue with restrictions on `CHAR`/`VARCHAR`/`NCHAR`/`NVARCHAR` columns when a clustered table has an organizing column of one of these types.
 
 ## 11.2.3.0 - May 29, 2024
 {: #may2024}
