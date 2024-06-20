@@ -28,6 +28,8 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfjul2024}
 
+- Provision to copy/download JWT token after login to console for `SAML` and `OIDC` user.
+
 
 ### Components
 {: #compsjul2024}
