@@ -29,12 +29,11 @@ subcollection: netezza
 {: #nfjul2024}
 
 - Added JWT token on the **Administration -> tools** tab and provision to copy/download JWT token after login to console for `SAML` and `OIDC` user.
-- Added support for lakehouse connections, databases, and schemas on console for `AWS` platform.
-- Introduced **Lakehouse connections** tab **Lakehouse connections** under **Administration** for creation of lakehouse connections, databases, and tables.
+- Added support for lakehouse connections, databases, and schemas on the console for the `AWS` platform under Administration, and introduced a **Lakehouse Connections** tab for creating lakehouse connections, databases, and tables.
 - Introduced `CRUD` operations in the **Query editor** for lakehouse tables.
 - Introduced restore database functionality to backup and restore page.
 - Enabled `SAML` and `OIDC` for `AWS` and `Azure` platforms.
-- Moved bucket creation from **Backup and restore** page to **Administration**. Now you can create buckets parallelly for `BNR` and lakehouse datasource.
+- Added `Destinations` tab in **Administration**. Now, you can create buckets parallelly for `BNR` and `Lakehouse datasource`.
 
 ### Fixes
 {: #julfixes2024}
