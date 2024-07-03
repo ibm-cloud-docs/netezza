@@ -28,14 +28,30 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfjul2024}
 
-- Provision to copy/download JWT token after login to console for `SAML` and `OIDC` user.
+- Added JWT token on the **Administration -> tools** tab and provision to copy/download JWT token after login to console for `SAML` and `OIDC` user.
+- Added support for lakehouse connections, databases, and schemas on console for `AWS` platform.
+- Introduced **Lakehouse connections** tab **Lakehouse connections** under **Administration** for creation of lakehouse connections, databases, and tables.
+- Introduced `CRUD` operations in the **Query editor** for lakehouse tables.
+- Introduced restore database functionality to backup and restore page.
+- Enabled `SAML` and `OIDC` for `AWS` and `Azure` platforms.
+- Moved bucket creation from **Backup and restore** page to **Administration**. Now you can create buckets parallelly for `BNR` and lakehouse datasource.
 
+### Fixes
+{: #julfixes2024}
+
+- Resolved some of the blocker issues related to unification changes.
+- Ops Commands are fixed.
+- Ops Parameters are fixed.
+- Error Handling with Adhoc Pause resume Job.
+- Help Command of nzcli.
+- nzcli binaries should create in release folder and not in base folder.
+- Correction in all the error messages so that customer should be able to understand the error.
 
 ### Components
 {: #compsjul2024}
 
 - {{site.data.keyword.netezza_short}} 11.2.3.1
-- Web console 4.0.3.2
+- Web console 4.1.0.0
 
 ## 11.2.3.0 - May 29, 2024
 {: #may2024}
