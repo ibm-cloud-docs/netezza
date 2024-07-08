@@ -36,6 +36,7 @@ subcollection: netezza
 - Introduced restore database functionality to backup and restore page.
 - Enabled `SAML` and `OIDC` for `AWS` and `Azure` platforms.
 - Added `Destinations` tab in **Administration**. Now, you can create buckets parallelly for `BNR` and `Lakehouse datasource`.
+- Introduced a new postgres flag `sslCertValidation` which enables force SSL certification validation for every session.
 
 ### Fixes
 {: #julfixes2024}
