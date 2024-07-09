@@ -41,13 +41,9 @@ subcollection: netezza
 ### Fixes
 {: #julfixes2024}
 
-- Resolved some of the blocker issues related to unification changes.
-- Ops Commands are fixed.
-- Ops Parameters are fixed.
-- Error Handling with Adhoc Pause resume Job.
-- Help Command of nzcli.
-- nzcli binaries should create in release folder and not in base folder.
-- Correction in all the error messages so that customer should be able to understand the error.
+- Resolved the issues when running `nzops` commands.
+- The grouping for the help command of `nzcli` has been corrected, and `nzcli` binaries are now created in the release folder.
+- Improved error messages for clarity. Errors are now displayed on-screen for incorrect API server inputs and when attempting adhoc pause/resume during a scheduled job.
 
 ### Components
 {: #compsjul2024}
