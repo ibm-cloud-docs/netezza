@@ -51,11 +51,6 @@ subcollection: netezza
 - {{site.data.keyword.netezza_short}} 11.2.3.1
 - Web console 4.1.0.0
 
-### Known issues
-{: #julknwnissues2024}
-
-- `AWS` Network policies support only IPv4 addresses or ranges in CIDR format.
-- Network policies restrict traffic only to the NPSaaS database and do not apply to other components, such as the web console.
 
 ## 11.2.3.0 - May 29, 2024
 {: #may2024}
