@@ -28,7 +28,7 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfjul2024}
 
-- With `AWS`'s new network policies feature for Ingress connections, you can now control which IP addresses are allowed to connect to the {{site.data.keyword.netezza_short}} database, similar to Azure network policies. For details, see [Network policies](/docs/netezza?topic=netezza-netezza-network-policies#aws_nw_policy).
+- With `AWS`'s new network policies feature for Ingress connections, you can now control which IP addresses are allowed to connect to the {{site.data.keyword.netezza_short}} database, similar to Azure network policies. For details, see [Network policies](/docs/netezza?topic=netezza-network-policies#aws_nw_policy).
 - Introduced JWT token in the **Administration -> tools** tab, allowing `SAML` and `OIDC` users to copy or download the JWT token from the console after logging in.
 - Enhanced platform `AWS` Administration functionality to include support for lakehouse connections, databases, and schemas on the console. Introduced a new **Lakehouse Connections** tab specifically for creating lakehouse connections, databases, and tables.
 - Added `CRUD` operations to the **Query Editor** for lakehouse tables.

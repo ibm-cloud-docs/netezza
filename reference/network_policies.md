@@ -338,7 +338,7 @@ By default, the {{site.data.keyword.netezza_short}} database is accessible from 
 ### How to Enable
 {: #enable_awspolicy}
 
-To use this feature, customers must create a support ticket with IBM and provide a list of IPv4 addresses or ranges in CIDR format to be whitelisted.
+To use this feature, you must create a support ticket with IBM and provide a list of IPv4 addresses or ranges in CIDR format to be whitelisted.
 
 After this feature is implemented, any IP address not included in the whitelist will be blocked from accessing the {{site.data.keyword.netezza_short}} database.
 {: note}
