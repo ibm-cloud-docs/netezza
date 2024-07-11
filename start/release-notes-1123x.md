@@ -28,11 +28,12 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfjul2024}
 
-- With `AWS`'s new network policies feature for Ingress connections, you can now control which IP addresses are allowed to connect to the {{site.data.keyword.netezza_short}} database, similar to Azure network policies. For details, see [Network policies](/docs/netezza?topic=netezza-network-policies#aws_nw_policy).
-- Introduced JWT token in the **Administration -> tools** tab, allowing `SAML` and `OIDC` users to copy or download the JWT token from the console after logging in.
-- Enhanced platform `AWS` Administration functionality to include support for lakehouse connections, databases, and schemas on the console. Introduced a new **Lakehouse Connections** tab specifically for creating lakehouse connections, databases, and tables.
+- Introduced new feature in `AWS` network policies for Ingress connections. You can now control which IP addresses are allowed to connect to the {{site.data.keyword.netezza_short}} database, similar to Azure network policies. For details, see [Network policies](/docs/netezza?topic=netezza-network-policies#aws_nw_policy).
+- Introduced JWT token in the **Administration -> tools** tab, allowing [`SAML`](/docs/netezza?topic=netezza-samloverview) and [`OIDC`](/docs/netezza?topic=netezza-oidcoverview) users to copy or download the JWT token from the console after logging in.
+- Enhanced platform `AWS` Administration functionality to include support for lakehouse connections, databases, and schemas on the console.
+    - Introduced a new **Lakehouse Connections** tab specifically for creating lakehouse connections, databases, and tables.
 - Added `CRUD` operations to the **Query Editor** for lakehouse tables.
-- Implemented the restore database functionality within the backup and restore page.
+- Introduced the restore database functionality in the **Backup and restore** page.
 - Enabled `SAML` and `OIDC` for `AWS` and `Azure` platforms.
 - Introduced the `Destinations` tab in **Administration**. You can now create buckets concurrently for `BNR` and `Lakehouse datasource`.
 - Introduced a new postgres flag `sslCertValidation` which enables force SSL certification validation for every session.
