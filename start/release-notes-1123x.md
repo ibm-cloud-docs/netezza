@@ -29,7 +29,7 @@ subcollection: netezza
 {: #nfjul2024}
 
 
-- `AWS`’s new network policies feature allows you to control which IP addresses can connect to the NPSaaS database, similar to Azure Network policies.
+- `AWS`’s new network policies feature allows you to control which IP addresses can connect to the NPSaaS database, similar to Azure Network policies. For details, see [Network policies](/docs/netezza?topic=netezza-netezza-network-policies#aws_nw_policy).
 - Added JWT token on the **Administration -> tools** tab and provision to copy/download JWT token after login to console for `SAML` and `OIDC` user.
 - Added support for lakehouse connections, databases, and schemas on the console for the `AWS` platform under Administration, and introduced a **Lakehouse Connections** tab for creating lakehouse connections, databases, and tables.
 - Introduced `CRUD` operations in the **Query editor** for lakehouse tables.
