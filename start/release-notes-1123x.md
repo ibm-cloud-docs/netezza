@@ -37,13 +37,6 @@ subcollection: netezza
 - Introduced the `Destinations` tab in **Administration**. You can now create buckets concurrently for `BNR` and `Lakehouse datasource`.
 - Introduced a new postgres flag `sslCertValidation` which enables force SSL certification validation for every session. For details, see [Enable ssl certification validation](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=configuration-enabling-ssl-certification-validation).
 
-### Fixes
-{: #julfixes2024}
-
-- Resolved the issues when running `nzops` commands.
-- The grouping for the help command of `nzcli` has been corrected, and `nzcli` binaries are now created in the release folder.
-- Improved error messages for clarity. Errors are now displayed on-screen for incorrect API server inputs and when attempting adhoc pause/resume during a scheduled job.
-
 ### Components
 {: #compsjul2024}
 
