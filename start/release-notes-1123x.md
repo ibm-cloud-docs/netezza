@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-06-12"
+lastupdated: "2024-07-17"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -31,7 +31,7 @@ subcollection: netezza
 - Introduced new feature in `AWS` network policies for Ingress connections. You can now control which IP addresses are allowed to connect to the {{site.data.keyword.netezza_short}} database, similar to Azure network policies. For details, see [Network policies](/docs/netezza?topic=netezza-network-policies#aws_nw_policy).
 - Introduced JWT token in the **Administration -> tools** tab, allowing [`SAML`](/docs/netezza?topic=netezza-samloverview) and [`OIDC`](/docs/netezza?topic=netezza-oidcoverview) users to copy or download the JWT token from the console after logging in.
 - Enhanced platform `AWS` Administration functionality to include support for lakehouse connections, databases, and schemas on the console.
-    - Introduced a new **Lakehouse Connections** tab specifically for creating lakehouse connections, databases, and tables.
+    - Introduced a new **Lakehouse Connections** tab in **Administration** specifically for creating lakehouse connections, databases, and tables.
 - Added `CRUD` operations to the **Query Editor** for lakehouse tables.
 - Introduced the restore database functionality in the **Backup and restore** page.
 - Enabled `SAML` and `OIDC` for `AWS` and `Azure` platforms.
