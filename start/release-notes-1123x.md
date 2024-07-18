@@ -33,7 +33,6 @@ subcollection: netezza
 - Enhanced platform `AWS` Administration functionality to include support for lakehouse connections, databases, and schemas on the console.
     - Introduced a new **Lakehouse Connections** tab in **Administration** specifically for creating lakehouse connections, databases, and tables.
 - Added `CRUD` operations to the **Query Editor** for lakehouse tables.
-- Introduced the restore database functionality in the **Backup and restore** page.
 - Enabled `SAML` and `OIDC` for `AWS` and `Azure` platforms.
 - Introduced the `Destinations` tab in **Administration**. You can now create buckets concurrently for `BNR` and `Lakehouse datasource`.
 - Introduced a new postgres flag `sslCertValidation` which enables forced SSL certificate validation, including certificate expiry checks, for every session.
