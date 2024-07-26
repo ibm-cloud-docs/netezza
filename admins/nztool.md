@@ -408,4 +408,4 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
 ## CLI
 {: #cli}
 
-For more information about commands, see [the command-line interface](https://www.ibm.com/docs/en/netezza?topic=interfaces-cli) section.
+For more information about commands, see [the command-line interface](https://www.ibm.com/docs/en/netezza?topic=c-summary-command-line-commands) section.
