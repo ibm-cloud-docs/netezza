@@ -51,11 +51,11 @@ subcollection: netezza
 
 - **Date Picker Issue in Chromium-Based Browsers**: You might experience an issue with the date picker in the console when using the latest versions of Chrome and Edge browser. When a date is selected and the focus is shifted to another input field, the date reverts to its default value.
 
-    Affected versions: Chrome version `127.0.6533.73` and Edge version `127.0.2651.74`.
+    Affected versions: Chrome version `127.0.xxxx.xx` and Edge version `127.0.xxxx.xx`.
 
     **Workaround**
 
-    Use Firefox/Safari or older versions of Chrome or Edge.
+    Use Firefox or Safari browser.
 
     The behavior might vary on different operating systems and browser versions.
     {: note}
