@@ -46,6 +46,20 @@ subcollection: netezza
 - {{site.data.keyword.netezza_short}} 11.2.3.1
 - Web console 4.1.0.0
 
+### Known issues
+{: #knownjul2024}
+
+- **Date Picker Issue in Chromium-Based Browsers**: You might experience an issue with the date picker in the console when using the latest versions of Chrome and Edge on Windows 11. When a date is selected and the focus is shifted to another input field, the date reverts to its default value.
+
+Affected Platforms: Windows 11 (Chrome version 127.0.4xxx.xx and Edge version 127.0.2651.74).
+
+**Workaround**
+Use Firefox or older versions of Chrome or Edge.
+
+The behavior might vary on different operating systems and browser versions.
+{: note}
+
+
 
 ## 11.2.3.0 - May 29, 2024
 {: #may2024}
