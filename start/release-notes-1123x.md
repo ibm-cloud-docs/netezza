@@ -54,6 +54,7 @@ subcollection: netezza
     Affected Platforms: Windows 11 (Chrome version 127.0.4xxx.xx and Edge version 127.0.2651.74).
 
     **Workaround**
+
     Use Firefox or older versions of Chrome or Edge.
 
     The behavior might vary on different operating systems and browser versions.
