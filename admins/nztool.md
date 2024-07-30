@@ -409,3 +409,25 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
 {: #cli}
 
 For more information about commands, see [the command-line interface](https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface) section.
+
+## Username formatting
+{: #username_nzcli_format}
+
+   - Use a single quote followed by double quotes `'" "'` for usernames that:
+     - Contain lowercase letters.
+     - Include special characters other than an underscore `_` or `@` symbol.
+
+      Example - Username: `SampleUser` → `' "SampleUser" '`
+   - For all other usernames, double quotes `""` are optional.
+
+      Example - Username: `SAMPLEUSER` → `SAMPLEUSER` or `"SAMPLEUSER"`
+
+
+ **Case Sensitivity**:
+   - **DB Users**: Usernames are not case-sensitive.
+
+      Example - `sample_user` and `SAMPLE_USER` are treated the same.
+
+   - **IBMIAM Users**: Usernames are case-sensitive.
+
+      Example - `sample_user` and `SAMPLE_USER` are treated differently.

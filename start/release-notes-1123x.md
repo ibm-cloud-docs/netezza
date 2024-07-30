@@ -33,12 +33,17 @@ subcollection: netezza
 - Enhanced platform `AWS` Administration functionality to include support for lakehouse connections, databases, and schemas on the console.
     - Introduced a new **Lakehouse Connections** tab in **Administration** specifically for creating lakehouse connections, databases, and tables.
 - Added `CRUD` operations to the **Query Editor** for lakehouse tables.
-- Enabled `SAML` and `OIDC` for `AWS` and `Azure` platforms.
-- Introduced the `Destinations` tab in **Administration**. You can now create buckets concurrently for `BNR` and `Lakehouse datasource`.
+- Enabled [`SAML`](/docs/netezza?topic=netezza-samloverview) and [`OIDC`](/docs/netezza?topic=netezza-oidcoverview) for `AWS` and `Azure` platforms.
+- Introduced the `Destinations` tab in **Administration**. You can now create buckets concurrently for `database backups` and `Lakehouse datasource`.
 - Introduced a new postgres flag `sslCertValidation` which enables forced SSL certificate validation, including certificate expiry checks, for every session.
 
     Contact IBM support to enable this option.
     {: note}
+
+### Fixes
+{: #fixesjul2024}
+
+- Only administrators can enable and disable the auto-pause/resume feature. See [Auto-pausing and auto-resuming](/docs/netezza?topic=netezza-autopnr-console).
 
 ### Components
 {: #compsjul2024}
@@ -49,7 +54,7 @@ subcollection: netezza
 ### Known issues
 {: #knownjul2024}
 
-- **Date Picker Issue in Chromium-Based Browsers**: You might experience an issue with the date picker in the console when using the latest versions of Chrome and Edge browser. When a date is selected and the focus is shifted to another input field, the date reverts to its default value.
+- **Issue with date picker in Chromium-Based Browsers**: You might experience an issue with the date picker in the console when using the latest versions of Chrome and Edge browser. When a date is selected and the focus is shifted to another input field, the date reverts to its default value.
 
     Affected versions: Chrome version `127.0.xxxx.xx` and Edge version `127.0.xxxx.xx`.
 
