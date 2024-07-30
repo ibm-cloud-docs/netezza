@@ -120,3 +120,10 @@ You can create a destination bucket for Amazon S3, Azure Blob Storage, and IBM C
 1. Type your endpoint URL.
 1. Type your secret key.
 1. Click **Save**.
+
+#### Egress costs
+{: #egress-costs}
+
+Data transfer between regions may incur egress costs. This is an important consideration for managing expenses related to data replication and synchronization across different regions.
+
+Understanding the connections and the associated egress costs is crucial for efficient and cost-effective database management.
