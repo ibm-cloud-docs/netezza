@@ -35,10 +35,6 @@ subcollection: netezza
 - Added `CRUD` operations to the **Query Editor** for lakehouse tables.
 - Enabled [`SAML`](/docs/netezza?topic=netezza-samloverview) and [`OIDC`](/docs/netezza?topic=netezza-oidcoverview) for `AWS` and `Azure` platforms.
 - Introduced the `Destinations` tab in **Administration**. You can now create buckets concurrently for `database backups` and `Lakehouse datasource`.
-- Introduced a new postgres flag `sslCertValidation` which enables forced SSL certificate validation, including certificate expiry checks, for every session.
-
-    Contact IBM support to enable this option.
-    {: note}
 
 ### Fixes
 {: #fixesjul2024}
@@ -65,6 +61,7 @@ subcollection: netezza
     The behavior might vary on different operating systems and browser versions.
     {: note}
 
+- **IP address required for OIDC/SAML authentication in private instances**: To use OIDC/SAML authentication in a private instance, access the web console via the `IP address`, not the `hostname`.
 
 
 ## 11.2.3.0 - May 29, 2024
