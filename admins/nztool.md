@@ -417,7 +417,7 @@ For more information about commands, see [the command-line interface](https://ww
      - Contain lowercase letters.
      - Include special characters other than an underscore `_` or `@` symbol.
 
-      Example - Username: `SampleUser` → `' "SampleUser" '`
+      Example - Username: `SampleUser` → `'"SampleUser"'`
    - For all other usernames, double quotes `""` are optional.
 
       Example - Username: `SAMPLEUSER` → `SAMPLEUSER` or `"SAMPLEUSER"`
@@ -430,4 +430,4 @@ For more information about commands, see [the command-line interface](https://ww
 
    - **IBMIAM Users**: Usernames are case-sensitive.
 
-      Example - `sample_user` and `SAMPLE_USER` are treated differently.
+      Example - `sample_user@ibm.com` and `SAMPLE_USER@ibm.com` are treated differently.
