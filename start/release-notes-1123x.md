@@ -61,7 +61,7 @@ subcollection: netezza
     The behavior might vary on different operating systems and browser versions.
     {: note}
 
-- **IP address required for OIDC/SAML authentication in private instances**: To use OIDC/SAML authentication in a private instance, access the web console via the `IP address`, not the `hostname`.
+- **IP address required for OIDC/SAML authentication in private instances**: To use OIDC/SAML authentication in a private instance, access the web console via the `IP address`, not the `hostname`. To get `IP address`, see [Configuring private endpoints](/docs/netezza?topic=netezza-creating-private-endpoints#pvt_ip_address).
 
 
 ## 11.2.3.0 - May 29, 2024
