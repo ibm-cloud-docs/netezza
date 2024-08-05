@@ -35,6 +35,7 @@ Follow the steps to setup `SAML` authentication:
 
 - [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
 - [Configuring SAML authentication in IdP](/docs/netezza?topic=netezza-saml-docs).
+- [Usage of nzcli with SAML authentication](/docs/netezza?topic=netezza-usage-of-nzcli-with-saml-authentication).
 
 In the current NPSaaS implementation of `SAML`, signed authentication is not supported. However, support for signed authentication will be introduced in a future NPSaaS release.
 {: note}
