@@ -40,6 +40,13 @@ subcollection: netezza
 {: #fixesjul2024}
 
 - Only administrators can enable and disable the auto-pause/resume feature. See [Auto-pausing and auto-resuming](/docs/netezza?topic=netezza-autopnr-console).
+- Fixed an issue where differential backup from the Mako system is failing on the Netezza Performance Server while performing a restore.
+- Introduced support for partial certificate chain verification in SSL.
+- Improved transaction rollback performance by optimizing the handling of large tdj files.
+- Improved signal handling for the DBOS process to avoid sessions getting hung in a disconnected state if a query with UDX was abnormally aborted.
+- Prevented system restart due to crash when running stored procedures with execute immediate clause.
+- Fixed an issue where some views couldn't access the toast data correctly after an OID reset.
+- Fixed incorrect query results on tables distributed by char type columns with restrictions.
 
 ### Components
 {: #compsjul2024}
