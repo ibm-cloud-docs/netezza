@@ -41,6 +41,7 @@ subcollection: netezza
 
 - Only administrators can enable and disable the auto-pause/resume feature. See [Auto-pausing and auto-resuming](/docs/netezza?topic=netezza-autopnr-console).
 - Fixed an issue where differential backup from the Mako system is failing on the Netezza Performance Server while performing a restore.
+- Improved transaction rollback performance by optimizing the handling of large tdj files.
 - Improved signal handling for the DBOS process to avoid sessions getting hung in a disconnected state if a query with UDX was abnormally aborted.
 - Prevented system restart due to crash when running stored procedures with execute immediate clause.
 - Fixed an issue where some views couldn't access the toast data correctly after an OID reset.
@@ -67,6 +68,24 @@ subcollection: netezza
     {: note}
 
 - **IP address required for OIDC/SAML authentication in private instances**: To use OIDC/SAML authentication in a private instance, access the web console via the `IP address`, not the `hostname`. To get `IP address`, see [Configuring private endpoints](https://cloud.ibm.com/docs/netezza?topic=netezza-creating-private-endpoints).
+
+
+## 11.2.3.0 - IF1 - June 20, 2024
+{: #june2024}
+
+### Components
+{: #compsjune2024}
+
+- {{site.data.keyword.netezza_short}} 11.2.3.0-IF1
+- Web console 4.0.3.2
+
+### Fixes
+{: #fjun2024}
+
+- Fixed the incorrect results issue with restrictions on `CHAR`/`VARCHAR`/`NCHAR`/`NVARCHAR` columns in the following two cases:
+
+    - when a clustered table has an organizing column of one of these types.
+    - when a materialized view uses a column of one of these types in its `order by` clause.
 
 
 ## 11.2.3.0 - May 29, 2024
