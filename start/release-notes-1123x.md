@@ -22,6 +22,25 @@ subcollection: netezza
 # 11.2.3.x
 {: #my-service-relnotes1123x}
 
+## 11.2.3.2 - September 02, 2024
+{: #sep2024}
+
+
+### New features and enhancements
+{: #nfsep2024}
+
+
+### Fixes
+{: #fixessep2024}
+
+
+### Components
+{: #compssep2024}
+
+
+### Known issues
+{: #knownsep2024}
+
 ## 11.2.3.1 - August 02, 2024
 {: #jul2024}
 
