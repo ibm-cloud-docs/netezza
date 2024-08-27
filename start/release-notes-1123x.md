@@ -29,9 +29,25 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfsep2024}
 
+- UI enhancements:
+    - for switching timezones.
+    - Login/Logout pages - Updated the user interface for MCSP.
+    - User profile dropdown option - Enhanced dropdown menu to include two new options for MCSP: **User management** and **Generate tokens**.
+
+- Session mapping - Map session id with postgres process PID. Modified sessions page on console
+
+- Show failed query logs with error message on session.
+   When user selects a session, postgres process PID logged data should be pulled and displayed including (limiting to) QUERY tag. User can get all query failure reasons(error messages). Modified recent queries/current queries page on console
+
+- Redesign IDP configuration page. Added separate tiles for `SAML` and `OIDC`.
+
+- Provided a way to download the certificate(**ca.crt file**) for sign authentication validation. Now you can use this file to upload on IDP for verifying signed authentication request.
 
 ### Fixes
 {: #fixessep2024}
+- Fix existing defects related to timezone manipulation.
+- Recent auto pause resume entries are not available in the autoPR history on webconsole.
+- Fixed issue with unable to edit scheduled backups start date and time.
 
 
 ### Components
