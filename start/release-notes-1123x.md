@@ -45,8 +45,8 @@ subcollection: netezza
 
 ### Fixes
 {: #fixessep2024}
-- Fix existing defects related to timezone manipulation.
-- Recent auto pause resume entries are not available in the autoPR history on webconsole.
+- Fixed existing defects related to timezone manipulation.
+- Recent auto pause/resume entries are now correctly displayed in the autoPR history on the web console.
 - Fixed issue with unable to edit scheduled backups start date and time.
 
 
