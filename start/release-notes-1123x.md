@@ -30,25 +30,23 @@ subcollection: netezza
 {: #nfsep2024}
 
 - UI enhancements:
-    - for switching timezones.
+    - for switching timezones. Now you will have choice to choose between database time, local timezone and UTC.
     - Login/Logout pages - Updated the user interface for MCSP.
     - User profile dropdown option - Enhanced dropdown menu to include two new options for MCSP: **User management** and **Generate tokens**.
+    - Redesigned **Sessions** page on console for better user experience
 
-- Session mapping - Map session id with postgres process PID. Modified sessions page on console
+- Modified recent queries page on console for better user experience, now it shows error types if there are any query failures.
 
-- Show failed query logs with error message on session.
-   When user selects a session, postgres process PID logged data should be pulled and displayed including (limiting to) QUERY tag. User can get all query failure reasons(error messages). Modified recent queries/current queries page on console
+- Redesign IDP configuration page for better user experience. Added separate tiles for `SAML` and `OIDC`.
 
-- Redesign IDP configuration page. Added separate tiles for `SAML` and `OIDC`.
-
-- Provided a way to download the certificate(**ca.crt file**) for sign authentication validation. Now you can use this file to upload on IDP for verifying signed authentication request.
+- Introduced support to download the certificate(ca.crt file) for sign authentication validation for SAML. You can use this file to upload on IDP for verifying signed authentication request.
 
 ### Fixes
 {: #fixessep2024}
 
-- Fixed existing defects related to timezone manipulation.
-- Recent auto pause/resume entries are now correctly displayed in the autoPR history on the web console.
-- Fixed issue with unable to edit scheduled backups start date and time.
+- Fixed the timezone manipulation defects.
+- Fixed the issue of auto pause and resume for recent entries are not displayed in **History** page of web console.
+- Fixed the issue where the scheduled backups start date and time could not be edited.
 
 ### Components
 {: #compssep2024}
