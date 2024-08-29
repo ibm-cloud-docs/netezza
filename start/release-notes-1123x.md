@@ -31,8 +31,6 @@ subcollection: netezza
 
 - UI enhancements:
     - for switching timezones. Now you will have choice to choose between database time, local timezone and UTC.
-    - Login/Logout pages - Updated the user interface for MCSP.
-    - User profile dropdown option - Enhanced dropdown menu to include two new options for MCSP: **User management** and **Generate tokens**.
     - Redesigned **Sessions** page on console for better user experience
 
 - Modified recent queries page on console for better user experience, now it shows error types if there are any query failures.
