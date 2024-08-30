@@ -50,7 +50,7 @@ subcollection: netezza
 {: #compssep2024}
 
 - {{site.data.keyword.netezza_short}} 11.2.3.2
-- Web console 4.1.0.1
+- Web console 4.1.1.0
 
 ### Known issues
 {: #knownsep2024}
