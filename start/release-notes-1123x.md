@@ -39,6 +39,8 @@ subcollection: netezza
 
 - Introduced support to download the certificate(ca.crt file) for sign authentication validation for SAML. You can use this file to upload on IDP for verifying signed authentication request.
 
+- Instroduced signed authentication support for SAML.
+
 ### Fixes
 {: #fixessep2024}
 
