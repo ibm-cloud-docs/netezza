@@ -37,7 +37,7 @@ subcollection: netezza
 
 - Redesigned IDP configuration page for better user experience. Added separate tiles for `SAML` and `OIDC`.
 
-- Introduced support to download the `certificate (ca.crt file)` for signed authentication validation for `SAML`. You can use this file to upload on `IdP` for verifying signed authentication request.
+- Introduced support to download the certificate for signed authentication validation for `SAML`. You can use this file to upload on `IdP` for verifying signed authentication request.
 
 - Introduced support for signed authentication for `SAML` in {{site.data.keyword.netezza_short}}. For more details, see [`SAML`](/docs/netezza?topic=netezza-samloverview).
 
