@@ -30,8 +30,8 @@ subcollection: netezza
 {: #nfsep2024}
 
 - UI enhancements:
-    - for switching timezones. Now you will have choice to choose between database time, local timezone and UTC.
-    - Redesigned **Sessions** page on console for better user experience
+    - For switching timezones; now you have choice to choose between database time, local timezone and UTC.
+    - Redesigned **Sessions** page on console for better user experience.
 
 - Modified recent queries page on console for better user experience, now it shows error types if there are any query failures.
 
