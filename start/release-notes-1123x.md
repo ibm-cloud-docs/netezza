@@ -35,9 +35,9 @@ subcollection: netezza
 
 - Modified recent queries page on console for better user experience, now it shows error types if there are any query failures.
 
-- Redesign IDP configuration page for better user experience. Added separate tiles for `SAML` and `OIDC`.
+- Redesigned IDP configuration page for better user experience. Added separate tiles for `SAML` and `OIDC`.
 
-- Introduced support to download the certificate(ca.crt file) for sign authentication validation for SAML. You can use this file to upload on IDP for verifying signed authentication request.
+- Introduced support to download the `certificate (ca.crt file)` for signed authentication validation for `SAML`. You can use this file to upload on `IdP` for verifying signed authentication request.
 
 - Introduced support for signed authentication for `SAML` in {{site.data.keyword.netezza_short}}. For more details, see [`SAML`](/docs/netezza?topic=netezza-samloverview).
 
@@ -45,7 +45,7 @@ subcollection: netezza
 {: #fixessep2024}
 
 - Fixed the timezone manipulation defects.
-- Fixed the issue of auto pause and resume for recent entries are not displayed in **History** page of web console.
+- Fixed the issue of auto pause and resume for recent entries not being displayed in **History** page of web console.
 - Fixed the issue where the scheduled backups start date and time could not be edited.
 
 ### Components
@@ -54,8 +54,6 @@ subcollection: netezza
 - {{site.data.keyword.netezza_short}} 11.2.3.2
 - Web console 4.1.1.0
 
-### Known issues
-{: #knownsep2024}
 
 ## 11.2.3.1 - August 02, 2024
 {: #jul2024}

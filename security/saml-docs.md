@@ -69,3 +69,4 @@ The following `SAML` configuration steps are generic. Users can follow similar s
 
     An user with admin privileges can only download the authentication certificate.
         {: note}
+1. Upload this certificate to `IdP` portal for signed authentication configuration.

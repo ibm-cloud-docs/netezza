@@ -31,16 +31,6 @@ Set your authentication method to `SAML` with the [`REGISTER EXTERNAL AUTHENTICA
 `SAML` external authentication system supports two-factor authentication. User needs to be configured with MFA (Multi-factor authentication) on IdP(Identity Provider); for example, Ping Identity.
 {: important}
 
-## Syntax
-{: #samlsyntax}
-
-```sql
-REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML'
-```
-{: codeblock}
-
-
-You can use following methods for enabling SAML authentication:
 - [Through Netezza UI.](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc)
 - [Through Netezza UI query editor.](/docs/netezza?topic=netezza-samliamauth#setting_saml_wcqe)
 - [From command-line.](/docs/netezza?topic=netezza-samliamauth#samlmprocedure)

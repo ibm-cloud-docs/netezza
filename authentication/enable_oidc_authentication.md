@@ -31,15 +31,6 @@ Set your authentication method to `OIDC` with the [`REGISTER EXTERNAL AUTHENTICA
 `OIDC` external authentication system supports two-factor authentication. User needs to be configured with MFA on IdP(Identity Provider); for example, [Microsoft Azure](https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-provider-openid-connect).
 {: important}
 
-## Syntax
-{: #oidcsyntax}
-
-```sql
-REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
-```
-{: codeblock}
-
-You can use two methods for enabling OIDC authentication:
 - [Through Netezza UI.](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc)
 - [Through Netezza UI query editor.](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wcqe)
 - [From command-line.](/docs/netezza?topic=netezza-enable_oidciamauth#oidcmprocedure)
