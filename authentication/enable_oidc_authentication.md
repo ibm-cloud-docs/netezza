@@ -40,12 +40,21 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
 {: codeblock}
 
 You can use two methods for enabling OIDC authentication:
-- [Through Netezza UI.](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc)
+- [Through Netezza UI.](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc)
+- [Through Netezza UI query editor.](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wcqe)
 - [From command-line.](/docs/netezza?topic=netezza-enable_oidciamauth#oidcmprocedure)
 
 
 ## Setting Azure OIDC authentication with the Netezza UI
 {: #setting_oidc_wc}
+
+1. Log in to the Netezza UI as a user who is part of an administrative group. See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).
+1. Go to `IdP configuration` page.
+1. Click on `SAML` to enable `SAML` authentication.
+
+
+## Setting Azure OIDC authentication with the Netezza UI query editor
+{: #setting_oidc_wcqe}
 
 1. Log in to the Netezza UI as a user who is part of an administrative group. See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).
 1. Go to the **Query editor**.
