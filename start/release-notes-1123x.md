@@ -44,7 +44,7 @@ subcollection: netezza
 ### Fixes
 {: #fixessep2024}
 
-- Fixed the timezone manipulation defects.
+- Resolved the issues related to timezone handling.
 - Fixed the issue of auto pause and resume for recent entries not being displayed in the **History** page of the web console.
 - Fixed the issue where the scheduled backups start date and time could not be edited.
 
