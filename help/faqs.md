@@ -123,3 +123,91 @@ For information about posting questions on a forum or opening a support ticket, 
 - [IBM Cloud® support forum](https://www.ibm.com/mysupport/s/forumshome?language=en_US)
 
 - [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/hybriddatamanagement/home)
+
+## How can I change a Query History user's password?
+{: #changequerypswd-help}
+{: faq}
+{: support}
+
+If you want to change the password of the `Query History` user, you must also change the password in the `Query History` configuration. However, you cannot change the `Query History` user's password for an active `Query History` configuration. If you attempt to do so, you will receive the following error message:
+
+**ERROR: History configuration `hist_interval` is current or not found.**
+
+Instead, you must assign a different `Query History` configuration to the source database, make the password change in the desired configuration, and then reactivate that configuration. The following steps illustrate that procedure:
+
+1. Determine the name of the existing `Query History` configuration. The configuration name is the first field returned:
+
+```bash
+[nz1 ~]$ nzsql -c "show history configuration"
+```
+{: codeblock}
+
+ ```sql
+CONFIG_NAME | CONFIG_DBNAME | CONFIG_DBTYPE | CONFIG_TARGETTYPE | CONFI  G_LEVEL | CONFIG_HOSTNAME | CONFIG_USER | CONFIG_PASSWORD |  CONFIG_LOADINTERVAL | CONFIG_LOADMINTHRESHOLD | CONFIG_LOADMAXTHRESHOLD |  CONFIG_DISKFULLTHRESHOLD | CONFIG_STORAGELIMIT | CONFIG_LOADRETRY |
+CONFIG_ENABLEHIST | CONFIG_ENABLESYSTEM | CONFIG_NEXT | CONFIG_CURRENT | CONFIG_VERSION | CONFIG_COLLECTFILTER | CONFIG_KEYSTORE_ID | CONFIG_KEY_ID | KEYSTORE_NAME | KEY_ALIAS | CONFIG_NAME_DELIMITED | CONFIG_DBNAME_DELI  MITED | CONFIG_USER_DELIMITED
+-------------+---------------+---------------+-------------------+--------------+-----------------+-------------
+   NZ_HIST   | HISTDB        |             1 |                 1 |              2 | localhost       |
+TESTUSER    |
+y5neWx3HuL2k$w5DqbqJOp+Y= |                     5 |
+(1 rows)
+```
+{: codeblock}
+
+2. Create a configuration in which you disable query history (with the `HISTTYPE` argument). For example, the following creates a configuration called hist_disabled:
+```bash
+[nz1 ~]$ nzsql -c "CREATE HISTORY CONFIGURATION hist_disabled HISTTYPE NONE;"
+CREATE HISTORY CONFIGURATION
+```
+{: codeblock}
+
+3. Update the system to use the `hist_disabled` configuration.
+```bash
+[nz1 ~]$ nzsql -c "SET HISTORY CONFIGURATION hist_disabled"
+SET HISTORY CONFIGURATION
+```
+{: codeblock}
+
+4. Changes you make to a configuration only take effect after you restart the database. Load (activate) the disabled Query History configuration by restarting with the `nzstop/nzstart` commands.
+
+5. Verify that the disabled Query History configuration is now active:
+
+```bash
+[nz1 ~]$ nzsql -c "SHOW HISTORY CONFIGURATION"
+```
+{: codeblock}
+```sql
+| CONFIG_NAME  | CONFIG_DBNAME | CONFIG_DBTYPE | CONFIG_TARGETTYPE | CONFIG_LEVEL |
+| -------- | ------- | ------- | ------- | ------- |
+| HIST_DISABLED |     |   3  |    1 |   1  | localhost
+.
+.
+.
+---------------+---------------+---------------+-------------------+--------------+----------
+ HIST_DISABLED |               |             3 |                 1 |            1 | localhost       |             |                 
+.
+.
+.
+ (1 row))
+ ```
+{: codeblock}
+
+
+6. Make the required password changes in the original query history configuration (`nz_hist`). In the following example, the user `qryhist` is assigned the password new_password.
+```bash
+[nz1 ~]$ nzsql -c "ALTER HISTORY CONFIGURATION nz_hist USER qryhist PASSWORD new_password'"
+ALTER HISTORY CONFIGURATION
+```
+{: codeblock}
+
+7. Configure the system to use the initial configuration (`nz_hist`), which now has the changed password.
+```bash
+[nz1 ~]$ nzsql -c "SET HISTORY CONFIGURATION nz_hist"
+SET HISTORY CONFIGURATION
+```
+{: codeblock}
+
+8. Stop and restart the database so that the system loads the original query history configuration (`nzstop/nzstart` commands).
+
+9. Verify that the correct Query History configuration is once again active with the `SHOW HISTORY CONFIGURATION` command.
+
+For a complete description of each of the Query History commands, refer to the **IBM Netezza Database User’s Guide**.
