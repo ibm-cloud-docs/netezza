@@ -30,14 +30,14 @@ subcollection: netezza
 {: #nfsep2024}
 
 - UI enhancements:
-    - For switching timezones; now you have choice to choose between database time, local timezone and UTC.
+    - For switching timezones, now you have the choice to choose between database time, local timezone, and UTC.
     - Redesigned **Sessions** page on console for better user experience.
 
-- Modified recent queries page on console for better user experience, now it shows error types if there are any query failures.
+- Modified recent queries page on console for better user experience; now it shows error types if there are any query failures.
 
 - Redesigned IDP configuration page for better user experience. Added separate tiles for `SAML` and `OIDC`.
 
-- Introduced support to download the certificate for signed authentication validation for `SAML`. You can use this file to upload on `IdP` for verifying signed authentication request.
+- Introduced support to download the certificate for signed authentication validation for `SAML`. You can use this file to upload on `IdP` for verifying signed authentication requests.
 
 - Introduced support for signed authentication for `SAML` in {{site.data.keyword.netezza_short}}. For more details, see [`SAML`](/docs/netezza?topic=netezza-samloverview).
 
@@ -45,7 +45,7 @@ subcollection: netezza
 {: #fixessep2024}
 
 - Fixed the timezone manipulation defects.
-- Fixed the issue of auto pause and resume for recent entries not being displayed in **History** page of web console.
+- Fixed the issue of auto pause and resume for recent entries not being displayed in the **History** page of the web console.
 - Fixed the issue where the scheduled backups start date and time could not be edited.
 
 ### Components
