@@ -82,6 +82,9 @@ The `nz` command syntax can take two forms, depending on whether you created sho
 1. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
 {: tip}
 
+Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload `nzcli` at least every other release. With the upgrade to 11.2.3.1, you should now utilize `nzcli` versions from either 11.2.3.0 or 11.2.3.1.
+{: note}
+
 - Full syntax:
 
    ```sh
