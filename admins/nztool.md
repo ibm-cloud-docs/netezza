@@ -110,7 +110,7 @@ Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host a
    Example:
 
    ```sh
-   -apiserver <api-server-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+   ./nz nzstate -apiserver <api-server-url> -u <nps-admin-user> -pw <nps-admin-user-password>
    System state is 'Online'.
    ```
    {: codeblock}
