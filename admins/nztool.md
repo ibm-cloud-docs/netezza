@@ -82,7 +82,7 @@ The `nz` command syntax can take two forms, depending on whether you created sho
 1. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
 {: tip}
 
-Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload `nzcli` at least every other release. With the upgrade to 11.2.3.1, you should now utilize `nzcli` versions from either 11.2.3.0 or 11.2.3.1.
+Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload `nzcli` at least every other release.
 {: note}
 
 - Full syntax:
@@ -95,7 +95,7 @@ Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host a
    Example:
 
    ```sh
-   ./nz nzstate -host <nps-hostname> -u <nps-admin-user> -pw <nps-admin-user-password>
+   ./nz nzstate -apiserver <api-server-url> -u <nps-admin-user> -pw <nps-admin-user-password>
    System state is 'Online'.
    ```
    {: codeblock}
@@ -110,7 +110,7 @@ Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host a
    Example:
 
    ```sh
-   -host <nps-hostname> -u <nps-admin-user> -pw <nps-admin-user-password>
+   -apiserver <api-server-url> -u <nps-admin-user> -pw <nps-admin-user-password>
    System state is 'Online'.
    ```
    {: codeblock}
@@ -388,12 +388,12 @@ nz_zonemap
 ## nz environment variables
 {: #supportedcommands}
 
-Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo specifying the `-host`, `-u`, and `-pw` options when you are running `nz` commands.
+Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
 
 - From Linux or Mac OSX terminal, run:
 
    ```sh
-   export NZ_HOST=<nps-hostname>
+   export APISERVER_URL=<api-server-url>
    export NZ_USER=<nps-admin-user>
    export NZ_PASSWORD=<nps-admin-user-password>
    ```
@@ -402,7 +402,7 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
 - From Windows (`cmd.exe`), run:
 
    ```sh
-   set NZ_HOST=<nps-hostname>
+   set APISERVER_URL=<api-server-url>
    set NZ_USER=<nps-admin-user>
    set NZ_PASSWORD=<nps-admin-user-password>
    ```
