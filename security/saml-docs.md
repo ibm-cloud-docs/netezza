@@ -63,7 +63,8 @@ The following `SAML` configuration steps are generic. Users can follow similar s
 ## Configuring Signed Authentication on IdP
 {: #config_saoi}
 
-1. Go to `IdP` application.
+1. Login to the IdP Portal.
+1. Navigate to your `SAML` application.
 1. Select respective checkbox to enable signed authentication.
 1. Click `Download Certificate` button in the Netezza UI under `IdP configuration -> SAML`.
 
