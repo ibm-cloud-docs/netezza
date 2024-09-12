@@ -30,7 +30,6 @@ subcollection: netezza
 {: #nfsep2024}
 
 - **New user interface enhancements:** Experience greater flexibility with the option to switch between database time, local time zone, and UTC. Tailor your view to match your needs effortlessly.
-- **Revamped sessions page:** Discover a refreshed `Sessions` page on the console, designed for an improved and more intuitive user experience.
 - **Updated recent queries page:** Gain clearer insights into your queries with the addition of error type visibility for query failures.
 - **Enhanced IdP configuration options:** Enhanced the `IdP configuration` page with dedicated tiles for streamlined management of `SAML` and `OIDC` configurations.
   - Now, easily download certificates for signed authentication validation in `SAML` to simplify your setup and enhance security.
