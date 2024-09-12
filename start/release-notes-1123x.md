@@ -29,19 +29,19 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfsep2024}
 
-- **New User Interface Enhancements:** Experience greater flexibility with the option to switch between database time, local timezone, and UTC. Tailor your view to match your needs effortlessly.
-- **Revamped Sessions Page:** Discover a refreshed `Sessions` page on the console, designed for an improved and more intuitive user experience.
-- **Updated Recent Queries Page:** Gain clearer insights into your queries with the addition of error type visibility for query failures.
-- **Enhanced IDP Configuration Options:** We’ve expanded the `IDP configuration` page with dedicated tiles for streamlined management of `SAML` and `OIDC` configurations.
+- **New user interface enhancements:** Experience greater flexibility with the option to switch between database time, local timezone, and UTC. Tailor your view to match your needs effortlessly.
+- **Revamped sessions page:** Discover a refreshed `Sessions` page on the console, designed for an improved and more intuitive user experience.
+- **Updated recent queries page:** Gain clearer insights into your queries with the addition of error type visibility for query failures.
+- **Enhanced IdP configuration options:** We’ve expanded the `IdP configuration` page with dedicated tiles for streamlined management of `SAML` and `OIDC` configurations.
   - Now, easily download certificates for signed authentication validation in `SAML` to simplify your setup and enhance security.
   - Support for signed authentication has also been introduced for `SAML` in {{site.data.keyword.netezza_short}}, providing robust security for your configurations. For more details, see [`SAML`](/docs/netezza?topic=netezza-samloverview).
 
 ### Fixes
 {: #fixessep2024}
 
-- **Timezone Handling:** Resolved issues related to timezone handling, ensuring consistent and accurate time display across the platform.
-- **History Page Fixes:** Addressed the problem where auto pause and resume actions for recent entries were not showing on the **History** page of the web console, enhancing visibility and tracking.
-- **Scheduled Backups Update:** Fixed the issue preventing the start date and time of scheduled backups from being edited, giving you full control over your backup schedules.
+- **Timezone handling:** Resolved issues related to timezone handling, ensuring consistent and accurate time display across the platform.
+- **History page fixes:** Addressed the problem where auto pause and resume actions for recent entries were not showing on the **History** page of the web console, enhancing visibility and tracking.
+- **Scheduled backups update:** Fixed the issue preventing the start date and time of scheduled backups from being edited, giving you full control over your backup schedules.
 
 ### Components
 {: #compssep2024}
