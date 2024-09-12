@@ -88,22 +88,22 @@ Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host a
 - Full syntax:
 
    ```sh
-   nz [command] [subcommands] [options]
+   path-to-nz/nz [command] [subcommands] [options]
    ```
    {: codeblock}
 
    Example:
 
    ```sh
-   ./nz nzstate -apiserver <api-server-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+   /path-to-nz/nz nzstate -apiserver <api-server-url> -u <nps-admin-user> -pw <nps-admin-user-password>
    System state is 'Online'.
    ```
    {: codeblock}
 
-- Shortcut syntax
+- Shortcut syntax (when in the same directory as nz tool)
 
    ```sh
-   [command] [subcommand] [options]
+   ./nz [command] [subcommands] [options]
    ```
    {: codeblock}
 
