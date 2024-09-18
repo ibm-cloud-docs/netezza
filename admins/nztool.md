@@ -149,6 +149,7 @@ nzstate
 nzstats
 nzsession
 nzsystem
+nzprogress
 ```
 {: screen}
 
