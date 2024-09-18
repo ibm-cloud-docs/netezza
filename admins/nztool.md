@@ -127,7 +127,7 @@ nz [run-command] [software-support-tool] [subcommands] [options]
 Example:
 
 ```sh
-./nz run nz_get_table_rowcount table1
+./nz run nz_get_table_rowcount database1 table1
 ```
 {: codeblock}
 
