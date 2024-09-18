@@ -76,44 +76,62 @@ curl.exe -o nz.exe -k https://<API Server URL>/v2/download/nz-windows-amd64
 ## The nz syntax
 {: #nz-syntax}
 
-The `nz` command syntax can take two forms, depending on whether you created shortcuts for commonly used commands or not.
+The `nz` tool supports execution of select NPSaaS commands and Software Support Tools. Command execution syntax depends on the command type - NPSaaS command or Software Support Tool, and whether a shortcut command was installed.
 
-1. For more information about shortcuts and a list of commands that can have shortcuts, see [Creating nz shortcuts with the nz install command](/docs/netezza?topic=netezza-nztool#nzinstall-shortcuts).
-1. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
-{: tip}
+1. For a list of supported NPSaaS commands and Software Support Tools, see Commands supported by the nz tool
+2. Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`. See [insert section] to learn which run command to use for a given Software Support Tool.
+3. For more information about command shortcuts, including which commands can have shortcuts created, see [Creating nz shortcuts with the nz install command](/docs/netezza?topic=netezza-nztool#nzinstall-shortcuts).
+4. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWOR`D` environment variables and forgo specifying the **-apiserver**, **-u**, and **-pw** options.
 
-Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload `nzcli` at least every other release.
-{: note}
 
-- Full syntax:
+**NPSaaS command syntax**
 
-   ```sh
-   path-to-nz/nz [command] [subcommands] [options]
-   ```
-   {: codeblock}
+```sh
+nz [command] [subcommands] [options]
+```
+{: codeblock}
 
-   Example:
+Example:
 
-   ```sh
-   /path-to-nz/nz nzstate -apiserver <api-server-url> -u <nps-admin-user> -pw <nps-admin-user-password>
-   System state is 'Online'.
-   ```
-   {: codeblock}
+```sh
+./nz nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+System state is 'Online'.
+```
+{: codeblock}
 
-- Shortcut syntax (when in the same directory as nz tool)
 
-   ```sh
-   ./nz [command] [subcommands] [options]
-   ```
-   {: codeblock}
+**NPSaaS command shortcut syntax**
 
-   Example:
+```sh
+[command] [subcommand] [options]
+```
+{: codeblock}
 
-   ```sh
-   ./nz nzstate -apiserver <api-server-url> -u <nps-admin-user> -pw <nps-admin-user-password>
-   System state is 'Online'.
-   ```
-   {: codeblock}
+Example:
+
+```sh
+./nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+System state is 'Online'.
+```
+{: codeblock}
+
+
+**Software Support Tool syntax**
+
+```sh
+nz [run-command] [software-support-tool] [subcommands] [options]
+```
+{: codeblock}
+
+
+Example:
+
+```sh
+./nz run nz_get_table_rowcount table1
+```
+{: codeblock}
+
+
 
 ### Commands supported by the nz tool
 {: #supported-cmds}
@@ -349,38 +367,52 @@ nz_zonemap
 ```
 {: screen}
 
+
+## nz install syntax
+{: #nzis}
+
+1. `--dry-run`:  displays the symlinks that is created.
+2. `--dest`:  directory where links are installed.
+3. `--force`:  overwrites a pre-existing link.
+
+```sh
+nz install [--dry-run] [--dest DESTINATION-DIRECTORY] [--force]
+```
+{: codeblock}
+
+Example:
+
+```sh
+./nz install --dest /usr/local/bin --force
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzbackup
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzrestore
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzsystem
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzds
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzhw
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzstate
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzbatchbnr
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzrev
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzstats
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzsession
+```
+{: codeblock}
+
 ## Creating nz shortcuts with the nz install command
 {: #nzinstall-shortcuts}
 
 You can create shortcuts for the following commonly used commands by running the `nz install` command. As a result, for example, instead of running `nz nzstate`, you can issue `nzstate`.
 
 ```sh
-nz
 nzbackup
 nzbatchbnr
 nzds
-nz_get_model
-nz_health
-nzhistcreatedb
 nzhw
-nz_pause
-nzpush
-nz_query_history
-nz_repl_health
-nzrequest
-nz_rerandomize
 nzrestore
 nzrev
 nzsession
-nzsqa
 nzstate
-nz_stats
 nzstats
 nzsystem
-nz_sysutil_stats
-nz_transactions
-nz_view_references
-nz_zonemap
 ```
 {: screen}
 
