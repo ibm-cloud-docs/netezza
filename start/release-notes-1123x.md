@@ -29,7 +29,7 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfsep2024}
 
-- **New user interface enhancements:** Experience greater flexibility with the option to switch between database time, local time zone, and UTC. Tailor your view to match your needs effortlessly.
+<!-- - **New user interface enhancements:** Experience greater flexibility with the option to switch between database time, local time zone, and UTC. Tailor your view to match your needs effortlessly. -->
 - **Updated recent queries page:** Gain clearer insights into your queries with the addition of error type visibility for query failures.
 
     The `Recent Queries` page now shows queries submitted within the last 15 minutes by default. Queries remain visible for up to 24 hours, with a limit of 2,000 queries.
