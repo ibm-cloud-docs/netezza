@@ -78,10 +78,10 @@ curl.exe -o nz.exe -k https://<API Server URL>/v2/download/nz-windows-amd64
 
 The `nz` tool supports execution of select NPSaaS commands and Software Support Tools. Command execution syntax depends on the command type - NPSaaS command or Software Support Tool, and whether a shortcut command was installed.
 
-1. For a list of supported NPSaaS commands and Software Support Tools, see Commands supported by the nz tool
+1. For a list of supported NPSaaS commands and Software Support Tools, see [Commands supported by the nz tool](/docs/netezza?topic=netezza-nztool#supported-cmds).
 2. Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`. See [insert section] to learn which run command to use for a given Software Support Tool.
 3. For more information about command shortcuts, including which commands can have shortcuts created, see [Creating nz shortcuts with the nz install command](/docs/netezza?topic=netezza-nztool#nzinstall-shortcuts).
-4. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWOR`D` environment variables and forgo specifying the **-apiserver**, **-u**, and **-pw** options.
+4. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the **-apiserver**, **-u**, and **-pw** options.
 
 
 **NPSaaS command syntax**
@@ -371,7 +371,7 @@ nz_zonemap
 ## nz install syntax
 {: #nzis}
 
-1. `--dry-run`:  displays the symlinks that is created.
+1. `--dry-run`:  displays the symlinks that will be created.
 2. `--dest`:  directory where links are installed.
 3. `--force`:  overwrites a pre-existing link.
 
