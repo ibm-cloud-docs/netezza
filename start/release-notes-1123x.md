@@ -35,7 +35,7 @@ subcollection: netezza
     The `Recent Queries` page now shows queries submitted within the last 15 minutes by default. Queries remain visible for up to 24 hours, with a limit of 2,000 queries.
     {: note}
 - **Enhanced IdP configuration options:** Enhanced the `IdP configuration` page with dedicated tiles for streamlined management of `SAML` and `OIDC` configurations.
-  - Now, easily download certificates for signed authentication validation in `SAML` to simplify your setup and enhance security.
+  - Now, easily download certificates for signed authentication validation in `SAML` to simplify your setup and enhance security. For more details, see [`Configuring Signed Authentication on IdP`](/docs/netezza?topic=netezza-saml-docs#config_saoi).
   - Support for signed authentication has been introduced for `SAML` in {{site.data.keyword.netezza_short}}, providing robust security for your configurations. For more details, see [`SAML`](/docs/netezza?topic=netezza-samloverview).
 
 ### Fixes
