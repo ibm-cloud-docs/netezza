@@ -45,11 +45,11 @@ subcollection: netezza
 - **History page fixes:** Addressed the problem where auto pause and resume actions for recent entries were not showing on the **History** page of the web console, enhancing visibility and tracking.
 - **Scheduled backups update:** Fixed the issue preventing the start date and time of scheduled backups from being edited, giving you full control over your backup schedules.
 
-### Components
+<!-- ### Components
 {: #compssep2024}
 
 - {{site.data.keyword.netezza_short}} 11.2.3.2
-- Web console 4.1.1.0
+- Web console 4.1.1.0 -->
 
 
 ## 11.2.3.1 - August 02, 2024
