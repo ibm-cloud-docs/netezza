@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-12-07"
+lastupdated: "2023-09-23"
 
 keywords: nztool
 
@@ -54,8 +54,7 @@ chmod +x nz
 
    2. Go to **Resource list** > **Services and Software** > **Databases**.
 
-   3. Click your Netezza Performance Server instance.
-    You are now on the **Service instance details** page. In the **Public Endpoints** section, you can find information (URL details) about endpoints for accessing the web console, the API server, and the database.
+   3. Click your Netezza Performance Server instance. You are now on the **Service instance details** page. In the **Public Endpoints** section, you can find information (URL details) about endpoints for accessing the web console, the API server, and the database.
 
 Examples:
 
@@ -79,12 +78,13 @@ curl.exe -o nz.exe -k https://<API Server URL>/v2/download/nz-windows-amd64
 The `nz` tool supports execution of select NPSaaS commands and Software Support Tools. Command execution syntax depends on the command type - NPSaaS command or Software Support Tool, and whether a shortcut command was installed.
 
 1. For a list of supported NPSaaS commands and Software Support Tools, see [Commands supported by the nz tool](/docs/netezza?topic=netezza-nztool#supported-cmds).
-2. Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`. See [insert section] to learn which run command to use for a given Software Support Tool.
+2. Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`.
 3. For more information about command shortcuts, including which commands can have shortcuts created, see [Creating nz shortcuts with the nz install command](/docs/netezza?topic=netezza-nztool#nzinstall-shortcuts).
 4. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the **-apiserver**, **-u**, and **-pw** options.
 
 
 **NPSaaS command syntax**
+{: #npsaassyntax}
 
 ```sh
 nz [command] [subcommands] [options]
@@ -101,6 +101,7 @@ System state is 'Online'.
 
 
 **NPSaaS command shortcut syntax**
+{: #npsyntxshrtct}
 
 ```sh
 [command] [subcommand] [options]
@@ -117,6 +118,7 @@ System state is 'Online'.
 
 
 **Software Support Tool syntax**
+{: #ssts}
 
 ```sh
 nz [run-command] [software-support-tool] [subcommands] [options]

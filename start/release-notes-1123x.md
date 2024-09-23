@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-09-23"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -22,7 +22,7 @@ subcollection: netezza
 # 11.2.3.x
 {: #my-service-relnotes1123x}
 
-## 11.2.3.2 - September 02, 2024
+## 11.2.3.2 - September 23, 2024
 {: #sep2024}
 
 
@@ -34,9 +34,11 @@ subcollection: netezza
 
     The `Recent Queries` page now shows queries submitted within the last 15 minutes by default. Queries remain visible for up to 24 hours, with a limit of 2,000 queries.
     {: note}
+
 - **Enhanced IdP configuration options:** Enhanced the `IdP configuration` page with dedicated tiles for streamlined management of `SAML` and `OIDC` configurations.
-  - Now, easily download certificates for signed authentication validation in `SAML` to simplify your setup and enhance security. For more details, see [`Configuring Signed Authentication on IdP`](/docs/netezza?topic=netezza-saml-docs#config_saoi).
-  - Support for signed authentication has been introduced for `SAML` in {{site.data.keyword.netezza_short}}, providing robust security for your configurations. For more details, see [`SAML`](/docs/netezza?topic=netezza-samloverview).
+    - Now, easily download certificates for signed authentication validation in `SAML` to simplify your setup and enhance security. For more details, see [`Configuring Signed Authentication on IdP`](/docs/netezza?topic=netezza-saml-docs#config_saoi).
+    - Support for signed authentication has been introduced for `SAML` in {{site.data.keyword.netezza_short}}, providing robust security for your configurations. For more details, see [`SAML`](/docs/netezza?topic=netezza-samloverview).
+- Introduced the new `nzprogress` command, allowing you to effortlessly view and track all ongoing plans in progress. See [Commands supported by the nz tool](/docs/netezza?topic=netezza-nztool#supported-cmds).
 
 ### Fixes
 {: #fixessep2024}
@@ -116,24 +118,6 @@ subcollection: netezza
 
     - when a clustered table has an organizing column of one of these types.
     - when a materialized view uses a column of one of these types in its `order by` clause.
-
-## 11.2.3.0 - IF1 - June 20, 2024
-{: #june2024}
-
-### Components
-{: #compsjune2024}
-
-- {{site.data.keyword.netezza_short}} 11.2.3.0-IF1
-- Web console 4.0.3.2
-
-### Fixes
-{: #fjun2024}
-
-- Fixed the incorrect results issue with restrictions on `CHAR`/`VARCHAR`/`NCHAR`/`NVARCHAR` columns in the following two cases:
-
-    - when a clustered table has an organizing column of one of these types.
-    - when a materialized view uses a column of one of these types in its `order by` clause.
-
 
 ## 11.2.3.0 - May 29, 2024
 {: #may2024}
