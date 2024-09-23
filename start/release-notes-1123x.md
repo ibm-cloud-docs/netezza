@@ -36,8 +36,8 @@ subcollection: netezza
     {: note}
 
 - **Enhanced IdP configuration options:** Enhanced the `IdP configuration` page with dedicated tiles for streamlined management of `SAML` and `OIDC` configurations.
-    - Now, easily download certificates for signed authentication validation in `SAML` to simplify your setup and enhance security. For more details, see [`Configuring Signed Authentication on IdP`](/docs/netezza?topic=netezza-saml-docs#config_saoi).
-    - Support for signed authentication has been introduced for `SAML` in {{site.data.keyword.netezza_short}}, providing robust security for your configurations. For more details, see [`SAML`](/docs/netezza?topic=netezza-samloverview).
+    - Now, easily download certificates for signed authentication validation in `SAML` to simplify your setup and enhance security. For more details, see [Configuring Signed Authentication on IdP](/docs/netezza?topic=netezza-saml-docs#config_saoi).
+    - Support for signed authentication has been introduced for `SAML` in {{site.data.keyword.netezza_short}}, providing robust security for your configurations. For more details, see [SAML](/docs/netezza?topic=netezza-samloverview).
 - Introduced the new `nzprogress` command, allowing you to effortlessly view and track all ongoing plans in progress. See [Commands supported by the nz tool](/docs/netezza?topic=netezza-nztool#supported-cmds).
 
 ### Fixes
