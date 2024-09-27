@@ -28,7 +28,7 @@ This is a collection of frequently asked questions (FAQ) about the {{site.data.k
 {: support}
 
 [Create a free IBM Cloud account](https://cloud.ibm.com/registration?target=%2Fcatalog%2Fservices%2Fdb2-warehouse).
-When you have the account, you can provision a {{site.data.keyword.netezza_short}} instance directly through the IBM Cloud® catalog.  
+When you have the account, you can provision a {{site.data.keyword.netezza_short}} instance directly through the IBM Cloud® catalog.
 For more information, see [Getting started with {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-getstarted).
 
 ## How do I generate or view credentials for my {{site.data.keyword.netezza_short}} instance?
@@ -36,17 +36,17 @@ For more information, see [Getting started with {{site.data.keyword.netezza_shor
 {: faq}
 {: support}
 
-To generate credentials, follow the steps: 
+To generate credentials, follow the steps:
 
 1. Log in to [IBM Cloud](https://cloud.ibm.com/) account.
 1. Go to **Resource list > Services and Software > Databases**.
-1. Click on your {{site.data.keyword.netezza_short}} instance.  
+1. Click on your {{site.data.keyword.netezza_short}} instance.
    You are now on the Service instance details page.
 1. Go to the **Service Credentials** tab.
 1. Click **New Credentials**.
 1. Type a name to assing to your credentials.
 1. Select the IAM role that was assigned to you to manage the instance.
-1. Click **Add**.  
+1. Click **Add**.
    If your credentials were generated successfully, you can view them now.
    Expand your credential entry. The following credentials were generated:
 
@@ -59,7 +59,7 @@ To view credentials, follow the steps:
 
 1. Log in to [IBM Cloud](https://cloud.ibm.com/) account.
 1. Go to **Resource list > Services and Software > Databases**.
-1. Click on your {{site.data.keyword.netezza_short}} instance.  
+1. Click on your {{site.data.keyword.netezza_short}} instance.
    You are now on the Service instance details page.
 1. Go to the **Service Credentials** tab.
 1. Expand the credential entry that is associated with the credentials that you generated previously.
@@ -81,7 +81,7 @@ For more information, see [Connecting to Netezza Performance Server](/docs/netez
 ## Can I set up spending notifications for my {{site.data.keyword.netezza_short}} instance to keep track of my credit usage?
 {: #spending_notifs}
 
-If you have an IBM Cloud® Pay-As-You-Go or Subscription account, you can set up email spending notifications. After your account is configured, you can configure spending thresholds and choose to receive notifications when you reach 80%, 90%, and 100% of the thresholds.  
+If you have an IBM Cloud® Pay-As-You-Go or Subscription account, you can set up email spending notifications. After your account is configured, you can configure spending thresholds and choose to receive notifications when you reach 80%, 90%, and 100% of the thresholds.
 For more information, see [Setting spending notifications](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-spending&interface=ui)
 
 ## What's managed for me with {{site.data.keyword.netezza_short}}?
@@ -130,9 +130,9 @@ For information about posting questions on a forum or opening a support ticket, 
 {: support}
 
 You can change the `Query History` password in 2 ways:
-- using query editor 
+- using query editor
 - using remote nzsql client
-  
+
 Use the following SQL syntax with admin or any user with administrator privilege:
 
 1. Determine the name of the existing `Query History` configuration. The configuration name is the first field returned:
@@ -152,6 +152,20 @@ y5neWx3HuL2k$w5DqbqJOp+Y= |                     5 |
 (1 rows)
 ```
 {: codeblock}
+
+
+
+ ```sql
+| CONFIG_NAME | CONFIG_DBNAME | CONFIG_DBTYPE | CONFIG_TARGETTYPE | CONFIG_LEVEL | CONFIG_HOSTNAME | CONFIG_USER | CONFIG_PASSWORD | CONFIG_LOADINTERVAL | CONFIG_LOADMINTHRESHOLD | CONFIG_LOADMAXTHRESHOLD | CONFIG_DISKFULLTHRESHOLD | CONFIG_STORAGELIMIT | CONFIG_LOADRETRY | CONFIG_ENABLEHIST | CONFIG_ENABLESYSTEM | CONFIG_NEXT | CONFIG_CURRENT | CONFIG_VERSION | CONFIG_COLLECTFILTER | CONFIG_KEYSTORE_ID | CONFIG_KEY_ID | KEYSTORE_NAME | KEY_ALIAS | CONFIG_NAME_DELIMITED | CONFIG_DBNAME_DELIMITED | CONFIG_USER_DELIMITED |
+|-------------|---------------|---------------|-------------------|--------------|-----------------|-------------|-----------------|---------------------|-------------------------|-------------------------|--------------------------|--------------------|-----------------|-------------------|---------------------|------------------|---------------|-----------------|----------------------|-------------------|------------------|---------------|-----------------------|------------------------|----------------------|
+| NZ_HIST     | HISTDB        | 1             | 1                 | 2            | localhost       |             | y5neWx3HuL2k$w5DqbqJOp+Y= | 5                     |                         |                         |                          |                    |                 |                   |                     |                |               |                 |                      |                   |                  |               |                       |                        |                      |
+| TESTUSER    |               |               |                   |              |                 |             |                 |                     |                         |                         |                          |                    |                 |                   |                     |                |               |                 |                      |                   |                  |               |                       |                        |                      |
+
+(1 rows)
+```
+{: codeblock}
+
+
 
 2. Create a configuration in which you disable `Query history` (with the `HISTTYPE` argument). For example, the following creates a configuration called hist_disabled:
 ```bash
@@ -181,7 +195,7 @@ SHOW HISTORY CONFIGURATION
 .
 .
 ---------------+---------------+---------------+-------------------+--------------+----------
- HIST_DISABLED |               |             3 |                 1 |            1 | localhost       |             |                 
+ HIST_DISABLED |               |             3 |                 1 |            1 | localhost       |             |
 .
 .
 .
