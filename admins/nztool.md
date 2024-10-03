@@ -82,7 +82,7 @@ The `nz` tool supports execution of select NPSaaS commands and Software Support 
 3. For more information about command shortcuts, including which commands can have shortcuts created, see [Creating nz shortcuts with the nz install command](/docs/netezza?topic=netezza-nztool#nzinstall-shortcuts).
 4. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the **-apiserver**, **-u**, and **-pw** options.
 
-Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload nz tool at least every other release.
+Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload `nz` tool at least every other release.
 {: note}
 
 <!-- With the upgrade to 11.2.3.1, you should now utilize `nzcli` versions from either 11.2.3.0 or 11.2.3.1.
