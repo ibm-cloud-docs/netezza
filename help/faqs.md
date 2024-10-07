@@ -15,6 +15,7 @@ content-type: faq
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
 {:support: data-reuse='support'}
+{:note: .note}
 
 # FAQs for {{site.data.keyword.netezza_short}}
 {: #netezza-faqs}
@@ -263,3 +264,6 @@ $ nzsql -c "SHOW HISTORY CONFIGURATION"
    $ nzstart
    ```
    {: codeblock}
+
+Open a [ticket](/docs/netezza?topic=netezza-tickets&interface=ui) to stop and start the database when resetting history user password.
+{: note}
