@@ -211,3 +211,55 @@ SET HISTORY CONFIGURATION
 9. Verify that the correct `Query History` configuration is once again active with the `SHOW HISTORY CONFIGURATION` command.
 
 For a complete description of each of the `Query History` commands, refer to the **IBM Netezza Database User’s Guide**.
+
+## How to check the name without using config name ALL_HIST?
+{: #example_allhist}
+
+Check your name by running below query:
+```bash
+$ nzsql -c "SHOW HISTORY CONFIGURATION"
+```
+{: codeblock}
+
+### Steps for changing the current configuration and update the password.
+{: #steps_configpswd}
+
+1. Set current configuration to hist_disabled.
+   ```bash
+   $ nzsql -c "set history configuration HIST_DISABLED"
+   ```
+   {: codeblock}
+
+1. Restart database.
+   ```bash
+   $ nzstop
+   ```
+   {: codeblock}
+
+   ```bash
+   $ nzstart
+   ```
+   {: codeblock}
+
+1. Change the password as follows.
+   ```bash
+   $ nzsql -c "ALTER HISTORY CONFIGURATION <QUERYHIST> PASSWORD '<new password>';"
+   ```
+   {: codeblock}
+
+1. Set current configuration to your current history database file. If all_hist is your configuration then change it as follows.
+   ```bash
+   $ nzsql -c "set history configuration all_hist"
+   ```
+   {: codeblock}
+
+1. Restart database.
+   ```bash
+   $ nzstop
+   ```
+   {: codeblock}
+
+   ```bash
+   $ nzstart
+   ```
+   {: codeblock}
