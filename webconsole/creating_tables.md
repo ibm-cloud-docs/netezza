@@ -112,7 +112,7 @@ You can choose different modes when you groom tables.
 |PAGES ALL | Identifies and marks the data pages in the table with no visible record as Empty to free up disk extents.|
 |PAGES START | Identifies and marks the leading data pages in the table with no visible record as Empty. Stops when it finds a non-empty data page.|
 |VERSIONS | Migrates records from previous table versions. Dropped columns do not appear and added columns show default values.|
-{: caption="Table 1. The table lists modes-related values and their definitions." caption-side="bottom"}
+{: caption="The table lists modes-related values and their definitions." caption-side="bottom"}
 
 ## Assigning owners to tables
 {: #assigning_tbl}

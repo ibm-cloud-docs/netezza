@@ -37,7 +37,7 @@ You can access database information by using the web console.
 |User tables    | Specifies the number of tables that are created in the database.|
 |Character set| Specifies the character set for the database.|
 |Created on | Specifies when the database was created.|
-{: caption="Table 1. The table lists database-related values and their definitions." caption-side="bottom"}
+{: caption="The table lists database-related values and their definitions." caption-side="bottom"}
 
 ## Creating databases
 {: #create-db}

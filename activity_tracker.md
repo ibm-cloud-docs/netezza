@@ -32,7 +32,7 @@ Currently, Activity Tracker with Log Analysis integration is available for {{sit
 |:----------|:---------|
 | Dallas | us-south |
 | Washington | us-north |
-{: caption="Table 1. Activity Tracker regions." caption-side="bottom"}
+{: caption="Activity Tracker regions." caption-side="bottom"}
 
 ## Activity Tracker through Log Analysis
 {: #at_logdna}
@@ -68,4 +68,4 @@ The following table lists the events that get sent to Activity Tracker from {{si
 | `<service-id>.resources.workerscale`| A compute scaling operation was performed. If the scaling operation failed, a "-failure" flag is included in the message. |
 | `<service-id>.system.pause`| System paused. If the operation failed, a "-failure" flag is included in the message. |
 | `<service-id>.system.resume`| System resumed. If the operation failed, a "-failure" flag is included in the message. |
-{: caption="Table 2. List of events and event descriptions." caption-side="bottom"}
+{: caption="List of events and event descriptions." caption-side="bottom"}

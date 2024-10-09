@@ -64,7 +64,7 @@ The *Users and groups* view displays all of your database user accounts and grou
 |Password expiration| Specifies when a user password expires.|
 |Created on | Specifies when the user was created.|
 |Authentication type| Specifies the authentication type.|
-{: caption="Table 1. The table lists group-related values and their definitions." caption-side="bottom"}
+{: caption="The table lists group-related values and their definitions." caption-side="bottom"}
 
 ### User actions
 {: #user-actions}
@@ -81,7 +81,7 @@ In the users list view, there is an overflow menu that lists the actions that ca
 |Admin privileges | View and grant admin privileges. |
 |Object privileges | View and grant object privileges. |
 |Remove | Delete the user account from the system.|
-{: caption="Table 1. The table lists user actions and their definitions." caption-side="bottom"}
+{: caption="The table lists user actions and their definitions." caption-side="bottom"}
 
 ### Granting admin privileges to users
 {: #grant-admin-users}
@@ -153,7 +153,7 @@ User privileges dictate what actions can be taken by a particular user account. 
 |Max priority| Specifies the workload management control that specifies the maximum priority that a user in the group can assign to sessions or queries.
 |Password expiration| Specifies when a group password expires.|
 |Created on | Specifies when the group was created.|
-{: caption="Table 1. The table lists group-related values and their definitions." caption-side="bottom"}
+{: caption="The table lists group-related values and their definitions." caption-side="bottom"}
 
 ### Groups actions
 {: #groups-actions}
@@ -169,7 +169,7 @@ In the Groups list view, there is an overflow menu that lists the actions that c
 |Admin privileges| View and grant admin privileges.|
 |Object privileges| View and grant object privileges.|
 |Remove | Delete the group from the system.|
-{: caption="Table 1. The table lists group-related actions and their definitions." caption-side="bottom"}
+{: caption="The table lists group-related actions and their definitions." caption-side="bottom"}
 
 ### Granting admin privileges to groups
 {: #grant-admin-groups}
