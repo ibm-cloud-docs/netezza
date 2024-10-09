@@ -38,39 +38,47 @@ Supported platforms for the `nz` tool:
 ## Downloading the nz tool
 {: #download-nz}
 
-Run the command:
+Following methods are for downloading `nz` tool:
 
-```sh
-curl -o nz -k https://<API Server URL>/<version number>/download/<platform specific package>
-chmod +x nz
-```
-{: codeblock}
+1. **Using command-line**
 
-   where the API Server URL is **API Server** URL details.
+   Run the command:
 
-   To retrieve this information, follow the steps:
+   ```sh
+   curl -o nz -k https://<API Server URL>/<version number>/download/<platform specific package>
+   chmod +x nz
+   ```
+   {: codeblock}
 
-   1. Log in to your IBM Cloud account.
+      where the API Server URL is **API Server** URL details.
 
-   2. Go to **Resource list** > **Services and Software** > **Databases**.
+      To retrieve this information, follow the steps:
 
-   3. Click your Netezza Performance Server instance. You are now on the **Service instance details** page. In the **Public Endpoints** section, you can find information (URL details) about endpoints for accessing the web console, the API server, and the database.
+      1. Log in to your IBM Cloud account.
 
-Examples:
+      2. Go to **Resource list** > **Services and Software** > **Databases**.
 
-To download `nz` on a Linux box, run:
+      3. Click your Netezza Performance Server instance. You are now on the **Service instance details** page. In the **Public Endpoints** section, you can find information (URL details) about endpoints for accessing the web console, the API server, and the database.
 
-```sh
-curl -o nz -k https://<API Server URL>/v2/download/nz-linux-amd64
-```
-{: codeblock}
+   Examples:
 
-To download `nz` on Windows, run:
+   To download `nz` on a Linux box, run:
 
-```sh
-curl.exe -o nz.exe -k https://<API Server URL>/v2/download/nz-windows-amd64
-```
-{: codeblock}
+   ```sh
+   curl -o nz -k https://<API Server URL>/v2/download/nz-linux-amd64
+   ```
+   {: codeblock}
+
+   To download `nz` on Windows, run:
+
+   ```sh
+   curl.exe -o nz.exe -k https://<API Server URL>/v2/download/nz-windows-amd64
+   ```
+   {: codeblock}
+
+1. **Using fix-central**
+
+   You can download the `nzcli` from [download](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=unpscpd-upgrading-netezza-performance-server-cloud-pak-data-11233).
 
 ## The nz syntax
 {: #nz-syntax}
