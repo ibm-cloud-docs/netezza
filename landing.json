@@ -1,37 +1,76 @@
 {
-    "title": "Netezza Performance Server",
-    "lastupdated": "2023-06-01",
-    "introduction": "Welcome to the Netezza Performance Server for Cloud Pak for Data as a Service product documentation.",
-    "section_recommended": [
+  "version": 2,
+  "title": "Netezza Performance Server",
+  "lastupdated": "2023-06-01",
+  "introduction": "Welcome to the Netezza Performance Server for Cloud Pak for Data as a Service product documentation.",
+  "product_page": "https://www.ibm.com/products/netezza",
+  "console_page": "https://test.cloud.ibm.com/",
+  "section_topics": {
+    "links": [
       {
-        "title": "Provision a service instance",
-        "description": "Learn how to create and deploy a Netezza Performance Server service instance.",
-        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-getstarted"
+        "title": "Getting started",
+        "href": "/docs/netezza?topic=netezza-getstarted"
       },
       {
-        "title": "Connecting to Netezza Performance Server",
-        "description": Learn how to connect to your instance.
-        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-connecting-overview"
-      {
-        "title": "Pause and resume instances",
-        "description": "Learn how to pause and resume your Netezza Performance Server instances.",
-        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-pauseresume"
+        "title": "Connecting to NPSaaS",
+        "href": "/docs/netezza?topic=netezza-connecting-overview"
       },
       {
-        "title": "Query data from data lakes",
-        "description": "Learn how to use external tables to access parquet files that are stored outside of your database in data lakes (on AWS S3), and analyze this data by using the robust and massively parallel Netezza Performance Server execution engine.",
-        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-overview_singularity"
+        "title": "Loading data to Netezza Performance Server",
+        "href": "/docs/netezza?topic=netezza-load-dbs"
       },
       {
-        "title": "Query historical data (time travel)",
-        "description": "Learn how to retrieve and analyze historical data without having to develop additional application logic such as history tables. With Netezza Performance Server time travel, you can access data that was changed or deleted at past points in time or within a past period of time.",
-        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-introducing_tt"
-
+        "title": "Supported SQL commands",
+        "href": "/docs/netezza?topic=netezza-sqlcommands_watsonx.data"
       },
       {
-        "title": "Web console",
-        "description": "Learn how to access and use the Netezza Performance Server web console.",
-        "href": "https://cloud.ibm.com/docs/netezza?topic=netezza-getstarted-console"
+        "title": "Backup and restore",
+        "href": "/docs/netezza?topic=netezza-bnr-overview"
+      },
+      {
+        "title": "Querying data from data lakes",
+        "href": "/docs/netezza?topic=netezza-overview_singularity"
+      },
+      {
+        "title": "Lakehouse integration",
+        "href": "/docs/netezza?topic=netezza-integratenps_watsonx.data"
+      },
+      {
+        "title": "Migrating on-premises backups to cloud",
+        "href": "/docs/netezza?topic=netezza-migrating-onprem-cloud"
+      },
+      {
+        "title": "FAQs for NPSaaS",
+        "href": "/docs/netezza?topic=netezza-netezza-faqs"
       }
     ]
+  },
+  "section_highlights": [
+    {
+      "title": "Blog",
+      "description": "Read about the latest and greatest, how-tos, best practices, and use cases from our experts and experienced product users.",
+      "href": "https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-blogs",
+      "type": "blog"
+    },
+    {
+      "title": "FAQ",
+      "description": "Here are some of the frequently asked questions, contact information, legal information, and support policies.",
+      "href": "https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-faq",
+      "type": "faq"
+    },
+    {
+      "title": "Community",
+      "description": "Connect with Netezza and other data experts to gain value from your data, share insights, and solve problems.",
+      "href": "https://community.ibm.com/community/user/datamanagement/communities/community-home",
+      "type": "community"
+    }
+  ],
+  "section_devtools": {
+    "api": "/docs/netezza?topic=netezza-connecting-overview",
+    "cli": "/docs/netezza?topic=netezza-nztool",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
+  },
+  "section_updates": {
+      "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x"
+      }
 }
