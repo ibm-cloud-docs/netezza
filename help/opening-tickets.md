@@ -33,12 +33,13 @@ By default, account users don't have access to create, update, search, or view c
 
 Complete the following steps to create a support case:
 
-1. In the web console, go to **Support > Contact support section**.
-1. Click **Create a case**.
-1. Select **All products**.
-1. Select **Netezza Performance Server**.
-1. Click **Next**.
-1. Provide the necessary information.
+1. Go to **Help > Support Center**.
+1. Click **Create a case** under **Contact Support** section.
+1. In the `Category` tab, select the category based on your issue.
+1. Provide the necessary information and click **Next**.
+1. In the `Topic` tab, select the topic and sub-topic and click **Next**.
+1. In the `Details` tab, provide the necessary information and click **Next**.
+1. Review the case in `Review` tab and click **Submit case**.
 
    To maintain security, do not include any personal information, sensitive data, or device or service credentials in case responses. For example, don't include passwords, API keys, secrets, or credit card information.
    {: important}
