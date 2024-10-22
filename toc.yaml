@@ -177,10 +177,10 @@ toc:
           - admins/nztool.md
           - link:
               label: Netezza Performance Server commands
-              href: https://www.ibm.com/docs/en/netezza?topic=interface-netezza-performance-server-commands
+              href: https://www.ibm.com/docs/en/netezza?topic=interfaces-command-line-interface
           - link:
               label: The nzsql command
-              href: https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2
+              href: https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command
           - link:
               label: SQL commands
               href: https://www.ibm.com/docs/en/netezza?topic=dud-netezza-performance-server-sql-command-reference-2
