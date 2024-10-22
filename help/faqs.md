@@ -225,45 +225,26 @@ $ nzsql -c "SHOW HISTORY CONFIGURATION"
 ### Steps for changing the current configuration and update the password.
 {: #steps_configpswd}
 
-1. Set current configuration to hist_disabled.
+1. Set the current configuration to `hist_disabled`.
    ```bash
    $ nzsql -c "set history configuration HIST_DISABLED"
    ```
    {: codeblock}
 
-1. Restart database.
-   ```bash
-   $ nzstop
-   ```
-   {: codeblock}
-
-   ```bash
-   $ nzstart
-   ```
-   {: codeblock}
-
+1. Restart the database.
 1. Change the password as follows.
    ```bash
    $ nzsql -c "ALTER HISTORY CONFIGURATION <QUERYHIST> PASSWORD '<new password>';"
    ```
    {: codeblock}
 
-1. Set current configuration to your current history database file. If all_hist is your configuration then change it as follows.
+1. Set the current configuration to your current history database file. If `all_hist` is your configuration then change it as follows:
    ```bash
    $ nzsql -c "set history configuration all_hist"
    ```
    {: codeblock}
 
-1. Restart database.
-   ```bash
-   $ nzstop
-   ```
-   {: codeblock}
-
-   ```bash
-   $ nzstart
-   ```
-   {: codeblock}
-
+1. Restart the database.
+   
 Open a [ticket](/docs/netezza?topic=netezza-tickets&interface=ui) to stop and start the database when resetting history user password.
 {: note}
