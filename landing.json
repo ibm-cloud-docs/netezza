@@ -1,10 +1,9 @@
 {
   "version": 2,
   "title": "Netezza Performance Server",
-  "lastupdated": "2023-06-01",
   "introduction": "Welcome to the Netezza Performance Server for Cloud Pak for Data as a Service product documentation.",
   "product_page": "https://www.ibm.com/products/netezza",
-  "console_page": "https://cloud.ibm.com/",
+  "console_page": "/nzsaas/create",
   "section_topics": {
     "links": [
       {
@@ -34,14 +33,6 @@
       {
         "title": "Lakehouse integration",
         "href": "/docs/netezza?topic=netezza-integratenps_watsonx.data"
-      },
-      {
-        "title": "Migrating on-premises backups to cloud",
-        "href": "/docs/netezza?topic=netezza-migrating-onprem-cloud"
-      },
-      {
-        "title": "FAQs for NPSaaS",
-        "href": "/docs/netezza?topic=netezza-netezza-faqs"
       }
     ]
   },
@@ -56,31 +47,24 @@
       "title": "FAQ",
       "description": "Here are some of the frequently asked questions, contact information, legal information, and support policies.",
       "href": "https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-faq",
-      "type": "faq"
-    },
-    {
-      "title": "Community",
-      "description": "Connect with Netezza and other data experts to gain value from your data, share insights, and solve problems.",
-      "href": "https://community.ibm.com/community/user/datamanagement/communities/community-home",
-      "type": "community"
+      "type": "blog"
     }
   ],
   "section_devtools": {
-    "api": "/docs/netezza?topic=netezza-connecting-overview",
     "cli": "/docs/netezza?topic=netezza-nztool",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
   },
   "section_updates": {
       "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
       "tiles": [
-        {
-          "date": "23 September 2024",
-          "title": "Introduced the new nzprogress command, allowing you to effortlessly view and track all ongoing plans in progress."
-        },
-        {
-          "date": "02 August 2024",
-          "title": "Introduced new feature in AWS network policies for Ingress connections."
-        }
-              ]
-      }
+          {
+              "date": "23 September 2024",
+              "title": "Introduced the new nzprogress command, allowing you to effortlessly view and track all ongoing plans in progress."
+          },
+          {
+              "date": "02 August 2024",
+              "title": "Introduced new feature in AWS network policies for Ingress connections."
+          }
+      ]
+  }
 }
