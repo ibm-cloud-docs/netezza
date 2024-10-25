@@ -23,6 +23,9 @@ subcollection: netezza
 
 On the *Network policies* page, you can add policies and view existing policies.
 
+**Network policies** and **Private link** tabs are applicable only for Azure. 
+{: note}
+
 You can add network policies if you belong to the `ADMINISTRATORS` group.
 {: note}
 
