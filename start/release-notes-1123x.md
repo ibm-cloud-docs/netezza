@@ -22,6 +22,24 @@ subcollection: netezza
 # 11.2.3.x
 {: #my-service-relnotes1123x}
 
+## 11.2.3.3 - November 18, 2024
+{: #nov2024}
+
+
+### New features and enhancements
+{: #nfnov2024}
+
+- **Updated recent queries page:** Gain clearer insights into your queries with the addition of error type visibility for query failures.
+
+    The `Recent Queries` page now shows queries submitted within the last 15 minutes by default. Queries remain visible for up to 24 hours, with a limit of 2,000 queries.
+    {: note}
+
+### Fixes
+{: #fixesnov2024}
+
+- **Time zone handling:** Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
+
+
 ## 11.2.3.2 - September 23, 2024
 {: #sep2024}
 
