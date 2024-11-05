@@ -123,3 +123,61 @@ For information about posting questions on a forum or opening a support ticket, 
 - [IBM Cloud® support forum](https://www.ibm.com/mysupport/s/forumshome?language=en_US)
 
 - [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/hybriddatamanagement/home)
+
+## How far can prolife be scaled up?
+{: #profile-scaleup}
+{: faq}
+{: support}
+
+From `NC-START`, we can scale up the workload contour to NC0.
+
+## How far can profile be scaled up from the current configuration?
+{: #profile-scaleup-config}
+{: faq}
+{: support}
+
+Starting from the NC-START configuration, you can scale the workload contour up to NC0.
+
+## What is the maximum storage scaling limit?
+{: #storage-scaling-limit}
+{: faq}
+{: support}
+
+Within the NC-START workload contour, storage can be scaled up to 1200 GB. However, if you also scale the workload contour to NC0, storage capacity can be increased from 2400 GB up to 24000 GB.
+
+## What is the procedure for scaling up?
+{: #procedure-scaleup}
+{: faq}
+{: support}
+
+For detailed scaling procedures, please refer to the following documentation:  
+To scale storage within the NC-START contour, see [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).  
+To scale the workload contour to NC0, see [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
+
+## How long does scaling up take?
+{: #duration-scaleup}
+{: faq}
+{: support}
+
+Scaling storage itself does not take six hours. However, a six-hour cooling period is required between consecutive storage scaling attempts. This is the minimum wait time before initiating another scaling process.
+
+## Can I scale up without affecting the current database configuration and data?
+{: #scaleup-without-dbconfig}
+{: faq}
+{: support}
+
+Yes, you can scale up while preserving the current database configuration and existing table data.
+
+## After scaling up profile to NC0, is it possible to revert to `NC-START`?
+{: #profile-scaleup-ncstart}
+{: faq}
+{: support}
+
+No, once you scale up from NC-START to NC0, you cannot revert to NC-START.
+
+## Is it possible to scale down storage after increasing it from 400 GB?
+{: #profile-scaledown}
+{: faq}
+{: support}
+
+No, once storage has been scaled up, it cannot be scaled down.
