@@ -40,7 +40,7 @@ Set your authentication method to `OIDC` with the [`REGISTER EXTERNAL AUTHENTICA
 {: #setting_oidc_wc}
 
 1. Log in to the Netezza UI as a user who is part of an administrative group.<!--See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).-->
-1. Go to `IdP configuration` page.
+1. Go to `Settings` tab.
 1. Click on `OIDC` to enable `OIDC` authentication.
 
 
