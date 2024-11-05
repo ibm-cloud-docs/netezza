@@ -161,7 +161,7 @@ To scale the workload contour to NC0, see [NC-START to NC0 Contour Scaling Guide
 
 Scaling storage itself does not take six hours. However, a six-hour cooling period is required between consecutive storage scaling attempts. This is the minimum wait time before initiating another scaling process.
 
-## Can I scale up without affecting the current database configuration and data?
+## Is it possible to scale up without affecting the current database configuration and data?
 {: #scaleup-without-dbconfig}
 {: faq}
 {: support}
