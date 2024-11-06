@@ -26,7 +26,7 @@ subcollection: netezza
 
 On the page, you can see the most recent 2000 queries.
 
-You do not need to have the administrator privileges to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements. 
+You do not need to have the administrator privileges to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
 
 ### Creating queries
@@ -162,3 +162,8 @@ When you are on the **Query history** page, you can do the following:
 
 - **Client accounting string**
    Specifies the accounting string of the client that ran the query.
+
+## Query cancellation
+{: #query-cancellation}
+
+When you execute a long running query from query editor, you can cancel the query until the time it is in execution by a simple click of the button. The cancellation now work for short queries.

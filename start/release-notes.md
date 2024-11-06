@@ -22,6 +22,29 @@ subcollection: netezza
 # 11.2.3.x
 {: #my-service-relnotes1123x}
 
+## 11.2.3.3 - November 18, 2024
+{: #nov2024}
+
+
+### New features and enhancements
+{: #nfnov2024}
+
+Query cancellation:
+
+This release introduces feature to cancel long running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
+
+Database assistant:
+
+This release starts a public tech preview of Netezza Database Assistant chatbot which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. Fore more information, see [Database assistant](/docs/netezza?topic=database-assistant).
+
+`IdP configuration` is not part of **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [etting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
+
+### Fixes
+{: #fixesnov2024}
+
+- **Time zone handling:** Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
+
+
 ## 11.2.3.2 - September 23, 2024
 {: #sep2024}
 
