@@ -35,7 +35,7 @@ Database assistant
 :   This release starts a public tech preview of Netezza Database Assistant chatbot which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. Fore more information, see [Database assistant](/docs/netezza?topic=netezza-netezza-db-assistant).
 
 IdP configuration
-:   This page is now part of **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [etting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
+:   This page is now part of **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [Setting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
 
 Known issue
 :   Database object names connected to watsonx.data currently support only alphanumeric characters and underscores. However, special characters are fully supported for attribute names and data values.
