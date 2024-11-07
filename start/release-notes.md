@@ -22,33 +22,30 @@ subcollection: netezza
 # 11.2.3.x
 {: #my-service-relnotes1123x}
 
-## 11.2.3.3 - November 18, 2024
+## 18 November 2024 - 11.2.3.3
 {: #nov2024}
 {: release-note}
 
 Query cancellation
-
-: This release introduces feature to cancel long running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
+:   This release introduces feature to cancel long running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
 
 Database assistant
+:   This release starts a public tech preview of Netezza Database Assistant chatbot which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. Fore more information, see [Database assistant](/docs/netezza?topic=netezza-netezza-db-assistant).
 
-: This release starts a public tech preview of Netezza Database Assistant chatbot which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. Fore more information, see [Database assistant](/docs/netezza?topic=netezza-netezza-db-assistant).
-
-`IdP configuration` is now part of **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [etting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
+IdP configuration
+:   This page is now part of **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [etting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
 
 Fixes
+:   Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
 
-: Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
 
-
-## 11.2.3.2 - September 23, 2024
+## September 23 2024 - 11.2.3.2
 {: #sep2024}
 
 
 ### New features and enhancements
 {: #nfsep2024}
 
-<!-- - **New user interface enhancements:** Experience greater flexibility with the option to switch between database time, local time zone, and UTC. Tailor your view to match your needs effortlessly. -->
 - **Updated recent queries page:** Gain clearer insights into your queries with the addition of error type visibility for query failures.
 
     The `Recent Queries` page now shows queries submitted within the last 15 minutes by default. Queries remain visible for up to 24 hours, with a limit of 2,000 queries.
