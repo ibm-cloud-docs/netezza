@@ -37,9 +37,8 @@ Database assistant
 IdP configuration
 :   This page is now part of **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [etting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
 
-Fixes
-:   Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
-
+Known issue
+:   Database object names connected to watsonx.data currently support only alphanumeric characters and underscores. However, special characters are fully supported for attribute names and data values.
 
 ## September 23 2024 - 11.2.3.2
 {: #sep2024}
