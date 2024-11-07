@@ -19,7 +19,7 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# 11.2.3.x
+# Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
 ## 18 November 2024 - 11.2.3.3
