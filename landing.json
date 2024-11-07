@@ -55,6 +55,20 @@
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
   },
   "section_updates": {
-      "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x"
+      "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
+      "tiles": [
+          {
+              "date": "18 November 2024",
+              "title": "Introduces a feature to cancel the long running queries executed from the query editor."
+          },
+          {
+              "date": "23 September 2024",
+              "title": "Introduced the new nzprogress command, allowing you to effortlessly view and track all ongoing plans in progress."
+          },
+          {
+              "date": "02 August 2024",
+              "title": "Introduced new feature in AWS network policies for Ingress connections."
+          }
+      ]
   }
 }
