@@ -38,7 +38,7 @@ Database assistant
 
 Fixes
 
-- **Time zone handling:** Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
+: Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
 
 
 ## 11.2.3.2 - September 23, 2024
