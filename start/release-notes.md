@@ -26,8 +26,6 @@ subcollection: netezza
 {: #nov2024}
 {: release-note}
 
-**New features and enhancements**
-
 Query cancellation
 
 : This release introduces feature to cancel long running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
@@ -38,8 +36,7 @@ Database assistant
 
 `IdP configuration` is now part of **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [etting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
 
-### Fixes
-{: #fixesnov2024}
+Fixes
 
 - **Time zone handling:** Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
 
