@@ -59,7 +59,7 @@
       "tiles": [
           {
               "date": "18 November 2024",
-              "title": "Introduces a feature to cancel the long running queries executed from the query editor."
+              "title": "Introduced a feature to cancel the long running queries executed from the query editor."
           },
           {
               "date": "23 September 2024",
