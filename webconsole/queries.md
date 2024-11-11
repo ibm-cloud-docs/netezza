@@ -26,13 +26,13 @@ subcollection: netezza
 
 On the page, you can see the most recent 2000 queries.
 
-You do not need to have the administrator privileges to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
+The administrator privileges are not necessary to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
 
 ### Creating queries
 {: #create-queries}
 
-1. Go to **Queries**.
+1. Go to **Query editor**.
 1. Type a name for your query.
 1. Select the database in which you want to run the query.
 1. Select the schema where you want to run the query.
@@ -61,13 +61,13 @@ You do not need to have the administrator privileges to view recent queries. You
 1. Go to **Queries > Recent queries**.
 1. Type the name of the query you are looking for in the search bar.
 
-### Deleting queries
+<!-- ### Deleting queries
 {: #delete-queries}
 
 1. Go to **Queries**.
 1. Select a query.
 1. From the overflow menu, click **Remove**.
-1. Confirm your choice by clicking **Remove** again.
+1. Confirm your choice by clicking **Remove** again. -->
 
 ## Query history
 {: #query-history}
@@ -148,7 +148,7 @@ When you are on the **Query history** page, you can do the following:
 - **Resource group name**
    Specifies the resource group on which the query ran.
 
-- **Session ID**
+<!-- - **Session ID**
    Specifies the ID of the session in which the query ran.
 
 - **Client user ID**
@@ -161,7 +161,7 @@ When you are on the **Query history** page, you can do the following:
    Specifies the client workstation name from which the query originates.
 
 - **Client accounting string**
-   Specifies the accounting string of the client that ran the query.
+   Specifies the accounting string of the client that ran the query.-->
 
 ## Query cancellation
 {: #query-cancellation}
