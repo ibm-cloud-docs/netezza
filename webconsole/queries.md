@@ -24,10 +24,19 @@ subcollection: netezza
 ## Recent queries
 {: #recent-queries}
 
-On the page, you can see the most recent 2000 queries.
-
 The administrator privileges are not necessary to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
+**Filter - "Submitted within last:"**
+
+- Success Ratio: Represents the ratio of queries executed within the selected time span. This metric calculates the total number of queries fired against the number of completed and failed queries (with varying failure reasons).
+- Databases: Displays the total number of queries fired on the databases during the selected time span.
+- Users:
+
+   - For Admin users: Displays the total number of queries fired by all users within the selected time span.
+   - For Non-admin users: Shows the total number of queries fired by the individual user within the selected time span.
+
+The number of queries displayed is limited to a maximum of 2,000.
+{: note}
 
 ### Creating queries
 {: #create-queries}
