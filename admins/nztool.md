@@ -225,6 +225,7 @@ nz_ddl_user
 nz_ddl_view
 nz_ddl_view+
 nz_dimension_or_fact
+nz_event_runAwayQuery
 nz_find_32bit_udx
 nz_find_control_chars_in_data
 nz_find_non_integer_strings
@@ -380,6 +381,7 @@ nz_view_plan_file
 nz_view_references
 nz_wrapper
 nz_zonemap
+
 ```
 {: screen}
 
