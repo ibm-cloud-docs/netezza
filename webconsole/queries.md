@@ -24,7 +24,7 @@ subcollection: netezza
 ## Recent queries
 {: #recent-queries}
 
-The administrator privileges are not necessary to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
+The administrator privileges are not necessary to view recent queries. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
 **Filter - "Submitted within last:"**
 
