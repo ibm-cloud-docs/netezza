@@ -25,11 +25,13 @@ subcollection: netezza
 ## Secure access control
 {: #access_control}
 
-**Authentication**
+### Authentication
+{: #auth_sec_compl}
 
 Both [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoint) and [private](/docs/netezza?topic=netezza-connecting-overview#private_endpoint) {{site.data.keyword.netezza_short}} endpoints are accessed through an HTTPS API. Where the API endpoint requires it, the user is authenticated for every HTTPS request that {{site.data.keyword.netezza_short}} receives.
 
-**Encryption**
+### Encryption
+{: #encryptiom_sec_compl}
 
 When transmitted, content is encrypted on any public networks by using TLS 1.2 or later.  
 For more information, see [Data security and encryption](/docs/netezza?topic=netezza-data-encryption).

@@ -35,8 +35,7 @@ If you want to back up and restore a specific database, you must ensure the foll
 {: #run-backups-ondemand}
 
 1. Go to **Backup and restore > Backup**.
-1. Make sure that a destination bucket for the backups is created.
-  For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).
+1. Make sure that a destination bucket for the backups is created. For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).
 
 1. Select a destination bucket for your backup.
 1. Select the backup type.
@@ -51,8 +50,7 @@ If you want to back up and restore a specific database, you must ensure the foll
 {: #schedule-backups}
 
 1. Go to **Backup and restore > Backup**.
-1. Make sure that a destination bucket for the backups is created.
-   For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).
+1. Make sure that a destination bucket for the backups is created. For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).
 
 1. Select a destination bucket for your backup.
 1. Select the backup type.

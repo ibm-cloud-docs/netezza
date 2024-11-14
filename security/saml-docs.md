@@ -69,5 +69,6 @@ The following `SAML` configuration steps are generic. Users can follow similar s
 1. Click `Download Certificate` button in the Netezza UI under `IdP configuration -> SAML`.
 
     An user with admin privileges can only download the authentication certificate.
-        {: note}
+    {: note}
+    
 1. Upload this certificate to `IdP` portal for signed authentication configuration.
