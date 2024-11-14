@@ -28,7 +28,7 @@ This is a collection of frequently asked questions (FAQ) about the {{site.data.k
 {: support}
 
 [Create a free IBM Cloud account](https://cloud.ibm.com/registration?target=%2Fcatalog%2Fservices%2Fdb2-warehouse).
-When you have the account, you can provision a {{site.data.keyword.netezza_short}} instance directly through the IBM Cloud® catalog.  
+When you have the account, you can provision a {{site.data.keyword.netezza_short}} instance directly through the IBM Cloud® catalog.
 For more information, see [Getting started with {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-getstarted).
 
 ## How do I generate or view credentials for my {{site.data.keyword.netezza_short}} instance?
@@ -36,17 +36,17 @@ For more information, see [Getting started with {{site.data.keyword.netezza_shor
 {: faq}
 {: support}
 
-To generate credentials, follow the steps: 
+To generate credentials, follow the steps:
 
 1. Log in to [IBM Cloud](https://cloud.ibm.com/) account.
 1. Go to **Resource list > Services and Software > Databases**.
-1. Click on your {{site.data.keyword.netezza_short}} instance.  
+1. Click on your {{site.data.keyword.netezza_short}} instance.
    You are now on the Service instance details page.
 1. Go to the **Service Credentials** tab.
 1. Click **New Credentials**.
 1. Type a name to assing to your credentials.
 1. Select the IAM role that was assigned to you to manage the instance.
-1. Click **Add**.  
+1. Click **Add**.
    If your credentials were generated successfully, you can view them now.
    Expand your credential entry. The following credentials were generated:
 
@@ -59,7 +59,7 @@ To view credentials, follow the steps:
 
 1. Log in to [IBM Cloud](https://cloud.ibm.com/) account.
 1. Go to **Resource list > Services and Software > Databases**.
-1. Click on your {{site.data.keyword.netezza_short}} instance.  
+1. Click on your {{site.data.keyword.netezza_short}} instance.
    You are now on the Service instance details page.
 1. Go to the **Service Credentials** tab.
 1. Expand the credential entry that is associated with the credentials that you generated previously.
@@ -81,8 +81,8 @@ For more information, see [Connecting to Netezza Performance Server](/docs/netez
 ## Can I set up spending notifications for my {{site.data.keyword.netezza_short}} instance to keep track of my credit usage?
 {: #spending_notifs}
 
-If you have an IBM Cloud® Pay-As-You-Go or Subscription account, you can set up email spending notifications. After your account is configured, you can configure spending thresholds and choose to receive notifications when you reach 80%, 90%, and 100% of the thresholds.  
-For more information, see [Setting spending notifications](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-spending&interface=ui)
+If you have an IBM Cloud® Pay-As-You-Go or Subscription account, you can set up email spending notifications. After your account is configured, you can configure spending thresholds and choose to receive notifications when you reach 80%, 90%, and 100% of the thresholds.
+For more information, see [Setting spending notifications](/docs/account?topic=account-spending).
 
 ## What's managed for me with {{site.data.keyword.netezza_short}}?
 {: #whats-managed}
@@ -103,7 +103,7 @@ In the event of a hardware or software failure, the service is automatically res
 
 - In addition to the IBM Cloud documentation site, there is a wide range of information about the underlying {{site.data.keyword.netezza_short}} engine functionality in the [IBM Documentation](https://www.ibm.com/docs/en/netezza).
 
-- Updates to the service are posted in the [Release notes](https://www.ibm.com/docs/en/netezza?topic=server-netezza-release-notes).
+- Updates to the service are posted in the [Release notes](https://www.ibm.com/docs/en/netezza?topic=started-netezza-performance-server-release-notes).
 
 - You can find pricing information one the IBM Cloud [catalog](https://cloud.ibm.com/catalog#services) page.
 
@@ -131,7 +131,7 @@ For information about posting questions on a forum or opening a support ticket, 
 
 From `NC-START`, we can scale up the workload contour to NC0.
 
-## How much can storage be scaled up from an NC-START configuration with 400 GB storage density on AWS? 
+## How much can storage be scaled up from an NC-START configuration with 400 GB storage density on AWS?
 {: #profile-scaleup-config}
 {: faq}
 {: support}

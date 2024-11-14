@@ -45,7 +45,7 @@ If you alter **DATA_VERSION_RETENTION_TIME** of an existing temporal table to ze
 ## Limitations
 {: #limitations_tt}
 
-Changes to retention time intervals for tables, schemas, and databases are not replicated from primary to replica nodes. They are not historical (deleted) table rows either.  
+Changes to retention time intervals for tables, schemas, and databases are not replicated from primary to replica nodes. They are not historical (deleted) table rows either.
 
 Retention time intervals of tables, schemas, and databases are automatically backed up by the `nzbackup` command and restored by the `nzrestore` command. The insert and delete timestamps of table rows are not backed up and restored. Restored rows get fresh insert timestamps in the target database or system, and rows that were deleted by incremental restore get fresh delete timestamps in the target database or system. There is no expectation or guarantee that the number of historical versions of a row on the target will match that on the source database. For example, a specific row might get updated multiple times, or get updated and then deleted, between backup increments on the source. This actions result in a single delete of that row on the target.
 
@@ -60,13 +60,13 @@ The following types of tables cannot be temporal tables:
 
 This limitation affects the following commands:
 
-- [**CREATE TABLE ROW SECURITY**](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2), [**CREATE EXTERNAL TABLE**](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-external-table-2), **CREATE TEMPORARY TABLE**  
+- [**CREATE TABLE ROW SECURITY**](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2), [**CREATE EXTERNAL TABLE**](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-external-table-2), **CREATE TEMPORARY TABLE**
     If **DATA_VERSION_RETENTION_TIME** is specified to a nonzero value, the commands fail.
 
-- [**ALTER TABLE DATA_VERSION_RETENTION_TIME**](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)  
+- [**ALTER TABLE DATA_VERSION_RETENTION_TIME**](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)
     If the table is a temporary, row-secure, versioned, or an external table and **DATA_VERSION_RETENTION_TIME** is specified with a nonzero value, the command fails.
 
-- [**ALTER TABLE ADD COLUMN**](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2), [**ALTER TABLE DROP COLUMN**](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)  
+- [**ALTER TABLE ADD COLUMN**](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2), [**ALTER TABLE DROP COLUMN**](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2)
     If the table has a nonzero **DATA_VERSION_RETENTION_TIME** specified, the command fails.
 
 The [**GROOM TABLE VERSIONS**](https://www.ibm.com/docs/en/netezza?topic=npsscr-groom-table-2) command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
@@ -184,7 +184,7 @@ To create a temporal schema, set **retention time interval** to a nonzero value.
 To create a temporal database, set **retention time interval** to a nonzero value.
 
 1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
-1. Create a temporal database as described in [Creating databases](/docs/netezza?topic=netezza-create-db).
+1. Create a temporal database as described in [Creating databases](/docs/netezza?topic=netezza-databases).
 
 ## Altering time travel objects with the command-line
 {: #alteringobjects_tt}

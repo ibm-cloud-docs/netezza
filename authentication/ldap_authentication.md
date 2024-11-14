@@ -25,7 +25,7 @@ subcollection: netezza
 # Setting LDAP authentication
 {: #ldapauth}
 
-Set your authentication method to `LDAP` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
+Set your authentication method to `LDAP` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system){: external}.
 {: shortdesc}
 
 Two factor authentication is not supported with an external authentication system.

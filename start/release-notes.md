@@ -524,7 +524,7 @@ As of May 20, 2022, workload enhancements and network policies support is added.
 ### Known issues
 {: #kimay2022}
 
-- Netezza SQL Editor does not accept input for query requests. You can construct equivalent query requests by using [the command line](https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface).
+- Netezza SQL Editor does not accept input for query requests. You can construct equivalent query requests by using [the command line](https://www.ibm.com/docs/en/netezza?topic=interfaces-command-line-interface).
 
 ## March 2022
 {: #march2022}
@@ -532,4 +532,4 @@ As of May 20, 2022, workload enhancements and network policies support is added.
 As of March 17, 2022, the {{site.data.keyword.netezza_short}} web console is available in the following languages: English, German, French, Spanish, Italian, Brazilian, Japanese, Chinese Simplified, Chinese Traditional, and Korean.
 
 
-For release notes for other {{site.data.keyword.netezza_short}} deployment options, see [this page](https://www.ibm.com/docs/en/netezza?topic=netezza-release-notes).
+For release notes for other {{site.data.keyword.netezza_short}} deployment options, see [this page](https://www.ibm.com/docs/en/netezza?topic=started-netezza-performance-server-release-notes).

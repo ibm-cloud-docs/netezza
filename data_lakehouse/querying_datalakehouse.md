@@ -29,7 +29,7 @@ subcollection: netezza
 ## Before you begin
 {: #prereqsdlh1}
 
-In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into {{site.data.keyword.lakehouse_short}} into an Apache Iceberg table in the Hive Metastore server (HMS).
+In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page){: external} for yellow taxis in January 2021 and 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket and the table was loaded into {{site.data.keyword.lakehouse_short}} into an Apache Iceberg table in the Hive Metastore server (HMS).
 
 ## 1. Create a database by using the required `metastoreuri`.
 {: #create_database}
@@ -126,9 +126,9 @@ LOCATIONID | PAYMENT_TYPE | FARE_AMOUNT | EXTRA | MTA_TAX | TIP_AMOUNT | TOLLS_A
 ----------+----------------------+-----------------------+-----------------+---------------+------------+--------------------+--------------+---
 -----------+--------------+-------------+-------+---------+------------+--------------+-----------------------+--------------+------------------
 ----+-------------
-        1 | 2021-01-01 00:30:10  | 2021-01-01 00:36:12   |               1 |           2.1 |          1 | N                  |          142 |   
-        43 |            2 |           8 |     3 |     0.5 |          0 |            0 |                   0.3 |         11.8 |                  
-2.5 |            
+        1 | 2021-01-01 00:30:10  | 2021-01-01 00:36:12   |               1 |           2.1 |          1 | N                  |          142 |
+        43 |            2 |           8 |     3 |     0.5 |          0 |            0 |                   0.3 |         11.8 |
+2.5 |
 (1 row)
 ```
 {: codeblock}
@@ -143,7 +143,7 @@ LOCATIONID | PAYMENT_TYPE | FARE_AMOUNT | EXTRA | MTA_TAX | TIP_AMOUNT | TOLLS_A
    Output:
 
    ```sql
-   SUM   
+   SUM
    ---------
    3324167
    (1 row)
@@ -164,8 +164,8 @@ LOCATIONID | PAYMENT_TYPE | FARE_AMOUNT | EXTRA | MTA_TAX | TIP_AMOUNT | TOLLS_A
    ----------+------------
           2 |     122251
           1 |      40807
-          6 |           
-          5 |           
+          6 |
+          5 |
    (4 rows)
    ```
    {: codeblock}

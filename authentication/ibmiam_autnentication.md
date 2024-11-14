@@ -24,13 +24,13 @@ subcollection: netezza
 # Setting IBM IAM authentication
 {: #ibmiamauth}
 
-Set your authentication method to `IBMIAM` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
+Set your authentication method to `IBMIAM` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system){: external}.
 {: shortdesc}
 
 Two factor authentication is not supported with an external authentication system.
 {: important}
 
-See also [Managing IAM access](docs/netezza?topic=netezza-iam-docs).
+See also [Managing IAM access](/docs/netezza?topic=netezza-iam-docs).
 
 ## Syntax
 {: #ibmiamsyntax}
