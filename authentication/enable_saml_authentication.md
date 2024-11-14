@@ -83,6 +83,7 @@ Set your authentication method to `SAML` with the [`REGISTER EXTERNAL AUTHENTICA
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
    | user           | Specifies the username.      |
    | password       | Specifies the password. |
+   {: caption="Example"}
 
    Example:
 

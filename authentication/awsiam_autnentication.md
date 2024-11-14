@@ -87,6 +87,7 @@ Enabling AWS IAM authentication only needs to be done once.
    | nps_hostname    | Specifies the IP address of your instance.  \n To retrieve `NPS HOSTNAME`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
    | user           | Specifies the username.      |
    | password       | Specifies the password. |
+   {: caption="Example"}
 
 1. As an admin, set up the `AWSIAM` external authentication system for initial registration only.
 
