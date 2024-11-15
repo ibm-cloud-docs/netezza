@@ -107,7 +107,7 @@ In the event of a hardware or software failure, the service is automatically res
 
 - You can find pricing information one the IBM Cloud [catalog](https://cloud.ibm.com/catalog#services) page.
 
-For more information, contact [IBM Sales](https://www.ibm.com/contact/us/en/).
+For more information, contact [IBM Sales](https://www.ibm.com/contact).
 
 ## Where can I find help for a problem that I'm having?
 {: #finding-help}
@@ -122,7 +122,7 @@ For information about posting questions on a forum or opening a support ticket, 
 
 - [IBM Cloud® support forum](https://www.ibm.com/mysupport/s/forumshome?language=en_US)
 
-- [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/hybriddatamanagement/home)
+- [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/datamanagement/home)
 
 ## How far can prolife be scaled up?
 {: #profile-scaleup}

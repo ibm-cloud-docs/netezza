@@ -25,7 +25,7 @@ subcollection: netezza
 # Endpoints
 {: #endpoints}
 
-{{site.data.keyword.netezza_full}} offers a choice of [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoint), [private](/docs/netezza?topic=netezza-connecting-overview#private_endpoint), or both public and private endpoints.
+{{site.data.keyword.netezza_full}} offers a choice of [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoints), [private](/docs/netezza?topic=netezza-connecting-overview#private_endpoints), or both public and private endpoints.
 
 Public network service endpoints are accessible from anywhere on the internet. Private network service endpoint access traverses only the cloud platform backbone network, not the public internet.
 {: shortdesc}

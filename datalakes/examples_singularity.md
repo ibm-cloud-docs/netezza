@@ -29,7 +29,7 @@ subcollection: netezza
 ## Before you begin
 {: #prereqs1}
 
-In the examples, the publicly available [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis in January 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
+In the examples, the publicly available [*New York taxi trip* record data](https://www.nyc.gov:443/site/tlc/about/tlc-trip-record-data.page) {: external} for yellow taxis in January 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
 
 ## 1. Create an external data source.
 {: #create_ds1}

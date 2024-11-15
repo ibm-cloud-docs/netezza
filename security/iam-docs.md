@@ -34,7 +34,7 @@ Access to the {{site.data.keyword.netezza_full}} service instances for users in 
 
 The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by {{site.data.keyword.netezza_short}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform that you can assign to a user.
 
-If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles) and pick the actions to include.
+If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles) and pick the actions to include.
 {: tip}
 
 IAM access policies enable access to be granted at different levels.

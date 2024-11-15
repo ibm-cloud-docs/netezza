@@ -47,7 +47,7 @@ Complete the following steps to create a support case:
    You can also:
 
    - Attach files and resources to provide more details about the issue you are experiencing.
-   - If you want a specific user that is associated with your account to be updated about the case, add the user by using **Contact watchlist**. For more information about assigning users access to your account, see [Adding users to your case management access group](/docs/get-support?topic=get-support-access#add-user-access-group).
+   - If you want a specific user that is associated with your account to be updated about the case, add the user by using **Contact watchlist**. For more information about assigning users access to your account, see [Adding users to your case management access group](/docs/account?topic=account-access-cases#add-user-access-group).
    - Select **Email me updates about this case** to receive support case notifications.
 
 1. Click **Next**.
