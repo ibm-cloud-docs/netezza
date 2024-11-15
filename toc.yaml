@@ -151,6 +151,7 @@ toc:
          - data_lakehouse_mcsp/watsonx_datasql_mcsp.md
          - data_lakehouse_mcsp/hms_npskeywords_mcsp.md
          - data_lakehouse_mcsp/watsonxdata_ki_mcsp.md
+        #  - data_lakehouse_mcsp/watsonxdata_ki_mcsp.md
       - topicgroup:
          label: Time travel and historical data
          topics:

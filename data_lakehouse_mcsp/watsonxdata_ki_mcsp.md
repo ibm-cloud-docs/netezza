@@ -1,10 +1,11 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-09-11"
+  years:  2024
+lastupdated: "2024-15-11"
 
 keywords: data lakehouse, watsonx.data known issues when using nps, netezza data lakehouse, watsonx, watsonx.data, watsonx.data with nps
+
 subcollection: netezza
 
 ---
