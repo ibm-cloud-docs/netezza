@@ -26,7 +26,8 @@ subcollection: netezza
 
 The administrator privileges are not necessary to view recent queries. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
-**Filter - "Submitted within last:"**
+### Filter - "Submitted within last:"
+{: #filter_submted}
 
 - Success Ratio: Represents the ratio of queries executed within the selected time span. This metric calculates the total number of queries fired against the number of completed and failed queries (with varying failure reasons).
 - Databases: Displays the total number of queries fired on the databases during the selected time span.
@@ -89,14 +90,15 @@ When you are on the **Query history** page, you can do the following:
 - Sort any column by placing the cursor on the column header.
 - Find specific queries by using various filtering criteria.
 
-  For example, you can use it to find queries that are submitted by a particular user or group, or queries that run on a particular database.
+For example, you can use it to find queries that are submitted by a particular user or group, or queries that run on a particular database.
 
 - Search the query history but clicking **Search**.
-  You can use a predefined search criteria, or create a new search option.
+
+   You can use a predefined search criteria, or create a new search option.
 
 - Select the columns to display in the table.
 
-  Click the settings icon next to the **Find query history** field to edit columns.
+   Click the settings icon next to the **Find query history** field to edit columns.
 
 - View metrics and statistics status.
 

@@ -104,26 +104,26 @@ Retention time interval and retention lower bound for an object are available in
 1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
 1. View the retention time interval:
 
-  - For a table:
+   - For a table:
 
-    1. Go to **Databases**.
-    1. Select the database and schema in which the table that you want to view the retention interval is located.
-    1. Ensure that you are in the DB Objects > Tables tab.
-    1. Identify the table for which you want to view the retention interval.
+      1. Go to **Databases**.
+      1. Select the database and schema in which the table that you want to view the retention interval is located.
+      1. Ensure that you are in the DB Objects > Tables tab.
+      1. Identify the table for which you want to view the retention interval.
 
-       The retention interval is displayed in the **Retention time interval (days)** column.
+         The retention interval is displayed in the **Retention time interval (days)** column.
 
-  - For a schema:
+   - For a schema:
 
-    1. Go to **Databases**.
-    1. Select the database in which the schema that you want to view the retention interval is located.
-    1. Identify the schema for which you want to view the retention interval.
+      1. Go to **Databases**.
+      1. Select the database in which the schema that you want to view the retention interval is located.
+      1. Identify the schema for which you want to view the retention interval.
 
-       The retention interval is displayed in the **Retention time interval (days)** column.
+         The retention interval is displayed in the **Retention time interval (days)** column.
 
-    - For a database:
+   - For a database:
 
-    1. Go to **Databases**.
-    1. Identify the database for which you want to view the retention interval.
+      1. Go to **Databases**.
+      1. Identify the database for which you want to view the retention interval.
 
-       The retention interval is displayed in the **Retention time interval (days)** column.
+         The retention interval is displayed in the **Retention time interval (days)** column.

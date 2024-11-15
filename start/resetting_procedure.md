@@ -11,8 +11,8 @@ subcollection: netezza
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
+{:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -26,4 +26,5 @@ subcollection: netezza
 Your instance comes with [query history](https://www.ibm.com/docs/en/netezza?topic=administrators-collecting-data-history) enabled by default.
 
 - Follow the instructions [here](https://www.ibm.com/support/pages/changing-query-history-users-password) to change the history user password.
+
 - Open a [ticket](https://www.ibm.com/support/pages/changing-query-history-users-password) to stop and start the database when resetting history user password.

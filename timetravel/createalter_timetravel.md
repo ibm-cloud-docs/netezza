@@ -72,6 +72,8 @@ This limitation affects the following commands:
 The [**GROOM TABLE VERSIONS**](https://www.ibm.com/docs/en/netezza?topic=npsscr-groom-table-2) command turns a versioned table into nonversioned. When this happens, you can specify a nonzero **DATA_VERSION_RETENTION_TIME** with the **ALTER TABLE** command.
 
 ### Exceptions related to DATA_VERSION_RETENTION_TIME for {{site.data.keyword.lakehouse_short}}
+{: #excption_rltd_dta}
+
 There are exceptions for {{site.data.keyword.lakehouse_short}} related to **DATA_VERSION_RETENTION_TIME**. The following table covers the behavior of the **DATA_VERSION_RETENTION_TIME** property for databases, schemas, and tables for {{site.data.keyword.lakehouse_short}}.
 
 |Behavior|Exception|
@@ -82,6 +84,7 @@ There are exceptions for {{site.data.keyword.lakehouse_short}} related to **DATA
 |ALTER SCHEMA with **DATA_VERSION_RETENTION_TIME** for {{site.data.keyword.lakehouse_short}}|Not allowed except for NETEZZA_SCHEMA|
 |CREATE TABLE with **DATA_VERSION_RETENTION_TIME** (temporal) table|Allowed under NETEZZA_SCHEMA only|
 |ALTER TABLE with **DATA_VERSION_RETENTION_TIME** (temporal) table|Allowed under NETEZZA_SCHEMA only|
+{: caption="Behavior and exceptions"}
 
 If SYSTEM DEFAULT **DATA_VERSION_RETENTION_TIME** is nonzero , CREATE DATABASE will not inherit the property from SYSTEM DEFAULT. CREATE SCHEMA including NETEZZA_SCHEMA will not inherit DB property. There will be no impact or changes needed for time travel related automaint task for {{site.data.keyword.lakehouse_short}}.
 {: note}
