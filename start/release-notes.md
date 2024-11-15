@@ -433,7 +433,7 @@ Character support in watsonx.data object names
 | -----------       | -----------       | ----------                        |
 | Postmaster cores  | NZ_DATA_DIR/global| NZ_LOG_DIR/postgres/postmaster/   |
 | Postgres cores    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres      |
-{: caption="New and previous locations of the postmaster and postgres core dumps." caption-side="top"}
+{: caption="New and previous locations of the postmaster and postgres core dumps" caption-side="top"}
 
 - Automatic pause and resume is enabled in the web console.
 
