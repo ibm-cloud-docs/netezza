@@ -15,6 +15,7 @@ content-type: faq
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
 {:support: data-reuse='support'}
+{:note: .note}
 
 # FAQs for {{site.data.keyword.netezza_short}}
 {: #netezza-faqs}
@@ -124,12 +125,142 @@ For information about posting questions on a forum or opening a support ticket, 
 
 - [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/datamanagement/home)
 
+## How can I change a Query History user's password?
+{: #changequerypswd-help}
+{: faq}
+{: support}
+
+You can change the `Query History` password in 2 ways:
+- using query editor
+- using remote nzsql client
+
+Use the following SQL syntax with admin or any user with administrator privilege:
+
+1. Determine the name of the existing `Query History` configuration. The configuration name is the first field returned:
+
+```bash
+show history configuration
+```
+{: codeblock}
+
+ ```sql
+CONFIG_NAME | CONFIG_DBNAME | CONFIG_DBTYPE | CONFIG_TARGETTYPE | CONFI  G_LEVEL | CONFIG_HOSTNAME | CONFIG_USER | CONFIG_PASSWORD |  CONFIG_LOADINTERVAL | CONFIG_LOADMINTHRESHOLD | CONFIG_LOADMAXTHRESHOLD |  CONFIG_DISKFULLTHRESHOLD | CONFIG_STORAGELIMIT | CONFIG_LOADRETRY |
+CONFIG_ENABLEHIST | CONFIG_ENABLESYSTEM | CONFIG_NEXT | CONFIG_CURRENT | CONFIG_VERSION | CONFIG_COLLECTFILTER | CONFIG_KEYSTORE_ID | CONFIG_KEY_ID | KEYSTORE_NAME | KEY_ALIAS | CONFIG_NAME_DELIMITED | CONFIG_DBNAME_DELI  MITED | CONFIG_USER_DELIMITED
+-------------+---------------+---------------+-------------------+--------------+-----------------+-------------
+   NZ_HIST   | HISTDB        |             1 |                 1 |              2 | localhost       |
+TESTUSER    |
+y5neWx3HuL2k$w5DqbqJOp+Y= |                     5 |
+(1 rows)
+```
+{: codeblock}
+
+2. Create a configuration in which you disable `Query history` (with the `HISTTYPE` argument). For example, the following creates a configuration called hist_disabled:
+
+```bash
+CREATE HISTORY CONFIGURATION hist_disabled HISTTYPE NONE
+CREATE HISTORY CONFIGURATION
+```
+{: codeblock}
+
+3. Update the system to use the `hist_disabled` configuration.
+
+```bash
+SET HISTORY CONFIGURATION hist_disabled
+SET HISTORY CONFIGURATION
+```
+{: codeblock}
+
+4. Verify that the disabled `Query History` configuration is now active:
+
+```bash
+SHOW HISTORY CONFIGURATION
+```
+{: codeblock}
+
+```sql
+| CONFIG_NAME  | CONFIG_DBNAME | CONFIG_DBTYPE | CONFIG_TARGETTYPE | CONFIG_LEVEL |
+| -------- | ------- | ------- | ------- | ------- |
+| HIST_DISABLED |     |   3  |    1 |   1  | localhost
+.
+.
+.
+---------------+---------------+---------------+-------------------+--------------+----------
+ HIST_DISABLED |               |             3 |                 1 |            1 | localhost       |             |
+.
+.
+.
+ (1 row))
+ ```
+{: codeblock}
+
+
+5. Make the required password changes in the original `Query history` configuration (`nz_hist`). In the following example, the user `qryhist` is assigned the password new_password.
+
+```bash
+ALTER HISTORY CONFIGURATION nz_hist USER qryhist PASSWORD new_password'
+ALTER HISTORY CONFIGURATION
+```
+{: codeblock}
+
+6. Configure the system to use the initial configuration (`nz_hist`), which now has the changed password.
+
+```bash
+SET HISTORY CONFIGURATION nz_hist
+SET HISTORY CONFIGURATION
+```
+{: codeblock}
+
+7. Stop and restart the database so that the system loads the original `Query history` configuration (`nzstop/nzstart` commands).
+
+8. Changes you make to a configuration only take effect after you restart the database. Load (activate) the disabled `Query History` configuration by restarting with the `nzstop/nzstart` commands.
+
+9. Verify that the correct `Query History` configuration is once again active with the `SHOW HISTORY CONFIGURATION` command.
+
+For a complete description of each of the `Query History` commands, refer to the **IBM Netezza Database User’s Guide**.
+
+## How to check the name without using config name ALL_HIST?
+{: #example_allhist}
+
+Check your name by running below query:
+
+```bash
+nzsql -c "SHOW HISTORY CONFIGURATION"
+```
+{: codeblock}
+
+### Steps for changing the current configuration and update the password.
+{: #steps_configpswd}
+
+1. Set the current configuration to `hist_disabled`.
+   ```bash
+      nzsql -c "set history configuration HIST_DISABLED"
+   ```
+   {: codeblock}
+
+1. Restart the database.
+1. Change the password as follows.
+   ```bash
+      nzsql -c "ALTER HISTORY CONFIGURATION <QUERYHIST> PASSWORD '<new password>';"
+   ```
+   {: codeblock}
+
+1. Set the current configuration to your current history database file. If `all_hist` is your configuration then change it as follows:
+   ```bash
+      nzsql -c "set history configuration all_hist"
+   ```
+   {: codeblock}
+
+1. Restart the database.
+
+Open a [ticket](/docs/netezza?topic=netezza-tickets&interface=ui) to stop and start the database when resetting history user password.
+{: note}
+
 ## How far can prolife be scaled up?
 {: #profile-scaleup}
 {: faq}
 {: support}
 
-From `NC-START`, we can scale up the workload contour to `NC0`.
+From `NC-START`, we can scale up the workload contour to NC0.
 
 ## How much can storage be scaled up from an NC-START configuration with 400 GB storage density on AWS?
 {: #profile-scaleup-config}
@@ -144,16 +275,16 @@ Similarly, for an NPS instance deployed on Azure, the base storage is 256 GB. Th
 {: faq}
 {: support}
 
-Within the `NC-START` workload contour, storage can be scaled up to 1200 GB. However, if you also scale the workload contour to NC0, storage capacity can be increased from 2400 GB up to 24000 GB.
+Within the NC-START workload contour, storage can be scaled up to 1200 GB. However, if you also scale the workload contour to NC0, storage capacity can be increased from 2400 GB up to 24000 GB.
 
-## What is the procedure for scaling up from the `NC-START` configuration??
+## What is the procedure for scaling up from the NC-START configuration??
 {: #procedure-scaleup}
 {: faq}
 {: support}
 
-To scale up from the `NC-START` configuration, please follow the guidance provided in the documentation links below:
-To increase storage within the `NC-START` workload contour (currently at 400 GB), see: [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).
-To scale the workload contour from `NC-START` to `NC0`, see: [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
+To scale up from the NC-START configuration, please follow the guidance provided in the documentation links below:
+To increase storage within the NC-START workload contour (currently at 400 GB), see: [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).
+To scale the workload contour from NC-START to NC0, see: [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
 
 ## How long does scaling up take?
 {: #duration-scaleup}
@@ -169,12 +300,12 @@ Scaling storage itself does not take six hours. However, a six-hour cooling peri
 
 Yes, you can scale up while preserving the current database configuration and existing table data.
 
-## After scaling up profile to `NC0`, is it possible to revert to `NC-START`?
+## After scaling up profile to NC0, is it possible to revert to `NC-START`?
 {: #profile-scaleup-ncstart}
 {: faq}
 {: support}
 
-No, once you scale up from `NC-START` to `NC0`, you cannot revert to `NC-START`.
+No, once you scale up from NC-START to NC0, you cannot revert to NC-START.
 
 ## Is it possible to scale down storage after increasing it from 400 GB?
 {: #profile-scaledown}
