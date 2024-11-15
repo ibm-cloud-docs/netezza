@@ -129,7 +129,7 @@ For information about posting questions on a forum or opening a support ticket, 
 {: faq}
 {: support}
 
-From `NC-START`, we can scale up the workload contour to NC0.
+From `NC-START`, we can scale up the workload contour to `NC0`.
 
 ## How much can storage be scaled up from an NC-START configuration with 400 GB storage density on AWS?
 {: #profile-scaleup-config}
@@ -144,16 +144,16 @@ Similarly, for an NPS instance deployed on Azure, the base storage is 256 GB. Th
 {: faq}
 {: support}
 
-Within the NC-START workload contour, storage can be scaled up to 1200 GB. However, if you also scale the workload contour to NC0, storage capacity can be increased from 2400 GB up to 24000 GB.
+Within the `NC-START` workload contour, storage can be scaled up to 1200 GB. However, if you also scale the workload contour to NC0, storage capacity can be increased from 2400 GB up to 24000 GB.
 
-## What is the procedure for scaling up from the NC-START configuration??
+## What is the procedure for scaling up from the `NC-START` configuration??
 {: #procedure-scaleup}
 {: faq}
 {: support}
 
-To scale up from the NC-START configuration, please follow the guidance provided in the documentation links below:
-To increase storage within the NC-START workload contour (currently at 400 GB), see: [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).
-To scale the workload contour from NC-START to NC0, see: [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
+To scale up from the `NC-START` configuration, please follow the guidance provided in the documentation links below:
+To increase storage within the `NC-START` workload contour (currently at 400 GB), see: [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).
+To scale the workload contour from `NC-START` to `NC0`, see: [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
 
 ## How long does scaling up take?
 {: #duration-scaleup}
@@ -169,12 +169,12 @@ Scaling storage itself does not take six hours. However, a six-hour cooling peri
 
 Yes, you can scale up while preserving the current database configuration and existing table data.
 
-## After scaling up profile to NC0, is it possible to revert to `NC-START`?
+## After scaling up profile to `NC0`, is it possible to revert to `NC-START`?
 {: #profile-scaleup-ncstart}
 {: faq}
 {: support}
 
-No, once you scale up from NC-START to NC0, you cannot revert to NC-START.
+No, once you scale up from `NC-START` to `NC0`, you cannot revert to `NC-START`.
 
 ## Is it possible to scale down storage after increasing it from 400 GB?
 {: #profile-scaledown}
