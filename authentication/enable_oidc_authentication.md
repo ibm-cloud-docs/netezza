@@ -32,7 +32,6 @@ Set your authentication method to `OIDC` with the [`REGISTER EXTERNAL AUTHENTICA
 {: important}
 
 - [Through Netezza UI.](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc)
-- [Through Netezza UI query editor.](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wcqe)
 - [From command-line.](/docs/netezza?topic=netezza-enable_oidciamauth#oidcmprocedure)
 
 
@@ -42,23 +41,6 @@ Set your authentication method to `OIDC` with the [`REGISTER EXTERNAL AUTHENTICA
 1. Log in to the Netezza UI as a user who is part of an administrative group.<!--See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).-->
 1. Go to `Settings` tab.
 1. Click on `OIDC` to enable `OIDC` authentication.
-
-
-## Setting Azure OIDC authentication with the Netezza UI query editor
-{: #setting_oidc_wcqe}
-
-1. Log in to the Netezza UI as a user who is part of an administrative group.<!--See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).-->
-1. Go to the **Query editor**.
-1. Register an `OIDC` external authentication system.
-
-    ```sql
-    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
-    ```
-    {: codeblock}
-
-    This action has to be performed only once.
-    {: note}
-
 1. Create a user (or users) with the external authentication method set to `OIDC`, as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
 1. Verify whether the user is created successfully.
 

@@ -177,4 +177,5 @@ For example, you can use it to find queries that are submitted by a particular u
 ## Query cancellation
 {: #query-cancellation}
 
-When you execute a long running query from query editor, you can cancel the query until the time it is in execution by a simple click of the button. The cancellation now work for short queries.
+When you execute a long running query from query editor, you can cancel the query until the time it is in execution by a simple click of the button.
+<!-- The cancellation now work for short queries. -->

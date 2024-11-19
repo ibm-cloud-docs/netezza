@@ -32,7 +32,6 @@ Set your authentication method to `SAML` with the [`REGISTER EXTERNAL AUTHENTICA
 {: important}
 
 - [Through Netezza UI.](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc)
-- [Through Netezza UI query editor.](/docs/netezza?topic=netezza-samliamauth#setting_saml_wcqe)
 - [From command-line.](/docs/netezza?topic=netezza-samliamauth#samlmprocedure)
 
 
@@ -43,22 +42,6 @@ Set your authentication method to `SAML` with the [`REGISTER EXTERNAL AUTHENTICA
 1. Log in to the Netezza UI as a user who is part of an administrative group.<!--See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).-->
 1. Go to `Settings` tab.
 1. Click on `SAML` to enable `SAML` authentication.
-
-## Setting SAML authentication with the Netezza UI query editor
-{: #setting_saml_wcqe}
-
-1. Log in to the Netezza UI as a user who is part of an administrative group.<!--See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).-->
-1. Go to the **Query editor**.
-1. Register a `SAML` external authentication system.
-
-    ```sql
-    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'SAML'
-    ```
-    {: codeblock}
-
-    This action has to be performed only once.
-    {: note}
-
 1. Create a user (or users) with the external authentication method set to `SAML`, as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
 1. Verify whether the user is created successfully.
 
