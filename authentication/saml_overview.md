@@ -35,5 +35,4 @@ Follow the steps to setup `SAML` authentication:
 
 - [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
 - [Configuring SAML authentication in IdP](/docs/netezza?topic=netezza-saml-docs).
-- [Usage of nzcli with SAML authentication](/docs/netezza?topic=netezza-usage-of-nzcli-with-saml-authentication).
-
+- [Usage of nzcli with SAML authentication](/docs/netezza?topic=netezza-usage_nzcli_w_saml_auth).
