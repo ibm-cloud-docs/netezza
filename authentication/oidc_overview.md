@@ -30,4 +30,4 @@ Follow the steps to setup `Azure OIDC` authentication:
 
 - [Enabling Azure OIDC authentication](/docs/netezza?topic=netezza-enable_oidciamauth).
 - [Configuring Azure OIDC authentication in IdP](/docs/netezza?topic=netezza-oidc-docs).
-- [Usage of nzcli with OIDC authentication](/docs/netezza?topic=netezza-usage-of-nzcli-with-oidc-authentication).
+- [Usage of nzcli with OIDC authentication](/docs/netezza?topic=netezza-usage_nzcli_w_oidc_auth).
