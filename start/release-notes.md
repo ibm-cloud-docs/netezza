@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-11-20"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -39,6 +39,13 @@ Database assistant
 
 IdP configuration
 :   This page is now part of the **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [Setting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
+
+### Components
+{: #compnov2024}
+
+- `nzcli` version: 0.9.24 
+- Build: 1cf87c22b75f49960cded83ece02fea50eab8e4c
+
 
 ### Known issue
 {: #kinov2024}
