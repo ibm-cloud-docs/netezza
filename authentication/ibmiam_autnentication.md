@@ -30,7 +30,7 @@ Set your authentication method to `IBMIAM` with the [`REGISTER EXTERNAL AUTHENTI
 Two factor authentication is not supported with an external authentication system.
 {: important}
 
-See also [Managing IAM access](/docs/netezza?topic=netezza-iam-docs).
+See also [Managing IAM access for NPSaaS](/docs/netezza?topic=netezza-iam-docs).
 
 ## Syntax
 {: #ibmiamsyntax}
