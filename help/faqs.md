@@ -222,9 +222,8 @@ For a complete description of each of the `Query History` commands, refer to the
 {: #example_allhist}
 
 Check your name by running below query:
-
 ```bash
-nzsql -c "SHOW HISTORY CONFIGURATION"
+ nzsql -c "SHOW HISTORY CONFIGURATION"
 ```
 {: codeblock}
 
@@ -233,7 +232,7 @@ nzsql -c "SHOW HISTORY CONFIGURATION"
 
 1. Set the current configuration to `hist_disabled`.
    ```bash
-      nzsql -c "set history configuration HIST_DISABLED"
+    nzsql -c "set history configuration HIST_DISABLED"
    ```
    {: codeblock}
 
