@@ -43,7 +43,7 @@ IdP configuration
 ### Components
 {: #compnov2024}
 
-- `nzcli` version: 0.9.24 
+- `nzcli` version: 0.9.24
 - Build: 1cf87c22b75f49960cded83ece02fea50eab8e4c
 
 
@@ -393,12 +393,12 @@ Character support in watsonx.data object names
 {: #march2023}
 
 ### New features and enhancements
-{: #march2023}
+{: #new_features_mar2023}
 
 - Default database maximum connections to the server is now increased to 1000.
 
 ### Fixes
-{: #fmarch2023}
+{: #fixes_mar_2023}
 
 - Fixed the issue with `.pln` files not getting stored in `$NZ_KIT_LOG/plans` directory if your query crashes.
 - Fixed the issue with sensitive files from host pod being read by using external tables and remote `nzsql` client. Starting with this release, you cannot load data into `/root` and `/home` directories, so using `nzload` with datafile from `/root` and `/home` is restricted along with creating external tables in these directories.
@@ -410,7 +410,7 @@ Character support in watsonx.data object names
 - Web console 4.0.12
 
 ### Known issues
-{: #kimarch2023}
+{: #kimarch_2023}
 
 - You might experience the paste option not working in Mozilla Firefox 110.x when you are using the query editor in the web console. This is the web browser limitation and you must change the browser configuration preferences to allow the web pages to get access to the clipboard by using JavaScript. This issue is not present in other web browsers.
 
@@ -428,7 +428,7 @@ Character support in watsonx.data object names
 {: #feb2023}
 
 ### New features and enhancements
-{: #feb2023}
+{: #new_feature_feb2023}
 
 - Use time travel queries to retrieve and analyze historical data without having to develop extra application logic such as history tables. {{site.data.keyword.netezza_short}} time travel comes in handy when you want to track the history of data changes or reconstruct your data. By using this powerful tool, you can access historical data (data that was changed or deleted) at past points in time or within a past period of time. For more information, see [Getting started with time travel](/docs/netezza?topic=netezza-introducing_tt).
 

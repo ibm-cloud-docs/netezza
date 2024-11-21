@@ -319,7 +319,7 @@ ALTER DATABASE DB1 DATA_VERSION_RETENTION_TIME 30 NOCASCADE;
 {: #alteringobjects_wc_tt}
 
 ### Altering temporal tables to nontemporal with the web console
-{: #droppingtemporal_tt}
+{: #alter_temporal_tt}
 
 To alter a temporal table to nontemporal, set **retention time interval** to 0.
 
