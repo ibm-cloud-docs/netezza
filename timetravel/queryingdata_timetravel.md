@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-03-02"
+  years:  2024
+lastupdated: "2024-06-14"
 
 keywords: netezza time travel, data retention interval, setting the retention interval, changing the retention interval
 
@@ -57,7 +57,7 @@ Example:
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME AS OF NOW();
-PRODUCTID | DESCRIPTION | PRICE   |     _SYS_START      | _SYS_END  
+PRODUCTID | DESCRIPTION | PRICE   |     _SYS_START      | _SYS_END
 ----------+-------------+---------+---------------------+-----------
      1001 | Jacket      | 102.00  | 2020-10-23 16:00:00 |
      1002 | Gloves      |  20.50  | 2020-10-23 16:05:00 |
@@ -80,7 +80,7 @@ Example:
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME AS OF '2020-10-23 16:30:00';
 PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END
------------+-------------+--------+---------------------+---------------------      
+-----------+-------------+--------+---------------------+---------------------
       1001 | Jacket      | 102.00 | 2020-10-23 16:00:00 |
       1002 | Gloves      |  20.50 | 2020-10-23 16:05:00 |
       1003 | Hat         |  18.99 | 2020-10-23 16:10:00 |
@@ -105,8 +105,8 @@ Example:
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME BEFORE '2020-10-23 17:00:00';
-PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END   
------------+-------------+--------+---------------------+---------------------    
+PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END
+-----------+-------------+--------+---------------------+---------------------
       1001 | Jacket      | 102.00 | 2020-10-23 16:00:00 |
       1002 | Gloves      |  20.50 | 2020-10-23 16:05:00 |
       1003 | Hat         |  18.99 | 2020-10-23 16:10:00 |
@@ -137,7 +137,7 @@ Example:
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME FROM RETENTION_START_TIMESTAMP TO '2020-10-23 17:10:00' WHERE PRODUCTID = 1004;
-PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END      
+PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END
 -----------+-------------+--------+---------------------+---------------------
       1004 | Shoes       | 125.25 | 2020-10-23 16:15:00 | 2020-10-23 17:00:00
       1004 | Shoes       | 100.00 | 2020-10-23 17:00:00 |
@@ -161,8 +161,8 @@ Example:
 
 ```sql
 SELECT *, _SYS_START, _SYS_END FROM PRODUCT FOR SYSTEM_TIME BETWEEN '2020-10-23 16:00:00' AND '2020-10-23 17:10:00';
-PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END    
------------+-------------+--------+---------------------+---------------------   
+PRODUCTID  | DESCRIPTION | PRICE  |     _SYS_START      |      _SYS_END
+-----------+-------------+--------+---------------------+---------------------
       1001 | Jacket      | 102.00 | 2020-10-23 16:00:00 |
       1002 | Gloves      |  20.50 | 2020-10-23 16:05:00 |
       1003 | Hat         |  18.99 | 2020-10-23 16:10:00 |

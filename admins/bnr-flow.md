@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2023
-lastupdated: "2023-03-02"
+  years: 2024
+lastupdated: "2024-06-14"
 
 keywords: bnr, backup and restore, backup, restore, backup flow
 
@@ -32,7 +32,7 @@ To set up a recommended backup schedule, follow the steps.
 1. Go to **Backup and restore > Backup**.
 1. Make sure that destination buckets for your backups are created.
 
-   For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).  
+   For more information, see [Creating destination buckets](/docs/netezza?topic=netezza-bnr-overview#create-destinations).
 
 1. Configure your monthly schedule:
 
