@@ -31,4 +31,4 @@ Depending on your requirements, you can also choose a scheduled pause/resume alo
 ## Pausing and resuming instances with the web console
 {: #pnr-webconsole}
 
-For more information, see [Pausing and resuming](docs/netezza?topic=netezza-pnr-console).
+For more information, see [Pausing and resuming](/docs/netezza?topic=netezza-pnr-console).
