@@ -47,8 +47,6 @@ IdP configuration
 {: #compnov2024}
 
 - `nzcli` version: 0.9.24
-- Build: 1cf87c22b75f49960cded83ece02fea50eab8e4c
-
 
 ### Known issue
 {: #kinov2024}
