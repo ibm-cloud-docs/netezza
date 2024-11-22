@@ -59,7 +59,7 @@
       "tiles": [
           {
               "date": "18 November 2024",
-              "title": "Introduced a feature to cancel the long running queries executed from the query editor."
+              "title": "A public tech preview of the Netezza Database Assistant chatbot, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads."
           },
           {
               "date": "23 September 2024",
