@@ -77,6 +77,9 @@ With the query editor, you can run SQL queries on a specific host and database. 
 
    - Click **Clear** to clear the query.
 
+The Query Editor supports a maximum result set of 519,999,999 rows. If a query exceeds this limit, it will return the error: `Error: The query result set is too large to load, please add or reduce the row limit.`
+{: note}
+
 ### Running multiple SQL statements in a single session
 {: #single-session-queries}
 
