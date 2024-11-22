@@ -28,14 +28,17 @@ subcollection: netezza
 {: #nov2024}
 {: release-note}
 
-### New features and enhancements
+### New features
 {: #nfnov2024}
-
-Query cancellation
-:   A feature to cancel long-running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
 
 Database assistant
 :   A public tech preview of the Netezza Database Assistant chatbot, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Database assistant](/docs/netezza?topic=netezza-netezza-db-assistant).
+
+### Enhancements
+{: #enhnov2024}
+
+Query cancellation
+:   A feature to cancel long-running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
 
 IdP configuration
 :   The IdP configuration page is now part of the **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [Setting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
