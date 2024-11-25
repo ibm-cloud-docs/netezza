@@ -48,11 +48,11 @@ IdP configuration
 
 - `nzcli` version: 0.9.24
 
-### Known issue
+<!-- ### Known issue
 {: #kinov2024}
 
 Character support in watsonx.data object names
-:   Database object names connected to watsonx.data currently support only alphanumeric characters and underscores. However, special characters are fully supported for attribute names and data values.
+:   Database object names connected to watsonx.data currently support only alphanumeric characters and underscores. However, special characters are fully supported for attribute names and data values. -->
 
 ## September 23 2024 - 11.2.3.2
 {: #sep2024}
