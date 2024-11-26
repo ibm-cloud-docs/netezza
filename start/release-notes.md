@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-11-26"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,7 +24,7 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 18 November 2024 - 11.2.3.3
+## 22 November 2024 - 11.2.3.3
 {: #nov2024}
 {: release-note}
 
@@ -54,7 +54,7 @@ IdP configuration
 Character support in watsonx.data object names
 :   Database object names connected to watsonx.data currently support only alphanumeric characters and underscores. However, special characters are fully supported for attribute names and data values. -->
 
-## September 23 2024 - 11.2.3.2
+## 23 September 2024 - 11.2.3.2
 {: #sep2024}
 
 
@@ -85,7 +85,7 @@ Character support in watsonx.data object names
 - Web console 4.1.1.0 -->
 
 
-## 11.2.3.1 - August 02, 2024
+## 02 August 2024 - 11.2.3.1
 {: #jul2024}
 
 ### New features and enhancements
@@ -133,7 +133,7 @@ Character support in watsonx.data object names
 
 - **IP address required for OIDC/SAML authentication in private instances**: To use OIDC/SAML authentication in a private instance, access the web console via the `IP address`, not the `hostname`. To get `IP address`, see [Configuring private endpoints](https://cloud.ibm.com/docs/netezza?topic=netezza-creating-private-endpoints).
 
-## 11.2.3.0 - IF1 - June 20, 2024
+## 20 June 2024 - 11.2.3.0 - IF1
 {: #june2024}
 
 ### Components
@@ -150,7 +150,7 @@ Character support in watsonx.data object names
     - when a clustered table has an organizing column of one of these types.
     - when a materialized view uses a column of one of these types in its `order by` clause.
 
-## 11.2.3.0 - May 29, 2024
+## 29 May 2024 - 11.2.3.0
 {: #may2024}
 
 ### New features and enhancements
