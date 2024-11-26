@@ -23,14 +23,17 @@ subcollection: netezza
 {:note: .note}
 
 # Managing AWS IAM access for {{site.data.keyword.netezza_short}}
-
 {: #awsiam-docs}
 
 ## AWS IAM `nziamops` user
+{: #awsiam_nzi}
+
 An AWS IAM ops user (`nziamops`) must be created in your AWS account if Netezza UI is configured to authenticate by using `nziamops` user. This is a fallback mechanism for authentication if the default mechanism does not work. Update the IAM credentials of the `nziamops` user by using the Netezza UI.
 The `nziamops` user executes AWS APIs to fetch IAM user details like the access key ID and MFA device during the authentication process.
 
 ### IAM role `NzCrossAccountRole` and trust relationship
+{: #awsiam_roles}
+
 Follow the manual instructions to set up the required AWS IAM policies.
 
 If customer `IAM` users and `NzIAMOps` user are in the same AWS account, the policy required:
@@ -87,7 +90,6 @@ If customer `IAM` users and `NzIAMOps` user are in different customer AWS accoun
     ]
 }
 ```
-
 {: codeblock}
 
 The `Resource` section must have the ARN of IAM users from the account.
@@ -109,7 +111,6 @@ The Netezza AWS account must be added under the Trusted entities.
     ]
 }
 ```
-
 {: codeblock}
 
 The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
@@ -130,7 +131,6 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
     ]
 }
 ```
-
 {: codeblock}
 
 ### IAM policy attached to the user group to give permission to the user to execute APIs
@@ -153,5 +153,4 @@ The `Netezza_AWS_ACCOUNT_ID` is the AWS account ID of the Netezza account.
     ]
 }
 ```
-
 {: codeblock}

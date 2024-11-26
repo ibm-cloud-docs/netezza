@@ -22,8 +22,11 @@ subcollection: netezza
 {:caption: .caption}
 
 # Usage of `v3/signin` API with AWS IAM authentication
+{: #usage_v3_api}
 
 ## When MFA is not configured
+{: #usage_mfa_not_conf}
+
 Specify the `Access-Id:Secret-Key` for the user.
 
  ```bash
@@ -32,6 +35,8 @@ curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/j
 {: codeblock}
 
 ## When MFA is configured
+{: #usage_mfa_conf}
+
 Specify the `Access-Id:Secret-Key` and `mfacode` for the user.
 
  ```bash
@@ -40,6 +45,8 @@ curl -k -X POST https://localhost:3344/v3/signin -H 'Content-Type: application/j
 {: codeblock}
 
 ## nzcli with JWT token authentication
+{: #mzcli_jwt}
+
 ```bash
 ./nzcli nzcommand -u AWSUSER -pw  jwttoken -apiserver ip
 ```
@@ -53,6 +60,8 @@ After successful authentication of AWSIAM user on either Netezza UI or v3/signin
 {: codeblock}
 
 ## List of `nzcommand`
+{: #mzcli_cmds}
+
 Following is the list of `nzcommand`.
 
  ```bash
