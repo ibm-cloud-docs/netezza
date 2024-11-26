@@ -23,6 +23,8 @@ subcollection: netezza
 {:note: .note}
 
 # Usage of `nzcli` with AWS IAM authentication
+{: #usage_nzcli_w_aws_auth}
+
 ```bash
 ./nzcli awsiam --help
 ```
@@ -37,6 +39,8 @@ Authenticator is `AWSIAM`.
 {: note}
 
 ## Options
+{: #usage_nzcli_w_aws_options}
+
 | Options     | Description |
 | ----------- | ----------- |
 | `-access-key`     | The access key for the `awsiam` user [AWS_ACCESS_KEY_ID] (required)       |
@@ -47,7 +51,7 @@ Authenticator is `AWSIAM`.
 | `-mfa-code`  |The MFA code for the awsiam user |
 | `-secret-access-key` | The secret access key for the awsiam user [AWS_SECRET_ACCESS_KEY] (required) |
 | `-u`  |  NPS Username [NZ_USER] (required) |
-
+{: caption="Options"}
 
 ```bash
 ./nzcli awsiam -access-key <access-key-value> -secret-access-key <secret-access-key-value> -mfa-code <mfa-value> -u AWSUSER -apiserver APISERVER_URL nzcommand
@@ -63,6 +67,7 @@ Authenticator is `AWSIAM`.
 {: note}
 
 ## Using nzcli without AWS IAM option
+{: #usage_nzcli_wo_aws_options}
 
 When using nzcli without `AWSIAM` option, MFA code is not required. Specify only the `access-key:secret-access-key` as password.
 

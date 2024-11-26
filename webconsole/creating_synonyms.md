@@ -32,10 +32,12 @@ subcollection: netezza
 1. Go to **DB Objects > Synonyms**.
 1. Click **Create synonym**.
 1. Type a name for the synonym.
-   The name can be up to 128 characters long and it must begin with a letter or underscore and cannot contain embedded spaces. The name must be unique.  
-   If the name contains special characters, enclose it in double quotation marks.  
-1. Specify the reference type.  
+   The name can be up to 128 characters long and it must begin with a letter or underscore and cannot contain embedded spaces. The name must be unique.
+   If the name contains special characters, enclose it in double quotation marks.
+1. Specify the reference type.
    For example, table or view.
 1. Specify the name of the reference type for which you are creating this synonym.
 1. Click **Create**.
 
+You can select **Assign owner**, **Rename**, and **Drop** options from the overflow menu.
+{: note}

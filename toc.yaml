@@ -7,7 +7,7 @@ toc:
     subcollection: netezza
     category: analytics
     audience: service
-    href: /docs/netezza?topic=netezza-getting-started
+    href: /docs/netezza
     console-page: /catalog/services/netezza-performance-server
     product-page: https://www.ibm.com/products/netezza
     path: netezza
@@ -18,11 +18,7 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - topicgroup:
-          label: Release notes for NPSaaS
-          topics:
-          - start/release-notes-1123x.md
-          - start/release-notes.md
+      - start/release-notes.md
       - start/provisioning.md
       - topicgroup:
           label: Connecting to Netezza Performance Server with private and public endpoints
@@ -120,7 +116,7 @@ toc:
           - authentication/ldap_authentication.md
           - link:
               label: External authentication
-              href: https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication
+              href: https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system
       - kafka/kafka.md
       - topicgroup:
          label: Querying data from data lakes
@@ -154,7 +150,7 @@ toc:
          - data_lakehouse_mcsp/merging_datalakehouse_mcsp.md
          - data_lakehouse_mcsp/watsonx_datasql_mcsp.md
          - data_lakehouse_mcsp/hms_npskeywords_mcsp.md
-         - data_lakehouse_mcsp/watsonxdata_ki_mcspi.md
+        #  - data_lakehouse_mcsp/watsonxdata_ki_mcsp.md
       - topicgroup:
          label: Time travel and historical data
          topics:
@@ -222,3 +218,4 @@ toc:
       topics:
       - help/faqs.md
       - help/opening-tickets.md
+    #   - help/database-assistant.md

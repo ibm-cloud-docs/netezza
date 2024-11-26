@@ -29,7 +29,7 @@ subcollection: netezza
 ## Before you begin
 {: #prereqs1}
 
-In the example, two publicly available datasets are used: [*New York taxi trip* record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for yellow taxis for January 2022 and green taxis for January 2018. They are available on [AWS S3](https://registry.opendata.aws/nyc-tlc-trip-records-pds/), and on [Azure BLOB](https://learn.microsoft.com/pl-pl/azure/open-datasets/dataset-taxi-for-hire-vehicle?tabs=azureml-opendatasets).
+In the examples, the publicly available [*New York taxi trip* record data](https://www.nyc.gov:443/site/tlc/about/tlc-trip-record-data.page) {: external} for yellow taxis in January 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
 
 To access S3 files, you need to have an AWS account with proper permissions to provide your access key ID and secret access key.
 {: note}
@@ -71,7 +71,7 @@ b) Create an external data source.
    ```
    {: codeblock}
 
-   For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=tables-create-external-datasource-command).
+   For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/en/netezza?topic=tables-create-external-datasource-command){: external}.
 
 ### 2. Create an external table.
 {: #create_table1}

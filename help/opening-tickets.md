@@ -21,10 +21,10 @@ subcollection: netezza
 # Opening tickets
 {: #tickets}
 
-If you experience problems with {{site.data.keyword.netezza_short}}, you can use the [Support Center](/unifiedsupport/supportcenter){: external} to create a support case. Users with a Basic, Advanced, or Premium [support plan](/docs/get-support?topic=get-support-support-plans) can create a technical support case by attaching a specific resource or product to ensure that the case gets to the correct support engineer faster. This allows for a more efficient and effective resolution.  
+If you experience problems with {{site.data.keyword.netezza_short}}, you can use the [Support Center](/unifiedsupport/supportcenter){: external} to create a support case. Users with a Basic, Advanced, or Premium [support plan](/docs/account?topic=account-support-plans) can create a technical support case by attaching a specific resource or product to ensure that the case gets to the correct support engineer faster. This allows for a more efficient and effective resolution.
 {: shortdesc}
 
-By default, account users don't have access to create, update, search, or view cases. The account owner must provide users access by assigning an Identity and Access Management (IAM) access policy. For more information, see [Assigning user access for working with support cases](/docs/get-support?topic=get-support-access#access).
+By default, account users don't have access to create, update, search, or view cases. The account owner must provide users access by assigning an Identity and Access Management (IAM) access policy. For more information, see [Managing access to support cases](/docs/account?topic=account-access-cases).
 {: tip}
 
 ## Creating a support case
@@ -47,7 +47,7 @@ Complete the following steps to create a support case:
    You can also:
 
    - Attach files and resources to provide more details about the issue you are experiencing.
-   - If you want a specific user that is associated with your account to be updated about the case, add the user by using **Contact watchlist**. For more information about assigning users access to your account, see [Adding users to your case management access group](/docs/get-support?topic=get-support-access#add-user-access-group).
+   - If you want a specific user that is associated with your account to be updated about the case, add the user by using **Contact watchlist**. For more information about assigning users access to your account, see [Adding users to your case management access group](/docs/account?topic=account-access-cases#add-user-access-group).
    - Select **Email me updates about this case** to receive support case notifications.
 
 1. Click **Next**.

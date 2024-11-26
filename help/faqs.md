@@ -83,7 +83,7 @@ For more information, see [Connecting to Netezza Performance Server](/docs/netez
 {: #spending_notifs}
 
 If you have an IBM Cloud® Pay-As-You-Go or Subscription account, you can set up email spending notifications. After your account is configured, you can configure spending thresholds and choose to receive notifications when you reach 80%, 90%, and 100% of the thresholds.
-For more information, see [Setting spending notifications](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-spending&interface=ui)
+For more information, see [Setting spending notifications](/docs/account?topic=account-spending).
 
 ## What's managed for me with {{site.data.keyword.netezza_short}}?
 {: #whats-managed}
@@ -104,11 +104,11 @@ In the event of a hardware or software failure, the service is automatically res
 
 - In addition to the IBM Cloud documentation site, there is a wide range of information about the underlying {{site.data.keyword.netezza_short}} engine functionality in the [IBM Documentation](https://www.ibm.com/docs/en/netezza).
 
-- Updates to the service are posted in the [Release notes](https://www.ibm.com/docs/en/netezza?topic=server-netezza-release-notes).
+- Updates to the service are posted in the [Release notes](https://www.ibm.com/docs/en/netezza?topic=started-netezza-performance-server-release-notes).
 
 - You can find pricing information one the IBM Cloud [catalog](https://cloud.ibm.com/catalog#services) page.
 
-For more information, contact [IBM Sales](https://www.ibm.com/contact/us/en/).
+For more information, contact [IBM Sales](https://www.ibm.com/contact).
 
 ## Where can I find help for a problem that I'm having?
 {: #finding-help}
@@ -123,7 +123,7 @@ For information about posting questions on a forum or opening a support ticket, 
 
 - [IBM Cloud® support forum](https://www.ibm.com/mysupport/s/forumshome?language=en_US)
 
-- [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/hybriddatamanagement/home)
+- [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/datamanagement/home)
 
 ## How can I change a Query History user's password?
 {: #changequerypswd-help}
@@ -155,6 +155,7 @@ y5neWx3HuL2k$w5DqbqJOp+Y= |                     5 |
 {: codeblock}
 
 2. Create a configuration in which you disable `Query history` (with the `HISTTYPE` argument). For example, the following creates a configuration called hist_disabled:
+
 ```bash
 CREATE HISTORY CONFIGURATION hist_disabled HISTTYPE NONE
 CREATE HISTORY CONFIGURATION
@@ -162,6 +163,7 @@ CREATE HISTORY CONFIGURATION
 {: codeblock}
 
 3. Update the system to use the `hist_disabled` configuration.
+
 ```bash
 SET HISTORY CONFIGURATION hist_disabled
 SET HISTORY CONFIGURATION
@@ -174,6 +176,7 @@ SET HISTORY CONFIGURATION
 SHOW HISTORY CONFIGURATION
 ```
 {: codeblock}
+
 ```sql
 | CONFIG_NAME  | CONFIG_DBNAME | CONFIG_DBTYPE | CONFIG_TARGETTYPE | CONFIG_LEVEL |
 | -------- | ------- | ------- | ------- | ------- |
@@ -192,6 +195,7 @@ SHOW HISTORY CONFIGURATION
 
 
 5. Make the required password changes in the original `Query history` configuration (`nz_hist`). In the following example, the user `qryhist` is assigned the password new_password.
+
 ```bash
 ALTER HISTORY CONFIGURATION nz_hist USER qryhist PASSWORD new_password'
 ALTER HISTORY CONFIGURATION
@@ -199,6 +203,7 @@ ALTER HISTORY CONFIGURATION
 {: codeblock}
 
 6. Configure the system to use the initial configuration (`nz_hist`), which now has the changed password.
+
 ```bash
 SET HISTORY CONFIGURATION nz_hist
 SET HISTORY CONFIGURATION
@@ -217,8 +222,9 @@ For a complete description of each of the `Query History` commands, refer to the
 {: #example_allhist}
 
 Check your name by running below query:
+
 ```bash
-$ nzsql -c "SHOW HISTORY CONFIGURATION"
+ nzsql -c "SHOW HISTORY CONFIGURATION"
 ```
 {: codeblock}
 
@@ -226,25 +232,87 @@ $ nzsql -c "SHOW HISTORY CONFIGURATION"
 {: #steps_configpswd}
 
 1. Set the current configuration to `hist_disabled`.
+
    ```bash
-   $ nzsql -c "set history configuration HIST_DISABLED"
+    nzsql -c "set history configuration HIST_DISABLED"
    ```
    {: codeblock}
 
 1. Restart the database.
 1. Change the password as follows.
+  
    ```bash
-   $ nzsql -c "ALTER HISTORY CONFIGURATION <QUERYHIST> PASSWORD '<new password>';"
+      nzsql -c "ALTER HISTORY CONFIGURATION <QUERYHIST> PASSWORD '<new password>';"
    ```
    {: codeblock}
 
 1. Set the current configuration to your current history database file. If `all_hist` is your configuration then change it as follows:
+   
    ```bash
-   $ nzsql -c "set history configuration all_hist"
+      nzsql -c "set history configuration all_hist"
    ```
    {: codeblock}
 
 1. Restart the database.
-   
+
 Open a [ticket](/docs/netezza?topic=netezza-tickets&interface=ui) to stop and start the database when resetting history user password.
 {: note}
+
+## How far can prolife be scaled up?
+{: #profile-scaleup}
+{: faq}
+{: support}
+
+From `NC-START`, we can scale up the workload contour to NC0.
+
+## How much can storage be scaled up from an NC-START configuration with 400 GB storage density on AWS?
+{: #profile-scaleup-config}
+{: faq}
+{: support}
+
+Within the `NC-START` workload contour on AWS, storage can be scaled up to 1200 GB. If you choose to scale further into the NC0 contour, storage density can range from 2400 GB up to 24000 GB.
+Similarly, for an NPS instance deployed on Azure, the base storage is 256 GB. This can be scaled up to 1024 GB within the `NC-START` workload contour. Scaling to the NC0 contour allows storage density to range from 1536 GB to 12288 GB.
+
+## What is the maximum storage scaling limit?
+{: #storage-scaling-limit}
+{: faq}
+{: support}
+
+Within the NC-START workload contour, storage can be scaled up to 1200 GB. However, if you also scale the workload contour to NC0, storage capacity can be increased from 2400 GB up to 24000 GB.
+
+## What is the procedure for scaling up from the NC-START configuration??
+{: #procedure-scaleup}
+{: faq}
+{: support}
+
+To scale up from the NC-START configuration, please follow the guidance provided in the documentation links below:
+To increase storage within the NC-START workload contour (currently at 400 GB), see: [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).
+To scale the workload contour from NC-START to NC0, see: [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
+
+## How long does scaling up take?
+{: #duration-scaleup}
+{: faq}
+{: support}
+
+Scaling storage itself does not take six hours. However, a six-hour cooling period is required between consecutive storage scaling attempts. This is the minimum wait time before initiating another scaling process.
+
+## Is it possible to scale up without affecting the current database configuration and data?
+{: #scaleup-without-dbconfig}
+{: faq}
+{: support}
+
+Yes, you can scale up while preserving the current database configuration and existing table data.
+
+## After scaling up profile to NC0, is it possible to revert to `NC-START`?
+{: #profile-scaleup-ncstart}
+{: faq}
+{: support}
+
+No, once you scale up from NC-START to NC0, you cannot revert to NC-START.
+
+## Is it possible to scale down storage after increasing it from 400 GB?
+{: #profile-scaledown}
+{: faq}
+{: support}
+
+No, once storage has been scaled up, it cannot be scaled down.

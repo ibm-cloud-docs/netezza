@@ -23,6 +23,7 @@ subcollection: netezza
 {:note: .note}
 
 # Usage of `nzcli` with OIDC authentication
+{: #usage_nzcli_w_oidc_auth}
 
 After successful authentication from Netezza UI and Identity Provider, you will get a JWT token in the **Administration -> tools** tab. You can use the JWT token to execute `nzcli` commands as follows:
 

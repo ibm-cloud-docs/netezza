@@ -58,6 +58,10 @@
       "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
       "tiles": [
           {
+              "date": "22 November 2024",
+              "title": "Introduced a feature to cancel long-running queries executed from the query editor."
+          },
+          {
               "date": "23 September 2024",
               "title": "Introduced the new nzprogress command, allowing you to effortlessly view and track all ongoing plans in progress."
           },

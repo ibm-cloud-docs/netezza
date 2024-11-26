@@ -230,7 +230,7 @@ If you have a bucket, for example, in the `us-east-1` region and want to use it 
 
    To retrieve the CIDR ranges that are used by the S3 endpoints in a particular AWS region:
 
-   - Follow the instructions from [How can I find the IP address ranges used by Amazon S3?](https://aws.amazon.com/premiumsupport/knowledge-center/s3-find-ip-address-ranges/).
+   - Follow the instructions from [How can I find the IP address ranges used by Amazon S3?](https://repost.aws/knowledge-center/s3-find-ip-address-ranges).
 
      ```sh
      curl https://ip-ranges.amazonaws.com/ip-ranges.json |\
@@ -271,7 +271,7 @@ If you have a bucket, for example, in the `us-east-1` region and want to use it 
 
    To retrieve the CIDR range for various AWS services:
 
-   - Follow the instructions from [here](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html#subscribe-notifications).
+   - Follow the instructions from [here](https://docs.aws.amazon.com/vpc/latest/userguide/aws-ip-ranges.html#subscribe-notifications).
 
    - Add them as an allow rule as needed.
 
@@ -286,7 +286,7 @@ If you have storage accounts, for example, in the `East US 2` region with Azure 
 
    To retrieve the CIDR ranges that are used by the storage endpoints in a particular Azure region:
 
-   - Follow the instructions from [Azure IP address ranges notifications](https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkservicetag?view=azps-7.5.0).
+   - Follow the instructions from [Azure IP address ranges notifications](https://learn.microsoft.com/en-us/powershell/module/az.network/get-aznetworkservicetag?view=azps-12.5.0&viewFallbackFrom=azps-7.5.0) {: external}.
 
      ```she
      > $serviceTags = Get-AzNetworkServiceTag -Location eastus2
@@ -322,7 +322,7 @@ If you have storage accounts, for example, in the `East US 2` region with Azure 
 1. If you want to use or connect from any other Azure service, add to the allow rule the CIDR range that is associated with those respective service endpoints.
    To retrieve the CIDR range for various Azure services:
 
-   - Follow the instructions from [here](https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkservicetag?view=azps-7.5.0).
+   - Follow the instructions from [here](https://learn.microsoft.com/en-us/powershell/module/az.network/get-aznetworkservicetag?view=azps-12.5.0&viewFallbackFrom=azps-7.5.0) {: external}.
 
    - Add the CIDR ranges as an allow rule as needed.
 

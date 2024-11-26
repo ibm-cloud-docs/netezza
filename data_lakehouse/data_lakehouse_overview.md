@@ -30,11 +30,11 @@ With {{site.data.keyword.netezza_full}} and {{site.data.keyword.lakehouse_short}
 - LZ4 data compression format is supported.
 - **NETEZZA_SCHEMA** is the default schema when you connect to a data lake database. It is a regular schema which contains Netezza objects like tables, external tables, and sequences. **NETEZZA_SCHEMA**, **DEFINITON_SCHEMA**, and **INFORMATION_SCHEMA** schema names are all reserved, and schemas of those names in the metastore are not exposed to {{site.data.keyword.netezza_short}} users.
 - The following datatypes are not supported:
-  - `timestamptz`
-  - `uuid`
-  - `struct`
-  - `list`
-  - `map`
+    - `timestamptz`
+    - `uuid`
+    - `struct`
+    - `list`
+    - `map`
 
 Use cases for {{site.data.keyword.lakehouse_short}} include:
 

@@ -25,7 +25,7 @@ subcollection: netezza
 # Setting LDAP authentication
 {: #ldapauth}
 
-Set your authentication method to `LDAP` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication).
+Set your authentication method to `LDAP` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system){: external}.
 {: shortdesc}
 
 Two factor authentication is not supported with an external authentication system.
@@ -98,6 +98,7 @@ Where:
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
    | user           | Specifies the user name.      |
    | password       | Specifies the password for the user. |
+   {: caption="Example"}
 
    Example:
 

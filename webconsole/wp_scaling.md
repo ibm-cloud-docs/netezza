@@ -17,6 +17,7 @@ subcollection: netezza
 {:important: .important}
 {:note: .note}
 {:screen: .screen}
+
 # Scaling
 {: #scaling-console}
 
