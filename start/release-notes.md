@@ -28,14 +28,14 @@ subcollection: netezza
 {: #nov2024}
 {: release-note}
 
-### New features
+<!--### New features
 {: #nfnov2024}
 
 Database assistant
-:   A public tech preview of the Netezza Database Assistant chatbot, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Database assistant](/docs/netezza?topic=netezza-netezza-db-assistant).
+:   A public tech preview of the Netezza Database Assistant chatbot, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Database assistant](/docs/netezza?topic=netezza-netezza-db-assistant).-->
 
-### Enhancements
-{: #enhnov2024}
+### New features and enhancements
+{: #nfenhnov2024}
 
 Query cancellation
 :   A feature to cancel long-running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
