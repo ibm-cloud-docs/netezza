@@ -52,10 +52,9 @@ NOTICE:  589 tables from the datalake are available in MYLAKE
 ```
 {: codeblock}
 
-See [CREATE EXTERNAL DATASOURCE](/docs/netezza?topic=tables-create-external-datasource-command) for more details on datasource options and authentication options for Azure.
+See [CREATE EXTERNAL DATASOURCE](https://www.ibm.com/docs/netezza?topic=tables-create-external-datasource-command) for more details on datasource options and authentication options for Azure.
 
 Only a single datasource can be assigned to a database, if you require another datasource, you must create another datalake database.
-
 {: note}
 
 ## 2. Connect to the database.

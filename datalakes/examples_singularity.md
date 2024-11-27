@@ -194,7 +194,7 @@ ACCOUNTKEY might be omitted for anonymous access.
    ```
    {: codeblock}
 
-For more information, see [CREATE EXTERNAL DATASOURCE command](/docs/netezza?topic=tables-create-external-datasource-command).
+For more information, see [CREATE EXTERNAL DATASOURCE command](https://www.ibm.com/docs/netezza?topic=tables-create-external-datasource-command).
 
 ### 2. Create an external table.
 {: #create_table1_azure}

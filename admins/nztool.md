@@ -461,7 +461,7 @@ Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to f
 ## CLI
 {: #cli}
 
-For more information about commands, see [the command-line interface](https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface) section.
+For more information about commands, see [the command-line interface](https://www.ibm.com/docs/en/netezza?topic=interfaces-command-line-interface) section.
 
 ## Username formatting
 {: #username_nzcli_format}
