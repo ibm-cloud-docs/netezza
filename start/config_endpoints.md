@@ -137,10 +137,6 @@ endpoint.
       {: codeblock}
 
 
-
-
-
-/**Remove the below section ?**/
 To connect to your {{site.data.keyword.netezza_short}} on AWS by using [AWS PrivateLink](https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html), you must create [private endpoints](https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html) in your AWS subscription.
 
 1. Provide your service principals.
@@ -156,4 +152,3 @@ To connect to your {{site.data.keyword.netezza_short}} on AWS by using [AWS Priv
    Follow the instructions described in [Create a private endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html).
 
    When the private endpoints are created, a private hostname is assigned to each of your private endpoints. Use these details to [log in to your instace by using private endpoints](/docs/netezza?topic=netezza-connecting-overview#private_endpoints).
-/**End**/
