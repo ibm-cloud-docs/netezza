@@ -31,6 +31,7 @@ toc:
           topics:
           - webconsole/get-strt.md
           - webconsole/users-group.md
+          - webconsole/netezza-database-assistant.md
           - topicgroup:
               label: Databases
               topics:
@@ -218,4 +219,4 @@ toc:
       topics:
       - help/faqs.md
       - help/opening-tickets.md
-    #   - help/database-assistant.md
+    
