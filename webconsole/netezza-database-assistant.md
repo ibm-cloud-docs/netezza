@@ -60,7 +60,7 @@ You can ask the database assistant to complete the actions listed in the followi
 
 Depending on the database workload, the database assistant might take some time to respond to certain prompts, such as requesting a database summary or getting details about the largest tables by storage size.
 {: note}
-<!-->
+<!--
 | Category | Action | Description | Example prompt phrases |
 | --- | --- | --- | --- |
 | **Product information** | Answer your questions about Netezza | Ask the assistant anything about Netezza and it will generate an answer based on its knowledge of the product. The assistant is trained on the official IBM Netezza documentation | - What's new in Netezza?</br> - Tell me about the MON_GET_PKG_CACHE_STMT table function</br> - How do I troubleshoot Netezza?</br> - What is error code SQL0911N?</br> - How can I manage my database workload? |
@@ -92,16 +92,6 @@ Depending on the database workload, the database assistant might take some time 
 
 {: caption="Netezza database assistant skills" caption-side="top"}-->
 
-## Troubleshooting the Netezza database assistant
-{: #assistant-troubleshooting}
-
-If you find that you are not getting the answers and results that you expect from the Netezza database assistant, try one or more of the following troubleshooting strategies:
-- Rephrase the question. The assistant might not understand your phrasing. Try using different wording, if possible.
-- Restart the conversation. The assistant might be getting confused by other things you have discussed with it.
-- Ensure that you are asking about Netezza. If you are asking about something else, it might be outside of the assistant's capabilities.
-- Try asking about something specific. If your question is too broad, the assistant is more likely to return results that aren't relevant to your request.
-- Ensure that you are not filtering by version. If an answer to your question isn't available in the current documentation release, the assistant won't find it. If you're filtering by version, some content might be missing. To broaden the search, type "change version" and then choose "Any".
-
 ## WXO Skills Table with description and prompt
 
 // Assisted by watsonx Code Assistant 
@@ -130,6 +120,16 @@ If you find that you are not getting the answers and results that you expect fro
 | 20 | Show Scaling History | Provides a graph of system’s scaling history | Show scaling history. Retrieve scaling history |
 | 21 | Show Smart Scaling | Investigates system’s workload behavior and provides a graph with scaling predictions | Retrieve scaling demand growth. Provide me scaling prediction |
 | 22 | Get System Version | Displays the NPS version of the system | What is current Netezza software version? Get my system version |
+
+## Troubleshooting the Netezza database assistant
+{: #assistant-troubleshooting}
+
+If you find that you are not getting the answers and results that you expect from the Netezza database assistant, try one or more of the following troubleshooting strategies:
+- Rephrase the question. The assistant might not understand your phrasing. Try using different wording, if possible.
+- Restart the conversation. The assistant might be getting confused by other things you have discussed with it.
+- Ensure that you are asking about Netezza. If you are asking about something else, it might be outside of the assistant's capabilities.
+- Try asking about something specific. If your question is too broad, the assistant is more likely to return results that aren't relevant to your request.
+- Ensure that you are not filtering by version. If an answer to your question isn't available in the current documentation release, the assistant won't find it. If you're filtering by version, some content might be missing. To broaden the search, type "change version" and then choose "Any".
 
 ## Data privacy and opting out
 {: #assistant-data-privacy}
