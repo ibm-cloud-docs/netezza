@@ -28,14 +28,12 @@ subcollection: netezza
 {: #feb2025}
 {: release-note}
 
-<!--### New features and enhancements
+### New features and enhancements
 {: #nffeb2025}
 
-Query cancellation
-:   A feature to cancel long-running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
+Workload contour - Scaling
+:   Added support for scaling (compute/storage) in the paused state.The system will automatically perform a resume operation before scaling. The resume action will be available in the Pause/Resume History. For more information, see [Scaling](/docs/netezza?topic=nnetezza-scaling-console).
 
-IdP configuration
-:   The IdP configuration page is now part of the **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [Setting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
 
 <!--### Components
 {: #compfeb2025}
