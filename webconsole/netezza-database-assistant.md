@@ -92,7 +92,7 @@ Depending on the database workload, the database assistant might take some time 
 
 {: caption="Netezza database assistant skills" caption-side="top"}-->
 
-## WXO Skills Table with description and prompt
+## WXO Skills table
 
 | No | Skill Name | Skill Description | Example Prompts |
 |----|------------|------------------|-----------------|
