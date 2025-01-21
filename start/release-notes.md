@@ -32,7 +32,7 @@ subcollection: netezza
 {: #nffeb2025}
 
 Workload contour - Scaling
-:   Added support for scaling (compute/storage) in the paused state.The system will automatically perform a resume operation before scaling. The resume action will be available in the Pause/Resume History. For more information, see [Scaling](/docs/netezza?topic=nnetezza-scaling-console).
+:   Added support for scaling (compute/storage) in the paused state.The system will automatically perform a resume operation before scaling. The resume action will be available in the Pause/Resume History. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
 
 
 <!--### Components
