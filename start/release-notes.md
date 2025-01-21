@@ -24,6 +24,30 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
+## XX February 2025 - 11.2.3.4
+{: #feb2025}
+{: release-note}
+
+<!--### New features and enhancements
+{: #nffeb2025}
+
+Query cancellation
+:   A feature to cancel long-running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
+
+IdP configuration
+:   The IdP configuration page is now part of the **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [Setting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
+
+<!--### Components
+{: #compfeb2025}
+
+- `nzcli` version: 0.9.24-->
+
+#### Connectivity improvements
+{: #cifeb2025}
+
+- OpenSSL 3.0 is supported from 11.2.3.4 onwards.
+
+
 ## 22 November 2024 - 11.2.3.3
 {: #nov2024}
 {: release-note}
