@@ -21,7 +21,7 @@ subcollection: netezza
 # Queries
 {: #queries}
 
-## Query history
+<!--## Query history
 {: #query-history}
 
 To access the page, go to **Queries > Query history** or select **Query history** from the home page.
@@ -100,14 +100,16 @@ For example, you can use it to find queries that are submitted by a particular u
 
 - **Resource group name**
    Specifies the resource group on which the query ran.
-
-## Recent queries
+-->
+## Query history
 {: #recent-queries}
 
-The administrator privileges are not necessary to view recent queries. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
+The administrator privileges are not necessary to view query history. The **Query history** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
 ### Filter - "Submitted within last:"
 {: #filter_submted}
+
+The Query History can be filtered by selecting from various preset intervals or specifying a custom time interval.
 
 - Success Ratio: Represents the ratio of queries executed within the selected time span. This metric calculates the total number of queries fired against the number of completed and failed queries (with varying failure reasons).
 - Databases: Displays the total number of queries fired on the databases during the selected time span.
