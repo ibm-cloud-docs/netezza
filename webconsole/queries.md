@@ -21,64 +21,6 @@ subcollection: netezza
 # Queries
 {: #queries}
 
-## Recent queries
-{: #recent-queries}
-
-The administrator privileges are not necessary to view recent queries. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
-
-### Filter - "Submitted within last:"
-{: #filter_submted}
-
-- Success Ratio: Represents the ratio of queries executed within the selected time span. This metric calculates the total number of queries fired against the number of completed and failed queries (with varying failure reasons).
-- Databases: Displays the total number of queries fired on the databases during the selected time span.
-- Users:
-
-   - For Admin users: Displays the total number of queries fired by all users within the selected time span.
-   - For Non-admin users: Shows the total number of queries fired by the individual user within the selected time span.
-
-The number of queries displayed is limited to a maximum of 2,000.
-{: note}
-
-### Creating queries
-{: #create-queries}
-
-1. Go to **Query editor**.
-1. Type a name for your query.
-1. Select the database in which you want to run the query.
-1. Select the schema where you want to run the query.
-
-   If you do not pick a schema, the default database schema is selected.
-
-1. Type the SQL query that you want to run.
-
-   If your query is a select statement, a *Set Limit* option appears to allow you to specify how many rows of data you want to retrieve. The default is `No limit`.
-
-1. When you add the necessary information, you can do one of the following:
-
-   - Click **Run** to run the query.
-
-     The results of the query are displayed in the panel.
-
-   - Click the floppy disk icon that is next to the `Query field` name to save the query as a template.
-
-     The saved query is added to **Queries > Recent Queries**.
-
-   - Click **Clear** to clear the query.
-
-### Finding queries
-{: #find-queries}
-
-1. Go to **Queries > Recent queries**.
-1. Type the name of the query you are looking for in the search bar.
-
-<!-- ### Deleting queries
-{: #delete-queries}
-
-1. Go to **Queries**.
-1. Select a query.
-1. From the overflow menu, click **Remove**.
-1. Confirm your choice by clicking **Remove** again. -->
-
 ## Query history
 {: #query-history}
 
@@ -158,6 +100,65 @@ For example, you can use it to find queries that are submitted by a particular u
 
 - **Resource group name**
    Specifies the resource group on which the query ran.
+
+## Recent queries
+{: #recent-queries}
+
+The administrator privileges are not necessary to view recent queries. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
+
+### Filter - "Submitted within last:"
+{: #filter_submted}
+
+- Success Ratio: Represents the ratio of queries executed within the selected time span. This metric calculates the total number of queries fired against the number of completed and failed queries (with varying failure reasons).
+- Databases: Displays the total number of queries fired on the databases during the selected time span.
+- Users:
+
+   - For Admin users: Displays the total number of queries fired by all users within the selected time span.
+   - For Non-admin users: Shows the total number of queries fired by the individual user within the selected time span.
+
+The number of queries displayed is limited to a maximum of 2,000.
+{: note}
+
+### Creating queries
+{: #create-queries}
+
+1. Go to **Query editor**.
+1. Type a name for your query.
+1. Select the database in which you want to run the query.
+1. Select the schema where you want to run the query.
+
+   If you do not pick a schema, the default database schema is selected.
+
+1. Type the SQL query that you want to run.
+
+   If your query is a select statement, a *Set Limit* option appears to allow you to specify how many rows of data you want to retrieve. The default is `No limit`.
+
+1. When you add the necessary information, you can do one of the following:
+
+   - Click **Run** to run the query.
+
+     The results of the query are displayed in the panel.
+
+   - Click the floppy disk icon that is next to the `Query field` name to save the query as a template.
+
+     The saved query is added to **Queries > Recent Queries**.
+
+   - Click **Clear** to clear the query.
+
+### Finding queries
+{: #find-queries}
+
+1. Go to **Queries > Recent queries**.
+1. Type the name of the query you are looking for in the search bar.
+
+<!-- ### Deleting queries
+{: #delete-queries}
+
+1. Go to **Queries**.
+1. Select a query.
+1. From the overflow menu, click **Remove**.
+1. Confirm your choice by clicking **Remove** again. -->
+
 
 <!-- - **Session ID**
    Specifies the ID of the session in which the query ran.
