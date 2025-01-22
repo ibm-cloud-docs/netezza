@@ -60,64 +60,33 @@ You can ask the database assistant to complete the actions listed in the followi
 
 Depending on the database workload, the database assistant might take some time to respond to certain prompts, such as requesting a database summary or getting details about the largest tables by storage size.
 {: note}
-<!--
-| Category | Action | Description | Example prompt phrases |
-| --- | --- | --- | --- |
-| **Product information** | Answer your questions about Netezza | Ask the assistant anything about Netezza and it will generate an answer based on its knowledge of the product. The assistant is trained on the official IBM Netezza documentation | - What's new in Netezza?</br> - Tell me about the MON_GET_PKG_CACHE_STMT table function</br> - How do I troubleshoot Netezza?</br> - What is error code SQL0911N?</br> - How can I manage my database workload? |
-| **Instance information** | Show backups | Get information about available backups in the system | - Get the list of backups</br> - What backups are available?</br> - Show me my backups |
-|  | Show database summary | Get a summary of basic database details such as name, version, size, number of tables, number of schemas, uptime, and more | - Report on my database</br> - Check my database details</br> - Tell me about this instance |
-|  | Show database version | Get the version of Netezza | - What Netezza version am I running?</br> - What is the database version?</br> - Current Netezza database version</br> - Show me the database version |
-|  | Show scaling resources | Get information about how system resources are configured for scaling | 	- Show me the system scaling settings</br> - What is the scaling configuration?</br> - Display compute scaling settings |
-|  | Show system settings | Get a summary of the host names and endpoints configured in your system | - Show my system settings</br> - Display database endpoint settings</br> - Describe db connection details |
-|  | Show users | Get a list of all users from the console | - Display users in the console.</br> - Get me a list of users</br> - Who is using the console? |
-| **Workload information** | Show active connections | Get a list of all current connections to the system | - Show me all connections</br> - Display inflight connections</br> - List the current applications |
-|  | Show running queries | Get a list of all currently running SQL queries and in-flight executions in the system | - Show me current SQL queries</br> - Get all current queries</br> - Show me in-progress SQL |
-| **Storage information** | Show table spaces | Get a list of table spaces in the system and their storage utilization | - Obtain the table spaces list</br> - List all tablespace names</br> - Show table spaces |
-|  | Show total storage | Get storage details about the system | - Display my storage utilization statistics</br> - How much disk storage capacity have I used?</br> - Report on my storage consumption |
-| **Resource utilization** | Show CPU usage summary | Get a summary of how much CPU the system is using | - Show me CPU usage for the past 3 days</br> - What was the system CPU load between August 14 and 15 2024?</br> - Analyze processor utilization from the last 24 hours |
-|  | Show IO usage summary | Get a summary of disk usage over a specified period | - Analyze IO usage from the last 48 hours</br> - Display IO utilization for the last 7 days</br> - Show me I/O usage  |
-|  | Show memory usage summary | Get a summary of how much memory was used by the system over a specified period | - Analyze memory usage for the last 15 days</br> - Get a summary of memory details</br> - Show me memory usage from 6 September 2024 |
-| **Database objects** | Show indexes for a specified schema | Get a list of indexes for a given schema | - Get index details</br> - Show indexes for the schema schema-name-1</br> - Fetch indexes |
-|  | Show largest tables by rows | Get a ranked list of the largest tables in the system based on row count | - Get the largest 10 tables</br> - Display the 3 largest tables by row count</br> - What is my largest table? |
-|  | Show largest tables by rows for a specified schema | Get a ranked list of the largest tables in a given schema | - What are the top 3 tables for the schema "schema-name"?</br> - Get the largest tables by row count from the schemas "schema-name-1" and "schema-name-2"</br> - Show me the 3 biggest tables by rows from schema-name-1, schema-name-2 schemas |
-|  | Show largest tables by storage | Get a ranked list of the largest tables in the system based on storage size | - Rank the top 10 tables by storage size</br> - Identify my largest tables by storage</br> - Which table uses the largest amount of storage? |
-|  | Show largest tables by storage for a specified schema | Get a ranked list of the largest tables in a given schema based on storage size | - Get the top 4 tables by storage for the schema schema-name-1</br> - What is the largest table by storage size in the schema schema-name-1?</br> - Show the top 10 largest tables by storage from the schema-name-1 schema |
-|  | Show schemas | Get a list of schemas in the system | - Display all schemas</br> - Provide a list of schemas</br> - Fetch me a list of schemas in the database |
-|  | Show tables | Get a list of tables in the system | - View the tables in the schema "schema-name-1"</br> - Get a tables list from the schema-name-1, schema-name-2, and schema-name-3 schemas</br> - List my tables |
-|  | Show views | Get a list of views in the system | - List my views</br> - Display the views for the schema-name-1 schema</br> - Collect all views |
-| **Troubleshooting** | Show most active connections | Get details about the most active connections | - What are the top 5 active connections</br> - Display the top 8 connections in the database</br> - Get the most active connections |
-|  | Show how time is spent | Get details about how much time was spent by the system on various tasks | - List wait times and bottlenecks</br> - How is time being spent in my database?</br> - Get time spent details |
-|  | Show lock waits | Get a list of blocking and waiting connections in the system | - Troubleshoot lock waits and deadlocks</br> - Report all lock waits</br> - Show me lock waits from the last two hours |
-|  | Show longest running queries | Get information about the top queries in the system ranked by how long they have been running | - Display the longest running SQL queries</br> - What are the top 5 queries?</br> - Show long running SQL statements |
 
-{: caption="Netezza database assistant skills" caption-side="top"}-->
+ // Assisted by watsonx Code Assistant 
+// Code generated by WCA@IBM in this programming language is not approved for use in IBM product development.
+ 
 
-## WXO Skills table
-
-| No | Skill Name | Skill Description | Example Prompts |
-|----|------------|------------------|-----------------|
-| 1 | Show Instance Summary | Retrieves an overview of the system that includes: Version, Size in GB, Total # databases, Total # schemas, Total # tables, Total # sessions, Total # Active sessions, Uptime: [X days, Y hours, and Z minutes] | Show me instance summary. What is the instance uptime? |
-| 2 | List Tables | Provides a list of all tables in a given database and schema. | List tables. List tables for TESTDB11.SCH2. |
-| 3 | List Views | Provides a list of all views in a given database and schema. | List views. List views for TESTDB11.SCH2 |
-| 4 | List Schemas | Provides a list of all schemas in a given database | List schemas. List schemas in TESTDB11 |
-| 5 | List Databases | Provides a list of all databases in the system | List databases. Show databases |
-| 6 | Show Backups | Provides a list of all backups done in the system | Show my backups. List backups |
-| 7 | Total Storage Utilization | Retrieves the percent, and GB of storage space that is currently being utilized | What’s my storage utilization? Provide details on my storage usage |
-| 8 | Show Instance State | Retrieves the current state of the system | Show instance status. Get status |
-| 9 | Top N Users by Resource Usage | Lists top N users according to longest resource consumption in a given timeframe | List top 5 users with most resource utilization in the last 60 hours. Show users with longest resource utilization from last week till now |
-| 10 | Top N largest tables by storage | Lists top N tables according to largest storage consumption | List top 10 tables largest tables. Provide list of largest tables by storage size |
-| 11 | Show CPU Usage | Retrieves the CPU utilization of system host and spu in a given timeframe | What is the host cpu usage in the last 4 hours. Get cpu usage from last Monday till last Wednesday |
-| 12 | Show Memory Usage | Retrieves the memory utilization of system host and spu in a given timeframe | Find out memory usage in the last 5 hours. Show memory usage in the last week |
-| 13 | Show I/O Usage | Retrieves the I/O utilization of system host and spu in a given timeframe | Display I/O usage for the past 12 hours. What is the IO utilization over the last two weeks |
-| 14 | Show Connections | Provides a list of all connections in the system | List connections. Show connections |
-| 15 | Show Active Queries | Provides a list of queries that are active (running) currently | Show inflight sql queries. List running queries |
-| 16 | Top N Queries by Resource Usage | Lists top N queries according to longest resource consumption in a given timeframe | List top 5 queries with most resource utilization in the last 60 hours. Show queries with longest resource utilization from last week till now |
-| 17 | Get CRN | Displays the CRN of the system | CRN? Get CRN |
-| 18 | Get NPS hostname | Displays the Netezza Server Hostname | What is my NPS hostname? Hostname? |
-| 19 | Show Pause/Resume History | Provides a list of system’s pause-resume history | Show pause/resume history. Fetch pause-resume history |
-| 20 | Show Scaling History | Provides a graph of system’s scaling history | Show scaling history. Retrieve scaling history |
-| 21 | Show Smart Scaling | Investigates system’s workload behavior and provides a graph with scaling predictions | Retrieve scaling demand growth. Provide me scaling prediction |
-| 22 | Get System Version | Displays the NPS version of the system | What is current Netezza software version? Get my system version |
+| No | Action | Example prompts |
+|----|------------|-----------------|
+| 1 | Show Instance Summary | Show me instance summary. What is the instance uptime? |
+| 2 | List Tables | List tables for TESTDB11.SCH2. |
+| 3 | List Views | List views for TESTDB11.SCH2 |
+| 4 | List Schemas | List schemas in TESTDB11 |
+| 5 | List Databases | List databases, Show databases |
+| 6 | Show Backups | Show my backups, List backups |
+| 7 | Total Storage Utilization | What is my storage utilization? Provide details on my storage usage |
+| 8 | Show Instance State | Show instance status, Get status |
+| 9 | Show CPU Usage | What is the host cpu usage in the last 4 hours. Get cpu usage from last Monday till last Wednesday |
+| 10 | Show Memory Usage | Find out memory usage in the last 5 hours. Show memory usage in the last week |
+| 11 | Show I/O Usage | Display I/O usage for the past 12 hours. What is the IO utilization over the last two weeks |
+| 12 | Show Connections | List connections. Show connections |
+| 13 | Show Active Queries | Show inflight sql queries. List running queries |
+| 14 | Top N Queries by Resource Usage | List top 5 queries with most resource utilization in the last 60 hours. Show queries with longest resource utilization from last week till now |
+| 15 | Get CRN | CRN? Get CRN |
+| 16 | Get NPS hostname | What is my NPS hostname? Hostname? |
+| 17 | Show Pause/Resume History | Show pause/resume history. Fetch pause-resume history |
+| 18 | Show Scaling History | Show scaling history. Retrieve scaling history |
+| 19 | Show Smart Scaling | Retrieve scaling demand growth. Provide me scaling prediction |
+| 20 | Get System Version | What is current Netezza software version? Get my system version |
 
 ## Troubleshooting the Netezza database assistant
 {: #assistant-troubleshooting}
