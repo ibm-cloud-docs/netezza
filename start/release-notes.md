@@ -44,6 +44,7 @@ Workload contour - Scaling
 {: #cifeb2025}
 
 - OpenSSL 3.0 is supported from 11.2.3.4 onwards.
+- The nz_s3connector has been removed from the Software Support Tools package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
 
 
 ## 22 November 2024 - 11.2.3.3
