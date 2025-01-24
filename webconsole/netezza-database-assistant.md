@@ -79,13 +79,14 @@ Depending on the database workload, the database assistant might take some time 
 | 12 | Show Connections | List connections. Show connections |
 | 13 | Show Active Queries | Show inflight sql queries. List running queries |
 | 14 | Top N largest tables by storage | List top 10 tables largest tables. Provide list of largest tables by storage size |
-<!--| 15 | Top N Queries by Resource Usage | List top 5 queries with most resource utilization in the last 60 hours. Show queries with longest resource utilization from last week till now | -->
 | 15 | Get CRN | CRN? Get CRN |
 | 16 | Get NPS hostname | What is my NPS hostname? Hostname? |
 | 17 | Show Pause/Resume History | Show pause/resume history. Fetch pause-resume history |
 | 18 | Show Scaling History | Show scaling history. Retrieve scaling history |
 | 19 | Show Smart Scaling | Retrieve scaling demand growth. Provide me scaling prediction |
 | 20 | Get System Version | What is current Netezza software version? Get my system version |
+
+<!--| 15 | Top N Queries by Resource Usage | List top 5 queries with most resource utilization in the last 60 hours. Show queries with longest resource utilization from last week till now | -->
 
 ## Troubleshooting the Netezza database assistant
 {: #assistant-troubleshooting}
