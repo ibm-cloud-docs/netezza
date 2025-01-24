@@ -27,12 +27,11 @@ Chat with the IBM Netezza database assistant to help you complete tasks, find ou
 
 Open the database assistant from the Netezza web console, and then ask it to help you with a range of Netezza tasks, including:
 - Answering your questions about Netezza
-- Detecting and helping to resolve lock contention issues
 - Monitoring your Netezza instance, including getting information about:
     - Active connections
     - SQL activity
     - Resource usage
-    - Schemas, table spaces, indexes, and tables in the system
+    - Schemas, databases, and tables in the system
     - Users
     - Backups
     - Compute scaling
@@ -101,6 +100,6 @@ If you find that you are not getting the answers and results that you expect fro
 ## Data privacy and opting out
 {: #assistant-data-privacy}
 
-When you interact with the Netezza database assistant, your questions and requests are processed by IBM watsonx Orchestrate, which is outside of your Netezza instance. Only the text that you input into the assistant gets processed by watsonx Orchestrate. None of your actual data or metrics leave your Netezza instance at any time.
+When you interact with the Netezza database assistant, your questions and requests are processed by IBM watsonx Orchestrate, which is outside of your Netezza instance. All communications between IBM watsonx Orchestrate and your Netezza instance are encrypted.
 
 To opt out of the Netezza database assistant, contact IBM Support.
