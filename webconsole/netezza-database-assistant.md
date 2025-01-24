@@ -78,7 +78,8 @@ Depending on the database workload, the database assistant might take some time 
 | 11 | Show I/O Usage | Display I/O usage for the past 12 hours. What is the IO utilization over the last two weeks |
 | 12 | Show Connections | List connections. Show connections |
 | 13 | Show Active Queries | Show inflight sql queries. List running queries |
-| 14 | Top N Queries by Resource Usage | List top 5 queries with most resource utilization in the last 60 hours. Show queries with longest resource utilization from last week till now |
+| 14 | Top N largest tables by storage | List top 10 tables largest tables. Provide list of largest tables by storage size |
+<!--| 15 | Top N Queries by Resource Usage | List top 5 queries with most resource utilization in the last 60 hours. Show queries with longest resource utilization from last week till now | -->
 | 15 | Get CRN | CRN? Get CRN |
 | 16 | Get NPS hostname | What is my NPS hostname? Hostname? |
 | 17 | Show Pause/Resume History | Show pause/resume history. Fetch pause-resume history |
@@ -94,8 +95,8 @@ If you find that you are not getting the answers and results that you expect fro
 - Restart the conversation. The assistant might be getting confused by other things you have discussed with it.
 - Ensure that you are asking about Netezza. If you are asking about something else, it might be outside of the assistant's capabilities.
 - Try asking about something specific. If your question is too broad, the assistant is more likely to return results that aren't relevant to your request.
-- Ensure that you are not filtering by version. If an answer to your question isn't available in the current documentation release, the assistant won't find it. If you're filtering by version, some content might be missing. To broaden the search, type "change version" and then choose "Any".
-
+<!--- Ensure that you are not filtering by version. If an answer to your question isn't available in the current documentation release, the assistant won't find it. If you're filtering by version, some content might be missing. To broaden the search, type "change version" and then choose "Any".
+-->
 ## Data privacy and opting out
 {: #assistant-data-privacy}
 
