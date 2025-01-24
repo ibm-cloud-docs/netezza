@@ -24,6 +24,16 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
+## 31 January 2024 - 11.2.3.3 - IF1
+{: #jan2025}
+{: release-note}
+
+### New features
+{: #nfnov2024}
+
+Database assistant
+:   Introducing the Netezza Database Assistant chatbot, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
+
 ## 22 November 2024 - 11.2.3.3
 {: #nov2024}
 {: release-note}
