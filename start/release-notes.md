@@ -24,7 +24,7 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 31 January 2024 - 11.2.3.3 - IF1
+## 17 January 2024 - 11.2.3.3 - IF1
 {: #jan2025}
 {: release-note}
 
