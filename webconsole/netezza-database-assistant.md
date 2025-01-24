@@ -44,7 +44,7 @@ The database assistant uses built-in skills and is trained on the official IBM N
 
 To get started with the database assistant:
 
-1. Open your Netezza web console.
+1. Open the Netezza web console.
 
 1. Click the database assistant chat icon.
 
