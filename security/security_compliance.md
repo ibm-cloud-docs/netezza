@@ -25,11 +25,13 @@ subcollection: netezza
 ## Secure access control
 {: #access_control}
 
-**Authentication**
+### Authentication
+{: #auth_sec_compl}
 
-Both [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoint) and [private](/docs/netezza?topic=netezza-connecting-overview#private_endpoint) {{site.data.keyword.netezza_short}} endpoints are accessed through an HTTPS API. Where the API endpoint requires it, the user is authenticated for every HTTPS request that {{site.data.keyword.netezza_short}} receives.
+Both [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoints) and [private](/docs/netezza?topic=netezza-connecting-overview#private_endpoints) {{site.data.keyword.netezza_short}} endpoints are accessed through an HTTPS API. Where the API endpoint requires it, the user is authenticated for every HTTPS request that {{site.data.keyword.netezza_short}} receives.
 
-**Encryption**
+### Encryption
+{: #encryptiom_sec_compl}
 
 When transmitted, content is encrypted on any public networks by using TLS 1.2 or later.  
 For more information, see [Data security and encryption](/docs/netezza?topic=netezza-data-encryption).
@@ -48,7 +50,7 @@ At rest, content is encrypted within the Cloud Data Center in the following ways
 - [ISO 27017](https://www.iso.org/standard/43757.html)
 - [ISO 27018](https://www.iso.org/standard/76559.html)
 
-For more information, see the [IBM Compliance Support page](https://www.ibm.com/support/pages/compliance-request-tool/search?q=IBM%20Netezza%20Performance%20Server).
+For more information, see the [IBM Compliance Support page](https://www.ibm.com/support/pages/compliance-request-tool/search/?q=IBM%20Netezza%20Performance%20Server).
 
 ## HIPAA
 {: #hipaa}

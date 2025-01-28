@@ -54,7 +54,8 @@ There are different ways in which you can load your data on {{site.data.keyword.
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
    | user           | Specifies the user name.      |
    | password       | Specifies the password for the user. |
-   
+   {: caption="Details"}
+
    Example:
 
     ```sql
@@ -100,6 +101,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
    | source_type         | Specifies that the source data file is remote. When you load data by using external tables, by default, the source data file path is assumed to be on the {{site.data.keyword.netezza_short}} host. If you want to load data from your local machine, you must use the `RemoteSource` option. For the `nzsql` client, specify `RemoteSource 'NZSQL'`. For more information, see [RemoteSource option](https://www.ibm.com/docs/en/netezza?topic=od-remotesource-option-2).|
    | delimiter_type      | Specifies the delimiter that is used in your source data file. For more information, see [Delimiter option](https://www.ibm.com/docs/en/netezza?topic=od-delimiter-option-2).|
    | number_of_rows      | Specifies the number of initial rows to skip before loading the data. For more information, see [SkipRows option](https://www.ibm.com/docs/en/netezza?topic=od-skiprows-option-2).|
+   {: caption="Details"}
    
    Example:
 
@@ -155,6 +157,7 @@ You can load data to {{site.data.keyword.netezza_short}} from a data file on Ama
    | bucket_URL        | Specifies the name of the bucket. |
    | endpoint          | Specifies the region URL to access your bucket. |
    | multipart_size    | Specifies the size of each part in a multipart upload. The default is 105 MB; a maximum 105 MB of buffer can be uploaded in one request.|
+   {: caption="Details"}
 
    Example:
 

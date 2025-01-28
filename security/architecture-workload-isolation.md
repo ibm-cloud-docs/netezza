@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-04-19"
+  years: 2024
+lastupdated: "2024-06-14"
 
 keywords: public isolation for Netezza Performance Server, compute isolation for Netezza Performance Server, Netezza Performance Server architecture, workload isolation in Netezza Performance Server
 
@@ -21,7 +21,7 @@ subcollection: netezza
 # Learning about {{site.data.keyword.netezza_short}} architecture and workload isolation
 {: #compute-isolation}
 
-{{site.data.keyword.netezza_full}} uses a multi-tenant-in-a-cluster isolation model.  
+{{site.data.keyword.netezza_full}} uses a multi-tenant-in-a-cluster isolation model.
 
 For Azure, the model uses a separate OpenShift namespace for each customer and each instance.
 For AWS, the model uses EKS (an AWS-managed Kubernetes platform) for each customer and each instance.

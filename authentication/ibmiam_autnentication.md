@@ -24,13 +24,13 @@ subcollection: netezza
 # Setting IBM IAM authentication
 {: #ibmiamauth}
 
-Set your authentication method to `IBMIAM` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system).
+Set your authentication method to `IBMIAM` with the [`REGISTER EXTERNAL AUTHENTICATION SYSTEM` SQL statement](https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system){: external}.
 {: shortdesc}
 
 Two factor authentication is not supported with an external authentication system.
 {: important}
 
-See also [Managing IAM access](docs/netezza?topic=netezza-iam-docs).
+See also [Managing IAM access for NPSaaS](/docs/netezza?topic=netezza-iam-docs).
 
 ## Syntax
 {: #ibmiamsyntax}
@@ -77,6 +77,7 @@ REGISTER EXTERNAL AUTHENTICATION SYSTEM 'IBMIAM' with { PRODUCTION | STAGING | D
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address is displayed on the page now.|
    | user           | Specifies the user name.      |
    | password       | **When MFA is not configured:** \n specify the `access-key` and `secret-key` for the user. \n **When MFA is configured:** \n specify the `access-key`, `secret-key`, and `mfa-code`.|
+   {: caption="Example"}
 
    Example:
 

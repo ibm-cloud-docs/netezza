@@ -24,7 +24,7 @@ subcollection: netezza
 # Managing the default retention time interval for the system and viewing retention time intervals
 {: #dataretentioninterval_tt}
 
-Before you set retention time interval for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](docs/netezza?topic=netezza-managing_tt).
+Before you set retention time interval for all tables in a schema or database, consider the cost of storage for temporal tables, which could be significant. See [Managing time travel space usage](/docs/netezza?topic=netezza-managing_tt).
 {: important}
 
 ## Setting the retention time interval for the system
@@ -104,27 +104,26 @@ Retention time interval and retention lower bound for an object are available in
 1. Log in to the web console as described in [Getting started with the web console](/docs/netezza?topic=netezza-getstarted-console).
 1. View the retention time interval:
 
-  - For a table:  
+   - For a table:
 
-    1. Go to **Databases**.
-    1. Select the database and schema in which the table that you want to view the retention interval is located.
-    1. Ensure that you are in the DB Objects > Tables tab.
-    1. Identify the table for which you want to view the retention interval.
-    
-       The retention interval is displayed in the **Retention time interval (days)** column. 
+      1. Go to **Databases**.
+      1. Select the database and schema in which the table that you want to view the retention interval is located.
+      1. Ensure that you are in the DB Objects > Tables tab.
+      1. Identify the table for which you want to view the retention interval.
 
-  - For a schema:
-    
-    1. Go to **Databases**.
-    1. Select the database in which the schema that you want to view the retention interval is located.
-    1. Identify the schema for which you want to view the retention interval.
-    
-       The retention interval is displayed in the **Retention time interval (days)** column. 
+         The retention interval is displayed in the **Retention time interval (days)** column.
 
-    - For a database:
-    
-    1. Go to **Databases**.
-    1. Identify the database for which you want to view the retention interval.
-    
-       The retention interval is displayed in the **Retention time interval (days)** column. 
+   - For a schema:
 
+      1. Go to **Databases**.
+      1. Select the database in which the schema that you want to view the retention interval is located.
+      1. Identify the schema for which you want to view the retention interval.
+
+         The retention interval is displayed in the **Retention time interval (days)** column.
+
+   - For a database:
+
+      1. Go to **Databases**.
+      1. Identify the database for which you want to view the retention interval.
+
+         The retention interval is displayed in the **Retention time interval (days)** column.

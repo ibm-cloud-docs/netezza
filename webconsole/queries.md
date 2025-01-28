@@ -24,15 +24,25 @@ subcollection: netezza
 ## Recent queries
 {: #recent-queries}
 
-On the page, you can see the most recent 2000 queries.
+The administrator privileges are not necessary to view recent queries. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
-You do not need to have the administrator privileges to view recent queries. You must have the *List* permission for database objects used in the queries to see the history records. The **Recent Queries** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements. 
+### Filter - "Submitted within last:"
+{: #filter_submted}
 
+- Success Ratio: Represents the ratio of queries executed within the selected time span. This metric calculates the total number of queries fired against the number of completed and failed queries (with varying failure reasons).
+- Databases: Displays the total number of queries fired on the databases during the selected time span.
+- Users:
+
+   - For Admin users: Displays the total number of queries fired by all users within the selected time span.
+   - For Non-admin users: Shows the total number of queries fired by the individual user within the selected time span.
+
+The number of queries displayed is limited to a maximum of 2,000.
+{: note}
 
 ### Creating queries
 {: #create-queries}
 
-1. Go to **Queries**.
+1. Go to **Query editor**.
 1. Type a name for your query.
 1. Select the database in which you want to run the query.
 1. Select the schema where you want to run the query.
@@ -61,13 +71,7 @@ You do not need to have the administrator privileges to view recent queries. You
 1. Go to **Queries > Recent queries**.
 1. Type the name of the query you are looking for in the search bar.
 
-### Deleting queries
-{: #delete-queries}
 
-1. Go to **Queries**.
-1. Select a query.
-1. From the overflow menu, click **Remove**.
-1. Confirm your choice by clicking **Remove** again.
 
 ## Query history
 {: #query-history}
@@ -80,14 +84,15 @@ When you are on the **Query history** page, you can do the following:
 - Sort any column by placing the cursor on the column header.
 - Find specific queries by using various filtering criteria.
 
-  For example, you can use it to find queries that are submitted by a particular user or group, or queries that run on a particular database.
+For example, you can use it to find queries that are submitted by a particular user or group, or queries that run on a particular database.
 
 - Search the query history but clicking **Search**.
-  You can use a predefined search criteria, or create a new search option.
+
+   You can use a predefined search criteria, or create a new search option.
 
 - Select the columns to display in the table.
 
-  Click the settings icon next to the **Find query history** field to edit columns.
+   Click the settings icon next to the **Find query history** field to edit columns.
 
 - View metrics and statistics status.
 
@@ -148,17 +153,9 @@ When you are on the **Query history** page, you can do the following:
 - **Resource group name**
    Specifies the resource group on which the query ran.
 
-- **Session ID**
-   Specifies the ID of the session in which the query ran.
 
-- **Client user ID**
-   Specifies the client user ID of the client that ran the query.
 
-- **Client application name**
-   Specifies the client application name from which the query originates.
+## Query cancellation
+{: #query-cancellation}
 
-- **Client workstation name**
-   Specifies the client workstation name from which the query originates.
-
-- **Client accounting string**
-   Specifies the accounting string of the client that ran the query.
+When you execute a long running query from query editor, you can cancel the query until the time it is in execution by a simple click of the button.

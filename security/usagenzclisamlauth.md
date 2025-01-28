@@ -23,8 +23,9 @@ subcollection: netezza
 {:note: .note}
 
 # Usage of `nzcli` with SAML authentication
+{: #usage_nzcli_w_saml_auth}
 
-After successful authentication from Netezza UI and Identity Provider, you will get a JWT token on Netezza UI GUI. You can use the JWT token to execute `nzcli` commands as follows:
+After successful authentication from Netezza UI and Identity Provider, you will get a JWT token in the **Administration -> tools** tab. You can use the JWT token to execute `nzcli` commands as follows:
 
  ```bash
 ./nzcli nzcommand  -u username -pw  jwttoken -apiserver ip

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-03-02"
+  years: 2024
+lastupdated: "2024-06-14"
 
 keywords: maintenance jobs, netezza maintenance, scheduling maintenance jobsc, automaint, maintenance with the web console
 

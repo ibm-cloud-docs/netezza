@@ -40,9 +40,7 @@ You can also export information about queries by clicking **Export** or refresh 
 To see a list of sessions, go to **Current activity > Sessions** from the menu or homepage.
 
 When you select **Sessions**, you can do the following:
-- View queries
-- Change priority
-- End transactions
-- End sessions
 
-You can also export information about sessions by clicking **Export** or refresh your view by clicking the refresh button next to **Export**.
+- Change priority
+- Abort transaction
+- Abort session

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-03-02"
+  years:  2024
+lastupdated: "2024-06-14"
 
 keywords: netezza time travel, enabling time travel on netezza, disabling time travel on netezza, enabling time travel, disabling time travel, time travel
 
@@ -29,7 +29,7 @@ subcollection: netezza
 Historical rows in temporal tables take up space on your {{site.data.keyword.netezza_short}} disks over and above that which is necessary for current rows. The amount of this extra space, which might be significant, depends on the following factors:
 
 - The number of days in the retention time interval.
-- The rate of change (rows or bytes deleted and updated) of data in the table.  
+- The rate of change (rows or bytes deleted and updated) of data in the table.
     The size of the current data in and of itself is not a factor if the rate of change is measured in absolute, not relative, terms. For example, 40% of a larger table means more rows or bytes than 40% of a smaller table.
 
 A longer retention time interval might be suitable for a slowly changing dimension table, but not for a table where the number of rows or bytes that are deleted or updated per day is large.
@@ -77,6 +77,5 @@ See also [the SHOW TEMPORAL HISTOGRAM command](https://www.ibm.com/docs/en/netez
 1. Select the schema in which the temporal table that you want to analyze is located.
 1. Select the table.
 1. Go to the **Time travel** tab.
-1. Analyze the data.  
+1. Analyze the data.
    You can view the information in a list or as a chart.
-   

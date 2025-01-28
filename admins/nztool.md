@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-12-07"
+lastupdated: "2023-09-23"
 
 keywords: nztool
 
@@ -38,79 +38,114 @@ Supported platforms for the `nz` tool:
 ## Downloading the nz tool
 {: #download-nz}
 
-Run the command:
+You can download the `nz` tool using folowing methods:
 
-```sh
-curl -o nz -k https://<API Server URL>/<version number>/download/<platform specific package>
-chmod +x nz
-```
-{: codeblock}
+1. **Using command-line interface**
 
-   where the API Server URL is **API Server** URL details.
+   Run the command:
 
-   To retrieve this information, follow the steps:
+   ```sh
+   curl -o nz -k https://<API Server URL>/<version number>/download/<platform specific package>
+   chmod +x nz
+   ```
+   {: codeblock}
 
-   1. Log in to your IBM Cloud account.
+      where the API Server URL is **API Server** URL details.
 
-   2. Go to **Resource list** > **Services and Software** > **Databases**.
+      To retrieve this information, follow the steps:
 
-   3. Click your Netezza Performance Server instance.
-    You are now on the **Service instance details** page. In the **Public Endpoints** section, you can find information (URL details) about endpoints for accessing the web console, the API server, and the database.
+      1. Log in to your IBM Cloud account.
 
-Examples:
+      2. Go to **Resource list** > **Services and Software** > **Databases**.
 
-To download `nz` on a Linux box, run:
+      3. Click your Netezza Performance Server instance. You are now on the **Service instance details** page. In the **Public Endpoints** section, you can find information (URL details) about endpoints for accessing the web console, the API server, and the database.
 
-```sh
-curl -o nz -k https://<API Server URL>/v2/download/nz-linux-amd64
-```
-{: codeblock}
+   Examples:
 
-To download `nz` on Windows, run:
+   To download `nz` on a Linux box, run:
 
-```sh
-curl.exe -o nz.exe -k https://<API Server URL>/v2/download/nz-windows-amd64
-```
-{: codeblock}
+   ```sh
+   curl -o nz -k https://<API Server URL>/v2/download/nz-linux-amd64
+   ```
+   {: codeblock}
+
+   To download `nz` on Windows, run:
+
+   ```sh
+   curl.exe -o nz.exe -k https://<API Server URL>/v2/download/nz-windows-amd64
+   ```
+   {: codeblock}
+
+1. **Download from fix-central**
+
+   You can download the `nzcli` from [Fix Central](https://www.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7EWebSphere&product=ibm/WebSphere/IBM+Cloud+Private+for+Data+System&release=NZCLI_11.2&platform=All&function=fixId&fixids=11.2.3.2-WS-ICPDS-NZCLI-fp174021&includeRequisites=1&includeSupersedes=0&downloadMethod=http).
 
 ## The nz syntax
 {: #nz-syntax}
 
-The `nz` command syntax can take two forms, depending on whether you created shortcuts for commonly used commands or not.
+The `nz` tool supports execution of select NPSaaS commands and Software Support Tools. Command execution syntax depends on the command type - NPSaaS command or Software Support Tool, and whether a shortcut command was installed.
 
-1. For more information about shortcuts and a list of commands that can have shortcuts, see [Creating nz shortcuts with the nz install command](/docs/netezza?topic=netezza-nztool#nzinstall-shortcuts).
-1. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
-{: tip}
+1. For a list of supported NPSaaS commands and Software Support Tools, see [Commands supported by the nz tool](/docs/netezza?topic=netezza-nztool#supported-cmds).
+2. Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`.
+3. For more information about command shortcuts, including which commands can have shortcuts created, see [Creating nz shortcuts with the nz install command](/docs/netezza?topic=netezza-nztool#nzinstall-shortcuts).
+4. You can set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables and forgo specifying the **-apiserver**, **-u**, and **-pw** options.
 
-- Full syntax:
+Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload `nz` tool at least every other release.
+{: note}
 
-   ```sh
-   nz [command] [subcommands] [options]
-   ```
-   {: codeblock}
 
-   Example:
 
-   ```sh
-   ./nz nzstate -host <nps-hostname> -u <nps-admin-user> -pw <nps-admin-user-password>
-   System state is 'Online'.
-   ```
-   {: codeblock}
+**NPSaaS command syntax**
+{: #npsaassyntax}
 
-- Shortcut syntax
+```sh
+nz [command] [subcommands] [options]
+```
+{: codeblock}
 
-   ```sh
-   [command] [subcommand] [options]
-   ```
-   {: codeblock}
+Example:
 
-   Example:
+```sh
+./nz nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+System state is 'Online'.
+```
+{: codeblock}
 
-   ```sh
-   -host <nps-hostname> -u <nps-admin-user> -pw <nps-admin-user-password>
-   System state is 'Online'.
-   ```
-   {: codeblock}
+
+**NPSaaS command shortcut syntax**
+{: #npsyntxshrtct}
+
+```sh
+[command] [subcommand] [options]
+```
+{: codeblock}
+
+Example:
+
+```sh
+./nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+System state is 'Online'.
+```
+{: codeblock}
+
+
+**Software Support Tool syntax**
+{: #ssts}
+
+```sh
+nz [run-command] [software-support-tool] [subcommands] [options]
+```
+{: codeblock}
+
+
+Example:
+
+```sh
+./nz run nz_get_table_rowcount database1 table1
+```
+{: codeblock}
+
+
 
 ### Commands supported by the nz tool
 {: #supported-cmds}
@@ -128,6 +163,7 @@ nzstate
 nzstats
 nzsession
 nzsystem
+nzprogress
 ```
 {: screen}
 
@@ -188,6 +224,7 @@ nz_ddl_user
 nz_ddl_view
 nz_ddl_view+
 nz_dimension_or_fact
+nz_event_runAwayQuery
 nz_find_32bit_udx
 nz_find_control_chars_in_data
 nz_find_non_integer_strings
@@ -343,8 +380,39 @@ nz_view_plan_file
 nz_view_references
 nz_wrapper
 nz_zonemap
+
 ```
 {: screen}
+
+
+## nz install syntax
+{: #nzis}
+
+1. `--dry-run`:  displays the symlinks that will be created.
+2. `--dest`:  directory where links are installed.
+3. `--force`:  overwrites a pre-existing link.
+
+```sh
+nz install [--dry-run] [--dest DESTINATION-DIRECTORY] [--force]
+```
+{: codeblock}
+
+Example:
+
+```sh
+./nz install --dest /usr/local/bin --force
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzbackup
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzrestore
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzsystem
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzds
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzhw
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzstate
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzbatchbnr
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzrev
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzstats
+2024/09/13 09:18:09 main.go:131: Linking /root/nz -> /usr/local/bin/nzsession
+```
+{: codeblock}
 
 ## Creating nz shortcuts with the nz install command
 {: #nzinstall-shortcuts}
@@ -352,32 +420,16 @@ nz_zonemap
 You can create shortcuts for the following commonly used commands by running the `nz install` command. As a result, for example, instead of running `nz nzstate`, you can issue `nzstate`.
 
 ```sh
-nz
 nzbackup
 nzbatchbnr
 nzds
-nz_get_model
-nz_health
-nzhistcreatedb
 nzhw
-nz_pause
-nzpush
-nz_query_history
-nz_repl_health
-nzrequest
-nz_rerandomize
 nzrestore
 nzrev
 nzsession
-nzsqa
 nzstate
-nz_stats
 nzstats
 nzsystem
-nz_sysutil_stats
-nz_transactions
-nz_view_references
-nz_zonemap
 ```
 {: screen}
 
@@ -385,12 +437,12 @@ nz_zonemap
 ## nz environment variables
 {: #supportedcommands}
 
-Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo specifying the `-host`, `-u`, and `-pw` options when you are running `nz` commands.
+Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
 
 - From Linux or Mac OSX terminal, run:
 
    ```sh
-   export NZ_HOST=<nps-hostname>
+   export APISERVER_URL=<api-server-url>
    export NZ_USER=<nps-admin-user>
    export NZ_PASSWORD=<nps-admin-user-password>
    ```
@@ -399,7 +451,7 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
 - From Windows (`cmd.exe`), run:
 
    ```sh
-   set NZ_HOST=<nps-hostname>
+   set APISERVER_URL=<api-server-url>
    set NZ_USER=<nps-admin-user>
    set NZ_PASSWORD=<nps-admin-user-password>
    ```
@@ -408,4 +460,26 @@ Set the `NZ_HOST`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo s
 ## CLI
 {: #cli}
 
-For more information about commands, see [the command-line interface](https://www.ibm.com/docs/en/netezza?topic=service-command-line-interface) section.
+For more information about commands, see [the command-line interface](https://www.ibm.com/docs/en/netezza?topic=interfaces-command-line-interface) section.
+
+## Username formatting
+{: #username_nzcli_format}
+
+   - Use a single quote followed by double quotes `'" "'` for usernames that:
+     - Contain lowercase letters.
+     - Include special characters other than an underscore `_` or `@` symbol.
+
+      Example - Username: `SampleUser` → `'"SampleUser"'`
+   - For all other usernames, double quotes `""` are optional.
+
+      Example - Username: `SAMPLEUSER` → `SAMPLEUSER` or `"SAMPLEUSER"`
+
+
+ **Case Sensitivity**:
+   - **DB Users**: Usernames are not case-sensitive.
+
+      Example - `sample_user` and `SAMPLE_USER` are treated the same.
+
+   - **IBMIAM Users**: Usernames are case-sensitive.
+
+      Example - `sample_user@ibm.com` and `SAMPLE_USER@ibm.com` are treated differently.

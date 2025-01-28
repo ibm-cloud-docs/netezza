@@ -46,3 +46,6 @@ On the *Scheduler rules* page, you can view the list of scheduler rules, create 
 1. If you want the rule to control administrative jobs, tick **Apply to admin jobs**.
 1. Tick **Active** to activate the rule.
 1. Click **Create**.
+
+You can select **View definition**, **Activate**, **Assign owner**, **Rename** and **Remove** options from the overflow menu.
+{: note}
