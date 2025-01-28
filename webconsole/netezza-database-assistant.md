@@ -4,7 +4,7 @@ copyright:
   years: 2025
 lastupdated: "2025-01-17"
 
-subcollection: Netezzawhc
+subcollection: netezza
 
 ---
 
@@ -48,7 +48,7 @@ To get started with the database assistant:
 
 1. Click the database assistant chat icon.
 
-   ![database assistant icon](images/assistant-icon.png "database assistant icon"){: iih}
+   ![database assistant icon](images/assistant-icon.png "database assistant icon")
 
   If the chatbot is not visible, go to **Settings > Additional features** and enable the **Database assistant** option.
   {: note}
