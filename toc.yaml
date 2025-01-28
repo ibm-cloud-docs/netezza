@@ -7,7 +7,7 @@ toc:
     subcollection: netezza
     category: analytics
     audience: service
-    href: /docs/netezza?topic=netezza-getting-started
+    href: /docs/netezza
     console-page: /catalog/services/netezza-performance-server
     product-page: https://www.ibm.com/products/netezza
     path: netezza
@@ -18,11 +18,7 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - topicgroup:
-          label: Release notes for NPSaaS
-          topics:
-          - start/release-notes-1123x.md
-          - start/release-notes.md
+      - start/release-notes.md
       - start/provisioning.md
       - topicgroup:
           label: Connecting to Netezza Performance Server with private and public endpoints
@@ -35,6 +31,7 @@ toc:
           topics:
           - webconsole/get-strt.md
           - webconsole/users-group.md
+          - webconsole/netezza-database-assistant.md
           - topicgroup:
               label: Databases
               topics:
@@ -108,24 +105,24 @@ toc:
               - authentication/saml_overview.md
               - authentication/enable_saml_authentication.md
               - security/saml-docs.md
-            #   - security/usagenzclisamlauth.md
+              - security/usagenzclisamlauth.md
           - topicgroup:
               label: Setting Azure OIDC authentication
               topics:
               - authentication/oidc_overview.md
               - authentication/enable_oidc_authentication.md
               - security/oidc-docs.md
-            #   - security/usagenzclioidcauth.md
+              - security/usagenzclioidcauth.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
               label: External authentication
-              href: https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication
+              href: https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system
       - kafka/kafka.md
       - topicgroup:
          label: Querying data from data lakes
          topics:
-         - datalakes/singularity.md
+        #  - datalakes/singularity.md
          - datalakes/examples_singularity.md
          - datalakes/examples3_singularity.md
          - datalakes/examples2_singularity.md
@@ -154,7 +151,7 @@ toc:
          - data_lakehouse_mcsp/merging_datalakehouse_mcsp.md
          - data_lakehouse_mcsp/watsonx_datasql_mcsp.md
          - data_lakehouse_mcsp/hms_npskeywords_mcsp.md
-         - data_lakehouse_mcsp/watsonxdata_ki_mcspi.md
+        #  - data_lakehouse_mcsp/watsonxdata_ki_mcsp.md
       - topicgroup:
          label: Time travel and historical data
          topics:
@@ -177,10 +174,10 @@ toc:
           - admins/nztool.md
           - link:
               label: Netezza Performance Server commands
-              href: https://www.ibm.com/docs/en/netezza?topic=interface-netezza-performance-server-commands
+              href: https://www.ibm.com/docs/en/netezza?topic=interfaces-command-line-interface
           - link:
               label: The nzsql command
-              href: https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-2
+              href: https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command
           - link:
               label: SQL commands
               href: https://www.ibm.com/docs/en/netezza?topic=dud-netezza-performance-server-sql-command-reference-2
@@ -222,3 +219,4 @@ toc:
       topics:
       - help/faqs.md
       - help/opening-tickets.md
+    #   - help/database-assistant.md

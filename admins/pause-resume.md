@@ -28,7 +28,7 @@ You can launch pause/resume by using the {{site.data.keyword.netezza_short}} web
 
 Depending on your requirements, you can also choose a scheduled pause/resume along with an on demand (ad hoc) pause/resume.
 
-## Pasuing and resuming instances with the web console
+## Pausing and resuming instances with the web console
 {: #pnr-webconsole}
 
-For more information, see [Pausing and resuming](/docs/netezza?topic=netezza-patterns&interface=ui#pnr-console).
+For more information, see [Pausing and resuming](/docs/netezza?topic=netezza-pnr-console).

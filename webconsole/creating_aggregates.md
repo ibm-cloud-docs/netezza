@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-05-25"
+  years: 2024
+lastupdated: "2024-06-14"
 
 keywords: web console, netezza web console, ui
 

@@ -31,6 +31,9 @@ On the *Settings* page, you can manage the following items:
 
 On the *Network policies* page, you can add policies and view existing policies.
 
+**Network policies** and **Private link** tabs are applicable only for Azure. 
+{: note}
+
 To add network policies, you must belong to the `ADMINISTRATORS` group.
 {: note}
 

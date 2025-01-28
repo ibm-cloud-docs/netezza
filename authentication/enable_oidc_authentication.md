@@ -31,15 +31,6 @@ Set your authentication method to `OIDC` with the [`REGISTER EXTERNAL AUTHENTICA
 `OIDC` external authentication system supports two-factor authentication. User needs to be configured with MFA on IdP(Identity Provider); for example, [Microsoft Azure](https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-provider-openid-connect).
 {: important}
 
-## Syntax
-{: #oidcsyntax}
-
-```sql
-REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
-```
-{: codeblock}
-
-You can use two methods for enabling OIDC authentication:
 - [Through Netezza UI.](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc)
 - [From command-line.](/docs/netezza?topic=netezza-enable_oidciamauth#oidcmprocedure)
 
@@ -47,18 +38,9 @@ You can use two methods for enabling OIDC authentication:
 ## Setting Azure OIDC authentication with the Netezza UI
 {: #setting_oidc_wc}
 
-1. Log in to the Netezza UI as a user who is part of an administrative group. See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).
-1. Go to the **Query editor**.
-1. Register an `OIDC` external authentication system.
-
-    ```sql
-    REGISTER EXTERNAL AUTHENTICATION SYSTEM 'OIDC'
-    ```
-    {: codeblock}
-
-    This action has to be performed only once.
-    {: note}
-
+1. Log in to the Netezza UI as a user who is part of an administrative group.<!--See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).-->
+1. Go to `Settings` tab.
+1. Click on `OIDC` to enable `OIDC` authentication.
 1. Create a user (or users) with the external authentication method set to `OIDC`, as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).
 1. Verify whether the user is created successfully.
 
@@ -83,6 +65,7 @@ You can use two methods for enabling OIDC authentication:
    | nps_host_ip    | Specifies the IP address of your instance.  \n To retrieve `NPS HOST IP`:  \n 1. Log in to your IBM Cloud account. \n 1. Go to **Private endpoints > Service instance details**. \n 1. Select your instance.  \n Your instance IP address appears on the page now.|
    | admin user     | Specifies the admin privileged user. |
    | password       | Specifies the password. |
+   {: caption="Example"}
 
 1. As an admin, register an `OIDC` external authentication system.
 

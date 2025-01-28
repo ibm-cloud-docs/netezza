@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-03-02"
+  years:  2024
+lastupdated: "2024-06-14"
 
 keywords: singularity, parquet, data lake, netezza singularity, parquet files
 subcollection: netezza
@@ -25,7 +25,7 @@ subcollection: netezza
 
 Data lakes are an essential tool for storing structured and unstructured data on the cloud. With {{site.data.keyword.netezza_full}}, you can use external tables to access **parquet** files that are stored outside of your database in data lakes (on AWS S3). Also, you can analyze this data by using the robust and massively parallel {{site.data.keyword.netezza_short}} execution engine.
 
-External data sources use connection strings to specify how you can access an external system. Each connection string describes where your data is placed and how to authenticate to your data source. Each external data source has a definition (schema), but the actual data exists external to the {{site.data.keyword.netezza_short}} database. 
+External data sources use connection strings to specify how you can access an external system. Each connection string describes where your data is placed and how to authenticate to your data source. Each external data source has a definition (schema), but the actual data exists external to the {{site.data.keyword.netezza_short}} database.
 
 You cannot backup (**nzbackup**) and restore (**nzrestore**) external data source objects.
 {: note}

@@ -97,6 +97,8 @@ On the *Workload* page, you can view graphs for the following items:
 - Current resource allocation
 - CPU utilization
 - Disk utilization
+- Memory utilization
+- Current running jobs
 
 ### Queue monitor
 {: #queue-monitor}
