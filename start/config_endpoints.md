@@ -75,6 +75,69 @@ If you want to connect to your {{site.data.keyword.netezza_short}} instance on A
 ## Configuring private endpoints for AWS
 {: #private-endpoints-aws}
 
+
+### Pre-requisites:
+{: #aws_prerequisite}
+
+To create a VPC (Virtual Private Cloud) endpoint in the same region as your Netezza instance, follow these steps:
+
+1. Have a VPC in the same region as your Netezza instance. For example, if you created the instance in the **eu-central-1** (Frankfurt) region, you need to have a VPC in the Frankfurt region.
+
+1. Create two VPC endpoints in this VPC. One for outbound traffic and one for inbound traffic.
+
+### Creating endpoints:
+{: #aws_cre}
+
+The following steps need to be repeated for the database and console VPC
+endpoint.
+
+1. Go to **VPC->Endpoint->Create Endpoint**.
+
+   Create two endpoints:
+   - to access the database and the API server using `nz tool`.
+   - to access the web console.
+
+2. Give a name tag to your endpoint. For example, `console-nz-dev-endpoint`.
+
+3. In **Service category**, select **Other endpoint service**.
+
+4. To verify the `VPC endpoint service` name under **Service settings**, navigate to your `instance details` page and copy the provided `VPC endpoint service` name. Then paste it on the corresponding field in **Service settings** and click **Verify**. Upon successful verification, the message **Service name verified** will display. The `VPC endpoint service` names for the database and console may differ; refer your `instance details` page for accurate values. For example:
+
+      - `com.amazonaws.vpce.eu-central-1.vpce-svc-0c5bd5410f78fd451` is the service name for the database.
+
+      - `com.amazonaws.vpce.eu-central-1.vpce-svc-0061f6348c1e6eba6` is the service name for the console.
+
+5. Select the VPC and the subnets, ensuring that the selected VPC is located in the same region as where your instance is deployed, such as `eu-central-1`.
+
+6. Select a **Security group** that permits traffic on ports `5480` and `443`.
+
+7. Click on **Create endpoint**.
+
+8. Go to **VPC->Endpoints** once the endpoint is created and select the endpoint to view its status.
+
+   Once the endpoint status shows `Available`, in the **endpoint details** page, you will see the DNS names assigned to each endpoint you created. There will be one DNS name created which can be used to access the service across all subnets and one for each subnet you added in *Step 5*. The dns name specific to each subnet will have the subnet name in sub-domain, like, `eu-central-1a.vpce.amazonaws.com` for the subnet in availability zone A in **eu-central-1**. We recommend use the first dns record, which can be used to access the service across all subnets that have been added.
+   {: note}
+
+   You will have two DNS names that you will use to connect to the service created.
+      - One for the database VPC endpoint.
+      - One for the console VPC endpoint.
+   {: note}
+
+9. Database and API server (using nz tool) can be accessed using the DNS name using port 5480 and 443 respectively.
+
+10. To access the console, use the following URL format:
+      ```url
+      https:://<dns-name>/#/?crn=<crn>
+      ```
+      {: codeblock}
+
+      Example
+      ```url
+      https:://vpce-039389rjehrjhr37ee.eu-central-1.vpce.amazonas.com/#/?crn=crn:v1:bluemix:public:data-warehouse:eu-de:a/46e84bdc00b94e99a0e4aeda769a02b6:9e57cae1-5bdd-4574-9a64-6261b96fc85f::
+      ```
+      {: codeblock}
+
+
 To connect to your {{site.data.keyword.netezza_short}} on AWS by using [AWS PrivateLink](https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html), you must create [private endpoints](https://docs.aws.amazon.com/whitepapers/latest/aws-privatelink/what-are-vpc-endpoints.html) in your AWS subscription.
 
 1. Provide your service principals.

@@ -24,6 +24,30 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
+## XX February 2025 - 11.2.3.4
+{: #feb2025}
+{: release-note}
+
+### New features and enhancements
+{: #nffeb2025}
+
+Workload contour - Scaling
+:   Added support for scaling (compute/storage) in the paused state.The system will automatically perform a resume operation before scaling. The resume action will be available in the Pause/Resume History. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
+
+Recent queries
+: The **Recent queries** section has been moved to **Query history** and now supports up to 1M rows, significantly increasing from the previous limit of 2K rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
+
+<!--### Components
+{: #compfeb2025}
+
+- `nzcli` version: 0.9.24-->
+
+#### Connectivity improvements
+{: #cifeb2025}
+
+- OpenSSL 3.0 is supported from 11.2.3.4 onwards.
+- The nz_s3connector has been removed from the Software Support Tools package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
+
 ## 17 January 2024 - 11.2.3.3 - IF1
 {: #jan2025}
 {: release-note}
