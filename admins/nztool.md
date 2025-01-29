@@ -181,6 +181,7 @@ nz_build_html_help_output
 nz_catalog_dump
 nz_catalog_size
 nz_change_owner
+nz_check_ids
 nz_check_statistics
 nz_check_views
 nz_cksum
@@ -200,6 +201,7 @@ nz_ddl_all_grants
 nz_ddl_comment
 nz_ddl_database
 nz_ddl_diff
+nz_ddl_ext_datasource
 nz_ddl_ext_table
 nz_ddl_function
 nz_ddl_grant_group
@@ -207,6 +209,7 @@ nz_ddl_grant_role
 nz_ddl_grant_user
 nz_ddl_group
 nz_ddl_history_config
+nz_ddl_library
 nz_ddl_mview
 nz_ddl_object
 nz_ddl_owner
@@ -251,6 +254,8 @@ nz_get_database_names
 nz_get_database_objid
 nz_get_database_owner
 nz_get_database_table_column_names
+nz_get_ext_datasource_name
+nz_get_ext_datasource_names
 nz_get_ext_table_name
 nz_get_ext_table_names
 nz_get_ext_table_objid
@@ -342,15 +347,18 @@ nz_maintenance_mode
 nz_migrate
 nz_my_access
 nz_my_grants
+nz_objects
 nz_online_vacuum
 nz_permissions_audit
 nz_physical_table_layout
 nz_plan
+nz_query
 nz_query_history
 nz_query_stats
 nz_record_skew
 nz_rerandomize
 nz_rev
+nz_responders
 nz_set
 nz_show_locks
 nz_skew
@@ -366,9 +374,11 @@ nz_table_analyze
 nz_table_constraints
 nz_table_references
 nz_tables
+nz_temporal
 nz_test
 nz_transactions
 nz_truncate
+nz_update_backup_status
 nz_update_statistic_date_high_value
 nz_update_statistic_length
 nz_update_statistic_min_or_max
