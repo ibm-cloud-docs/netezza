@@ -21,88 +21,8 @@ subcollection: netezza
 # Queries
 {: #queries}
 
-<!--## Query history
-{: #query-history}
-
-To access the page, go to **Queries > Query history** or select **Query history** from the home page.
-
-When you are on the **Query history** page, you can do the following:
-- View your data in a table or card view.
-- Export data to export your query history to a data file.
-- Sort any column by placing the cursor on the column header.
-- Find specific queries by using various filtering criteria.
-
-For example, you can use it to find queries that are submitted by a particular user or group, or queries that run on a particular database.
-
-- Search the query history but clicking **Search**.
-
-   You can use a predefined search criteria, or create a new search option.
-
-- Select the columns to display in the table.
-
-   Click the settings icon next to the **Find query history** field to edit columns.
-
-- View metrics and statistics status.
-
-### Query history columns
-{: #query-history-columns}
-
-- **Start time**
-   Specifies the time when the query started.
-
-- **End time**
-   Specifies the time when the query finished.
-
-- **Elapsed time**
-   Specifies the time that it took the query to run.
-
-- **Query text**
-   Specifies the SQL command of the query.
-
-- **Database**
-   Specifies the name of the database on which the query ran.
-
-- **Schema**
-   Specifies the schema that was used for the query.
-
-- **User name**
-   Species the name of the user that ran the query.
-
-- **Group**
-   Specifies the group of users from which the query originates.
-
-- **Result rows**
-   Specifies the number of result rows that were returned by the query.
-
-- **Prep time**
-   Specifies the preparation time that was needed for the query.
-
-- **Status**
-   Specifies the completion status of the query.
-
-- **Plan ID**
-   Specifies the ID of the system-generated plan for the query.
-
-- **Client IP**
-   Specifies the IP of the client that ran the SQL query.
-
-- **GRA time**
-   Specifies the time that the query spent at the GRA.
-
-- **Checksum**
-   Specifies the checksum of the query.
-
-- **Client type**
-   Specifies the type of the client that ran the query.
-
-- **Client host**
-   Specifies the hostname of the client from which the query originates.
-
-- **Resource group name**
-   Specifies the resource group on which the query ran.
--->
 ## Query history
-{: #recent-queries}
+{: #query_history}
 
 The administrator privileges are not necessary to view query history. The **Query history** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
