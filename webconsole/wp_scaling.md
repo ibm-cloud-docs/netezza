@@ -25,7 +25,7 @@ On the *Workload patterns* page, you can initiate, edit, or delete your **Scalin
 
 On AWS, a new entry-level workload contour called NC-Start is available to support lower volume BI and UAT workloads. You can scale this instance to NC0 performance profiles seamlessly as your workload increases. For NC-Start specifically, you can initiate on-demand storage and contour scaling. The rest of the procedures are applicable for other workload contours.
 
-You can now perform scaling (compute/storage) even when the system is in a paused state. Before scaling, the system will automatically resume to bring it online.This resume action will appear in the Pause/Resume History for reference.
+You can now perform scaling (compute/storage) even when the system is in a paused state. Before scaling, the system will automatically resume to bring it online.This resume action will appear in the Pause/Resume history for reference.
 {:note: .note}
 
 On AWS, storage scaling has a cool-down period of six hours.
