@@ -38,7 +38,7 @@ The Query History can be filtered by selecting from various preset intervals or 
    - For Admin users: Displays the total number of queries fired by all users within the selected time span.
    - For Non-admin users: Shows the total number of queries fired by the individual user within the selected time span.
 
-The number of queries displayed is limited to a maximum of 1M rows.
+The system supports up to 500,000 rows, with a minimum fetch of 2,000 rows via the API. A numeric input option will allow setting a limit for data retrieval.
 {: note}
 
 ### Creating queries
