@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-11-12"
+  years: 2025
+lastupdated: "2025-01-17"
 
-subcollection: Netezzawhc
+subcollection: netezza
 
 ---
 
@@ -27,12 +27,11 @@ Chat with the IBM Netezza database assistant to help you complete tasks, find ou
 
 Open the database assistant from the Netezza web console, and then ask it to help you with a range of Netezza tasks, including:
 - Answering your questions about Netezza
-- Detecting and helping to resolve lock contention issues
 - Monitoring your Netezza instance, including getting information about:
     - Active connections
     - SQL activity
     - Resource usage
-    - Schemas, table spaces, indexes, and tables in the system
+    - Schemas, databases, and tables in the system
     - Users
     - Backups
     - Compute scaling
@@ -45,11 +44,11 @@ The database assistant uses built-in skills and is trained on the official IBM N
 
 To get started with the database assistant:
 
-1. Open your Netezza web console.
+1. Open the Netezza web console.
 
 1. Click the database assistant chat icon.
 
-   ![database assistant icon](images/assistant-icon.png "database assistant icon"){: iih}
+   ![database assistant icon](images/assistant-icon.png "database assistant icon")
 
   If the chatbot is not visible, go to **Settings > Additional features** and enable the **Database assistant** option.
   {: note}
@@ -78,13 +77,15 @@ Depending on the database workload, the database assistant might take some time 
 | 11 | Show I/O Usage | Display I/O usage for the past 12 hours. What is the IO utilization over the last two weeks |
 | 12 | Show Connections | List connections. Show connections |
 | 13 | Show Active Queries | Show inflight sql queries. List running queries |
-| 14 | Top N Queries by Resource Usage | List top 5 queries with most resource utilization in the last 60 hours. Show queries with longest resource utilization from last week till now |
+| 14 | Top N largest tables by storage | List top 10 tables largest tables. Provide list of largest tables by storage size |
 | 15 | Get CRN | CRN? Get CRN |
 | 16 | Get NPS hostname | What is my NPS hostname? Hostname? |
 | 17 | Show Pause/Resume History | Show pause/resume history. Fetch pause-resume history |
 | 18 | Show Scaling History | Show scaling history. Retrieve scaling history |
 | 19 | Show Smart Scaling | Retrieve scaling demand growth. Provide me scaling prediction |
 | 20 | Get System Version | What is current Netezza software version? Get my system version |
+
+<!--| 15 | Top N Queries by Resource Usage | List top 5 queries with most resource utilization in the last 60 hours. Show queries with longest resource utilization from last week till now | -->
 
 ## Troubleshooting the Netezza database assistant
 {: #assistant-troubleshooting}
@@ -94,11 +95,11 @@ If you find that you are not getting the answers and results that you expect fro
 - Restart the conversation. The assistant might be getting confused by other things you have discussed with it.
 - Ensure that you are asking about Netezza. If you are asking about something else, it might be outside of the assistant's capabilities.
 - Try asking about something specific. If your question is too broad, the assistant is more likely to return results that aren't relevant to your request.
-- Ensure that you are not filtering by version. If an answer to your question isn't available in the current documentation release, the assistant won't find it. If you're filtering by version, some content might be missing. To broaden the search, type "change version" and then choose "Any".
-
+<!--- Ensure that you are not filtering by version. If an answer to your question isn't available in the current documentation release, the assistant won't find it. If you're filtering by version, some content might be missing. To broaden the search, type "change version" and then choose "Any".
+-->
 ## Data privacy and opting out
 {: #assistant-data-privacy}
 
-When you interact with the Netezza database assistant, your questions and requests are processed by IBM watsonx Orchestrate, which is outside of your Netezza instance. Only the text that you input into the assistant gets processed by watsonx Orchestrate. None of your actual data or metrics leave your Netezza instance at any time.
+When you interact with the Netezza database assistant, your questions and requests are processed by IBM watsonx Orchestrate, which is outside of your Netezza instance. All communications between IBM watsonx Orchestrate and your Netezza instance are encrypted.
 
 To opt out of the Netezza database assistant, contact IBM Support.

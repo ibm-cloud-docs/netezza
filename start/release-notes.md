@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-11-26"
+  years: 2025
+lastupdated: "2025-01-17"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -48,6 +48,15 @@ Recent queries
 - OpenSSL 3.0 is supported from 11.2.3.4 onwards.
 - The nz_s3connector has been removed from the Software Support Tools package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
 
+## 17 January 2024 - 11.2.3.3 - IF1
+{: #jan2025}
+{: release-note}
+
+### New features
+{: #nfnov2024}
+
+Database assistant
+:   Introducing the Netezza Database Assistant chatbot, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
 
 ## 22 November 2024 - 11.2.3.3
 {: #nov2024}
@@ -505,9 +514,8 @@ As of July 28, 2022, you can access data from data lakes and move data between a
 ### New features
 {: #nfjuly2022}
 
-- Use the technology preview of the {{site.data.keyword.netezza_short}} external tables to access and query *parquet* files that are stored outside of your database in data lakes (on AWS S3). For more information, see [Querying data from data lakes](/docs/netezza?topic=netezza-overview_singularity).
 
-- Use {{site.data.keyword.netezza_short}} as a data source or data sink. For more information, see [Using Netezza Performance Server as a data source](/docs/netezza?topic=netezza-netezzakafka#datasourcekafka) and [Using Netezza Performance Server as a data sink](/docs/netezza?topic=netezza-netezzakafka#datasinkkafka).
+Use {{site.data.keyword.netezza_short}} as a data source or data sink. For more information, see [Using Netezza Performance Server as a data source](/docs/netezza?topic=netezza-netezzakafka#datasourcekafka) and [Using Netezza Performance Server as a data sink](/docs/netezza?topic=netezza-netezzakafka#datasinkkafka).
 
 ### Known issues
 {: #kijuly2022}

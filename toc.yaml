@@ -122,7 +122,7 @@ toc:
       - topicgroup:
          label: Querying data from data lakes
          topics:
-         - datalakes/singularity.md
+        #  - datalakes/singularity.md
          - datalakes/examples_singularity.md
          - datalakes/examples3_singularity.md
          - datalakes/examples2_singularity.md
