@@ -32,7 +32,7 @@ subcollection: netezza
 {: #nffeb2025}
 
 Workload contour - Scaling
-:   Added support for scaling (compute/storage) in the paused state.The system will automatically perform a resume operation after scaling. The resume action will be available in the Pause/Resume History. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
+:   Added support for scaling (compute/storage) in the paused state. The system will automatically perform a resume operation after scaling. The resume action will be available in the Pause/Resume History. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
 
 Recent queries
 : The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2K rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
