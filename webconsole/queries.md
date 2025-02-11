@@ -29,7 +29,7 @@ The administrator privileges are not necessary to view query history. The **Quer
 The Query History can be filtered by selecting from various preset intervals or specifying a custom time interval.
 
 ### Charts
-{:queryhistory_chart}
+{: #queryhistory_chart}
 
 - Success Ratio: Represents the ratio of queries executed within the selected time span. This metric calculates the total number of queries fired against the number of completed and failed queries (with varying failure reasons).
 - Databases: Displays the total number of queries fired on the databases during the selected time span.
