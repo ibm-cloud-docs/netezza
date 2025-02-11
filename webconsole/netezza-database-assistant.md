@@ -8,7 +8,7 @@ subcollection: netezza
 
 ---
 
- 
+
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -48,10 +48,11 @@ To get started with the database assistant:
 
 1. Click the database assistant chat icon.
 
-   ![database assistant icon](images/assistant-icon.png "database assistant icon")
+    ![database assistant icon](images/assistant-icon.png "database assistant icon")
 
-  If the chatbot is not visible, go to **Settings > Additional features** and enable the **Database assistant** option.
-  {: note}
+If the chatbot is not visible, go to **Settings > Additional features** and enable the **Database assistant** option.
+{: note}
+
 1. Type your questions and requests in the chat.
 
 ## What can the database assistant do?
@@ -95,6 +96,7 @@ If you find that you are not getting the answers and results that you expect fro
 - Restart the conversation. The assistant might be getting confused by other things you have discussed with it.
 - Ensure that you are asking about Netezza. If you are asking about something else, it might be outside of the assistant's capabilities.
 - Try asking about something specific. If your question is too broad, the assistant is more likely to return results that aren't relevant to your request.
+
 
 ## Data privacy and opting out
 {: #assistant-data-privacy}
