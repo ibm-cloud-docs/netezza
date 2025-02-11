@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-02-11"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,7 +24,7 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
-## XX February 2025 - 11.2.3.4
+## 19 February 2025 - 11.2.3.4
 {: #feb2025}
 {: release-note}
 
