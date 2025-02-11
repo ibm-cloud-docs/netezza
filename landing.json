@@ -28,7 +28,7 @@
       },
       {
         "title": "Querying data from data lakes",
-        "href": "/docs/netezza?topic=netezza-overview_singularity"
+        "href": "/docs/netezza?topic=netezza-querying_singularity"
       },
       {
         "title": "Lakehouse integration",
@@ -58,13 +58,13 @@
       "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
       "tiles": [
           {
-              "date": "XX February 2025",
+              "date": "19 February 2025",
               "title": "Added support for scaling (compute/storage) in the paused state."
-          },   
+          },
           {
               "date": "17 January 2025",
               "title": "Introduced the Netezza Database Assistant chatbot, a new AI-powered assistant."
-          },        
+          },
           {
               "date": "22 November 2024",
               "title": "Introduced a feature to cancel long-running queries executed from the query editor."
