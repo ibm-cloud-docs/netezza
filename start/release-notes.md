@@ -32,7 +32,7 @@ subcollection: netezza
 {: #nffeb2025}
 
 Workload contour - Scaling
-:   Added support for scaling (compute/storage) in the paused state. The system will automatically perform a resume operation after scaling. The resume action will be available in the Pause/Resume History. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
+:   Scaling can now be performed while the instance is in paused state. The system will be resumed before scaling. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
 
 Recent queries
 : The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2K rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
@@ -43,7 +43,7 @@ Recent queries
 {: #cifeb2025}
 
 - OpenSSL 3.0 is supported from 11.2.3.4 onwards.
-- The nz_s3connector has been removed from the Software Support Tools package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
+- The nz_s3connector is open source now. It has been moved from the Netezza Software Support Tools package to [nz_s3Connector](https://github.com/IBM/netezza-utils/tree/master/bnr-utils/nz_s3Connector). The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
 
 ## 17 January 2024 - 11.2.3.3 - IF1
 {: #jan2025}
