@@ -37,6 +37,15 @@ Workload contour - Scaling
 Recent queries
 : The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2K rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
 
+### Known issue
+{: #kifeb2025}
+
+- Some users may experience difficulties loading monitoring graphs or other dashboard graphs when using the Firefox browser.
+
+    Workaround:
+   - To resolve this issue, please try using an alternative web browser such as Safari, Chrome, or Edge.
+
+
 
 
 #### Connectivity improvements
