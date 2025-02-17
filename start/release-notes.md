@@ -37,15 +37,6 @@ Workload contour - Scaling
 Recent queries
 : The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2K rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
 
-### Known issue
-{: #kifeb2025}
-
-- Some users may experience difficulties loading monitoring graphs or other dashboard graphs when using the Firefox browser.
-
-    Workaround:
-   - To resolve this issue, please try using an alternative web browser such as Safari, Chrome, or Edge.
-
-
 
 
 #### Connectivity improvements
@@ -53,6 +44,14 @@ Recent queries
 
 - OpenSSL library is upgraded to 3.0.
 - The nz_s3connector is open source now. It has been moved to a new location [nz_s3Connector](https://github.com/IBM/netezza-utils/tree/master/bnr-utils/nz_s3Connector) from "Netezza Software Support Tools" package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
+
+### Known issue
+{: #kifeb2025}
+
+- Some users may experience difficulties loading monitoring graphs or other dashboard graphs when using the Firefox browser.
+
+Workaround:
+- To resolve this issue, please try using an alternative web browser such as Safari, Chrome, or Edge.
 
 ## 17 January 2024 - 11.2.3.3 - IF1
 {: #jan2025}
