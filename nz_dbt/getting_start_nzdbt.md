@@ -19,10 +19,10 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# nz-dbt
+# Getting started with nz-dbt
 {: #nzdbt-intro}
 
-dbt (data build tool) is the industry standard for data transformation. It helps you transform raw data into analysis-ready insights, enabling you to make data-driven decisions with confidence.
+The dbt (data build tool) is the industry standard for data transformation. It helps you transform raw data into analysis-ready insights, enabling you to make data-driven decisions with confidence.
 
 #### Simplify Complex Data Pipelines
 Leverage dbt's intuitive interface to streamline data transformation and management processes.
