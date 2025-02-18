@@ -42,7 +42,7 @@ Recent queries
 
 - OpenSSL library is upgraded to 3.0.
 - The nz_s3connector is open source now. It has been moved to a new location [nz_s3Connector](https://github.com/IBM/netezza-utils/tree/master/bnr-utils/nz_s3Connector) from "Netezza Software Support Tools" package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
-- **nz-dbt** tool, dbt adaptor for IBM Netezza is now available. This integration empowers users to harness the full potential of dbt, the leading data transformation framework, and unlock the performance and scalability of Netezza.
+- **nz-dbt** tool, dbt adaptor for IBM Netezza is now available. This integration empowers users to harness the full potential of dbt, the leading data transformation framework, and unlock the performance and scalability of Netezza. To know more about nz-dbt, see [Getting started with nz-dbt](/docs/netezza?topic=netezza-nzdbt-intro).
 
 ## 17 January 2024 - 11.2.3.3 - IF1
 {: #jan2025}
