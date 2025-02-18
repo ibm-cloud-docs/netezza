@@ -72,7 +72,7 @@ toc:
       - topicgroup:
           label: nz-dbt adaptor
           topics:
-          - nz-dbt/getting_start_nzdbt.md
+          - nz_dbt/getting_start_nzdbt.md
   - navgroup:
       id: howto
       topics:
