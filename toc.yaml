@@ -69,6 +69,10 @@ toc:
               - admins/bnr.md
               - admins/bnr-ui.md
               - admins/bnr-flow.md
+      - topicgroup:
+          label: nz-dbt adaptor
+          topics:
+          - nz-dbt/getting_start_nzdbt.md
   - navgroup:
       id: howto
       topics:
