@@ -50,8 +50,7 @@ Recent queries
 
 - Some users might experience difficulties loading monitoring graphs or other dashboard graphs when using the Firefox browser.
 
-Workaround:
-- Use an alternative web browser such as Safari, Chrome, or Edge.
+
 
 ## 17 January 2024 - 11.2.3.3 - IF1
 {: #jan2025}
