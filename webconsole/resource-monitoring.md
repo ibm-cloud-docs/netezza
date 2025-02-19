@@ -49,7 +49,7 @@ You can also set a custom time setting.
 For any of the charts, you can zoom in and out by moving the slider to see a specific range. You can also expand your graph view by clicking the arrows icon.
 {: tip}
 
-Use web browser such as Safari, Chrome, or Edge for better experience.
+In Firefox version 134.0.1 and later, line graphs may not load properly. To view the graph, consider using a different browser.
 {: note}
 
 ### Resource consumption
