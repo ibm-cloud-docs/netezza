@@ -44,6 +44,11 @@ Recent queries
 - The nz_s3connector is open source now and has been moved to a new location [nz_s3Connector](https://github.com/IBM/netezza-utils/tree/master/bnr-utils/nz_s3Connector) from "Netezza Software Support Tools" package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
 - The **nz-dbt** adaptor for IBM Netezza is now available. This integration empowers users to harness the full potential of dbt, the leading data transformation framework, and unlock the performance and scalability of Netezza. To know more about nz-dbt, see [Getting started with nz-dbt](/docs/netezza?topic=netezza-nzdbt-intro).
 
+### Components
+{: #compfeb2025}
+
+- `nzcli` version: 0.9.35
+
 ## 17 January 2024 - 11.2.3.3 - IF1
 {: #jan2025}
 {: release-note}
@@ -58,6 +63,8 @@ Database assistant
 {: #nov2024}
 {: release-note}
 
+
+
 ### New features and enhancements
 {: #nfenhnov2024}
 
@@ -71,6 +78,8 @@ IdP configuration
 {: #compnov2024}
 
 - `nzcli` version: 0.9.24
+
+
 
 ## 23 September 2024 - 11.2.3.2
 {: #sep2024}
@@ -95,6 +104,8 @@ IdP configuration
 - **Time zone handling:** Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
 - **History page fixes:** Addressed the problem where auto pause and resume actions for recent entries were not showing on the **History** page of the web console, enhancing visibility and tracking.
 - **Scheduled backups update:** Fixed the issue preventing the start date and time of scheduled backups from being edited, giving you full control over your backup schedules.
+
+
 
 
 ## 02 August 2024 - 11.2.3.1
