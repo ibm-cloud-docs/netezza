@@ -24,16 +24,20 @@ subcollection: netezza
 
 The dbt (data build tool) is the industry standard for data transformation. It helps you transform raw data into analysis-ready insights, enabling you to make data-driven decisions with confidence.
 
-#### Simplify Complex Data Pipelines
+**Simplify complex data pipelines**
+
 Leverage dbt's intuitive interface to streamline data transformation and management processes.
 
-#### Unleash Netezza's power
+**Unleash Netezza's power**
+
 Tap into Netezza's exceptional performance and scalability to drive business insights and growth.
 
-#### Future-proof your data strategy
+**Future-proof your data strategy**
+
 Stay ahead of the curve with a unified framework that adapts to evolving data needs.
 
-#### Learn more about dbt
+**Learn more about dbt**
+
 Discover the power of dbt and how it can transform your data strategy: [What is dbt?](https://www.getdbt.com/product/what-is-dbt)
 
 ## Install nz-dbt
