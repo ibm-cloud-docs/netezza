@@ -8,7 +8,7 @@ subcollection: netezza
 
 ---
 
-<!-- Attribute definitions --> 
+
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -48,10 +48,11 @@ To get started with the database assistant:
 
 1. Click the database assistant chat icon.
 
-   ![database assistant icon](images/assistant-icon.png "database assistant icon")
+    ![database assistant icon](images/assistant-icon.png "database assistant icon")
 
-  If the chatbot is not visible, go to **Settings > Additional features** and enable the **Database assistant** option.
-  {: note}
+If the chatbot is not visible, go to **Settings > Additional features** and enable the **Database assistant** option.
+{: note}
+
 1. Type your questions and requests in the chat.
 
 ## What can the database assistant do?
@@ -85,7 +86,7 @@ Depending on the database workload, the database assistant might take some time 
 | 19 | Show Smart Scaling | Retrieve scaling demand growth. Provide me scaling prediction |
 | 20 | Get System Version | What is current Netezza software version? Get my system version |
 
-<!--| 15 | Top N Queries by Resource Usage | List top 5 queries with most resource utilization in the last 60 hours. Show queries with longest resource utilization from last week till now | -->
+
 
 ## Troubleshooting the Netezza database assistant
 {: #assistant-troubleshooting}
@@ -95,8 +96,8 @@ If you find that you are not getting the answers and results that you expect fro
 - Restart the conversation. The assistant might be getting confused by other things you have discussed with it.
 - Ensure that you are asking about Netezza. If you are asking about something else, it might be outside of the assistant's capabilities.
 - Try asking about something specific. If your question is too broad, the assistant is more likely to return results that aren't relevant to your request.
-<!--- Ensure that you are not filtering by version. If an answer to your question isn't available in the current documentation release, the assistant won't find it. If you're filtering by version, some content might be missing. To broaden the search, type "change version" and then choose "Any".
--->
+
+
 ## Data privacy and opting out
 {: #assistant-data-privacy}
 

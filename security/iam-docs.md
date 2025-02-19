@@ -45,7 +45,7 @@ IAM access policies enable access to be granted at different levels.
 |IAM Platform Operator      | Y       | Y               | Y       | Y                  | Y          | Y       |
 |IAM Platform Editor        | Y       | Y               | Y       | Y                  | Y          | Y       |
 |IAM Platform Viewer        | Y       | N               | N       | N                  | N          | N       |
-{: caption="Table 1. The table outlines what types of tasks each role allows for when you're working with the {{site.data.keyword.netezza_short}} service." caption-side="bottom"}
+{: caption="The table outlines what types of tasks each role allows for when you're working with the {{site.data.keyword.netezza_short}} service." caption-side="bottom"}
 
 {{site.data.keyword.netezza_short}} does not use IAM Service roles.
 

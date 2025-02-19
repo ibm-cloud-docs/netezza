@@ -39,7 +39,7 @@ Set your authentication method to `SAML` with the [`REGISTER EXTERNAL AUTHENTICA
 ## Setting SAML authentication with the Netezza UI
 {: #setting_saml_wc}
 
-1. Log in to the Netezza UI as a user who is part of an administrative group.<!--See, [Getting started with the Netezza UI](/docs/netezza?topic=netezza-getstarted-console).-->
+1. Log in to the Netezza UI as a user who is part of an administrative group.
 1. Go to `Settings` tab.
 1. Click on `SAML` to enable `SAML` authentication.
 1. Create a user (or users) with the external authentication method set to `SAML`, as described in [Creating users](/docs/netezza?topic=netezza-users-groups#create-users).

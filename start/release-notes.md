@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-02-11"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,6 +24,26 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
+## 19 February 2025 - 11.2.3.4
+{: #feb2025}
+{: release-note}
+
+### New features and enhancements
+{: #nffeb2025}
+
+Workload contour - Scaling
+:   Scaling can now be performed while the instance is in paused state. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
+
+Recent queries
+: The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2000 rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
+
+#### Connectivity improvements
+{: #cifeb2025}
+
+- OpenSSL library has been upgraded to 3.0.
+- The nz_s3connector is open source now and has been moved to a new location [nz_s3Connector](https://github.com/IBM/netezza-utils/tree/master/bnr-utils/nz_s3Connector) from "Netezza Software Support Tools" package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
+- The **nz-dbt** adaptor for IBM Netezza is now available. This integration empowers users to harness the full potential of dbt, the leading data transformation framework, and unlock the performance and scalability of Netezza. To know more about nz-dbt, see [Getting started with nz-dbt](/docs/netezza?topic=netezza-nzdbt-intro).
+
 ## 17 January 2024 - 11.2.3.3 - IF1
 {: #jan2025}
 {: release-note}
@@ -38,12 +58,6 @@ Database assistant
 {: #nov2024}
 {: release-note}
 
-<!--### New features
-{: #nfnov2024}
-
-Database assistant
-:   A public tech preview of the Netezza Database Assistant chatbot, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Database assistant](/docs/netezza?topic=netezza-netezza-db-assistant).-->
-
 ### New features and enhancements
 {: #nfenhnov2024}
 
@@ -57,12 +71,6 @@ IdP configuration
 {: #compnov2024}
 
 - `nzcli` version: 0.9.24
-
-<!-- ### Known issue
-{: #kinov2024}
-
-Character support in watsonx.data object names
-:   Database object names connected to watsonx.data currently support only alphanumeric characters and underscores. However, special characters are fully supported for attribute names and data values. -->
 
 ## 23 September 2024 - 11.2.3.2
 {: #sep2024}
@@ -87,12 +95,6 @@ Character support in watsonx.data object names
 - **Time zone handling:** Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
 - **History page fixes:** Addressed the problem where auto pause and resume actions for recent entries were not showing on the **History** page of the web console, enhancing visibility and tracking.
 - **Scheduled backups update:** Fixed the issue preventing the start date and time of scheduled backups from being edited, giving you full control over your backup schedules.
-
-<!-- ### Components
-{: #compssep2024}
-
-- {{site.data.keyword.netezza_short}} 11.2.3.2
-- Web console 4.1.1.0 -->
 
 
 ## 02 August 2024 - 11.2.3.1

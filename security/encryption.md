@@ -49,4 +49,3 @@ The following methods are used to secure your connection and data:
 {: #data-delete}
 
 When you delete an instance, all the data and snapshots associated with the instance are deleted immediately. 
-

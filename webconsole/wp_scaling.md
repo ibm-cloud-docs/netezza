@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-01-04"
+  years: 2025
+lastupdated: "2025-01-04"
 
 keywords: web console, administering web console, administering, pnr, pause and resume, netezza pause and resume, pause and resume by using netezza web console, pausing and resuming netezza performance server with the web console, netezza auto-pause and resume, netezza autopause and resume, netezza auto-pause and resume with the web console, scaling, netezza scaling with the web console, compute scaling, smartscaling, netezza smartscaling, netezza performance server smartscaling
 
@@ -24,6 +24,9 @@ subcollection: netezza
 On the *Workload patterns* page, you can initiate, edit, or delete your **Scaling** operations and check their **History**.
 
 On AWS, a new entry-level workload contour called NC-Start is available to support lower volume BI and UAT workloads. You can scale this instance to NC0 performance profiles seamlessly as your workload increases. For NC-Start specifically, you can initiate on-demand storage and contour scaling. The rest of the procedures are applicable for other workload contours.
+
+You can now perform scaling (compute/storage) even when the system is in a paused state. After scaling, the system will automatically resume to bring it online. This resume action will appear in the Pause/Resume history for reference.
+{:note: .note}
 
 On AWS, storage scaling has a cool-down period of six hours.
 
