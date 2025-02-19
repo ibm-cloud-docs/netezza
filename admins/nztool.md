@@ -93,7 +93,8 @@ The `nz` tool supports execution of select NPSaaS commands and Software Support 
 Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload `nz` tool at least every other release.
 {: note}
 
-
+<!-- With the upgrade to 11.2.3.1, you should now utilize `nzcli` versions from either 11.2.3.0 or 11.2.3.1.
+{: note} -->
 
 **NPSaaS command syntax**
 {: #npsaassyntax}
@@ -144,7 +145,6 @@ Example:
 ./nz run nz_get_table_rowcount database1 table1
 ```
 {: codeblock}
-
 
 
 ### Commands supported by the nz tool

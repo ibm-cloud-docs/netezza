@@ -58,8 +58,6 @@ Database assistant
 {: #nov2024}
 {: release-note}
 
-
-
 ### New features and enhancements
 {: #nfenhnov2024}
 
@@ -73,8 +71,6 @@ IdP configuration
 {: #compnov2024}
 
 - `nzcli` version: 0.9.24
-
-
 
 ## 23 September 2024 - 11.2.3.2
 {: #sep2024}
@@ -99,8 +95,6 @@ IdP configuration
 - **Time zone handling:** Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
 - **History page fixes:** Addressed the problem where auto pause and resume actions for recent entries were not showing on the **History** page of the web console, enhancing visibility and tracking.
 - **Scheduled backups update:** Fixed the issue preventing the start date and time of scheduled backups from being edited, giving you full control over your backup schedules.
-
-
 
 
 ## 02 August 2024 - 11.2.3.1
