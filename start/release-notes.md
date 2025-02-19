@@ -35,13 +35,13 @@ Workload contour - Scaling
 :   Scaling can now be performed while the instance is in paused state. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
 
 Recent queries
-: The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2K rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
+: The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2000 rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
 
 #### Connectivity improvements
 {: #cifeb2025}
 
-- OpenSSL library is upgraded to 3.0.
-- The nz_s3connector is open source now. It has been moved to a new location [nz_s3Connector](https://github.com/IBM/netezza-utils/tree/master/bnr-utils/nz_s3Connector) from "Netezza Software Support Tools" package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
+- OpenSSL library has been upgraded to 3.0.
+- The nz_s3connector is open source now and has been moved to a new location [nz_s3Connector](https://github.com/IBM/netezza-utils/tree/master/bnr-utils/nz_s3Connector) from "Netezza Software Support Tools" package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
 - The **nz-dbt** adaptor for IBM Netezza is now available. This integration empowers users to harness the full potential of dbt, the leading data transformation framework, and unlock the performance and scalability of Netezza. To know more about nz-dbt, see [Getting started with nz-dbt](/docs/netezza?topic=netezza-nzdbt-intro).
 
 ## 17 January 2024 - 11.2.3.3 - IF1
