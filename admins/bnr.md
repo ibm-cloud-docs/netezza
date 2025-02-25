@@ -121,6 +121,27 @@ You can create a destination bucket for Amazon S3, Azure Blob Storage, and IBM C
 1. Type your secret key.
 1. Click **Save**.
 
+### Establishing Private Connectivity with NZSaaS
+{: #epc_nzsaas}
+
+To establish a private connection between NZSaaS and your private storage account, follow these steps:
+
+1. Create an IBM ticket and provide the resource ID of your storage account.
+1. IBM will initiate a private endpoint connection request to your storage account.
+
+To approve the private endpoint connection request, follow these steps:
+
+1. Log in to your Azure subscription where your storage account is located.
+1. In your storage account, navigate to Security + Networking > Networking.
+1. Click on the Private endpoint Connection tab.
+1. Select the pending connection request from NZSaaS VNET.
+1. Approve the connection request.
+1. Go to the NZSaaS web console > Backup and Restore > Destination.
+1. Try to add your storage account as a destination.
+
+Contact IBM, if you are still unable to register your storage account
+{: note}
+
 #### Egress costs
 {: #egress-costs}
 
