@@ -121,7 +121,7 @@ You can create a destination bucket for Amazon S3, Azure Blob Storage, and IBM C
 1. Type your secret key.
 1. Click **Save**.
 
-### Establishing Private Connectivity with NZSaaS
+### Establishing Private Connectivity between NZSaaS and Storage Account On Azure
 {: #epc_nzsaas}
 
 To establish a private connection between NZSaaS and your private storage account, follow these steps:
