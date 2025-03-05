@@ -40,20 +40,17 @@
     {
       "title": "Blog",
       "description": "Read about the latest and greatest, how-tos, best practices, and use cases from our experts and experienced product users.",
-      "href": "https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-blogs",
+      "href": "https://www.ibm.com/docs/en/netezza?topic=reference-blogs",
       "type": "blog"
     },
     {
       "title": "FAQ",
       "description": "Here are some of the frequently asked questions, contact information, legal information, and support policies.",
-      "href": "https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=reference-faq",
+      "href": "https://www.ibm.com/docs/en/netezza?topic=reference-faq",
       "type": "blog"
     }
   ],
-  "section_devtools": {
-    "cli": "/docs/netezza?topic=netezza-nztool",
-    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
-  },
+
   "section_updates": {
       "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
       "tiles": [
