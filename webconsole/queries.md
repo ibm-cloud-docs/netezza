@@ -73,6 +73,11 @@ The system supports up to 500,000 rows, with a minimum fetch of 2,000 rows via t
 1. Go to **Queries > Recent queries**.
 1. Type the name of the query you are looking for in the search bar.
 
+
+
+
+
+
 ## Query cancellation
 {: #query-cancellation}
 
