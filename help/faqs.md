@@ -48,30 +48,37 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
    {: codeblock}
 
 1. Before restoring the globals on the target system, verify the current user count and the latest user creation date on the source system by running the following queries:
+
    1. Get current user count:
+
       ```sql
       SELECT COUNT(*) FROM _v_user;
       ```
       {: codeblock}
 
    1. Get latest user creation date:
+
       ```sql
       SELECT createdate FROM _v_user ORDER BY createdate DESC LIMIT 1;
       ```
       {: codeblock}
 
 1. Restore the backed-up globals on the target system using the following command:
+
    ```sql
    nzrestore -globals -dir /nz/OnPremGlobals -npshost <sourcehost> -u admin -pw 'Password'
    ```
    {: codeblock}
 
 1. After restoring the globals, verify the number of users added to the target system by running the following query:
+
    ```sql
    SELECT COUNT(*) FROM _v_user;
    ```
    {: codeblock}
+
 1. Update the USEAUTH field for the newly added users by running the following query:
+
    ```sql
    UPDATE _t_user SET USEAUTH=2
    WHERE usename IN (
@@ -79,6 +86,7 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
    );
    ```
    {: codeblock}
+
    The number of updated users should match the number of users migrated.
    {: note}
 
