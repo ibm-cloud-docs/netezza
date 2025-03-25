@@ -33,10 +33,10 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
 1. Enable SAML by following the instructions in the [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
 1. Take a global backup on your on-premises system using the following command:
 
-```sql
-nzbackup -globals -dir /nzscratch/OnPremGlobals
-```
-{: codeblock}
+   ```sql
+   nzbackup -globals -dir /nzscratch/OnPremGlobals
+   ```
+   {: codeblock}
 
 1. Copy the backed-up globals directory to the target system.
 1. On the target system, register the external authentication system (LDAP) using the following command:
