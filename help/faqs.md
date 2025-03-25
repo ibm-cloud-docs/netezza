@@ -223,6 +223,7 @@ y5neWx3HuL2k$w5DqbqJOp+Y= |                     5 |
 
 ```sql
 | CONFIG_NAME | CONFIG_DBNAME | CONFIG_DBTYPE | CONFIG_TARGETTYPE | CONFIG_LEVEL | CONFIG_HOSTNAME | CONFIG_USER | CONFIG_PASSWORD | CONFIG_LOADINTERVAL | CONFIG_LOADMINTHRESHOLD | CONFIG_LOADMAXTHRESHOLD | CONFIG_DISKFULLTHRESHOLD | CONFIG_STORAGELIMIT | CONFIG_LOADRETRY | CONFIG_ENABLEHIST | CONFIG_ENABLESYSTEM | CONFIG_NEXT | CONFIG_CURRENT | CONFIG_VERSION | CONFIG_COLLECTFILTER | CONFIG_KEYSTORE_ID | CONFIG_KEY_ID | KEYSTORE_NAME | KEY_ALIAS | CONFIG_NAME_DELIMITED | CONFIG_DBNAME_DELIMITED | CONFIG_USER_DELIMITED | | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | | NZ_HIST | HISTDB | 1 | 1 | 2 | localhost | TESTUSER | y5neWx3HuL2k$w5DqbqJOp+Y= | 5 | | | | | | | | | | | | | | | | | | | | |
+(1 rows)
 ```
 {: codeblock}
 
