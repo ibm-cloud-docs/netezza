@@ -29,7 +29,7 @@ This is a collection of frequently asked questions (FAQ) about the {{site.data.k
 {: support}
 
 To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follow these steps:
-1. Configure Azure AD and Sync Users from LDAP. For more information, see [Setting Azure AD authentication](/docs/netezza?topic=netezza-azureadauth).
+1. Configure Azure AD and sync users from LDAP. For more information, see [Setting Azure AD authentication](/docs/netezza?topic=netezza-azureadauth).
 1. Enable SAML by following the instructions in the [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
 1. Take a global backup on your on-premises system using the following command:
 `nzbackup -globals -dir /nzscratch/OnPremGlobals`.
@@ -77,7 +77,7 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
    ```
    {: codeblock}
 
-1. Update the USEAUTH field for the newly added users by running the following query:
+1. Update the `USEAUTH` field for the newly added users by running the following query:
 
    ```sql
    UPDATE _t_user SET USEAUTH=2
