@@ -23,6 +23,78 @@ content-type: faq
 This is a collection of frequently asked questions (FAQ) about the {{site.data.keyword.netezza_full}}.
 {: shortdesc}
 
+## How do I migrate my users from OnPrem LDAP to {{site.data.keyword.netezza_short}} Azure AD and enable SAML?
+{: #migrate-onpremldap-azuread}
+{: faq}
+{: support}
+
+To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follow these steps:
+1. Configure Azure AD and sync users from LDAP. For more information, see [Setting Azure AD authentication](/docs/netezza?topic=netezza-azureadauth).
+1. Enable SAML by following the instructions in the [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
+1. Take a global backup on your on-premises system using the following command:
+
+   ```sql
+   nzbackup -globals -dir /nzscratch/OnPremGlobals
+   ```
+   {: codeblock}
+
+1. Copy the backed-up globals directory to the target system.
+1. On the target system, register the external authentication system (LDAP) using the following command:
+
+   ```sql
+   REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP'
+   WITH BASE 'ou=Users,o=6167d268d49b604a5e763d8b,dc=jumpcloud,dc=com'
+   NAMECASE lowercase
+   SERVER '<LDAPSERVER>'
+   SSL 'off'
+   BINDDN 'uid=tejal,ou=Users,o=6167d268d49b604a5e763d8b,dc=jumpcloud,dc=com'
+   BINDPW '<PASSWORD>';
+   ```
+   {: codeblock}
+
+1. Before restoring the globals on the target system, verify the current user count and the latest user creation date on the source system by running the following queries:
+
+   1. Get current user count:
+
+      ```sql
+      SELECT COUNT(*) FROM _v_user;
+      ```
+      {: codeblock}
+
+   1. Get latest user creation date:
+
+      ```sql
+      SELECT createdate FROM _v_user ORDER BY createdate DESC LIMIT 1;
+      ```
+      {: codeblock}
+
+1. Restore the backed-up globals on the target system using the following command:
+
+   ```sql
+   nzrestore -globals -dir /nz/OnPremGlobals -npshost <sourcehost> -u <targetSystemUser> -pw '<targetSystemuserPassword>'
+   ```
+   {: codeblock}
+
+1. After restoring the globals, verify the number of users added to the target system by running the following query:
+
+   ```sql
+   SELECT COUNT(*) FROM _v_user;
+   ```
+   {: codeblock}
+
+1. Update the `USEAUTH` field for the newly added users by running the following query:
+
+   ```sql
+   UPDATE _t_user SET USEAUTH=2
+   WHERE usename IN (
+   SELECT username FROM _v_user WHERE CREATEDATE > '<O/P captured in step 6b>'
+   );
+   ```
+   {: codeblock}
+
+   The number of updated users should match the number of users migrated.
+   {: note}
+
 ## How do I sign up for {{site.data.keyword.netezza_short}}?
 {: #singing-up}
 {: faq}
@@ -240,14 +312,14 @@ Check your name by running below query:
 
 1. Restart the database.
 1. Change the password as follows.
-  
+
    ```bash
       nzsql -c "ALTER HISTORY CONFIGURATION <QUERYHIST> PASSWORD '<new password>';"
    ```
    {: codeblock}
 
 1. Set the current configuration to your current history database file. If `all_hist` is your configuration then change it as follows:
-   
+
    ```bash
       nzsql -c "set history configuration all_hist"
    ```
