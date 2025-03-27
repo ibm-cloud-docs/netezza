@@ -71,7 +71,7 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
 1. Restore the backed-up globals on the target system using the following command:
 
    ```sql
-   nzrestore -globals -dir /nz/OnPremGlobals -npshost <sourcehost> -u admin -pw 'Password'
+   nzrestore -globals -dir /nz/OnPremGlobals -npshost <sourcehost> -u <targetSystemUser> -pw '<targetSystemuserPassword>'
    ```
    {: codeblock}
 
@@ -87,7 +87,7 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
    ```sql
    UPDATE _t_user SET USEAUTH=2
    WHERE usename IN (
-   SELECT username FROM _v_user WHERE CREATEDATE > <O/P captured in step 3b>
+   SELECT username FROM _v_user WHERE CREATEDATE > '<O/P captured in step 6b>'
    );
    ```
    {: codeblock}
@@ -312,14 +312,14 @@ Check your name by running below query:
 
 1. Restart the database.
 1. Change the password as follows.
-  
+
    ```bash
       nzsql -c "ALTER HISTORY CONFIGURATION <QUERYHIST> PASSWORD '<new password>';"
    ```
    {: codeblock}
 
 1. Set the current configuration to your current history database file. If `all_hist` is your configuration then change it as follows:
-   
+
    ```bash
       nzsql -c "set history configuration all_hist"
    ```
