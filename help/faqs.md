@@ -85,12 +85,28 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
 1. Update the `USEAUTH` field for the newly added users by running the following query:
 
    ```sql
-   UPDATE _t_user SET USEAUTH=2
-   WHERE usename IN (
-   SELECT username FROM _v_user WHERE CREATEDATE > '<O/P captured in step 6b>'
+   UPDATE table_name
+   SET column_name = new_value
+   WHERE column_name IN (
+      SELECT column_name
+      FROM table_name
+      WHERE condition
    );
    ```
    {: codeblock}
+
+When configuring authentication, you will need to specify the authentication method you wish to use. The following options are available:
+
+**Authentication Methods:**
+
+      IBM IAM: USER_AUTH_EXT_IBMIAM = 3
+      Azure AD: USER_AUTH_EXT_AZUREAD = 4
+      LDAP: USER_AUTH_EXT_LDAP = 5
+      AWS IAM: USER_AUTH_EXT_AWSIAM = 6
+      SAML: USER_AUTH_EXT_SAML = 7
+      OIDC: USER_AUTH_EXT_OIDC = 8
+
+To select an authentication method, simply replace `new_value` with the corresponding number for your chosen authentication method.
 
    The number of updated users should match the number of users migrated.
    {: note}
@@ -361,12 +377,7 @@ To scale up from the NC-START configuration, please follow the guidance provided
 To increase storage within the NC-START workload contour (currently at 400 GB), see: [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).
 To scale the workload contour from NC-START to NC0, see: [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
 
-## How long does scaling up take?
-{: #duration-scaleup}
-{: faq}
-{: support}
 
-Scaling storage itself does not take six hours. However, a six-hour cooling period is required between consecutive storage scaling attempts. This is the minimum wait time before initiating another scaling process.
 
 ## Is it possible to scale up without affecting the current database configuration and data?
 {: #scaleup-without-dbconfig}
