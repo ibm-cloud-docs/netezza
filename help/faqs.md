@@ -23,14 +23,13 @@ content-type: faq
 This is a collection of frequently asked questions (FAQ) about the {{site.data.keyword.netezza_full}}.
 {: shortdesc}
 
-## How do I migrate my users from OnPrem LDAP to {{site.data.keyword.netezza_short}} Azure AD and enable SAML?
+## How do I migrate my users from On-Prem LDAP to NPSaaS and enable an external authenticator?
 {: #migrate-onpremldap-azuread}
 {: faq}
 {: support}
 
-To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follow these steps:
-1. Configure Azure AD and sync users from LDAP. For more information, see [Setting Azure AD authentication](/docs/netezza?topic=netezza-azureadauth).
-1. Enable SAML by following the instructions in the [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
+To migrate your users from OnPrem LDAP to NPSaaS and enable an external authenticator, follow these steps:
+1. Enable and configure an external authentication that you want to use  on NPSaaS. For more information, see [Managing authentication methods](/docs/netezza?topic=netezza-authenticating).
 1. Take a global backup on your on-premises system using the following command:
 
    ```sql
@@ -39,19 +38,6 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
    {: codeblock}
 
 1. Copy the backed-up globals directory to the target system.
-1. On the target system, register the external authentication system (LDAP) using the following command:
-
-   ```sql
-   REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP'
-   WITH BASE 'ou=Users,o=6167d268d49b604a5e763d8b,dc=jumpcloud,dc=com'
-   NAMECASE lowercase
-   SERVER '<LDAPSERVER>'
-   SSL 'off'
-   BINDDN 'uid=tejal,ou=Users,o=6167d268d49b604a5e763d8b,dc=jumpcloud,dc=com'
-   BINDPW '<PASSWORD>';
-   ```
-   {: codeblock}
-
 1. Before restoring the globals on the target system, verify the current user count and the latest user creation date on the source system by running the following queries:
 
    1. Get current user count:
@@ -99,12 +85,12 @@ When configuring authentication, you will need to specify the authentication met
 
 **Authentication Methods:**
 
-      IBM IAM: USER_AUTH_EXT_IBMIAM = 3
-      Azure AD: USER_AUTH_EXT_AZUREAD = 4
-      LDAP: USER_AUTH_EXT_LDAP = 5
-      AWS IAM: USER_AUTH_EXT_AWSIAM = 6
-      SAML: USER_AUTH_EXT_SAML = 7
-      OIDC: USER_AUTH_EXT_OIDC = 8
+      IBM IAM: 3
+      Azure AD: 4
+      LDAP: 5
+      AWS IAM: 6
+      SAML: 7
+      OIDC: 8
 
 To select an authentication method, simply replace `new_value` with the corresponding number for your chosen authentication method.
 
