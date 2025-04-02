@@ -71,13 +71,14 @@ To migrate your users from OnPrem LDAP to NPSaaS and enable an external authenti
 1. Update the `USEAUTH` field for the newly added users by running the following query:
 
    ```sql
-   UPDATE table_name
-   SET column_name = new_value
-   WHERE column_name IN (
-      SELECT column_name
-      FROM table_name
-      WHERE condition
+   UPDATE table_name 
+   SET use_auth= new_value 
+   WHERE usename IN ( 
+      SELECT username 
+      FROM table_name 
+      WHERE CREATEDATE > <O/P captured in step 4b>
    );
+
    ```
    {: codeblock}
 
