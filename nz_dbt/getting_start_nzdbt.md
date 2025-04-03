@@ -19,7 +19,7 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Getting started with dbt-ibm-netezza
+# Getting started with Netezza dbt adapter
 {: #nzdbt-intro}
 
 The dbt (data build tool) is the industry standard for data transformation. It helps you transform raw data into analysis-ready insights, enabling you to make data-driven decisions with confidence.

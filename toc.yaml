@@ -69,7 +69,7 @@ toc:
               - admins/bnr-ui.md
               - admins/bnr-flow.md
       - topicgroup:
-          label: dbt-ibm-netezza adaptor
+          label: Netezza dbt adaptor
           topics:
           - nz_dbt/getting_start_nzdbt.md
   - navgroup:
