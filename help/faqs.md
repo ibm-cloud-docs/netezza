@@ -23,14 +23,13 @@ content-type: faq
 This is a collection of frequently asked questions (FAQ) about the {{site.data.keyword.netezza_full}}.
 {: shortdesc}
 
-## How do I migrate my users from OnPrem LDAP to {{site.data.keyword.netezza_short}} Azure AD and enable SAML?
+## How do I migrate my users from On-Prem LDAP to NPSaaS and enable an external authenticator?
 {: #migrate-onpremldap-azuread}
 {: faq}
 {: support}
 
-To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follow these steps:
-1. Configure Azure AD and sync users from LDAP. For more information, see [Setting Azure AD authentication](/docs/netezza?topic=netezza-azureadauth).
-1. Enable SAML by following the instructions in the [Enabling SAML authentication](/docs/netezza?topic=netezza-samliamauth).
+To migrate your users from OnPrem LDAP to NPSaaS and enable an external authenticator, follow these steps:
+1. Enable and configure an external authentication that you want to use  on NPSaaS. For more information, see [Managing authentication methods](/docs/netezza?topic=netezza-authenticating).
 1. Take a global backup on your on-premises system using the following command:
 
    ```sql
@@ -39,19 +38,6 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
    {: codeblock}
 
 1. Copy the backed-up globals directory to the target system.
-1. On the target system, register the external authentication system (LDAP) using the following command:
-
-   ```sql
-   REGISTER EXTERNAL AUTHENTICATION SYSTEM 'LDAP'
-   WITH BASE 'ou=Users,o=6167d268d49b604a5e763d8b,dc=jumpcloud,dc=com'
-   NAMECASE lowercase
-   SERVER '<LDAPSERVER>'
-   SSL 'off'
-   BINDDN 'uid=tejal,ou=Users,o=6167d268d49b604a5e763d8b,dc=jumpcloud,dc=com'
-   BINDPW '<PASSWORD>';
-   ```
-   {: codeblock}
-
 1. Before restoring the globals on the target system, verify the current user count and the latest user creation date on the source system by running the following queries:
 
    1. Get current user count:
@@ -85,12 +71,29 @@ To migrate your users from OnPrem LDAP to NZSaaS Azure AD and enable SAML, follo
 1. Update the `USEAUTH` field for the newly added users by running the following query:
 
    ```sql
-   UPDATE _t_user SET USEAUTH=2
-   WHERE usename IN (
-   SELECT username FROM _v_user WHERE CREATEDATE > '<O/P captured in step 6b>'
+   UPDATE table_name 
+   SET use_auth= new_value 
+   WHERE usename IN ( 
+      SELECT username 
+      FROM table_name 
+      WHERE CREATEDATE > <O/P captured in step 4b>
    );
+
    ```
    {: codeblock}
+
+When configuring authentication, you will need to specify the authentication method you wish to use. The following options are available:
+
+**Authentication Methods:**
+
+      IBM IAM: 3
+      Azure AD: 4
+      LDAP: 5
+      AWS IAM: 6
+      SAML: 7
+      OIDC: 8
+
+To select an authentication method, simply replace `new_value` with the corresponding number for your chosen authentication method.
 
    The number of updated users should match the number of users migrated.
    {: note}
@@ -361,12 +364,7 @@ To scale up from the NC-START configuration, please follow the guidance provided
 To increase storage within the NC-START workload contour (currently at 400 GB), see: [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).
 To scale the workload contour from NC-START to NC0, see: [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
 
-## How long does scaling up take?
-{: #duration-scaleup}
-{: faq}
-{: support}
 
-Scaling storage itself does not take six hours. However, a six-hour cooling period is required between consecutive storage scaling attempts. This is the minimum wait time before initiating another scaling process.
 
 ## Is it possible to scale up without affecting the current database configuration and data?
 {: #scaleup-without-dbconfig}
