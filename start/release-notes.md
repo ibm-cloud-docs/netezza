@@ -35,7 +35,7 @@ Workload contour - Scaling
 :   Scaling can now be performed while the instance is in paused state. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
 
 Recent queries
-: The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2000 rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
+: The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2000 rows. For more information, see [History](/docs/netezza?topic=netezza-history).
 
 #### Connectivity improvements
 {: #cifeb2025}
@@ -69,7 +69,7 @@ Database assistant
 {: #nfenhnov2024}
 
 Query cancellation
-:   A feature to cancel long-running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
+:   A feature to cancel long-running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-history#query-cancellation).
 
 IdP configuration
 :   The IdP configuration page is now part of the **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [Setting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
