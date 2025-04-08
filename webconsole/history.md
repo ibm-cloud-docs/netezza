@@ -18,8 +18,8 @@ subcollection: netezza
 {:note: .note}
 {:screen: .screen}
 
-# Queries
-{: #queries}
+# History
+{: #history}
 
 ## Query history
 {: #query_history}
@@ -82,3 +82,4 @@ The system supports up to 500,000 rows, with a minimum fetch of 2,000 rows via t
 {: #query-cancellation}
 
 When you execute a long running query from query editor, you can cancel the query until the time it is in execution by a simple click of the button.
+
