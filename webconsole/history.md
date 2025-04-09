@@ -89,8 +89,6 @@ When you execute a long running query from query editor, you can cancel the quer
 
 The Connection history page provides a comprehensive view of all connection requests made to the system over a period of time. This feature allows you to track and analyze connection attempts made by different users through various drivers or connectors.
 
-Key features:
-
 - Connection request overview: View a detailed list of all connection requests, including successful connections, authentication failures, and connection failures.
 
 - Visual insights: Two interactive graphs provide a clear picture of connection attempts:
