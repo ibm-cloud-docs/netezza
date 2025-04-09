@@ -84,29 +84,29 @@ The system supports up to 500,000 rows, with a minimum fetch of 2,000 rows via t
 When you execute a long running query from query editor, you can cancel the query until the time it is in execution by a simple click of the button.
 
 
-## Connection History
+## Connection history
 {: #connection-hist}
 
-The Connection History page provides a comprehensive view of all connection requests made to the system over a period of time. This feature allows you to track and analyze connection attempts made by different users through various drivers or connectors.
+The Connection history page provides a comprehensive view of all connection requests made to the system over a period of time. This feature allows you to track and analyze connection attempts made by different users through various drivers or connectors.
 
-Key Features:
+Key features:
 
-- Connection Request Overview: View a detailed list of all connection requests, including successful connections, authentication failures, and connection failures.
+- Connection request overview: View a detailed list of all connection requests, including successful connections, authentication failures, and connection failures.
 
-- Visual Insights: Two interactive graphs provide a clear picture of connection attempts:
+- Visual insights: Two interactive graphs provide a clear picture of connection attempts:
 
-   - Connection Status Graph: Displays the count of successful connections, authentication failures, and connection failures.
+   - Connection status graph: Displays the count of successful connections, authentication failures, and connection failures.
 
-   - Time-Based Graph: Shows the distribution of connection attempts over time, helping you identify trends and patterns. By using the Connection History page, you can gain valuable insights into system usage, troubleshoot connection issues, and optimize your setup for improved performance.
+   - Time-based graph: Shows the distribution of connection attempts over time, helping you identify trends and patterns. By using the Connection History page, you can gain valuable insights into system usage, troubleshoot connection issues, and optimize your setup for improved performance.
 
-By using the Connection History page, you can gain valuable insights into system usage, troubleshoot connection issues, and optimize your setup for improved performance.
+By using the Connection history page, you can gain valuable insights into system usage, troubleshoot connection issues, and optimize your setup for improved performance.
 
-## Automaint History
+## Automaint history
 {: #automain_hist}
 
-The Automaint History page provides a record of the last successful automaint run within the current automaint window. This page offers two main sections: Groom Details and Genstats.
+The Automaint history page provides a record of the last successful automaint run within the current automaint window. This page offers two main sections: **Groom details** and **Genstats**.
 
-**Groom Details**: This section displays information about the maintenance activities performed during the last automaint run, including:
+**Groom details**: This section displays information about the maintenance activities performed during the last automaint run, including:
 
 - Number of records purged.
 - Number of pages released.
