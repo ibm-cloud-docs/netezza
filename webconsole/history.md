@@ -102,7 +102,7 @@ By using the Connection history page, you can gain valuable insights into system
 ## Automaint history
 {: #automain_hist}
 
-The Automaint history page provides a record of the last successful scheduled automaint run within the current automaint window. This page offers two sections: **Grooms** and **Genstats**.
+The Automaint history page provides a record of the last successful scheduled automaint run within the current automaint window. This page offers two sections: **Genstats** and **Grooms**.
 
 **Genstats**: This section provides a list of tables used to generate statistics, helping to improve system performance by identifying areas for optimization.
 
