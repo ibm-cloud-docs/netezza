@@ -28,7 +28,7 @@ The administrator privileges are not necessary to view query history. The **Quer
 
 The Query History can be filtered by selecting from various preset intervals or specifying a custom time interval.
 
-### Charts
+### Visual insights
 {: #queryhistory_chart}
 
 - Success Ratio: Represents the ratio of queries executed within the selected time span. This metric calculates the total number of queries fired against the number of completed and failed queries (with varying failure reasons).
@@ -89,7 +89,7 @@ When you execute a long running query from query editor, you can cancel the quer
 
 The Connection history page provides a comprehensive view of all connection requests made to the system over a period of time. This feature allows you to track and analyze connection attempts made by different users through various drivers or connectors.
 
-- Connection request overview: View a detailed list of all connection requests, including successful connections, authentication failures, and connection failures.
+- Connection request overview: View a detailed list of all connection attempts, including successful connections and erroneous connections, which comprise connection failures and authentication failures. This information is helpful in auditing the system for connections, allowing administrators to monitor and troubleshoot connectivity issues.
 
 - Visual insights: Two interactive graphs provide a clear picture of connection attempts:
 
@@ -102,12 +102,11 @@ By using the Connection history page, you can gain valuable insights into system
 ## Automaint history
 {: #automain_hist}
 
-The Automaint history page provides a record of the last successful automaint run within the current automaint window. This page offers two main sections: **Groom details** and **Genstats**.
+The Automaint history page provides a record of the last successful scheduled automaint run within the current automaint window. This page offers two sections: **Grooms** and **Genstats**.
 
-**Groom details**: This section displays information about the maintenance activities performed during the last automaint run, including:
+**Genstats**: This section provides a list of tables used to generate statistics, helping to improve system performance by identifying areas for optimization.
+
+**Grooms**: This section displays information about the maintenance activities performed during the last scheduled automaint run, including crucial information like:
 
 - Number of records purged.
-- Number of pages released.
-- Other relevant details about the grooming process.
-
-**Genstats**: This section lists all the tables that were analyzed by Genstats across various databases during the last automaint run. This information helps you understand which tables were affected by the maintenance process.
+- List of pages that were made available or updated during the groom.
