@@ -95,9 +95,7 @@ The Connection history page provides a comprehensive view of all connection requ
 
    - Connection status graph: Displays the count of successful connections, authentication failures, and connection failures.
 
-   - Time-based graph: Shows the distribution of connection attempts over time, helping you identify trends and patterns. By using the Connection History page, you can gain valuable insights into system usage, troubleshoot connection issues, and optimize your setup for improved performance.
-
-By using the Connection history page, you can gain valuable insights into system usage, troubleshoot connection issues, and optimize your setup for improved performance.
+   - Time-based graph: Shows the distribution of connection attempts over time, helping you identify trends and patterns.
 
 ## Automaint history
 {: #automain_hist}
@@ -106,7 +104,7 @@ The Automaint history page provides a record of the last successful scheduled au
 
 **Genstats**: This section provides a list of tables used to generate statistics, helping to improve system performance by identifying areas for optimization.
 
-**Grooms**: This section displays information about the maintenance activities performed during the last scheduled automaint run, including crucial information like:
+**Grooms**: This section displays information about the maintenance activities performed during the last scheduled automaint run, including information like:
 
 - Number of records purged.
 - List of pages that were made available or updated during the groom.
