@@ -24,6 +24,25 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
+## 30 April 2025 - 11.2.3.5
+{: #apr2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfaprlb2025}
+
+Connection history
+
+:   Users can now view a detailed history of both successful and failed connections. The feature includes reasons for any connection failures, providing better insights into connectivity issues. For more information, see [Connection history](/docs/netezza?topic=netezza-history#connection-hist).
+
+Automaint history
+:   A new section has been added to track the details of the last successful execution of Groom and Genstats as part of the automaint process configured on the system. For more information, see [Automaint history](/docs/netezza?topic=netezza-history#automain_hist).
+
+Query history shortcuts
+:   Users can now quickly access information about short-running and long-running queries, enhancing efficiency in query management.
+
+
+
 ## 19 February 2025 - 11.2.3.4
 {: #feb2025}
 {: release-note}
