@@ -41,7 +41,10 @@ Automaint history
 Query history shortcuts
 :   Users can now quickly access information about short-running and long-running queries, enhancing efficiency in query management.
 
+### Components
+{: #compaprl2025}
 
+- `nzcli` version: 11.2.3.5
 
 ## 19 February 2025 - 11.2.3.4
 {: #feb2025}
