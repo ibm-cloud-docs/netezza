@@ -18,8 +18,8 @@ subcollection: netezza
 {:note: .note}
 {:screen: .screen}
 
-# Queries
-{: #queries}
+# History
+{: #history}
 
 ## Query history
 {: #query_history}
@@ -28,7 +28,7 @@ The administrator privileges are not necessary to view query history. The **Quer
 
 The Query History can be filtered by selecting from various preset intervals or specifying a custom time interval.
 
-### Charts
+### Visual insights
 {: #queryhistory_chart}
 
 - Success Ratio: Represents the ratio of queries executed within the selected time span. This metric calculates the total number of queries fired against the number of completed and failed queries (with varying failure reasons).
@@ -82,3 +82,29 @@ The system supports up to 500,000 rows, with a minimum fetch of 2,000 rows via t
 {: #query-cancellation}
 
 When you execute a long running query from query editor, you can cancel the query until the time it is in execution by a simple click of the button.
+
+
+## Connection history
+{: #connection-hist}
+
+The Connection history page provides a comprehensive view of all connection requests made to the system over a period of time. This feature allows you to track and analyze connection attempts made by different users through various drivers or connectors.
+
+- Connection request overview: View a detailed list of all connection attempts, including successful connections and erroneous connections, which comprise connection failures and authentication failures. This information is helpful in auditing the system for connections, allowing administrators to monitor and troubleshoot connectivity issues.
+
+- Visual insights: Two interactive graphs provide a clear picture of connection attempts:
+
+   - Connection status graph: Displays the count of successful connections, authentication failures, and connection failures.
+
+   - Time-based graph: Shows the distribution of connection attempts over time, helping you identify trends and patterns.
+
+## Automaint history
+{: #automain_hist}
+
+The Automaint history page provides a record of the last successful scheduled automaint run within the current automaint window. This page offers two sections: **Genstats** and **Grooms**.
+
+**Genstats**: This section provides a list of tables used to generate statistics, helping to improve system performance by identifying areas for optimization.
+
+**Grooms**: This section displays information about the maintenance activities performed during the last scheduled automaint run, including information like:
+
+- Number of records purged.
+- List of pages that were made available or updated during the groom.

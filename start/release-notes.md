@@ -24,6 +24,28 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
+## 30 April 2025 - 11.2.3.5
+{: #apr2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfaprlb2025}
+
+Connection history
+
+:   A detailed history of successful and failed connections is now available, including the reasons for any failures. This feature offers improved insights into connectivity issues. For more information, see [Connection history](/docs/netezza?topic=netezza-history#connection-hist).
+
+Automaint history
+:   A new section has been added to track the details of the last successful execution of Groom and Genstats as part of the automaint process configured on the system. For more information, see [Automaint history](/docs/netezza?topic=netezza-history#automain_hist).
+
+Query history shortcuts
+:   Users can now quickly access information about short-running and long-running queries, enhancing efficiency in query management.
+
+### Components
+{: #compaprl2025}
+
+- `nzcli` version: 11.2.3.5
+
 ## 19 February 2025 - 11.2.3.4
 {: #feb2025}
 {: release-note}
@@ -35,7 +57,7 @@ Workload contour - Scaling
 :   Scaling can now be performed while the instance is in paused state. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
 
 Recent queries
-: The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2000 rows. For more information, see [Queries](/docs/netezza?topic=netezza-queries).
+: The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2000 rows. For more information, see [History](/docs/netezza?topic=netezza-history).
 
 #### Connectivity improvements
 {: #cifeb2025}
@@ -69,7 +91,7 @@ Database assistant
 {: #nfenhnov2024}
 
 Query cancellation
-:   A feature to cancel long-running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-queries#query-cancellation).
+:   A feature to cancel long-running queries executed from the query editor. For more information, see [Query cancellation](/docs/netezza?topic=netezza-history#query-cancellation).
 
 IdP configuration
 :   The IdP configuration page is now part of the **Settings** page. For details, see [Setting SAML authentication with the Netezza UI](/docs/netezza?topic=netezza-samliamauth#setting_saml_wc) and [Setting Azure OIDC authentication with the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc).
