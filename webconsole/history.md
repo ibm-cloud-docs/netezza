@@ -41,6 +41,8 @@ The Query History can be filtered by selecting from various preset intervals or 
 The system supports up to 500,000 rows, with a minimum fetch of 2,000 rows via the API. A numeric input option will allow setting a limit for data retrieval.
 {: note}
 
+  ![Query history image](images/queryhistory.png "Query history")
+
 ### Creating queries
 {: #create-queries}
 
@@ -97,6 +99,8 @@ The Connection history page provides a comprehensive view of all connection requ
 
    - Time-based graph: Shows the distribution of connection attempts over time, helping you identify trends and patterns.
 
+  ![Connection history image](images/Connectionhistory.png "Connection history")
+
 ## Automaint history
 {: #automain_hist}
 
@@ -108,3 +112,5 @@ The Automaint history page provides a record of the last successful scheduled au
 
 - Number of records purged.
 - List of pages that were made available or updated during the groom.
+
+ ![Automaint history image](images/automainthistory.png "Automaint history")
