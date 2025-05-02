@@ -28,9 +28,7 @@ The administrator privileges are not necessary to view query history. The **Quer
 
 The Query History can be filtered by selecting from various preset intervals or specifying a custom time interval.
 
-  ![Query history image](images/queryhistory.png "Query history")
-
-  ![Connection history image](images/Connectionhistory.png "Connection history")
+![Connection history image](images/Connectionhistory.png "Connection history")
 
 ### Visual insights
 {: #queryhistory_chart}
