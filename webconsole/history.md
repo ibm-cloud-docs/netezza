@@ -30,6 +30,8 @@ The Query History can be filtered by selecting from various preset intervals or 
 
   ![Query history image](images/queryhistory.png "Query history")
 
+  ![Connection history image](images/Connectionhistory.png "Connection history")
+
 ### Visual insights
 {: #queryhistory_chart}
 
