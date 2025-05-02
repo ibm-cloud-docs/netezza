@@ -28,6 +28,8 @@ The administrator privileges are not necessary to view query history. The **Quer
 
 The Query History can be filtered by selecting from various preset intervals or specifying a custom time interval.
 
+  ![Query history image](images/queryhistory.png "Query history")
+
 ### Visual insights
 {: #queryhistory_chart}
 
@@ -40,9 +42,6 @@ The Query History can be filtered by selecting from various preset intervals or 
 
 The system supports up to 500,000 rows, with a minimum fetch of 2,000 rows via the API. A numeric input option will allow setting a limit for data retrieval.
 {: note}
-
-
-  ![Query history image](images/queryhistory.png "Query history")
 
 ### Creating queries
 {: #create-queries}
