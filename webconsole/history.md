@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-04-30"
 
 keywords: web console, queries
 
@@ -27,6 +27,8 @@ subcollection: netezza
 The administrator privileges are not necessary to view query history. The **Query history** view is only showing SQL statements that involve the generation of a query plan, for example, INSERT, UPDATE, DELETE, or SELECT statements.
 
 The Query History can be filtered by selecting from various preset intervals or specifying a custom time interval.
+
+![Query history image](images/query-history.png "Query history")
 
 ### Visual insights
 {: #queryhistory_chart}
@@ -97,6 +99,8 @@ The Connection history page provides a comprehensive view of all connection requ
 
    - Time-based graph: Shows the distribution of connection attempts over time, helping you identify trends and patterns.
 
+  ![Connection history image](images/Connectionhistory.png "Connection history")
+
 ## Automaint history
 {: #automain_hist}
 
@@ -108,3 +112,5 @@ The Automaint history page provides a record of the last successful scheduled au
 
 - Number of records purged.
 - List of pages that were made available or updated during the groom.
+
+ ![Automaint history image](images/automainthistory.png "Automaint history")
