@@ -55,8 +55,8 @@
       "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
       "tiles": [
           {
-          "date": "30 April 2025",
-          "title": "Introduced connection history to easily track all your successful and failed connections with detailed reasons for any failures. Stay informed and quickly resolve connectivity issues."
+              "date": "30 April 2025",
+              "title": "Introduced connection history to easily track all your successful and failed connections with detailed reasons for any failures. Stay informed and quickly resolve connectivity issues."
           },
           {
               "date": "19 February 2025",
