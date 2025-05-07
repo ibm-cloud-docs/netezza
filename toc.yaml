@@ -72,6 +72,10 @@ toc:
           label: Netezza dbt adaptor
           topics:
           - nz_dbt/getting_start_nzdbt.md
+      - topicgroup:
+          label: Netezza cloud object storage
+          topics:
+          - cos/netezz-cos.md
   - navgroup:
       id: howto
       topics:
