@@ -99,7 +99,7 @@ The Connection history page provides a comprehensive view of all connection requ
 
    - Time-based graph: Shows the distribution of connection attempts over time, helping you identify trends and patterns.
 
-  ![Connection history image](images/Connectionhistory.png "Connection history")
+ ![Connection history image](images/Connectionhistory.png "Connection history")
 
 ## Automaint history
 {: #automain_hist}
