@@ -108,9 +108,11 @@ The Automaint history page provides a record of the last successful scheduled au
 
 **Genstats**: This section provides a list of tables used to generate statistics, helping to improve system performance by identifying areas for optimization.
 
+ ![Genstat image](images/genstat.png "Genstat")
+
 **Grooms**: This section displays information about the maintenance activities performed during the last scheduled automaint run, including information like:
 
 - Number of records purged.
 - List of pages that were made available or updated during the groom.
 
- ![Automaint history image](images/automainthistory.png "Automaint history")
+ ![Groom image](images/groom.png "Automaint history")
