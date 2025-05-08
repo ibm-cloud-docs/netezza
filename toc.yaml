@@ -75,7 +75,7 @@ toc:
       - topicgroup:
           label: Netezza cloud object storage
           topics:
-          - cos/netezz-cos.md
+          - cos/netezza-cos.md
   - navgroup:
       id: howto
       topics:
