@@ -19,156 +19,203 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Object I/O layer design and user guide
-{: #objguide}
+# Netezza Cloud Object Storage (COS) User Guide Specification
+{: #netezzacldstrge}
 
-## Overview
-{: #ovrvw}
+## Objective
+{: #objectve}
 
-This document describes the design and usage of the Object I/O layer for Netezza Performance Server (NPS). The Object I/O layer enables reading and writing of data objects stored in object storage, supporting all data types currently residing on block storage. This includes raw table data as well as metadata related to Netezza journaling (DPM).
+To enhance the competitiveness of the Netezza cloud offering, we provide a cost-effective storage option using Cloud Object Storage (COS) for NzSaaS and BYOC(/CVPC) platforms. COS serves as persistent storage for user data at a lower cost compared to managed block volumes like EBS.
 
-The goal is to provide a stable, cost-effective, and feature-rich solution that integrates seamlessly with existing NPS functionality while introducing support for hybrid storage environments.
+- **Host Catalog** (`/nz/data` partition) remains on block storage.
+- Available for both new and existing customers.
+- Existing customers can add COS bucket configuration during upgrades supporting COS.
+- Each Netezza instance uses one exclusive COS bucket with read/write access by NPS only.
+- Hybrid storage model: Customers choose storage type (block or object) at table level or set default at database level.
+- Tables stored in COS retain all current features and functionality.
+
+## Functional specifications
+{: #funcspec}
+
+### System Provisioning
+{: #sysprov}
+
+- New deployments automatically provision a COS bucket during system update.
+
+### Access Management
+{: #accessmng}
+
+- SPUs have access to the COS bucket via host or config-map credentials.
+- On platforms with IAM or similar, SPUs are configured accordingly.
+- Bucket changes (e.g., endpoint updates) supported without downtime.
+- Multiple authentication methods supported: IAM roles, profile credentials, bucket policies.
+
+### SQL Interface Enhancements
+{: #sqlinte}
+
+Customers can specify storage types through SQL commands:
+
+```sql
+CREATE TABLE T1 (c1 INT) WITH STORAGE_TYPE AS OBJECT;
+CREATE DATABASE db1 WITH STORAGE_TYPE AS BLOCK;
+ALTER DATABASE db2 WITH STORAGE_TYPE AS OBJECT;
+```
+
+Notes:
+- Storage type is fixed once data is inserted into a table.
+- To change storage type, use CTAS (Create Table As Select).
+
+### Command Line Interface Updates
+{: #cmdinterface}
+
+`nzds` command will show:
+- Block storage: total capacity and usage percentage per dataslice.
+- Object storage: used size only.
 
 
-## Objectives
-{: #objtve}
+## Caching strategy
+{: #cachingstrgy}
 
-### Stability
-{: #stblty}
+### Read cache
+{: #readcache}
 
-- Deliver stability consistent with current NPS block storage performance.
-- Ensure reliable operation under high concurrency and workload demands.
+Due to higher latency of object storage:
 
-### Price-performance
-{: #prc_pfmnce}
+- A write-through caching layer stores frequently accessed data locally on SPU ephemeral storage for faster reads.
 
-- Reduce storage costs by leveraging native object storage.
-- Minimize access costs through persistent caching strategies.
-- Optimize object sizes to reduce the number of accesses per terabyte.
-- Target performance at approximately 80% or better compared to block storage.
+   - Write-through means writes complete after persisting to object store first.
 
-### Features
-{: #ftre}
+Benefits:
+   - Reduces network bandwidth usage and associated costs on AWS/Azure by serving requests from cache when possible.
 
-- Maintain full compatibility with existing Netezza features.
-- Support new capabilities such as hybrid data sources combining block and object storage within the same instance.
-- Enable concurrent production workloads accessing both block and object-stored data across multiple user sessions.
+Configuration:
+   - Partition ephemeral SPU local disk between block cache, nzlocal, and object store cache with configurable ratios (default provided).
+   - IO layer supports reading from and populating this cache.
+
+*Note:* Read cache implementation planned post-MVP release. Future consideration includes an in-memory caching tier for hot data subsets.
+
+### Write cache *(Not part of MVP)*
+{: #wrtecache}
+
+Object Store has high latency unsuitable for OLTP workloads involving small writes. Planned enhancements include:
+
+- Partial write-back caching within transactions that modify the same page multiple times before commit to reduce overheads.
+
+## Performance goals
+{: #perf_goals}
+
+Aim to achieve parity between object store cached reads and block store performance. DML operations may lag initially but will improve with future write-cache support.
 
 
-## Functional specification
-{: #func_spec}
+## Design specifications
+{: #designspec}
 
-The Object I/O layer provides:
+### IO layer enhancements
+{: #layrenh}
 
-1. **Flexible access**
-   - Supports read/write operations on any bucket, any object size, at any key name.
-   - Allows configurability to enable various features, behaviors, and performance optimizations.
+Two IO implementations exist today:
 
-2. **High concurrency & utilization**
-   - Designed for rapid scaling up to maximum concurrency supported by platform resources.
-   - Efficiently utilizes system resources while maintaining minimal latency.
+| Platform | IO Implementation |
+|----------|-------------------|
+| CP4D     | Kernel modules (`nzds`) interacting with FPGA/emulator |
+| Concerto | Userspace `diskDrv` daemon |
 
-3. **Event-driven model**
-   - Operates using notifications: open stream/handle → initiate workload → wait for completion notification.
+For hybrid model:
 
-4. **Configurable parameters**
-   - Read/write sizes determined by application needs per workload.
-   - Object keys follow a prototype naming scheme; future updates will support production-ready schemes without redesigning the I/O layer.
-   - Resource utilization constrained via configurable registry/platform settings ensuring adaptability within environment limits.
+- Introduce `ObjectStoreIOMgr`, a userspace daemon managing object store IO per dataslice alongside existing `diskDrv`.
+
+Responsibilities:
+   - Handle IO requests from NPS jobs targeting either block or object store based on table metadata.
+   - Manage multiple streams concurrently with WLM priorities & Short Query Bias support.
+   - Support S3 API initially; Azure Blob planned next.
+   - Provide additional APIs like delete/list objects specific to object stores.
+   - Handle runtime errors gracefully; manage concurrency limits; support larger objects up to 1MB size.
+
+Configuration parameters specific to COS are loaded at startup (`nzstart`) requiring restart upon changes.
+
+### Data Placement Manager (DPM)
+{: #dataplacemgr}
+
+The DPM manages metadata such as mdLog, zone maps, grooming tasks etc., currently designed exclusively for block devices divided into Core partition (metadata) and Part_A partition (user data).
+
+Planned changes include:
+
+| Feature                         | Description                                                                                  |
+|---------------------------------|----------------------------------------------------------------------------------------------|
+| Separate DPM instances           | Independent handling of metadata/storage management for block vs. object stores              |
+| Object Naming                   | Use path format: `S3Bucket/InstanceId/UUID/dsId/tableId/ObjectSerial`                         |
+| Deleting Objects               | Implement asynchronous deletion of obsolete objects generated by truncate/drop/groom actions |
+| Metadata Log Changes            | Remove fixed core partition size limit; allow appending records; handle larger objects       |
+| ExtMap Adjustments             | Move from per-slice sequence IDs to per-table sequence IDs                                   |
+| Modify Truncate/Drop/Groom      | Adapt these operations for hybrid model without loss of functionality                        |
+
+*Note:* Some advanced features like TxID-based naming, per-table zone maps/DPM loading deferred beyond MVP due to complexity.
+
+## Other Considerations
+{: #othercons}
+
+### Upgrade/Downgrade compatibility
+{: #upgrdcomp}
+
+Support adding COS buckets during upgrades seamlessly. Downgrading after enabling COS is disabled due to incompatibility risks related to new metadata formats.
+
+### Snapshot support limitations
+{: #snapshotsprtlim}
+
+Cloud providers do not natively snapshot Object Stores like EBS volumes. Investigations ongoing around TxID-based naming schemes enabling point-in-time snapshots via metadata versioning.
+
+### Bucket types and capabilities
+{: #bktcap}
+
+MVP targets standard AWS S3 Standard buckets. Future research planned into leveraging specialized buckets offering append capabilities or other optimizations.
+
+### Configurable object sizes
+{: #configobjsales}
+
+Page sizes configurable at system initialization among `[128KB,256KB,512KB,1MB]`. Larger pages improve throughput but may reduce zone map filtering efficiency depending on record width distribution.
+
+## Features deferred beyond MVP release
+{: #featuremvprel}
+
+These features require further research or resource allocation before inclusion:
+
+| Feature                              | Reason / Notes                                         |
+|------------------------------------|-------------------------------------------------------|
+| In-memory caching tier              | Potential performance boost                            |
+| Full write-back persistent cache   | NVMe ephemeral disks insufficient                      |
+| Groom operation migrating tables   | Complexity in live migration                           |
+| Per-table Zone Maps & ExtMaps       | Memory optimization benefits                           |
+| Dynamic scan list submission        | Reduce large scan list compilation latency            |
+| TxID-based multi-versioned naming   | Enables efficient rollback/snapshot                    |
 
 ---
 
-## Design specification
-{: #design_spec}
+# Summary Table of Supported Commands Examples
+{: #summrycommand}
 
-### Architecture components
-{: #arch_comp}
+```sql
+-- Create table using Object Storage
+CREATE TABLE sales_data (
+    id INT,
+    amount DECIMAL(10,2)
+) WITH STORAGE_TYPE AS OBJECT;
 
-#### AWS SDK Integration
-{: #awssdkint}
+-- Create database defaulting tables on Block Storage
+CREATE DATABASE analytics_db WITH STORAGE_TYPE AS BLOCK;
 
-- Uses AWS SDK for C++ APIs to interact with S3-compatible object stores.
+-- Change default database-level storage type
+ALTER DATABASE analytics_db SET STORAGE_TYPE = 'OBJECT';
+```
 
-#### Caching layer
-{: #cachinglayer}
+*Storage type cannot be changed directly on populated tables.*
 
-- Supports local caching typically on NVMe SSDs or equivalent fast local media (detailed separately).
+# Glossary
+{: #glossary}
 
-#### Data slice process model
-{: #scheduling_subsystems}
+**SPU:** Slice Processing Unit — compute node processing dataslices
+**NPS:** Netezza Processing Server — core engine managing queries/storage
+**COS:** Cloud Object Storage — scalable persistent cloud file/object service
+**DPM:** Data Placement Manager — component managing physical layout & metadata
+**mdLog:** Metadata log storing snapshots & updates about stored pages
 
-- One long-lived process manages each "data slice" responsible for handling all associated I/O requests efficiently:
-
-    - Minimizes latency,
-    - Maximizes concurrency,
-    - Optimizes throughput,
-    - Conserves CPU/memory/network/storage resources wherever possible.
-
-#### Scheduling subsystems
-{: #scheduling_subsystems}
-
-Each data slice includes two schedulers:
-1. CBS Scheduler – manages readahead buffering and memory backpressure.
-2. DSI Scheduler – handles short-query bias prioritization, workload management (WLM), ordering constraints among requests.
-
-Once scheduled, requests are forwarded promptly to the I/O manager process which issues them immediately and notifies completion early.
-
-### Resource management strategies
-{: #resrce_strgies}
-
-| Resource | Strategy |
-| -------- | -------- |
-| Memory | Preallocated based on max expected concurrency; tunable via platform settings; applies graceful backpressure when demand exceeds capacity |
-| CPU    | Efficient use via asynchronous APIs; uses Linux AIO when caching enabled; potential future io_uring support planned |
-| Network | Bandwidth optimized through persistent caching minimizing repeated reads from remote stores |
-| Storage Capacity | All pages compressed before persistence outside this layer |
-
-
-### Cache I/O behavior
-{: #cacheiobeh}
-
-Caching employs asynchronous batched I/O designed to maximize continuous throughput while minimizing CPU overhead — avoiding bursty traffic patterns ensures smooth bandwidth utilization between cache layers and backend stores.
-
-Cache persists across restarts (`nzstop/nzstart`) or pause/resume cycles allowing effective reuse unless cache size is insufficient relative to dataset footprint.
-
-
-## Hybrid storage considerations
-{: #hybrd_strg}
-
-NPS nodes running in AWS EC2 environments have dedicated network paths:
-
-1. To EBS Block Storage volumes,
-2. To S3 Object Storage buckets,
-3. Locally-attached ephemeral SSD volumes bypassing network bottlenecks entirely,
-
-The design dedicates separate resource pools per storage type but coordinates asynchronously across these pools enabling simultaneous servicing of mixed workloads without blocking one another — maximizing aggregate throughput beyond what either could achieve alone.
-
-
-## Future enhancements & notes
-{: #fut_enh}
-
-### Dynamic bucket allocation
-{: #dynamcbktallocation}
-
-Support for adding new buckets dynamically during runtime remains undefined—implementation may require service pauses or restarts depending on chosen approach.
-
-
-### Azure cloud support
-{: #azurecldconnect}
-
-Planned integration using Azure SDK for C++ wrapping Azure Blob Storage APIs is anticipated but not yet implemented.
-
-
-## Summary: How to use the object I/O layer effectively
-{: #summry}
-
-1. Configure your application’s read/write parameters including preferred object sizes aligned with your workload profile.
-2. Utilize provided registry/platform tuning knobs to balance resource allocation against expected concurrency levels ensuring optimal performance without overcommitment.
-3. Leverage persistent local caches where possible—this reduces cloud access costs significantly while improving response times.
-4. For hybrid deployments mixing block/object storages:
-    * Understand underlying node hardware capabilities regarding network bandwidth allocations,
-    * Monitor scheduler behavior if needed adjusting WLM priorities or query biases accordingly,
-    * Plan capacity so that caches can hold working sets effectively preventing excessive remote fetches.
-
-
-By following these guidelines you can maximize stability, control costs effectively, maintain strong feature parity with traditional block-based systems—all while benefiting from modern scalable cloud-native architectures built into Netezza Performance Server’s next-generation design.
+This specification provides guidelines necessary for users configuring hybrid cloud deployments utilizing both traditional block volumes alongside cost-efficient cloud native object stores while maintaining full feature compatibility across workloads.
