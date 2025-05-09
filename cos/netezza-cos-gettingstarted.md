@@ -22,12 +22,45 @@ subcollection: netezza
 # Getting started
 {: #netezzacosgetstarted}
 
-With the introduction of Cloud Object Storage (COS) support, Netezza now offers a hybrid storage model, enabling customers to use both block storage and object storage for their workloads. This provides a cost-effective solution for managing cold and hot data, with table-level and database-level control over storage preferences.
+This guide outlines how to configure, manage, and optimize the Cloud Object Storage (COS) feature in IBM Netezza on cloud platforms.
 
-## Pre-requisites
-{: #pre-requites}
+### New Deployments
 
-- Lower storage costs with object storage compared to traditional block storage.
-- Granular control: Select storage type at the table or database level.
-- Seamless integration with your existing Netezza cloud deployment.
-- Improved scalability and flexibility.
+- COS buckets will be provisioned automatically and configured during system initialization.
+
+### Existing Deployments
+
+- COS can be enabled during upgrade to a supported NPS version.
+- Existing tables can be migrated using CTAS.
+
+### Configuring COS Access
+
+Options include:
+
+- **IAM roles**
+- **Credential profiles**
+- **Explicit bucket policies**
+
+## Prerequisites and System Requirements
+{: #pre-requites-sysreq}
+
+## Supported Platforms
+
+IBM Netezza Performance Server (NPS) on:
+
+- NzSaaS (Netezza as a Service)
+- BYOC/CVPC (Bring Your Own Cloud / Customer-Provided VPC)
+
+### Minimum Version
+
+- COS support requires NPS version X.X.X or later.
+
+### Cloud Providers
+
+- **AWS S3** (Standard bucket type required)
+- **Azure Blob Storage** (support planned)
+
+### Required Permissions
+
+- SPUs must have **read and write access** to the COS bucket.
+- **IAM roles**, **bucket policies**, or **credentials** must be properly configured.

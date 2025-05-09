@@ -22,4 +22,7 @@ subcollection: netezza
 # Compatibility and upgrade considerations
 {: #netezzacompatibility}
 
-With the introduction of Cloud Object Storage (COS) support, Netezza now offers a hybrid storage model, enabling customers to use both block storage and object storage for their workloads. This provides a cost-effective solution for managing cold and hot data, with table-level and database-level control over storage preferences.
+The Object Storage (COS) feature is designed to minimize upgrade and downgrade impacts by allowing existing systems to support object storage without disruption. Customers can add COS bucket configurations seamlessly when upgrading to a version that supports this feature. However, once object storage is in use, downgrading to versions lacking COS support will be disabled to prevent incompatibility issues.
+
+Future enhancements to DPM metadata and object naming conventions may require changes to upgrade and downgrade processes.
+{: note}
