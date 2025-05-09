@@ -35,11 +35,7 @@ This guide outlines how to configure, manage, and optimize the Cloud Object Stor
 
 ### Configuring COS Access
 
-Options include:
-
-- **IAM roles**
-- **Credential profiles**
-- **Explicit bucket policies**
+`<<needs data>>`
 
 ## Prerequisites and System Requirements
 {: #pre-requites-sysreq}
@@ -63,4 +59,3 @@ IBM Netezza Performance Server (NPS) on:
 ### Required Permissions
 
 - SPUs must have **read and write access** to the COS bucket.
-- **IAM roles**, **bucket policies**, or **credentials** must be properly configured.

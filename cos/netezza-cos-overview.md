@@ -25,9 +25,25 @@ subcollection: netezza
 With the introduction of Cloud Object Storage (COS) support, Netezza now offers a hybrid storage model, enabling customers to use both block storage and object storage for their workloads. This provides a cost-effective solution for managing cold and hot data, with table-level and database-level control over storage preferences.
 
 ## Key benefits
-{: #key_benefits}
+{: #cos_key_benefits}
 
-- Lower storage costs with object storage compared to traditional block storage.
-- Granular control: Select storage type at the table or database level.
-- Seamless integration with your existing Netezza cloud deployment.
-- Improved scalability and flexibility.
+Migrating to COS offers several advantages that enhance cost-efficiency, scalability, and system flexibility:
+
+### 1. Lower Storage Costs
+
+- COS is significantly more cost-effective than block storage for storing large volumes of cold or infrequently accessed data.
+- Ideal for archival or historical data that doesn’t require high-performance access.
+
+### 2. Scalability
+
+- COS provides virtually unlimited storage capacity without the need for complex provisioning.
+- Automatically scales with your data, removing storage limits that may exist with block devices.
+
+### 3. Hybrid Storage
+
+- Can configure databases or tables to use COS or block storage depending on performance or cost needs. This allows you to specify where your hot data and cold data will be stored.
+
+### 4. Improved Read Performance via Caching
+
+- COS integrates with SPU read caching to reduce latency and cloud I/O charges for frequently accessed data.
+- Combines the cost benefits of COS with near-local read performance.
