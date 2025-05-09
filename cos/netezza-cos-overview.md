@@ -42,8 +42,3 @@ Migrating to COS offers several advantages that enhance cost-efficiency, scalabi
 ### 3. Hybrid Storage
 
 - Can configure databases or tables to use COS or block storage depending on performance or cost needs. This allows you to specify where your hot data and cold data will be stored.
-
-### 4. Improved Read Performance via Caching
-
-- COS integrates with SPU read caching to reduce latency and cloud I/O charges for frequently accessed data.
-- Combines the cost benefits of COS with near-local read performance.
