@@ -76,8 +76,7 @@ toc:
           label: Netezza cloud object storage
           topics:
           - cos/netezza-cos-overview.md
-          - cos/netezza-cos-keybenifits.md
-          - cos/netezza-cos-prerequisite.md
+          - cos/netezza-cos-gettingstarted.md
           - cos/netezza-cos-sql.md
           - cos/netezza-cos-cmd.md
           - cos/netezza-cos-objstrge.md
