@@ -397,7 +397,7 @@ No, once storage has been scaled up, it cannot be scaled down.
 Currently the recommended option, as other methods are still under development.
 
 **Azure AD:**
-Note that Azure AD cannot be used if NFA (Network Firewall Access) is enabled.
+Note that Azure AD cannot be used if MFA (Multi-Factor Authentication) is enabled.
 
 **Microsoft-provided OIDC:**
 Available as an alternative authentication method.
