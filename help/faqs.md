@@ -395,8 +395,10 @@ No, once storage has been scaled up, it cannot be scaled down.
 
 **Built-in LDAP:**
 Currently the recommended option, as other methods are still under development.
+
 **Azure AD:**
 Note that Azure AD cannot be used if NFA (Network Firewall Access) is enabled.
+
 **Microsoft-provided OIDC:**
 Available as an alternative authentication method.
 
@@ -431,5 +433,4 @@ Global Restore alone may not be enough. Running the above update query ensures p
 
 **Design-wise:** The configuration approach is essentially the same.
 
-**Commands:** Some commands differ slightly between NZSaaS and On-Premise environments.
-If you have further questions or need assistance with setup, please contact support.
+**Commands:** Some commands differ slightly between NZSaaS and on-premise environments.
