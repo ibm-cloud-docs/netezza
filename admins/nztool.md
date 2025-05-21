@@ -536,31 +536,26 @@ These commands allow running various `nz` commands on the target system:
 | `perms`  | Get and set permissions                 |
 | `scale`  | Scale NPS compute and/or storage       |
 
-### **Setup command**
+### Setup command**
 {: #setup_cmds}
 
-```table
-| **Command**  | **Description**                                      |
+| Command  | Description                                      |
 |--------------|------------------------------------------------------|
 | setup-hms    | Setup HMS connection for lakehouse integration       |
-```
 
-### **Miscellaneous commands**
+### Miscellaneous commands**
 {: #misc_cmds}
 
-```markdown
-| **Commands**  | **Description**                                                  |
+| Commands  | Description                                                  |
 |--------------|------------------------------------------------------------------|
 | version      | Show the current version of the NZ client                        |
 | install      | Install symlinks for supported NZ client commands                |
 | awsiam       | AWS IAM authenticator setup                                      |
-```
 
-### **Direct NZ host commnds**
+### Direct NZ host commnds**
 {: #nz_host_calls}
 
-```markdown
-| **Commands**   | **Description**              |
+| Commands   | Description              |
 |---------------|------------------------------|
 | nzbackup      | Call nzbackup tool           |
 | nzrestore     | Call nzrestore tool          |
@@ -572,7 +567,6 @@ These commands allow running various `nz` commands on the target system:
 | nzrev         | Call nzrev tool              |
 | nzstats       | Call nzstats tool            |
 | nzsession     | Call nzsession tool          |
-```
 
 ## Timezone management
 {: #timezne_mngemnt}
