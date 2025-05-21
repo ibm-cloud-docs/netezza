@@ -209,6 +209,11 @@ toc:
           label: Security
           topics:
           - security/security_compliance.md
+          - topicgroup:
+              label: Security compliance
+              topics:
+              - security/sec_compl_overview.md
+              - security/nps_byoc.md          
           - security/architecture-workload-isolation.md
           - security/endpoints.md
           - security/encryption.md
