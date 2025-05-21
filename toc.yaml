@@ -208,7 +208,6 @@ toc:
       - topicgroup:
           label: Security
           topics:
-          - security/security_compliance.md
           - topicgroup:
               label: Security compliance
               topics:
