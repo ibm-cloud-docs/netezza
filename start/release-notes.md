@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-26"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,22 @@ subcollection: netezza
 
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 29 May 2025 - 11.2.3.6
+{: #may2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfmayb2025}
+
+IBM Netezza JDBC driver update
+
+:   The IBM Netezza JDBC driver now includes an upgraded Java Runtime Environment (JRE) version 15.0.2. This update enables support for Windows-integrated Kerberos ticket cache authentication, enhancing security and compatibility for enterprise environments..
+
+### Components
+{: #compmay2025}
+
+- `nzcli` version: 11.2.3.6
 
 ## 30 April 2025 - 11.2.3.5
 {: #apr2025}
