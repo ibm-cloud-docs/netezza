@@ -55,6 +55,10 @@
       "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
       "tiles": [
           {
+              "date": "29 May 2025",
+              "title": "Database Assistant is now generally available on AWS and Azure, and the Netezza JDBC driver has been updated with enhanced security through JRE 15.0.2 and Kerberos support."
+          },
+          {
               "date": "30 April 2025",
               "title": "Introduced connection history to easily track all your successful and failed connections with detailed reasons for any failures."
           },
@@ -64,7 +68,7 @@
           },
           {
               "date": "17 January 2025",
-              "title": "Introduced the Netezza Database Assistant chatbot, a new AI-powered assistant."
+              "title": "Introduced the Netezza Database Assistant chatbot for AWS, a new AI-powered assistant."
           },
           {
               "date": "22 November 2024",
