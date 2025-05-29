@@ -31,9 +31,13 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmayb2025}
 
+Database Assistant for Azure and AWS
+
+:   Announcing the general availability of the Netezza Database Assistant chatbot across AWS and Azure. Powered by IBM watsonx, this AI-driven assistant, originally introduced in an earlier release is now fully available. It delivers intelligent, conversational support to help streamline and simplify database operations. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
+
 IBM Netezza JDBC driver update
 
-:   The IBM Netezza JDBC driver now includes an upgraded Java Runtime Environment (JRE) version 15.0.2. This update enables support for Windows-integrated Kerberos ticket cache authentication, enhancing security and compatibility for enterprise environments..
+:   The IBM Netezza JDBC driver now includes an upgraded Java Runtime Environment (JRE) version 15.0.2. This update enables support for Windows-integrated Kerberos ticket cache authentication, enhancing security and compatibility for enterprise environments.
 
 ### Components
 {: #compmay2025}
@@ -94,8 +98,8 @@ Recent queries
 ### New features
 {: #nfnov2024}
 
-Database assistant
-:   Introducing the Netezza Database Assistant chatbot, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
+Database assistant for AWS
+:   Introducing the Netezza Database Assistant chatbot for AWS cluster, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
 
 ## 22 November 2024 - 11.2.3.3
 {: #nov2024}
