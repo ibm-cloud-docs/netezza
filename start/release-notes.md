@@ -39,6 +39,13 @@ IBM Netezza JDBC driver update
 
 :   The IBM Netezza JDBC driver now includes an upgraded Java Runtime Environment (JRE) version 15.0.2. This update enables support for Windows-integrated Kerberos ticket cache authentication, enhancing security and compatibility for enterprise environments.
 
+### Fixes
+{: #fixesmay2025}
+
+- Added support for customizable time and threshold settings in nzvacuumcat.conf to improve the flexibility and reliability of lazy vacuum operations.
+- Resolved issues where vacuum and reindex tasks were frequently skipped due to continuous query activity.
+- Ensured periodic cleanup of system and global database entries to reduce dead space and improve overall maintenance efficiency.
+
 ### Components
 {: #compmay2025}
 
