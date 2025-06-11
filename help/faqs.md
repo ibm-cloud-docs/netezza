@@ -71,11 +71,11 @@ To migrate your users from OnPrem LDAP to NPSaaS and enable an external authenti
 1. Update the `USEAUTH` field for the newly added users by running the following query:
 
    ```sql
-   UPDATE table_name 
-   SET use_auth= new_value 
-   WHERE usename IN ( 
-      SELECT username 
-      FROM table_name 
+   UPDATE table_name
+   SET use_auth= new_value
+   WHERE usename IN (
+      SELECT username
+      FROM table_name
       WHERE CREATEDATE > <O/P captured in step 4b>
    );
 
@@ -386,3 +386,51 @@ No, once you scale up from NC-START to NC0, you cannot revert to NC-START.
 {: support}
 
 No, once storage has been scaled up, it cannot be scaled down.
+
+
+##  What options are available to enable SAML authentication?
+{: #saml-opt-auth}
+{: faq}
+{: support}
+
+**Built-in LDAP:**
+Currently the recommended option, as other methods are still under development.
+
+**Azure AD:**
+Note that Azure AD cannot be used if MFA (Multi-Factor Authentication) is enabled.
+
+**Microsoft-provided OIDC:**
+Available as an alternative authentication method.
+
+## Is running an update query required for enabling SAML authentication?
+{: #running-saml-auth}
+{: faq}
+{: support}
+
+Yes, you need to run the following update query to modify user authentication settings:
+
+```sql
+UPDATE _t_user
+SET use_auth = new_value
+WHERE usename IN (
+    SELECT username
+    FROM _t_user
+    WHERE CREATEDATE > <O/P captured in step 4b>
+);
+```
+
+## Is Global restore sufficient for migrating user data, or are additional steps needed?
+{: #glob-rest}
+{: faq}
+{: support}
+
+Global Restore alone may not be enough. Running the above update query ensures proper migration of user authentication data after restore.
+
+## Is configuring LDAP on NZSaaS different from On-Premise?
+{: #conf-nzaas}
+{: faq}
+{: support}
+
+**Design-wise:** The configuration approach is essentially the same.
+
+**Commands:** Some commands differ slightly between NZSaaS and on-premise environments.

@@ -17,8 +17,8 @@ subcollection: netezza
 {:important: .important}
 {:note: .note}
 
-# Security and compliance
-{: #security_compliance}
+# Overview
+{: #security_compliance_overview}
 
 {{site.data.keyword.netezza_full}} ensures that your data is secured and protected by adhering to the following security and compliance standards.
 

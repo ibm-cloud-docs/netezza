@@ -50,9 +50,10 @@ Ensure to copy the `Value`, not the `Secret ID`.
 {: #couan}
 
 1. Login to Netezza UI as a user who is part of the administrative group.
-2. Select `IdPconfiguration` topic from the left pane.
-3. Enable `Azure OIDC` configuration.
-4. Add `Client ID`, `Tenant ID`, `Client Secret` and click the `Save` button.
+2. Go to `Settings` tab.
+3. Click on `OIDC` to enable `OIDC` authentication.
+4. Enable `Azure OIDC` configuration.
+5. Add `Client ID`, `Tenant ID`, `Client Secret` and click the `Save` button.
 
 ## Configure redirect URI on Azure IdP
 {: #cruai}

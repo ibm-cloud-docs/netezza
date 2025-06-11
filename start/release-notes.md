@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-29"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,33 @@ subcollection: netezza
 
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 29 May 2025 - 11.2.3.6
+{: #may2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfmayb2025}
+
+Database Assistant for Azure and AWS
+
+:   Announcing the general availability of the Netezza Database Assistant chatbot across AWS and Azure. Powered by IBM watsonx, this AI-driven assistant, originally introduced in an earlier release is now fully available. It delivers intelligent, conversational support to help streamline and simplify database operations. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
+
+IBM Netezza JDBC driver update
+
+:   The IBM Netezza JDBC driver now includes an upgraded Java Runtime Environment (JRE) version 15.0.2. This update enables support for Windows-integrated Kerberos ticket cache authentication, enhancing security and compatibility for enterprise environments.
+
+### Fixes
+{: #fixesmay2025}
+
+- Added support for customizable time and threshold settings in `nzvacuumcat.conf` to improve the flexibility and reliability of lazy vacuum operations.
+- Resolved issues where vacuum and reindex tasks were frequently skipped due to continuous query activity.
+- Ensured periodic cleanup of system and global database entries to reduce dead space and improve overall maintenance efficiency.
+
+### Components
+{: #compmay2025}
+
+- `nzcli` version: 11.2.3.6
 
 ## 30 April 2025 - 11.2.3.5
 {: #apr2025}
@@ -78,8 +105,8 @@ Recent queries
 ### New features
 {: #nfnov2024}
 
-Database assistant
-:   Introducing the Netezza Database Assistant chatbot, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
+Database assistant for AWS
+:   Introducing the Netezza Database Assistant chatbot for AWS cluster, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
 
 ## 22 November 2024 - 11.2.3.3
 {: #nov2024}

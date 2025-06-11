@@ -493,3 +493,82 @@ For more information about commands, see [the command-line interface](https://ww
    - **IBMIAM Users**: Usernames are case-sensitive.
 
       Example - `sample_user@ibm.com` and `SAMPLE_USER@ibm.com` are treated differently.
+
+
+## NZ Command line tool - help
+{: #nclt_help}
+
+A secure and flexible client solution for accessing Netezza in cloud environments.
+
+## Sub-commands
+{: #sub_cmds}
+
+| Command  | Description                                      |
+|----------|------------------------------------------------|
+| `auto-pr` | List and show details of Auto Pause/Resume mechanism |
+
+## High-level NZ commands
+{: #high_lev_cmds}
+
+| Commands      | Description                          |
+|--------------|------------------------------------|
+| `bnr`        | Backup and restore operations       |
+| `nzprogress` | Show all plans currently in progress|
+
+## Run other NZ commands
+{: #other_cmds}
+
+These commands allow running various `nz` commands on the target system:
+
+| Commands           | Description                                                                                   |
+|-------------------|-----------------------------------------------------------------------------------------------|
+| `ops`             | Run devops dedicated commands                                                                |
+| `pauseresume`     | Pause or Resume NPS                                                                           |
+| `run`             | Run any allowed nz command synchronously (passes -u, -pw)                                    |
+| `run-async`       | Run any allowed nz command asynchronously                                                    |
+| `run-show-progress` | Run any allowed nz command showing immediate progress                                        |
+
+## Permission and scaling commands
+{: #permi_cmds}
+
+| Command  | Description                              |
+|----------|----------------------------------------|
+| `perms`  | Get and set permissions                 |
+| `scale`  | Scale NPS compute and/or storage       |
+
+### Setup command
+{: #setup_cmds}
+
+| Command  | Description                                      |
+|--------------|------------------------------------------------------|
+| setup-hms    | Setup HMS connection for lakehouse integration       |
+
+### Miscellaneous commands
+{: #misc_cmds}
+
+| Commands  | Description                                                  |
+|--------------|------------------------------------------------------------------|
+| version      | Show the current version of the NZ client                        |
+| install      | Install symlinks for supported NZ client commands                |
+| awsiam       | AWS IAM authenticator setup                                      |
+
+### Direct NZ host commnds
+{: #nz_host_calls}
+
+| Commands   | Description              |
+|---------------|------------------------------|
+| nzbackup      | Call nzbackup tool           |
+| nzrestore     | Call nzrestore tool          |
+| nzsystem      | Call nzsystem tool           |
+| nzds          | Call nzds tool               |
+| nzhw          | Call nzhw tool               |
+| nzstate       | Call nzstate tool            |
+| nzbatchbnr    | Call nzbatchbnr tool         |
+| nzrev         | Call nzrev tool              |
+| nzstats       | Call nzstats tool            |
+| nzsession     | Call nzsession tool          |
+
+## Timezone management
+{: #timezne_mngemnt}
+
+- **timezone**: List or set timezone on NPS host

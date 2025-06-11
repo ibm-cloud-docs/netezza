@@ -72,6 +72,15 @@ toc:
           label: Netezza dbt adaptor
           topics:
           - nz_dbt/getting_start_nzdbt.md
+    #   - topicgroup:
+    #       label: Netezza cloud object storage
+    #       topics:
+    #       - cos/netezza-cos-overview.md
+    #       - cos/netezza-cos-gettingstarted.md
+    #       - cos/netezza-cos-sql.md
+    #       - cos/netezza-cos-cmd.md
+    #       - cos/netezza-cos-objstrge.md
+    #       - cos/netezza-cos-compatibility.md
   - navgroup:
       id: howto
       topics:
@@ -199,7 +208,11 @@ toc:
       - topicgroup:
           label: Security
           topics:
-          - security/security_compliance.md
+          - topicgroup:
+              label: Security compliance
+              topics:
+              - security/sec_compl_overview.md
+            #   - security/nps_byoc.md
           - security/architecture-workload-isolation.md
           - security/endpoints.md
           - security/encryption.md
