@@ -42,7 +42,7 @@ IBM Netezza JDBC driver update
 ### Fixes
 {: #fixesmay2025}
 
-- Added support for customizable time and threshold settings in `nzvacuumcat.conf` to improve the flexibility and reliability of lazy vacuum operations.
+- Improved lazy vacuum operations with internal support for configurable time and threshold settings in `nzvacuumcat.conf`.
 - Resolved issues where vacuum and reindex tasks were frequently skipped due to continuous query activity.
 - Ensured periodic cleanup of system and global database entries to reduce dead space and improve overall maintenance efficiency.
 
