@@ -24,26 +24,6 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 23 Jun 2025 - 11.3.0.0
-{: #jun2025}
-{: release-note}
-
-### New features and enhancements
-{: #nfjunb2025}
-
-Netezza SaaS BYOC (Bring Your Own Cloud) Deployment model
-
-:   Introducing Netezza SaaS BYOC a cloud-native, high-performance data warehouse built on Netezza architecture, now deployable directly in your own AWS account. For more information, see [BYOC](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=netezza-performance-server-byoc).
-
-### Fixes
-{: #fixesjun2025}
-
-
-### Components
-{: #compjun2025}
-
-- `nzcli` version: 11.3.0.0
-
 ## 29 May 2025 - 11.2.3.6
 {: #may2025}
 {: release-note}
