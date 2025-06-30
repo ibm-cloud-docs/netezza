@@ -58,15 +58,14 @@ This URI must be registered in the Azure IdP to enable successful redirection du
 ### 3. Set the `NZREST` environment variable
 {: #set-env-var}
 
-1. Open the `System Properties` window by clicking **Edit** the system environment variables from the Start menu or search bar.
-2. In the `System Properties` window, click the **Environment Variables** button.
-4. Under User variables, click New to create a new variable:
+1. Open the **System Properties** window by clicking **Edit** the system environment variables from the Start menu or search bar.
+2. In the **System Properties** window, click the **Environment Variables** button.
+4. Under **User variables**, click **New** to create a new variable:
     ```
     Variable name: NZREST
     Variable value: <public-url-of-nzrest-service>
     ```
-    To edit this variable later, select it and click Edit.
-    {: note}
+    To edit this variable later, select it and click **Edit**.
 4. Click **Ok** to save the changes.
 
 The ODBC UI will remain unresponsive until authentication either succeeds or times out. Even if the browser is closed or authentication fails, the UI will stay frozen until the timeout period ends.
