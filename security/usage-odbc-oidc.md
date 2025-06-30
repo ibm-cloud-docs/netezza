@@ -62,7 +62,7 @@ This URI must be registered in the Azure IdP to enable successful redirection du
 2. In the `System Properties` window, click the **Environment Variables** button.
 3. In the Environment Variables window, look under **User Variables** and find the variable you want to edit.
 4. Select the variable and click **Edit**.
-5. In the **Edit User Variable** window, modify the **Variable value**.  (e.g., Variable name: NZREST, Variable value: <public-url-of-nzrest-service>).
+5. In the **Edit User Variable** window, modify the **Variable value**.  (e.g., Variable name: NZREST, Variable value: `<public-url-of-nzrest-service>`).
 6. Click **Ok** to save the changes.
 
 ## How to authenticate Netezza Performance Server with OIDC
