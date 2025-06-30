@@ -30,7 +30,7 @@ Configure and use OIDC authentication with an ODBC client to connect to Netezza 
 ## Configuration steps for the OIDC ODBC driver
 {: #conf-oidc-odbc}
 
-### 1. Select OIDC as the Authentication Mode
+### 1. Select OIDC as the authentication mode
 
 Provide the following details:
 
@@ -43,7 +43,7 @@ Provide the following details:
   - **Valid Range**: 1 to 9 minutes  
   - If the user does not authenticate within this time, the process will time out and fail.
 
-### 2. Add Redirect URI to Azure Identity Provider (IdP)
+### 2. Add redirect URI to Azure Identity Provider (IdP)
 
 Ensure the following redirect URI is added to your Azure IdP configuration:
 
@@ -51,10 +51,10 @@ Ensure the following redirect URI is added to your Azure IdP configuration:
 http://localhost:8888/callback
 ```
 
-This URI must be registered in the Azure IdP to enable successful redirection during authentication.
+This URI must be registered in the Azure IdP to enable successful redirection during authentication. For more information, see [Configure redirect URI on Azure IdP](/docs/netezza?topic=netezza-oidc-docs#cruai).
 {: note}
 
-### 3. Set the `NZREST` Environment Variable
+### 3. Set the `NZREST` environment variable
 
 Define the public URL of the `nzrest` service as the value of the `NZREST` environment variable.
 
@@ -64,13 +64,12 @@ export NZREST=<public-url-of-nzrest-service>
 
 Replace `<public-url-of-nzrest-service>` with the actual URL.
 
-## How to Authenticate Netezza Performance Server with OIDC
+## How to authenticate Netezza Performance Server with OIDC
 {: #auth-nps-oidc}
 
 ### 1. Initiate the token request
 
-After entering the required parameters in the ODBC driver, click the **Get Token** button.  
-This action will launch your default web browser and open the authorization URL.
+- Click the **Get Token** button, after entering the required parameters in the ODBC driver. This action will launch your default web browser and open the authorization URL.
 
 ### 2. Authenticate via browser
 
@@ -89,14 +88,13 @@ Ensure that the user account used for browser-based authentication is registered
 
 You can register the OIDC user using either of the following methods:
 
-- Configure Azure OIDC authentication using the Netezza UI
-- Configure Azure OIDC authentication using the command-line
+- [Configure Azure OIDC authentication using the Netezza UI](/docs/netezza?topic=netezza-enable_oidciamauth#setting_oidc_wc)
+- [Configure Azure OIDC authentication using the command-line](/docs/netezza?topic=netezza-enable_oidciamauth#oidcmprocedure)
 
 ### 4. Test the connection
 
 Click **Test Connection** in the driver to verify connectivity to NPS.  
 Once the connection is successful, the same DSN can be reused to integrate Netezza with other tools.
 
-After successful OIDC authentication, the user receives a 24-hour password.  
-This password is automatically filled in the driver, enabling direct connection to Netezza. This feature supports **Single Sign-On (SSO)**.
+After successful OIDC authentication, the user receives a 24-hour password. This password is automatically filled in the driver, enabling direct connection to Netezza. This feature supports **Single Sign-On (SSO)**.
 {: note}
