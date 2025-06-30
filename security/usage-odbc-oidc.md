@@ -58,12 +58,19 @@ This URI must be registered in the Azure IdP to enable successful redirection du
 ### 3. Set the `NZREST` environment variable
 {: #set-env-var}
 
-1. Click on **Edit** the system environment variables.
+1. Open the `System Properties` window by clicking **Edit** the system environment variables from the Start menu or search bar.
 2. In the `System Properties` window, click the **Environment Variables** button.
-3. In the Environment Variables window, look under **User Variables** and find the variable you want to edit.
-4. Select the variable and click **Edit**.
-5. In the **Edit User Variable** window, modify the **Variable value**.  (e.g., Variable name: NZREST, Variable value: `<public-url-of-nzrest-service>`).
-6. Click **Ok** to save the changes.
+4. Under User variables, click New to create a new variable:
+    ```
+    Variable name: NZREST
+    Variable value: <public-url-of-nzrest-service>
+    ```
+    To edit this variable later, select it and click Edit.
+    {: note}
+4. Click **Ok** to save the changes.
+
+The ODBC UI will remain unresponsive until authentication either succeeds or times out. Even if the browser is closed or authentication fails, the UI will stay frozen until the timeout period ends.
+{: note}
 
 ## How to authenticate Netezza Performance Server with OIDC
 {: #auth-nps-oidc}
