@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-05-29"
+lastupdated: "2025-06-30"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,27 @@ subcollection: netezza
 
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 3 July 2025 - 11.3.0.1
+{: #jul2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfjul2025}
+
+Netezza Iceberg Enhancements
+
+:   11.3.0.1 introduces the following enhancements
+
+- **CTAS support**: You can now create Iceberg tables using CREATE TABLE AS SELECT from Netezza or Iceberg tables.
+- **Type promotion**: Unsupported types in Netezza are automatically promoted when creating Iceberg tables.
+- **Cascade Drop**: Dropping schemas with Iceberg tables now supports the CASCADE option.
+- **Truncate support**: Use TRUNCATE TABLE to remove all data from Iceberg tables (data remains in snapshots).
+- **Delete support**: You can now delete rows from Iceberg tables using DELETE queries.
+- **Update support**: You can update rows in Iceberg tables using UPDATE queries.
+- **Table properties**: Netezza supports key Iceberg table properties for controlling read/write behavior.
+- **Show properties**: Use SHOW TBLPROPERTIES to view non-default table settings.
+For more information, see [Supported SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
 
 ## 29 May 2025 - 11.2.3.6
 {: #may2025}
