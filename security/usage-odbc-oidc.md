@@ -58,13 +58,12 @@ This URI must be registered in the Azure IdP to enable successful redirection du
 ### 3. Set the `NZREST` environment variable
 {: #set-env-var}
 
-Define the public URL of the `nzrest` service as the value of the `NZREST` environment variable.
-
-```bash
-export NZREST=<public-url-of-nzrest-service>
-```
-
-Replace `<public-url-of-nzrest-service>` with the actual URL.
+1. Click on **Edit** the system environment variables.
+2. In the `System Properties` window, click the **Environment Variables** button.
+3. In the Environment Variables window, look under **User Variables** and find the variable you want to edit.
+4. Select the variable and click **Edit**.
+5. In the **Edit User Variable** window, modify the **Variable value**.  (e.g., Variable name: NZREST, Variable value: <public-url-of-nzrest-service>).
+6. Click **Ok** to save the changes.
 
 ## How to authenticate Netezza Performance Server with OIDC
 {: #auth-nps-oidc}
