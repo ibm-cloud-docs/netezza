@@ -55,15 +55,27 @@ http://localhost:8888/callback
 This URI must be registered in the Azure IdP to enable successful redirection during authentication. For more information, see [Configure redirect URI on Azure IdP](/docs/netezza?topic=netezza-oidc-docs#cruai).
 {: note}
 
-### 3. Set the `NZREST` environment variable
+### 3. Retrieving `NZREST` endpoint information for Netezza Performance Server
+{: #retrieve_nzrest_endpt}
+
+To locate the `NZREST` API endpoint, follow these steps:
+
+1. Log in to your IBM Cloud account.
+2. From the IBM Cloud console, go to the **Resource List**.
+3. Under **Services and Software**, select **Databases**.
+4. Click on your Netezza Performance Server instance to open its **Service Instance Details** page.
+5. Scroll down to the **Public Endpoints** section.
+6. Locate the API Server information listed there.
+
+### 4. Set the `NZREST` environment variable
 {: #set-env-var}
 
 1. Open the **System Properties** window by clicking **Edit** the system environment variables from the Start menu or search bar.
 2. In the **System Properties** window, click the **Environment Variables** button.
 4. Under **User variables**, click **New** to create a new variable:
-    ```
+    ```var
     Variable name: NZREST
-    Variable value: <public-url-of-nzrest-service>
+    Variable value: <NZREST public endpoint>
     ```
     To edit this variable later, select it and click **Edit**.
 4. Click **Ok** to save the changes.
