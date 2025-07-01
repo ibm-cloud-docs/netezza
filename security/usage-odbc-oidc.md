@@ -68,9 +68,6 @@ This URI must be registered in the Azure IdP to enable successful redirection du
     To edit this variable later, select it and click **Edit**.
 4. Click **Ok** to save the changes.
 
-The ODBC UI will remain unresponsive until authentication either succeeds or times out. Even if the browser is closed or authentication fails, the UI will stay frozen until the timeout period ends.
-{: note}
-
 ## How to authenticate Netezza Performance Server with OIDC
 {: #auth-nps-oidc}
 
@@ -88,7 +85,7 @@ Once authentication is successful:
 - The token is returned to the ODBC driver.
 - The **Password** field is automatically populated with the retrieved token.
 
-The UI will remain unresponsive until authentication either succeeds or times out. Even if the browser is closed or authentication fails, the UI will stay frozen until the timeout period ends.
+The ODBC UI will remain unresponsive until authentication either succeeds or times out. Even if the browser is closed or authentication fails, the UI will stay frozen until the timeout period ends.
 {: note}
 
 ### 3. Register the OIDC user in Netezza
