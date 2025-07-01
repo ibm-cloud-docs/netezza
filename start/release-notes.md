@@ -33,6 +33,8 @@ subcollection: netezza
 
 Netezza Iceberg Enhancements
 
+:
+
 - **CTAS support**: You can now create Iceberg tables using CREATE TABLE AS SELECT from Netezza or Iceberg tables.
 - **Type promotion**: Unsupported types in Netezza are automatically promoted when creating Iceberg tables.
 - **Cascade Drop**: Dropping schemas with Iceberg tables now supports the CASCADE option.
