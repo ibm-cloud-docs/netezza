@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-06-30"
+lastupdated: "2025-07-01"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,7 +24,7 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 03 July 2025 - 11.3.0.1
+## 02 July 2025 - 11.3.0.1
 {: #jul2025}
 {: release-note}
 
@@ -44,6 +44,15 @@ Netezza Iceberg Enhancements
 - **Table properties**: Netezza supports key Iceberg table properties for controlling read/write behavior.
 - **Show properties**: Use SHOW TBLPROPERTIES to view non-default table settings.
 For more information, see [Supported SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
+
+Added support for OIDC based authentication in the Netezza ODBC driver
+
+:   You can now authenticate using OIDC when connecting to Netezza through the ODBC driver. For more information, see [Usage of ODBC driver with OIDC authentication](/docs/netezza?topic=netezza-usage-odbc-oidca).
+
+### Components
+{: #compjul2025}
+
+- `nzcli` version: 11.3.x.x
 
 ## 29 May 2025 - 11.2.3.6
 {: #may2025}
