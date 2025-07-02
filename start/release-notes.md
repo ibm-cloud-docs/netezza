@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-02"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
