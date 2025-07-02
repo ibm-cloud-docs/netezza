@@ -51,7 +51,7 @@ Added support for OIDC based authentication in the Netezza ODBC driver
 
 Enhanced Database Assistant with new analytical skills
 
-:   New skills are added to support user activity insights, data slice usage analysis, and permission visibility. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
+:   New skills are added to support user activity insights, data slice usage analysis, and permission visibility. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant#assistant-skills).
 
 ### Components
 {: #compjul2025}
