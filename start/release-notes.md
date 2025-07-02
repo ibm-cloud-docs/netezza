@@ -47,7 +47,7 @@ For more information, see [Supported SQL commands](/docs/netezza?topic=netezza-s
 
 Added support for OIDC based authentication in the Netezza ODBC driver
 
-:   You can now authenticate using OIDC when connecting to Netezza through the ODBC driver. For more information, see [Usage of ODBC driver with OIDC authentication](/docs/netezza?topic=netezza-usage-odbc-oidca).
+:   You can now authenticate using OIDC when connecting to Netezza through the ODBC driver. For more information, see [Usage of ODBC driver with OIDC authentication](/docs/netezza?topic=netezza-usage-odbc-oidc).
 
 ### Components
 {: #compjul2025}
