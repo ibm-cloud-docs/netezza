@@ -49,10 +49,14 @@ Added support for OIDC based authentication in the Netezza ODBC driver
 
 :   You can now authenticate using OIDC when connecting to Netezza through the ODBC driver. For more information, see [Usage of ODBC driver with OIDC authentication](/docs/netezza?topic=netezza-usage-odbc-oidc).
 
+Enhanced Database Assistant with new analytical skills
+
+:   New skills are added to support user activity insights, data slice usage analysis, and permission visibility. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
+
 ### Components
 {: #compjul2025}
 
-- `nzcli` version: 11.3.x.x
+- `nzcli` version: 11.3.0.1
 
 ## 29 May 2025 - 11.2.3.6
 {: #may2025}

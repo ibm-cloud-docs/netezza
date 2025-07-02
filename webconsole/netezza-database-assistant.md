@@ -65,28 +65,35 @@ You can ask the database assistant to complete the actions listed in the followi
 Depending on the database workload, the database assistant might take some time to respond to certain prompts, such as requesting a database summary or getting details about the largest tables by storage size.
 {: note}
 
-| No | Action | Example prompts |
-|----|------------|-----------------|
-| 1 | Show Instance Summary | Show me instance summary. What is the instance uptime? |
-| 2 | List Tables | List tables for TESTDB11.SCH2. |
-| 3 | List Views | List views for TESTDB11.SCH2 |
-| 4 | List Schemas | List schemas in TESTDB11 |
-| 5 | List Databases | List databases, Show databases |
-| 6 | Show Backups | Show my backups, List backups |
-| 7 | Total Storage Utilization | What is my storage utilization? Provide details on my storage usage |
-| 8 | Show Instance State | Show instance status, Get status |
-| 9 | Show CPU Usage | What is the host cpu usage in the last 4 hours. Get cpu usage from last Monday till last Wednesday |
-| 10 | Show Memory Usage | Find out memory usage in the last 5 hours. Show memory usage in the last week |
-| 11 | Show I/O Usage | Display I/O usage for the past 12 hours. What is the IO utilization over the last two weeks |
-| 12 | Show Connections | List connections. Show connections |
-| 13 | Show Active Queries | Show inflight sql queries. List running queries |
-| 14 | Top N largest tables by storage | List top 10 tables largest tables. Provide list of largest tables by storage size |
-| 15 | Get CRN | CRN? Get CRN |
-| 16 | Get NPS hostname | What is my NPS hostname? Hostname? |
-| 17 | Show Pause/Resume History | Show pause/resume history. Fetch pause-resume history |
-| 18 | Show Scaling History | Show scaling history. Retrieve scaling history |
-| 19 | Show Smart Scaling | Retrieve scaling demand growth. Provide me scaling prediction |
-| 20 | Get System Version | What is current Netezza software version? Get my system version |
+| No | Action                                 | Example prompts                                                                 |
+|----|----------------------------------------|----------------------------------------------------------------------------------|
+| 1  | Show instance summary                  | Show me instance summary. What is the instance uptime?                          |
+| 2  | List tables                            | List tables for TESTDB11.SCH2.                                                  |
+| 3  | List views                             | List views for TESTDB11.SCH2                                                    |
+| 4  | List schemas                           | List schemas in TESTDB11                                                        |
+| 5  | List databases                         | List databases, Show databases                                                  |
+| 6  | Show backups                           | Show my backups, List backups                                                   |
+| 7  | Total storage utilization              | What is my storage utilization? Provide details on my storage usage             |
+| 8  | Show instance state                    | Show instance status, Get status                                                |
+| 9  | Show CPU usage                         | What is the host cpu usage in the last 4 hours. Get cpu usage from last Monday till last Wednesday |
+| 10 | Show memory usage                      | Find out memory usage in the last 5 hours. Show memory usage in the last week   |
+| 11 | Show I/O usage                         | Display I/O usage for the past 12 hours. What is the IO utilization over the last two weeks |
+| 12 | Show connections                       | List connections. Show connections                                              |
+| 13 | Show active queries                    | Show inflight sql queries. List running queries                                 |
+| 14 | Top N largest tables by storage        | List top 10 tables largest tables. Provide list of largest tables by storage size |
+| 15 | Get CRN                                | CRN? Get CRN                                                                     |
+| 16 | Get NPS hostname                       | What is my NPS hostname? Hostname?                                              |
+| 17 | Show pause/Resume history              | Show pause/resume history. Fetch pause-resume history                           |
+| 18 | Show scaling history                   | Show scaling history. Retrieve scaling history                                  |
+| 19 | Show smart scaling                     | Retrieve scaling demand growth. Provide me scaling prediction                   |
+| 20 | Get system version                     | What is current Netezza software version? Get my system version                 |
+| 21 | Top N users                            | Lists top N users according to longest resource consumption in a given timeframe                                      |
+| 22 | Top N queries                          | Lists top N queries according to longest resource consumption in a given timeframe                            |
+| 23 | Tables in most used dataslice          | List tables in the most used dataslice                                          |
+| 24 | All skewed tables                      | Tables with skewed distribution of data                                                          |
+| 25 | Most/Least used dataslice              | What is the most used dataslice? What is the least used dataslice?             |
+| 26 | User permissions                       | Show user permissions across all databases                                      |
+
 
 
 

@@ -55,6 +55,10 @@
       "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
       "tiles": [
           {
+              "date": "02 July 2025",
+              "title": "Introduced Iceberg enhancements for improved table operations and data management, along with new Database Assistant skills for deeper insights into user activity, query performance, data distribution, and access control."
+          },
+          {
               "date": "29 May 2025",
               "title": "Database Assistant is now generally available on AWS and Azure, and the Netezza JDBC driver has been updated with enhanced security through JRE 15.0.2 and Kerberos support."
           },
