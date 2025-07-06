@@ -35,19 +35,19 @@ Netezza Iceberg Enhancements
 
 :   11.3.0.1 introduces the following enhancements
 
-- **CTAS support**: You can now create Iceberg tables using CREATE TABLE AS SELECT from Netezza or Iceberg tables.
+- **CTAS support**: Create Iceberg tables using `CREATE TABLE AS SELECT` from Netezza or Iceberg tables.
 - **Type promotion**: Unsupported types in Netezza are automatically promoted when creating Iceberg tables.
-- **Cascade Drop**: Dropping schemas with Iceberg tables now supports the CASCADE option.
-- **Truncate support**: Use TRUNCATE TABLE to remove all data from Iceberg tables (data remains in snapshots).
-- **Delete support**: You can now delete rows from Iceberg tables using DELETE queries.
-- **Update support**: You can update rows in Iceberg tables using UPDATE queries.
+- **Cascade Drop**: Dropping schemas with Iceberg tables supports the `CASCADE` option.
+- **Truncate support**: Use `TRUNCATE TABLE` to remove all data from Iceberg tables (data remains in snapshots).
+- **Delete support**: Delete rows from Iceberg tables using `DELETE` queries.
+- **Update support**: Update rows in Iceberg tables using `UPDATE` queries.
 - **Table properties**: Netezza supports key Iceberg table properties for controlling read/write behavior.
-- **Show properties**: Use SHOW TBLPROPERTIES to view non-default table settings.
+- **Show properties**: Use `SHOW TBLPROPERTIES` to view non-default table settings.
 For more information, see [Supported SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
 
-Added support for OIDC based authentication in the Netezza ODBC driver
+OIDC authentication in the Netezza ODBC driver
 
-:   You can now authenticate using OIDC when connecting to Netezza through the ODBC driver. For more information, see [Usage of ODBC driver with OIDC authentication](/docs/netezza?topic=netezza-usage-odbc-oidc).
+:   Added support for OIDC based authentication in the Netezza ODBC driver. For more information, see [Usage of ODBC driver with OIDC authentication](/docs/netezza?topic=netezza-usage-odbc-oidc).
 
 Enhanced Database Assistant with new analytical skills
 
