@@ -125,6 +125,7 @@ toc:
               - authentication/enable_oidc_authentication.md
               - security/oidc-docs.md
               - security/usagenzclioidcauth.md
+              - security/usage-odbc-oidc.md
           - authentication/azuread_authenticating.md
           - authentication/ldap_authentication.md
           - link:
