@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-09-23"
+  years: 2025
+lastupdated: "2025-07-11"
 
 keywords: nztool
 
