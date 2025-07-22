@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-02"
+lastupdated: "2025-07-22"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,22 @@ subcollection: netezza
 
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 06 Aug 2025 - 11.3.0.2
+{: #aug2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfaug2025}
+
+Enhancement in Azure connector support
+
+:   Starting in version 11.3.0.2, the Azure connector has been enhanced to support General Purpose v2 storage accounts with the Standard performance tier. This enhancement enables users to perform backup and restore operations using GPv2 storage accounts, expanding compatibility and flexibility for Azure-based storage solutions.
+
+### Components
+{: #compaug2025}
+
+- `nzcli` version: 11.3.0.2
 
 ## 02 July 2025 - 11.3.0.1
 {: #jul2025}
