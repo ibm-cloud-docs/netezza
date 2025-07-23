@@ -169,8 +169,8 @@ toc:
          label: Monitoring and alerts
          topics:
          - nzalert/nzalert_overview.md
-         - nzalert/nzalert_az.md
          - nzalert/nzalert_aws.md
+         - nzalert/nzalert_az.md
          - nzalert/supported_eventtypes.md
          - nzalert/sql_commands.md
       - topicgroup:
