@@ -168,11 +168,11 @@ toc:
       - topicgroup:
          label: Monitoring and alerts
          topics:
-         - nazlert/nzalert_overview.md
-         - nazlert/nzalert_az.md
-         - nazlert/nzalert_aws.md
-         - nazlert/supported_eventtypes.md
-         - nazlert/sql_commands.md
+         - nzalert/nzalert_overview.md
+         - nzalert/nzalert_az.md
+         - nzalert/nzalert_aws.md
+         - nzalert/supported_eventtypes.md
+         - nzalert/sql_commands.md
       - topicgroup:
          label: Time travel and historical data
          topics:
