@@ -33,5 +33,5 @@ This guide helps NzSaaS customers enable notifications for important service-rel
 ## Configure nzalert
 {: #conf_nzalert}
 
-1. nzalert on AWS
-2. nzalert on Azure
+1. [nzalert on AWS](/docs/netezza?topic=netezza-nzalert_aws_setup)
+2. [nzalert on Azure](/docs/netezza?topic=netezza-nzalert_setup)

@@ -20,21 +20,21 @@ subcollection: netezza
 {:pre: .pre}
 {:caption: .caption}
 
-# Nzalerts on AWS – Installation guide
+# Nzalerts on AWS
 {: #nzalert_aws_setup}
 
-This guide outlines two methods to set up NZAlerts on AWS:
+This guide outlines two methods to set up nzalerts on AWS:
 
-- **ARN Method**: Uses only an SNS topic with access granted to the NZEvents AWS role.
-- **Credentials Method**: Involves creating a user, role, and credentials, with the entire setup managed by the user.
+- **ARN method**: Uses only an SNS topic with access granted to the NZEvents AWS role.
+- **Credentials method**: Involves creating a user, role, and credentials, with the entire setup managed by the user.
 
-## ARN Method
+## ARN method
 {: #nzalert_arnmethod}
 
 ### 1. Setup SNS topic
 {: #nzalert_aws_setupsns}
 
-1. Log in to your AWS account.
+1. Log in to your **AWS** account.
 2. Search for **SNS** in the AWS console.
 3. Go to **Topics** → **Create Topic**.
 4. Fill in the required details: **Type**, **Name**, and **Display Name**.
@@ -43,7 +43,7 @@ This guide outlines two methods to set up NZAlerts on AWS:
 ### 2. Get ROLE ARN
 {: #nzalert_aws_rolearn}
 
-1. Use the AWS Console or NZ-SQL CLI.
+1. Use the AWS console or `NZ-SQL` CLI.
 2. In `NZ-SQL` CLI, run:
 
    ```bash

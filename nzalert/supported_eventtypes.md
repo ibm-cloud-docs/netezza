@@ -20,10 +20,10 @@ subcollection: netezza
 {:pre: .pre}
 {:caption: .caption}
 
-# List of Event Types Supported for SaaS Customers
+# List of event types supported for SaaS customers
 {: #eventtypelist}
 
-## Supported Event Types for Notification Types: `EMAIL`, `AWS_SNS`, and `AZURE_EVENT_GRID`
+## Supported event types for notification types: `EMAIL`, `AWS_SNS`, and `AZURE_EVENT_GRID`
 {: #supported_eventtype}
 
 - `SYS_STATE_CHANGED`
@@ -44,17 +44,17 @@ subcollection: netezza
 - `BACKUP_FAILED`
 - `RESTORE_FAILED`
 
-## Example: Creating Event Rules Using SQL Syntax
+## Example: Creating event rules using SQL syntax
 {: #example_eventrule}
 
-1. Log in to `nzsql`
-1. Create Notification Method - Refer to the appropriate guide to create the notification method.
-1. Create Event Rules - Following are sample SQL event rules for different event types and notify types.
+1. Log in to `nzsql`.
+1. Create notification method - Refer to the appropriate guide to create the [notification method](/docs/netezza?topic=netezza-noti_evnt_rule).
+1. Create event rules - Following are sample SQL event rules for different event types and notify types.
 
-## Notify Type: `AWS_SNS`
+## Notify type: `AWS_SNS`
 {: #notify_type}
 
-### Event Type: `sysStateChanged`
+### Event type: `sysStateChanged`
 {: #event_type_sysstate}
 
 ```sql
@@ -69,7 +69,7 @@ event_args_expr '$previousState == online && $currentState != online'
 event_aggr_count 0;
 ```
 
-### Event Type: `hwRestarted`
+### Event type: `hwRestarted`
 {: #event_type_hwrestart}
 
 ```sql
@@ -77,14 +77,14 @@ create event rule TestRule2
 event_type 'hwRestarted'
 event_notifytype aws_sns
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - $hwType $hwId restarted at $eventTimestamp.'
+event_summary 'NPS system $HOST - $hwtype $hwId restarted at $eventTimestamp.'
 event_bodytext '$notifyMsg\n\nSPA ID: $spaId\nSPA Slot: $spaSlot\n'
 event_enable 'on'
 event_args_expr ''
 event_aggr_count 0;
 ```
 
-### Event Type: `hwDiskFull` (80% & 90%)
+### Event type: `hwDiskFull` (80% & 90%)
 {: #event_type_hwdisk}
 
 ```sql
@@ -93,7 +93,7 @@ create event rule TestRule3
 event_type 'hwDiskFull'
 event_notifytype aws_sns
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - $hwType $hwId partition id $partition is $value % full at $eventTimestamp.'
+event_summary 'NPS system $HOST - $hwtype $hwId partition id $partition is $value % full at $eventTimestamp.'
 event_bodytext '$notifyMsg\n\nSPA ID: $spaId\nSPA Slot: $spaSlot\nThreshold: $threshold\nValue: $value\n'
 event_enable 'on'
 event_args_expr '$threshold == 80 || $threshold == 85'
@@ -104,14 +104,14 @@ create event rule TestRule3
 event_type 'hwDiskFull'
 event_notifytype aws_sns
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - $hwType $hwId partition id $partition is $value % full at $eventTimestamp.'
+event_summary 'NPS system $HOST - $hwtype $hwId partition id $partition is $value % full at $eventTimestamp.'
 event_bodytext '$notifyMsg\n\nSPA ID: $spaId\nSPA Slot: $spaSlot\nThreshold: $threshold\nValue: $value\n'
 event_enable 'on'
 event_args_expr '$threshold == 90 || $threshold == 95'
 event_aggr_count 50;
 ```
 
-### Event Type: `runawayQuery`
+### Event type: `runawayQuery`
 {: #event_type_runwaway}
 
 ```sql
@@ -126,7 +126,7 @@ event_args_expr ''
 event_aggr_count 0;
 ```
 
-### Event Type: `transactionLimitEvent`
+### Event type: `transactionLimitEvent`
 {: #event_type_translimit}
 
 ```sql
@@ -147,7 +147,7 @@ Similar SQL `create event rule` examples exist for other event types like:
 - `scalingStarted`, `Completed`, `Warning`, `Rollback`
 - `backupFailed`, `restoreFailed`
 
-## Notify Type: `EMAIL`
+## Notify type: `EMAIL`
 {: #noti_type_email}
 
 Rules are identical in structure to `AWS_SNS`, except:
@@ -156,7 +156,7 @@ Rules are identical in structure to `AWS_SNS`, except:
 event_notifytype email
 ```
 
-## Notify Type: `AZURE_EVENT_GRID`
+## Notify type: `AZURE_EVENT_GRID`
 {: #noti_type_Azuregrid}
 
 Same structure as above, with:
@@ -164,10 +164,10 @@ Same structure as above, with:
 event_notifytype azure_event_grid
 ```
 
-## Event Type: `namespaceResumeWarning` for All Notify Types
+## Event type: `namespaceResumeWarning` for All Notify types
 {: #event_type_namespace}
 
-### Notify Type: `AWS_SNS`
+### Notify type: `AWS_SNS`
 {: #noti_type_awssns}
 
 ```sql
@@ -182,7 +182,7 @@ event_args_expr '$type == auto'
 event_aggr_count 0;
 ```
 
-### Notify Type: `EMAIL`
+### Notify type: `EMAIL`
 {: #noti_type_email}
 
 ```sql
@@ -197,7 +197,7 @@ event_args_expr '$type == auto'
 event_aggr_count 0;
 ```
 
-### Notify Type: `AZURE_EVENT_GRID`
+### Notify type: `AZURE_EVENT_GRID`
 {: #noti_type_azure}
 
 ```sql

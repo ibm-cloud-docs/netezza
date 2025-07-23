@@ -33,7 +33,7 @@ Your database user account must have **Manage System** privilege.
 ## Syntax
 {: #synt_sql}
 
-### Create Notification Method
+### Create notification method
 {: #create_noti_method}
 
 ```sql

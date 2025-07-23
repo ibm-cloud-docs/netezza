@@ -20,7 +20,7 @@ subcollection: netezza
 {:pre: .pre}
 {:caption: .caption}
 
-# Nzalerts on Azure – Installation guide
+# Nzalerts on Azure
 {: #nzalert_setup}
 
 This guide outlines two methods to set up **Nzalerts** on Microsoft Azure.
@@ -28,77 +28,79 @@ This guide outlines two methods to set up **Nzalerts** on Microsoft Azure.
 ## Setup options
 {: #setupoptions}
 
-### Option 1: Using IBM’s Multi-Tenant App
+### Option 1: Using IBM’s multi-tenant app
 {: #opt1}
 
-Events will be published to your Azure Event Grid topic by granting access to IBM’s multi-tenant app.
+Events will be published to your Azure event grid topic by granting access to IBM’s multi-tenant app.
 
-### Option 2: Using Access Key
+### Option 2: Using access key
 {: #opt2}
 
-Events will be published to your Azure Event Grid topic by providing the endpoint and access key.
+Events will be published to your Azure event grid topic by providing the endpoint and access key.
 
 ## A. Providing the access to IBM’s multi-tenant app:
 {: #accesstoibmtenant}
 
-### Step1: Create the Event Grid Topic:
+### Step1: Create the event grid topic:
 {: #createeventgrid}
 
-1. Login to Azure portal.
-1. Navigate to search bar and search for Event-Grid.
-1. Select “Topic" in Event-Grid. Click on “Create" to create a new topic.
-1. Fill out the details like Resource Group, Topic Name.
-1. Then click on “Review+create” to create the topic.
+1. Login to **Azure** portal.
+1. Navigate to search bar and search for `Event-Grid`.
+1. Select `Topic` in `Event-Grid`. Click on **Create** to create a new topic.
+1. Fill out the details like `Resource Group`, `Topic Name`.
+1. Then click on **Review+create** to create the topic.
 
-### Step 2: Give consent to make IBM’s multi-tenant app as SP
+### Step 2: Give consent to make IBM’s multi-tenant app as Service Principal
 {: #consentibmtenant}
 
-1. Login to the Azure Portal.
+1. Login to the **Azure** portal.
 1. Get the Directory ID of your Microsoft AD on which you need your topic to be published. Directory ID would be needing for creating the notification method.
-1. Refer the document to create the notification method. [Azure Event Grid Notification Method](https://login.microsoftonline.com/<>/oauth2/authorize?client_id=<>&response_type=code).
+1. Refer the document to create the notification method. [Azure Event Grid Notification Method](/docs/netezza?topic=netezza-noti_evnt_rule).
 1. A consent URL will be generated once you input your Directory ID. For example, see the following.
 
    ```url
    https://login.microsoftonline.com/<>/oauth2/authorize?client_id=<>&response_type=code
    ```
-1. Paste the link on the browser. Only global admins (or roles with app consent rights) can consent on behalf of the tenant. Click “Accept”. This will create a Service Principal of our app in your tenant.
 
-### Step 3: Give Publish permission
+1. Paste the link on the browser. Only global admins (or roles with app consent rights) can consent on behalf of the tenant. Click **Accept**. This will create a Service principal of our app in your tenant.
+
+### Step 3: Give publish permission
 {: #publishpermission}
 
-To get the events to be published in that topic, click the created topic and navigate to "Access Control (IAM)” on the left side.
-1. Click on "Add Role Assignment”.
-1. Choose role “Eventgrid data sender”.
-1. Assign To: User, Group or service principle
-1. Select the Multi-tenant App for which customers has Consented and then “Save”.
+To get the events to be published in that topic, click the created topic and navigate to **Access Control (IAM)** on the left side.
 
-### Step 4: Create Event rule method in NzSaas console
+1. Click on **Add Role Assignment**.
+1. Choose role **Eventgrid data sender**.
+1. Assign to: User, Group or service principle.
+1. Select the multi-tenant app for which customers has consented and then **Save**.
+
+### Step 4: Create event rule method in NzSaas console
 {: #event_ruleconsole}
 
-1. Create event Rule will take tenant id and event grid topic as input. Refer Notify Type: Azure_Event_Grid in document.
+1. Create event rule will take tenant id and event grid topic as input. Refer notify type, see [Azure_Event_Grid](/docs/netezza?topic=netezza-eventtypelist).
 
-Once the events are published to Azure Event Grid, you can configure the downstream handling based on your requirements—whether it's delivering the events via email, forwarding them to a queue, or integrating with other services.
+Once the events are published to Azure event grid, you can configure the downstream handling based on your requirements—whether it's delivering the events via email, forwarding them to a queue, or integrating with other services.
 {: note}
 
 ## B. Providing the access key:
 {: #prov_access_key}
 
-### Step 1: Create Event Grid in your account
+### Step 1: Create event grid in your account
 {: #create_event_grid}
 
-1. Login to Azure portal.
+1. Login to **Azure** portal.
 1. Navigate to search bar and search for **Event Grid**.
-1. Select `Topic` in EventGrid. Click on `Create` to create a new topic.
+1. Select `Topic` in EventGrid. Click on **Create** to create a new topic.
 1. Fill out the details like `Resource Group`, `Topic Name`.
-1. Then click on `Review+create` to create the topic.
+1. Then click on **Review+create** to create the topic.
 
 ### Step 2: Create notification method
 {: #create_notif_method}
 
-1. From the Event Grid topic:
+1. From the Event grid topic:
 
     Get the **Topic Endpoint** from the **Overview** tab.
 
     Get the **Access Key** from **Settings → Access Keys**.
 
-1. Refer to the Notification Method Document to complete the setup.
+1. Refer to the [Notification method](/docs/netezza?topic=netezza-noti_evnt_rule) to complete the setup.
