@@ -66,7 +66,7 @@ Example:
   CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME>
   TYPE AWS_SNS
   AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
-  ```
+```
 
 #### Using NPS console
 {: #using_nps_console}
@@ -263,7 +263,7 @@ Example:
     AWS_ACCESSKEY_ID 'XXXXYYYYYXXXXXXX'
 
     AWS_ACCESSKEY_SECRET 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-  ```
+```
 
 Use the `access key id` and `access key secret` created in previous step.
 {: note}
