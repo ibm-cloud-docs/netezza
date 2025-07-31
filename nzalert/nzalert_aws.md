@@ -68,7 +68,6 @@ TYPE AWS_SNS
 AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
 ```
 
-
 #### Using NPS console
 {: #using_nps_console}
 
@@ -85,7 +84,7 @@ AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
 
 1. Run `SHOW NOTIFICATION METHOD` in `nzsql` like the following.
 
-    ```bash
+    ```sql
     SHOW NOTIFICATION METHOD;
 
     NAME                     | TYPE
@@ -97,8 +96,8 @@ AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
 2. Identify the method created using the SNS ARN.
 3. In `nzsql`, run the following:
 
-   ```bash
-   show NOTIFICATION METHOD <name-of-notification-method>;
+   ```sql
+   SHOW NOTIFICATION METHOD <name-of-notification-method>;
    ```
 
 4. Copy the **AWS_ROLE_ARN** from the output and save it for later use.
@@ -253,18 +252,15 @@ See [Notification and event rule management for NPS events](/docs/netezza?topic=
 
 Example:
 
-  ```bash
-    CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME>
-    TYPE AWS_SNS
-
-    AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>'
-
-    AWS_ROLE_ARN '<YOUR_ROLE_ARN>'
-
-    AWS_ACCESSKEY_ID 'XXXXYYYYYXXXXXXX'
-
-    AWS_ACCESSKEY_SECRET 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+```sql
+  CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME>
+  TYPE AWS_SNS
+  AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>'
+  AWS_ROLE_ARN '<YOUR_ROLE_ARN>'
+  AWS_ACCESSKEY_ID 'XXXXYYYYYXXXXXXX'
+  AWS_ACCESSKEY_SECRET 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 ```
+
 
 Use the `access key id` and `access key secret` created in previous step.
 {: note}
