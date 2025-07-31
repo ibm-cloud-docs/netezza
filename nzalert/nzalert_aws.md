@@ -62,11 +62,12 @@ See [Notification and event rule management for NPS events](/docs/netezza?topic=
 
 Example:
 
-  ```bash
-  CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME>
-  TYPE AWS_SNS
-  AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
+```sql
+CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME>
+TYPE AWS_SNS
+AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
 ```
+
 
 #### Using NPS console
 {: #using_nps_console}
