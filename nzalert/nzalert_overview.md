@@ -25,13 +25,38 @@ subcollection: netezza
 
 This guide helps NzSaaS customers enable notifications for important service-related events such as:
 
-- Service scaling
+- Scaling operations
 - Pause/resume operations
-- Scheduled job failures
-- General `nzevent` alerts
+- System state change
+- Backup/restore failures
+- Dataslice full
 
-## Configure nzalert
-{: #conf_nzalert}
+Refer to the [List of event types supported for NPSaaS customers](/docs/netezza?topic=netezza-eventtypelist) for a comprehensive list of events.
 
-1. [nzalert on AWS](/docs/netezza?topic=netezza-nzalert_aws_setup)
-2. [nzalert on Azure](/docs/netezza?topic=netezza-nzalert_setup)
+
+This feature supports three notification methods for NPSaaS customers:
+- Email
+- AWS SNS (for AWS users)
+- Azure Event Grid (for Azure users)
+
+## Event setup process
+{: #event_setup}
+
+The event setup process for NPSaaS customers involves the following three steps:
+
+### 1. Configure notification infrastructure
+{: #config_noti}
+
+- **AWS users**: Refer to [nzalert for AWS](/docs/netezza?topic=netezza-nzalert_aws_setup) for infrastructure setup.
+- **Azure users**: Refer to [nzalert for Azure](/docs/netezza?topic=netezza-nzalert_setup) for infrastructure setup.
+- **Email Notifications**: No additional infrastructure setup is required.
+
+### 2: Create notification methods
+{: #noti_methods}
+
+- Follow the instructions on the [Create notification method](/docs/netezza?topic=netezza-noti_evnt_rule).
+
+### 3: Define event rules
+{: #event_rules}
+
+- Refer to the [Create Event Rule](/docs/netezza?topic=netezza-noti_evnt_rule#create_event_rule1) to configure event rules.

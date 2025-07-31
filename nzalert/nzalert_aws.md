@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-07-31"
 
 keywords: business continuity and disaster recovery for Netezza Performance Server as a Service, business continuity, disaster recovery,
 
@@ -23,28 +23,42 @@ subcollection: netezza
 # Nzalerts on AWS
 {: #nzalert_aws_setup}
 
-This guide outlines two methods to set up nzalerts on AWS:
+This guide outlines two methods to set up **Nzalerts** on **Amazon Web Services (AWS)**:
 
-- **ARN method**: Uses only an SNS topic with access granted to the NZEvents AWS role.
-- **Credentials method**: Involves creating a user, role, and credentials, with the entire setup managed by the user.
+## Setup Options
+{: #setupoptions_aws}
 
-## ARN method
+### Option 1: ARN method
+{: #opt1}
+
+Uses an SNS topic with access granted to the NZEvents AWS role.
+
+### Option 2: Credentials method
+{: #opt2}
+
+Involves creating a user, role, and credentials, with full control managed by the user.
+
+## 1: ARN method
 {: #nzalert_arnmethod}
 
-### 1. Setup SNS topic
+This method is simpler and uses an existing AWS role to publish events to your SNS topic.
+
+### **Step 1: Setup SNS topic**
 {: #nzalert_aws_setupsns}
 
 1. Log in to your **AWS** account.
 2. Search for **SNS** in the AWS console.
 3. Go to **Topics** → **Create Topic**.
 4. Fill in the required details: **Type**, **Name**, and **Display Name**.
-5. After creation, locate the **ARN** in the topic details and save it for later.
+5. After creation, locate the **ARN** in the topic details and save it for later. See, `<YOUR_SNS_TOPIC_ARN>`.
 
-### 2. Get ROLE ARN
+
+
+### **Step 2: Get ROLE ARN**
 {: #nzalert_aws_rolearn}
 
-1. Use the AWS console or `NZ-SQL` CLI.
-2. In `NZ-SQL` CLI, run:
+1. Use the NPS console or `nzsql` CLI.
+2. In `nzsql` CLI, run:
 
    ```bash
    show NOTIFICATION METHOD;
@@ -59,10 +73,10 @@ This guide outlines two methods to set up nzalerts on AWS:
 
 5. Copy the **AWS_ROLE_ARN** from the output and save it.
 
-### 3. Configure SNS topic access policy
+### **Step 3: Configure SNS topic access policy**
 {: #nzalert_aws_conf_sns_accpolicy}
 
-1. Go to the SNS topic → **Edit**.
+1. Go to **AWS** console -> **SNS** → **Edit**.
 2. In the **Access Policy** section, add the following (replace placeholders):
 
 ```json
@@ -78,31 +92,33 @@ This guide outlines two methods to set up nzalerts on AWS:
 }
 ```
 
-## Credentials method
+## 2: Credentials method
 {: #nzalert_aws_credmethod}
 
-### 1. Setup SNS topic
+This method provides full control over user and role creation, suitable for custom setups.
+
+### **Step 1: Setup SNS topic**
 {: #nzalert_aws_snssetup_top}
 
 Follow the same steps as in the ARN Method to create and retrieve the SNS Topic ARN.
 
-### 2. Get access key ID and secret
+### **Step 2: Get access key ID and secret**
 {: #nzalert_aws_acckey_sec}
 
 Refer to the AWS documentation:
-- Get [Access Key ID and Secret Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html#cli-authentication-user-get)
+- Get [Access Key ID and Secret Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html#cli-authentication-user-get).
 
-### 3. Create user
+### **Step 3: Create user**
 {: #nzalert_aws_createuser}
 
 1. Log in to [AWS account](https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html#cli-authentication-user-create) → Navigate to **IAM**.
 2. Go to **Users** → **Create User**.
 3. Enter user details.
-4. Skip permissions for now → Click **Next**.
+4. Skip permissions → Click **Next**.
 5. Review and create the user.
-6. Copy and store the **User ARN**.
+6. Copy and store the **User ARN**. See, `<YOUR_USER_ARN>`.
 
-### 4. Create role policy
+### **Step 4: Create role policy**
 {: #nzalert_aws_role_pol}
 
 1. Go to **IAM** → **Policies** → **Create Policy**.
@@ -124,7 +140,7 @@ Refer to the AWS documentation:
 
 3. Click **Next**, provide policy details, and save the policy name.
 
-### 5. Create ROLE
+### **Step 5: Create role**
 {: #nzalert_aws_create_role}
 
 1. Go to **IAM** → **Roles** → **Create Role**.
@@ -151,7 +167,7 @@ Refer to the AWS documentation:
 5. Enter role details and create the role.
 6. Copy and store the **ROLE ARN**.
 
-### 6. Configure SNS topic access policy
+### **Step 6: Configure SNS topic access policy**
 {: #nzalert_aws_snstop_acc_pol}
 
 1. Go to the SNS topic → **Edit**.
@@ -170,7 +186,7 @@ Refer to the AWS documentation:
 }
 ```
 
-### 7. Create and attach user policy
+### **Step 7: Create and attach user policy**
 {: #nzalert_aws_create_att_user_pol}
 
 1. Go to **IAM** → **Policies** → **Create Policy**.

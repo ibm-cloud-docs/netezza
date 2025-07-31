@@ -28,17 +28,17 @@ This guide outlines two methods to set up **Nzalerts** on Microsoft Azure.
 ## Setup options
 {: #setupoptions}
 
-### Option 1: Using IBM’s multi-tenant app
+### Option 1: Providing access to IBM's multi-tenant app
 {: #opt1}
 
 Events will be published to your Azure event grid topic by granting access to IBM’s multi-tenant app.
 
-### Option 2: Using access key
+### Option 2: Providing your access key
 {: #opt2}
 
 Events will be published to your Azure event grid topic by providing the endpoint and access key.
 
-## A. Providing the access to IBM’s multi-tenant app:
+## 1. Providing access to IBM's multi-tenant app:
 {: #accesstoibmtenant}
 
 ### Step1: Create the event grid topic:
@@ -54,7 +54,7 @@ Events will be published to your Azure event grid topic by providing the endpoin
 {: #consentibmtenant}
 
 1. Login to the **Azure** portal.
-1. Get the Directory ID of your Microsoft AD on which you need your topic to be published. Directory ID would be needing for creating the notification method.
+1. Get the Directory ID of your Microsoft AD on which you need your topic to be published. Directory ID would be required for creating the notification method.
 1. Refer the document to create the notification method. [Azure Event Grid Notification Method](/docs/netezza?topic=netezza-noti_evnt_rule).
 1. A consent URL will be generated once you input your Directory ID. For example, see the following.
 
@@ -82,7 +82,7 @@ To get the events to be published in that topic, click the created topic and nav
 Once the events are published to Azure event grid, you can configure the downstream handling based on your requirements—whether it's delivering the events via email, forwarding them to a queue, or integrating with other services.
 {: note}
 
-## B. Providing the access key:
+## 2. Providing your access key:
 {: #prov_access_key}
 
 ### Step 1: Create event grid in your account
