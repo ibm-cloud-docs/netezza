@@ -52,26 +52,60 @@ This method is simpler and uses an existing AWS role to publish events to your S
 4. Fill in the required details: **Type**, **Name**, and **Display Name**.
 5. After creation, locate the **ARN** in the topic details and save it for later. See, `<YOUR_SNS_TOPIC_ARN>`.
 
+### **Step 2: Create notification method using ARN method
+{: #create_noti_arn}
 
+#### Using nzsql
+{: #using_nzsql}
 
-### **Step 2: Get ROLE ARN**
+- See [Notification and event rule management for NPS events](/docs/netezza?topic=netezza-noti_evnt_rule#create_noti_method)for creating a notification method.
+
+- Example command using ARN method option would appear as follows.
+
+  ```bash
+  CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME> [Text Wrapping Break]TYPE AWS_SNS [Text Wrapping Break]AWS_TOPIC_ARN ‘<YOUR_SNS_TOPIC_ARN>’;
+    ```
+
+#### Using NPS console
+{: #using_nps_console}
+
+1. Go to **Settings** -> **Monitoring and alerts** section.
+2. Navigate to **Add method** radio button and click it.
+3. In the **Select method** section, from the drop down choose **AWS SNS** and provide the name for the notification method and click next.
+4. In the **Configure method** section, enter `<YOUR_SNS_TOPIC_ARN>` in the field for topic ARN and click confirm.
+
+### **Step 3: Get ROLE ARN**
 {: #nzalert_aws_rolearn}
 
-1. Use the NPS console or `nzsql` CLI.
-2. In `nzsql` CLI, run:
+#### Using nzsql
+{: #using_nzsql_rolearn}
 
-   ```bash
-   show NOTIFICATION METHOD;
-   ```
+1. Run `SHOW NOTIFICATION METHOD` in nzsql like the following.
 
-3. Identify the method created using the SNS ARN.
-4. Run:
+    ```bash
+    SHOW NOTIFICATION METHOD;
+
+    NAME                     | TYPE
+    ------------------------+---------
+    EXAMPLE_EMAIL_NM_1      | EMAIL
+    EXAMPLE_AWS_SNS_NM_1    | AWS_SNS
+    ```
+
+2. Identify the method created using the SNS ARN.
+3. In nzsql, run the following:
 
    ```bash
    show NOTIFICATION METHOD <name-of-notification-method>;
    ```
 
-5. Copy the **AWS_ROLE_ARN** from the output and save it.
+4. Copy the **AWS_ROLE_ARN** from the output and save it for later use.
+
+#### Using NPS console
+{: #using_nps_console_rolearn}
+
+1. Go to **Settings**-> **Alerts and monitoring**, then expand the notification method which you have created in the earlier step.
+
+2. Copy the value for **AWS_ROLE_ARN** field and store the AWS ROLE ARN for later use.
 
 ### **Step 3: Configure SNS topic access policy**
 {: #nzalert_aws_conf_sns_accpolicy}
@@ -129,7 +163,6 @@ Refer to the AWS documentation:
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "VisualEditor0",
       "Effect": "Allow",
       "Action": "sns:Publish",
       "Resource": "<YOUR_SNS_TOPIC>"
@@ -197,7 +230,6 @@ Refer to the AWS documentation:
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "VisualEditor0",
       "Effect": "Allow",
       "Action": "sts:AssumeRole",
       "Resource": "<YOUR_ROLE_ARN>"
@@ -207,3 +239,38 @@ Refer to the AWS documentation:
 ```
 
 3. Click **Next**, provide policy details, and save the policy name.
+
+### **Step 8: Create notification method using credentials method**
+{: #create_noti_cred_method}
+
+#### Using nzsql
+{: #create_noti_nzsql}
+
+- See [Notification and event rule management for NPS events](/docs/netezza?topic=netezza-noti_evnt_rule#create_noti_method)for creating a notification method.
+
+- Example command using Credentials method option will look like the following. You need to use the `access key id` and `access key secret` created in previous step.
+
+  ```bash
+    CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME>
+    TYPE AWS_SNS
+
+    AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>'
+
+    AWS_ROLE_ARN '<YOUR_ROLE_ARN>'
+
+    AWS_ACCESSKEY_ID 'XXXXYYYYYXXXXXXX'
+
+    AWS_ACCESSKEY_SECRET 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  ```
+
+#### Using NPS console
+{: #using_console_nps}
+
+1. Go to **Settings** -> **Monitoring and alerts** section.
+2. Navigate to **Add** method radio button and click it.
+3. In the **Select** method section, from the select method drop down choose **AWS SNS** and provide the name for the notification method in the enter method name field and click next.
+4. In the **Configure** method section, enter `<YOUR_SNS_TOPIC_ARN>` in the field for topic ARN.
+5. Click on the **add role** ARN checkbox.
+6. Enter `<YOUR_ROLE_ARN>` in the Role ARN field.
+7. Enter **access key id** and **access key secret** created before.
+8. Click confirm.
