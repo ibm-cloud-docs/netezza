@@ -101,6 +101,6 @@ Once the events are published to Azure event grid, you can configure the downstr
 
     Get the **Topic Endpoint** from the **Overview** tab.
 
-    Get the **Access Key** from **Settings → Access Keys**.
+    Get the **Access Key** from **Settings -> Access Keys**.
 
 1. Refer to the [Notification method](/docs/netezza?topic=netezza-noti_evnt_rule) to complete the setup.

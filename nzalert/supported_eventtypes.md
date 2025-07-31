@@ -62,7 +62,7 @@ create event rule TestRule1
 event_type 'sysStateChanged'
 event_notifytype aws_sns
 destination <Notification_method_name>
-event_summary 'NPS system $HOST went from $previousState to $currentState at $eventTimestamp.'
+event_summary 'NPS system $systemName went from $previousState to $currentState at $eventTimestamp.'
 event_bodytext '$notifyMsg\n\nEvent:\n$eventDetail\nEvent Rule:\n$eventRuleDetail'
 event_enable 'on'
 event_args_expr '$previousState == online && $currentState != online'
@@ -77,7 +77,7 @@ create event rule TestRule2
 event_type 'hwRestarted'
 event_notifytype aws_sns
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - $hwtype $hwId restarted at $eventTimestamp.'
+event_summary 'NPS system $systemName - $hwtype $hwId restarted at $eventTimestamp.'
 event_bodytext '$notifyMsg\n\nSPA ID: $spaId\nSPA Slot: $spaSlot\n'
 event_enable 'on'
 event_args_expr ''
@@ -93,7 +93,7 @@ create event rule TestRule3
 event_type 'hwDiskFull'
 event_notifytype aws_sns
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - $hwtype $hwId partition id $partition is $value % full at $eventTimestamp.'
+event_summary 'NPS system $systemName - $hwtype $hwId partition id $partition is $value % full at $eventTimestamp.'
 event_bodytext '$notifyMsg\n\nSPA ID: $spaId\nSPA Slot: $spaSlot\nThreshold: $threshold\nValue: $value\n'
 event_enable 'on'
 event_args_expr '$threshold == 80 || $threshold == 85'
@@ -104,7 +104,7 @@ create event rule TestRule3
 event_type 'hwDiskFull'
 event_notifytype aws_sns
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - $hwtype $hwId partition id $partition is $value % full at $eventTimestamp.'
+event_summary 'NPS system $systemName - $hwtype $hwId partition id $partition is $value % full at $eventTimestamp.'
 event_bodytext '$notifyMsg\n\nSPA ID: $spaId\nSPA Slot: $spaSlot\nThreshold: $threshold\nValue: $value\n'
 event_enable 'on'
 event_args_expr '$threshold == 90 || $threshold == 95'
@@ -119,7 +119,7 @@ create event rule TestRule4
 event_type 'runawayQuery'
 event_notifytype aws_sns
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - long-running query detected at $eventTimestamp.'
+event_summary 'NPS system $systemName - long-running query detected at $eventTimestamp.'
 event_bodytext '$notifyMsg\n\nsessionId: $sessionId\nplanId: $planId\nduration: $duration seconds'
 event_enable 'on'
 event_args_expr ''
@@ -134,7 +134,7 @@ create event rule TestRule5
 event_type 'transactionLimitEvent'
 event_notifytype aws_sns
 destination TEST_AWS_SNS
-event_summary 'NPS system $HOST - current number ($CurNumTX) of transactions exceeded $TxLimitEventPercent of total limit at $eventTimestamp.'
+event_summary 'NPS system $systemName - current number ($CurNumTX) of transactions exceeded $TxLimitEventPercent of total limit at $eventTimestamp.'
 event_bodytext ''
 event_enable 'on'
 event_args_expr '$TxLimitEventPercent == 90'
@@ -175,7 +175,7 @@ create event rule TestRule11
 event_type 'namespaceResumeWarning'
 event_notifytype aws_sns
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - Namespace Resume Warning Event.'
+event_summary 'NPS system $systemName - Namespace Resume Warning Event.'
 event_bodytext ''
 event_enable 'on'
 event_args_expr '$type == auto'
@@ -190,7 +190,7 @@ create event rule TestRule11
 event_type 'namespaceResumeWarning'
 event_notifytype email
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - Namespace Resume Warning Event.'
+event_summary 'NPS system $systemName - Namespace Resume Warning Event.'
 event_bodytext ''
 event_enable 'on'
 event_args_expr '$type == auto'
@@ -205,7 +205,7 @@ create event rule TestRule11
 event_type 'namespaceResumeWarning'
 event_notifytype azure_event_grid
 destination <Notification_method_name>
-event_summary 'NPS system $HOST - Namespace Resume Warning Event.'
+event_summary 'NPS system $systemName - Namespace Resume Warning Event.'
 event_bodytext ''
 event_enable 'on'
 event_args_expr '$type == auto'

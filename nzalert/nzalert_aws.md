@@ -48,23 +48,25 @@ This method is simpler and uses an existing AWS role to publish events to your S
 
 1. Log in to your **AWS** account.
 2. Search for **SNS** in the AWS console.
-3. Go to **Topics** → **Create Topic**.
+3. Go to **Topics** -> **Create Topic**.
 4. Fill in the required details: **Type**, **Name**, and **Display Name**.
 5. After creation, locate the **ARN** in the topic details and save it for later. See, `<YOUR_SNS_TOPIC_ARN>`.
 
-### **Step 2: Create notification method using ARN method
+### **Step 2: Create notification method using ARN method**
 {: #create_noti_arn}
 
 #### Using nzsql
 {: #using_nzsql}
 
-- See [Notification and event rule management for NPS events](/docs/netezza?topic=netezza-noti_evnt_rule#create_noti_method)for creating a notification method.
+See [Notification and event rule management for NPS events](/docs/netezza?topic=netezza-noti_evnt_rule#create_noti_method) for creating a notification method.
 
-- Example command using ARN method option would appear as follows.
+Example:
 
   ```bash
-  CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME> [Text Wrapping Break]TYPE AWS_SNS [Text Wrapping Break]AWS_TOPIC_ARN ‘<YOUR_SNS_TOPIC_ARN>’;
-    ```
+  CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME>
+  TYPE AWS_SNS
+  AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
+  ```
 
 #### Using NPS console
 {: #using_nps_console}
@@ -80,7 +82,7 @@ This method is simpler and uses an existing AWS role to publish events to your S
 #### Using nzsql
 {: #using_nzsql_rolearn}
 
-1. Run `SHOW NOTIFICATION METHOD` in nzsql like the following.
+1. Run `SHOW NOTIFICATION METHOD` in `nzsql` like the following.
 
     ```bash
     SHOW NOTIFICATION METHOD;
@@ -92,7 +94,7 @@ This method is simpler and uses an existing AWS role to publish events to your S
     ```
 
 2. Identify the method created using the SNS ARN.
-3. In nzsql, run the following:
+3. In `nzsql`, run the following:
 
    ```bash
    show NOTIFICATION METHOD <name-of-notification-method>;
@@ -103,14 +105,14 @@ This method is simpler and uses an existing AWS role to publish events to your S
 #### Using NPS console
 {: #using_nps_console_rolearn}
 
-1. Go to **Settings**-> **Alerts and monitoring**, then expand the notification method which you have created in the earlier step.
+1. Go to **Settings** -> **Alerts and monitoring**, then expand the notification method which you have created in the earlier step.
 
 2. Copy the value for **AWS_ROLE_ARN** field and store the AWS ROLE ARN for later use.
 
 ### **Step 3: Configure SNS topic access policy**
 {: #nzalert_aws_conf_sns_accpolicy}
 
-1. Go to **AWS** console -> **SNS** → **Edit**.
+1. Go to **AWS** console -> **SNS** -> **Edit**.
 2. In the **Access Policy** section, add the following (replace placeholders):
 
 ```json
@@ -145,17 +147,17 @@ Refer to the AWS documentation:
 ### **Step 3: Create user**
 {: #nzalert_aws_createuser}
 
-1. Log in to [AWS account](https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html#cli-authentication-user-create) → Navigate to **IAM**.
-2. Go to **Users** → **Create User**.
+1. Log in to [AWS account](https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html#cli-authentication-user-create) -> Navigate to **IAM**.
+2. Go to **Users** -> **Create User**.
 3. Enter user details.
-4. Skip permissions → Click **Next**.
+4. Skip permissions -> Click **Next**.
 5. Review and create the user.
 6. Copy and store the **User ARN**. See, `<YOUR_USER_ARN>`.
 
 ### **Step 4: Create role policy**
 {: #nzalert_aws_role_pol}
 
-1. Go to **IAM** → **Policies** → **Create Policy**.
+1. Go to **IAM** -> **Policies** -> **Create Policy**.
 2. Choose **JSON** and paste:
 
 ```json
@@ -176,7 +178,7 @@ Refer to the AWS documentation:
 ### **Step 5: Create role**
 {: #nzalert_aws_create_role}
 
-1. Go to **IAM** → **Roles** → **Create Role**.
+1. Go to **IAM** -> **Roles** -> **Create Role**.
 2. Select **Custom Trust Policy**.
 3. Paste the following (replace `<YOUR_USER_ARN>`):
 
@@ -203,7 +205,7 @@ Refer to the AWS documentation:
 ### **Step 6: Configure SNS topic access policy**
 {: #nzalert_aws_snstop_acc_pol}
 
-1. Go to the SNS topic → **Edit**.
+1. Go to the SNS topic -> **Edit**.
 2. In the **Access Policy** section, add:
 
 ```json
@@ -222,7 +224,7 @@ Refer to the AWS documentation:
 ### **Step 7: Create and attach user policy**
 {: #nzalert_aws_create_att_user_pol}
 
-1. Go to **IAM** → **Policies** → **Create Policy**.
+1. Go to **IAM** -> **Policies** -> **Create Policy**.
 2. Paste the following JSON:
 
 ```json
@@ -246,9 +248,9 @@ Refer to the AWS documentation:
 #### Using nzsql
 {: #create_noti_nzsql}
 
-- See [Notification and event rule management for NPS events](/docs/netezza?topic=netezza-noti_evnt_rule#create_noti_method)for creating a notification method.
+See [Notification and event rule management for NPS events](/docs/netezza?topic=netezza-noti_evnt_rule#create_noti_method) for creating a notification method.
 
-- Example command using Credentials method option will look like the following. You need to use the `access key id` and `access key secret` created in previous step.
+Example:
 
   ```bash
     CREATE NOTIFICATION METHOD <NOTIFICATION-METHOD-NAME>
@@ -262,6 +264,9 @@ Refer to the AWS documentation:
 
     AWS_ACCESSKEY_SECRET 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
   ```
+
+Use the `access key id` and `access key secret` created in previous step.
+{: note}
 
 #### Using NPS console
 {: #using_console_nps}

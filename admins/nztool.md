@@ -479,10 +479,10 @@ For more information about commands, see [the command-line interface](https://ww
      - Contain lowercase letters.
      - Include special characters other than an underscore `_` or `@` symbol.
 
-      Example - Username: `SampleUser` → `'"SampleUser"'`
+      Example - Username: `SampleUser` -> `'"SampleUser"'`
    - For all other usernames, double quotes `""` are optional.
 
-      Example - Username: `SAMPLEUSER` → `SAMPLEUSER` or `"SAMPLEUSER"`
+      Example - Username: `SAMPLEUSER` -> `SAMPLEUSER` or `"SAMPLEUSER"`
 
 
  **Case Sensitivity**:
