@@ -98,13 +98,11 @@ AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
 
     ```sql
     SHOW NOTIFICATION METHOD EXAMPLE_AWS_SNS_NM_1;
-
-    | NAME | TYPE | AWS_TOPIC_ARN | AWS_ROLE_ARN |
-    | ---- | ---- | --- | --- |
-    | EXAMPLE_AWS_SNS_NM_1 | AWS_SNS | arn:aws:sns:<region>:<account-id>:<topic-name> | arn:aws:iam::<account-id>:role/<role-name> |
-
     ```
 
+    | NAME                  | TYPE     | AWS_TOPIC_ARN                                  | AWS_ROLE_ARN                                  |
+    |:---------------------|:---------|:----------------------------------------------|:----------------------------------------------|
+    | EXAMPLE_AWS_SNS_NM_1 | AWS_SNS  | `arn:aws:sns:<region>:<account-id>:<topic-name>` | `arn:aws:iam::<account-id>:role/<role-name>`     |
 
 4. Copy the **AWS_ROLE_ARN** from the output and save it for later use.
 
