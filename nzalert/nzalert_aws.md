@@ -86,12 +86,12 @@ AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
 
     ```sql
     SHOW NOTIFICATION METHOD;
-
-    NAME                     | TYPE
-    ------------------------+---------
-    EXAMPLE_EMAIL_NM_1      | EMAIL
-    EXAMPLE_AWS_SNS_NM_1    | AWS_SNS
     ```
+
+    | NAME                     | TYPE     |
+    |:------------------------|:---------|
+    | EXAMPLE_EMAIL_NM_1      | EMAIL    |
+    | EXAMPLE_AWS_SNS_NM_1    | AWS_SNS  |
 
 2. Identify the method created using the SNS ARN.
 3. In `nzsql`, run the following:
