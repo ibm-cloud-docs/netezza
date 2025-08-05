@@ -134,6 +134,10 @@ toc:
               href: https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system
       - kafka/kafka.md
       - topicgroup:
+          label: Managing iceberg tables with IBM Netezza REST catalog
+          topics:
+          - rest/rest.md
+      - topicgroup:
          label: Querying data from data lakes
          topics:
         #  - datalakes/singularity.md
