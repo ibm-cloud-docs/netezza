@@ -64,7 +64,7 @@ REST catalog support for iceberg table management
 
 Enhancement in Azure connector support
 
-:   Starting in version 11.3.0.2, the Azure connector has been enhanced to support General Purpose v2 storage accounts with the Standard performance tier. This enhancement enables users to perform backup and restore operations using GPv2 storage accounts, expanding compatibility and flexibility for Azure-based storage solutions.
+:   Starting in version 11.3.0.2, the Azure connector has been enhanced to support General Purpose v2 storage accounts with the Standard performance tier. This enhancement enables users to perform backup and restore operations using Gen2 storage accounts, expanding compatibility and flexibility for Azure-based storage solutions.
 
 ### Components
 {: #compaug2025}
