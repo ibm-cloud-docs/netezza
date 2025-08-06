@@ -28,7 +28,7 @@ This guide outlines two methods to set up **Nzalerts** on **Amazon Web Services 
 ## Setup Options
 {: #setupoptions_aws}
 
-### Option 1: ARN method
+### Option 1: AWS SNS method
 {: #opt1}
 
 Uses an SNS topic with access granted to the NZEvents AWS role.
@@ -38,7 +38,10 @@ Uses an SNS topic with access granted to the NZEvents AWS role.
 
 Involves creating a user, role, and credentials, with full control managed by the user.
 
-## 1: ARN method
+### 3: Email method
+{: #opt3_emailmethod}
+
+## 1: AWS SNS method
 {: #nzalert_arnmethod}
 
 This method is simpler and uses an existing AWS role to publish events to your SNS topic.
@@ -274,8 +277,28 @@ Use the `access key id` and `access key secret` created in previous step.
 1. Go to **Settings** -> **Monitoring and alerts** section.
 2. Navigate to **Add** method radio button and click it.
 3. In the **Select** method section, from the select method drop down choose **AWS SNS** and provide the name for the notification method in the enter method name field and click next.
-4. In the **Configure** method section, enter `<YOUR_SNS_TOPIC_ARN>` in the field for topic ARN.
+4. In the **Configure method** section, enter `<YOUR_SNS_TOPIC_ARN>` in the field for topic ARN.
 5. Click on the **add role** ARN checkbox.
 6. Enter `<YOUR_ROLE_ARN>` in the Role ARN field.
 7. Enter **access key id** and **access key secret** created before.
-8. Click confirm.
+8. Click **Confirm**.
+
+## 3: Email method
+{: #nzalert_aws_emailmethod}
+
+1. Go to **Settings** -> **Monitoring and alerts** section.
+2. Navigate to **Add** method radio button and click it.
+3. In the **Select** method section, from the select method drop down choose **Email** and provide the name for the notification method in the enter method name field and click next.
+4. In the **Configure method** section, enter the mail address in the respective fields.
+5. Click **Confirm**.
+
+### Create rule for Email method
+{: #create_rule_email}
+
+1. Go to **Settings** -> **Monitoring and alerts** section.
+2. Navigate to **Create rule** -> **Define rule**.
+3. Enter rule name and enable the status and click **Next**.
+4. Go to **Select destination**, select the destination as **Email** and choose email method.
+5. Click **Next** to go to **Choose event**.
+6. Enter the details and click **Next** to go to **Event expression**.
+7. Fill in the necessary fields and click **Confirm** to complete the rule setup.
