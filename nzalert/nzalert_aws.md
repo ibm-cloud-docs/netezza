@@ -58,7 +58,7 @@ This method is simpler and uses an existing AWS role to publish events to your S
 #### Using nzsql
 {: #using_nzsql}
 
-See [Notification and event rule management for NPS events](/docs/netezza?topic=netezza-noti_evnt_rule#create_noti_method) for creating a notification method.
+See [Notification and event rule management for NPS events](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-notification-event-rule-management-nps-events) for creating a notification method.
 
 Example:
 
@@ -251,7 +251,7 @@ Refer to the AWS documentation:
 #### Using nzsql
 {: #create_noti_nzsql}
 
-See [Notification and event rule management for NPS events](/docs/netezza?topic=netezza-noti_evnt_rule#create_noti_method) for creating a notification method.
+See [Notification and event rule management for NPS events](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-notification-event-rule-management-nps-events) for creating a notification method.
 
 Example:
 

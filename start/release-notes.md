@@ -54,9 +54,9 @@ Expanded deployment options for Netezza
 
    For more information, see [Netezza Performance Server - Software](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=netezza-performance-server-software).
 
-Notification setup for NzSaaS users
+Notification setup for NPSaaS users
 
-:   NzSaaS introduces notifications for critical service-related events, empowering users to monitor and respond to system changes effectively. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
+:   NPSaaS introduces notifications for critical service-related events, empowering users to monitor and respond to system changes effectively. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
 
 REST catalog support for iceberg table management
 
