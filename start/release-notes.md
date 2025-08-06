@@ -35,24 +35,24 @@ Expanded deployment options for Netezza
 
 :   Introduced two powerful deployment models that expand the flexibility and control of the Netezza platform for modern data and AI workloads:
 
-**Netezza SaaS BYOC (Bring Your Own Cloud)**
+   **Netezza SaaS BYOC (Bring Your Own Cloud)**
 
-Netezza SaaS BYOC is a cloud-native, high-performance analytical data warehouse built on the trusted Netezza architecture. With this model, you can:
-- Deploy within your own AWS account, maintaining full control over your data plane.
-- Enhance security and compliance with data residency requirements.
-- Seamlessly integrate with your existing AWS infrastructure.
-- Getting started is easy via the AWS Marketplace, with guided deployment through the IBM SaaS Console.
+   Netezza SaaS BYOC is a cloud-native, high-performance analytical data warehouse built on the trusted Netezza architecture. With this model, you can:
+   - Deploy within your own AWS account, maintaining full control over your data plane.
+   - Enhance security and compliance with data residency requirements.
+   - Seamlessly integrate with your existing AWS infrastructure.
+   - Getting started is easy via the AWS Marketplace, with guided deployment through the IBM SaaS Console.
 
-For more information, see [Netezza Performance Server for BYOC](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-byoc).
+   For more information, see [Netezza Performance Server for BYOC](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-byoc).
 
-**Netezza Performance Server – Software**
+   **Netezza Performance Server – Software**
 
-This software only deployment model allows you to run Netezza on your own containerized platform, such as Red Hat OpenShift. It offers:
-- High-performance analytics in a flexible, client-managed environment.
-- Integrated capabilities including database, storage, server, and analytics.
-- Standards-based architecture for simplified deployment and scalability.
+   This software only deployment model allows you to run Netezza on your own containerized platform, such as Red Hat OpenShift. It offers:
+   - High-performance analytics in a flexible, client-managed environment.
+   - Integrated capabilities including database, storage, server, and analytics.
+   - Standards-based architecture for simplified deployment and scalability.
 
-For more information, see [Netezza Performance Server - Software](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=netezza-performance-server-software).
+   For more information, see [Netezza Performance Server - Software](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=netezza-performance-server-software).
 
 Notification setup for NzSaaS users
 
