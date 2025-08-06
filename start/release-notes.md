@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-22"
+lastupdated: "2025-08-05"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -30,6 +30,14 @@ subcollection: netezza
 
 ### New features and enhancements
 {: #nfaug2025}
+
+Notification setup for NzSaaS users
+
+:   NzSaaS now supports notifications for critical service-related events, enabling users to monitor and respond to system changes effectively. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
+
+REST catalog support for iceberg table management
+
+:   IBM Netezza now supports a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. This feature allows users to configure their own object storage (AWS S3 or IBM COS) and create Lakehouse databases directly from the Netezza web console. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
 
 Enhancement in Azure connector support
 

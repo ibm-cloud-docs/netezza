@@ -23,7 +23,7 @@ subcollection: netezza
 # Overview
 {: #nzalert_overview}
 
-This guide helps NzSaaS customers enable notifications for important service-related events such as:
+This guide helps users to enable notifications for important service-related events such as:
 
 - Scaling operations
 - Pause/resume operations
@@ -31,7 +31,7 @@ This guide helps NzSaaS customers enable notifications for important service-rel
 - Backup/restore failures
 - Dataslice full
 
-Refer to the [List of event types supported for NPSaaS customers](/docs/netezza?topic=netezza-eventtypelist) for a comprehensive list of events.
+Refer to the [List of event types supported for NPSaaS customers](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-list-event-types-supported) for a comprehensive list of events.
 
 
 This feature supports three notification methods for NPSaaS customers:
@@ -54,9 +54,9 @@ The event setup process for NPSaaS customers involves the following three steps:
 ### 2: Create notification methods
 {: #noti_methods}
 
-- Follow the instructions on the [Create notification method](/docs/netezza?topic=netezza-noti_evnt_rule).
+- Follow the instructions on the [Create notification method](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-notification-event-rule-management-nps-events).
 
 ### 3: Define event rules
 {: #event_rules}
 
-- Refer to the [Create Event Rule](/docs/netezza?topic=netezza-noti_evnt_rule#create_event_rule1) to configure event rules.
+- Refer to the [Create Event Rule](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-notification-event-rule-management-nps-events#noti_event_rule__email-rules__title__1) to configure event rules.
