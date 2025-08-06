@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-05"
+lastupdated: "2025-08-06"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,20 +24,43 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 06 Aug 2025 - 11.3.0.2
+## 08 Aug 2025 - 11.3.0.2
 {: #aug2025}
 {: release-note}
 
 ### New features and enhancements
 {: #nfaug2025}
 
+Expanded deployment options for Netezza
+
+:   Introduced two powerful deployment models that expand the flexibility and control of the Netezza platform for modern data and AI workloads:
+
+**Netezza SaaS BYOC (Bring Your Own Cloud)**
+
+Netezza SaaS BYOC is a cloud-native, high-performance analytical data warehouse built on the trusted Netezza architecture. With this model, you can:
+- Deploy within your own AWS account, maintaining full control over your data plane.
+- Enhance security and compliance with data residency requirements.
+- Seamlessly integrate with your existing AWS infrastructure.
+- Getting started is easy via the AWS Marketplace, with guided deployment through the IBM SaaS Console.
+
+For more information, see [Netezza Performance Server for BYOC](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-byoc).
+
+**Netezza Performance Server – Software**
+
+This software only deployment model allows you to run Netezza on your own containerized platform, such as Red Hat OpenShift. It offers:
+- High-performance analytics in a flexible, client-managed environment.
+- Integrated capabilities including database, storage, server, and analytics.
+- Standards-based architecture for simplified deployment and scalability.
+
+For more information, see [Netezza Performance Server - Software](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=netezza-performance-server-software).
+
 Notification setup for NzSaaS users
 
-:   NzSaaS now supports notifications for critical service-related events, enabling users to monitor and respond to system changes effectively. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
+:   NzSaaS introduces notifications for critical service-related events, empowering users to monitor and respond to system changes effectively. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
 
 REST catalog support for iceberg table management
 
-:   IBM Netezza now supports a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. This feature allows users to configure their own object storage (AWS S3 or IBM COS) and create Lakehouse databases directly from the Netezza web console. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
+:   IBM Netezza supports a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. This feature allows users to configure their own object storage (AWS S3 or IBM COS) and create Lakehouse databases directly from the Netezza web console. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
 
 Enhancement in Azure connector support
 
