@@ -28,18 +28,20 @@ This guide outlines two methods to set up **Nzalerts** on **Amazon Web Services 
 ## Setup Options
 {: #setupoptions_aws}
 
-### [Option 1: AWS SNS method using cross-account managed identity](/docs/netezza?topic=netezza-nzalert_aws_setup#nzalert_arnmethod)
+### Option 1: AWS SNS method using cross-account managed identity
 {: #opt1}
 
 Uses an SNS topic with access granted to the NZEvents AWS role.
 
-### [Option 2: AWS SNS method using credentials](/docs/netezza?topic=netezza-nzalert_aws_setup#nzalert_aws_credmethod)
+### Option 2: AWS SNS method using credentials
 {: #opt2}
 
 Involves creating a user, role, and credentials, with full control managed by the user.
 
-### [Option 3: Email method](/docs/netezza?topic=netezza-nzalert_aws_setup#nzalert_aws_emailmethod)
+### Option 3: Email method
 {: #opt3_emailmethod}
+
+This involves adding and configuring email notification method.
 
 ## Option 1: AWS SNS method using cross-account managed identity
 {: #nzalert_arnmethod}
