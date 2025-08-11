@@ -36,6 +36,9 @@ Events will be published to your Azure event grid topic by granting access to IB
 ### Option 2: Providing your access key
 {: #opt2}
 
+### Option 3: Email method
+{: #opt3_emailmethod_az}
+
 Events will be published to your Azure event grid topic by providing the endpoint and access key.
 
 ## 1. Providing access to IBM's multi-tenant app:
@@ -104,3 +107,23 @@ Once the events are published to Azure event grid, you can configure the downstr
     Get the **Access Key** from **Settings -> Access Keys**.
 
 1. Refer to the [Notification method](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-notification-event-rule-management-nps-events) to complete the setup.
+
+## 3: Email method
+{: #nzalert_az_emailmethod}
+
+1. Go to **Settings** -> **Monitoring and alerts** section.
+2. Navigate to **Add** method radio button and click it.
+3. In the **Select** method section, from the select method drop down choose **Email** and provide the name for the notification method in the enter method name field and click next.
+4. In the **Configure method** section, enter the mail address in the respective fields.
+5. Click **Confirm**.
+
+### Create rule for Email method
+{: #create_rule_email_az}
+
+1. Go to **Settings** -> **Monitoring and alerts** section.
+2. Navigate to **Create rule** -> **Define rule**.
+3. Enter rule name and enable the status and click **Next**.
+4. Go to **Select destination**, select the destination as **Email** and choose email method.
+5. Click **Next** to go to **Choose event**.
+6. Enter the details and click **Next** to go to **Event expression**.
+7. Fill in the necessary fields and click **Confirm** to complete the rule setup.

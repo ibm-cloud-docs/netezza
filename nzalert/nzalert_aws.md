@@ -38,7 +38,7 @@ Uses an SNS topic with access granted to the NZEvents AWS role.
 
 Involves creating a user, role, and credentials, with full control managed by the user.
 
-### 3: Email method
+### Option 3: Email method
 {: #opt3_emailmethod}
 
 ## 1: AWS SNS method
@@ -263,8 +263,8 @@ Example:
   TYPE AWS_SNS
   AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>'
   AWS_ROLE_ARN '<YOUR_ROLE_ARN>'
-  AWS_ACCESSKEY_ID 'XXXXYYYYYXXXXXXX'
-  AWS_ACCESSKEY_SECRET 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  AWS_ACCESSKEY_ID 'XXXXX'
+  AWS_ACCESSKEY_SECRET 'XXXXX';
 ```
 
 
