@@ -28,12 +28,12 @@ This guide outlines two methods to set up **Nzalerts** on **Amazon Web Services 
 ## Setup Options
 {: #setupoptions_aws}
 
-### Option 1: AWS SNS method
+### Option 1: AWS SNS method using cross-account managed identity
 {: #opt1}
 
 Uses an SNS topic with access granted to the NZEvents AWS role.
 
-### Option 2: Credentials method
+### Option 2: AWS SNS method using credentials
 {: #opt2}
 
 Involves creating a user, role, and credentials, with full control managed by the user.
@@ -55,7 +55,7 @@ This method is simpler and uses an existing AWS role to publish events to your S
 4. Fill in the required details: **Type**, **Name**, and **Display Name**.
 5. After creation, locate the **ARN** in the topic details and save it for later. See, `<YOUR_SNS_TOPIC_ARN>`.
 
-### **Step 2: Create notification method using ARN method**
+### **Step 2: Create notification method using cross-account managed identity**
 {: #create_noti_arn}
 
 #### Using nzsql
@@ -248,7 +248,7 @@ Refer to the AWS documentation:
 
 3. Click **Next**, provide policy details, and save the policy name.
 
-### **Step 8: Create notification method using credentials method**
+### **Step 8: Create notification method using credentials**
 {: #create_noti_cred_method}
 
 #### Using nzsql

@@ -33,7 +33,7 @@ subcollection: netezza
 
 Expanded deployment options for Netezza
 
-:   Introduced two powerful deployment models that expand the flexibility and control of the Netezza platform for modern data and AI workloads:
+:   New deployment models that expand the flexibility and control of the Netezza platform for modern data and AI workloads:
 
    **Netezza SaaS BYOC (Bring Your Own Cloud)**
 
@@ -45,15 +45,6 @@ Expanded deployment options for Netezza
 
    For more information, see [Netezza Performance Server for BYOC](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-byoc).
 
-   **Netezza Performance Server – Software**
-
-   This software only deployment model allows you to run Netezza on your own containerized platform, such as Red Hat OpenShift. It offers:
-   - High-performance analytics in a flexible, client-managed environment.
-   - Integrated capabilities including database, storage, server, and analytics.
-   - Standards-based architecture for simplified deployment and scalability.
-
-   For more information, see [Netezza Performance Server - Software](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=netezza-performance-server-software).
-
 Notification setup for NPSaaS users
 
 :   NPSaaS introduces notifications for critical service-related events, empowering users to monitor and respond to system changes effectively. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
@@ -64,7 +55,7 @@ REST catalog support for iceberg table management
 
 Enhancement in Azure connector support
 
-:   Starting in version 11.3.0.2, the Azure connector has been enhanced to support General Purpose v2 storage accounts with the Standard performance tier. This enhancement enables users to perform backup and restore operations using Gen2 storage accounts, expanding compatibility and flexibility for Azure-based storage solutions.
+:   The Azure connector has been enhanced to support General Purpose v2 storage accounts with the Standard performance tier. This enhancement enables users to perform backup and restore operations using Gen2 storage accounts, expanding compatibility and flexibility for Azure-based storage solutions.
 
 ### Components
 {: #compaug2025}
