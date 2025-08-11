@@ -28,20 +28,20 @@ This guide outlines two methods to set up **Nzalerts** on **Amazon Web Services 
 ## Setup Options
 {: #setupoptions_aws}
 
-### Option 1: AWS SNS method using cross-account managed identity
+### [Option 1: AWS SNS method using cross-account managed identity](/docs/netezza?topic=netezza-nzalert_aws_setup#nzalert_arnmethod)
 {: #opt1}
 
 Uses an SNS topic with access granted to the NZEvents AWS role.
 
-### Option 2: AWS SNS method using credentials
+### [Option 2: AWS SNS method using credentials](/docs/netezza?topic=netezza-nzalert_aws_setup#nzalert_aws_credmethod)
 {: #opt2}
 
 Involves creating a user, role, and credentials, with full control managed by the user.
 
-### Option 3: Email method
+### [Option 3: Email method](/docs/netezza?topic=netezza-nzalert_aws_setup#nzalert_aws_emailmethod)
 {: #opt3_emailmethod}
 
-## 1: AWS SNS method
+## Option 1: AWS SNS method using cross-account managed identity
 {: #nzalert_arnmethod}
 
 This method is simpler and uses an existing AWS role to publish events to your SNS topic.
@@ -55,7 +55,7 @@ This method is simpler and uses an existing AWS role to publish events to your S
 4. Fill in the required details: **Type**, **Name**, and **Display Name**.
 5. After creation, locate the **ARN** in the topic details and save it for later. See, `<YOUR_SNS_TOPIC_ARN>`.
 
-### **Step 2: Create notification method using cross-account managed identity**
+### **Step 2: Create notification method using ARN method**
 {: #create_noti_arn}
 
 #### Using nzsql
@@ -135,7 +135,7 @@ AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
 }
 ```
 
-## 2: Credentials method
+## Option 2: AWS SNS method using credentials
 {: #nzalert_aws_credmethod}
 
 This method provides full control over user and role creation, suitable for custom setups.
@@ -283,7 +283,7 @@ Use the `access key id` and `access key secret` created in previous step.
 7. Enter **access key id** and **access key secret** created before.
 8. Click **Confirm**.
 
-## 3: Email method
+## Option 3: Email method
 {: #nzalert_aws_emailmethod}
 
 1. Go to **Settings** -> **Monitoring and alerts** section.
