@@ -31,7 +31,7 @@ This guide helps users to enable notifications for important service-related eve
 - Backup/restore failures
 - Dataslice full
 
-Refer to the [List of event types supported](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-list-event-types-supported) for a comprehensive list of events.
+Refer to the [List of event types supported](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-manage-event-rules) for a comprehensive list of events.
 
 
 This feature supports three notification methods:
