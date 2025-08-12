@@ -31,20 +31,6 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfaug2025}
 
-Expanded deployment options for Netezza
-
-:   New deployment models that expand the flexibility and control of the Netezza platform for modern data and AI workloads:
-
-   **Netezza SaaS BYOC (Bring Your Own Cloud)**
-
-   Netezza SaaS BYOC is a cloud-native, high-performance analytical data warehouse built on the trusted Netezza architecture. With this model, you can:
-   - Deploy within your own AWS account, maintaining full control over your data plane.
-   - Enhance security and compliance with data residency requirements.
-   - Seamlessly integrate with your existing AWS infrastructure.
-   - Getting started is easy via the AWS Marketplace, with guided deployment through the IBM SaaS Console.
-
-   For more information, see [Netezza Performance Server for BYOC](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-byoc).
-
 Notification setup for NPSaaS users
 
 :   NPSaaS introduces notifications for critical service-related events, empowering users to monitor and respond to system changes effectively. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
