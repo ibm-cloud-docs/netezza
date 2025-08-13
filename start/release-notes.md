@@ -43,7 +43,7 @@ Enhancement in Azure connector support
 
 :   The Azure connector has been enhanced to support General Purpose v2 storage accounts with the Standard performance tier. This enhancement enables users to perform backup and restore operations using Gen2 storage accounts, expanding compatibility and flexibility for Azure-based storage solutions.
 
-Customer managed keys
+Customer managed keys for Netezza BYOC on AWS
 
 :   Gain enhanced control over your data security by managing your own encryption keys. This feature allows you to use customer-managed keys to encrypt data disks, ensuring greater protection and compliance.
 
