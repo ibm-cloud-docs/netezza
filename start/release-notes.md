@@ -51,13 +51,12 @@ AWS Marketplace integration
 
 :   Netezza Bring Your Own Cloud (BYOC) is now available as an offering on the AWS Marketplace. This integration simplifies deployment and enables seamless access through your existing AWS account. For more information, see [IBM Netezza as a Service Bring Your Own Cloud](https://aws.amazon.com/marketplace/pp/prodview-qyfbcav4cr772?sr=0-1&ref_=beagle&applicationId=AWSMPContessa).
 
-Support for encrypted S3 Buckets in Netezza Backup and Restore
+Support for encrypted S3 Buckets in Netezza backup and restore
 
 :   Netezza backup and restore operations now support Amazon S3 buckets encrypted with AWS KMS keys. This enhancement enables secure data storage and retrieval using AWS-managed encryption. To configure your S3 bucket with an AWS KMS key, see [Configuring your bucket to use an S3 Bucket Key with SSE-KMS for new objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configuring-bucket-key.html).
 
 The bucket user needs to have access to AWS KMS key.
 {: note}
-
 
 
 ### Components
