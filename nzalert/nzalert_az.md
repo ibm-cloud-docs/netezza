@@ -58,7 +58,7 @@ Events will be published to your Azure event grid topic by providing the endpoin
 
 1. Login to the **Azure** portal.
 1. Get the Directory ID of your Microsoft AD on which you need your topic to be published. Directory ID would be required for creating the notification method.
-1. Refer the document to create the notification method. [Azure Event Grid Notification Method](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-notification-event-rule-management-nps-events).
+1. Refer the document to create the notification method. [Azure Event Grid Notification Method](https://www.ibm.com/docs/en/netezza?topic=nzalert-notification-event-rule-management-nps-events).
 1. A consent URL will be generated once you input your Directory ID. For example, see the following.
 
    ```url
@@ -80,7 +80,7 @@ To get the events to be published in that topic, click the created topic and nav
 ### Step 4: Create event rule method in NzSaas console
 {: #event_ruleconsole}
 
-1. Create event rule will take tenant id and event grid topic as input. Refer notify type, see [Azure_Event_Grid](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-list-event-types-supported).
+1. Create event rule will take tenant id and event grid topic as input. Refer notify type, see [Azure_Event_Grid](https://www.ibm.com/docs/en/netezza?topic=nzalert-manage-event-rules).
 
 Once the events are published to Azure event grid, you can configure the downstream handling based on your requirements—whether it's delivering the events via email, forwarding them to a queue, or integrating with other services.
 {: note}
@@ -106,7 +106,7 @@ Once the events are published to Azure event grid, you can configure the downstr
 
     Get the **Access Key** from **Settings -> Access Keys**.
 
-1. Refer to the [Notification method](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=nzalert-notification-event-rule-management-nps-events) to complete the setup.
+1. Refer to the [Notification method](https://www.ibm.com/docs/en/netezza?topic=nzalert-notification-event-rule-management-nps-events) to complete the setup.
 
 ## 3: Email method
 {: #nzalert_az_emailmethod}
