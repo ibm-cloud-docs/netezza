@@ -111,6 +111,7 @@ toc:
               - authentication/awsiam_autnentication.md
               - authentication/loginawsiam_user.md
               - security/usageofnzcliawsiam.md
+              - security/awsiampermission.md
           - topicgroup:
               label: Setting SAML authentication
               topics:
@@ -132,6 +133,10 @@ toc:
               label: External authentication
               href: https://www.ibm.com/docs/en/netezza?topic=reference-register-external-authentication-system
       - kafka/kafka.md
+      - topicgroup:
+          label: REST catalog
+          topics:
+          - rest/rest.md
       - topicgroup:
          label: Querying data from data lakes
          topics:
@@ -164,7 +169,12 @@ toc:
          - data_lakehouse_mcsp/merging_datalakehouse_mcsp.md
          - data_lakehouse_mcsp/watsonx_datasql_mcsp.md
          - data_lakehouse_mcsp/hms_npskeywords_mcsp.md
-        #  - data_lakehouse_mcsp/watsonxdata_ki_mcsp.md
+      - topicgroup:
+         label: Monitoring and alerts
+         topics:
+         - nzalert/nzalert_overview.md
+         - nzalert/nzalert_aws.md
+         - nzalert/nzalert_az.md
       - topicgroup:
          label: Time travel and historical data
          topics:

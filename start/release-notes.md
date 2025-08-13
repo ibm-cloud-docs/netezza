@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-02"
+lastupdated: "2025-08-13"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,47 @@ subcollection: netezza
 
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 08 Aug 2025 - 11.3.0.2
+{: #aug2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfaug2025}
+
+Notification setup for NPSaaS users
+
+:   NPSaaS introduces notifications for critical service-related events, empowering users to monitor and respond to system changes effectively. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
+
+REST catalog support for iceberg table management
+
+:   IBM Netezza supports a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. This feature allows users to configure their own object storage (AWS S3 or IBM COS) and create Lakehouse databases directly from the Netezza web console. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
+
+Enhancement in Azure connector support
+
+:   The Azure connector has been enhanced to support General Purpose v2 storage accounts with the Standard performance tier. This enhancement enables users to perform backup and restore operations using Gen2 storage accounts, expanding compatibility and flexibility for Azure-based storage solutions.
+
+Customer managed keys for Netezza BYOC on AWS
+
+:   Gain enhanced control over your data security by managing your own encryption keys. This feature allows you to use customer-managed keys to encrypt data disks, ensuring greater protection and compliance.
+
+AWS Marketplace integration
+
+:   Netezza Bring Your Own Cloud (BYOC) is now available as an offering on the AWS Marketplace. This integration simplifies deployment and enables seamless access through your existing AWS account. For more information, see [IBM Netezza as a Service Bring Your Own Cloud](https://aws.amazon.com/marketplace/pp/prodview-qyfbcav4cr772?sr=0-1&ref_=beagle&applicationId=AWSMPContessa).
+
+Support for encrypted S3 Buckets in Netezza Backup and Restore
+
+:   Netezza backup and restore operations now support Amazon S3 buckets encrypted with AWS KMS keys. This enhancement enables secure data storage and retrieval using AWS-managed encryption. To configure your S3 bucket with an AWS KMS key, see [Configuring your bucket to use an S3 Bucket Key with SSE-KMS for new objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configuring-bucket-key.html).
+
+The bucket user needs to have access to AWS KMS key.
+{: note}
+
+
+
+### Components
+{: #compaug2025}
+
+- `nzcli` version: 11.3.0.2
 
 ## 02 July 2025 - 11.3.0.1
 {: #jul2025}

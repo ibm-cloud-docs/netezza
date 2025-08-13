@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-09-23"
+  years: 2025
+lastupdated: "2025-07-11"
 
 keywords: nztool
 
@@ -479,10 +479,10 @@ For more information about commands, see [the command-line interface](https://ww
      - Contain lowercase letters.
      - Include special characters other than an underscore `_` or `@` symbol.
 
-      Example - Username: `SampleUser` → `'"SampleUser"'`
+      Example - Username: `SampleUser` -> `'"SampleUser"'`
    - For all other usernames, double quotes `""` are optional.
 
-      Example - Username: `SAMPLEUSER` → `SAMPLEUSER` or `"SAMPLEUSER"`
+      Example - Username: `SAMPLEUSER` -> `SAMPLEUSER` or `"SAMPLEUSER"`
 
 
  **Case Sensitivity**:
@@ -522,7 +522,6 @@ These commands allow running various `nz` commands on the target system:
 
 | Commands           | Description                                                                                   |
 |-------------------|-----------------------------------------------------------------------------------------------|
-| `ops`             | Run devops dedicated commands                                                                |
 | `pauseresume`     | Pause or Resume NPS                                                                           |
 | `run`             | Run any allowed nz command synchronously (passes -u, -pw)                                    |
 | `run-async`       | Run any allowed nz command asynchronously                                                    |

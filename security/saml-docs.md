@@ -42,7 +42,7 @@ The following `SAML` configuration steps are generic. Users can follow similar s
 {: #config_saml}
 
 1. Login to Netezza UI as a user who is part of the administrative group.
-2. Select `IdP configuration` topic from the left pane.
+2. Select `Settings` topic from the left pane.
 3. Enable `SAML` configuration.
 4. Add `IdP Metadata URL` and `EntityId` from [step 3](/docs/netezza?topic=netezza-saml-docs#step3samlhtg).
 
@@ -51,7 +51,7 @@ The following `SAML` configuration steps are generic. Users can follow similar s
 {: #config_acsurl}
 
 1. Login to Netezza UI as a user who is part of the administrative group.
-1. Select `IdP configuration` topic from the left pane.
+1. Select `Settings` topic from the left pane.
 1. Copy the `ACS url` and `SLO endpoint` from the `IdP configuration` page.
 {: #step3saml}
 
