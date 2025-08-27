@@ -55,6 +55,10 @@
       "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
       "tiles": [
           {
+              "date": "08 August 2025",
+              "title": "Netezza introduces enhanced cloud integration, security, and table management features—including REST catalog support for Iceberg, Azure Gen2 compatibility, customer-managed encryption keys, and AWS Marketplace availability—alongside new notification capabilities for NPSaaS users."
+          },
+        {
               "date": "02 July 2025",
               "title": "Introduced Iceberg enhancements for improved table operations and data management, along with new Database Assistant skills for deeper insights into user activity, query performance, data distribution, and access control."
           },
