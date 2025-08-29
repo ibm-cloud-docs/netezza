@@ -48,7 +48,6 @@ The event setup process for NPSaaS customers involves the following three steps:
 {: #config_noti}
 
 - **AWS users**: Refer to [nzalert for AWS](/docs/netezza?topic=netezza-nzalert_aws_setup) for infrastructure setup.
-- **Azure users**: Refer to [nzalert for Azure](/docs/netezza?topic=netezza-nzalert_setup) for infrastructure setup.
 - **Email Notifications**: No additional infrastructure setup is required.
 
 ### 2: Create notification methods
