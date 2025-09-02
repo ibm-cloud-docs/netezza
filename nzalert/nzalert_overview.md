@@ -57,4 +57,4 @@ The event setup process for NPSaaS customers involves the following three steps:
 ### 3: Define event rules
 {: #event_rules}
 
-- Refer to the [Create Event Rule](https://www.ibm.com/docs/en/netezza?topic=nzalert-notification-event-rule-management-nps-events#noti_event_rule__email-rules__title__1) to configure event rules.
+- Refer to the [Create Event Rule](https://www.ibm.com/docs/en/netezza?topic=nzalert-manage-event-rules) to configure event rules.
