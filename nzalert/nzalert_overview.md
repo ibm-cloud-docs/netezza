@@ -34,7 +34,7 @@ This guide helps users to enable notifications for important service-related eve
 Refer to the [List of event types supported](https://www.ibm.com/docs/en/netezza?topic=nzalert-manage-event-rules) for a comprehensive list of events.
 
 
-This feature supports three notification methods:
+This feature supports two notification methods:
 - Email
 - AWS SNS (for AWS users)
 
