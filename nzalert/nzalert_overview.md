@@ -37,7 +37,6 @@ Refer to the [List of event types supported](https://www.ibm.com/docs/en/netezza
 This feature supports three notification methods:
 - Email
 - AWS SNS (for AWS users)
-- Azure Event Grid (for Azure users)
 
 ## Event setup process
 {: #event_setup}
