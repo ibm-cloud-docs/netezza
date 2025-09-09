@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-05"
+lastupdated: "2025-09-09"
 
 keywords: rest catalog
 
@@ -19,13 +19,13 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Managing iceberg tables with IBM Netezza REST catalog
+# Managing Iceberg tables with IBM Netezza REST catalog
 {: #netezza_manage_iceberg}
 
 ## Overview
 {: #overview_rest}
 
-The **REST catalog** feature in IBM Netezza enables users to manage an integrated iceberg catalog without requiring external services like AWS Glue. This simplifies lakehouse deployments by leveraging built-in capabilities.
+The **REST catalog** feature in IBM Netezza enables users to manage an integrated Iceberg catalog without requiring external services like AWS Glue. This simplifies lakehouse deployments by leveraging built-in capabilities.
 
 ## Enabling REST catalog
 {: #enable_rest}
