@@ -32,7 +32,7 @@ Customers can now define the storage type when creating or altering tables and d
 - **Create table with storage type**
 
     ```sql
-    CREATE TABLE T1 (c1 INT) WITH STORAGE_TYPE AS Object;
+    CREATE TABLE T1 (c1 INT) STORAGETYPE AS Object;
     ```
 
 - **Create database with storage type**
@@ -47,7 +47,7 @@ Customers can now define the storage type when creating or altering tables and d
     ALTER DATABASE db2 WITH STORAGE_TYPE AS Object;
     ```
 
-The **storage type of an existing table cannot be changed** once data has been inserted. To change a table’s storage type, users should create a new table using CTAS (Create Table As Select), specifying the desired `storage_type`.
+The **storage type of an existing table cannot be changed** once table has been created. To change a table’s storage type, users should create a new table using CTAS (Create Table As Select), specifying the desired `storage_type`.
 {: note}
 
 ## Datasource configuration
@@ -201,3 +201,115 @@ DROP TABLE t3 IF EXISTS;
 SET catalog system;
 DROP DATABASE test_crdb;
 ```
+
+# Storage Type Configuration in the System
+{: #storagetype_configsys}
+
+Configure and manage storage types for tables and databases in the system, including global, database-level, and session-level settings.
+
+## Global Storage Type Setting
+{: #gsts}
+
+- The global storage type can be set system-wide using the following syntax:
+
+    ```sql
+    set default_storage_type = 'object';
+    ```
+
+- To view the current effective global storage type setting, use:
+
+    ```sql
+    show default_storage_type;
+    ```
+
+    Example output:
+
+    ```sql
+    NOTICE:  DEFAULT_STORAGE_TYPE = Object
+    ```
+
+- The global setting is stored in `postgresql.conf` located in the data directory. Changes require a system restart to take effect.
+
+## Precedence of Storage Type Settings
+{: #proce_sts}
+
+The effective storage type applied when creating a table follows this precedence order:
+
+1. **Create Table Statement** — If specified explicitly during table creation.
+2. **Session Setting** — If not specified in the create statement, the session-level setting applies.
+3. **Database Setting** — If no session setting exists, the database-level default is used.
+4. **System Setting** — If none of the above are set, the global system-wide default applies.
+
+## Viewing Table Storage Type
+{: #view_tst}
+
+To determine the storage type of an existing table, use the `\d` command:
+
+```sql
+SYSTEM.ADMIN(ADMIN)=> \d test_table
+```
+
+Example output snippet:
+
+```tableeg1
+Table "TEST_TABLE"
+Attribute | Type                | Modifier | Default Value
+----------+---------------------+----------+--------------
+C1        | CHARACTER VARYING(2)|          |
+Distributed on hash: "C1"
+Storagetype: Block
+```
+
+## Creating Tables with Specific Storage Types
+{: #create_table_sst}
+
+- Once created, a table's storage type cannot be changed.
+- To copy a table to another storage type, use the `CREATE TABLE AS SELECT` (CTAS) statement with the `storagetype` option:
+
+    ```sql
+    CREATE TABLE t3 as (select * from t1) storagetype 'block';
+    ```
+
+    Parentheses around the nested select statement are required currently.
+    {: note}
+
+- Materialized views inherit the storage type from their base tables; there is no option to specify storage type directly for materialized views.
+
+## Database-Level Storage Type Setting
+{: #dl_sts}
+
+- When creating a database, you can specify the default storage type for tables created within it:
+
+    ```sql
+    create database database1 storagetype 'block';
+    ```
+
+- If not specified, the database inherits the session or system-wide default storage type.
+- To keep the database default storage type unset (i.e., defer to higher precedence), specify `'default'`:
+
+    ```sql
+    create database database1 storagetype 'default';
+    ```
+
+- To check the default storage type for all databases, query the `_v_database` view:
+
+    ```sql
+    SYSTEM.ADMIN(ADMIN)=> select database, storagetype from _v_database;
+    ```
+
+    Example output:
+
+    ```sql
+    DATABASE | STORAGETYPE
+    ---------+-------------
+    DB1      | BLOCK
+    DB2      | OBJECT
+    SYSTEM   | SYSTEM DEFAULT
+    ```
+
+## Upgrade Considerations
+{: #upgrade_consd}
+
+- During upgrades from releases supporting only block storage to those supporting object storage:
+    - All existing tables will have their storage type set to `'block'`.
+    - All existing databases will have their default storage type set to `'block'`.
