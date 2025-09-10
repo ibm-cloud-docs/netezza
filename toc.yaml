@@ -227,6 +227,7 @@ toc:
           - security/architecture-workload-isolation.md
           - security/endpoints.md
           - security/encryption.md
+          - security/ssl_certificate.md
           - security/iam-docs.md
           - reference/network_policies.md
           - link:
