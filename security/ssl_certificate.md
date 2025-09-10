@@ -24,9 +24,9 @@ subcollection: netezza
 # Steps to acquire SSL certificates for netezza
 {: #step_acq_sslcert}
 
-This guide outlines two methods to acquire SSL certificates for secure connection to a Netezza instance. Use **Method-1** first. If the certificate issuer is **not DigiCert**, proceed with **Method-2**.
+This guide outlines two methods to acquire SSL certificates for secure connection to a Netezza instance.
 
-## Method 1: Acquire certificates via browser
+## Acquire certificates via browser
 {: #method1_acq_cert_brows}
 
 ### 1: Download certificates from browser
@@ -49,6 +49,7 @@ Create a file named `certificate.crt` and paste the contents of the three certif
 - **Root Certificate** (ends with `GA2`)
 
 ### 3: Use certificate to connect to netezza
+{: #use_certi_conn_nps}
 
 Use the `certificate.crt` file with the `nzsql` utility:
 
@@ -66,46 +67,6 @@ SSL enabled connection. Cipher: TLS_AES_256_GCM_SHA384, bits: 256, protocol: TLS
 
 SYSTEM.ADMIN(ADMIN)=> \q
 ```
-
-## Method 2: Acquire certificates from backend
-{: #method2_acq_cert_backend}
-
-### 1: Login to hostpod
-{: #log_hostpod}
-
-Access the hostpod from the backend terminal.
-
-### 2: Copy certificate files
-{: #copy_cert_file}
-
-Navigate to `/ips/ssl-secret/` and copy the contents of:
-
-- `server.pem`
-- `cacert.crt`
-
-Paste both into a new file named `certificate.crt`.
-
-### 3: Use certificate to connect to netezza
-{: #use_cert_conn_netezza}
-
-```bash
-[nz@ipshost-0 ~]$ nzsql -db system -securityLevel onlySecured -caCertFile certificate.crt -u admin
-Password:
-
-Welcome to nzsql, the IBM Netezza SQL interactive terminal.
-
-Type:  \h for help with SQL commands
-       \? for help on internal slash commands
-       \g or terminate with semicolon to execute query
-       \q to quit
-
-SSL enabled connection. Cipher: TLS_AES_256_GCM_SHA384, bits: 256, protocol: TLSv1.3
-
-SYSTEM.ADMIN(ADMIN)=> \q
-```
-
-## 4: Final step (common to both methods)
-{: #final_step_common}
 
 You now have the `certificate.crt` file ready. This file can be shared with the customer for secure access.
 
