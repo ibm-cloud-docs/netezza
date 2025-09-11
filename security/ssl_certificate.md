@@ -54,7 +54,7 @@ Create a file named `certificate.crt` and paste the contents of the three certif
 Use the `certificate.crt` file with the `nzsql` utility:
 
 ```bash
-[nz@ipshost-0]$ nzsql -db system -securityLevel onlySecured -caCertFile certificate.crt -u admin -pw XXXXX
+$ nzsql -h xxxxxxxx -db system -securityLevel onlySecured -caCertFile certificate.crt -u admin -pw XXXXX
 
 Welcome to nzsql, the IBM Netezza SQL interactive terminal.
 
@@ -69,6 +69,3 @@ SYSTEM.ADMIN(ADMIN)=> \q
 ```
 
 You now have the `certificate.crt` file ready. This file can be shared with the customer for secure access.
-
-If you encounter any issues or have questions, please reach out to the **Provisioning and Security Team's SMEs**.
-{: note}
