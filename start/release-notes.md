@@ -35,7 +35,7 @@ Netezza Cloud Object Storage (COS)
 
 :   Netezza now supports a hybrid storage architecture by integrating Cloud Object Storage (COS), allowing users to leverage both block storage and object storage for their data workloads. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosoverview).
 
-AWS Marketplace integration
+Azure Marketplace integration
 
 :   Netezza Bring Your Own Cloud (BYOC) is now listed on the Azure Marketplace. You can easily deploy and access Netezza using your existing Azure account.
 
