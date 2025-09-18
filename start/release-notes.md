@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-09-18"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,30 @@ subcollection: netezza
 
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 23 September 2025 - 11.3.0.3-IF1
+{: #sep2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfsep2025}
+
+Netezza Cloud Object Storage (COS)
+
+:   Netezza now supports a hybrid storage architecture by integrating Cloud Object Storage (COS), allowing users to leverage both block storage and object storage for their data workloads. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosoverview).
+
+AWS Marketplace integration
+
+:   Netezza Bring Your Own Cloud (BYOC) is now listed on the Azure Marketplace. You can easily deploy and access Netezza using your existing Azure account.
+
+Server Certificate Validation for SSL/TLS Authentication
+
+:   To enhance security, server certificate validation is now required for all SSL/TLS connections using ODBC, JDBC, and nzsql. Users must specify the CA certificate path using the `caCertFile` parameter, similar to how the securityLevel parameter is used. For more information, see [Steps to acquire SSL certificates for netezza](/docs/netezza?topic=netezza-step_acq_sslcert).
+
+### Components
+{: #compsep2025}
+
+- `nzcli` version: 11.3.0.3-IF1
 
 ## 08 Aug 2025 - 11.3.0.2
 {: #aug2025}
