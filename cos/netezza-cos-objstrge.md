@@ -67,7 +67,7 @@ The `nzds show [-detail]` command has been enhanced to include information about
 
 | Data Slice Status | SPU Partition Size (GiB) | %Used | Supporting Disks | Obj Used (GiB) | Supporting Disks Locations | Primary Storage |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 Unknown | 1003 | 0 | 16 | 0.00 | 1004 | 0.27 spa1.disk1 | 1004 |
+| 1   |  Unknown | 1003 | 0 | 16 | 0.00 | 1004 | 0.27 spa1.disk1 | 1004 |
 
 ## Benefits of COS utilization visibility
 {: #benifits_cos}
