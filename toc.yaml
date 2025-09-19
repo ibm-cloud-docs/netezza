@@ -75,11 +75,20 @@ toc:
       - topicgroup:
           label: Netezza cloud object storage
           topics:
-          - cos/netezza-cos-overview.md
+          - cos/netezza-cos-introduction.md
+          - cos/netezza-cos-architecture.md
           - cos/netezza-cos-gettingstarted.md
-          - cos/netezza-cos-sql.md
-          - cos/netezza-cos-cmd.md
+          - topicgroup:
+              label: Environment setup
+              topics:
+              - cos/setting-cos-environment.md
+              - cos/setting-cos-bucket.md
+          - topicgroup:
+              label: Database object management
+              topics:
+              - cos/netezza-cos-sql.md
           - cos/netezza-cos-objstrge.md
+          - cos/netezza-cos-cmd.md
           - cos/netezza-cos-compatibility.md
   - navgroup:
       id: howto

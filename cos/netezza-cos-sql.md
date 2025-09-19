@@ -32,19 +32,22 @@ Customers can now define the storage type when creating or altering tables and d
 - **Create table with storage type**
 
     ```sql
-    CREATE TABLE T1 (c1 INT) STORAGETYPE AS Object;
+    CREATE TABLE t1 (c1 int) storagetype 'object';
+	CREATE TABLE t2 (c1 int) storagetype 'block';
     ```
 
 - **Create database with storage type**
 
     ```sql
-    CREATE DATABASE db1 WITH STORAGE_TYPE AS Block;
+    CREATE DATABASE db1 storagetype 'object';
+	CREATE DATABASE db1 storagetype 'block';
     ```
 
 - **Alter database storage type**
 
     ```sql
-    ALTER DATABASE db2 WITH STORAGE_TYPE AS Object;
+    ALTER DATABASE db1 storagetype 'block';
+	ALTER DATABASE db1 storagetype 'object';
     ```
 
 The **storage type of an existing table cannot be changed** once table has been created. To change a table’s storage type, users should create a new table using CTAS (Create Table As Select), specifying the desired `storage_type`.
@@ -63,7 +66,7 @@ The default storage type can be shown using the following query:
 
 | Command                             | Description                  |
 |-------------------------------------|------------------------------|
-| `show storage_type_default_is_object;` | Show default storage type    |
+| `show default_storage_type;` | Show default storage type    |
 
 ### Storage type population
 {: #netezzacossql_stortyppop}
@@ -72,175 +75,42 @@ The default storage type can be shown using the following query:
 - **Database Creation**: If `storagetype` is not specified while table creation, fetch it from the database.
 - **Global Setting**: If `storagetype` is not specified while database creation too, fetch the default storage type from the global setting.
 
-### Example queries
-{: #eg_quiers}
+### Session storage type setting
+{: #session_type_settings}
 
-#### Creating tables with different storage types
-{: #creating_strge}
-
-```sql
-CREATE TABLE t1 (c1 int);
-CREATE TABLE t2 (c1 int) storagetype 'object';
-CREATE TABLE t3 (c1 int) storagetype 'block';
-```
-
-#### Selecting storage source
-{: #select_strge_srce}
+The session storage type can be set for a particular session  using the following syntax:
 
 ```sql
-SELECT RELNAME, storagesource FROM _T_CLASS WHERE RELORIGOID > 200000 ORDER BY RELNAME;
+set default_storage_type = 'object';
 ```
 
-#### Dropping tables
-{: #drop_tables}
+To view the current effective session storage type setting, use:
 
 ```sql
-DROP TABLE t1 IF EXISTS;
-DROP TABLE t2 IF EXISTS;
-DROP TABLE t3 IF EXISTS;
+show default_storage_type;
 ```
 
-### Database operations
-{: #db_ops}
-
-#### Setting catalog to system
-{: #set_cat_sys}
+Example output:
 
 ```sql
-SET catalog system;
+NOTICE: DEFAULT_STORAGE_TYPE = Object
 ```
 
-#### Dropping and creating database
-{: #drop_db}
 
-```sql
-DROP DATABASE test_crdb;
-CREATE DATABASE test_crdb;
-```
 
-#### Setting catalog to test database
-{: #setting_cat_test_db}
 
-```sql
-SET catalog test_crdb;
-```
 
-#### Selecting storage source from database
-{: #selecting_stege_db}
-
-```sql
-SELECT DATNAME, storagesource FROM _t_database WHERE DATNAME = 'TEST_CRDB';
-```
-
-#### Creating tables in test database
-{: #creating_test_db}
-
-```sql
-CREATE TABLE t1 (c1 int);
-CREATE TABLE t2 (c1 int) storagetype 'object';
-CREATE TABLE t3 (c1 int) storagetype 'block';
-```
-
-#### Dropping tables in test database
-{: #dropping_test_db}
-
-```sql
-DROP TABLE t1 IF EXISTS;
-DROP TABLE t2 IF EXISTS;
-DROP TABLE t3 IF EXISTS;
-```
-
-#### Dropping test database
-{: #drop_test_db}
-
-```sql
-SET catalog system;
-DROP DATABASE test_crdb;
-```
-
-### Creating database with specific storage types
-{: #create_db_spec_strge_type}
-
-#### Creating database with 'object' storage type
-{: #create_db_obj_strge_type}
-
-```sql
-SET catalog system;
-DROP DATABASE test_crdb;
-CREATE DATABASE test_crdb storagetype 'object';
-SET catalog test_crdb;
-\c test_crdb
-SELECT DATNAME, storagesource FROM _t_database WHERE DATNAME = 'TEST_CRDB';
-CREATE TABLE t1 (c1 int);
-CREATE TABLE t2 (c1 int) storagetype 'object';
-CREATE TABLE t3 (c1 int) storagetype 'block';
-SELECT RELNAME, storagesource FROM _T_CLASS WHERE RELORIGOID > 200000 ORDER BY RELNAME;
-DROP TABLE t1 IF EXISTS;
-DROP TABLE t2 IF EXISTS;
-DROP TABLE t3 IF EXISTS;
-SET catalog system;
-DROP DATABASE test_crdb;
-```
-
-#### Creating database with 'block' storage type
-{: #create_db_blk_strge_type}
-
-```sql
-SET catalog system;
-DROP DATABASE test_crdb;
-CREATE DATABASE test_crdb storagetype 'block';
-SET catalog test_crdb;
-SELECT DATNAME, storagesource FROM _t_database WHERE DATNAME = 'TEST_CRDB';
-CREATE TABLE t1 (c1 int);
-CREATE TABLE t2 (c1 int) storagetype 'object';
-CREATE TABLE t3 (c1 int) storagetype 'block';
-SELECT RELNAME, storagesource FROM _T_CLASS WHERE RELORIGOID > 200000 ORDER BY RELNAME;
-DROP TABLE t1 IF EXISTS;
-DROP TABLE t2 IF EXISTS;
-DROP TABLE t3 IF EXISTS;
-SET catalog system;
-DROP DATABASE test_crdb;
-```
-
-# Storage Type Configuration in the System
-{: #storagetype_configsys}
-
-Configure and manage storage types for tables and databases in the system, including global, database-level, and session-level settings.
-
-## Global Storage Type Setting
-{: #gsts}
-
-- The global storage type can be set system-wide using the following syntax:
-
-    ```sql
-    set default_storage_type = 'object';
-    ```
-
-- To view the current effective global storage type setting, use:
-
-    ```sql
-    show default_storage_type;
-    ```
-
-    Example output:
-
-    ```sql
-    NOTICE:  DEFAULT_STORAGE_TYPE = Object
-    ```
-
-- The global setting is stored in `postgresql.conf` located in the data directory. Changes require a system restart to take effect.
-
-## Precedence of Storage Type Settings
+## Precedence of storage type settings
 {: #proce_sts}
 
 The effective storage type applied when creating a table follows this precedence order:
 
-1. **Create Table Statement** — If specified explicitly during table creation.
-2. **Session Setting** — If not specified in the create statement, the session-level setting applies.
-3. **Database Setting** — If no session setting exists, the database-level default is used.
-4. **System Setting** — If none of the above are set, the global system-wide default applies.
+1. **Create table statement** — If specified explicitly during table creation.
+2. **Session setting** — If not specified in the create statement, the session-level setting applies.
+3. **Database setting** — If no session setting exists, the database-level default is used.
+4. **System setting** — If none of the above are set, the global system-wide default applies.
 
-## Viewing Table Storage Type
+## Viewing table storage type
 {: #view_tst}
 
 To determine the storage type of an existing table, use the `\d` command:
@@ -260,7 +130,7 @@ Distributed on hash: "C1"
 Storagetype: Block
 ```
 
-## Creating Tables with Specific Storage Types
+## Creating tables with specific storage types
 {: #create_table_sst}
 
 - Once created, a table's storage type cannot be changed.
@@ -275,7 +145,7 @@ Storagetype: Block
 
 - Materialized views inherit the storage type from their base tables; there is no option to specify storage type directly for materialized views.
 
-## Database-Level Storage Type Setting
+## Database-level storage type setting
 {: #dl_sts}
 
 - When creating a database, you can specify the default storage type for tables created within it:
@@ -307,7 +177,7 @@ Storagetype: Block
     SYSTEM   | SYSTEM DEFAULT
     ```
 
-## Upgrade Considerations
+## Upgrade considerations
 {: #upgrade_consd}
 
 - During upgrades from releases supporting only block storage to those supporting object storage:
