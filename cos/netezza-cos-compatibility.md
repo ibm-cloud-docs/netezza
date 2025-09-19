@@ -22,7 +22,7 @@ subcollection: netezza
 # Compatibility and upgrade considerations
 {: #netezzacompatibility}
 
-The Object Storage (COS) feature is designed to minimize upgrade and downgrade impacts by allowing existing systems to support object storage without disruption. Customers can add COS bucket configurations seamlessly when upgrading to a version that supports this feature. However, once object storage is in use, downgrading to versions lacking COS support will be disabled to prevent incompatibility issues.
+The Object Storage (COS) feature is designed to minimize upgrade and downgrade impacts by allowing existing systems to support object storage without disruption. Customers can add COS bucket configurations seamlessly when upgrading to a version that supports this feature.
 
 Future enhancements to DPM metadata and object naming conventions may require changes to upgrade and downgrade processes.
 {: note}

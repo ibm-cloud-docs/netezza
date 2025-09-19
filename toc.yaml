@@ -89,7 +89,6 @@ toc:
               topics:
               - cos/netezza-cos-sql.md
           - cos/netezza-cos-objstrge.md
-          - cos/netezza-cos-cmd.md
           - cos/netezza-cos-compatibility.md
   - navgroup:
       id: howto
