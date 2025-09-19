@@ -24,11 +24,6 @@ subcollection: netezza
 
 Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native object storage support, offering scalability levels beyond traditional file or block-based storage. Object storage is a data storage technology that manages data as objects, providing practically unlimited and pain-free scalability, high uptimes, easier data sharing and movement, and lower storage costs.
 
-## User experience
-{: #user_exp}
-
-Netezza Performance Server offers seamless integration with Native Cloud Object Storage (NCOS), enabling a straightforward path for adoption. To create a table that utilizes object storage, users follow the standard table creation process with storage type selection or using database or system level settings.
-
 ## What is Hybrid Storage?
 {: #hybri_strge}
 

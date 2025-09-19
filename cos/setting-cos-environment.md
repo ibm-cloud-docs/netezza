@@ -20,4 +20,4 @@ subcollection: netezza
 {:caption: .caption}
 
 # Setting up a cloud object storage environment
-{: #netezzacosobjstrge_bkt}
+{: #netezzacosobjstrge_env}

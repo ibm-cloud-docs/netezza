@@ -76,6 +76,7 @@ toc:
           label: Netezza cloud object storage
           topics:
           - cos/netezza-cos-introduction.md
+          - cos/netezza-cos-userexperience.md
           - cos/netezza-cos-architecture.md
           - cos/netezza-cos-gettingstarted.md
           - topicgroup:

@@ -29,10 +29,3 @@ The Netezza architecture consists of three distinct storage layers:
 **Object storage:** Each SPU is attached to object storage, allowing tables to be stored optionally on object storage.
 
 **Local SSD caching:** Both block and object storage leverage local SSD caching to provide a similar experience.
-
-## Object naming and deletion
-{: #obj_naming_del}
-
-**Object naming:** Each object saved in the object store has a prefix `/nps/<instance name>/<dbuuid>/<dsid>`.
-
-**Object deletion:** An asynchronous garbage cleaner performs object deletion, but metadata objects are not automatically deleted.
