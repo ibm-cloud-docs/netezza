@@ -33,7 +33,7 @@ subcollection: netezza
 
 Netezza Cloud Object Storage (COS)
 
-:   Netezza now supports a hybrid storage architecture by integrating Cloud Object Storage (COS), allowing users to leverage both block storage and object storage for their data workloads. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosoverview).
+:   Netezza now supports a hybrid storage architecture by integrating Cloud Object Storage (COS), allowing users to leverage both block storage and object storage for their data workloads. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
 
 Azure Marketplace integration
 
