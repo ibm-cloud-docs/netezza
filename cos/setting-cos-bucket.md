@@ -55,3 +55,47 @@ Before enabling object storage on AWS, ensure you have:
 
     Enabling object storage requires restarting the system. Once object storage is enabled, it cannot be disabled.
     {: note}
+
+
+
+
+
+## Post-Upgrade procedure: Enabling object storage in Netezza
+{: #post-upg}
+
+### Log in to the console
+{: #log-cons-cos}
+
+- Access the Netezza Console using administrator credentials.
+- Navigate to **Settings**.
+
+### Configure object storage bucket
+{: #conf-objbuckt}
+
+- Locate the **Object Storage** section.
+- Click the button to **Configure AWS S3 (or compliant) bucket**.
+- Follow the on-screen instructions to provide bucket details and credentials.
+
+If you prefer to configure the bucket **without credentials** by granting **cross-tenant access** to Netezza, please contact **IBM Support**.
+{: note}
+
+### Enable object storage
+{: #enable-objstge}
+
+- Once the bucket is successfully configured, the button will change to **Enable Object Storage**.
+- Click **Enable Object Storage**.
+
+
+- This operation will **restart the Netezza database**, resulting in **temporary downtime**.
+- All console operations will be **suspended** during this process.
+- You will be unable to navigate to other pages or perform any actions until the operation completes.
+{: note}
+
+### Wait for synchronization
+{: #wait-sync-cos}
+
+- After configuring the bucket, **wait at least 2 minutes** before enabling object storage.
+- This wait is **mandatory** to allow settings to synchronize across Netezza processes.
+
+Once enabled, **Object Storage cannot be disabled** via the console or command-line tools. To revert or modify object storage settings, contact **IBM Support**.
+{: note}
