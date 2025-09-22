@@ -81,7 +81,7 @@ toc:
           - topicgroup:
               label: Environment setup
               topics:
-              - cos/setting-cos-environment.md
+            # - cos/setting-cos-environment.md
               - cos/setting-cos-bucket.md
           - topicgroup:
               label: Database object management

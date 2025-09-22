@@ -32,8 +32,10 @@ Before enabling object storage on AWS, ensure you have:
 ### Access the settings page
 {: #access_settings}
 
-1. Sign in to the system.
-2. Navigate to the settings page.
+1. Login to your console account.
+2. Click on ☰ Menu Icon (breadcrumb/top menu) and navigate to **Settings**.
+3. In the menu, look for or search for `Object Storage`.
+4. Click on **Object Storage** to open its dedicated settings or management page.
 
 ### Add a COS bucket
 {: #add_cos_bkt}
@@ -56,11 +58,7 @@ Before enabling object storage on AWS, ensure you have:
     Enabling object storage requires restarting the system. Once object storage is enabled, it cannot be disabled.
     {: note}
 
-
-
-
-
-## Post-Upgrade procedure: Enabling object storage in Netezza
+## Post-upgrade procedure: Enabling object storage in Netezza
 {: #post-upg}
 
 ### Log in to the console
@@ -84,12 +82,9 @@ If you prefer to configure the bucket **without credentials** by granting **cros
 
 - Once the bucket is successfully configured, the button will change to **Enable Object Storage**.
 - Click **Enable Object Storage**.
-
-
 - This operation will **restart the Netezza database**, resulting in **temporary downtime**.
 - All console operations will be **suspended** during this process.
 - You will be unable to navigate to other pages or perform any actions until the operation completes.
-{: note}
 
 ### Wait for synchronization
 {: #wait-sync-cos}

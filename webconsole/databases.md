@@ -43,15 +43,16 @@ You can access database information by using the web console.
 {: #create-db}
 
 1. Go to **Databases**.
-1. Click **Create database** after selecting following options:
+2. Click **Create database** after selecting following options:
    - Netezza
    - Lakehouse
-1. Add all inputs based on the option selected. Type a name for the database.
+3. Add all inputs based on the option selected. Type a name for the database.
    If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.
-1. Optional: Specify the retention time interval (in days) for the database.
+4. Select the storage type from the drop-down: **Block**, **Default**, or **Object**.
+5. Optional: Specify the retention time interval (in days) for the database.
    You can select between 1 day and up to 99 days.
    For more information on retention time interval and time travel, see [{{site.data.keyword.netezza_short}} time travel](/docs/netezza?topic=netezza-enablingdisabling_tt).
-1. Click **Create**.
+6. Click **Create**.
 
 ## Assigning owners to databases
 {: #assigning_db}
