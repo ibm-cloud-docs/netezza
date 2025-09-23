@@ -24,13 +24,6 @@ subcollection: netezza
 
 Netezza Performance Server offers seamless integration with Native Cloud Object Storage (NCOS), enabling a straightforward path for adoption. To create a table that utilizes object storage, users follow the standard table creation process with storage type selection or using database or system level settings.
 
-## Object naming and deletion
-{: #obj_naming_del}
-
-**Object naming:** Each object saved in the object store has a prefix `/nps/<instance name>/<dbuuid>/<dsid>`.
-
-**Object deletion:** An asynchronous garbage cleaner performs object deletion, but metadata objects are not automatically deleted.
-
 ## How to use object storage
 {: #htuos}
 
@@ -52,7 +45,13 @@ Default storage remains Block even after enabling Object Storage.
 - Click **Create Database**.
 - Set `Storage Type = Object`.
 
-For more information, see [Creating databases](/docs/netezza?topic=netezza-databases).
+Example:
+ ```bash
+CREATE DATABASE <database_name> WITH STORAGE TYPE 'OBJECT';
+```
+{: codeblock}
+
+For more information, see [Creating databases](/docs/netezza?topic=netezza-databases), [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=nscr-create-database).
 
 ### Create a table with object storage
 {: #catwos}
@@ -60,11 +59,25 @@ For more information, see [Creating databases](/docs/netezza?topic=netezza-datab
 - Go to the **Tables** page.
 - Click Create Table.
 - Choose `Storage Type = Object`.
-- You can select **default** only if the database was created with object storage.
 
-For more information, see [Creating tables](/docs/netezza?topic=netezza-create-tables#creating-tables)
+Example:
+ ```bash
+CREATE TABLE <table_name> (
+    <column_name> <data_type>
+) STORAGETYPE 'OBJECT';
+```
+{: codeblock}
+
+For more information, see [Creating tables](/docs/netezza?topic=netezza-create-tables#creating-tables), [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=nscr-create-table).
 
 Existing tables will remain on Block Storage. To change the system-wide default to object storage, contact support.
 {: note}
 
 Additional reference: [SQL syntax for storage type specification](/docs/netezza?topic=netezza-netezzacossql).
+
+## Object naming and deletion
+{: #obj_naming_del}
+
+**Object naming:** Each object saved in the object store has a prefix `/nps/<instance name>/<dbuuid>/<dsid>`.
+
+**Object deletion:** An asynchronous garbage cleaner performs object deletion, but metadata objects are not automatically deleted.

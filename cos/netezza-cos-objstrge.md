@@ -19,10 +19,10 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Netezza Cloud Object Storage utilisation
+# Netezza Cloud Object Storage Utilization
 {: #netezza_cososm}
 
-## Monitoring Cloud Object Storage utilization
+## Monitoring Cloud Object Storage Utilization
 {: #monitoring_cloud}
 
 Cloud Object Storage utilization can be monitored from the Dashboard page for a high-level overview. For detailed insights into data slice utilization, please refer to the **Infrastructure** page.

@@ -48,7 +48,11 @@ You can access database information by using the web console.
    - Lakehouse
 3. Add all inputs based on the option selected. Type a name for the database.
    If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.
-4. Select the storage type from the drop-down: **Block**, **Default**, or **Object**.
+4. If the database type is `Netezza`, select a storage type from the drop-down: **Block**, **Default**, or **Object**.
+
+      Specify the default storagetype to be used for objects created within the database. For more information on storagetypes, see [Default storage type](/docs/netezza?topic=netezza-netezzacossql#netezzacossql_defstortyp).
+      {: note}
+
 5. Optional: Specify the retention time interval (in days) for the database.
    You can select between 1 day and up to 99 days.
    For more information on retention time interval and time travel, see [{{site.data.keyword.netezza_short}} time travel](/docs/netezza?topic=netezza-enablingdisabling_tt).

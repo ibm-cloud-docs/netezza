@@ -62,11 +62,26 @@ The **storage type of an existing table cannot be changed** once table has been 
 ## Default storage type
 {: #netezzacossql_defstortyp}
 
-The default storage type can be shown using the following query:
+The **default storage type** determines how data is stored by default when no specific storage type is specified.
 
-| Command                             | Description                  |
-|-------------------------------------|------------------------------|
-| `show default_storage_type;` | Show default storage type    |
+To change this setting, update the `default_storage_type` variable in the configuration file located at:
+
+```bash
+/nz/data/postgresql.conf
+```
+
+After making the change, send a `SIGHUP` signal to the `postmaster` process to apply the update.
+
+Currently, this operation requires assistance from IBM Support. A console-based facility to modify this setting is planned for future releases.
+{: note}
+
+The show statement prints the **effective** setting and not necessarily the system setting. Effective setting means the storagetype that will be applicable to the table in case it is not specified explicitly specified as part of the create table statement.
+
+The setting can also be changed at session level:
+
+```sql
+set default_storage_type = 'object';
+```
 
 ### Storage type population
 {: #netezzacossql_stortyppop}
@@ -75,111 +90,107 @@ The default storage type can be shown using the following query:
 - **Database Creation**: If `storagetype` is not specified while table creation, fetch it from the database.
 - **Global Setting**: If `storagetype` is not specified while database creation too, fetch the default storage type from the global setting.
 
-### Session storage type setting
-{: #session_type_settings}
-
-The session storage type can be set for a particular session  using the following syntax:
-
-```sql
-set default_storage_type = 'object';
-```
-
-To view the current effective session storage type setting, use:
+The show statement prints the 'effective' setting and not necessarily the system setting. Effective setting means the storagetype that will be applicable to the table in case it is not specified explicitly specified as part of the create table statement.
 
 ```sql
 show default_storage_type;
+NOTICE:  DEFAULT_STORAGE_TYPE = Object
 ```
 
-Example output:
-
-```sql
-NOTICE: DEFAULT_STORAGE_TYPE = Object
-```
-
-
-
-
-
-## Precedence of storage type settings
+## Storage Type Precedence for Table Creation
 {: #proce_sts}
 
-The effective storage type applied when creating a table follows this precedence order:
+When creating a table, the system determines the storage type based on the following precedence:
 
-1. **Create table statement** — If specified explicitly during table creation.
-2. **Session setting** — If not specified in the create statement, the session-level setting applies.
-3. **Database setting** — If no session setting exists, the database-level default is used.
-4. **System setting** — If none of the above are set, the global system-wide default applies.
+1. **CREATE TABLE statement**
+2. **Session-level setting**
+3. **Database-level setting**
+4. **System-wide setting**
 
-## Viewing table storage type
+The first and highest precedence is the `CREATE TABLE` statement itself. If the `storagetype` is not explicitly specified in the statement, the system checks whether a session-level setting has been applied. If not, it looks for the default storage type set at the database level. If the database-level setting is `"default"`, the system-wide `DEFAULT_STORAGE_TYPE` will be used.
+
+### Viewing table storage type
 {: #view_tst}
 
-To determine the storage type of an existing table, use the `\d` command:
+To determine the storage type of a table, query the `_v_table` system view:
 
 ```sql
-SYSTEM.ADMIN(ADMIN)=> \d test_table
+SELECT TABLENAME, STORAGESOURCE FROM _v_table WHERE TABLENAME = 'T1';
 ```
 
-Example output snippet:
+The storagetype for a table can be determined from system view _v_table. Here, 1 represents `block` and 2 stands for `object`.
 
-```tableeg1
-Table "TEST_TABLE"
-Attribute | Type                | Modifier | Default Value
-----------+---------------------+----------+--------------
-C1        | CHARACTER VARYING(2)|          |
-Distributed on hash: "C1"
-Storagetype: Block
+```
+ TABLENAME | STORAGESOURCE
+-----------+---------------
+ T1        |             2
+(1 row)
 ```
 
-## Creating tables with specific storage types
-{: #create_table_sst}
+Once a table is created, its `storagetype` **cannot be changed**. To copy a table to a different storage type, use the **CTAS (Create Table As Select)** statement as following:
 
-- Once created, a table's storage type cannot be changed.
-- To copy a table to another storage type, use the `CREATE TABLE AS SELECT` (CTAS) statement with the `storagetype` option:
+```sql
+CREATE TABLE t3 AS (SELECT * FROM t1) STORAGETYPE 'block';
+```
 
-    ```sql
-    CREATE TABLE t3 as (select * from t1) storagetype 'block';
-    ```
+Parentheses around the `SELECT` statement are **required**
+{: note}
 
-    Parentheses around the nested select statement are required currently.
-    {: note}
 
-- Materialized views inherit the storage type from their base tables; there is no option to specify storage type directly for materialized views.
+You **cannot specify** `storagetype` for materialized views. The storage type is **inherited from the base table**.
+{: note}
 
-## Database-level storage type setting
-{: #dl_sts}
+During an upgrade from a release that supports **only block storage** to one that supports **object storage**, all existing tables will have their `storagetype` set to `'block'`.
+{: note}
 
-- When creating a database, you can specify the default storage type for tables created within it:
 
-    ```sql
-    create database database1 storagetype 'block';
-    ```
 
-- If not specified, the database inherits the session or system-wide default storage type.
-- To keep the database default storage type unset (i.e., defer to higher precedence), specify `'default'`:
+## Setting `storagetype` for a Database
 
-    ```sql
-    create database database1 storagetype 'default';
-    ```
 
-- To check the default storage type for all databases, query the `_v_database` view:
+The default storagetype to be applied to tables created in a particular database can be specified while creating the database.
 
-    ```sql
-    SYSTEM.ADMIN(ADMIN)=> select database, storagetype from _v_database;
-    ```
+1. **`CREATE DATABASE` statement**
+2. **Session-level setting**
+3. **System-wide setting**
 
-    Example output:
+You can set the default `storagetype` for a database during creation:
 
-    ```sql
-    DATABASE | STORAGETYPE
-    ---------+-------------
-    DB1      | BLOCK
-    DB2      | OBJECT
-    SYSTEM   | SYSTEM DEFAULT
-    ```
+```sql
+CREATE DATABASE database1 STORAGETYPE 'block';
+```
 
-## Upgrade considerations
-{: #upgrade_consd}
+If `storagetype` is **not specified**, the system will:
 
-- During upgrades from releases supporting only block storage to those supporting object storage:
-    - All existing tables will have their storage type set to `'block'`.
-    - All existing databases will have their default storage type set to `'block'`.
+- Check for a **session-level setting**.
+- If none is found, use the **system-wide default**.
+- This value is then stored internally as the database's default `storagetype`.
+
+To **leave the default unset** at the database level, use:
+
+```sql
+CREATE DATABASE database1 STORAGETYPE 'default';
+```
+
+To check the default `storagetype` for databases, query the `_v_database` system view:
+
+```sql
+SELECT DATABASE, STORAGETYPE FROM _v_database;
+```
+
+**Example output:**
+
+```
+ DATABASE |  STORAGETYPE
+----------+----------------
+ DB1      | BLOCK
+ DB2      | OBJECT
+ SYSTEM   | SYSTEM DEFAULT
+(3 rows)
+```
+
+
+During an upgrade from a release that supports **only block storage** to one that supports **object storage** the default `storagetype` for all existing databases will be set to `'block'`.
+{: note}
+
+The default `storagetype` associated with a database can be changed using the `ALTER DATABASE` command.

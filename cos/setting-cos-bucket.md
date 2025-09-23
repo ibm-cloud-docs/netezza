@@ -34,8 +34,6 @@ Before enabling object storage on AWS, ensure you have:
 
 1. Login to your console account.
 2. Click on ☰ Menu Icon (breadcrumb/top menu) and navigate to **Settings**.
-3. In the menu, look for or search for `Object Storage`.
-4. Click on **Object Storage** to open its dedicated settings or management page.
 
 ### Add a COS bucket
 {: #add_cos_bkt}
