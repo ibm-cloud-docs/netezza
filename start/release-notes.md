@@ -35,10 +35,6 @@ Netezza Cloud Object Storage (COS)
 
 :   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native object storage support, offering scalability levels beyond traditional file or block-based storage. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
 
-Azure Marketplace integration
-
-:   Netezza Bring Your Own Cloud (BYOC) is now listed on the Azure Marketplace. You can easily deploy and access Netezza using your existing Azure account.
-
 Server Certificate Validation for SSL/TLS Authentication
 
 :   To enhance security, server certificate validation is now required for all SSL/TLS connections using ODBC, JDBC, and nzsql. Users must specify the CA certificate path using the `caCertFile` parameter, similar to how the securityLevel parameter is used. For more information, see [Steps to acquire SSL certificates for netezza](/docs/netezza?topic=netezza-step_acq_sslcert).
