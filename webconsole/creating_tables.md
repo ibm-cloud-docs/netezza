@@ -23,7 +23,7 @@ subcollection: netezza
 # Tables
 {: #create-tables}
 
-In the table from the **Tables** tab, the value that is displayed in the row count column is an approximate. The exact row count is available after you run the `GENERATE STATISTICS ON <table_name>` command. 
+In the table from the **Tables** tab, the value that is displayed in the row count column is an approximate. The exact row count is available after you run the `GENERATE STATISTICS ON <table_name>` command.
 
 ## Creating tables
 {: #creating-tables}
@@ -33,26 +33,29 @@ In the table from the **Tables** tab, the value that is displayed in the row cou
 1. Select the schema in which you want to create a table.
 1. Ensure that you are in the **DB Objects > Tables** tab.
 1. Click **Create table**.
-1. Type a name for the table.  
-   If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.  
+1. Type a name for the table.
+   If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.
    You can select a name that has up to 128 characters. The name must begin with a letter or an underscore and can't contain embedded spaces. The name must be unique.
-1. Optional: Specify the retention time interval (in days) for the table.  
+1. Optional: Specify the retention time interval (in days) for the table.
    You can select between 1 day and up to 99 days, or zero to alter a temporal table to nontemporal.
 1. Add columns to the table:
 
    1. In the **Columns** section, under **Name**, type a name for the column.
       The name must start with a letter.
-   1. Select your column type.  
-      The data type restricts the type of data that can be stored in a column. For example, preventing entry of alphanumeric characters into a numeric field.  
+   1. Select your column type.
+      The data type restricts the type of data that can be stored in a column. For example, preventing entry of alphanumeric characters into a numeric field.
       Data types also help sort data correctly and play a role in optimizing storage. For all these reasons, it is important to pick the appropriate data type.
-   1. Specify whether `Not null` is true or false.  
+   1. Specify whether `Not null` is true or false.
       A column that allows NULL values also allows rows to be inserted with no value in that column. A column that does not allow NULL values does not accept rows with no value.
-   1. Specify the default value to be used if no value is specified when a row is inserted.      
+   1. Specify the default value to be used if no value is specified when a row is inserted.
    1. In the **Distribute on** and **Organize on** sections, specify the distribution key for the table by selecting up to four columns.
 
       To add another column, click the plus sign.
 
 1. Click **Create**.
+
+To create a new table, simply type the `CREATE TABLE` query in the query editor.
+{: note}
 
 ### Column and table constraints
 {: #constraints-table-column}
@@ -80,9 +83,9 @@ You cannot change constraint names or directly change the owner of the constrain
 ## Grooming tables
 {: #groom-tbls}
 
-`GROOM TABLES` processes and reorganizes table records in each data slice in a series of steps. You can still run operations such as `SELECT`, `UPDATE`, `DELETE`, and `INSERT` while data grooming is happening.  
-`SELECT` operations run in parallel with the groom operations.  
-`INSERT`, `UPDATE`, and `DELETE` operations run serially between the groom steps.  
+`GROOM TABLES` processes and reorganizes table records in each data slice in a series of steps. You can still run operations such as `SELECT`, `UPDATE`, `DELETE`, and `INSERT` while data grooming is happening.
+`SELECT` operations run in parallel with the groom operations.
+`INSERT`, `UPDATE`, and `DELETE` operations run serially between the groom steps.
 For cluster based tables (CBTs), `GRROM TABLE` takes longer. Tthe `INSERT`, `UPDATE`, and `DELETE` operations might be pending longer until the current step completes.
 
 You can use the Groom Table functionality to reclaim disk space from deleted or outdated rows. You can also use this option to reorganize tables based on the clustered base table organizing keys or to migrate data from tables that have multiple stored versions.
@@ -121,7 +124,7 @@ You can choose different modes when you groom tables.
 1. Select the database and schema in which the table that you want to update is.
 1. Select the table for which you want to assign an owner.
 1. From the overflow menu, click **Assign owner**.
-1. Select an owner for the table.  
+1. Select an owner for the table.
 1. Click **Assign**.
 
 ## Renaming tables
@@ -130,7 +133,7 @@ You can choose different modes when you groom tables.
 1. Go to **Databases**.
 1. Select the database and schema in which the table that you want to rename is.
 1. From the overflow menu, click **Rename**.
-1. Type a new name for the table.  
+1. Type a new name for the table.
    If the name contains special characters, enclose it in double quotation marks. The dot character (".") is not supported.
 1. Click **Rename**.
 
@@ -141,8 +144,8 @@ You can choose different modes when you groom tables.
 1. Select the database and schema in which the table that you want to update is.
 1. Select the table.
 1. From the overflow menu, click **Update interval**.
-1. Type a retention time interval.  
-   You can select between 1 day and up to 99 days, or zero to alter a temporal database to nontemporal. 
+1. Type a retention time interval.
+   You can select between 1 day and up to 99 days, or zero to alter a temporal database to nontemporal.
    For more information on retention time interval and time travel, see [{{site.data.keyword.netezza_short}} time travel](/docs/netezza?topic=netezza-enablingdisabling_tt).
 1. Click **Save**.
 
@@ -152,7 +155,7 @@ You can choose different modes when you groom tables.
 1. Go to **Databases**.
 1. Select the database and schema in which the table that you want to update is.
 1. Select the table.
-1. From the overflow menu, click **Drop**.  
+1. From the overflow menu, click **Drop**.
 1. Confirm your choice by clicking **Drop**.
 
 ## Viewing space usage (time travel)
@@ -162,6 +165,5 @@ You can choose different modes when you groom tables.
 1. Select the database and schema in which the temporal table that you want to analyze is located.
 1. Select the table.
 1. Go to the **Time travel** tab.
-1. Analyze the data.  
+1. Analyze the data.
    You can view the information in a list or as a chart.
-   
