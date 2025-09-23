@@ -24,7 +24,7 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 22 September 2025 - 11.3.0.3-IF1
+## 23 September 2025 - 11.3.0.3
 {: #sep2025}
 {: release-note}
 
@@ -35,14 +35,11 @@ Netezza Cloud Object Storage (COS)
 
 :   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native object storage support, offering scalability levels beyond traditional file or block-based storage. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
 
-Server Certificate Validation for SSL/TLS Authentication
+Netezza Bring Your Own Cloud on Azure
 
-:   To enhance security, server certificate validation is now required for all SSL/TLS connections using ODBC, JDBC, and nzsql. Users must specify the CA certificate path using the `caCertFile` parameter, similar to how the securityLevel parameter is used. For more information, see [Steps to acquire SSL certificates for netezza](/docs/netezza?topic=netezza-step_acq_sslcert).
+:   Announcing the general availability of Netezza BYOC on Azure. IBM Netezza as a Service Bring Your Own Cloud (BYOC) represents a transformative leap in cloud data and analytics solutions. This innovative offering is generally available and empowers businesses to deploy Netezza directly within their own Virtual Private Cloud (VPC), thereby enhancing data security and providing greater flexibility in managing their infrastructure. For more information, see [Netezza Performance Server for BYOC](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-byoc).
 
-### Components
-{: #compsep2025}
 
-- `nzcli` version: 11.3.0.3-IF1
 
 ## 08 Aug 2025 - 11.3.0.2
 {: #aug2025}
