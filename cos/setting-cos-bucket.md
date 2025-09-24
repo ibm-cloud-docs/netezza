@@ -38,10 +38,10 @@ subcollection: netezza
 3. Click **Configure AWS S3 (or compliant) bucket**.
 4. Enter the required bucket details and credentials.
    - **Destination**: Amazon AWS
-   - **Region**: Based on your bucket
-   - **Access Key ID** and **Secret Key**
    - **Bucket Name**
+   - **Access Key ID**
    - **Secret Key**
+   - **Region**: Based on your bucket
 5. Wait **2 minutes** for settings to sync.
 6. Click **Enable Object Storage**.
 
