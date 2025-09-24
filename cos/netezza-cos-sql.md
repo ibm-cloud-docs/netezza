@@ -50,52 +50,19 @@ Customers can now define the storage type when creating or altering tables and d
 	ALTER DATABASE db1 storagetype 'object';
     ```
 
-The **storage type of an existing table cannot be changed** once table has been created. To change a table’s storage type, users should create a new table using CTAS (Create Table As Select), specifying the desired `storage_type`.
+The **storage type of an existing table cannot be changed** once table has been created. To change a table’s storage type, users should create a new table using CTAS (Create Table As Select), specifying the desired `storagetype`.
 {: note}
 
-## Datasource configuration
+## Database level configuration
 {: #netezzacos_dbconf}
 
-- Users can configure and modify the default datasource's storage type at the **database level**.
+- Users can configure and modify the default storagetype at the **database level**.
 - This allows consistent storage behavior across all tables within a database unless overridden at the individual table level.
 
-## Default storage type
+## Default storagetype
 {: #netezzacossql_defstortyp}
 
-The **default storage type** determines how data is stored by default when no specific storage type is specified.
-
-To change this setting, update the `default_storage_type` variable in the configuration file located at:
-
-```bash
-/nz/data/postgresql.conf
-```
-
-After making the change, send a `SIGHUP` signal to the `postmaster` process to apply the update.
-
-Currently, this operation requires assistance from IBM Support. A console-based facility to modify this setting is planned for future releases.
-{: note}
-
-The show statement prints the **effective** setting and not necessarily the system setting. Effective setting means the storagetype that will be applicable to the table in case it is not specified explicitly specified as part of the create table statement.
-
-The setting can also be changed at session level:
-
-```sql
-set default_storage_type = 'object';
-```
-
-### Storage type population
-{: #netezzacossql_stortyppop}
-
-- **Table Creation**: The `storagetype` is populated as per the `CREATE TABLE` query.
-- **Database Creation**: If `storagetype` is not specified while table creation, fetch it from the database.
-- **Global Setting**: If `storagetype` is not specified while database creation too, fetch the default storage type from the global setting.
-
-The show statement prints the 'effective' setting and not necessarily the system setting. Effective setting means the storagetype that will be applicable to the table in case it is not specified explicitly specified as part of the create table statement.
-
-```sql
-show default_storage_type;
-NOTICE:  DEFAULT_STORAGE_TYPE = Object
-```
+The **default storagetype** is set to 'block' at system level. Contact IBM Support to change the default.
 
 ## Storage Type Precedence for Table Creation
 {: #proce_sts}
@@ -115,16 +82,16 @@ The first and highest precedence is the `CREATE TABLE` statement itself. If the 
 To determine the storage type of a table, query the `_v_table` system view:
 
 ```sql
-SELECT TABLENAME, STORAGESOURCE FROM _v_table WHERE TABLENAME = 'T1';
+SELECT TABLENAME, STORAGESOURCE, CASE WHEN STORAGESOURCE = 1 THEN 'BLOCK' WHEN STORAGESOURCE = 2 THEN 'OBJECT' END AS STORAGETYPE FROM _v_table WHERE TABLENAME like 'TEST_%';
 ```
 
 The storagetype for a table can be determined from system view _v_table. Here, 1 represents `block` and 2 stands for `object`.
 
-```
- TABLENAME | STORAGESOURCE
------------+---------------
- T1        |             2
-(1 row)
+```table
+| TABLENAME | STORAGESOURCE | STORAGETYPE |
+|-----------|---------------|-------------|
+| TEST_OBJ  | 2             | OBJECT      |
+| TEST_BLK  | 1             | BLOCK       |
 ```
 
 Once a table is created, its `storagetype` **cannot be changed**. To copy a table to a different storage type, use the **CTAS (Create Table As Select)** statement as following:
@@ -143,10 +110,8 @@ You **cannot specify** `storagetype` for materialized views. The storage type is
 During an upgrade from a release that supports **only block storage** to one that supports **object storage**, all existing tables will have their `storagetype` set to `'block'`.
 {: note}
 
-
-
 ## Setting `storagetype` for a Database
-
+{: #setting_Strge_type}
 
 The default storagetype to be applied to tables created in a particular database can be specified while creating the database.
 

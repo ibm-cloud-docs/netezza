@@ -20,7 +20,7 @@ subcollection: netezza
 {:caption: .caption}
 
 # Setting up a cloud object storage bucket
-{: #netezzacosobjstrge_bkt}
+{: #cloudobjectstorage}
 
 ## Prerequisites
 {: #prereq}

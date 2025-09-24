@@ -25,4 +25,4 @@ subcollection: netezza
 ## Monitoring Cloud Object Storage Utilization
 {: #monitoring_cloud}
 
-Cloud Object Storage utilization can be monitored from the Dashboard page for a high-level overview. For detailed insights into data slice utilization, please refer to the **Infrastructure** page.
+Cloud Object Storage utilization can be monitored from the web console's **Dashboard** page for a high-level overview. For detailed insights into data slice utilization, please refer to the web console's **Infrastructure** page.
