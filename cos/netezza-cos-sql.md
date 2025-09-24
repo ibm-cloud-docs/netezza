@@ -64,7 +64,7 @@ The **storage type of an existing table cannot be changed** once table has been 
 
 The **default storagetype** is set to 'block' at system level. Contact IBM Support to change the default.
 
-## Storage Type Precedence for Table Creation
+## Storage type precedence for table creation
 {: #proce_sts}
 
 When creating a table, the system determines the storage type based on the following precedence:

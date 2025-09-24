@@ -22,73 +22,41 @@ subcollection: netezza
 # Setting up a cloud object storage bucket
 {: #cloudobjectstorage}
 
-## Prerequisites
-{: #prereq}
+## Enable object storage on AWS
+{: #enable_objstrge}
 
-Before enabling object storage on AWS, ensure you have:
+### Prepare your S3 bucket
+{: #prep_bkt}
 
-- Created an S3 bucket without public access.
+- Create an **Amazon S3 bucket** with **public access disabled**.
 
-### Access the settings page
-{: #access_settings}
+### Add COS bucket in console
+{: #prep_bkt}
 
-1. Login to your console account.
-2. Click on ☰ Menu Icon (breadcrumb/top menu) and navigate to **Settings**.
+1. Log in to your console account.
+2. Navigate to **Settings** via the ☰ **Menu Icon**.
+3. Scroll down and click **Add COS bucket**.
+4. Provide the following details:
+   - **Destination**: Amazon AWS or IBM Cloud
+   - **Region**: Based on your credentials
+   - **Access Key ID** and **Secret Key**
+   - **Bucket Name**
 
-### Add a COS bucket
-{: #add_cos_bkt}
+5. Wait **30 seconds** for bucket info to sync across pods.
+6. Once available, click **Enable COS**.
 
-1. At the bottom of the page, click on the **Add COS bucket** option.
-2. Specify the following details:
-	* **Destination**: Choose either Amazon AWS or IBM Cloud.
-	* **Region**: Select a region associated with your credentials.
-	* **Access Key ID**: Enter your access key ID.
-	* **Secret Key**: Enter your secret key.
-	* **Bucket Name**: Enter the name of your public cloud storage bucket resource.
+## Configure in Netezza Console
+{: #config_netezza_console}
 
-### Wait for bucket sync and enable COS
-{: #wait_bkt_sync}
+1. Log in to the **Netezza Console** using administrator credentials.
+2. Go to **Settings** → **Object Storage**.
+3. Click **Configure AWS S3 (or compliant) bucket**.
+4. Enter the required bucket details and credentials.
+5. Wait **2 minutes** for settings to sync.
+6. Click **Enable Object Storage**.
 
-1. Wait for 30 seconds to allow the bucket information to sync across pods.
-2. Once the bucket is added successfully, the option to **Enable COS** will become available.
-3. Click on **Enable COS** to enable object storage.
-
-    Enabling object storage requires restarting the system. Once object storage is enabled, it cannot be disabled.
-    {: note}
-
-## Post-upgrade procedure: Enabling object storage in Netezza
-{: #post-upg}
-
-### Log in to the console
-{: #log-cons-cos}
-
-- Access the Netezza Console using administrator credentials.
-- Navigate to **Settings**.
-
-### Configure object storage bucket
-{: #conf-objbuckt}
-
-- Locate the **Object Storage** section.
-- Click the button to **Configure AWS S3 (or compliant) bucket**.
-- Follow the on-screen instructions to provide bucket details and credentials.
-
-If you prefer to configure the bucket **without credentials** by granting **cross-tenant access** to Netezza, please contact **IBM Support**.
+This will **restart the Netezza database**, causing **temporary downtime**.
 {: note}
 
-### Enable object storage
-{: #enable-objstge}
-
-- Once the bucket is successfully configured, the button will change to **Enable Object Storage**.
-- Click **Enable Object Storage**.
-- This operation will **restart the Netezza database**, resulting in **temporary downtime**.
-- All console operations will be **suspended** during this process.
-- You will be unable to navigate to other pages or perform any actions until the operation completes.
-
-### Wait for synchronization
-{: #wait-sync-cos}
-
-- After configuring the bucket, **wait at least 2 minutes** before enabling object storage.
-- This wait is **mandatory** to allow settings to synchronize across Netezza processes.
-
-Once enabled, **Object Storage cannot be disabled** via the console or command-line tools. To revert or modify object storage settings, contact **IBM Support**.
+Once object storage is enabled, it **cannot be disabled**.
 {: note}
