@@ -33,7 +33,7 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
 - Navigate to `Settings`.
 - Enable `Object Storage`.
 
-Once complete, the message will confirm: `Netezza instance restarted with Object Storage enabled`.
+Once complete, the message will confirm: `Netezza instance restarted with Object Storage enabled`. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage)
 
 Default storage remains Block even after enabling Object Storage.
 {: note}
@@ -47,7 +47,7 @@ Default storage remains Block even after enabling Object Storage.
 
 Example:
  ```bash
-CREATE DATABASE <database_name> WITH STORAGE TYPE 'OBJECT';
+CREATE DATABASE <database_name> STORAGETYPE 'OBJECT';
 ```
 {: codeblock}
 

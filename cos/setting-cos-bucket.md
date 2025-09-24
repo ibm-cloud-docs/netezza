@@ -30,21 +30,6 @@ subcollection: netezza
 
 - Create an **Amazon S3 bucket** with **public access disabled**.
 
-### Add COS bucket in console
-{: #prep_bkt}
-
-1. Log in to your console account.
-2. Navigate to **Settings** via the ☰ **Menu Icon**.
-3. Scroll down and click **Add COS bucket**.
-4. Provide the following details:
-   - **Destination**: Amazon AWS or IBM Cloud
-   - **Region**: Based on your credentials
-   - **Access Key ID** and **Secret Key**
-   - **Bucket Name**
-
-5. Wait **30 seconds** for bucket info to sync across pods.
-6. Once available, click **Enable COS**.
-
 ## Configure in Netezza Console
 {: #config_netezza_console}
 
@@ -52,6 +37,11 @@ subcollection: netezza
 2. Go to **Settings** → **Object Storage**.
 3. Click **Configure AWS S3 (or compliant) bucket**.
 4. Enter the required bucket details and credentials.
+   - **Destination**: Amazon AWS
+   - **Region**: Based on your bucket
+   - **Access Key ID** and **Secret Key**
+   - **Bucket Name**
+   - **Secret Key**
 5. Wait **2 minutes** for settings to sync.
 6. Click **Enable Object Storage**.
 
