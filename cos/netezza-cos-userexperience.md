@@ -51,7 +51,8 @@ CREATE DATABASE <database_name> WITH STORAGE TYPE 'OBJECT';
 ```
 {: codeblock}
 
-For more information, see [Creating databases](/docs/netezza?topic=netezza-databases), [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=nscr-create-database).
+- For detailed instructions on creating databases using the web console, see [Creating databases](/docs/netezza?topic=netezza-databases).
+- For a complete reference on SQL commands, see [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=nscr-create-database).
 
 ### Create a table with object storage
 {: #catwos}
@@ -68,7 +69,9 @@ CREATE TABLE <table_name> (
 ```
 {: codeblock}
 
-For more information, see [Creating tables](/docs/netezza?topic=netezza-create-tables#creating-tables), [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=nscr-create-table).
+- For detailed instructions on creating databases using the web console, see [Creating tables](/docs/netezza?topic=netezza-create-tables#creating-tables).
+- For a complete reference on SQL commands, see [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=nscr-create-table).
+
 
 Existing tables will remain on Block Storage. To change the system-wide default to object storage, contact support.
 {: note}
