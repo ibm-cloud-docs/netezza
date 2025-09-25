@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-05-8"
+lastupdated: "2025-09-19"
 
 keywords: netezza cos
 
@@ -19,9 +19,10 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Object storage metadata management
-{: #netezzacososmm}
+# Netezza Cloud Object Storage Utilization
+{: #netezza_cososm}
 
-- How to monitor and manage storage usage (via nzds or other tools).
-- Best practices for choosing storage types (e.g., cold vs hot data).
-- Guidelines on default storage settings at database or table level.
+## Monitoring Cloud Object Storage Utilization
+{: #monitoring_cloud}
+
+Cloud Object Storage utilization can be monitored from the web console's **Dashboard** page for a high-level overview. For detailed insights into data slice utilization, please refer to the web console's **Infrastructure** page.

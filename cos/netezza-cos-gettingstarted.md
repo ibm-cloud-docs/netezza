@@ -24,19 +24,6 @@ subcollection: netezza
 
 This guide outlines how to configure, manage, and optimize the Cloud Object Storage (COS) feature in IBM Netezza on cloud platforms.
 
-### New Deployments
-
-- COS buckets will be provisioned automatically and configured during system initialization.
-
-### Existing Deployments
-
-- COS can be enabled during upgrade to a supported NPS version.
-- Existing tables can be migrated using CTAS.
-
-### Configuring COS Access
-
-`<<needs data>>`
-
 ## Prerequisites and System Requirements
 {: #pre-requites-sysreq}
 
@@ -49,13 +36,9 @@ IBM Netezza Performance Server (NPS) on:
 
 ### Minimum Version
 
-- COS support requires NPS version X.X.X or later.
+- COS support requires NPS version 11.3.0.3-IF1.
 
 ### Cloud Providers
 
 - **AWS S3** (Standard bucket type required)
 - **Azure Blob Storage** (support planned)
-
-### Required Permissions
-
-- SPUs must have **read and write access** to the COS bucket.

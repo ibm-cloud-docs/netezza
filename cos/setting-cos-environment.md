@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-05-8"
+lastupdated: "2025-09-19"
 
 keywords: netezza cos
 
@@ -19,7 +19,5 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Compatibility and upgrade considerations
-{: #netezzacompatibility}
-
-The object storage support can be enabled on existing systems after upgrading the system to 11.3.0.3-IF1 or later.
+# Setting up a cloud object storage environment
+{: #netezzacosobjstrge_env}

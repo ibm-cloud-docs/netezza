@@ -72,15 +72,23 @@ toc:
           label: Netezza dbt adaptor
           topics:
           - nz_dbt/getting_start_nzdbt.md
-    #   - topicgroup:
-    #       label: Netezza cloud object storage
-    #       topics:
-    #       - cos/netezza-cos-overview.md
-    #       - cos/netezza-cos-gettingstarted.md
-    #       - cos/netezza-cos-sql.md
-    #       - cos/netezza-cos-cmd.md
-    #       - cos/netezza-cos-objstrge.md
-    #       - cos/netezza-cos-compatibility.md
+      - topicgroup:
+          label: Netezza cloud object storage
+          topics:
+          - cos/netezza-cos-introduction.md
+          - cos/netezza-cos-userexperience.md
+          - cos/netezza-cos-gettingstarted.md
+          - topicgroup:
+              label: Environment setup
+              topics:
+            # - cos/setting-cos-environment.md
+              - cos/setting-cos-bucket.md
+          - topicgroup:
+              label: Database object management
+              topics:
+              - cos/netezza-cos-sql.md
+          - cos/netezza-cos-objstrge.md
+          - cos/netezza-cos-compatibility.md
   - navgroup:
       id: howto
       topics:
@@ -174,7 +182,7 @@ toc:
          topics:
          - nzalert/nzalert_overview.md
          - nzalert/nzalert_aws.md
-        #  - nzalert/nzalert_az.md
+         - nzalert/nzalert_az.md
       - topicgroup:
          label: Time travel and historical data
          topics:
@@ -227,6 +235,7 @@ toc:
           - security/architecture-workload-isolation.md
           - security/endpoints.md
           - security/encryption.md
+          - security/ssl_certificate.md
           - security/iam-docs.md
           - reference/network_policies.md
           - link:

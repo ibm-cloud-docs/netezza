@@ -37,6 +37,7 @@ Refer to the [List of event types supported](https://www.ibm.com/docs/en/netezza
 This feature supports following notification methods:
 - Email
 - AWS SNS (for AWS users)
+- Azure Event Grid (for Azure users)
 
 ## Event setup process
 {: #event_setup}
@@ -47,6 +48,7 @@ The event setup process for NPSaaS customers involves the following three steps:
 {: #config_noti}
 
 - **AWS users**: Refer to [nzalert for AWS](/docs/netezza?topic=netezza-nzalert_aws_setup) for infrastructure setup.
+- **Azure users**: Refer to [nzalert for Azure](/docs/netezza?topic=netezza-nzalert_setup) for infrastructure setup.
 - **Email Notifications**: No additional infrastructure setup is required.
 
 ### 2: Create notification methods

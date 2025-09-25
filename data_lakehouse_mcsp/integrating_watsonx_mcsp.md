@@ -42,17 +42,17 @@ Ensure that you obtained the IBM API key by following the steps:
    - The **Service user** role can view the instance, but this role doesn't include permissions that are related to user management like adding more users.
    -  Service level roles:
       - **MetastoreAccess** - External users with read access to the metadata through HMS REST APIs in {{site.data.keyword.lakehouse_short}}.
-      - **DataAccess** - Only supports IKC-{{site.data.keyword.lakehouse_short}} service-to-service authorization to profile data in {{site.data.keyword.lakehouse_short}}. 
+      - **DataAccess** - Only supports IKC-{{site.data.keyword.lakehouse_short}} service-to-service authorization to profile data in {{site.data.keyword.lakehouse_short}}.
 1. Click **Create**. The service ID is created and appears in the table on the **Service IDs** tab.
 1. Click **Options** for the service ID and click **View service ID details**.
 1. From the **Service ID** page, click **Generate key**.
-1. In the **Generate API key** window, enter an API key name and the expiration date and click **Generate key**. 
+1. In the **Generate API key** window, enter an API key name and the expiration date and click **Generate key**.
 
    You must name the API key as `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CREATED>`. The `ID_OF_THE_NEW_SERVICE_ID_CREATED` can be obtained from the MCSP SaaS console. For example: `ibmlhapikey_Serviceid-b8fd5bbf-a95e-4664-85f7-282047433195`
    {: note}
-   
+
 1. Copy the API key from the window.
-   
+
 ## Integrating {{site.data.keyword.netezza_short}} instance or remote client with {{site.data.keyword.lakehouse_short}} by using `nzcli`
 {: #integratesteps_watsonx.data_mcsp}
 
@@ -82,7 +82,7 @@ Ensure that you obtained the IBM API key by following the steps:
 1. Set up HMS with `nz` tool.
 
    ```sql
-    ./nz setup-hms create -connection-name <your connection name> -hms-token <your API key obtained in the `Before you begin` section> -hms-user `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CREATED>` -url <thrift endpoint URL retrieved from watsonx.data instance>
+    ./nz setup-ms create -connection-name <your connection name> -hms-token <your API key obtained in the `Before you begin` section> -hms-user `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CREATED>` -url <thrift endpoint URL retrieved from watsonx.data instance>
    ```
    {: codeblock}
 

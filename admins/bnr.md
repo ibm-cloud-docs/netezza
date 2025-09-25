@@ -83,6 +83,7 @@ You can create a destination bucket for Amazon S3, Azure Blob Storage, and IBM C
 
 1. Log in to the web console.
 1. Go to **Backup and restore > Destinations**.
+1. Select destination type from the drop down list.
 1. Select `Amazon S3` as your destination bucket.
 1. Type a bucket name.
 1. Provide an access key ID.
@@ -95,6 +96,7 @@ You can create a destination bucket for Amazon S3, Azure Blob Storage, and IBM C
 
 1. Log in to the web console.
 1. Go to **Backup and restore > Destinations**.
+1. Select destination type from the drop down list.
 1. Select `Azure Blob Storage` as your destination bucket.
 1. Type a container name.
    To view the container name, in the Azure portal, go to **Storage accounts -> Containers**.
@@ -114,6 +116,7 @@ You can create a destination bucket for Amazon S3, Azure Blob Storage, and IBM C
 
 1. Log in to the web console.
 1. Go to **Backup and restore > Destinations**.
+1. Select destination type from the drop down list.
 1. Select `IBM Cloud Object Storage` as your destination bucket.
 1. Type a bucket name.
 1. Type your access key ID.
