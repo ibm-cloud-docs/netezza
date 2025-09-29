@@ -24,19 +24,40 @@ subcollection: netezza
 
 Netezza Performance Server offers seamless integration with Native Cloud Object Storage (NCOS), enabling a straightforward path for adoption. To create a table that utilizes object storage, users follow the standard table creation process with storage type selection or using database or system level settings.
 
-## How to use object storage
+
+## How to enable object storage
 {: #htuos}
 
-### Enable object storage in settings
-{: #eosis}
+1. Login to the Console
+2. Navigate to `Settings`.
+3. Locate Object Storage Settings
+4. Find the section related to Object Storage.
+5. Configure AWS S3 (or Compatible) Bucket
+6. Click the button to configure your storage bucket and follow the on-screen instructions.
 
-- Navigate to `Settings`.
-- Enable `Object Storage`.
+    If you prefer to configure the bucket without credentials by granting cross-tenant access to Netezza, contact IBM Support for assistance.
+    {: note}
 
-Once complete, the message will confirm: `Netezza instance restarted with Object Storage enabled`. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage)
+7. Once the bucket is configured, the button will change to **Enable Object Storage**.
 
-Default storage remains Block even after enabling Object Storage.
+    This step will restart the Netezza database, resulting in downtime. Please plan accordingly.
+    {: note}
+
+Console Lockdown:
+During the enabling process, all console operations will be suspended. You will not be able to navigate or perform any other actions.
 {: note}
+
+Mandatory Wait Time:
+After configuring the bucket, wait at least a couple of minutes before enabling object storage. This delay ensures proper synchronization between Netezza processes.
+{: note}
+
+Irreversible Action:
+Once enabled, object storage cannot be disabled via the console or command-line tools.
+To disable, you must contact IBM Support.
+{: note}
+
+## How to use object storage
+{: #htuos}
 
 ### Create a database with object storage
 {: #cadwos}
