@@ -137,6 +137,5 @@ The default `storagetype` associated with a database can be changed using the `A
 - **Alter database storage type**
 
     ```sql
-    ALTER DATABASE db1 storagetype 'block';
-	ALTER DATABASE db1 storagetype 'object';
+    ALTER DATABASE <database_name> SET STORAGETYPE '<storage_type>';
     ```
