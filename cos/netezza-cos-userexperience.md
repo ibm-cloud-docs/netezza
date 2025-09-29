@@ -24,7 +24,6 @@ subcollection: netezza
 
 Netezza Performance Server offers seamless integration with Native Cloud Object Storage (NCOS), enabling a straightforward path for adoption. To create a table that utilizes object storage, users follow the standard table creation process with storage type selection or using database or system level settings.
 
-
 ## How to enable object storage
 {: #htuos}
 
@@ -54,7 +53,7 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
 
 - Go to the `Database` page.
 - Click **Create Database**.
-- Set `Storage Type = Object`.
+- Set `Storage Type` = `Object`.
 
 Example:
  ```bash
@@ -70,7 +69,7 @@ CREATE DATABASE <database_name> STORAGETYPE 'OBJECT';
 
 - Go to the **Tables** page.
 - Click Create Table.
-- Choose `Storage Type = Object`.
+- Set `Storage Type` = `Object`.
 
 Example:
  ```bash
