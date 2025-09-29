@@ -53,7 +53,7 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
 
 - Go to the `Database` page.
 - Click **Create Database**.
-- Set `Storage Type` = `Object`.
+- Set `Storage Type` to `Object`.
 
 Example:
  ```bash
@@ -69,7 +69,7 @@ CREATE DATABASE <database_name> STORAGETYPE 'OBJECT';
 
 - Go to the **Tables** page.
 - Click Create Table.
-- Set `Storage Type` = `Object`.
+- Set `Storage Type` to `Object`.
 
 Example:
  ```bash
