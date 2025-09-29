@@ -40,18 +40,12 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
 
 7. Once the bucket is configured, the button will change to **Enable Object Storage**.
 
-    This step will restart the Netezza database, resulting in downtime. Please plan accordingly.
-    {: note}
-
-Console Lockdown:
 During the enabling process, all console operations will be suspended. You will not be able to navigate or perform any other actions.
 {: note}
 
-Mandatory Wait Time:
 After configuring the bucket, wait at least a couple of minutes before enabling object storage. This delay ensures proper synchronization between Netezza processes.
 {: note}
 
-Irreversible Action:
 Once enabled, object storage cannot be disabled via the console or command-line tools.
 To disable, you must contact IBM Support.
 {: note}
