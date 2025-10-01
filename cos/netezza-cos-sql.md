@@ -24,32 +24,6 @@ subcollection: netezza
 
 This section describes the enhancements to the NPS SQL syntax to specify and manage storage types for datasources at both table and database levels. These improvements provide greater flexibility in configuring storage options, similar to existing Lakehouse functionality.
 
-## Storage type configuration in SQL
-{: #netezzacosstortypconsql}
-
-Customers can now define the storage type when creating or altering tables and databases using the following syntax:
-
-- **Create table with storage type**
-
-    ```sql
-    CREATE TABLE t1 (c1 int) storagetype 'object';
-	CREATE TABLE t2 (c1 int) storagetype 'block';
-    ```
-
-- **Create database with storage type**
-
-    ```sql
-    CREATE DATABASE db1 storagetype 'object';
-	CREATE DATABASE db1 storagetype 'block';
-    ```
-
-- **Alter database storage type**
-
-    ```sql
-    ALTER DATABASE db1 storagetype 'block';
-	ALTER DATABASE db1 storagetype 'object';
-    ```
-
 The **storage type of an existing table cannot be changed** once table has been created. To change a table’s storage type, users should create a new table using CTAS (Create Table As Select), specifying the desired `storagetype`.
 {: note}
 
@@ -159,3 +133,9 @@ During an upgrade from a release that supports **only block storage** to one tha
 {: note}
 
 The default `storagetype` associated with a database can be changed using the `ALTER DATABASE` command.
+
+- **Alter database storage type**
+
+    ```sql
+    ALTER DATABASE <database_name> SET STORAGETYPE '<storage_type>';
+    ```
