@@ -55,6 +55,10 @@
       "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
       "tiles": [
           {
+              "date": "29 September 2025",
+              "title": "The latest Netezza release introduces native support for Cloud Object Storage (COS), enabling scalable data management beyond traditional storage formats. Netezza Bring Your Own Cloud (BYOC) is now generally available on Azure, allowing secure deployment within customer-managed VPCs. Additionally, Netezza Software supports Bring Your Own Orchestration, offering flexible deployment on customer hardware or Red Hat OpenShift with scalable architecture for analytics and AI workloads. To enhance security, SSL/TLS connections now require server certificate validation using the caCertFile parameter across ODBC, JDBC, and nzsql clients."
+          },
+        {
               "date": "08 August 2025",
               "title": "Netezza introduces enhanced cloud integration, security, and table management features—including REST catalog support for Iceberg, Azure Gen2 compatibility, customer-managed encryption keys, and AWS Marketplace availability—alongside new notification capabilities for NPSaaS users."
           },
@@ -66,18 +70,6 @@
               "date": "29 May 2025",
               "title": "Database Assistant is now generally available on AWS and Azure, and the Netezza JDBC driver has been updated with enhanced security through JRE 15.0.2 and Kerberos support."
           },
-          {
-              "date": "30 April 2025",
-              "title": "Introduced connection history to easily track all your successful and failed connections with detailed reasons for any failures."
-          },
-          {
-              "date": "19 February 2025",
-              "title": "Added support for scaling (compute/storage) in the paused state."
-          },
-          {
-              "date": "17 January 2025",
-              "title": "Introduced the Netezza Database Assistant chatbot for AWS, a new AI-powered assistant."
-          }
       ]
   }
 }
