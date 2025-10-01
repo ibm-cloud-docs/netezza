@@ -69,7 +69,7 @@
           {
               "date": "29 May 2025",
               "title": "Database Assistant is now generally available on AWS and Azure, and the Netezza JDBC driver has been updated with enhanced security through JRE 15.0.2 and Kerberos support."
-          },
+          }
       ]
   }
 }
