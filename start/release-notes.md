@@ -33,7 +33,7 @@ subcollection: netezza
 
 Netezza Cloud Object Storage (COS)
 
-:   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native support for S3-compatible object storage, enabling users to create tables in Netezza format directly on object storage systems. This enhancement delivers a new level of scalability, flexibility, and cost-efficiency, surpassing the limitations of traditional file or block-based storage architectures. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
+:   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native support for AWS S3 object storage on AWS platform, enabling users to create tables in Netezza format directly on object storage systems. This enhancement delivers a new level of scalability, flexibility, and cost-efficiency, surpassing the limitations of traditional file or block-based storage architectures. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
 
 Netezza Bring Your Own Cloud on Azure
 
