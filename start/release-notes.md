@@ -33,15 +33,15 @@ subcollection: netezza
 
 Netezza Cloud Object Storage (COS)
 
-:   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native object storage support, offering scalability levels beyond traditional file or block-based storage. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
+:   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native support for S3-compatible object storage, enabling users to create tables in Netezza format directly on object storage systems. This enhancement delivers a new level of scalability, flexibility, and cost-efficiency, surpassing the limitations of traditional file or block-based storage architectures. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
 
 Netezza Bring Your Own Cloud on Azure
 
 :   Announcing the general availability of Netezza BYOC on Azure. IBM Netezza as a Service Bring Your Own Cloud (BYOC) represents a transformative leap in cloud data and analytics solutions. This innovative offering is generally available and empowers businesses to deploy Netezza directly within their own Virtual Private Cloud (VPC), thereby enhancing data security and providing greater flexibility in managing their infrastructure. For more information, see [Netezza Performance Server for BYOC](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-byoc).
 
-Netezza Bring Your Own Orchestration
+IBM Netezza Software
 
-:   IBM Netezza Software is now generally available, offering customers unparalleled deployment flexibility on their own hardware and Red Hat OpenShift. This modern architecture allows organizations to cost-optimize their analytics and AI workloads through flexible vertical and horizontal scaling across integrated compute, storage, and cloud object storage, delivering superior price and performance. For more information, see [Netezza Performance Server - Software](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-software).
+:   This form factor provides a comprehensive, software-only deployment of Netezza for data and AI workloads, designed to run on client-provided containerized platforms such as Red Hat OpenShift. It is engineered for high performance and ease of deployment, integrating database, storage, server, and analytics capabilities into a single, standards-based solution. For more information, see [Netezza Performance Server - Software](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-software).
 
 Server Certificate Validation for SSL/TLS Authentication
 
