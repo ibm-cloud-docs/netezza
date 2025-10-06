@@ -1,7 +1,3 @@
-#  Name your file `toc.yaml`
-#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
-#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
----
 toc:
   properties:
     subcollection: netezza
@@ -12,7 +8,6 @@ toc:
     product-page: https://www.ibm.com/products/netezza
     path: netezza
     label: Netezza
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn
@@ -81,7 +76,6 @@ toc:
           - topicgroup:
               label: Environment setup
               topics:
-            # - cos/setting-cos-environment.md
               - cos/setting-cos-bucket.md
           - topicgroup:
               label: Database object management
@@ -146,56 +140,55 @@ toc:
           topics:
           - rest/rest.md
       - topicgroup:
-         label: Querying data from data lakes
-         topics:
-        #  - datalakes/singularity.md
-         - datalakes/examples_singularity.md
-         - datalakes/examples3_singularity.md
-         - datalakes/examples2_singularity.md
-         - link:
-             label: External tables
-             href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
+          label: Querying data from data lakes
+          topics:
+          - datalakes/examples_singularity.md
+          - datalakes/examples3_singularity.md
+          - datalakes/examples2_singularity.md
+          - link:
+              label: External tables
+              href: https://www.ibm.com/docs/en/netezza?topic=dl-external-tables-2
       - topicgroup:
-         label: Querying data from watsonx.data
-         topics:
-         - data_lakehouse/data_lakehouse_overview.md
-         - data_lakehouse/integrating_watsonx.md
-         - data_lakehouse/querying_datalakehouse.md
-         - data_lakehouse/ingesting_datalakehouse.md
-         - data_lakehouse/merging_datalakehouse.md
-         - data_lakehouse/supported_sql_commands.md
-         - data_lakehouse/hms_npskeywords.md
-         - data_lakehouse/watsonxdata_ki.md
-         - data_lakehouse/watsonxdata_timetravel.md
+          label: Querying data from watsonx.data
+          topics:
+          - data_lakehouse/data_lakehouse_overview.md
+          - data_lakehouse/integrating_watsonx.md
+          - data_lakehouse/querying_datalakehouse.md
+          - data_lakehouse/ingesting_datalakehouse.md
+          - data_lakehouse/merging_datalakehouse.md
+          - data_lakehouse/supported_sql_commands.md
+          - data_lakehouse/hms_npskeywords.md
+          - data_lakehouse/watsonxdata_ki.md
+          - data_lakehouse/watsonxdata_timetravel.md
       - topicgroup:
-         label: Querying data from watsonx.data Software as a Service
-         topics:
-         - data_lakehouse_mcsp/data_lakehouse_overview_mcsp.md
-         - data_lakehouse_mcsp/integrating_watsonx_mcsp.md
-         - data_lakehouse_mcsp/querying_datalakehouse_mcsp.md
-         - data_lakehouse_mcsp/ingesting_datalakehouse_mcsp.md
-         - data_lakehouse_mcsp/merging_datalakehouse_mcsp.md
-         - data_lakehouse_mcsp/watsonx_datasql_mcsp.md
-         - data_lakehouse_mcsp/hms_npskeywords_mcsp.md
+          label: Querying data from watsonx.data Software as a Service
+          topics:
+          - data_lakehouse_mcsp/data_lakehouse_overview_mcsp.md
+          - data_lakehouse_mcsp/integrating_watsonx_mcsp.md
+          - data_lakehouse_mcsp/querying_datalakehouse_mcsp.md
+          - data_lakehouse_mcsp/ingesting_datalakehouse_mcsp.md
+          - data_lakehouse_mcsp/merging_datalakehouse_mcsp.md
+          - data_lakehouse_mcsp/watsonx_datasql_mcsp.md
+          - data_lakehouse_mcsp/hms_npskeywords_mcsp.md
       - topicgroup:
-         label: Monitoring and alerts
-         topics:
-         - nzalert/nzalert_overview.md
-         - nzalert/nzalert_aws.md
-         - nzalert/nzalert_az.md
+          label: Monitoring and alerts
+          topics:
+          - nzalert/nzalert_overview.md
+          - nzalert/nzalert_aws.md
+          - nzalert/nzalert_az.md
       - topicgroup:
-         label: Time travel and historical data
-         topics:
-         - timetravel/introducing_timetravel.md
-         - timetravel/createalter_timetravel.md
-         - timetravel/spaceusage_timetravel.md
-         - timetravel/retentioninterval_timetravel.md
-         - topicgroup:
-             label: Querying historical database
-             topics:
-             - timetravel/runningqueries_timetravel.md
-             - timetravel/queryingdata_timetravel.md
-         - timetravel/sqlcommands_timetravel.md
+          label: Time travel and historical data
+          topics:
+          - timetravel/introducing_timetravel.md
+          - timetravel/createalter_timetravel.md
+          - timetravel/spaceusage_timetravel.md
+          - timetravel/retentioninterval_timetravel.md
+          - topicgroup:
+              label: Querying historical database
+              topics:
+              - timetravel/runningqueries_timetravel.md
+              - timetravel/queryingdata_timetravel.md
+          - timetravel/sqlcommands_timetravel.md
   - navgroup:
       id: reference
       topics:
@@ -231,7 +224,6 @@ toc:
               label: Security compliance
               topics:
               - security/sec_compl_overview.md
-            #   - security/nps_byoc.md
           - security/architecture-workload-isolation.md
           - security/endpoints.md
           - security/encryption.md
