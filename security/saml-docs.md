@@ -27,7 +27,8 @@ subcollection: netezza
 
 Admin user can manage `SAML` configurations from Netezza UI. `IdP Metadata URL` and `EntityId` are required to setup SAML on Netezza UI. Update `ACS url` and `SLO endpoint` on IdP. Select the `Signed Authentication` checkbox only if it is already enabled in the `IdP application portal`.
 
-The following `SAML` configuration steps are generic. Users can follow similar steps on respective IdP.
+The following `SAML` configuration steps are generic. Users can follow similar steps on respective IdP.\
+It is mandatory to configure `SessionNotOnOrAfter`.
 {: note}
 
 ## How to get `IdP Metadata URL` and `EntityId`
@@ -70,5 +71,5 @@ The following `SAML` configuration steps are generic. Users can follow similar s
 
     An user with admin privileges can only download the authentication certificate.
     {: note}
-    
+
 1. Upload this certificate to `IdP` portal for signed authentication configuration.
