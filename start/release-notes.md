@@ -31,9 +31,14 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfnov2025}
 
-Quick Alert Enhancements
+Quick alert enhancements
 
 :   The new Quick Action feature makes alert creation faster and easier. You can now set up alerts using predefined rules without going through the detailed method and rule setup. The console lets you create methods on the fly with a system-generated unique name, or you can still define your own custom methods if needed.
+
+### Components
+{: #compnov2025}
+
+- `nzcli` version: 11.3.0.5
 
 ## 29 September 2025 - 11.3.0.3-IF1
 {: #sep2025}
