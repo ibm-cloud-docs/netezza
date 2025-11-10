@@ -24,7 +24,7 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 11 November 2025 - 11.3.0.5
+## 11 November 2025 - 11.3.0.4
 {: #nov2025}
 {: release-note}
 
@@ -38,7 +38,7 @@ Quick alert enhancements
 ### Components
 {: #compnov2025}
 
-- `nzcli` version: 11.3.0.5
+- `nzcli` version: 11.3.0.4
 
 ## 29 September 2025 - 11.3.0.3-IF1
 {: #sep2025}
