@@ -24,6 +24,17 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
+## 11 November 2025 - 11.3.0.5
+{: #nov2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfnov2025}
+
+Quick Alert Enhancements
+
+:   The new Quick Action feature makes alert creation faster and easier. You can now set up alerts using predefined rules without going through the detailed method and rule setup. The console lets you create methods on the fly with a system-generated unique name, or you can still define your own custom methods if needed.
+
 ## 29 September 2025 - 11.3.0.3-IF1
 {: #sep2025}
 {: release-note}
