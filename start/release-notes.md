@@ -35,6 +35,10 @@ Quick alert enhancements
 
 :   The new Quick Action feature makes alert creation faster and easier. You can now set up alerts using predefined rules without going through the detailed method and rule setup. The console lets you create methods on the fly with a system-generated unique name, or you can still define your own custom methods if needed.
 
+Server certificate validation for SSL/TLS authentication
+
+:   For nzsql, ODBC, and JDBC drivers, the `skipCertVerification` parameter is enabled (true) by default. To enforce mandatory server certificate SSL validation, set `skipCertVerification` to false. For more information, see [Configuring the JDBC data source](https://www.ibm.com/docs/en/netezza?topic=icj-configuring-jdbc-data-source-by-using-nzjdbcini-file-windows-2).
+
 ### Components
 {: #compnov2025}
 
