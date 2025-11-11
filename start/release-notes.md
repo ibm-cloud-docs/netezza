@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-09-30"
+lastupdated: "2025-11-11"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -37,7 +37,7 @@ Quick alert enhancements
 
 Server certificate validation for SSL/TLS authentication
 
-:   For nzsql, ODBC, and JDBC drivers, the `skipCertVerification` parameter is enabled (true) by default. To enforce mandatory server certificate SSL validation, set `skipCertVerification` to false. For more information, see [Configuring the JDBC data source](https://www.ibm.com/docs/en/netezza?topic=icj-configuring-jdbc-data-source-by-using-nzjdbcini-file-windows-2).
+:   For nzsql, ODBC, and JDBC drivers, the `skipCertVerification` parameter is enabled (true) by default. To enforce mandatory server certificate SSL validation, set `skipCertVerification` to false. For more information, see [Configuring the DSN and driver options with ODBC Driver Setup](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-3), [Data source configuration file](https://www.ibm.com/docs/en/netezza?topic=cods-data-source-configuration-file-3), [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3), [The nzsql command](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [Configuring the JDBC data source by using an nzjdbc.ini file (Windows)](https://www.ibm.com/docs/en/netezza?topic=icj-configuring-jdbc-data-source-by-using-nzjdbcini-file-windows-4).
 
 ### Components
 {: #compnov2025}
