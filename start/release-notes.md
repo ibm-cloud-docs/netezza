@@ -33,7 +33,7 @@ subcollection: netezza
 
 Quick alert enhancements
 
-:   The new Quick Action feature makes alert creation faster and easier. You can now set up alerts using predefined rules without going through the detailed method and rule setup. The console lets you create methods on the fly with a system-generated unique name, or you can still define your own custom methods if needed.
+:   The new Quick Action feature makes alert creation faster and easier. You can now set up alerts using predefined rules without going through the detailed method and rule setup. Console supports vast set of predefined rules that are used most frequently.
 
 Server certificate validation for SSL/TLS authentication
 
