@@ -33,7 +33,7 @@ subcollection: netezza
 
 Predefined alert rules support in webconsole
 
-:   These predefined rules eliminate the need for manual configuration, making the process significantly faster and more efficient.
+:   The predefined rules eliminate the need for manual configuration, making the process significantly faster and more efficient.
 
 Server certificate validation for SSL/TLS authentication
 
