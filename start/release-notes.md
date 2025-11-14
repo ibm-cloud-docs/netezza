@@ -31,9 +31,9 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfnov2025}
 
-Quick alert enhancements
+Predefined alert rules support in webconsole
 
-:   The new Quick Action feature makes alert creation faster and easier. You can now set up alerts using predefined rules without going through the detailed method and rule setup. Console supports vast set of predefined rules that are used most frequently.
+:   These predefined rules eliminate the need for manual configuration, making the process significantly faster and more efficient.
 
 Server certificate validation for SSL/TLS authentication
 
