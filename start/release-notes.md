@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-09-30"
+lastupdated: "2025-11-17"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,26 @@ subcollection: netezza
 
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 11 November 2025 - 11.3.0.4
+{: #nov2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfnov2025}
+
+Predefined alert rules support in webconsole
+
+:   The predefined rules eliminate the need for manual configuration, making the process significantly faster and more efficient.
+
+Server certificate validation for SSL/TLS authentication
+
+:   Starting with version 11.3.0.4, the `skipCertVerification` parameter defaults to true for nzsql, ODBC, and JDBC drivers. To enforce mandatory server certificate SSL validation, set `skipCertVerification` to false. For more information, see [Configuring the DSN and driver options with ODBC Driver Setup](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-3), [Data source configuration file](https://www.ibm.com/docs/en/netezza?topic=cods-data-source-configuration-file-3), [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3), [The nzsql command](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [Configuring the JDBC data source by using an nzjdbc.ini file (Windows)](https://www.ibm.com/docs/en/netezza?topic=icj-configuring-jdbc-data-source-by-using-nzjdbcini-file-windows-4).
+
+### Components
+{: #compnov2025}
+
+- `nzcli` version: 11.3.0.4
 
 ## 29 September 2025 - 11.3.0.3-IF1
 {: #sep2025}
