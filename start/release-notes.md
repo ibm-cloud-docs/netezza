@@ -24,6 +24,24 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
+## 22 December 2025 - 11.3.0.5
+{: #dec2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfdec2025}
+
+Server certificate validation for SSL/TLS authentication for OLEDB driver
+
+:   `Skip CA Certificate Verification` setting is introduced with a default value of `true`. To modify this default and enforce server certificate SSL validation, you can either uncheck the `Skip CA Certification Verification` option or set the environment variable `NZ_SKIP_CERT_VERIFICATION` to `false`.
+When the `Skip CA Certificate Verification` parameter is set to `false` in either the console or through the environment variable `NZ_SKIP_CERT_VERIFICATION`, the value `false` takes precedence over all other configurations.
+Additionally, introduced environment variables `NZ_SKIP_CERT_VERIFICATION` and `NZ_CA_CERT_FILE`. For more details, refer to [Configuring OLE DB](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=icodp-configuring-ole-db-1).
+
+### Components
+{: #compdec2025}
+
+- `nzcli` version: 11.3.0.5
+
 ## 11 November 2025 - 11.3.0.4
 {: #nov2025}
 {: release-note}
