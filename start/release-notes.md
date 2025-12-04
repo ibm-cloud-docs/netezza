@@ -37,6 +37,10 @@ Server certificate validation for SSL/TLS authentication for OLEDB driver
 When the `Skip CA Certificate Verification` parameter is set to `false` in either the console or through the environment variable `NZ_SKIP_CERT_VERIFICATION`, the value `false` takes precedence over all other configurations.
 Additionally, introduced environment variables `NZ_SKIP_CERT_VERIFICATION` and `NZ_CA_CERT_FILE`. For more details, refer to [Configuring OLE DB](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=icodp-configuring-ole-db-1).
 
+Accurate client IP logging for AWS private instances
+
+:   Improved client IP reporting for AWS private instances. Starting with version 11.3.0.5, `pg.log` and `histdb` now display the actual client machine IP used to connect to the database instead of the load balancer IP.
+
 ### Components
 {: #compdec2025}
 
