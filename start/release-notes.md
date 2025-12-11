@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-11-17"
+lastupdated: "2025-12-11"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -40,6 +40,30 @@ Additionally, introduced environment variables `NZ_SKIP_CERT_VERIFICATION` and `
 Accurate client IP logging for AWS private instances
 
 :   Improved client IP reporting for AWS private instances. Starting with version 11.3.0.5, `pg.log` and `histdb` now display the actual client machine IP used to connect to the database instead of the load balancer IP.
+
+Download Certificates
+
+:   You can now download certificates required to connect to the Netezza Performance Server directly from the console. Under the **Profile** icon, you will find the option to download. This certificate can be used while connecting to Netezza Performance Server using `nzsql` and the ODBC driver if you are using `skipCertVerification=false`.
+
+Azure COS Support
+
+: This release introduces native support for Azure Blob Storage, enabling users to create tables in Netezza format directly on object storage systems. This enhancement provides greater scalability, flexibility, and cost-efficiency compared to traditional file or block-based storage architectures. The feature is now available in public preview for Netezza as a service on Azure.
+
+Default Limit in Fetching History Records
+
+:   On opening Connection History and Query History pages, by default we now fetch 2000 records from the last 15 minutes interval. Earlier, the default limit was much larger and led to longer load times on the first fetch. You can subsequently adjust the parameters to get the desired set of records.
+
+IAM Access on AWS Bucket for COS
+
+:   You can now configure your AWS S3 bucket for object storage using cross-tenant IAM access configuration. With this approach, you no longer need to provide keys for accessing the bucket.
+
+Enhanced Display of Upcoming Backups During Daylight Saving Changes
+
+:  Improved handling and display of upcoming backup times on the dashboard when daylight saving changes are in effect, ensuring accurate and consistent scheduling information.
+
+Inbuilt DBA-IA Chatbot
+
+:  The DBA chatbot is now integrated into your console for a more seamless experience. Instead of appearing as a bubble at the bottom right corner of the screen, it is now conveniently located next to the Profile icon at the top of the window.
 
 ### Components
 {: #compdec2025}
