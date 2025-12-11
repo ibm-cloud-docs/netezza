@@ -55,7 +55,7 @@ Default limit in fetching history records
 
 IAM Access on AWS bucket for COS
 
-:   You can now configure your AWS S3 bucket for object storage using cross-tenant IAM access configuration. With this approach, you no longer need to provide keys for accessing the bucket. For more information, see [Query history](/docs/netezza?topic=netezza-cloudobjectstorage).
+:   You can now configure your AWS S3 bucket for object storage using cross-tenant IAM access configuration. With this approach, you no longer need to provide keys for accessing the bucket. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
 
 Enhanced display of upcoming backups during daylight saving changes
 
