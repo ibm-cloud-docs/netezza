@@ -113,6 +113,10 @@ Server Certificate Validation for SSL/TLS Authentication
 
 :   To enhance security, server certificate validation is now required for all SSL/TLS connections using ODBC, JDBC, and nzsql. Users must specify the CA certificate path using the `caCertFile` parameter, similar to how the securityLevel parameter is used. For more information, see [Steps to acquire SSL certificates for netezza](/docs/netezza?topic=netezza-step_acq_sslcert).
 
+INZA 11.2.28 support
+
+:   INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1133-release-notes).
+
 ### Components
 {: #compsep2025}
 
