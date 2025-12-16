@@ -85,6 +85,10 @@ Server certificate validation for SSL/TLS authentication
 
 :   Starting with version 11.3.0.4, the `skipCertVerification` parameter defaults to true for nzsql, ODBC, and JDBC drivers. To enforce mandatory server certificate SSL validation, set `skipCertVerification` to false. For more information, see [Configuring the DSN and driver options with ODBC Driver Setup](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-3), [Data source configuration file](https://www.ibm.com/docs/en/netezza?topic=cods-data-source-configuration-file-3), [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3), [The nzsql command](https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-1), [Configuring the JDBC data source by using an nzjdbc.ini file (Windows)](https://www.ibm.com/docs/en/netezza?topic=icj-configuring-jdbc-data-source-by-using-nzjdbcini-file-windows-4).
 
+INZA 11.3.3 support
+
+:   INZA 11.3.3 is supported. For more information, see [Netezza Performance Server Analytics 11.3.3 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1133-release-notes).
+
 ### Components
 {: #compnov2025}
 
@@ -112,10 +116,6 @@ IBM Netezza Software
 Server Certificate Validation for SSL/TLS Authentication
 
 :   To enhance security, server certificate validation is now required for all SSL/TLS connections using ODBC, JDBC, and nzsql. Users must specify the CA certificate path using the `caCertFile` parameter, similar to how the securityLevel parameter is used. For more information, see [Steps to acquire SSL certificates for netezza](/docs/netezza?topic=netezza-step_acq_sslcert).
-
-INZA 11.2.28 support
-
-:   INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1133-release-notes).
 
 ### Components
 {: #compsep2025}
