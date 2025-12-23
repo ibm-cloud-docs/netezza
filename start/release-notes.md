@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-12-11"
+lastupdated: "2025-12-23"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,7 +24,7 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 22 December 2025 - 11.3.0.5
+## 22 December 2025 - 11.3.0.5-IF1
 {: #dec2025}
 {: release-note}
 
@@ -47,7 +47,7 @@ Download certificates
 
 Azure COS support
 
-: This release introduces native support for Azure Blob Storage, enabling users to create tables in Netezza format directly on object storage systems. This enhancement provides greater scalability, flexibility, and cost-efficiency compared to traditional file or block-based storage architectures. The feature is now available in public preview for Netezza as a service on Azure.
+: This release introduces native support for Azure Blob Storage, enabling users to create tables in Netezza format directly on object storage systems. This enhancement provides greater scalability, flexibility, and cost-efficiency compared to traditional file or block-based storage architectures. The feature is now available in public preview for Netezza as a service on Azure. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
 
 Default limit in fetching history records
 
@@ -68,7 +68,7 @@ Inbuilt DBA-IA Chatbot
 ### Components
 {: #compdec2025}
 
-- `nzcli` version: 11.3.0.5
+- `nzcli` version: 11.3.0.5-IF1
 
 ## 11 November 2025 - 11.3.0.4
 {: #nov2025}
