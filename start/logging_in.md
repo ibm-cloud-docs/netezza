@@ -22,7 +22,7 @@ subcollection: netezza
 # Connecting to {{site.data.keyword.netezza_short}}
 {: #connecting-overview}
 
-You can connect command-line interfaces, IBM, or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance by using private or public endpoints.
+You can connect command-line interfaces, {{site.data.keyword.IBM}}, or third-party applications and tools or apps that you create to your {{site.data.keyword.netezza_full}} instance by using private or public endpoints.
 {: shortdesc}
 
 For Azure, you can provision {{site.data.keyword.netezza_short}} with a private endpoint only or both public and private endpoints.
