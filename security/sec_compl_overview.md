@@ -41,6 +41,19 @@ At rest, content is encrypted within the Cloud Data Center in the following ways
 - On AWS, by using the 256-bit AES data encryption (industry standard).
 - On Azure, by using the 256-bit AES data encryption that is compliant with FIPS 140-2.
 
+## Security compliance for Netezza
+{: #sec_comp_nps}
+
+Netezza Performance Server as a Service (NPSaaS) follows industry‑recognized security and compliance standards to help protect customer data and support regulatory requirements. The service aligns with multiple frameworks including SOC 2, ISO 27001/27017/27018, and HIPAA—by implementing rigorous operational, administrative, technical, and organizational controls. These certifications and attestations help ensure that NPSaaS maintains a secure, trustworthy, and compliant environment for managing sensitive workloads.
+
+### SOC 2 Type 2
+{: #soc2t2}
+
+IBM provides the following Service Organization Control (SOC) report for its Netezza Performance Server as a Service (NPSaaS) managed services offering:
+
+This report evaluates IBM’s operational controls against the criteria established by the American Institute of Certified Public Accountants (AICPA) Trust Services Principles. These principles define industry‑recognized standards for ensuring systems and controls are designed to protect customer data and maintain service integrity.
+You can request access to the SOC report by contacting IBM representative.
+
 ## ISO 27017, ISO 27018
 {: #iso}
 
