@@ -35,7 +35,7 @@ Server certificate validation for SSL/TLS authentication for OLEDB driver
 
 :   `Skip CA Certificate Verification` setting is introduced with a default value of `true`. To modify this default and enforce server certificate SSL validation, you can either uncheck the `Skip CA Certification Verification` option or set the environment variable `NZ_SKIP_CERT_VERIFICATION` to `false`.
 When the `Skip CA Certificate Verification` parameter is set to `false` in either the console or through the environment variable `NZ_SKIP_CERT_VERIFICATION`, the value `false` takes precedence over all other configurations.
-Additionally, introduced environment variables `NZ_SKIP_CERT_VERIFICATION` and `NZ_CA_CERT_FILE`. For more details, refer to [Configuring OLE DB](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_test?topic=icodp-configuring-ole-db-1).
+Additionally, introduced environment variables `NZ_SKIP_CERT_VERIFICATION` and `NZ_CA_CERT_FILE`. For more details, refer to [Configuring OLE DB](https://www.ibm.com/docs/en/netezza?topic=icodp-configuring-ole-db-1).
 
 Accurate client IP logging for AWS private instances
 
@@ -47,7 +47,7 @@ Download certificates
 
 Azure COS support
 
-: This release introduces native support for Azure Blob Storage, enabling users to create tables in Netezza format directly on object storage systems. This enhancement provides greater scalability, flexibility, and cost-efficiency compared to traditional file or block-based storage architectures. The feature is now available in public preview for Netezza as a service on Azure. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
+: This release introduces native support for Azure Blob Storage, enabling users to create tables in Netezza format directly on object storage systems. This enhancement provides greater scalability, flexibility, and cost-efficiency compared to traditional file or block-based storage architectures. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
 
 Default limit in fetching history records
 
