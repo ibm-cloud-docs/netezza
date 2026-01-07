@@ -36,6 +36,34 @@ subcollection: netezza
 1. Log in to the Netezza Console using administrator credentials.
 2. Navigate to Settings → Object Storage.
 3. Click `Configure Object Storage` Bucket.
+
+    ### AWS S3 configuration options:
+    {: #awss3conf_options}
+
+    **Credential-Based Access (Default)**
+    - Provide your AWS access credentials (`Access Key ID` and `Secret Access Key`).
+    - Supported for both Fully Managed and BYOC (Bring Your Own Cloud) systems.
+
+    **IAM Role-Based Access**
+    - Check the **Use IAM Role** checkbox on the configuration form.
+    - **For Fully Managed systems only:**
+      - After checking the IAM option, additional instructions will be displayed.
+      - Follow the on-screen instructions to update your AWS account policy.
+      - This step grants Netezza the necessary permissions to access your bucket.
+    - **For BYOC systems:**
+      - No additional policy update is required.
+      - IAM access will work automatically with your existing configuration.
+
+      IAM role-based access is currently supported for AWS S3 only. Azure Blob Storage requires credential-based access.
+      {: note}
+
+    ### Azure Blob storage configuration:
+    {: #azureblobstor_conf}
+
+    - Provide your Azure storage account credentials.
+    - Currently supports credential-based access only.
+    - IAM access is not supported for Azure at this time.
+
 4. Enter the required bucket details and credentials, based on your chosen provider:
     - **Destination**: Select the appropriate storage type (e.g., Azure Blob Storage or Amazon AWS S3).
     - **Bucket/Container name**: Provide the name of the bucket (AWS) or container (Azure).

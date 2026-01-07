@@ -36,29 +36,6 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
     If you prefer to configure the bucket without credentials by granting cross-tenant access to Netezza, contact IBM Support for assistance.
     {: note}
 
-    #### AWS S3 configuration options:
-
-    **Credential-Based Access (Default)**
-    - Provide your AWS access credentials (`Access Key ID` and `Secret Access Key`).
-    - Supported for both Fully Managed and BYOC (Bring Your Own Cloud) systems.
-
-    **IAM Role-Based Access**
-    - Check the **Use IAM Role** checkbox on the configuration form.
-    - **For Fully Managed systems only:**
-      - After checking the IAM option, additional instructions will be displayed.
-      - Follow the on-screen instructions to update your AWS account policy.
-      - This step grants Netezza the necessary permissions to access your bucket.
-    - **For BYOC systems:**
-      - No additional policy update is required.
-      - IAM access will work automatically with your existing configuration.
-
-    > **Note:** IAM role-based access is currently supported for AWS S3 only. Azure Blob Storage requires credential-based access.
-
-    #### Azure Blob Storage Configuration:
-    - Provide your Azure storage account credentials.
-    - Currently supports credential-based access only.
-    - IAM access is not supported for Azure at this time.
-
 6. Once the bucket is configured, the button will change to **Enable Object Storage**.
 
 **Important**
