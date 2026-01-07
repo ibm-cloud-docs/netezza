@@ -27,17 +27,39 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
 ## How to enable object storage
 {: #htuos}
 
-1. Login to the Console
+1. Login to the Console.
 2. Navigate to `Settings`.
-3. Locate Object Storage Settings
-4. Find the section related to Object Storage.
-5. Configure AWS S3 (or Compatible) Bucket
-6. Click the button to configure your storage bucket and follow the on-screen instructions.
+3. Locate Object Storage Settings.
+4. Configure Storage Bucket (AWS S3 or S3-compatible storage or Azure Blob storage).
+5. Click the button to configure your storage bucket and follow the on-screen instructions. For details, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
 
     If you prefer to configure the bucket without credentials by granting cross-tenant access to Netezza, contact IBM Support for assistance.
     {: note}
 
-7. Once the bucket is configured, the button will change to **Enable Object Storage**.
+    #### AWS S3 configuration options:
+
+    **Credential-Based Access (Default)**
+    - Provide your AWS access credentials (`Access Key ID` and `Secret Access Key`).
+    - Supported for both Fully Managed and BYOC (Bring Your Own Cloud) systems.
+
+    **IAM Role-Based Access**
+    - Check the **Use IAM Role** checkbox on the configuration form.
+    - **For Fully Managed systems only:**
+      - After checking the IAM option, additional instructions will be displayed.
+      - Follow the on-screen instructions to update your AWS account policy.
+      - This step grants Netezza the necessary permissions to access your bucket.
+    - **For BYOC systems:**
+      - No additional policy update is required.
+      - IAM access will work automatically with your existing configuration.
+
+    > **Note:** IAM role-based access is currently supported for AWS S3 only. Azure Blob Storage requires credential-based access.
+
+    #### Azure Blob Storage Configuration:
+    - Provide your Azure storage account credentials.
+    - Currently supports credential-based access only.
+    - IAM access is not supported for Azure at this time.
+
+6. Once the bucket is configured, the button will change to **Enable Object Storage**.
 
 **Important**
 
