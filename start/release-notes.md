@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-12-23"
+  years: 2026
+lastupdated: "2026-01-07"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -31,6 +31,26 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfdec2025}
 
+Azure and AWS COS Support
+
+:   This release introduces native support for Azure Blob Storage and Amazon S3, enabling users to create tables in Netezza format directly on object storage systems. This enhancement delivers greater scalability, flexibility, and cost-efficiency compared to block-based storage architectures, allowing seamless integration with both Azure and AWS cloud environments. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage) and [Create a table with object storage](/docs/netezza?topic=netezza-user_exp#catwos).
+
+IAM Access on AWS bucket for COS
+
+:   You can now configure your AWS S3 bucket for object storage using cross-tenant IAM access configuration. With this approach, you no longer need to provide keys for accessing the bucket. For more information, see  **IAM Role-Based Access** in [How to enable object storage](/docs/netezza?topic=netezza-user_exp#htuos).
+
+Inbuilt AI Database Assistant
+
+:   The DBA AI chatbot is now integrated into your console for a more seamless experience. It is now conveniently located next to the **Profile** icon at the top of the window.
+
+Enhanced REST Catalog with BYOC support for Iceberg Table Management
+
+:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
+
+Customer-Managed encryption keys for BYOC on AWS
+
+:   Take full control of your data security with customer-managed encryption keys. This feature allows you to use your own keys to encrypt data disks, ensuring compliance with organizational security policies and enhancing protection against unauthorized access. By managing your own keys, you gain flexibility, transparency, and peace of mind for sensitive workloads running on AWS.
+
 Server certificate validation for SSL/TLS authentication for OLEDB driver
 
 :   `Skip CA Certificate Verification` setting is introduced with a default value of `true`. To modify this default and enforce server certificate SSL validation, you can either uncheck the `Skip CA Certification Verification` option or set the environment variable `NZ_SKIP_CERT_VERIFICATION` to `false`.
@@ -45,25 +65,13 @@ Download certificates
 
 :   You can now download certificates required to connect to the Netezza Performance Server directly from the console. Under the **Profile** icon, you will find the option to download. This certificate can be used while connecting to Netezza Performance Server using `nzsql` and the ODBC driver if you are using `skipCertVerification=false`.
 
-Azure COS support
-
-: This release introduces native support for Azure Blob Storage, enabling users to create tables in Netezza format directly on object storage systems. This enhancement provides greater scalability, flexibility, and cost-efficiency compared to traditional file or block-based storage architectures. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
-
 Default limit in fetching history records
 
 :   On opening Connection History and Query History pages, by default we now fetch 2000 records from the last 15 minutes interval. Earlier, the default limit was much larger and led to longer load times on the first fetch. You can subsequently adjust the parameters to get the desired set of records. For more information, see [Query history](/docs/netezza?topic=netezza-history#query_history).
 
-IAM Access on AWS bucket for COS
-
-:   You can now configure your AWS S3 bucket for object storage using cross-tenant IAM access configuration. With this approach, you no longer need to provide keys for accessing the bucket. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
-
 Enhanced display of upcoming backups during daylight saving changes
 
 :  Improved handling and display of upcoming backup times on the dashboard when daylight saving changes are in effect, ensuring accurate and consistent scheduling information.
-
-Inbuilt DBA-IA Chatbot
-
-:  The DBA chatbot is now integrated into your console for a more seamless experience. It is now conveniently located next to the **Profile** icon at the top of the window.
 
 ### Components
 {: #compdec2025}
@@ -103,7 +111,7 @@ INZA 11.3.3 support
 
 Netezza Cloud Object Storage (COS)
 
-:   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native support for S3-compatible object storage such as AWS S3, enabling users to create tables in Netezza format directly on object storage systems. This enhancement delivers a new level of scalability, flexibility, and cost-efficiency, surpassing the limitations of traditional file or block-based storage architectures. It is now available in public preview for Netezza as a service on AWS. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
+:   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native support for S3-compatible object storage such as AWS S3, enabling users to create tables in Netezza format directly on object storage systems. This enhancement delivers a new level of scalability, flexibility, and cost-efficiency, surpassing the limitations of block-based storage architectures. It is now available in public preview for Netezza as a service on AWS. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
 
 Netezza Bring Your Own Cloud on Azure
 
