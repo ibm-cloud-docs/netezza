@@ -26,6 +26,9 @@ subcollection: netezza
 
 You can integrate your {{site.data.keyword.netezza_full}} instance with {{site.data.keyword.lakehouse_short}}.
 
+{{site.data.keyword.netezza_short}} provides support for the Metastore Thrift endpoint in {{site.data.keyword.lakehouse_short}} SaaS version 2.3 and earlier.
+{: note}
+
 ## Before you begin
 {: #prereqswatsonx.data}
 
