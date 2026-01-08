@@ -42,17 +42,15 @@ subcollection: netezza
 
     **Credential-Based Access (Default)**
     - Provide your AWS access credentials (`Access Key ID` and `Secret Access Key`).
-    - Supported for both Fully Managed and BYOC (Bring Your Own Cloud) systems.
+    - Supported for both Fully Managed and SaaS systems.
 
     **IAM Role-Based Access**
     - Check the **Use IAM Role** checkbox on the configuration form.
-    - **For Fully Managed systems only:**
+    - **For SaaS/Fully Managed systems only:**
       - After checking the IAM option, additional instructions will be displayed.
       - Follow the on-screen instructions to update your AWS account policy.
       - This step grants Netezza the necessary permissions to access your bucket.
-    - **For BYOC systems:**
-      - No additional policy update is required.
-      - IAM access will work automatically with your existing configuration.
+    
 
       IAM role-based access is currently supported for AWS S3 only. Azure Blob Storage requires credential-based access.
       {: note}
@@ -80,3 +78,13 @@ This will **restart the Netezza database**, causing **temporary downtime**.
 
 Once object storage is enabled, it **cannot be disabled**.
 {: note}
+
+## Configuration summary
+{: #config_summary_table}
+
+| Storage Type | Deployment Type | Credential Access | IAM Access | Remarks |
+|--------------|-----------------|-------------------|------------|-------|
+| AWS S3 | SaaS/Fully Managed | ✅ Supported | ✅ Supported | IAM requires policy update |
+| AWS S3 | BYOC | ✅ Supported | ❌ Not Supported | Use credential-based access only |
+| Azure Blob Storage | All | ✅ Supported | ❌ Not Supported | Credential-based access only |
+| S3-Compatible | All | ✅ Supported | Varies | Depends on provider compatibility |
