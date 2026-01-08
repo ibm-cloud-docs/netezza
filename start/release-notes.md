@@ -33,7 +33,10 @@ subcollection: netezza
 
 Azure and AWS COS Support
 
-:   This release introduces general availability of native support for Azure Blob Storage and Amazon S3, enabling users to create tables in Netezza format directly on object storage systems. This enhancement delivers greater scalability, flexibility, and cost-efficiency compared to block-based storage architectures, allowing seamless integration with both Azure and AWS cloud environments. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage) and [Create a table with object storage](/docs/netezza?topic=netezza-user_exp#catwos).
+:   This release delivers native support for Azure Blob Storage and Amazon S3, now generally available. Users can create tables in Netezza format directly on object storage systems. This enhancement delivers greater scalability, flexibility, and cost-efficiency compared to block-based storage architectures, allowing seamless integration with both Azure and AWS cloud environments. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage) and [Create a table with object storage](/docs/netezza?topic=netezza-user_exp#catwos).
+
+Amazon S3 support was introduced as a public preview in the previous release and is now fully GA.
+{: note}
 
 IAM Access on AWS bucket for COS
 
