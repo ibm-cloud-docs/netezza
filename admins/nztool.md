@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-07-11"
+  years: 2026
+lastupdated: "2026-01-08"
 
 keywords: nztool
 
@@ -35,10 +35,11 @@ Supported platforms for the `nz` tool:
 - `nz-linux-amd64`
 - `nz-windows-amd64`
 
-## Downloading the nz tool
+## Downloading the `nz` tool
 {: #download-nz}
 
-You can download the `nz` tool using folowing methods:
+The `nz` tool can be downloaded using following methods. For cloud platforms, it is recommended to download from the NPS server using the command-line interface method.
+{: note}
 
 1. **Using command-line interface**
 
