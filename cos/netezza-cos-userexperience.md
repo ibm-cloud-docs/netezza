@@ -32,10 +32,6 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
 3. Locate Object Storage Settings and click **Add a bucket**.
 4. Choose an option in Configure Storage Bucket menu (Amazon S3 or Azure Blob storage).
 5. Follow the on-screen instructions. For details, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
-
-    If you prefer to configure the bucket without credentials by granting cross-tenant access to Netezza, contact IBM Support for assistance.
-    {: note}
-
 6. Once the bucket is configured, the button will change to **Enable Object Storage**.
 
 **Important**
