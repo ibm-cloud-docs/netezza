@@ -40,7 +40,7 @@ Amazon S3 support was introduced as a public preview in the previous release and
 
 IAM Access on AWS bucket for COS
 
-:   You can now configure your AWS S3 bucket for object storage using cross-tenant IAM access configuration. With this approach, you no longer need to provide keys for accessing the bucket. For more information, see  **IAM Role-Based Access** in [How to enable object storage](/docs/netezza?topic=netezza-user_exp#htuos).
+:   You can now configure your fully managed AWS S3 bucket for object storage using cross-tenant IAM access. This eliminates the need to provide access keys for the bucket. For more information, see  **IAM Role-Based Access** in [How to enable object storage](/docs/netezza?topic=netezza-user_exp#htuos).
 
 Inbuilt AI Database Assistant
 
