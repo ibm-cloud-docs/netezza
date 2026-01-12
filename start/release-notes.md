@@ -52,7 +52,7 @@ Enhanced REST Catalog with BYOC support for Iceberg Table Management
 
 Customer-Managed encryption keys for BYOC on AWS
 
-:   Take full control of your data security with customer-managed encryption keys. This feature allows you to use your own keys to encrypt data disks, ensuring compliance with organizational security policies and enhancing protection against unauthorized access. By managing your own keys, you gain flexibility, transparency, and peace of mind for sensitive workloads running on AWS.
+:   Take full control of your data security with customer-managed encryption keys. This feature allows you to use your own keys to encrypt data disks, ensuring compliance with organizational security policies and enhancing protection against unauthorized access. By managing your own keys, you gain flexibility, transparency, and peace of mind for sensitive workloads running on AWS. For more information, see [Customer managed KMS key in AWS](https://www.ibm.com/docs/en/netezza?topic=keys-customer-managed-kms-key-in-aws).
 
 Server certificate validation for SSL/TLS authentication for OLEDB driver
 
