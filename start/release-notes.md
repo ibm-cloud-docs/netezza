@@ -50,7 +50,7 @@ Enhanced REST Catalog with BYOC support for Iceberg Table Management
 
 :   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
 
-Customer-Managed encryption keys for BYOC on AWS
+Customer Managed key for BYOC on AWS
 
 :   Take full control of your data security with customer-managed encryption keys. This feature allows you to use your own keys to encrypt data disks, ensuring compliance with organizational security policies and enhancing protection against unauthorized access. By managing your own keys, you gain flexibility, transparency, and peace of mind for sensitive workloads running on AWS. For more information, see [Customer managed KMS key in AWS](https://www.ibm.com/docs/en/netezza?topic=keys-customer-managed-kms-key-in-aws).
 
