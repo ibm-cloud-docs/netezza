@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-11-17"
+  years: 2026
+lastupdated: "2026-01-13"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,6 +24,63 @@ subcollection: netezza
 # Release note for NPSaaS
 {: #my-service-relnotes1123x}
 
+## 22 December 2025 - 11.3.0.5-IF1
+{: #dec2025}
+{: release-note}
+
+### New features and enhancements
+{: #nfdec2025}
+
+Azure and AWS NCOS (Native Cloud Object Storage) Support
+
+:   This release delivers native support for Azure Blob Storage and AWS S3, now generally available. Users can create tables in Netezza format directly on object storage systems. This enhancement delivers greater scalability, flexibility, and cost-efficiency compared to block-based storage architectures, allowing seamless integration with both Azure and AWS cloud environments. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage) and [Create a table with object storage](/docs/netezza?topic=netezza-user_exp#catwos).
+
+AWS S3 support was introduced as a public preview in the previous release and is now fully GA.
+{: note}
+
+Availability for REST catalog support for BYOC
+
+:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
+
+IAM Access on AWS bucket for NCOS
+
+:   You can now configure your fully managed AWS S3 bucket for object storage using cross-tenant IAM access. This eliminates the need to provide access keys for the bucket. For more information, see  **IAM Role-Based Access** in [How to enable object storage](/docs/netezza?topic=netezza-user_exp#htuos).
+
+Inbuilt AI Database Assistant
+
+:   The DBA AI chatbot is now integrated into your console for a more seamless experience. It is now conveniently located next to the **Profile** icon at the top of the window.
+
+Customer Managed key for BYOC on AWS
+
+:   Take full control of your data security with customer-managed encryption keys. This feature allows you to use your own keys to encrypt data drives, ensuring compliance with organizational security policies and enhancing protection against unauthorized access. By managing your own keys, you gain flexibility, transparency, and peace of mind for sensitive workloads running on AWS. For more information, see [Customer managed KMS key in AWS](https://www.ibm.com/docs/en/netezza?topic=keys-customer-managed-kms-key-in-aws).
+
+Server certificate validation for SSL/TLS authentication for OLEDB driver
+
+:   `Skip CA Certificate Verification` setting is introduced with a default value of `true`. To modify this default and enforce server certificate SSL validation, you can either uncheck the `Skip CA Certification Verification` option or set the environment variable `NZ_SKIP_CERT_VERIFICATION` to `false`.
+When the `Skip CA Certificate Verification` parameter is set to `false` in either the console or through the environment variable `NZ_SKIP_CERT_VERIFICATION`, the value `false` takes precedence over all other configurations.
+Additionally, introduced environment variables `NZ_SKIP_CERT_VERIFICATION` and `NZ_CA_CERT_FILE`. For more details, refer to [Configuring OLE DB](https://www.ibm.com/docs/en/netezza?topic=icodp-configuring-ole-db-1).
+
+Accurate client IP logging for AWS private instances
+
+:   Improved client IP reporting for AWS private instances. Starting with version 11.3.0.5, `pg.log` and `histdb` now display the actual client machine IP used to connect to the database instead of the load balancer IP.
+
+Download certificates
+
+:   You can now download certificates required to connect to the Netezza Performance Server directly from the console. Under the **Profile** icon, you will find the option to download. This certificate can be used while connecting to Netezza Performance Server using `nzsql` and the ODBC driver if you are using `skipCertVerification=false`.
+
+Default limit in fetching history records
+
+:   On opening Connection History and Query History pages, by default we now fetch 2000 records from the last 15 minutes interval. Earlier, the default limit was much larger and led to longer load times on the first fetch. You can subsequently adjust the parameters to get the desired set of records. For more information, see [Query history](/docs/netezza?topic=netezza-history#query_history).
+
+Enhanced display of upcoming backups during daylight saving changes
+
+:  Improved handling and display of upcoming backup times on the dashboard when daylight saving changes are in effect, ensuring accurate and consistent scheduling information.
+
+### Components
+{: #compdec2025}
+
+- `nzcli` version: 11.3.0.5-IF1
+
 ## 11 November 2025 - 11.3.0.4
 {: #nov2025}
 {: release-note}
@@ -39,6 +96,10 @@ Server certificate validation for SSL/TLS authentication
 
 :   Starting with version 11.3.0.4, the `skipCertVerification` parameter defaults to true for nzsql, ODBC, and JDBC drivers. To enforce mandatory server certificate SSL validation, set `skipCertVerification` to false. For more information, see [Configuring the DSN and driver options with ODBC Driver Setup](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-3), [Data source configuration file](https://www.ibm.com/docs/en/netezza?topic=cods-data-source-configuration-file-3), [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3), [The nzsql command](https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command-1), [Configuring the JDBC data source by using an nzjdbc.ini file (Windows)](https://www.ibm.com/docs/en/netezza?topic=icj-configuring-jdbc-data-source-by-using-nzjdbcini-file-windows-4).
 
+INZA 11.3.3 support
+
+:   INZA 11.3.3 is supported. For more information, see [Netezza Performance Server Analytics 11.3.3 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1133-release-notes).
+
 ### Components
 {: #compnov2025}
 
@@ -53,7 +114,7 @@ Server certificate validation for SSL/TLS authentication
 
 Netezza Cloud Object Storage (COS)
 
-:   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native support for S3-compatible object storage such as AWS S3, enabling users to create tables in Netezza format directly on object storage systems. This enhancement delivers a new level of scalability, flexibility, and cost-efficiency, surpassing the limitations of traditional file or block-based storage architectures. It is now available in public preview for Netezza as a service on AWS. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
+:   Netezza Performance Server (NPS) 11.3.0.3 IF1 introduces native support for S3-compatible object storage such as AWS S3, enabling users to create tables in Netezza format directly on object storage systems. This enhancement delivers a new level of scalability, flexibility, and cost-efficiency, surpassing the limitations of block-based storage architectures. It is now available in public preview for Netezza as a service on AWS. For more information, see [Netezza Cloud Object Storage](/docs/netezza?topic=netezza-netezzacosobjstrge).
 
 Netezza Bring Your Own Cloud on Azure
 
@@ -93,7 +154,7 @@ Enhancement in Azure connector support
 
 Customer managed keys for Netezza BYOC on AWS
 
-:   Gain enhanced control over your data security by managing your own encryption keys. This feature allows you to use customer-managed keys to encrypt data disks, ensuring greater protection and compliance.
+:   Gain enhanced control over your data security by managing your own encryption keys. This feature allows you to use customer-managed keys to encrypt data drives, ensuring greater protection and compliance.
 
 AWS Marketplace integration
 
@@ -101,7 +162,7 @@ AWS Marketplace integration
 
 Support for encrypted S3 Buckets in Netezza backup and restore
 
-:   Netezza backup and restore operations now support Amazon S3 buckets encrypted with AWS KMS keys. This enhancement enables secure data storage and retrieval using AWS-managed encryption. To configure your S3 bucket with an AWS KMS key, see [Configuring your bucket to use an S3 Bucket Key with SSE-KMS for new objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configuring-bucket-key.html).
+:   Netezza backup and restore operations now support AWS S3 buckets encrypted with AWS KMS keys. This enhancement enables secure data storage and retrieval using AWS-managed encryption. To configure your S3 bucket with an AWS KMS key, see [Configuring your bucket to use an S3 Bucket Key with SSE-KMS for new objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configuring-bucket-key.html).
 
 The bucket user needs to have access to AWS KMS key.
 {: note}
@@ -131,6 +192,7 @@ Netezza Iceberg Enhancements
 - **Update support**: Update rows in Iceberg tables using `UPDATE` queries.
 - **Table properties**: Netezza supports key Iceberg table properties for controlling read/write behavior.
 - **Show properties**: Use `SHOW TBLPROPERTIES` to view non-default table settings.
+
 For more information, see [Supported SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
 
 OIDC authentication in the Netezza ODBC driver

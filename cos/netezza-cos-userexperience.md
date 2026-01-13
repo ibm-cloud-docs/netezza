@@ -22,28 +22,23 @@ subcollection: netezza
 # User experience
 {: #user_exp}
 
-Netezza Performance Server offers seamless integration with Native Cloud Object Storage (NCOS), enabling a straightforward path for adoption. To create a table that utilizes object storage, users follow the standard table creation process with storage type selection or using database or system level settings.
+Netezza Performance Server offers seamless integration with Native Cloud Object Storage (NCOS), enabling a straightforward path for adoption. To create a table that utilizes object storage, see [SQL syntax for storage type specification](/docs/netezza?topic=netezza-netezzacossql).
 
 ## How to enable object storage
 {: #htuos}
 
-1. Login to the Console
+1. Login to the Console.
 2. Navigate to `Settings`.
-3. Locate Object Storage Settings
-4. Find the section related to Object Storage.
-5. Configure AWS S3 (or Compatible) Bucket
-6. Click the button to configure your storage bucket and follow the on-screen instructions.
-
-    If you prefer to configure the bucket without credentials by granting cross-tenant access to Netezza, contact IBM Support for assistance.
-    {: note}
-
-7. Once the bucket is configured, the button will change to **Enable Object Storage**.
+3. Locate Object Storage Settings and click **Add a bucket**.
+4. Choose an option in Configure Storage Bucket menu (Amazon S3 or Azure Blob storage).
+5. Follow the on-screen instructions. For details, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
+6. Once the bucket is configured, the button will change to **Enable Object Storage**.
 
 **Important**
 
 - During the enabling process, all console operations will be suspended. You will not be able to navigate or perform any other actions.
 - After configuring the bucket, wait for sometime before enabling object storage. This delay ensures proper synchronization between Netezza processes.
-- Once enabled, object storage cannot be disabled using the console or command-line tools. To disable, contact IBM Support.
+- Once enabled, object storage cannot be disabled.
 
 ## How to use object storage
 {: #htuos}
@@ -93,4 +88,4 @@ Additional reference: [SQL syntax for storage type specification](/docs/netezza?
 
 **Object naming:** Each object saved in the object store has a prefix `/nps/<instance name>/<dbuuid>/<dsid>`.
 
-**Object deletion:** An asynchronous garbage cleaner performs object deletion, but metadata objects are not automatically deleted.
+**Object deletion:** An asynchronous garbage cleaner performs object deletion. Metadata objects are automatically deleted from version 11.3.0.5-IF1 onwards.

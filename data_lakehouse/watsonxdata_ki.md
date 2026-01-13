@@ -30,7 +30,7 @@ You might experience the following issues while using {{site.data.keyword.lakeho
 
     `The following columns have types incompatible with the existing columns in their respective positions : COL3`
 
-    For more information, see [ALTER TABLE](https://ibmdocs-test.dcs.ibm.com/docs/en/SSTNZ3_current?topic=npsscr-alter-table-3).
+    For more information, see [ALTER TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
 
     **Workaround**
 

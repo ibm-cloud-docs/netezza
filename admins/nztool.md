@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-07-11"
+  years: 2026
+lastupdated: "2026-01-08"
 
 keywords: nztool
 
@@ -35,10 +35,11 @@ Supported platforms for the `nz` tool:
 - `nz-linux-amd64`
 - `nz-windows-amd64`
 
-## Downloading the nz tool
+## Downloading the `nz` tool
 {: #download-nz}
 
-You can download the `nz` tool using folowing methods:
+The `nz` tool can be downloaded using following methods. For cloud platforms, it is recommended to download from the NPS server using the command-line interface method.
+{: note}
 
 1. **Using command-line interface**
 
@@ -78,7 +79,7 @@ You can download the `nz` tool using folowing methods:
 
 1. **Download from fix-central**
 
-   You can download the `nzcli` from [Fix Central](https://www.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7EWebSphere&product=ibm/WebSphere/IBM+Cloud+Private+for+Data+System&release=NZCLI_11.2&platform=All&function=fixId&fixids=11.2.3.2-WS-ICPDS-NZCLI-fp174021&includeRequisites=1&includeSupersedes=0&downloadMethod=http).
+   You can download the `nzcli` from [Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7EWebSphere&product=ibm/WebSphere/IBM+Cloud+Private+for+Data+System&release=NZCLI_11.2&platform=All&function=all).
 
 ## The nz syntax
 {: #nz-syntax}

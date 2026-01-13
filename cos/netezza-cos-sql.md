@@ -24,7 +24,7 @@ subcollection: netezza
 
 This section describes the enhancements to the NPS SQL syntax to specify and manage storage types for datasources at both table and database levels. These improvements provide greater flexibility in configuring storage options, similar to existing Lakehouse functionality.
 
-The **storage type of an existing table cannot be changed** once table has been created. To change a table’s storage type, users should create a new table using CTAS (Create Table As Select), specifying the desired `storagetype`.
+The **storage type of an existing table cannot be changed** once table has been created. A workaround would be to create a new table using CTAS (Create Table As Select), specifying the desired storagetype and drop the original table.
 {: note}
 
 ## Database level configuration
@@ -36,7 +36,7 @@ The **storage type of an existing table cannot be changed** once table has been 
 ## Default storagetype
 {: #netezzacossql_defstortyp}
 
-The **default storagetype** is set to 'block' at system level. Contact IBM Support to change the default.
+The **default storagetype** is set to 'block' at system level. It can be modified from console.
 
 ## Storage type precedence for table creation
 {: #proce_sts}
