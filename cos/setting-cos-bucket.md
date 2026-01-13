@@ -82,9 +82,9 @@ Once object storage is enabled, it **cannot be disabled**.
 ## Configuration summary
 {: #config_summary_table}
 
-| Storage Type | Deployment Type | Credential Access | IAM Access | Remarks |
-|--------------|-----------------|-------------------|------------|-------|
-| AWS S3 | SaaS/Fully Managed | ✅ Supported | ✅ Supported | IAM requires policy update |
-| AWS S3 | BYOC | ✅ Supported | ❌ Not Supported | Use credential-based access only |
-| Azure Blob Storage | All | ✅ Supported | ❌ Not Supported | Credential-based access only |
-| S3-Compatible | All | ✅ Supported | Varies | Depends on provider compatibility |
+| Storage Type        | Deployment Type    | Credential Access | IAM Access    |
+|----------------------|--------------------|-------------------|---------------|
+| AWS S3              | SaaS/Fully Managed| ✅ Supported      | ✅ Supported  |
+| AWS S3              | BYOC              | ✅ Supported      | Coming Soon   |
+| Azure Blob Storage  | All               | ✅ Supported      | Coming Soon   |
+| S3-Compatible       | All               | ✅ Supported      | Varies        |

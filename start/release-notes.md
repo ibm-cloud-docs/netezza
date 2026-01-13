@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-07"
+lastupdated: "2026-01-13"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -31,14 +31,18 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfdec2025}
 
-Azure and AWS COS Support
+Azure and AWS NCOS (Native Cloud Object Storage) Support
 
-:   This release delivers native support for Azure Blob Storage and Amazon S3, now generally available. Users can create tables in Netezza format directly on object storage systems. This enhancement delivers greater scalability, flexibility, and cost-efficiency compared to block-based storage architectures, allowing seamless integration with both Azure and AWS cloud environments. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage) and [Create a table with object storage](/docs/netezza?topic=netezza-user_exp#catwos).
+:   This release delivers native support for Azure Blob Storage and AWS S3, now generally available. Users can create tables in Netezza format directly on object storage systems. This enhancement delivers greater scalability, flexibility, and cost-efficiency compared to block-based storage architectures, allowing seamless integration with both Azure and AWS cloud environments. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage) and [Create a table with object storage](/docs/netezza?topic=netezza-user_exp#catwos).
 
-Amazon S3 support was introduced as a public preview in the previous release and is now fully GA.
+AWS S3 support was introduced as a public preview in the previous release and is now fully GA.
 {: note}
 
-IAM Access on AWS bucket for COS
+Availability for REST catalog support for BYOC
+
+:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
+
+IAM Access on AWS bucket for NCOS
 
 :   You can now configure your fully managed AWS S3 bucket for object storage using cross-tenant IAM access. This eliminates the need to provide access keys for the bucket. For more information, see  **IAM Role-Based Access** in [How to enable object storage](/docs/netezza?topic=netezza-user_exp#htuos).
 
@@ -46,13 +50,9 @@ Inbuilt AI Database Assistant
 
 :   The DBA AI chatbot is now integrated into your console for a more seamless experience. It is now conveniently located next to the **Profile** icon at the top of the window.
 
-Enhanced REST Catalog with BYOC support for Iceberg Table Management
-
-:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
-
 Customer Managed key for BYOC on AWS
 
-:   Take full control of your data security with customer-managed encryption keys. This feature allows you to use your own keys to encrypt data disks, ensuring compliance with organizational security policies and enhancing protection against unauthorized access. By managing your own keys, you gain flexibility, transparency, and peace of mind for sensitive workloads running on AWS. For more information, see [Customer managed KMS key in AWS](https://www.ibm.com/docs/en/netezza?topic=keys-customer-managed-kms-key-in-aws).
+:   Take full control of your data security with customer-managed encryption keys. This feature allows you to use your own keys to encrypt data drives, ensuring compliance with organizational security policies and enhancing protection against unauthorized access. By managing your own keys, you gain flexibility, transparency, and peace of mind for sensitive workloads running on AWS. For more information, see [Customer managed KMS key in AWS](https://www.ibm.com/docs/en/netezza?topic=keys-customer-managed-kms-key-in-aws).
 
 Server certificate validation for SSL/TLS authentication for OLEDB driver
 
@@ -154,7 +154,7 @@ Enhancement in Azure connector support
 
 Customer managed keys for Netezza BYOC on AWS
 
-:   Gain enhanced control over your data security by managing your own encryption keys. This feature allows you to use customer-managed keys to encrypt data disks, ensuring greater protection and compliance.
+:   Gain enhanced control over your data security by managing your own encryption keys. This feature allows you to use customer-managed keys to encrypt data drives, ensuring greater protection and compliance.
 
 AWS Marketplace integration
 
@@ -162,7 +162,7 @@ AWS Marketplace integration
 
 Support for encrypted S3 Buckets in Netezza backup and restore
 
-:   Netezza backup and restore operations now support Amazon S3 buckets encrypted with AWS KMS keys. This enhancement enables secure data storage and retrieval using AWS-managed encryption. To configure your S3 bucket with an AWS KMS key, see [Configuring your bucket to use an S3 Bucket Key with SSE-KMS for new objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configuring-bucket-key.html).
+:   Netezza backup and restore operations now support AWS S3 buckets encrypted with AWS KMS keys. This enhancement enables secure data storage and retrieval using AWS-managed encryption. To configure your S3 bucket with an AWS KMS key, see [Configuring your bucket to use an S3 Bucket Key with SSE-KMS for new objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configuring-bucket-key.html).
 
 The bucket user needs to have access to AWS KMS key.
 {: note}
