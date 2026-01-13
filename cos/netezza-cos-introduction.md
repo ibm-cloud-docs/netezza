@@ -23,7 +23,7 @@ subcollection: netezza
 {: #netezzacosobjstrge}
 
 Netezza now supports a hybrid storage architecture, enabling users to choose between block storage and object storage at the time of table creation. This enhancement provides flexibility in managing data based on performance and cost considerations. Object storage is a data storage technology that manages data as objects, providing practically unlimited and pain-free scalability, high uptimes, easier data sharing and movement, and lower storage costs.
-Currently, native object storage is supported only on AWS public cloud in Bring Your Own Cloud (BYOC) and SaaS deployments, with planned support for additional platforms in the future.
+Currently, native object storage is supported on AWS and Azure public cloud in Bring Your Own Cloud (BYOC) and SaaS deployments, with planned support for additional platforms in the future.
 
 ## Hybrid storage architecture
 {: #hybri_strge}

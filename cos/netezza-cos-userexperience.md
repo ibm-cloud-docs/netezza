@@ -22,7 +22,7 @@ subcollection: netezza
 # User experience
 {: #user_exp}
 
-Netezza Performance Server offers seamless integration with Native Cloud Object Storage (NCOS), enabling a straightforward path for adoption. To create a table that utilizes object storage, users follow the standard table creation process with storage type selection or using database or system level settings.
+Netezza Performance Server offers seamless integration with Native Cloud Object Storage (NCOS), enabling a straightforward path for adoption. To create a table that utilizes object storage, see [SQL syntax for storage type specification](/docs/netezza?topic=netezza-netezzacossql).
 
 ## How to enable object storage
 {: #htuos}
@@ -38,7 +38,7 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
 
 - During the enabling process, all console operations will be suspended. You will not be able to navigate or perform any other actions.
 - After configuring the bucket, wait for sometime before enabling object storage. This delay ensures proper synchronization between Netezza processes.
-- Once enabled, object storage cannot be disabled using the console or command-line tools. To disable, contact IBM Support.
+- Once enabled, object storage cannot be disabled.
 
 ## How to use object storage
 {: #htuos}
@@ -88,4 +88,4 @@ Additional reference: [SQL syntax for storage type specification](/docs/netezza?
 
 **Object naming:** Each object saved in the object store has a prefix `/nps/<instance name>/<dbuuid>/<dsid>`.
 
-**Object deletion:** An asynchronous garbage cleaner performs object deletion, but metadata objects are not automatically deleted.
+**Object deletion:** An asynchronous garbage cleaner performs object deletion. Metadata objects are automatically deleted from version 11.3.0.5-IF1 onwards.
