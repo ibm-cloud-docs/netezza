@@ -21,7 +21,7 @@ subcollection: netezza
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Release note for NPSaaS
+# Release notes for NPSaaS
 {: #my-service-relnotes1123x}
 
 ## 22 December 2025 - 11.3.0.5-IF1
@@ -469,8 +469,8 @@ IdP configuration
 - **INZA:**\
    `python2` and its adapter are no longer supported.
 - **Netezza client:**\
-   Support to initiate, view,  and manipulate schedules for ad hoc, pause, resume, and scaling. Fore more information, see [Pausing and resuming instances](/docs/netezza?topic=netezza-pauseresume) and [Scaling](/docs/netezza?topic=netezza-scaling-topic).
-- Introduced new maintanence job types **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
+   Support to initiate, view,  and manipulate schedules for ad hoc, pause, resume, and scaling. For more information, see [Pausing and resuming instances](/docs/netezza?topic=netezza-pauseresume) and [Scaling](/docs/netezza?topic=netezza-scaling-topic).
+- Introduced new maintenance job types **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
 - Introduced a new option **Lakehouse** to create databases. For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
 - `CREATE TABLE` support for unpartitioned Iceberg table.
 - `INSERT` support for Iceberg table.
