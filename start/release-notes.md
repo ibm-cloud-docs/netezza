@@ -58,7 +58,7 @@ Server certificate validation for SSL/TLS authentication for OLEDB driver
 
 :   `Skip CA Certificate Verification` setting is introduced with a default value of `true`. To modify this default and enforce server certificate SSL validation, you can either uncheck the `Skip CA Certification Verification` option or set the environment variable `NZ_SKIP_CERT_VERIFICATION` to `false`.
 When the `Skip CA Certificate Verification` parameter is set to `false` in either the console or through the environment variable `NZ_SKIP_CERT_VERIFICATION`, the value `false` takes precedence over all other configurations.
-Additionally, introduced environment variables `NZ_SKIP_CERT_VERIFICATION` and `NZ_CA_CERT_FILE`. For more details, refer to [Configuring OLE DB](https://www.ibm.com/docs/en/netezza?topic=icodp-configuring-ole-db-1).
+Additionally, introduced environment variables `NZ_SKIP_CERT_VERIFICATION` and `NZ_CA_CERT_FILE`. For more details, refer to [Configuring OLE DB](https://www.ibm.com/docs/en/netezza?topic=icodp-configuring-ole-db-3).
 
 Accurate client IP logging for AWS private instances
 
