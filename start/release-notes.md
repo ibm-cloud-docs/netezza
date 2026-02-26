@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-13"
+lastupdated: "2026-02-24"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,31 @@ subcollection: netezza
 
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 19 February 2026 - 11.3.1.0
+{: #feb2026}
+{: release-note}
+
+### New features and enhancements
+{: #nffeb2026}
+
+Improved serviceability for BYOC deployment
+
+:   The admin console now provides improved diagnostic capabilities and troubleshooting support through enhanced error messaging and system status indicators.
+
+Amazon S3 Bucket Registration via IAM Roles for AWS BYOC
+
+:   Register Amazon S3 buckets using IAM roles for native cloud object storage. For more information, see [Create IRSA policy and role for engine namespace](https://www.ibm.com/docs/en/netezza?topic=byoc-create-irsa-policy-role-engine-namespace), [AWS S3 configuration](/docs/netezza?topic=netezza-cloudobjectstorage).
+
+
+INZA 11.3.4 support
+
+:   INZA 11.3.4 introduces "Keyed Cryptographic Hashing" along with various security updates. For full details, see [Netezza Performance Server Analytics 11.3.4 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1134-release-notes){: external}.
+
+### Components
+{: #compfeb2026}
+
+- `nzcli` version: 11.3.1.0
 
 ## 22 December 2025 - 11.3.0.5-IF1
 {: #dec2025}
