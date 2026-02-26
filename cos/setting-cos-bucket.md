@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-09-19"
+  years: 2026
+lastupdated: "2026-02-25"
 
 keywords: netezza cos
 
@@ -85,6 +85,6 @@ Once object storage is enabled, it **cannot be disabled**.
 | Storage Type        | Deployment Type    | Credential Access | IAM Access    |
 |----------------------|--------------------|-------------------|---------------|
 | AWS S3              | SaaS/Fully Managed| ✅ Supported      | ✅ Supported  |
-| AWS S3              | BYOC              | ✅ Supported      | Coming Soon   |
+| AWS S3              | BYOC              | ✅ Supported      | ✅ Supported  |
 | Azure Blob Storage  | All               | ✅ Supported      | Coming Soon   |
 | S3-Compatible       | All               | ✅ Supported      | Varies        |
