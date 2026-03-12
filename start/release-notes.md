@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-03-12"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,7 +24,85 @@ subcollection: netezza
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 19 February 2026 - 11.3.1.0
+## 10 March 2026 - 11.3.1.1
+{: #march2026}
+{: release-note}
+
+### New features and enhancements
+{: #nfmar2026}
+
+This release introduces vector data type support for generative AI workloads, enhanced API server URL accessibility, resource optimization options for BYOC deployments, and mandatory unique cloud storage buckets.
+
+Vector data type support
+
+:   Netezza now supports the vector data type, enabling you to store and manage embeddings for generative AI applications. Vectors are essential for Retrieval-Augmented Generation (RAG) workflows, where embeddings extracted from documents are stored in a vector database for use with large language models (LLMs).
+
+With vector data type support, you can create embedding tables directly in Netezza and leverage the AMPP architecture for high-performance vector storage and retrieval operations.
+
+Netezza supports four widely used distance operators for vector similarity calculations:
+
+- **L1 distance:** `<+>`
+- **L2 distance:** `<->`
+- **Cosine distance:** `<=>`
+- **Inner product:** `<#>`
+
+Netezza supports a maximum of 2666 dimensions. Select your embedding model accordingly to ensure compatibility with this limit. 
+
+API server URL accessibility
+
+:   The API server URL is now easily accessible from the console. You can view the URL by clicking your profile icon, where it displays alongside the Console and Netezza versions.
+
+Resource release for auto-pause (BYOC Only)
+
+:   For Bring Your Own Cloud (BYOC) deployments, you can now optimize costs by releasing resources when enabling auto-pause from the console. When you choose to release resources, the system requires additional time to resume from the paused state.
+
+Unique cloud storage buckets
+
+:   Netezza now requires separate cloud storage for each feature, including backup and restore, lakehouse, and REST catalog. You must use unique AWS S3 buckets or Azure Blob Storage containers for each feature to ensure proper isolation and management.
+
+Enhanced iceberg catalog support with three-part namespace
+
+:   watsonx.data v.x.x introduces expanded Iceberg catalog capabilities for Netezza integrations, enabling more flexible multi-catalog configurations:
+
+- **Multiple schemas with identical names** across different Iceberg catalogs within a single instance
+- **Schema name duplication** across Iceberg catalogs, with support for at most one non-Iceberg catalog sharing the same schema name
+- **Simplified multi-catalog Lakehouse environments** without schema naming conflicts
+
+This enhancement streamlines the configuration of complex Lakehouse architectures for Netezza users.
+
+Flexible multi-catalog object storage configuration
+
+:   The previous 1:1 restriction between object storage buckets and catalogs has been removed. Key improvements include:
+
+- **Shared bucket support** - Multiple Iceberg catalogs can now reference the same object storage bucket
+- **Optimized storage management** - Reduce storage overhead and simplify bucket administration
+- **Cost-effective architecture** - Consolidate storage resources across multiple catalogs
+
+Modernized thrift communication protocol
+
+:   The Metadata Service (MDS) has been upgraded to support enhanced catalog and namespace features:
+
+- **Thrift-over-HTTP protocol** - Replaces the legacy binary Thrift protocol
+- **Improved compatibility** - Better integration with modern networking infrastructure
+- **Enhanced reliability** - More robust communication for Netezza Lakehouse integrations
+
+CAMS authentication and scope enhancements
+
+:   New authentication and authorization capabilities have been added:
+
+- **Flexible scope management** - Support for both account-level and instance-level scopes
+- **Enhanced authentication schemes** - New authentication methods for improved security
+
+Setup and configuration updates
+
+:   **Revised setup-ms process** - Streamlined metadata service configuration and deployment procedures
+
+### Components
+{: #compmar2026}
+
+- `nzcli` version: 11.3.1.1
+
+## 06 February 2026 - 11.3.1.0
 {: #feb2026}
 {: release-note}
 
