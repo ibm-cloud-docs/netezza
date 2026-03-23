@@ -49,40 +49,21 @@ Unique cloud storage buckets
 
 Enhanced iceberg catalog support with three-part namespace
 
-:   watsonx.data v.x.x introduces expanded Iceberg catalog capabilities for Netezza integrations, enabling more flexible multi-catalog configurations:
+:   watsonx.data v.x.x expands Iceberg catalog support for Netezza integrations by introducing a three‑part namespace, enabling more flexible and scalable multi‑catalog configurations. This enhancement provides:
 
-- **Multiple schemas with identical names** across different Iceberg catalogs within a single instance
-- **Schema name duplication** across Iceberg catalogs, with support for at most one non-Iceberg catalog sharing the same schema name
-- **Simplified multi-catalog Lakehouse environments** without schema naming conflicts
+- Support for identical schema names across multiple Iceberg catalogs within the same instance.
+- Controlled schema name reuse, allowing a schema name to exist across Iceberg catalogs, with support for up to one non‑Iceberg catalog using the same name.
+- Simplified multi‑catalog Lakehouse environments, eliminating schema naming conflicts and improving manageability.
 
 This enhancement streamlines the configuration of complex Lakehouse architectures for Netezza users.
 
 Flexible multi-catalog object storage configuration
 
-:   The previous 1:1 restriction between object storage buckets and catalogs has been removed. Key improvements include:
+:   The 1:1 restriction between object storage buckets and catalogs has been removed. Now multiple Iceberg catalogs can reference the same object storage bucket reducing storage overhead and simplifying bucket administration.
 
-- **Shared bucket support** - Multiple Iceberg catalogs can now reference the same object storage bucket
-- **Optimized storage management** - Reduce storage overhead and simplify bucket administration
-- **Cost-effective architecture** - Consolidate storage resources across multiple catalogs
 
-Modernized thrift communication protocol
 
-:   The Metadata Service (MDS) has been upgraded to support enhanced catalog and namespace features:
 
-- **Thrift-over-HTTP protocol** - Replaces the legacy binary Thrift protocol
-- **Improved compatibility** - Better integration with modern networking infrastructure
-- **Enhanced reliability** - More robust communication for Netezza Lakehouse integrations
-
-CAMS authentication and scope enhancements
-
-:   New authentication and authorization capabilities have been added:
-
-- **Flexible scope management** - Support for both account-level and instance-level scopes
-- **Enhanced authentication schemes** - New authentication methods for improved security
-
-Setup and configuration updates
-
-:   **Revised setup-ms process** - Streamlined metadata service configuration and deployment procedures
 
 ### Components
 {: #compmar2026}
