@@ -33,20 +33,7 @@ subcollection: netezza
 
 This release introduces vector data type support for generative AI workloads, enhanced API server URL accessibility, resource optimization options for BYOC deployments, and mandatory unique cloud storage buckets.
 
-Vector data type support
 
-:   Netezza now supports the vector data type, enabling you to store and manage embeddings for generative AI applications. Vectors are essential for Retrieval-Augmented Generation (RAG) workflows, where embeddings extracted from documents are stored in a vector database for use with large language models (LLMs).
-
-With vector data type support, you can create embedding tables directly in Netezza and leverage the AMPP architecture for high-performance vector storage and retrieval operations.
-
-Netezza supports four widely used distance operators for vector similarity calculations:
-
-- **L1 distance:** `<+>`
-- **L2 distance:** `<->`
-- **Cosine distance:** `<=>`
-- **Inner product:** `<#>`
-
-Netezza supports a maximum of 2666 dimensions. Select your embedding model accordingly to ensure compatibility with this limit. 
 
 API server URL accessibility
 
