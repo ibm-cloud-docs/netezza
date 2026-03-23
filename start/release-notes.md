@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-03-12"
+lastupdated: "2026-03-23"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -60,8 +60,6 @@ This enhancement streamlines the configuration of complex Lakehouse architecture
 Flexible multi-catalog object storage configuration
 
 :   The 1:1 restriction between object storage buckets and catalogs has been removed. Now multiple Iceberg catalogs can reference the same object storage bucket reducing storage overhead and simplifying bucket administration.
-
-
 
 
 
