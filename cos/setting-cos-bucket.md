@@ -52,7 +52,7 @@ subcollection: netezza
       - This step grants Netezza the necessary permissions to access your bucket.
 
       Starting with release 11.3.1.0, IAM role‑based access is supported for AWS S3.
-      To configure an IAM‑enabled S3 bucket for an AWS BYOC private cluster, refer to the documentation links below based on the release version:\
+      To configure an IAM‑enabled S3 bucket for an AWS BYOC private cluster, refer the following documentation links based on the release version:\
       **Release 11.3.1.0**\
       [Setting up VPC and IAM endpoint configuration](https://www.ibm.com/docs/en/netezza?topic=byoc-setting-up-vpc-iam-endpoint-configuration)\
       [Create IRSA policy and role for engine namespace](https://www.ibm.com/docs/en/netezza?topic=byoc-create-irsa-policy-role-engine-namespace)\
