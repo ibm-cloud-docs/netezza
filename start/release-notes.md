@@ -31,8 +31,6 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmar2026}
 
-This release introduces vector data type support for generative AI workloads, enhanced API server URL accessibility, resource optimization options for BYOC deployments, and mandatory unique cloud storage buckets.
-
 API server URL accessibility
 
 :   The API server URL is now easily accessible from the console. You can view the URL by clicking your profile icon, where it displays alongside the Console and Netezza versions.
