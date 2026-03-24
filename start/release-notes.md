@@ -33,8 +33,6 @@ subcollection: netezza
 
 This release introduces vector data type support for generative AI workloads, enhanced API server URL accessibility, resource optimization options for BYOC deployments, and mandatory unique cloud storage buckets.
 
-
-
 API server URL accessibility
 
 :   The API server URL is now easily accessible from the console. You can view the URL by clicking your profile icon, where it displays alongside the Console and Netezza versions.
@@ -46,24 +44,6 @@ Resource release for auto-pause (BYOC Only)
 Unique cloud storage buckets
 
 :   Netezza now requires separate cloud storage for each feature, including backup and restore, lakehouse, and REST catalog. You must use unique AWS S3 buckets or Azure Blob Storage containers for each feature to ensure proper isolation and management.
-
-Enhanced iceberg catalog support with three-part namespace
-
-:   watsonx.data v.x.x expands Iceberg catalog support for Netezza integrations by introducing a three‑part namespace, enabling more flexible and scalable multi‑catalog configurations. This enhancement provides:
-
-- Support for identical schema names across multiple Iceberg catalogs within the same instance.
-- Controlled schema name reuse, allowing a schema name to exist across Iceberg catalogs, with support for up to one non‑Iceberg catalog using the same name.
-- Simplified multi‑catalog Lakehouse environments, eliminating schema naming conflicts and improving manageability.
-
-This enhancement streamlines the configuration of complex Lakehouse architectures for Netezza users.
-
-Flexible multi-catalog object storage configuration
-
-:   The 1:1 restriction between object storage buckets and catalogs has been removed. Now multiple Iceberg catalogs can reference the same object storage bucket reducing storage overhead and simplifying bucket administration.
-
-
-
-
 
 ### Components
 {: #compmar2026}
