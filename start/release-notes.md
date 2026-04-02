@@ -43,6 +43,10 @@ Unique cloud storage buckets
 
 :   Netezza now requires separate cloud storage for each feature, including backup and restore, lakehouse, and REST catalog. You must use unique AWS S3 buckets or Azure Blob Storage containers for each feature to ensure proper isolation and management.
 
+Hostname Verification for SSL/TLS Authentication
+
+:   Version 11.3.1.1 introduces the `enableHostNameVerification` parameter for nzsql, ODBC, and JDBC drivers to control hostname validation during SSL/TLS connections. When enabled (`true`), the client verifies that the server hostname matches the hostname in the SSL/TLS certificate; if the hostnames don't match, the connection is rejected. The parameter defaults to `false`. For more information, see [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
+
 ### Components
 {: #compmar2026}
 
