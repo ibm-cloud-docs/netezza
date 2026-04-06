@@ -79,10 +79,10 @@ nz timezone ls -apiserver <URL> -u <USER> -pw <PASSWORD>
 
 **Example:**
 ```bash
-[nz@ipshost-0 web]$ ./nz-linux-amd64 timezone ls
+nz timezone ls
   -apiserver https://nps.example.com
   -u admin
-  -pw Netezza@123456789
+  -pw REDACTED
 
                 TIMEZONES
 ------------------------------------------
@@ -98,7 +98,7 @@ nz timezone ls -apiserver <URL> -u <USER> -pw <PASSWORD>
 **Use Case:** Use this command when you need to see all supported timezone options before setting a new timezone.
 
 
-### 3. `set` - Set Timezone
+### 2. `set` - Set Timezone
 
 Sets a new timezone on the NPS host.
 
@@ -109,12 +109,12 @@ nz timezone set -tz <TIMEZONE_VALUE> -apiserver <URL> -u <USER> -pw <PASSWORD>
 
 **Example:**
 ```bash
-./nz-linux-amd64 timezone set -tz  America/New_York -apiserver https://nps.example.com -u admin -pw REDACTED
+nz timezone set -tz  America/New_York -apiserver https://nps.example.com -u admin -pw REDACTED
 
 Message:success
 ```
 
-### 2. `show` - Show Current Timezone
+### 3. `show` - Show Current Timezone
 
 Displays the currently configured timezone on the NPS host.
 
@@ -125,7 +125,7 @@ nz timezone show -apiserver <URL> -u <USER> -pw <PASSWORD>
 
 **Example:**
 ```bash
-[nz@ipshost-0 web]$ ./nz-linux-amd64 timezone show
+nz timezone show
   -apiserver https://nps.example.com
   -u admin
   -pw REDACTED
