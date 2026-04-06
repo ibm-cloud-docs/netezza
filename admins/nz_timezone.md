@@ -108,10 +108,29 @@ Sets a new timezone on the NPS host.
 
 **Syntax:**
 ```bash
-nz timezone set <TIMEZONE_VALUE> -apiserver <URL> -u <USER> -pw <PASSWORD>
+nz timezone set -tz <TIMEZONE_VALUE> -apiserver <URL> -u <USER> -pw <PASSWORD>
 ```
 
 **Example:**
 ```bash
-nz timezone set America/New_York -apiserver https://nps.example.com -u admin -pw mypassword
+./nz-linux-amd64 timezone set -tz  America/New_York -apiserver https://127.0.0.1:8443/namespace-9 -u admin -pw REDACTED
+
+Message:success
+```
+
+```bash
+[nz@ipshost-0 web]$ ./nz-linux-amd64 timezone ls
+  -apiserver https://127.0.0.1:8443/namespace-9
+  -u admin
+  -pw Netezza@123456789
+
+                TIMEZONES
+------------------------------------------
+  Africa/Abidjan
+  Africa/Accra
+  Africa/Addis_Ababa
+  Africa/Algiers
+  Africa/Asmara
+  Africa/Asmerado
+
 ```
