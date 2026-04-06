@@ -79,48 +79,8 @@ nz timezone ls -apiserver <URL> -u <USER> -pw <PASSWORD>
 
 **Example:**
 ```bash
-nz timezone ls -apiserver https://nps.example.com -u admin -pw mypassword
-```
-
-**Use Case:** Use this command when you need to see all supported timezone options before setting a new timezone.
-
-
-### 2. `show` - Show Current Timezone
-
-Displays the currently configured timezone on the NPS host.
-
-**Syntax:**
-```bash
-nz timezone show -apiserver <URL> -u <USER> -pw <PASSWORD>
-```
-
-**Example:**
-```bash
-nz timezone show -apiserver https://nps.example.com -u admin -pw mypassword
-```
-
-**Use Case:** Use this command to verify the current timezone setting on your NPS host.
-
-
-### 3. `set` - Set Timezone
-
-Sets a new timezone on the NPS host.
-
-**Syntax:**
-```bash
-nz timezone set -tz <TIMEZONE_VALUE> -apiserver <URL> -u <USER> -pw <PASSWORD>
-```
-
-**Example:**
-```bash
-./nz-linux-amd64 timezone set -tz  America/New_York -apiserver https://127.0.0.1:8443/namespace-9 -u admin -pw REDACTED
-
-Message:success
-```
-
-```bash
 [nz@ipshost-0 web]$ ./nz-linux-amd64 timezone ls
-  -apiserver https://127.0.0.1:8443/namespace-9
+  -apiserver https://nps.example.com
   -u admin
   -pw Netezza@123456789
 
@@ -134,3 +94,45 @@ Message:success
   Africa/Asmerado
 
 ```
+
+**Use Case:** Use this command when you need to see all supported timezone options before setting a new timezone.
+
+
+### 3. `set` - Set Timezone
+
+Sets a new timezone on the NPS host.
+
+**Syntax:**
+```bash
+nz timezone set -tz <TIMEZONE_VALUE> -apiserver <URL> -u <USER> -pw <PASSWORD>
+```
+
+**Example:**
+```bash
+./nz-linux-amd64 timezone set -tz  America/New_York -apiserver https://nps.example.com -u admin -pw REDACTED
+
+Message:success
+```
+
+### 2. `show` - Show Current Timezone
+
+Displays the currently configured timezone on the NPS host.
+
+**Syntax:**
+```bash
+nz timezone show -apiserver <URL> -u <USER> -pw <PASSWORD>
+```
+
+**Example:**
+```bash
+[nz@ipshost-0 web]$ ./nz-linux-amd64 timezone show
+  -apiserver https://nps.example.com
+  -u admin
+  -pw REDACTED
+
+      TIMEZONE
+--------------------
+  America/New_York
+```
+
+**Use Case:** Use this command to verify the current timezone setting on your NPS host.
