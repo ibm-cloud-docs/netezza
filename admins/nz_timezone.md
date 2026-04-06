@@ -60,12 +60,6 @@ To display the help information for the timezone command:
 nz timezone -help
 ```
 
-Or:
-
-```bash
-./nz timezone -help
-```
-
 ## Sub-Commands
 
 ### 1. `ls` - List All Possible Timezone Values
