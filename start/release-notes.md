@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-08"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,28 +24,28 @@ subcollection: netezza
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 25 March 2026 - 11.3.1.1
+## 10 April 2026 - 11.3.1.1
 {: #march2026}
 {: release-note}
 
 ### New features and enhancements
 {: #nfmar2026}
 
-API server URL accessibility
+Hostname Verification for SSL/TLS Authentication
 
-:   The API server URL is now easily accessible from the console. You can view the URL by clicking your profile icon, where it displays alongside the Console and Netezza versions.
-
-Resource release for auto-pause (BYOC Only)
-
-:   For Bring Your Own Cloud (BYOC) deployments, you can now optimize costs by releasing resources when enabling auto-pause from the console. When you choose to release resources, the system requires additional time to resume from the paused state.
+:   Version 11.3.1.1 introduces the `enableHostNameVerification` parameter for nzsql, ODBC, and JDBC drivers to control hostname validation during SSL/TLS connections. When enabled (`true`), the client verifies that the server hostname matches the hostname in the SSL/TLS certificate; if the hostnames don't match, the connection is rejected. The parameter defaults to `false`. For more information, see [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
 
 Unique cloud storage buckets
 
 :   Netezza now requires separate cloud storage for each feature, including backup and restore, lakehouse, and REST catalog. You must use unique AWS S3 buckets or Azure Blob Storage containers for each feature to ensure proper isolation and management.
 
-Hostname Verification for SSL/TLS Authentication
+Resource release for auto-pause (BYOC Only)
 
-:   Version 11.3.1.1 introduces the `enableHostNameVerification` parameter for nzsql, ODBC, and JDBC drivers to control hostname validation during SSL/TLS connections. When enabled (`true`), the client verifies that the server hostname matches the hostname in the SSL/TLS certificate; if the hostnames don't match, the connection is rejected. The parameter defaults to `false`. For more information, see [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
+:   For Bring Your Own Cloud (BYOC) deployments, you can now optimize costs by releasing resources when enabling auto-pause from the console. When you choose to release resources, the system requires additional time to resume from the paused state.
+
+API server URL accessibility
+
+:   The API server URL is now easily accessible from the console. You can view the URL by clicking your profile icon, where it displays alongside the Console and Netezza versions.
 
 ### Components
 {: #compmar2026}
