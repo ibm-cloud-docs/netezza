@@ -33,7 +33,7 @@ subcollection: netezza
 
 Enhanced security with hostname verification
 
-:   Take control of your SSL/TLS connections with the new `enableHostNameVerification` parameter in version 11.3.1.1. Available across nzsql, ODBC, and JDBC drivers, this feature strengthens your security posture by ensuring server hostnames match SSL/TLS certificates before establishing connections. Enable this powerful validation to add an extra layer of protection to your data communications. Learn more in [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
+:   SSL/TLS connections can be controlled with the new `enableHostNameVerification` parameter in version 11.3.1.1. Available across nzsql, ODBC, and JDBC drivers, this feature strengthens security posture by ensuring server hostnames match SSL/TLS certificates before establishing connections. Enabling this validation adds an extra layer of protection to data communications. Learn more in [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
 
 Streamlined cloud storage architecture
 
