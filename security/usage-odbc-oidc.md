@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025
-lastupdated: "2025-06-30"
+lastupdated: "2025-04-02"
 
 keywords: IAM access for Netezza Performance Server, permissions for Netezza Performance Server, identity and access management for Netezza Performance Server, roles for Netezza Performance Server, actions for Netezza Performance Server, assigning access for Netezza Performance Server
 
@@ -57,6 +57,9 @@ This URI must be registered in the Azure IdP to enable successful redirection du
 
 ### 3. Retrieving `NZREST` endpoint information for Netezza Performance Server
 {: #retrieve_nzrest_endpt}
+
+To get `NZREST` private endpoint, please contact IBM support.
+{: note}
 
 To locate the `NZREST` API endpoint, follow these steps:
 

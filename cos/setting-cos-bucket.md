@@ -50,9 +50,15 @@ subcollection: netezza
       - After checking the IAM option, additional instructions will be displayed.
       - Follow the on-screen instructions to update your AWS account policy.
       - This step grants Netezza the necessary permissions to access your bucket.
-    
 
-      IAM role-based access is currently supported for AWS S3 only. Azure Blob Storage requires credential-based access.
+      Starting with release 11.3.1.0, IAM role‑based access is supported for AWS S3.
+      To configure an IAM‑enabled S3 bucket for an AWS BYOC private cluster, refer the following documentation links based on the release version:\
+      **Release 11.3.1.0**\
+      [Setting up VPC and IAM endpoint configuration](https://www.ibm.com/docs/en/netezza?topic=byoc-setting-up-vpc-iam-endpoint-configuration)\
+      [Create IRSA policy and role for engine namespace](https://www.ibm.com/docs/en/netezza?topic=byoc-create-irsa-policy-role-engine-namespace)\
+      **Release 11.3.1.1**\
+      [Setting up VPC and IAM endpoint configuration](https://www.ibm.com/docs/en/netezza?topic=byoc-setting-up-vpc-iam-endpoint-configuration)\
+      Azure Blob Storage continues to require credential‑based access and does not support IAM role‑based authentication.
       {: note}
 
     ### Azure Blob storage configuration:
@@ -85,6 +91,6 @@ Once object storage is enabled, it **cannot be disabled**.
 | Storage Type        | Deployment Type    | Credential Access | IAM Access    |
 |----------------------|--------------------|-------------------|---------------|
 | AWS S3              | SaaS/Fully Managed| ✅ Supported      | ✅ Supported  |
-| AWS S3              | BYOC              | ✅ Supported      | ✅ Supported  |
+| AWS S3              | BYOC              | ✅ Supported      | ✅ Supported from 11.3.1.0 release onwards, need to configuration IAM access bucket manually from backend for BYOC private cluster.  |
 | Azure Blob Storage  | All               | ✅ Supported      | Coming Soon   |
 | S3-Compatible       | All               | ✅ Supported      | Varies        |

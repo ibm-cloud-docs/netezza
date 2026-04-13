@@ -196,6 +196,7 @@ toc:
           label: Command-line interface
           topics:
           - admins/nztool.md
+          - admins/nz_timezone.md
           - link:
               label: Netezza Performance Server commands
               href: https://www.ibm.com/docs/en/netezza?topic=interfaces-command-line-interface

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-04-10"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,7 +24,44 @@ subcollection: netezza
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 19 February 2026 - 11.3.1.0
+## 10 April 2026 - 11.3.1.1
+{: #march2026}
+{: release-note}
+
+### New features and enhancements
+{: #nfmar2026}
+
+Hostname Verification for SSL/TLS Authentication
+
+:   Version 11.3.1.1 introduces the `enableHostNameVerification` parameter for nzsql, ODBC, and JDBC drivers to control hostname validation during SSL/TLS connections. When enabled (`true`), the client verifies that the server hostname matches the hostname in the SSL/TLS certificate; if the hostnames don't match, the connection is rejected. The parameter defaults to `false`. For more information, see [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
+
+Unique cloud storage buckets
+
+:   Netezza requires separate cloud storage for each feature, including backup and restore, lakehouse, and REST catalog. Each feature requires unique AWS S3 buckets or Azure Blob Storage containers to ensure proper isolation and management. The console prevents adding the same bucket for multiple purposes.
+
+Resource release for auto-pause (BYOC Only)
+
+:   For Bring Your Own Cloud (BYOC) deployments, costs can be optimized by releasing resources when enabling auto-pause from the console. When resources are released, the system requires additional time to resume from the paused state.
+
+API server URL accessibility
+
+:   The API server URL is accessible from the console. To view the URL, click the profile icon, where it displays alongside the Console and Netezza versions.
+
+### Fixes
+{: #fixesmar2026}
+
+- CPU throttling issue in Postmaster is resolved for slow consuming clients that request large responses, preventing excessive CPU usage caused by continuous checking of socket buffers.
+- Query abort operations no longer become unresponsive at the `MTX_SYNCDIST_SEM0` semaphore.
+- The `schedqueues` output now displays accurate `fcomm` channel accounting. The calculation logic is segregated to show correct channel usage.
+- Segmentation faults no longer occur when packet queues are drained after channel closure.
+- System hang conditions during state transitions are resolved. Node-level queues are now completely drained even after channel closure, preventing partially drained queue states.
+
+### Components
+{: #compmar2026}
+
+- `nzcli` version: 11.3.1.1
+
+## 06 February 2026 - 11.3.1.0
 {: #feb2026}
 {: release-note}
 

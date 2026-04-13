@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-11-21"
+  years:  2026
+lastupdated: "2026-2-24"
 
 keywords: data lakehouse, netezza data lakehouse, integrating nps with watsonx, watsonx, watsonx.data, watsonx.data with nps
 subcollection: netezza
@@ -50,9 +50,9 @@ Ensure that you obtained the IBM API key by following the steps:
 
    e. Click **Add** and **Assign**.
 
-1. Click the **API keys** tab and click **Create**.
+1.	At the top of the page, from the Manage sub-menu, select Access (IAM). Click the **API keys** tab and click **Create**.
 1. Provide **Create API key** details.
-   You must name the API key as **ibmlhapikey**.
+   You can give any name to the API key.
 
 ## Integrating {{site.data.keyword.netezza_short}} instance or remote client with {{site.data.keyword.lakehouse_short}} by using `nzcli`.
 {: #integratesteps_watsonx.data}
@@ -83,14 +83,14 @@ Ensure that you obtained the IBM API key by following the steps:
 1. Set up HMS with `nz` tool.
 
    ```sql
-    ./nz setup-hms create -connection-name <your connection name> -hms-token <your API key obtained in the `Before you begin` section> -hms-user "ibmlhapikey" -url <thrift endpoint URL retrieved from watsonx.data instance>
+    ./nz setup-hms create -connection-name <your connection name> -hms-token <your API key obtained in the `Before you begin` section> -hms-user "ibmlhapikey_<user ID>" -url <thrift endpoint URL retrieved from watsonx.data instance>
    ```
    {: codeblock}
 
 Where:
 
 - `url` is the thrift endpoint URL which you retrieve from {{site.data.keyword.lakehouse_short}} instance. For more information, see [Getting the HMS endpoint](/docs/watsonxdata?topic=watsonxdata-hms#hms_url). You also must ensure that the `url` is in the following `thrift://<host>:<port>` format when you run `nz setup-hms` command.
-- `hms-user` is by default `ibmlhapikey`.
+- `User ID` can be obtained from the `ibmcloud` profile page.
 - `hms-token` is your API key obtained in the **Before you begin** section.
 
 After you registered to {{site.data.keyword.lakehouse_short}}, you can create a remote database.
