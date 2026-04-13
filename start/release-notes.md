@@ -31,21 +31,29 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfmar2026}
 
-Enhanced security with hostname verification
+Hostname Verification for SSL/TLS Authentication
 
-:   SSL/TLS connections can be controlled with the new `enableHostNameVerification` parameter in version 11.3.1.1. Available across nzsql, ODBC, and JDBC drivers, this feature strengthens security posture by ensuring server hostnames match SSL/TLS certificates before establishing connections. Enabling this validation adds an extra layer of protection to data communications. Learn more in [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
+:   Version 11.3.1.1 introduces the `enableHostNameVerification` parameter for nzsql, ODBC, and JDBC drivers to control hostname validation during SSL/TLS connections. When enabled (`true`), the client verifies that the server hostname matches the hostname in the SSL/TLS certificate; if the hostnames don't match, the connection is rejected. The parameter defaults to `false`. For more information, see [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
 
-Streamlined cloud storage architecture
+Unique cloud storage buckets
 
-:   Experience better organization and management with dedicated cloud storage for each Netezza feature. By using separate AWS S3 buckets or Azure Blob Storage containers for backup and restore, lakehouse, and REST catalog operations, you gain improved isolation, clearer resource management, and enhanced operational efficiency.
+:   Netezza now requires separate cloud storage for each feature, including backup and restore, lakehouse, and REST catalog. You must use unique AWS S3 buckets or Azure Blob Storage containers for each feature to ensure proper isolation and management.
 
-Smart cost optimization for BYOC deployments
+Resource release for auto-pause (BYOC Only)
 
-:   Maximize your cloud investment with intelligent resource management. Bring Your Own Cloud (BYOC) users can now release resources during auto-pause periods directly from the console, giving you greater control over infrastructure costs. While resuming requires additional time when resources are released, the cost savings make it an attractive option for optimizing your deployment.
+:   For Bring Your Own Cloud (BYOC) deployments, you can now optimize costs by releasing resources when enabling auto-pause from the console. When you choose to release resources, the system requires additional time to resume from the paused state.
 
-Instant access to API server information
+API server URL accessibility
 
-:   Stay connected with easier access to your API server URL. Simply click your profile icon in the console to view your API server URL alongside console and Netezza version information.
+:   The API server URL is now easily accessible from the console. You can view the URL by clicking your profile icon, where it displays alongside the Console and Netezza versions.
+
+### Fixes
+{: #fixesmar2026}
+
+- Query abort operations no longer become unresponsive at the `MTX_SYNCDIST_SEM0` semaphore.
+- The `schedqueues` output now displays accurate `fcomm` channel calculations. The calculation logic is segregated to show correct channel usage.
+- Segmentation faults no longer occur when packet queues are drained after channel closure.
+- System hang conditions during state transitions are resolved. Node-level queues are now completely drained even after channel closure, preventing partially drained queue states.
 
 ### Components
 {: #compmar2026}
