@@ -50,6 +50,7 @@ API server URL accessibility
 ### Fixes
 {: #fixesmar2026}
 
+- CPU throttling issue in Postmaster is resolved for slow consuming clients that request large responses, preventing excessive CPU usage caused by continuous checking of socket buffers.
 - Query abort operations no longer become unresponsive at the `MTX_SYNCDIST_SEM0` semaphore.
 - The `schedqueues` output now displays accurate `fcomm` channel accounting. The calculation logic is segregated to show correct channel usage.
 - Segmentation faults no longer occur when packet queues are drained after channel closure.
