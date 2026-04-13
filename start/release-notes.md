@@ -45,7 +45,7 @@ Resource release for auto-pause (BYOC Only)
 
 API server URL accessibility
 
-:   The API server URL is now easily accessible from the console. You can view the URL by clicking your profile icon, where it displays alongside the Console and Netezza versions.
+:   The API server URL is accessible from the console. To view the URL, click the profile icon, where it displays alongside the Console and Netezza versions.
 
 ### Fixes
 {: #fixesmar2026}
