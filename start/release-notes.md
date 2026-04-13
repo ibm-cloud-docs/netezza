@@ -35,6 +35,9 @@ Hostname Verification for SSL/TLS Authentication
 
 :   Version 11.3.1.1 introduces the `enableHostNameVerification` parameter for nzsql, ODBC, and JDBC drivers to control hostname validation during SSL/TLS connections. When enabled (`true`), the client verifies that the server hostname matches the hostname in the SSL/TLS certificate; if the hostnames don't match, the connection is rejected. The parameter defaults to `false`. For more information, see [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
 
+Unique cloud storage buckets
+
+:   Netezza requires separate cloud storage for each feature, including backup and restore, lakehouse, and REST catalog. Each feature requires unique AWS S3 buckets or Azure Blob Storage containers to ensure proper isolation and management. The console prevents adding the same bucket for multiple purposes.
 
 Resource release for auto-pause (BYOC Only)
 
@@ -42,7 +45,7 @@ Resource release for auto-pause (BYOC Only)
 
 API server URL accessibility
 
-:   The API server URL is accessible from the console. To view the URL, click the profile icon, where it displays alongside the Console and Netezza versions.
+:   The API server URL is now easily accessible from the console. You can view the URL by clicking your profile icon, where it displays alongside the Console and Netezza versions.
 
 ### Fixes
 {: #fixesmar2026}
@@ -606,7 +609,7 @@ IdP configuration
 ### Fixes
 {: #f1nov2023}
 
-- Updated APIs for IBM Cloud secret manager.
+- Updated APIs for IBM cloud secret manager.
 
 ### Components
 {: #comps1nov2023}
