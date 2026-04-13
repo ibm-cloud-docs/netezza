@@ -41,7 +41,7 @@ Unique cloud storage buckets
 
 Resource release for auto-pause (BYOC Only)
 
-:   For Bring Your Own Cloud (BYOC) deployments, you can now optimize costs by releasing resources when enabling auto-pause from the console. When you choose to release resources, the system requires additional time to resume from the paused state.
+:   For Bring Your Own Cloud (BYOC) deployments, costs can be optimized by releasing resources when enabling auto-pause from the console. When resources are released, the system requires additional time to resume from the paused state.
 
 API server URL accessibility
 
