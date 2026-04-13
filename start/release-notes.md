@@ -51,7 +51,7 @@ API server URL accessibility
 {: #fixesmar2026}
 
 - Query abort operations no longer become unresponsive at the `MTX_SYNCDIST_SEM0` semaphore.
-- The `schedqueues` output now displays accurate `fcomm` channel calculations. The calculation logic is segregated to show correct channel usage.
+- The `schedqueues` output now displays accurate `fcomm` channel accounting. The calculation logic is segregated to show correct channel usage.
 - Segmentation faults no longer occur when packet queues are drained after channel closure.
 - System hang conditions during state transitions are resolved. Node-level queues are now completely drained even after channel closure, preventing partially drained queue states.
 
