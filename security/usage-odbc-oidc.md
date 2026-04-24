@@ -49,7 +49,7 @@ Provide the following details:
 Ensure the following redirect URI is added to your Azure IdP configuration:
 
 ```url
-http://localhost:8888/callback
+http://localhost/callback
 ```
 
 This URI must be registered in the Azure IdP to enable successful redirection during authentication. For more information, see [Configure redirect URI on Azure IdP](/docs/netezza?topic=netezza-oidc-docs#cruai).
