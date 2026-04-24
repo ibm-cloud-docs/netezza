@@ -55,7 +55,7 @@ API server URL accessibility
 - The `schedqueues` output now displays accurate `fcomm` channel accounting. The calculation logic is segregated to show correct channel usage.
 - Segmentation faults no longer occur when packet queues are drained after channel closure.
 - System hang conditions during state transitions are resolved. Node-level queues are now completely drained even after channel closure, preventing partially drained queue states.
-- Fixed a rare concurrency issue in which a metadata column of a user table could be set incorrectly during concurrent transactions. Systems should be validated and corrected, if necessary, prior to upgrading to this release.
+- Resolved a rare concurrency issue where metadata columns in user tables could be incorrectly set during concurrent transactions. Systems should be validated and corrected as needed before upgrading to this release.
 
 ### Components
 {: #compmar2026}
