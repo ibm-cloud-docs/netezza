@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-04-10"
+lastupdated: "2026-05-25"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,39 @@ subcollection: netezza
 
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 30 May 2026 - 11.3.1.2
+{: #may2026}
+{: release-note}
+
+This release applies to Fully Managed Service (SaaS) and Bring Your Own Cloud (BYOC) deployments on AWS.
+{: note}
+
+### New features and enhancements
+{: #nfmay2026}
+
+Custom CIDR support
+
+:   For Bring Your Own Cloud (BYOC) deployments, custom CIDR support now allows you to specify your own CIDR range during Netezza on Cloud cluster provisioning, with minimum supported ranges of /22 for AWS and /21 for Azure deployments. For more information, see [Custom CIDR support](https://www.ibm.com/docs/en/netezza?topic=overview-custom-cidr-support){: external}.
+
+Console experience enhancements
+
+:   Enhanced user interface for improved navigation and usability across Administrator, Destination, and Lakehouse pages.
+
+INZA 11.3.5 support
+
+:   INZA has been upgraded to 11.3.5. For more information, see [Netezza Performance Server Analytics 11.3.5 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1135-release-notes){: external}.
+
+### Fixes
+{: #fixesmay2026}
+
+- Resolved connect and request timeout issue where the default 1-second limit was insufficient for slow or high-latency networks. Introduced a configurable TIMEOUT argument for AWS S3/IBM COS connectors to support appropriate timeout (in seconds). See [AWS S3, MinIO, and IBM Cloud Object Storage connectors](https://www.ibm.com/docs/en/netezza?topic=cs-aws-s3-minio-cloud-object-storage-connectors){: external}.
+
+
+### Components
+{: #compmay2026}
+
+- `nzcli` version: 11.3.1.2
 
 ## 10 April 2026 - 11.3.1.1
 {: #march2026}

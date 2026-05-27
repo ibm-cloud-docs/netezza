@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2026-01-06"
+  years: 2026
+lastupdated: "2026-05-27"
 
 keywords: security and compliance
 
@@ -33,7 +33,7 @@ Both [public](/docs/netezza?topic=netezza-connecting-overview#public_endpoints) 
 ### Encryption
 {: #encryptiom_sec_compl}
 
-When transmitted, content is encrypted on any public networks by using TLS 1.2 or later.  
+When transmitted, content is encrypted on any public networks by using TLS 1.2 or later.
 For more information, see [Data security and encryption](/docs/netezza?topic=netezza-data-encryption).
 
 At rest, content is encrypted within the Cloud Data Center in the following ways:
@@ -49,10 +49,11 @@ Netezza Performance Server as a Service (NPSaaS) follows industry‑recognized s
 ### SOC 2 Type 2
 {: #soc2t2}
 
-IBM provides the following Service Organization Control (SOC) report for its Netezza Performance Server as a Service (NPSaaS) managed services offering:
+IBM provides Service Organization Control (SOC) 2 Type 2 reports for its Netezza Performance Server as a Service (NPSaaS) managed services offering on both AWS and Azure platforms.
 
-This report evaluates IBM’s operational controls against the criteria established by the American Institute of Certified Public Accountants (AICPA) Trust Services Principles. These principles define industry‑recognized standards for ensuring systems and controls are designed to protect customer data and maintain service integrity.
-You can request access to the SOC report by contacting IBM representative.
+These reports evaluate IBM's operational controls against the criteria established by the American Institute of Certified Public Accountants (AICPA) Trust Services Principles. These principles define industry‑recognized standards for ensuring systems and controls are designed to protect customer data and maintain service integrity.
+
+SOC 2 Type 2 compliance is available for Netezza Performance Server deployments on both AWS and Azure, demonstrating IBM's commitment to maintaining rigorous security controls across cloud platforms.
 
 ## ISO 27017, ISO 27018
 {: #iso}

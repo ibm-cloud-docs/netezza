@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-09"
+  years: 2026
+lastupdated: "2026-5-25"
 
 keywords: web console, administering web console, administering
 
@@ -17,10 +17,10 @@ subcollection: netezza
 {:important: .important}
 {:note: .note}
 
-# Settings
-{: #settings}
+# Administration settings
+{: #adm-settings}
 
-On the *Settings* page, you can manage the following items:
+On the *Administration settings* page, you can manage the following items:
 
 - Add policies and view existing policies
 - Monitoring profile
@@ -68,6 +68,10 @@ To view existing policies, go to **Administration > Settings > Network policies 
 You can select multiple policies to delete.
 {: note}
 
+## Time travel
+{: #time-travel}
+
+Here you can set system default data version retention time.
 
 ## Monitoring profile
 {: #monitoring-profile}
@@ -90,3 +94,36 @@ To schedule a database maintenance slot:
 1. Under the **Schedule data maintenance** section, click **Enable** for enabling either **Grooms** or **Genstats** or both.
 1. Select the date and time for **Grooms** or **Genstats** or both.
 1. Click **Save**.
+
+## Scheduler rules
+{: #scheduler-rules}
+
+On the *Scheduler rules* page, you can view the list of scheduler rules, create a scheduler rule, activate or deactivate the rule, assign owner, rename, and remove the rule.
+
+### Creating scheduler rules
+{: #create-scheduler-rules}
+
+1. Go to **Administration > Scheduler rules**.
+1. Click **Create scheduler rule**.
+1. Type a name for the scheduler rule.
+
+   The name must be unique across all global object names. For example, database names and user group names. The name of the rule determines when the rule is evaluated in relation to other active rules.
+
+1. Select the type of your scheduler rule.
+
+   The scheduler rule can be `Standard` or `Advanced`.
+
+1. Add conditions.
+
+    For any rule to be triggered, all of the conditions must be met. If you do not set any conditions, the rule applies to all plans. The action is taken as a result of the rule.
+
+1. Add actions.
+
+   You can add only one action for a scheduler rule.
+
+1. If you want the rule to control administrative jobs, tick **Apply to admin jobs**.
+1. Tick **Active** to activate the rule.
+1. Click **Create**.
+
+You can select **View definition**, **Activate**, **Assign owner**, **Rename** and **Remove** options from the overflow menu.
+{: note}
