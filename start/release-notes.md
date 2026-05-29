@@ -40,7 +40,7 @@ Custom CIDR support
 
 Console experience enhancements
 
-:   Enhanced user interface for improved navigation and usability across Administrator, Destination, and Lakehouse pages.
+:   Enhanced the user interface to improve navigation and usability for Administration activities. The Administration page now consolidates navigation to pages that were previously separate under the Administration menu, including Settings, Scheduler rules, Lakehouse connections, and Destinations, as new controls on a single Administration page.
 
 INZA 11.3.5 support
 
