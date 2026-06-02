@@ -26,28 +26,19 @@ subcollection: netezza
 
 This guide outlines two methods to acquire SSL certificates for secure connection to a Netezza instance.
 
-## Acquire certificates via browser
-{: #method1_acq_cert_brows}
+## Download certificate from console admin profile
+{: #method1_acq_cert_profile}
 
-### 1: Download certificates from browser
-{: #downl_cert_brows}
+The simplest way to download the SSL certificate is directly from the console profile section:
 
-1. Open the **console link** to the instance in any browser.
-2. Locate the **lock icon** or “Secure” indicator next to the URL.
-3. Click **"Connection is secure"**, then click **"Certificate is valid"**.
-4. In the certificate dialog, go to the **"Details"** tab.
-5. Under **“Certificate Hierarchy”**, select each certificate one by one and click **"Export..."**.
-6. You should now have **three certificates** downloaded to your system.
+1. Log in to the Netezza Performance Server console.
+2. Navigate to the **Console Profile** section.
+3. Click the **Download Certificate** option.
+4. The `certificate.crt` file downloads automatically to your system.
 
-### 2: Combine certificates
-{: #comb_certi}
+This method provides a pre-configured certificate file that is ready to use for secure connections.
 
-Create a file named `certificate.crt` and paste the contents of the two certificates in the following order:
-
-- **Intermediate Certificate** (ends with `CA1`)
-- **Root Certificate** (ends with `GA2`)
-
-### 3: Use certificate to connect to netezza
+### Use certificate to connect to netezza
 {: #use_certi_conn_nps}
 
 Use the `certificate.crt` file with the `nzsql` utility:

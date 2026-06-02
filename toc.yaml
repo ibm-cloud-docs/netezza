@@ -63,6 +63,10 @@ toc:
               - admins/bnr.md
               - admins/bnr-ui.md
               - admins/bnr-flow.md
+          - topicgroup:
+              label: Preferences
+              topics:
+              - webconsole/preferences.md
       - topicgroup:
           label: Netezza dbt adaptor
           topics:
