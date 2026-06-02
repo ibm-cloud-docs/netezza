@@ -54,6 +54,10 @@
     "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
     "tiles": [
       {
+        "date": "30 May 2026",
+        "title": "This release introduces custom CIDR support for BYOC deployments, streamlines the Administration console with consolidated navigation, and upgrades INZA to version 11.3.5."
+      },
+      {
         "date": "10 April 2026",
         "title": "Version 11.3.1.1 introduces hostname verification for SSL/TLS connections, unique cloud storage requirements, BYOC resource release optimization, and improved API server URL accessibility."
       },
