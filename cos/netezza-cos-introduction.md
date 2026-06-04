@@ -4,7 +4,7 @@ copyright:
   years: 2025
 lastupdated: "2025-09-19"
 
-keywords: netezza cos
+keywords: netezza, cloud object storage
 
 subcollection: netezza
 
@@ -19,7 +19,7 @@ subcollection: netezza
 {:screen: .screen}
 {:caption: .caption}
 
-# Introduction to Object Storage
+# Introduction to Object Storage on Netezza
 {: #netezzacosobjstrge}
 
 Netezza now supports a hybrid storage architecture, enabling users to choose between block storage and object storage at the time of table creation. This enhancement provides flexibility in managing data based on performance and cost considerations. Object storage is a data storage technology that manages data as objects, providing practically unlimited and pain-free scalability, high uptimes, easier data sharing and movement, and lower storage costs.
