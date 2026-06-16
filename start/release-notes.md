@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-16"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -44,17 +44,21 @@ Vector data type support
 
    **Netezza supports up to 16,000 dimensions**, providing extensive flexibility for embedding models. Custom embedding models can be integrated, allowing selection of models that best fit specific use cases while ensuring compatibility with this generous dimension limit. Additionally, custom LLMs can be integrated, providing complete freedom and control over the AI stack with no vendor lock-in.
 
-ODBC connector - Connection retry delay
+Azure managed identity support for external tables and backup and restore
 
-:   Added new `ConnectionRetryDelay` configuration option for the ODBC connector. This option allows you to specify the delay time (in milliseconds) between connection retry attempts when connection failures occur. The delay is applied only between retry attempts, not during the initial connection attempt. This enhancement improves connection resilience during network instability or temporary server unavailability and provides better control over retry behavior to prevent overwhelming the server with rapid retry attempts. Configuration is supported via DSN or connection string on both Windows and Linux platforms.
-
-JDBC connector - Connection retry options
-
-:   Added `ConnectionRetry` and `ConnectionRetryDelay` configuration options for the JDBC connector. The `ConnectionRetry` option enables and configures the number of automatic connection retry attempts, while `ConnectionRetryDelay` specifies the delay time (in milliseconds) between retry attempts. The delay is applied only between retry attempts, not on the initial connection attempt. These enhancements improve JDBC connector reliability during connection failures and provide granular control over both retry count and timing. Configuration is supported through JDBC connection properties.
+:   External tables and backup and restore now support Azure managed identity authentication. This enhancement enables secure access to Azure resources by using managed identities instead of stored credentials, which helps simplify credential management for Azure environments.
 
 Node.js driver support
 
-:   Introduced native Node.js driver for Netezza database connectivity, enabling JavaScript and Node.js applications to connect directly to Netezza databases. This driver eliminates the need for workarounds using other drivers with custom bindings and provides native database library support similar to other major databases. The driver supports DDL operations (CREATE, DROP, CREATE TABLE AS, ALTER, and creation of stored procedures, functions, views, sequences), DML operations (INSERT, UPDATE, DELETE, SELECT), and transaction management (BEGIN, END, COMMIT, ROLLBACK). A VSCode extension is also available for enhanced development experience. For more information, see [nz-node driver](https://github.com/ibm/nz-node){: external} and [Netezza SQL Tool VSCode extension](https://github.com/ibm/netezza-sqltool){: external}.
+:   Introduced a native Node.js driver for Netezza database connectivity, enabling JavaScript and Node.js applications to connect directly to Netezza databases. This driver eliminates the need for workarounds that use other drivers with custom bindings and provides native database library support similar to other major databases. The driver supports DDL operations (CREATE, DROP, CREATE TABLE AS, ALTER, and creation of stored procedures, functions, views, and sequences), DML operations (INSERT, UPDATE, DELETE, SELECT), and transaction management (BEGIN, END, COMMIT, ROLLBACK). A VS Code extension is also available for an enhanced development experience. For more information, see [nz-node driver](https://github.com/ibm/nz-node){: external} and [Netezza SQL Tool VS Code extension](https://github.com/ibm/netezza-sqltool){: external}.
+
+JDBC connector - Connection retry options
+
+:   Added `ConnectionRetry` and `ConnectionRetryDelay` configuration options for the JDBC connector. The `ConnectionRetry` option enables and configures the number of automatic connection retry attempts, while `ConnectionRetryDelay` specifies the delay time, in milliseconds, between retry attempts. The delay is applied only between retry attempts, not on the initial connection attempt. These enhancements improve JDBC connector reliability during connection failures and provide granular control over both retry count and timing. Configuration is supported through JDBC connection properties.
+
+ODBC connector - Connection retry delay
+
+:   Added the `ConnectionRetryDelay` configuration option for the ODBC connector. This option allows you to specify the delay time, in milliseconds, between connection retry attempts when connection failures occur. The delay is applied only between retry attempts, not during the initial connection attempt. This enhancement improves connection resilience during network instability or temporary server unavailability and provides better control over retry behavior to help prevent overwhelming the server with rapid retry attempts. Configuration is supported through a DSN or connection string on Windows and Linux platforms.
 
 ### Components
 {: #compjun2026}
