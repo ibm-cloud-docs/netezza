@@ -175,6 +175,14 @@ toc:
           - data_lakehouse_mcsp/watsonx_datasql_mcsp.md
           - data_lakehouse_mcsp/hms_npskeywords_mcsp.md
       - topicgroup:
+          label: Unstructured data
+          topics:
+          - unstructured_data/unstructured_data.md
+      - topicgroup:
+          label: Vector data type
+          topics:
+          - vector/vector_data_type.md
+      - topicgroup:
           label: Monitoring and alerts
           topics:
           - nzalert/nzalert_overview.md

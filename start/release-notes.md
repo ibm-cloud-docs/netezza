@@ -31,18 +31,13 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfjun2026}
 
+Unstructured data support
+
+:   Netezza now supports processing unstructured data such as PDF files, images, and JSON files. The feature follows a medallion architecture (bronze, silver, gold) where you can enrich data from unstructured sources and use it in other workloads. The feature is available only on AWS SaaS and BYOC deployments. Supported operations include text extraction from PDFs and images, table extraction from PDFs, JSON path extraction, metadata extraction, and vector embedding generation for RAG workflows. For more information, see [Unstructured data](/docs/netezza?topic=netezza-unstructured_data).
+
 Vector data type support
 
-:   Netezza now supports the vector data type, enabling storage and management of embeddings for generative AI applications. Vectors are essential for Retrieval-Augmented Generation (RAG) workflows, where embeddings extracted from documents are stored in a vector database for use with large language models (LLMs). With vector data type support, embedding tables can be created directly in Netezza, leveraging the AMPP architecture for high-performance vector storage and retrieval operations.
-
-   Netezza supports four widely used distance operators for vector similarity calculations:
-
-   - **L1 distance:** `<+>`
-   - **L2 distance:** `<->`
-   - **Cosine distance:** `<=>`
-   - **Inner product:** `<#>`
-
-   **Netezza supports up to 16,000 dimensions**, providing extensive flexibility for embedding models. Custom embedding models can be integrated, allowing selection of models that best fit specific use cases while ensuring compatibility with this generous dimension limit. Additionally, custom LLMs can be integrated, providing complete freedom and control over the AI stack with no vendor lock-in.
+:   Netezza now supports the vector data type, enabling storage and management of embeddings for generative AI applications. Vectors are essential for Retrieval-Augmented Generation (RAG) workflows, where embeddings extracted from documents are stored in a vector database for use with large language models (LLMs). With vector data type support, embedding tables can be created directly in Netezza, leveraging the AMPP architecture for high-performance vector storage and retrieval operations. For more information, see [Vector data type support](/docs/netezza?topic=netezza-vector_data_type).
 
 Azure managed identity support for external tables and backup and restore
 
