@@ -172,7 +172,7 @@ AWS S3 support was introduced as a public preview in the previous release and is
 
 Availability for REST catalog support for BYOC
 
-:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
+:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg) and [Using Iceberg REST Catalog](/docs/netezza?topic=netezza-iceberg-rest-catalog).
 
 IAM Access on AWS bucket for NCOS
 
