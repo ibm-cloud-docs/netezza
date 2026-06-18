@@ -31,6 +31,10 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfjun2026}
 
+Iceberg REST Catalog support
+
+:   Netezza Performance Server now provides built-in REST catalog support for managing Apache Iceberg tables in your data lakehouse environment. The REST catalog eliminates the need for external catalog services like AWS Glue and provides a unified interface for managing Iceberg tables across different deployment environments. Key features include a default REST catalog with JDBC backend using PostgreSQL that is automatically configured during deployment, support for connecting to external REST catalog services via URI, and seamless integration with AWS S3 and IBM Cloud Object Storage. This enhancement simplifies setup, reduces dependencies on third-party services, and provides cost savings by eliminating subscription fees for external catalog services. For more information, see [Using Iceberg REST Catalog](/docs/netezza?topic=netezza-iceberg-rest-catalog).
+
 Unstructured data support
 
 :   Netezza now supports processing unstructured data such as PDF files, images, and JSON files. The feature follows a medallion architecture (bronze, silver, gold) where you can enrich data from unstructured sources and use it in other workloads. The feature is available only on AWS SaaS and BYOC deployments. Supported operations include text extraction from PDFs and images, table extraction from PDFs, JSON path extraction, metadata extraction, and vector embedding generation for RAG workflows. For more information, see [Unstructured data](/docs/netezza?topic=netezza-unstructured_data).
@@ -54,6 +58,10 @@ JDBC connector - Connection retry options
 ODBC connector - Connection retry delay
 
 :   Added the `ConnectionRetryDelay` configuration option for the ODBC connector. This option allows you to specify the delay time, in milliseconds, between connection retry attempts when connection failures occur. The delay is applied only between retry attempts, not during the initial connection attempt. This enhancement improves connection resilience during network instability or temporary server unavailability and provides better control over retry behavior to help prevent overwhelming the server with rapid retry attempts. Configuration is supported through a DSN or connection string on Windows and Linux platforms.
+
+Manual vacuum operation
+
+:   Introduced the `nz manualvacuum` command for comprehensive database maintenance. This command performs vacuum and reindex operations on all databases in your Netezza instance, helping reclaim disk space and optimize database performance. The operation automatically stops the system, creates a catalog backup, performs vacuum and reindex on all databases, and restarts the system. The command supports both interactive and forced execution modes, with detailed progress tracking and logging. For more information, see [The nz manualvacuum command](/docs/netezza?topic=netezza-nz-manualvacuum).
 
 ### Components
 {: #compjun2026}
@@ -172,7 +180,7 @@ AWS S3 support was introduced as a public preview in the previous release and is
 
 Availability for REST catalog support for BYOC
 
-:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg) and [Using Iceberg REST Catalog](/docs/netezza?topic=netezza-iceberg-rest-catalog).
+:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
 
 IAM Access on AWS bucket for NCOS
 

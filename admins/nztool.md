@@ -507,6 +507,7 @@ A secure and flexible client solution for accessing Netezza in cloud environment
 | Command  | Description                                      |
 |----------|------------------------------------------------|
 | `auto-pr` | List and show details of Auto Pause/Resume mechanism |
+| `manualvacuum` | Execute manual vacuum operation (requires system restart) |
 
 ## High-level NZ commands
 {: #high_lev_cmds}
