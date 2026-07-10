@@ -24,23 +24,7 @@ subcollection: netezza
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 10 July 2026 - 11.3.1.3
-{: #jun2026}
-{: release-note}
 
-### New features and enhancements
-{: #nfjun2026}
-
-
-
-Netezza Performance Server – Software on Google Cloud Platform
-
-:   Netezza Performance Server – Software (Software Only offering) is now available on Google Cloud Platform (GCP), deployed as containers on Google Kubernetes Engine (GKE) with Google Persistent Disks and Cloud Storage for data persistence. For more information, see [Netezza Performance Server – Software on GCP](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-software).
-
-### Components
-{: #compjun2026}
-
-- `nzcli` version: 11.3.1.3
 
 ## 30 May 2026 - 11.3.1.2
 {: #may2026}
