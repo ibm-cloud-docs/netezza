@@ -100,6 +100,20 @@ JSON files that you use for unstructured data operations must not contain BOM (B
 
 Generate vector embeddings from extracted text for future RAG (Retrieval-Augmented Generation) workflows. You can use your own large language model (LLM) or Jupyter notebook to work with the embeddings.
 
+Vectorization supports English only. To use a different embedding model, contact support.
+{: .note}
+
+### Language support for text extraction
+
+Text extraction supports the following languages:
+
+- English
+- Spanish
+- Portuguese
+- French
+- German
+- Italian
+
 ## Prerequisites
 {: #prereq_unstrdat}
 
