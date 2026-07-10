@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-10"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,44 +24,18 @@ subcollection: netezza
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 30 Jun 2026 - 11.3.1.3
+## 15 July 2026 - 11.3.1.3
 {: #jun2026}
 {: release-note}
 
 ### New features and enhancements
 {: #nfjun2026}
 
-Iceberg REST Catalog support
 
-:   Netezza Performance Server now provides built-in REST catalog support for managing Apache Iceberg tables in your data lakehouse environment. The REST catalog eliminates the need for external catalog services like AWS Glue and provides a unified interface for managing Iceberg tables across different deployment environments. Key features include a default REST catalog with JDBC backend using PostgreSQL that is automatically configured during deployment, support for connecting to external REST catalog services via URI, and seamless integration with AWS S3 and IBM Cloud Object Storage. This enhancement simplifies setup, reduces dependencies on third-party services, and provides cost savings by eliminating subscription fees for external catalog services. For more information, see [Using Iceberg REST Catalog](/docs/netezza?topic=netezza-iceberg-rest-catalog).
 
-Unstructured data support
+Netezza Performance Server – Software on Google Cloud Platform
 
-:   Netezza now supports processing unstructured data such as PDF files, images, and JSON files. The feature follows a medallion architecture (bronze, silver, gold) where you can enrich data from unstructured sources and use it in other workloads. The feature is available only on AWS SaaS and BYOC deployments. Supported operations include text extraction from PDFs and images, table extraction from PDFs, JSON path extraction, metadata extraction, and vector embedding generation for RAG workflows. For more information, see [Unstructured data](/docs/netezza?topic=netezza-unstructured_data).
-
-Vector data type support
-
-:   Netezza now supports the vector data type, enabling storage and management of embeddings for generative AI applications. Vectors are essential for Retrieval-Augmented Generation (RAG) workflows, where embeddings extracted from documents are stored in a vector database for use with large language models (LLMs). With vector data type support, embedding tables can be created directly in Netezza, leveraging the AMPP architecture for high-performance vector storage and retrieval operations. For more information, see [Vector data type support](/docs/netezza?topic=netezza-vector_data_type).
-
-Azure managed identity support for external tables and backup and restore
-
-:   External tables and backup and restore now support Azure managed identity authentication. This enhancement enables secure access to Azure resources by using managed identities instead of stored credentials, which helps simplify credential management for Azure environments.
-
-Node.js driver support
-
-:   Introduced a native Node.js driver for Netezza database connectivity, enabling JavaScript and Node.js applications to connect directly to Netezza databases. This driver eliminates the need for workarounds that use other drivers with custom bindings and provides native database library support similar to other major databases. The driver supports DDL operations (CREATE, DROP, CREATE TABLE AS, ALTER, and creation of stored procedures, functions, views, and sequences), DML operations (INSERT, UPDATE, DELETE, SELECT), and transaction management (BEGIN, END, COMMIT, ROLLBACK). A VS Code extension is also available for an enhanced development experience. For more information, see [nz-node driver](https://github.com/ibm/nz-node){: external} and [Netezza SQL Tool VS Code extension](https://github.com/ibm/netezza-sqltool){: external}.
-
-JDBC connector - Connection retry options
-
-:   Added `ConnectionRetry` and `ConnectionRetryDelay` configuration options for the JDBC connector. The `ConnectionRetry` option enables and configures the number of automatic connection retry attempts, while `ConnectionRetryDelay` specifies the delay time, in milliseconds, between retry attempts. The delay is applied only between retry attempts, not on the initial connection attempt. These enhancements improve JDBC connector reliability during connection failures and provide granular control over both retry count and timing. Configuration is supported through JDBC connection properties.
-
-ODBC connector - Connection retry delay
-
-:   Added the `ConnectionRetryDelay` configuration option for the ODBC connector. This option allows you to specify the delay time, in milliseconds, between connection retry attempts when connection failures occur. The delay is applied only between retry attempts, not during the initial connection attempt. This enhancement improves connection resilience during network instability or temporary server unavailability and provides better control over retry behavior to help prevent overwhelming the server with rapid retry attempts. Configuration is supported through a DSN or connection string on Windows and Linux platforms.
-
-Manual vacuum operation
-
-:   Introduced the `nz manualvacuum` command for comprehensive database maintenance. This command performs vacuum and reindex operations on all databases in your Netezza instance, helping reclaim disk space and optimize database performance. The operation automatically stops the system, creates a catalog backup, performs vacuum and reindex on all databases, and restarts the system. The command supports both interactive and forced execution modes, with detailed progress tracking and logging. For more information, see [The nz manualvacuum command](/docs/netezza?topic=netezza-nz-manualvacuum).
+:   Netezza Performance Server – Software is now available on Google Cloud Platform (GCP), deployed as containers on Google Kubernetes Engine (GKE) with Google Persistent Disks and Cloud Storage for data persistence. For more information, see [Netezza Performance Server – Software on GCP](/docs/netezza?topic=netezza-performance-server-software).
 
 ### Components
 {: #compjun2026}
@@ -687,7 +661,7 @@ IdP configuration
 ### Fixes
 {: #f1nov2023}
 
-- Updated APIs for IBM cloud secret manager.
+- Updated APIs for IBM Cloud secret manager.
 
 ### Components
 {: #comps1nov2023}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-03-02"
+  years: 2026
+lastupdated: "2026-06-30"
 
 keywords: singularity, parquet, data lake, netezza singularity, parquet files, querying data
 subcollection: netezza
@@ -29,7 +29,7 @@ subcollection: netezza
 ## Before you begin
 {: #prereqs1}
 
-In the examples, the publicly available [*New York taxi trip* record data](https://www.nyc.gov:443/site/tlc/about/tlc-trip-record-data.page) {: external} for yellow taxis in January 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
+In the examples, the publicly available [*New York taxi trip* record data](https://www.nyc.gov:443/site/tlc/about/tlc-trip-record-data.page){: external} for yellow taxis in January 2022 is used. To follow this example, make sure that the data is in an accessible S3 bucket.
 
 To access S3 files, you need to have an AWS account with proper permissions to provide your access key ID and secret access key.
 {: note}
@@ -162,6 +162,26 @@ The *parquet* column names are case-insensitive unless it introduces a collision
    You do not have to load whole tables into {{site.data.keyword.netezza_short}}. *parquet* is a columnar format so the {{site.data.keyword.netezza_short}} engine can query a subset of columns without having to transfer the entire table over the internet. This way, if you work with large tables, you can significantly reduce ingress traffic and achieve faster load times. The query engine always uses only the columns from a *parquet* table that are needed.
    {: tip}
 
+### Troubleshooting AWS timeout errors
+{: #troubleshoot_aws_timeout}
+
+If you encounter the following error during lakehouse queries:
+
+```
+AWS Error NETWORK_CONNECTION during HeadObject operation: curlCode: 28, Timeout was reached
+```
+{: screen}
+
+You can resolve this issue by setting the following configuration values:
+
+```sql
+set dlAWSConnectTimeout=10;
+set dlAWSRetryStrategy=1;
+set dlAWSNumRetries=10;
+```
+{: codeblock}
+
+These settings adjust the AWS connection timeout, retry strategy, and number of retries to handle network connectivity issues more effectively.
 
 ## Azure BLOB example
 {: #azure_blob_example}
