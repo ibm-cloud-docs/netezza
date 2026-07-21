@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-09"
+lastupdated: "2026-07-13"
 
 keywords: web console, getting started with the web cosnole
 
@@ -19,6 +19,8 @@ subcollection: netezza
 
 # Resource monitoring
 {: #resource_mon}
+
+The **Resource monitoring** page is accessible from **Monitoring > Resource monitoring** in the console navigation.
 
 ## Dashboard
 {: #dashboard}

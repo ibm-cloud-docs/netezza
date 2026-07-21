@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2024-01-03"
+lastupdated: "2026-07-13"
 
 keywords: web console, 
 subcollection: netezza
@@ -22,7 +22,7 @@ subcollection: netezza
 ## Queries
 {: #active-queries}
 
-To see a list of active queries, go to **Current activity > Queries** from the menu or homepage.
+To see a list of active queries, go to **Monitoring > Current activity > Queries** from the menu or homepage.
 
 When you select **Queries**, you can do the following:
 - View queries
@@ -37,7 +37,7 @@ You can also export information about queries by clicking **Export** or refresh 
 ## Sessions
 {: #active-sessions}
 
-To see a list of sessions, go to **Current activity > Sessions** from the menu or homepage.
+To see a list of sessions, go to **Monitoring > Current activity > Sessions** from the menu or homepage.
 
 When you select **Sessions**, you can do the following:
 

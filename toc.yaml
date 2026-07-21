@@ -160,11 +160,14 @@ toc:
           - data_lakehouse/querying_datalakehouse.md
           - data_lakehouse/ingesting_datalakehouse.md
           - data_lakehouse/merging_datalakehouse.md
-          - data_lakehouse/iceberg_rest_catalog.md
           - data_lakehouse/supported_sql_commands.md
           - data_lakehouse/hms_npskeywords.md
           - data_lakehouse/watsonxdata_ki.md
           - data_lakehouse/watsonxdata_timetravel.md
+      - topicgroup:
+          label: IBM Netezza Nexus
+          topics:
+          - nexus/nexus.md
       - topicgroup:
           label: Querying data from watsonx.data Software as a Service
           topics:
@@ -189,6 +192,7 @@ toc:
           - nzalert/nzalert_overview.md
           - nzalert/nzalert_aws.md
           - nzalert/nzalert_az.md
+          - start/advanced-monitoring.md
       - topicgroup:
           label: Time travel and historical data
           topics:

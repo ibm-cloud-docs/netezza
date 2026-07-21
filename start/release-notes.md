@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-10"
+lastupdated: "2026-07-21"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,7 +24,63 @@ subcollection: netezza
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
 
+## 21 July 2026 - 11.3.1.3
+{: #jun2026}
+{: release-note}
 
+### New features and enhancements
+{: #nfjun2026}
+
+
+
+IBM Netezza Nexus (private tech preview)
+
+:   IBM Netezza Nexus is an open lakehouse catalog natively integrated into the Netezza engine. Built on the open **Apache Iceberg REST Catalog specification**, Nexus provides secure, governed, multi-engine access to Apache Iceberg tables—without copying or moving data. Nexus is available for private tech preview in this release. Do not use it for production deployments. For more information, see [IBM Netezza Nexus](/docs/netezza?topic=netezza-netezza-nexus).
+
+Unstructured data support
+
+:   Netezza now supports processing unstructured data including PDF files, images, and JSON files on AWS SaaS and BYOC deployments. Operations include text extraction from PDFs and images (six languages), table extraction using JSONPATH queries, metadata extraction, and vector embedding generation for RAG workflows. For more information, see [Unstructured data](/docs/netezza?topic=netezza-unstructured_data).
+
+Vector data type support
+
+:   Netezza now supports a native vector data type for storing and managing embeddings in generative AI and Retrieval-Augmented Generation (RAG) workflows. Embedding tables are created directly in Netezza and benefit from the AMPP architecture for parallel, high-performance vector storage and retrieval. For more information, see [Vector data type support](/docs/netezza?topic=netezza-vector-data-type-support).
+
+Node.js driver support
+
+:   A native Node.js driver is now available for direct Netezza database connectivity from JavaScript applications. The driver supports DDL, DML, and transaction management operations. A VS Code extension is also available. For more information, see [nz-node driver](https://github.com/ibm/nz-node){: external} and [Netezza SQL Tool VS Code extension](https://github.com/ibm/netezza-sqltool){: external}.
+
+JDBC connector – Connection retry options
+
+:   Two new JDBC connector options are available: `ConnectionRetry` sets the number of automatic retry attempts on connection failure, and `ConnectionRetryDelay` sets the delay in milliseconds between retries. The delay applies only between retries, not on the initial attempt.
+
+ODBC connector – Connection retry delay
+
+:   The new `ConnectionRetryDelay` option for the ODBC connector sets the delay in milliseconds between connection retry attempts. Configuration is supported through a DSN or connection string on Windows and Linux.
+
+New NZ commands
+
+:   This release introduces two command-line utilities:
+
+    - **nz manualvacuum**: Performs vacuum and reindex on all databases to reclaim disk space and optimize performance. The command stops the system, creates a catalog backup, runs maintenance, and restarts. For more information, see [The nz manualvacuum command](/docs/netezza?topic=netezza-nz-manualvacuum).
+
+    - **nzsqa**: Provides system diagnostics and monitoring—front and back channel statistics, active jobs, disk and memory usage, scheduler queues, lock tables, and more. For more information, see [The nzsqa command](/docs/netezza?topic=netezza-nztool#supported-cmds).
+
+Advanced Monitoring
+
+:   The Advanced Monitoring feature delivers granular performance metrics, resource utilization analytics, and system health insights from a single interface in the Monitoring Dashboard. For more information, see [Advanced Monitoring](/docs/netezza?topic=netezza-advanced-monitoring).
+
+INZA 11.3.6 support
+
+:   INZA has been upgraded to version 11.3.6. For more information, see [Netezza Performance Server Analytics 11.3.6 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1136-release-notes){: external}.
+
+Netezza Performance Server – Software on Google Cloud Platform
+
+:   Netezza Performance Server – Software (Software Only offering) is now available on Google Cloud Platform (GCP), deployed as containers on Google Kubernetes Engine (GKE) with Google Persistent Disks and Cloud Storage for data persistence. For more information, see [Netezza Performance Server – Software on GCP](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-software).
+
+### Components
+{: #compjun2026}
+
+- `nzcli` version: 11.3.1.3
 
 ## 30 May 2026 - 11.3.1.2
 {: #may2026}

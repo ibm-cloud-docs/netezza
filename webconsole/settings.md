@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-5-25"
+lastupdated: "2026-07-13"
 
 keywords: web console, administering web console, administering
 
@@ -20,11 +20,12 @@ subcollection: netezza
 # Administration settings
 {: #adm-settings}
 
-On the *Administration settings* page, you can manage the following items:
+On the *Administration* page, you can manage the following items:
 
 - Add policies and view existing policies
 - Monitoring profile
 - Database maintenance
+- Scheduler rules
 
 ## Network policies
 {: #wc-nwpolicies}
@@ -47,7 +48,7 @@ For more information about domain standards, see [Defining network policies with
 ### Adding network policies
 {: #wc-nwpolicies-adding}
 
-1. Go to **Administration > Settings > Network policies**.
+1. Go to **Administration > Network policies**.
 1. In the *Add policy* section, type your Classless Inter-Domain Routing (CIDR) or hostname.
    The IP address must conform to the domain standards.
 1. Select whether the policy is `Allowed` or `Blocked`.
@@ -56,12 +57,12 @@ For more information about domain standards, see [Defining network policies with
 ### Viewing network policies
 {: #wc-nwpolicies-viewing}
 
-To view existing policies, go to **Administration > Settings > Network policies > Existing policies**.
+To view existing policies, go to **Administration > Network policies > Existing policies**.
 
 ### Deleting network policies
 {: #wc-nwpolicies-deleting}
 
-1. Go to **Administration > Settings > Network policies > Existing policies**.
+1. Go to **Administration > Network policies > Existing policies**.
 2. Select the policy that you want to delete.
 3. Click **Delete**.
 
@@ -81,7 +82,7 @@ On the *Monitoring profile* page, you can do the following:
 - Monitor the performance of your system over time.
 - Collect data for historical and real time data.
 
-To access the *Monitoring profile* page, go to **Administration > Settings > Monitoring profile**.
+To access the *Monitoring profile* page, go to **Administration > Monitoring profile**.
 
 ## Maintenance
 {: #maintenance}
@@ -90,7 +91,7 @@ On the *Maintenance*  page, you can schedule a database maintenance and view inf
 
 To schedule a database maintenance slot:
 
-1. Go to **Administration > Settings > Maintenance**.
+1. Go to **Administration > Maintenance**.
 1. Under the **Schedule data maintenance** section, click **Enable** for enabling either **Grooms** or **Genstats** or both.
 1. Select the date and time for **Grooms** or **Genstats** or both.
 1. Click **Save**.
@@ -99,6 +100,7 @@ To schedule a database maintenance slot:
 {: #scheduler-rules}
 
 On the *Scheduler rules* page, you can view the list of scheduler rules, create a scheduler rule, activate or deactivate the rule, assign owner, rename, and remove the rule.
+
 
 ### Creating scheduler rules
 {: #create-scheduler-rules}
