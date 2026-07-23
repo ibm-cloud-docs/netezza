@@ -217,6 +217,7 @@ Workflow history is retained only for the current day. You can view the executio
 - Image files whose filenames begin with a numeric character are not supported in workflows. This limitation applies only to image files. PDF and JSON files with filenames that start with numeric characters are supported.
 - JSON files must not contain BOM characters, unsupported characters (such as pipe, single quote, backslash, ampersand, less-than, greater-than, multi-byte UTF-8 characters, and null bytes), or JSON path query features that are not supported.
 - If you are on AWS BYOC and using a private namespace, there are known issues with missing dependencies. Contact support to manually install the required set of Python packages.
+- On AWS BYOC with a private namespace, the **Extract text** operation supports English only.
 
 ## Feature dependencies
 {: #feat_dep_unstrdat}
