@@ -55,8 +55,6 @@ These reports evaluate IBM's operational controls against the criteria establish
 
 SOC 2 Type 2 compliance is available for Netezza Performance Server deployments on both AWS and Azure, demonstrating IBM's commitment to maintaining rigorous security controls across cloud platforms.
 
-As of the 11.3.1.3 release, NPSaaS on AWS is formally included in the SOC 2 Type 2 attestation scope.
-
 ## ISO 27017, ISO 27018
 {: #iso}
 
