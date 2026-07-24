@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-12-04"
+lastupdated: "2026-07-21"
 
 keywords: netezza data lakehouse, metastore, netezza with watsonx.data
 subcollection: netezza
@@ -24,6 +24,9 @@ subcollection: netezza
 {: #overview_watsonx.data_mcsp}
 
 With {{site.data.keyword.netezza_full}} and {{site.data.keyword.lakehouse_short}} you can connect to the Hive Metastore (HMS) which is a data lake metastore server and query from Apache Iceberg tables that live on your data lake S3 object store.
+
+Support for {{site.data.keyword.lakehouse_short}} integration is temporarily withdrawn as of {{site.data.keyword.netezza_short}} version 11.3.1.3. This feature is not available in version 11.3.1.3 and later releases until support is reinstated.
+{: note}
 
 In technology preview:
 
