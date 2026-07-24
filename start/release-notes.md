@@ -37,11 +37,11 @@ IBM Netezza Nexus (private tech preview)
 
 :   IBM Netezza Nexus is an open lakehouse catalog natively integrated into the Netezza engine. Built on the open **Apache Iceberg REST Catalog specification**, Nexus provides secure, governed, multi-engine access to Apache Iceberg tables—without copying or moving data. Nexus is available for private tech preview in this release. Do not use it for production deployments. For more information, see [IBM Netezza Nexus](/docs/netezza?topic=netezza-netezza-nexus).
 
-Unstructured data support
+Unstructured data in Netezza (private tech preview)
 
 :   Netezza now supports processing unstructured data including PDF files, images, and JSON files on AWS SaaS and BYOC deployments. Operations include text extraction from PDFs and images (six languages), table extraction using JSONPATH queries, metadata extraction, and vector embedding generation for RAG workflows. For more information, see [Unstructured data](/docs/netezza?topic=netezza-unstructured_data).
 
-Vector data type support
+Netezza built-in vector store
 
 :   Netezza now supports a native vector data type for storing and managing embeddings in generative AI and Retrieval-Augmented Generation (RAG) workflows. Embedding tables are created directly in Netezza and benefit from the AMPP architecture for parallel, high-performance vector storage and retrieval. For more information, see [Vector data type support](/docs/netezza?topic=netezza-vector-data-type-support).
 
@@ -64,6 +64,13 @@ New NZ commands
     - **nz manualvacuum**: Performs vacuum and reindex on all databases to reclaim disk space and optimize performance. The command stops the system, creates a catalog backup, runs maintenance, and restarts. For more information, see [The nz manualvacuum command](/docs/netezza?topic=netezza-nz-manualvacuum).
 
     - **nzsqa**: Provides system diagnostics and monitoring—front and back channel statistics, active jobs, disk and memory usage, scheduler queues, lock tables, and more. For more information, see [The nzsqa command](/docs/netezza?topic=netezza-nztool#supported-cmds).
+
+nzcli – `setup-lh-connection` command (replaces `set-hm`)
+
+:   The `set-hm` command in nzcli has been renamed to `setup-lh-connection` to better reflect its purpose of configuring the Lakehouse connection as part of the Netezza–Iceberg Catalog integration. Update any scripts or automation that use `set-hm` to use `setup-lh-connection` before upgrading to this release.
+
+    The `set-hm` command is no longer available. Scripts that invoke `set-hm` will fail after upgrading.
+    {: important}
 
 Advanced Monitoring
 

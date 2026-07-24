@@ -21,7 +21,7 @@ subcollection: netezza
 {:caption: .caption}
 {:note: .note}
 
-# Unstructured data
+# Unstructured data in Netezza
 {: #unstructured_data}
 
 The unstructured data support feature enables Netezza to process non-relational data such as PDFs, images, and JSON data. The feature follows a medallion architecture, where you can enrich data from unstructured sources and use it in other workloads.

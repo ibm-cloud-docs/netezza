@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-18"
+lastupdated: "2026-07-21"
 
 keywords: nz manualvacuum, manual vacuum, database maintenance, vacuum operation, reindex
 
@@ -25,7 +25,7 @@ subcollection: netezza
 # The nz manualvacuum command
 {: #nz-manualvacuum}
 
-The `nz manualvacuum` command performs a comprehensive vacuum and reindex operation on all databases in your {{site.data.keyword.netezza_short}} instance. This maintenance operation helps reclaim disk space and optimize database performance by removing obsolete data and rebuilding indexes.
+The `nz manualvacuum` command performs a comprehensive vacuum and reindex operation on all databases in your {{site.data.keyword.netezza_short}} instance. This maintenance operation helps reclaim disk space and optimize database performance by removing obsolete data and rebuilding indexes. This command was introduced in nzcli version 11.3.1.3.
 {: shortdesc}
 
 ## Overview
@@ -47,7 +47,7 @@ The system is unavailable during this operation, which may take significant time
 Before running the manual vacuum operation, ensure that:
 
 - You have administrative access to the {{site.data.keyword.netezza_short}} instance
-- You have downloaded and configured the `nz` command-line tool
+- You have downloaded and configured the `nz` command-line tool version **11.3.1.3** or later
 - You have set the required environment variables (`APISERVER_URL`, `NZ_USER`, `NZ_PASSWORD`) or are prepared to provide them as command options
 - You have scheduled a maintenance window, as the system will be unavailable during the operation
 - You have sufficient disk space for the catalog backup
@@ -127,7 +127,7 @@ export NZ_PASSWORD=<nps-admin-user-password>
 ## Operation workflow
 {: #manualvacuum-workflow}
 
-When you run the `nz manualvacuum` command, the following workflow is executed:
+When you run the `nz manualvacuum` command, the following workflow is executed. Internally, the command invokes the `nz_manual_vacuum` system binary on the NPS host.
 
 1. **System stop**: The NPS system is stopped using the `nzstop` command
 2. **Catalog backup**: A backup of the catalog data is created at `/nz/manual_vacuum/nz_manual_vacuum.<timestamp>.tar.gz`
