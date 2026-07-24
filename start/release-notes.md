@@ -47,7 +47,7 @@ Netezza built-in vector store
 
 Node.js driver support
 
-:   A native Node.js driver is now available for direct Netezza database connectivity from JavaScript applications. The driver supports DDL, DML, and transaction management operations. A VS Code extension is also available. For more information, see [nz-node driver](https://github.com/ibm/nz-node){: external} and [Netezza SQL Tool VS Code extension](https://github.com/ibm/netezza-sqltool){: external}.
+:   A native Node.js driver is now available for direct Netezza database connectivity from JavaScript applications. The driver supports DDL, DML, and transaction management operations. A VS Code extension is also available. For more information, see [nz-node driver](https://www.npmjs.com/package/ibm-netezza){: external} and [Netezza SQL Tool VS Code extension](https://marketplace.visualstudio.com/items?itemName=abhishek-jog.netezza-sqltools){: external}.
 
 JDBC connector – Connection retry options
 
