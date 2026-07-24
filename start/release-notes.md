@@ -76,6 +76,10 @@ Advanced Monitoring
 
 :   The Advanced Monitoring feature delivers granular performance metrics, resource utilization analytics, and system health insights from a single interface in the Monitoring Dashboard. For more information, see [Advanced Monitoring](/docs/netezza?topic=netezza-advanced-monitoring).
 
+SOC 2 Type 2 compliance for AWS
+
+:   IBM Netezza Performance Server as a Service (NPSaaS) on AWS is now covered under IBM's SOC 2 Type 2 attestation. For more information, see [Security and compliance overview](/docs/netezza?topic=netezza-security_compliance_overview).
+
 INZA 11.3.6 support
 
 :   INZA has been upgraded to version 11.3.6. For more information, see [Netezza Performance Server Analytics 11.3.6 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1136-release-notes){: external}.
