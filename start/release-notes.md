@@ -97,10 +97,13 @@ IAM access on AWS BYOC
         - IBM Netezza Nexus
         - Unstructured data
 
-    - **Backup and restore (BnR) not supported with IAM access:** BnR with IAM access is not supported on AWS BYOC public or private instances.
-
 ### Known issues
 {: #kijun2026}
+
+Backup and restore fails with IAM access in AWS BYOC
+:   Backup and restore (BnR) operations fail when using an S3 bucket configured with IAM access in AWS BYOC deployments (both public and private instances).
+
+    **Workaround:** Recreate the bucket without IAM access and use access key/secret key authentication until a fix is available.
 
 Text extraction from images – workflow limitations
 :   The following limitations apply to the **extract text from images** feature when used in workflows (unstructured data):
