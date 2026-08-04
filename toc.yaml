@@ -41,9 +41,12 @@ toc:
               - webconsole/creating_procedures.md
               - webconsole/managing_owners.md
           - webconsole/query-editor.md
-          - webconsole/history.md
-          - webconsole/current-activity.md
-          - webconsole/resource-monitoring.md
+          - topicgroup:
+              label: Monitoring
+              topics:
+              - webconsole/history.md
+              - webconsole/current-activity.md
+              - webconsole/resource-monitoring.md
           - topicgroup:
               label: Administration
               topics:

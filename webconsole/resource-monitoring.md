@@ -20,7 +20,7 @@ subcollection: netezza
 # Resource monitoring
 {: #resource_mon}
 
-The **Resource monitoring** page is accessible from **Monitoring > Resource monitoring** in the console navigation.
+The **Resource monitoring** section is part of the **Monitoring** page, accessible from **Monitoring** in the console navigation.
 
 ## Dashboard
 {: #dashboard}

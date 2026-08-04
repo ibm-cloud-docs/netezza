@@ -22,10 +22,16 @@ subcollection: netezza
 
 On the *Administration* page, you can manage the following items:
 
+- Time travel
 - Add policies and view existing policies
 - Monitoring profile
 - Database maintenance
 - Scheduler rules
+
+## Time travel
+{: #time-travel}
+
+Here you can set system default data version retention time.
 
 ## Network policies
 {: #wc-nwpolicies}
@@ -68,11 +74,6 @@ To view existing policies, go to **Administration > Network policies > Existing 
 
 You can select multiple policies to delete.
 {: note}
-
-## Time travel
-{: #time-travel}
-
-Here you can set system default data version retention time.
 
 ## Monitoring profile
 {: #monitoring-profile}

@@ -21,7 +21,7 @@ subcollection: netezza
 # History
 {: #history}
 
-The **History** page is accessible from **Monitoring > History** in the console navigation.
+The **History** section is part of the **Monitoring** page, accessible from **Monitoring** in the console navigation.
 
 ## Query history
 {: #query_history}

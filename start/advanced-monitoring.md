@@ -39,6 +39,20 @@ To enable Advanced Monitoring:
 
 Once enabled, navigate to the **Monitoring Dashboard** page, scroll to the bottom of the interface, and select the **Advanced Monitoring** tab.
 
+### Infrastructure Advanced Monitoring
+{: #advanced-monitoring-infrastructure-tile}
+
+For AWS SaaS and BYOC deployments that use the Lakehouse Unstructured feature, an **Infrastructure Advanced Monitoring** tile is also available on the **Administration** page. This tile provides infrastructure-level metrics specific to the Lakehouse Unstructured workload.
+
+To access Infrastructure Advanced Monitoring:
+
+1. Navigate to the **Administration** page.
+2. Locate the **Infrastructure Advanced Monitoring** tile.
+3. Select the tile to open the infrastructure monitoring view.
+
+This feature is available on AWS SaaS and BYOC deployments only.
+{: note}
+
 ## Dashboard components
 {: #advanced-monitoring-components}
 
@@ -121,4 +135,3 @@ Object usage statistics identify the most heavily targeted database objects to a
 
 **Most Predicated Columns**
 :   Specific columns frequently used in query predicates.
-
