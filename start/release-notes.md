@@ -57,17 +57,15 @@ ODBC connector – Connection retry delay
 
 :   The new `ConnectionRetryDelay` option for the ODBC connector sets the delay in milliseconds between connection retry attempts. Configuration is supported through a DSN or connection string on Windows and Linux.
 
-New NZ commands
+nzcli enhancements
 
-:   This release introduces two command-line utilities:
+:   This release includes the following nzcli additions and changes:
 
     - **nz manualvacuum**: Performs vacuum and reindex on all databases to reclaim disk space and optimize performance. The command stops the system, creates a catalog backup, runs maintenance, and restarts. For more information, see [The nz manualvacuum command](/docs/netezza?topic=netezza-nz-manualvacuum).
 
     - **nzsqa**: Provides system diagnostics and monitoring—front and back channel statistics, active jobs, disk and memory usage, scheduler queues, lock tables, and more. For more information, see [The nzsqa command](/docs/netezza?topic=netezza-nztool#supported-cmds).
 
-nzcli – `setup-lh-connection` command (replaces `set-hm`)
-
-:   The `set-hm` command in nzcli has been renamed to `setup-lh-connection` to better reflect its purpose of configuring the Lakehouse connection as part of the Netezza–Iceberg Catalog integration. Update any scripts or automation that use `set-hm` to use `setup-lh-connection` before upgrading to this release.
+    - **`setup-lh-connection` command (replaces `set-hm`)**: The `set-hm` command has been renamed to `setup-lh-connection` to better reflect its purpose of configuring the Lakehouse connection as part of the Netezza–Iceberg Catalog integration. Update any scripts or automation that use `set-hm` to use `setup-lh-connection` before upgrading to this release.
 
     The `set-hm` command is no longer available. Scripts that invoke `set-hm` will fail after upgrading.
     {: important}
@@ -87,6 +85,19 @@ INZA 11.3.6 support
 Netezza Performance Server – Software on Google Cloud Platform
 
 :   Netezza Performance Server – Software (Software Only offering) is now available on Google Cloud Platform (GCP), deployed as containers on Google Kubernetes Engine (GKE) with Google Persistent Disks and Cloud Storage for data persistence. For more information, see [Netezza Performance Server – Software on GCP](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-software).
+
+### Limitations
+{: #limjun2026}
+
+IAM access on AWS BYOC
+:   The following limitations apply when using IAM role-based access on AWS BYOC deployments:
+
+    - **S3 bucket registration requires Ops assistance (private instances):** If you are using an AWS BYOC private instance and want to use IAM access for any of the following features, contact IBM Operations to add the required S3 bucket:
+        - Object storage (NCOS)
+        - IBM Netezza Nexus
+        - Unstructured data
+
+    - **Backup and restore (BnR) not supported with IAM access:** BnR with IAM access is not supported on AWS BYOC public or private instances.
 
 ### Components
 {: #compjun2026}

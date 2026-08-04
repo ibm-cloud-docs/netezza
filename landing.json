@@ -54,6 +54,10 @@
     "view_more": "/docs/netezza?topic=netezza-my-service-relnotes1123x",
     "tiles": [
       {
+        "date": "21 July 2026",
+        "title": "This release introduces IBM Netezza Nexus (open lakehouse catalog in private tech preview), a built-in vector store and unstructured data support for AI workloads, a native Node.js driver, Advanced Monitoring, GCP availability for the Software offering, and SOC 2 Type 2 attestation for AWS."
+      },
+      {
         "date": "30 May 2026",
         "title": "This release introduces custom CIDR support for BYOC deployments, streamlines the Administration console with consolidated navigation, and upgrades INZA to version 11.3.5."
       },
