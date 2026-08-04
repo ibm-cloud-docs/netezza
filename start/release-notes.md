@@ -99,6 +99,17 @@ IAM access on AWS BYOC
 
     - **Backup and restore (BnR) not supported with IAM access:** BnR with IAM access is not supported on AWS BYOC public or private instances.
 
+### Known issues
+{: #kijun2026}
+
+Text extraction from images – workflow limitations
+:   The following limitations apply to the **extract text from images** feature when used in workflows (unstructured data):
+
+    - **Vectorization not supported in workflows:** Vectorization of extracted text from images is not yet supported in workflow execution. Vectorization is only available for ad-hoc processing.
+    - **Sporadic text extraction failures in workflows:** Text extraction from images in workflows may fail intermittently.
+
+    **Workaround:** Use ad-hoc processing for the extract text from image feature.
+
 ### Components
 {: #compjun2026}
 
