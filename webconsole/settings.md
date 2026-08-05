@@ -94,7 +94,7 @@ To access the *Monitoring profile* page, go to **Administration > Monitoring pro
 On the *Maintenance* page, you can perform on-demand maintenance operations and schedule recurring database maintenance. The page provides the following operations:
 
 - **Manual vacuum** — a data catalog operation that performs deep maintenance on system catalogs.
-- **Adhoc Genstats** — a database-level operation that manually generates statistical snapshots for selected tables.
+
 - **Schedule database maintenance** — schedule recurring Grooms and Genstats maintenance windows.
 
 ### Manual vacuum
@@ -113,15 +113,7 @@ To run a manual vacuum:
 1. Go to **Administration > Maintenance**.
 1. In the **Manual vacuum** section, click **Run vacuum**.
 
-### Adhoc Genstats
-{: #adhoc-genstats}
 
-Adhoc Genstats is a database-level operation that manually generates statistical snapshots for selected tables.
-
-To run adhoc genstats:
-
-1. Go to **Administration > Maintenance**.
-1. In the **Adhoc Genstats** section, click **Configure and run**.
 
 ### Scheduling database maintenance
 {: #schedule-db-maintenance}
