@@ -86,17 +86,6 @@ Netezza Performance Server – Software on Google Cloud Platform
 
 :   Netezza Performance Server – Software (Software Only offering) is now available on Google Cloud Platform (GCP), deployed as containers on Google Kubernetes Engine (GKE) with Google Persistent Disks and Cloud Storage for data persistence. For more information, see [Netezza Performance Server – Software on GCP](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-software).
 
-### Limitations
-{: #limjun2026}
-
-IAM access on AWS BYOC
-:   The following limitations apply when using IAM role-based access on AWS BYOC deployments:
-
-    - **S3 bucket registration requires Ops assistance (private instances):** If you are using an AWS BYOC private instance and want to use IAM access for any of the following features, contact IBM Operations to add the required S3 bucket:
-        - Object storage (NCOS)
-        - IBM Netezza Nexus
-        - Unstructured data
-
 ### Known issues
 {: #kijun2026}
 
