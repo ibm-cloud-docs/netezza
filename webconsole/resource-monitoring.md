@@ -132,9 +132,3 @@ You can zoom in and out by moving the slider to see a specific range. You can al
 The resource allocation charts display the percentage of current system resources that are consumed by the 4 most popular resource groups.
 
 The first chart monitors the percentage of system resources that are consumed by the resource groups over the time. The other two pie charts show the current resource allocation and current run jobs of the most popular resource groups.
-
-## Infrastructure
-{: #infrastructure}
-
-The **Infrastructure** page has been moved to **Administration**. To monitor system health, SPU resources, and data slice storage utilization, go to **Administration > Infrastructure**.
-{: note}

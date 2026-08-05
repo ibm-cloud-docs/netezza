@@ -146,9 +146,6 @@ To access the *Destinations* page, go to **Administration > Destinations**.
 
 On the *Infrastructure* page, you can monitor system health, SPU resources, and data slice storage utilization.
 
-The **Infrastructure** page was previously accessible from **Resource monitoring**. It is now located under **Administration > Infrastructure**.
-{: note}
-
 To access the *Infrastructure* page, go to **Administration > Infrastructure**.
 
 ## Advanced monitoring
