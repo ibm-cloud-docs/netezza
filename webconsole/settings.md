@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-30"
+lastupdated: "2026-07-31"
 
 keywords: web console, administering web console, administering
 
@@ -91,13 +91,50 @@ To access the *Monitoring profile* page, go to **Administration > Monitoring pro
 ## Maintenance
 {: #maintenance}
 
-On the *Maintenance*  page, you can schedule a database maintenance and view information about scheduled maintenance windows. The scheduled maintenance of your database includes grooms and genstats.
+On the *Maintenance* page, you can perform on-demand maintenance operations and schedule recurring database maintenance. The page provides the following operations:
 
-To schedule a database maintenance slot:
+- **Manual vacuum** — a data catalog operation that performs deep maintenance on system catalogs.
+- **Adhoc Genstats** — a database-level operation that manually generates statistical snapshots for selected tables.
+- **Schedule database maintenance** — schedule recurring Grooms and Genstats maintenance windows.
+
+### Manual vacuum
+{: #manual-vacuum}
+
+Manual vacuum is a data catalog operation that physically reclaims disk space from deleted records and recreates system indexes.
+
+System downtime is required to run a manual vacuum. All active database connections are terminated, and the system is unavailable to users and queries until the process completes and the system is restarted.
+{: important}
+
+The operation typically takes 15–45 minutes, but can exceed 2 hours for heavily bloated catalogs. A catalog backup is automatically performed before the vacuum begins.
+{: note}
+
+To run a manual vacuum:
 
 1. Go to **Administration > Maintenance**.
-1. Under the **Schedule data maintenance** section, click **Enable** for enabling either **Grooms** or **Genstats** or both.
-1. Select the date and time for **Grooms** or **Genstats** or both.
+1. In the **Manual vacuum** section, click **Run vacuum**.
+
+### Adhoc Genstats
+{: #adhoc-genstats}
+
+Adhoc Genstats is a database-level operation that manually generates statistical snapshots for selected tables.
+
+To run adhoc genstats:
+
+1. Go to **Administration > Maintenance**.
+1. In the **Adhoc Genstats** section, click **Configure and run**.
+
+### Scheduling database maintenance
+{: #schedule-db-maintenance}
+
+You can schedule recurring maintenance windows for **Grooms** and **Genstats**. Each can be configured independently with its own schedule, days, and duration.
+
+To schedule a database maintenance window:
+
+1. Go to **Administration > Maintenance**.
+1. Under the **Schedule database maintenance** section, click **Enable** for **Grooms**, **Genstats**, or both.
+1. Set the time and timezone for each enabled operation.
+1. Select the days of the week on which the maintenance should run.
+1. Set the **Duration (minutes)** to specify how long the maintenance process is allowed to run.
 1. Click **Save**.
 
 ## Scheduler rules
