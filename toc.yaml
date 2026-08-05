@@ -51,7 +51,6 @@ toc:
               label: Administration
               topics:
               - webconsole/settings.md
-              - webconsole/scheduler-rules.md
           - topicgroup:
               label: Workload patterns
               topics:
