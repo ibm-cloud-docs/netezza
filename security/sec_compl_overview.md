@@ -46,6 +46,17 @@ At rest, content is encrypted within the Cloud Data Center in the following ways
 
 Netezza Performance Server as a Service (NPSaaS) follows industry‑recognized security and compliance standards to help protect customer data and support regulatory requirements. The service aligns with multiple frameworks including SOC 2, ISO 27001/27017/27018, and HIPAA—by implementing rigorous operational, administrative, technical, and organizational controls. These certifications and attestations help ensure that NPSaaS maintains a secure, trustworthy, and compliant environment for managing sensitive workloads.
 
+The following table lists the compliance certifications that are supported for {{site.data.keyword.netezza_short}} by region.
+
+| Compliance | Global | US | Canada | EU & UK | India | Australia | Japan |
+|---|---|---|---|---|---|---|---|
+| SOC 2 | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | | | |
+| ISO 27K | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | | | |
+| HIPAA | | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | | |
+| GDPR | | | | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | |
+| DPDP | | | | | ![Checkmark icon](../../icons/checkmark-icon.svg) | | |
+{: caption="Netezza Performance Server compliance availability by region" caption-side="bottom"}
+
 ### SOC 2 Type 2
 {: #soc2t2}
 
