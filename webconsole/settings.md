@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-13"
+lastupdated: "2026-07-30"
 
 keywords: web console, administering web console, administering
 
@@ -27,6 +27,9 @@ On the *Administration* page, you can manage the following items:
 - Monitoring profile
 - Database maintenance
 - Scheduler rules
+- Destinations
+- Infrastructure monitoring
+- Advanced monitoring
 
 ## Time travel
 {: #time-travel}
@@ -130,3 +133,27 @@ On the *Scheduler rules* page, you can view the list of scheduler rules, create 
 
 You can select **View definition**, **Activate**, **Assign owner**, **Rename** and **Remove** options from the overflow menu.
 {: note}
+
+## Destinations
+{: #destinations}
+
+On the *Destinations* page, you can manage storage destinations used by Netezza for backup and restore operations and other data movement tasks.
+
+To access the *Destinations* page, go to **Administration > Destinations**.
+
+## Infrastructure
+{: #infrastructure-admin}
+
+On the *Infrastructure* page, you can monitor system health, SPU resources, and data slice storage utilization.
+
+The **Infrastructure** page was previously accessible from **Resource monitoring**. It is now located under **Administration > Infrastructure**.
+{: note}
+
+To access the *Infrastructure* page, go to **Administration > Infrastructure**.
+
+## Advanced monitoring
+{: #advanced-monitoring-admin}
+
+On the *Advanced monitoring* page, you can analyse additional performance metrics for workload monitoring.
+
+To enable or disable Advanced monitoring, go to **Administration > Advanced monitoring** and toggle the switch.

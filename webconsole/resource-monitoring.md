@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2026-07-13"
+lastupdated: "2026-07-30"
 
 keywords: web console, getting started with the web cosnole
 
@@ -136,4 +136,5 @@ The first chart monitors the percentage of system resources that are consumed by
 ## Infrastructure
 {: #infrastructure}
 
-On the *Infrastructure* page, you can view information about your system, system disk status, SPUs, and storage utilization.
+The **Infrastructure** page has been moved to **Administration**. To monitor system health, SPU resources, and data slice storage utilization, go to **Administration > Infrastructure**.
+{: note}
