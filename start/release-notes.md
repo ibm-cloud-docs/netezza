@@ -66,9 +66,7 @@ INZA 11.3.6 support
 
 :   INZA has been upgraded to version 11.3.6. For more information, see [Netezza Performance Server Analytics 11.3.6 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1136-release-notes){: external}.
 
-Netezza Performance Server – Software on Google Cloud Platform
 
-:   Netezza Performance Server – Software (Software Only offering) is now available on Google Cloud Platform (GCP), deployed as containers on Google Kubernetes Engine (GKE) with Google Persistent Disks and Cloud Storage for data persistence. For more information, see [Netezza Performance Server – Software on GCP](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-software).
 
 ### Known issues
 {: #kijun2026}
