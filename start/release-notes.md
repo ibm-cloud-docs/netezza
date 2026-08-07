@@ -33,6 +33,22 @@ subcollection: netezza
 
 
 
+IBM Netezza Nexus (private tech preview)
+
+:   IBM Netezza Nexus is an open lakehouse catalog natively integrated into the Netezza engine. Built on the open **Apache Iceberg REST Catalog specification**, Nexus provides secure, governed, multi-engine access to Apache Iceberg tables—without copying or moving data. Nexus is available for private tech preview in this release. Do not use it for production deployments. For more information, see [IBM Netezza Nexus](../../nps-saas/features/nexus.dita).
+
+Unstructured data in Netezza (private tech preview)
+
+:   Netezza now supports processing unstructured data including PDF files, images, and JSON files on AWS SaaS and BYOC deployments. Operations include text extraction from PDFs and images (six languages), table extraction using JSONPATH queries, metadata extraction, and vector embedding generation for RAG workflows. For more information, see [Unstructured data](../../nps-saas/features/unstructured_data.dita).
+
+Netezza built-in vector store
+
+:   Netezza now supports a native vector data type for storing and managing embeddings in generative AI and Retrieval-Augmented Generation (RAG) workflows. Embedding tables are created directly in Netezza and benefit from the AMPP architecture for parallel, high-performance vector storage and retrieval. For more information, see [Vector data type support](../../nps-saas/features/vector_data_type.dita).
+
+Node.js driver support
+
+:   A native Node.js driver is now available for direct Netezza database connectivity from JavaScript applications. The driver supports DDL, DML, and transaction management operations. A VS Code extension is also available. For more information, see [nz-node driver](https://www.npmjs.com/package/ibm-netezza){: external} and [Netezza SQL Tool VS Code extension](https://marketplace.visualstudio.com/items?itemName=abhishek-jog.netezza-sqltools){: external}.
+
 JDBC connector – Connection retry options
 
 :   Two new JDBC connector options are available: `ConnectionRetry` sets the number of automatic retry attempts on connection failure, and `ConnectionRetryDelay` sets the delay in milliseconds between retries. The delay applies only between retries, not on the initial attempt.
@@ -66,7 +82,9 @@ INZA 11.3.6 support
 
 :   INZA has been upgraded to version 11.3.6. For more information, see [Netezza Performance Server Analytics 11.3.6 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1136-release-notes){: external}.
 
+Netezza Performance Server – Software on Google Cloud Platform
 
+:   Netezza Performance Server – Software (Software Only offering) is now available on Google Cloud Platform (GCP), deployed as containers on Google Kubernetes Engine (GKE) with Google Persistent Disks and Cloud Storage for data persistence. For more information, see [Netezza Performance Server – Software on GCP](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-software).
 
 ### Known issues
 {: #kijun2026}
