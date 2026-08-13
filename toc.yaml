@@ -167,10 +167,6 @@ toc:
           - data_lakehouse/watsonxdata_ki.md
           - data_lakehouse/watsonxdata_timetravel.md
       - topicgroup:
-          label: IBM Netezza Nexus
-          topics:
-          - nexus/nexus.md
-      - topicgroup:
           label: Querying data from watsonx.data Software as a Service
           topics:
           - data_lakehouse_mcsp/data_lakehouse_overview_mcsp.md
@@ -180,14 +176,6 @@ toc:
           - data_lakehouse_mcsp/merging_datalakehouse_mcsp.md
           - data_lakehouse_mcsp/watsonx_datasql_mcsp.md
           - data_lakehouse_mcsp/hms_npskeywords_mcsp.md
-      - topicgroup:
-          label: Unstructured data
-          topics:
-          - unstructured_data/unstructured_data.md
-      - topicgroup:
-          label: Vector data type
-          topics:
-          - vector/vector_data_type.md
       - topicgroup:
           label: Monitoring and alerts
           topics:

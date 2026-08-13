@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-13"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -24,7 +24,7 @@ subcollection: netezza
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
 
-## 21 July 2026 - 11.3.1.3
+## 12 August 2026 – 11.3.1.3
 {: #jun2026}
 {: release-note}
 
@@ -33,17 +33,17 @@ subcollection: netezza
 
 
 
-IBM Netezza Nexus (private tech preview)
+IBM Netezza Nexus
 
-:   IBM Netezza Nexus is an open lakehouse catalog natively integrated into the Netezza engine. Built on the open **Apache Iceberg REST Catalog specification**, Nexus provides secure, governed, multi-engine access to Apache Iceberg tables—without copying or moving data. Nexus is available for private tech preview in this release. Do not use it for production deployments. For more information, see [IBM Netezza Nexus](../../nps-saas/features/nexus.dita).
+:   IBM Netezza Nexus is an open lakehouse catalog natively integrated into the Netezza engine. Built on the open **Apache Iceberg REST Catalog specification**, Nexus provides secure, governed, multi-engine access to Apache Iceberg tables—without copying or moving data. Nexus is available in this release as a private tech preview. For more information, see [IBM Netezza Nexus](https://www.ibm.com/docs/en/netezza?topic=developers-netezza-nexus).
 
-Unstructured data in Netezza (private tech preview)
+Unstructured data in Netezza
 
-:   Netezza now supports processing unstructured data including PDF files, images, and JSON files on AWS SaaS and BYOC deployments. Operations include text extraction from PDFs and images (six languages), table extraction using JSONPATH queries, metadata extraction, and vector embedding generation for RAG workflows. For more information, see [Unstructured data](../../nps-saas/features/unstructured_data.dita).
+:   Netezza now supports processing unstructured data, including PDF files, images, and JSON files, on AWS SaaS and BYOC deployments. Operations include text extraction from PDFs and images (six languages), table extraction using JSONPATH queries, metadata extraction, and vector embedding generation for RAG workflows. For more information, see [Unstructured data](https://www.ibm.com/docs/en/netezza?topic=developers-unstructured-data-in-netezza).
 
 Netezza built-in vector store
 
-:   Netezza now supports a native vector data type for storing and managing embeddings in generative AI and Retrieval-Augmented Generation (RAG) workflows. Embedding tables are created directly in Netezza and benefit from the AMPP architecture for parallel, high-performance vector storage and retrieval. For more information, see [Vector data type support](../../nps-saas/features/vector_data_type.dita).
+:   Netezza now supports a native vector data type for storing and managing embeddings in generative AI and Retrieval-Augmented Generation (RAG) workflows. Embedding tables are created directly in Netezza and benefit from the AMPP architecture for parallel, high-performance vector storage and retrieval. For more information, see [Vector data type support](https://www.ibm.com/docs/en/netezza?topic=developers-vector-data-type-support).
 
 Node.js driver support
 
@@ -85,25 +85,17 @@ INZA 11.3.6 support
 ### Known issues
 {: #kijun2026}
 
-Backup and restore fails with IAM access in AWS BYOC
-:   Backup and restore (BnR) operations fail when using an S3 bucket configured with IAM access in AWS BYOC deployments (both public and private instances).
+IAM-based S3 authentication for backup and restore
+:   Backup and restore operations require AWS Access Key and Secret Key credentials when configuring the S3 bucket in AWS BYOC deployments (public and private instances). IAM-based authentication is not available for this release.
 
-    **Workaround:** Recreate the bucket without IAM access and use access key/secret key authentication until a fix is available.
-
-Text extraction from images – workflow limitations
-:   The following limitations apply to the **extract text from images** feature when used in workflows (unstructured data):
-
-    - **Vectorization not supported in workflows:** Vectorization of extracted text from images is not yet supported in workflow execution. Vectorization is only available for ad-hoc processing.
-    - **Sporadic text extraction failures in workflows:** Text extraction from images in workflows may fail intermittently.
-
-    **Workaround:** Use ad-hoc processing for the extract text from image feature.
+    **Workaround:** Configure the S3 bucket only using AWS Access Key and Secret Key credentials for backup and restore operations.
 
 ### Components
 {: #compjun2026}
 
 - `nzcli` version: 11.3.1.3
 
-## 30 May 2026 - 11.3.1.2
+## 30 May 2026 – 11.3.1.2
 {: #may2026}
 {: release-note}
 
@@ -136,14 +128,14 @@ INZA 11.3.5 support
 
 - `nzcli` version: 11.3.1.2
 
-## 10 April 2026 - 11.3.1.1
+## 10 April 2026 – 11.3.1.1
 {: #march2026}
 {: release-note}
 
 ### New features and enhancements
 {: #nfmar2026}
 
-Hostname Verification for SSL/TLS Authentication
+Hostname verification for SSL/TLS authentication
 
 :   Version 11.3.1.1 introduces the `enableHostNameVerification` parameter for nzsql, ODBC, and JDBC drivers to control hostname validation during SSL/TLS connections. When enabled (`true`), the client verifies that the server hostname matches the hostname in the SSL/TLS certificate; if the hostnames don't match, the connection is rejected. The parameter defaults to `false`. For more information, see [nzsql command reference](https://www.ibm.com/docs/en/netezza?topic=overview-nzsql-command), [ODBC driver configuration](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-1), and [JDBC connection strings](https://www.ibm.com/docs/en/netezza?topic=icj-jdbc-connection-strings-3).
 
@@ -151,9 +143,9 @@ Unique cloud storage buckets
 
 :   Netezza requires separate cloud storage for each feature, including backup and restore, lakehouse, and REST catalog. Each feature requires unique AWS S3 buckets or Azure Blob Storage containers to ensure proper isolation and management. The console prevents adding the same bucket for multiple purposes.
 
-Resource release for auto-pause (BYOC Only)
+Resource release for auto-pause (BYOC only)
 
-:   For Bring Your Own Cloud (BYOC) deployments, costs can be optimized by releasing resources when enabling auto-pause from the console. When resources are released, the system requires additional time to resume from the paused state.
+:   For Bring Your Own Cloud (BYOC) deployments, you can optimize costs by releasing resources when you enable auto-pause from the console. When resources are released, the system requires additional time to resume from the paused state.
 
 API server URL accessibility
 
@@ -174,7 +166,7 @@ API server URL accessibility
 
 - `nzcli` version: 11.3.1.1
 
-## 06 February 2026 - 11.3.1.0
+## 06 February 2026 – 11.3.1.0
 {: #feb2026}
 {: release-note}
 
@@ -185,7 +177,7 @@ Improved serviceability for BYOC deployment
 
 :   The admin console now provides improved diagnostic capabilities and troubleshooting support through enhanced error messaging and system status indicators.
 
-Amazon S3 Bucket Registration via IAM Roles for AWS BYOC
+Amazon S3 bucket registration through IAM roles for AWS BYOC
 
 :   Register Amazon S3 buckets using IAM roles for native cloud object storage. For more information, see [Create IRSA policy and role for engine namespace](https://www.ibm.com/docs/en/netezza?topic=byoc-create-irsa-policy-role-engine-namespace), [AWS S3 configuration](/docs/netezza?topic=netezza-cloudobjectstorage).
 
@@ -199,41 +191,41 @@ INZA 11.3.4 support
 
 - `nzcli` version: 11.3.1.0
 
-## 22 December 2025 - 11.3.0.5-IF1
+## 22 December 2025 – 11.3.0.5-IF1
 {: #dec2025}
 {: release-note}
 
 ### New features and enhancements
 {: #nfdec2025}
 
-Azure and AWS NCOS (Native Cloud Object Storage) Support
+Azure and AWS NCOS (native cloud object storage) support
 
 :   This release delivers native support for Azure Blob Storage and AWS S3, now generally available. Users can create tables in Netezza format directly on object storage systems. This enhancement delivers greater scalability, flexibility, and cost-efficiency compared to block-based storage architectures, allowing seamless integration with both Azure and AWS cloud environments. For more information, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage) and [Create a table with object storage](/docs/netezza?topic=netezza-user_exp#catwos).
 
 AWS S3 support was introduced as a public preview in the previous release and is now fully GA.
 {: note}
 
-Availability for REST catalog support for BYOC
+REST catalog support for BYOC
 
-:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Catalog (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependency on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
+:   IBM Netezza now offers a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. With Bring Your Own Cloud (BYOC) support, you can seamlessly configure your preferred object storage (AWS S3 or IBM Cloud Object Storage) and manage Lakehouse databases directly from the Netezza web console. This streamlined approach simplifies setup, reduces dependencies on third-party services, and provides a unified experience for managing Iceberg tables. For more information, see [Managing Iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
 
 IAM Access on AWS bucket for NCOS
 
 :   You can now configure your fully managed AWS S3 bucket for object storage using cross-tenant IAM access. This eliminates the need to provide access keys for the bucket. For more information, see  **IAM Role-Based Access** in [How to enable object storage](/docs/netezza?topic=netezza-user_exp#htuos).
 
-Inbuilt AI Database Assistant
+Built-in AI database assistant
 
 :   The DBA AI chatbot is now integrated into your console for a more seamless experience. It is now conveniently located next to the **Profile** icon at the top of the window.
 
-Customer Managed key for BYOC on AWS
+Customer-managed key for BYOC on AWS
 
 :   Take full control of your data security with customer-managed encryption keys. This feature allows you to use your own keys to encrypt data drives, ensuring compliance with organizational security policies and enhancing protection against unauthorized access. By managing your own keys, you gain flexibility, transparency, and peace of mind for sensitive workloads running on AWS. For more information, see [Customer managed KMS key in AWS](https://www.ibm.com/docs/en/netezza?topic=keys-customer-managed-kms-key-in-aws).
 
-Server certificate validation for SSL/TLS authentication for OLEDB driver
+Server certificate validation for SSL/TLS authentication for OLE DB driver
 
-:   `Skip CA Certificate Verification` setting is introduced with a default value of `true`. To modify this default and enforce server certificate SSL validation, you can either uncheck the `Skip CA Certification Verification` option or set the environment variable `NZ_SKIP_CERT_VERIFICATION` to `false`.
+:   The `Skip CA Certificate Verification` setting is introduced with a default value of `true`. To modify this default and enforce server certificate SSL validation, you can either clear the `Skip CA Certification Verification` option or set the environment variable `NZ_SKIP_CERT_VERIFICATION` to `false`.
 When the `Skip CA Certificate Verification` parameter is set to `false` in either the console or through the environment variable `NZ_SKIP_CERT_VERIFICATION`, the value `false` takes precedence over all other configurations.
-Additionally, introduced environment variables `NZ_SKIP_CERT_VERIFICATION` and `NZ_CA_CERT_FILE`. For more details, refer to [Configuring OLE DB](https://www.ibm.com/docs/en/netezza?topic=icodp-configuring-ole-db-3).
+Additionally, the `NZ_SKIP_CERT_VERIFICATION` and `NZ_CA_CERT_FILE` environment variables are introduced. For more details, see [Configuring OLE DB](https://www.ibm.com/docs/en/netezza?topic=icodp-configuring-ole-db-3).
 
 Accurate client IP logging for AWS private instances
 
@@ -241,29 +233,29 @@ Accurate client IP logging for AWS private instances
 
 Download certificates
 
-:   You can now download certificates required to connect to the Netezza Performance Server directly from the console. Under the **Profile** icon, you will find the option to download. This certificate can be used while connecting to Netezza Performance Server using `nzsql` and the ODBC driver if you are using `skipCertVerification=false`.
+:   You can now download the certificates that are required to connect to Netezza Performance Server directly from the console. Under the **Profile** icon, you can download the certificate. You can use this certificate when you connect to Netezza Performance Server by using `nzsql` and the ODBC driver with `skipCertVerification=false`.
 
-Default limit in fetching history records
+Default limit for fetching history records
 
-:   On opening Connection History and Query History pages, by default we now fetch 2000 records from the last 15 minutes interval. Earlier, the default limit was much larger and led to longer load times on the first fetch. You can subsequently adjust the parameters to get the desired set of records. For more information, see [Query history](/docs/netezza?topic=netezza-history#query_history).
+:   When you open the Connection History and Query History pages, 2,000 records from the last 15 minutes are fetched by default. Previously, the default limit was much larger and led to longer load times for the initial fetch. You can then adjust the parameters to get the set of records that you want. For more information, see [Query history](/docs/netezza?topic=netezza-history#query_history).
 
 Enhanced display of upcoming backups during daylight saving changes
 
-:  Improved handling and display of upcoming backup times on the dashboard when daylight saving changes are in effect, ensuring accurate and consistent scheduling information.
+:   Improved handling and display of upcoming backup times on the dashboard when daylight saving changes are in effect, ensuring accurate and consistent scheduling information.
 
 ### Components
 {: #compdec2025}
 
 - `nzcli` version: 11.3.0.5-IF1
 
-## 11 November 2025 - 11.3.0.4
+## 11 November 2025 – 11.3.0.4
 {: #nov2025}
 {: release-note}
 
 ### New features and enhancements
 {: #nfnov2025}
 
-Predefined alert rules support in webconsole
+Predefined alert rule support in the web console
 
 :   The predefined rules eliminate the need for manual configuration, making the process significantly faster and more efficient.
 
@@ -280,7 +272,7 @@ INZA 11.3.3 support
 
 - `nzcli` version: 11.3.0.4
 
-## 29 September 2025 - 11.3.0.3-IF1
+## 29 September 2025 – 11.3.0.3-IF1
 {: #sep2025}
 {: release-note}
 
@@ -293,22 +285,22 @@ Netezza Cloud Object Storage (COS)
 
 Netezza Bring Your Own Cloud on Azure
 
-:   Announcing the general availability of Netezza BYOC on Azure. IBM Netezza as a Service Bring Your Own Cloud (BYOC) represents a transformative leap in cloud data and analytics solutions. This innovative offering is generally available and empowers businesses to deploy Netezza directly within their own Virtual Private Cloud (VPC), thereby enhancing data security and providing greater flexibility in managing their infrastructure. For more information, see [Netezza Performance Server for BYOC](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-byoc).
+:   Netezza BYOC on Azure is now generally available. IBM Netezza as a Service Bring Your Own Cloud (BYOC) enables businesses to deploy Netezza directly within their own Virtual Private Cloud (VPC), enhancing data security and providing greater flexibility in managing infrastructure. For more information, see [Netezza Performance Server for BYOC](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-byoc).
 
 IBM Netezza Software
 
 :   This form factor provides a comprehensive, software-only deployment of Netezza for data and AI workloads, designed to run on client-provided containerized platforms such as Red Hat OpenShift. It is engineered for high performance and ease of deployment, integrating database, storage, server, and analytics capabilities into a single, standards-based solution. For more information, see [Netezza Performance Server - Software](https://www.ibm.com/docs/en/netezza?topic=netezza-performance-server-software).
 
-Server Certificate Validation for SSL/TLS Authentication
+Server certificate validation for SSL/TLS authentication
 
-:   To enhance security, server certificate validation is now required for all SSL/TLS connections using ODBC, JDBC, and nzsql. Users must specify the CA certificate path using the `caCertFile` parameter, similar to how the securityLevel parameter is used. For more information, see [Steps to acquire SSL certificates for netezza](/docs/netezza?topic=netezza-step_acq_sslcert).
+:   To enhance security, server certificate validation is now required for all SSL/TLS connections using ODBC, JDBC, and nzsql. Users must specify the CA certificate path by using the `caCertFile` parameter, similar to how the `securityLevel` parameter is used. For more information, see [Steps to acquire SSL certificates for Netezza](/docs/netezza?topic=netezza-step_acq_sslcert).
 
 ### Components
 {: #compsep2025}
 
 - `nzcli` version: 11.3.0.3-IF1
 
-## 08 Aug 2025 - 11.3.0.2
+## 08 August 2025 – 11.3.0.2
 {: #aug2025}
 {: release-note}
 
@@ -317,29 +309,29 @@ Server Certificate Validation for SSL/TLS Authentication
 
 Notification setup for NPSaaS users
 
-:   NPSaaS introduces notifications for critical service-related events, empowering users to monitor and respond to system changes effectively. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
+:   NPSaaS introduces notifications for critical service-related events, helping users monitor and respond to system changes. For more information, see [Monitoring and alerts](/docs/netezza?topic=netezza-nzalert_overview).
 
-REST catalog support for iceberg table management
+REST catalog support for Iceberg table management
 
-:   IBM Netezza supports a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. This feature allows users to configure their own object storage (AWS S3 or IBM COS) and create Lakehouse databases directly from the Netezza web console. For more information, see [Managing iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
+:   IBM Netezza supports a built-in REST catalog for managing Iceberg tables, eliminating the need for external catalogs like AWS Glue. This feature allows users to configure their own object storage (AWS S3 or IBM COS) and create Lakehouse databases directly from the Netezza web console. For more information, see [Managing Iceberg tables with IBM Netezza REST catalog](/docs/netezza?topic=netezza-netezza_manage_iceberg).
 
 Enhancement in Azure connector support
 
 :   The Azure connector has been enhanced to support General Purpose v2 storage accounts with the Standard performance tier. This enhancement enables users to perform backup and restore operations using Gen2 storage accounts, expanding compatibility and flexibility for Azure-based storage solutions.
 
-Customer managed keys for Netezza BYOC on AWS
+Customer-managed keys for Netezza BYOC on AWS
 
-:   Gain enhanced control over your data security by managing your own encryption keys. This feature allows you to use customer-managed keys to encrypt data drives, ensuring greater protection and compliance.
+:   You can now use customer-managed keys to encrypt data drives, providing greater protection and supporting compliance requirements.
 
 AWS Marketplace integration
 
 :   Netezza Bring Your Own Cloud (BYOC) is now available as an offering on the AWS Marketplace. This integration simplifies deployment and enables seamless access through your existing AWS account. For more information, see [IBM Netezza as a Service Bring Your Own Cloud](https://aws.amazon.com/marketplace/pp/prodview-qyfbcav4cr772?sr=0-1&ref_=beagle&applicationId=AWSMPContessa).
 
-Support for encrypted S3 Buckets in Netezza backup and restore
+Support for encrypted S3 buckets in Netezza backup and restore
 
 :   Netezza backup and restore operations now support AWS S3 buckets encrypted with AWS KMS keys. This enhancement enables secure data storage and retrieval using AWS-managed encryption. To configure your S3 bucket with an AWS KMS key, see [Configuring your bucket to use an S3 Bucket Key with SSE-KMS for new objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configuring-bucket-key.html).
 
-The bucket user needs to have access to AWS KMS key.
+The bucket user must have access to the AWS KMS key.
 {: note}
 
 
@@ -348,20 +340,20 @@ The bucket user needs to have access to AWS KMS key.
 
 - `nzcli` version: 11.3.0.2
 
-## 02 July 2025 - 11.3.0.1
+## 02 July 2025 – 11.3.0.1
 {: #jul2025}
 {: release-note}
 
 ### New features and enhancements
 {: #nfjul2025}
 
-Netezza Iceberg Enhancements
+Netezza Iceberg enhancements
 
-:   11.3.0.1 introduces the following enhancements
+:   Version 11.3.0.1 introduces the following enhancements:
 
 - **CTAS support**: Create Iceberg tables using `CREATE TABLE AS SELECT` from Netezza or Iceberg tables.
 - **Type promotion**: Unsupported types in Netezza are automatically promoted when creating Iceberg tables.
-- **Cascade Drop**: Dropping schemas with Iceberg tables supports the `CASCADE` option.
+- **Cascade drop**: Dropping schemas with Iceberg tables supports the `CASCADE` option.
 - **Truncate support**: Use `TRUNCATE TABLE` to remove all data from Iceberg tables (data remains in snapshots).
 - **Delete support**: Delete rows from Iceberg tables using `DELETE` queries.
 - **Update support**: Update rows in Iceberg tables using `UPDATE` queries.
@@ -372,9 +364,9 @@ For more information, see [Supported SQL commands](/docs/netezza?topic=netezza-s
 
 OIDC authentication in the Netezza ODBC driver
 
-:   Added support for OIDC based authentication in the Netezza ODBC driver. For more information, see [Usage of ODBC driver with OIDC authentication](/docs/netezza?topic=netezza-usage-odbc-oidc).
+:   Added support for OIDC-based authentication in the Netezza ODBC driver. For more information, see [Usage of ODBC driver with OIDC authentication](/docs/netezza?topic=netezza-usage-odbc-oidc).
 
-Enhanced Database Assistant with new analytical skills
+Enhanced database assistant with new analytical skills
 
 :   New skills are added to support user activity insights, data slice usage analysis, and permission visibility. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant#assistant-skills).
 
@@ -383,16 +375,16 @@ Enhanced Database Assistant with new analytical skills
 
 - `nzcli` version: 11.3.0.1
 
-## 29 May 2025 - 11.2.3.6
+## 29 May 2025 – 11.2.3.6
 {: #may2025}
 {: release-note}
 
 ### New features and enhancements
 {: #nfmayb2025}
 
-Database Assistant for Azure and AWS
+Database assistant for Azure and AWS
 
-:   Announcing the general availability of the Netezza Database Assistant chatbot across AWS and Azure. Powered by IBM watsonx, this AI-driven assistant, originally introduced in an earlier release is now fully available. It delivers intelligent, conversational support to help streamline and simplify database operations. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
+:   The Netezza Database Assistant chatbot is now generally available across AWS and Azure. Powered by watsonx, this AI-driven assistant provides conversational support to help streamline database operations. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
 
 IBM Netezza JDBC driver update
 
@@ -410,7 +402,7 @@ IBM Netezza JDBC driver update
 
 - `nzcli` version: 11.2.3.6
 
-## 30 April 2025 - 11.2.3.5
+## 30 April 2025 – 11.2.3.5
 {: #apr2025}
 {: release-note}
 
@@ -425,39 +417,40 @@ Automaint history
 :   A new section has been added to track the details of the last successful execution of Groom and Genstats as part of the automaint process configured on the system. For more information, see [Automaint history](/docs/netezza?topic=netezza-history#automain_hist).
 
 Query history shortcuts
-:   Users can now quickly access information about short-running and long-running queries, enhancing efficiency in query management.
+
+:   Users can now quickly access information about short-running and long-running queries, improving efficiency in query management.
 
 ### Components
 {: #compaprl2025}
 
 - `nzcli` version: 11.2.3.5
 
-## 19 February 2025 - 11.2.3.4
+## 19 February 2025 – 11.2.3.4
 {: #feb2025}
 {: release-note}
 
 ### New features and enhancements
 {: #nffeb2025}
 
-Workload contour - Scaling
-:   Scaling can now be performed while the instance is in paused state. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
+Workload contour scaling
+:   Scaling can now be performed while the instance is in a paused state. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
 
 Recent queries
-: The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2000 rows. For more information, see [History](/docs/netezza?topic=netezza-history).
+:   The **Recent queries** section has been moved to **Query history** and now supports up to 500,000 rows, significantly increasing from the previous limit of 2,000 rows. For more information, see [History](/docs/netezza?topic=netezza-history).
 
 #### Connectivity improvements
 {: #cifeb2025}
 
 - OpenSSL library has been upgraded to 3.0.
-- The nz_s3connector is open source now and has been moved to a new location [nz_s3Connector](https://github.com/IBM/netezza-utils/tree/master/bnr-utils/nz_s3Connector) from "Netezza Software Support Tools" package. The updated version is now available at: [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
-- The **dbt-ibm-netezza** adaptor for IBM Netezza is now available. This integration empowers users to harness the full potential of dbt, the leading data transformation framework, and unlock the performance and scalability of Netezza. To know more about dbt-ibm-netezza, see [Getting started with dbt-ibm-netezza](/docs/netezza?topic=netezza-nzdbt-intro).
+- The `nz_s3Connector` is now open source and has moved from the "Netezza Software Support Tools" package to [nz_s3Connector](https://github.com/IBM/netezza-utils/tree/master/bnr-utils/nz_s3Connector). The updated version is available at [v1.3](https://github.com/IBM/netezza-utils/releases/tag/v1.3).
+- The **dbt-ibm-netezza** adapter for IBM Netezza is now available. This integration helps users work with dbt and take advantage of the performance and scalability of Netezza. To learn more about dbt-ibm-netezza, see [Getting started with dbt-ibm-netezza](/docs/netezza?topic=netezza-nzdbt-intro).
 
 ### Components
 {: #compfeb2025}
 
 - `nzcli` version: 0.9.35
 
-## 17 January 2024 - 11.2.3.3 - IF1
+## 17 January 2025 – 11.2.3.3 – IF1
 {: #jan2025}
 {: release-note}
 
@@ -465,9 +458,9 @@ Recent queries
 {: #nfnov2024}
 
 Database assistant for AWS
-:   Introducing the Netezza Database Assistant chatbot for AWS cluster, which is backed by IBM watsonx, a new AI-powered, cutting-edge assistant built on IBM’s decades of expertise managing the world’s most mission-critical data workloads. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
+:   Introducing the Netezza Database Assistant chatbot for AWS clusters, powered by watsonx. This AI-powered assistant is built on IBM’s decades of expertise in managing the world’s most mission-critical data workloads. For more information, see [Using the Netezza database assistant](/docs/netezza?topic=netezza-database-assistant).
 
-## 22 November 2024 - 11.2.3.3
+## 22 November 2024 – 11.2.3.3
 {: #nov2024}
 {: release-note}
 
@@ -489,52 +482,52 @@ IdP configuration
 
 
 
-## 23 September 2024 - 11.2.3.2
+## 23 September 2024 – 11.2.3.2
 {: #sep2024}
 
 
 ### New features and enhancements
 {: #nfsep2024}
 
-- **Updated recent queries page:** Gain clearer insights into your queries with the addition of error type visibility for query failures.
+- **Updated recent queries page:** The page now includes visibility into error types for query failures.
 
-    The `Recent Queries` page now shows queries submitted within the last 15 minutes by default. Queries remain visible for up to 24 hours, with a limit of 2,000 queries.
+    The `Recent queries` page now shows queries submitted within the last 15 minutes by default. Queries remain visible for up to 24 hours, with a limit of 2,000 queries.
     {: note}
 
 - **Enhanced IdP configuration options:** Enhanced the `IdP configuration` page with dedicated tiles for streamlined management of `SAML` and `OIDC` configurations.
-    - Now, easily download certificates for signed authentication validation in `SAML` to simplify your setup and enhance security. For more details, see [Configuring Signed Authentication on IdP](/docs/netezza?topic=netezza-saml-docs#config_saoi).
-    - Support for signed authentication has been introduced for `SAML` in {{site.data.keyword.netezza_short}}, providing robust security for your configurations. For more details, see [SAML](/docs/netezza?topic=netezza-samloverview).
-- Introduced the new `nzprogress` command, allowing you to effortlessly view and track all ongoing plans in progress. See [Commands supported by the nz tool](/docs/netezza?topic=netezza-nztool#supported-cmds).
+    - You can now download certificates for signed authentication validation in `SAML` to simplify setup and enhance security. For more details, see [Configuring Signed Authentication on IdP](/docs/netezza?topic=netezza-saml-docs#config_saoi).
+    - Support for signed authentication has been introduced for `SAML` in {{site.data.keyword.netezza_short}}, providing improved security for your configurations. For more details, see [SAML](/docs/netezza?topic=netezza-samloverview).
+- Introduced the new `nzprogress` command, allowing you to view and track ongoing plans. See [Commands supported by the nz tool](/docs/netezza?topic=netezza-nztool#supported-cmds).
 
 ### Fixes
 {: #fixessep2024}
 
 - **Time zone handling:** Resolved issues related to time zone handling, ensuring consistent and accurate time display across the platform.
-- **History page fixes:** Addressed the problem where auto pause and resume actions for recent entries were not showing on the **History** page of the web console, enhancing visibility and tracking.
+- **History page fixes:** Addressed the problem where auto pause and resume actions for recent entries were not showing on the **History** page of the web console, improving visibility and tracking.
 - **Scheduled backups update:** Fixed the issue preventing the start date and time of scheduled backups from being edited, giving you full control over your backup schedules.
 
 
 
 
-## 02 August 2024 - 11.2.3.1
+## 02 August 2024 – 11.2.3.1
 {: #jul2024}
 
 ### New features and enhancements
 {: #nfjul2024}
 
-- Introduced new feature in `AWS` network policies for Ingress connections. You can now control which IP addresses are allowed to connect to the {{site.data.keyword.netezza_short}} database, similar to Azure network policies. For details, see [Network policies](/docs/netezza?topic=netezza-network-policies#aws_nw_policy).
-- Introduced JWT token in the **Administration -> tools** tab, allowing [`SAML`](/docs/netezza?topic=netezza-samloverview) and [`OIDC`](/docs/netezza?topic=netezza-oidcoverview) users to copy the JWT token from the console after logging in.
+- Introduced a new feature in `AWS` network policies for ingress connections. You can now control which IP addresses are allowed to connect to the {{site.data.keyword.netezza_short}} database, similar to Azure network policies. For details, see [Network policies](/docs/netezza?topic=netezza-network-policies#aws_nw_policy).
+- Introduced a JWT token in the **Administration > Tools** tab, allowing [`SAML`](/docs/netezza?topic=netezza-samloverview) and [`OIDC`](/docs/netezza?topic=netezza-oidcoverview) users to copy the JWT token from the console after they log in.
 - Enhanced platform `AWS` Administration functionality to include support for lakehouse connections, databases, and schemas on the console.
     - Introduced a new **Lakehouse Connections** tab in **Administration** specifically for creating lakehouse connections, databases, and tables.
-- Added `CRUD` operations to the **Query Editor** for lakehouse tables.
+- Added CRUD operations to the **Query editor** for lakehouse tables.
 - Enabled [`SAML`](/docs/netezza?topic=netezza-samloverview) and [`OIDC`](/docs/netezza?topic=netezza-oidcoverview) for `AWS` and `Azure` platforms.
-- Introduced the `Destinations` tab in **Administration**. You can now create buckets concurrently for `database backups` and `Lakehouse datasource`.
+- Introduced the `Destinations` tab in **Administration**. You can now create buckets concurrently for `database backups` and `Lakehouse data source`.
 
 ### Fixes
 {: #fixesjul2024}
 
 - Only administrators can enable and disable the auto-pause/resume feature. See [Auto-pausing and auto-resuming](/docs/netezza?topic=netezza-autopnr-console).
-- Fixed an issue where differential backup from the Mako system is failing on the Netezza Performance Server while performing a restore.
+- Fixed an issue where a differential backup from the Mako system failed on Netezza Performance Server during a restore.
 - Introduced support for partial certificate chain verification in SSL. For more information, see [The nzsql command](https://www.ibm.com/docs/en/netezza?topic=commands-nzsql-command).
 - Improved transaction rollback performance by optimizing the handling of large tdj files.
 - Improved signal handling for the DBOS process to avoid sessions getting hung in a disconnected state if a query with UDX was abnormally aborted.
@@ -551,20 +544,20 @@ IdP configuration
 ### Known issues
 {: #knownjul2024}
 
-- **Issue with date picker in Chromium-Based Browsers**: You might experience an issue with the date picker in the console when using the latest versions of Chrome and Edge browser. When a date is selected and the focus is shifted to another input field, the date reverts to its default value.
+- **Issue with the date picker in Chromium-based browsers**: You might experience an issue with the date picker in the console when you use the latest versions of Chrome and Edge browsers. When a date is selected and focus shifts to another input field, the date reverts to its default value.
 
     Affected versions: Chrome version `127.0.xxxx.xx` and Edge version `127.0.xxxx.xx`.
 
     **Workaround**
 
-    Use Firefox or Safari browser.
+    Use Firefox or Safari.
 
     The behavior might vary on different operating systems and browser versions.
     {: note}
 
-- **IP address required for OIDC/SAML authentication in private instances**: To use OIDC/SAML authentication in a private instance, access the web console via the `IP address`, not the `hostname`. To get `IP address`, see [Configuring private endpoints](https://cloud.ibm.com/docs/netezza?topic=netezza-creating-private-endpoints).
+- **IP address required for OIDC/SAML authentication in private instances**: To use OIDC/SAML authentication in a private instance, access the web console by using the `IP address`, not the `hostname`. To get the `IP address`, see [Configuring private endpoints](https://cloud.ibm.com/docs/netezza?topic=netezza-creating-private-endpoints).
 
-## 20 June 2024 - 11.2.3.0 - IF1
+## 20 June 2024 – 11.2.3.0 – IF1
 {: #june2024}
 
 ### Components
@@ -581,18 +574,18 @@ IdP configuration
     - when a clustered table has an organizing column of one of these types.
     - when a materialized view uses a column of one of these types in its `order by` clause.
 
-## 29 May 2024 - 11.2.3.0
+## 29 May 2024 – 11.2.3.0
 {: #may2024}
 
 ### New features and enhancements
 {: #nfmay2024}
 
-- NPS 11.2.3.0 supports SSO (Single sign-on) with multi-factor authentication:
+- NPS 11.2.3.0 supports SSO (single sign-on) with multi-factor authentication:
     - [SAML](/docs/netezza?topic=netezza-samloverview)
     - [OIDC (Azure)](/docs/netezza?topic=netezza-oidcoverview)
-- Introduced `nc-start` configuration on Azure which provides entry-level configuration for BI and UAT workloads.
-- A new checkbox option has been added to the console for deleting backups. When selected this option will also remove the backup from the underlying cloud object store (S3/Azure blob).
-- Introduced capability for performing time travel in Iceberg table. For details, see [Time travel for Iceberg table](/docs/netezza?topic=netezza-timetravel_watsonxdata).
+- Introduced the `nc-start` configuration on Azure that provides an entry-level configuration for BI and UAT workloads.
+- A new checkbox option has been added to the console for deleting backups. When selected, this option also removes the backup from the underlying cloud object store (S3/Azure Blob).
+- Introduced the capability to perform time travel in an Iceberg table. For details, see [Time travel for Iceberg table](/docs/netezza?topic=netezza-timetravel_watsonxdata).
 
 ### Components
 {: #compsmay2024}
@@ -600,13 +593,13 @@ IdP configuration
 - {{site.data.keyword.netezza_short}} 11.2.3
 - Web console 4.0.3.2
 
-## 11.2.2.11 - April 30, 2024
+## 30 April 2024 – 11.2.2.11
 {: #mar2024}
 
 ### New features and enhancements
 {: #nfmar2024}
 
-- `AWS IAM` user authentication allows you to create and log in to your account using your `AWS IAM` credentials. This means that you can use your existing AWS access and secret keys to sign in to your account with no additional steps required. Additionally, you can now use multi-factor authentication (MFA) to secure your account even further. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
+- `AWS IAM` user authentication allows you to create and log in to your account by using your `AWS IAM` credentials. This means that you can use your existing AWS access and secret keys to sign in to your account with no additional steps required. Additionally, you can now use multi-factor authentication (MFA) to further secure your account. For more information, see [Setting AWS IAM authentication](/docs/netezza?topic=netezza-awsiamauth).
 
 #### Connectivity improvements
 {: #cimar2024}
@@ -615,7 +608,7 @@ IdP configuration
 ### Fixes
 {: #fmar2024}
 
-- **Timezone issues:** Fixed the incorrect timezone display issue. By default, all the timestamps are now displayed in database timezone. You can choose between database and local timezone for scheduling automaintenance, BnR and pause/resume job.
+- **Timezone issues:** Fixed the incorrect time zone display issue. By default, all timestamps are now displayed in the database time zone. You can choose between the database time zone and the local time zone for scheduling automaintenance, BnR, and pause and resume jobs.
 
 
 ### Components
@@ -624,13 +617,13 @@ IdP configuration
 - {{site.data.keyword.netezza_short}} 11.2.2.11
 - Web console 4.0.3.1
 
-## 11.2.2.10 - February 21, 2024
+## 21 February 2024 – 11.2.2.10
 {: #feb2024}
 
 ### New features and enhancements
 {: #nffeb2024}
 
-- A new **Scheduler type** column is introduced in the **History** page for past records.This column indicates whether the respective schedule is **ad-hoc** or **scheduled**. For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
+- A new **Scheduler type** column is introduced on the **History** page for past records. This column indicates whether the corresponding schedule is **ad hoc** or **scheduled**. For more information, see [Checking scaling history](/docs/netezza?topic=netezza-scaling-console#scaling-console-history).
 
 - Enhanced system stability for smooth operations.
 
@@ -644,11 +637,11 @@ IdP configuration
 - **INZA:**\
    `python2` and its adapter are no longer supported.
 - **Netezza client:**\
-   Support to initiate, view,  and manipulate schedules for ad hoc, pause, resume, and scaling. For more information, see [Pausing and resuming instances](/docs/netezza?topic=netezza-pauseresume) and [Scaling](/docs/netezza?topic=netezza-scaling-topic).
-- Introduced new maintenance job types **Grooms** and **Genstats** under **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
-- Introduced a new option **Lakehouse** to create databases. For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
-- `CREATE TABLE` support for unpartitioned Iceberg table.
-- `INSERT` support for Iceberg table.
+   Supports initiating, viewing, and manipulating schedules for ad hoc, pause, resume, and scaling operations. For more information, see [Pausing and resuming instances](/docs/netezza?topic=netezza-pauseresume) and [Scaling](/docs/netezza?topic=netezza-scaling-topic).
+- Introduced new maintenance job types, **Grooms** and **Genstats**, under the **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
+- Introduced a new **Lakehouse** option for creating databases. For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
+- `CREATE TABLE` support for unpartitioned Iceberg tables.
+- `INSERT` support for Iceberg tables.
 
 #### Connectivity improvements
 {: #cifeb2024}
@@ -660,9 +653,9 @@ IdP configuration
     - TLS_AES_256_GCM_SHA384
     - TLS_CHACHA20_POLY1305_SHA256
 - AIX 7.3 and SUSE 15 SP3 support added from version 11.2.2.10 and later.
-- All 32 bit client are now deprecated.
-- HP and Solaris clients are deprecated altogether.
-- ConnRetry feature added in ODBC. Fore more information, see [Configuring the DSN and driver options with ODBC Driver Setup](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-2).
+- All 32-bit clients are now deprecated.
+- HP and Solaris clients are now fully deprecated.
+- The ConnRetry feature is added in ODBC. For more information, see [Configuring the DSN and driver options with ODBC Driver Setup](https://www.ibm.com/docs/en/netezza?topic=codsd-configuring-dsn-driver-options-odbc-driver-setup-2).
 
 ### Fixes
 {: #ffeb2024}
@@ -678,23 +671,23 @@ IdP configuration
 ### Known issues
 {: #kifeb2024}
 
-- For expansion failure due to node procurement issues, the Ops team restores the system to online state. You will see the state of Expansion scheduler as **Suspended** in Workload Patterns -> Scaling section. The Ops team will contact you once the required nodes becomes available. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion).
+- For expansion failures due to node procurement issues, the Ops team restores the system to the online state. You will see the expansion scheduler state as **Suspended** in the **Workload patterns > Scaling** section. The Ops team will contact you once the required nodes become available. For more information, see [Viewing suspended expansion](/docs/netezza?topic=netezza-scaling-console#view-suspended-expansion).
 
 - Differential schema level backup might fail with the error message - "Error: Backupset not found in history for specified database and connector." if full schema level backup is performed on some different schema. To overcome this issue, take full schema-level backup of the schemas before performing its differential schema level backup.
 
-## 11.2.2.9 - December 8, 2023
+## 08 December 2023 – 11.2.2.9
 {: #dec2023}
 
 ### New features and enhancements
 {: #nfdec2023}
 
-- New {{site.data.keyword.netezza_short}} functionalities that are associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
+- New {{site.data.keyword.netezza_short}} functions that are associated with {{site.data.keyword.lakehouse_short}} are introduced. For more information, see [{{site.data.keyword.lakehouse_short}} SQL commands](/docs/netezza?topic=netezza-sqlcommands_watsonx.data).
 
    You can also view your data lakehouse objects with the web console.
 
 - Learn how to [Run multiple SQL statements in a single session](/docs/netezza?topic=netezza-query-editor#single-session-queries) and [Run multiple SQL statements in different sessions](/docs/netezza?topic=netezza-query-editor#multiple-sessions-queries) with the query editor in the web console.
 
-- Updated the algorithm to calculate the profile of the day. The calculation is now made by subtracting two subsequent records' timestamp values if they are of the same day and appending the `timedelta` to that profile. For each day, the system compares which profile has the maximum time duration and declares that profile to be the profile of the day.
+- Updated the algorithm that calculates the profile of the day. The calculation is now made by subtracting two subsequent records' timestamp values if they are on the same day and appending the `timedelta` to that profile. For each day, the system compares the profiles, identifies the one with the longest duration, and declares that profile to be the profile of the day.
 
 ### Components
 {: #compsdec2023}
@@ -716,7 +709,7 @@ IdP configuration
 - For issues related to {{site.data.keyword.netezza_short}} and {{site.data.keyword.lakehouse_short}}, see [{{site.data.keyword.lakehouse_short}} known issues](/docs/netezza?topic=netezza-watsonx.data_knownissues).
 - The `Word_diff` function in the SQL extension toolkit does not support string input.
 
-## 11.2.2.8 - IF4 - November 9, 2023
+## 09 November 2023 – 11.2.2.8 – IF4
 {: #nov2023}
 
 ### Fixes
@@ -748,7 +741,7 @@ IdP configuration
       ```
       {: codeblock}
 
-## 11.2.2.8 - July 24, 2023
+## 24 July 2023 – 11.2.2.8
 {: #july2023}
 
 ### New features and enhancements
@@ -764,8 +757,8 @@ IdP configuration
 ### Fixes
 {: #f1july2023}
 
-- Fixed the issue with SQL query editor where commented out queries separated by a semicolon in the same line get executed.
-- Fixed the issue with multiple pause/resume and scaling jobs with the same name get executed.
+- Fixed an issue in the SQL query editor where commented-out queries that were separated by a semicolon on the same line were executed.
+- Fixed an issue where multiple pause, resume, and scaling jobs with the same name were executed.
 
 ### Components
 {: #comps1july2023}
@@ -776,7 +769,7 @@ IdP configuration
 ### Known issues
 {: #ki1july2023}
 
-- Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notifies you about storage utilization.
+- Contour scaling from NC-Start to NC0 with storage utilization higher than 90% might result in errors. Keep storage utilization under 90% or expand storage before you start contour scaling. Ops alerts notify you about storage utilization.
 - The console might not display an abort confirmation when the backup or restore process is aborted and might show that the operation is still in progress. Apply the following workaround on your system to overcome this issue.
    - If backup aborted
 
@@ -792,16 +785,16 @@ IdP configuration
       ```
       {: codeblock}
 
-## 11.2.2.7 - July 10, 2023
+## 10 July 2023 – 11.2.2.7
 {: #july12023}
 
 ### New features and enhancements
 {: #nfjuly12023}
 
-- {{site.data.keyword.netezza_short}} is now enabled on Amazon Web Services (AWS) for US-East-1 region. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
-- On AWS, smart scaling with confidence score and seed models display is now available in {{site.data.keyword.netezza_short}} web console. For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling_intro).
-- On AWS, a new entry-level workload contour called NC-Start is available to support lower volume BI and UAT workloads. You can scale this instance to NC0 performance profiles seamlessly as your workload increases. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
-- Time travel functionality is supported in {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt).
+- {{site.data.keyword.netezza_short}} is now enabled on Amazon Web Services (AWS) in the US East (N. Virginia) region. For more information, see [Getting started with Netezza Performance Server](/docs/netezza?topic=netezza-getstarted) and [Connecting to Netezza Performance Server](/docs/netezza?topic=netezza-connecting-overview).
+- On AWS, smart scaling with confidence score and seed model display is now available in the {{site.data.keyword.netezza_short}} web console. For more information, see [Smart scaling](/docs/netezza?topic=netezza-smartscaling_intro).
+- On AWS, a new entry-level workload contour called NC-Start is available to support lower-volume BI and UAT workloads. You can scale this instance to NC0 performance profiles as your workload increases. For more information, see [Scaling](/docs/netezza?topic=netezza-scaling-console).
+- Time travel functionality is supported in the {{site.data.keyword.netezza_short}} web console. For more information, see [Getting started with Netezza Performance Server time travel](/docs/netezza?topic=netezza-introducing_tt).
 - INZA 11.2.28 is supported. For more information, see [Netezza Performance Server Analytics 11.2.28 release notes](https://www.ibm.com/docs/en/netezza?topic=npsarnc-netezza-performance-server-analytics-11228-release-notes-2).
 
 ### Components
@@ -814,26 +807,26 @@ IdP configuration
 {: #kijuly12023}
 
 - Databases, schemas, and table names containing a dot character (".") do not show in the time travel statistics and graphs when you set the retention time interval to a nonzero value.
-- On demand (ad hoc) backup and restore for multiple large databases at one go is successful for only a few databases in the batch. For the rest of the databases you get an authentication error.
+- On-demand (ad hoc) backup and restore for multiple large databases in one operation succeeds for only a few databases in the batch. For the remaining databases, an authentication error occurs.
 
     Workaround:
 
     - Take a backup of a single large database at a time.
     - Restore a single large database at a time.
 
-## 11.2.2.6 - March 2023
+## March 2023 – 11.2.2.6
 {: #march2023}
 
 ### New features and enhancements
 {: #new_features_mar2023}
 
-- Default database maximum connections to the server is now increased to 1000.
+- The default maximum number of database connections to the server is now increased to 1,000.
 
 ### Fixes
 {: #fixes_mar_2023}
 
 - Fixed the issue with `.pln` files not getting stored in `$NZ_KIT_LOG/plans` directory if your query crashes.
-- Fixed the issue with sensitive files from host pod being read by using external tables and remote `nzsql` client. Starting with this release, you cannot load data into `/root` and `/home` directories, so using `nzload` with datafile from `/root` and `/home` is restricted along with creating external tables in these directories.
+- Fixed an issue where sensitive files from the host pod could be read by using external tables and the remote `nzsql` client. Starting with this release, you cannot load data into the `/root` and `/home` directories, so using `nzload` with a data file from `/root` or `/home` is restricted, along with creating external tables in these directories.
 
 ### Components
 {: #components11226}
@@ -844,7 +837,7 @@ IdP configuration
 ### Known issues
 {: #kimarch_2023}
 
-- You might experience the paste option not working in Mozilla Firefox 110.x when you are using the query editor in the web console. This is the web browser limitation and you must change the browser configuration preferences to allow the web pages to get access to the clipboard by using JavaScript. This issue is not present in other web browsers.
+- You might find that the paste option does not work in Mozilla Firefox 110.x when you use the query editor in the web console. This is a web browser limitation, and you must change the browser configuration preferences to allow web pages to access the clipboard by using JavaScript. This issue does not occur in other web browsers.
 
     Workaround:
 
@@ -856,7 +849,7 @@ IdP configuration
         The settings change from **false** to **true**.
     1. Refresh the web console page.
 
-## 11.2.2.5 - February 2023
+## February 2023 – 11.2.2.5
 {: #feb2023}
 
 ### New features and enhancements
@@ -866,7 +859,7 @@ IdP configuration
 
 - The **nzbackup** and **nzrestore** destination directory limit is updated. Previously, only 16 directory locations to read/write were supported. Now, the limit is 32.
 
-- The location of postmaster and postgres core dumps is changed.
+- The location of the postmaster and postgres core dumps is changed.
 
 | Core dump         | Previous location | New location                      |
 | -----------       | -----------       | ----------                        |
@@ -874,7 +867,7 @@ IdP configuration
 | Postgres cores    | NZ_DATA_DIR/base	| NZ_LOG_DIR/postgres/postgres      |
 {: caption="New and previous locations of the postmaster and postgres core dumps" caption-side="top"}
 
-- Automatic pause and resume is enabled in the web console.
+- Automatic pause and resume are enabled in the web console.
 
 ### Components
 {: #components}
@@ -885,11 +878,11 @@ IdP configuration
 ### Known issues
 {: #kifeb2023}
 
-If a common table expression or derived table query contains column names or column aliases, which begin with an underscore, Netezza Performance Server deletes these columns in the query result set.
+If a common table expression or derived table query contains column names or column aliases that begin with an underscore, Netezza Performance Server deletes these columns from the query result set.
 If there are no columns to display, Netezza Performance Server returns the following error.
 
 ```sh
-ERROR:  No columns are selected due to column alias begin with underscore
+ERROR:  No columns are selected because the column alias begins with an underscore
 ```
 {: screen}
 
@@ -898,15 +891,15 @@ Example:
 ```sql
 create table t1 ( c1 int , c2 int);
 CREATE TABLE
-with tab1 as ( select c1 as _c1 , c2 as _c2 from t1 ) select tab1.* from tab1; ERROR:  No columns are selected due to column alias begin with underscore
-select tab1.* from ( select c1 as _c1 , c2 as _c2 from t1 ) as tab1; ERROR:  No columns are selected due to column alias begin with underscore
+with tab1 as ( select c1 as _c1 , c2 as _c2 from t1 ) select tab1.* from tab1; ERROR:  No columns are selected because the column alias begins with an underscore
+select tab1.* from ( select c1 as _c1 , c2 as _c2 from t1 ) as tab1; ERROR:  No columns are selected because the column alias begins with an underscore
 ```
 {: screen}
 
-## 11.2.2.4 - July 2022
+## July 2022 – 11.2.2.4
 {: #july2022}
 
-As of July 28, 2022, you can access data from data lakes and move data between applications with Kafka.
+As of 28 July 2022, you can access data from data lakes and move data between applications by using Kafka.
 
 ### New features
 {: #nfjuly2022}
@@ -927,10 +920,10 @@ CREATE TABLE
 ```
 {: codeblock}
 
-## 11.2.2.3 - June 2022
+## June 2022 – 11.2.2.3
 {: #june2022}
 
-As of June 14, 2022, several fixes, and a stability patch for critical issues.
+As of 14 June 2022, this release includes several fixes and a stability patch for critical issues.
 
 ### Fixes
 {: #fjune2022}
@@ -951,13 +944,13 @@ As of June 14, 2022, several fixes, and a stability patch for critical issues.
 ## May 2022
 {: #may2022}
 
-As of May 20, 2022, workload enhancements and network policies support is added.
+As of 20 May 2022, workload enhancements and network policy support are added.
 
 ### New features
 {: #nfmay2022}
 
 - Two new workload contours NC0 and NC3 are available for a wider range of configuration options for provisioning and scaling.
-- Network policies support is added. You can control the set of the IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or can be connected from by using network policies. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies) and [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
+- Network policy support is added. You can control the set of IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or be connected from by using network policies. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies) and [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
 
 ### Known issues
 {: #kimay2022}
@@ -967,7 +960,7 @@ As of May 20, 2022, workload enhancements and network policies support is added.
 ## March 2022
 {: #march2022}
 
-As of March 17, 2022, the {{site.data.keyword.netezza_short}} web console is available in the following languages: English, German, French, Spanish, Italian, Brazilian, Japanese, Chinese Simplified, Chinese Traditional, and Korean.
+As of 17 March 2022, the {{site.data.keyword.netezza_short}} web console is available in the following languages: English, German, French, Spanish, Italian, Brazilian, Japanese, Chinese Simplified, Chinese Traditional, and Korean.
 
 
 For release notes for other {{site.data.keyword.netezza_short}} deployment options, see [this page](https://www.ibm.com/docs/en/netezza?topic=started-netezza-performance-server-release-notes).
