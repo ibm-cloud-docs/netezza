@@ -165,6 +165,7 @@ nzstats
 nzsession
 nzsystem
 nzprogress
+nzsqa
 ```
 {: screen}
 
@@ -507,6 +508,7 @@ A secure and flexible client solution for accessing Netezza in cloud environment
 | Command  | Description                                      |
 |----------|------------------------------------------------|
 | `auto-pr` | List and show details of Auto Pause/Resume mechanism |
+| `manualvacuum` | Execute manual vacuum operation (requires system restart) |
 
 ## High-level NZ commands
 {: #high_lev_cmds}
@@ -523,6 +525,7 @@ These commands allow running various `nz` commands on the target system:
 
 | Commands           | Description                                                                                   |
 |-------------------|-----------------------------------------------------------------------------------------------|
+| `ops`             | Run devops dedicated commands                                                                 |
 | `pauseresume`     | Pause or Resume NPS                                                                           |
 | `run`             | Run any allowed nz command synchronously (passes -u, -pw)                                    |
 | `run-async`       | Run any allowed nz command asynchronously                                                    |
@@ -541,7 +544,7 @@ These commands allow running various `nz` commands on the target system:
 
 | Command  | Description                                      |
 |--------------|------------------------------------------------------|
-| setup-hms    | Setup HMS connection for lakehouse integration       |
+| setup-lh    | Setup lh connection for lakehouse integration       |
 
 ### Miscellaneous commands
 {: #misc_cmds}

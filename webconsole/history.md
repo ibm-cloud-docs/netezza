@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-04-30"
+lastupdated: "2026-07-13"
 
 keywords: web console, queries
 
@@ -20,6 +20,8 @@ subcollection: netezza
 
 # History
 {: #history}
+
+The **History** section is part of the **Monitoring** page, accessible from **Monitoring** in the console navigation.
 
 ## Query history
 {: #query_history}

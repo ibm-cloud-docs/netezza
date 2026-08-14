@@ -147,7 +147,7 @@ You can find examples of creating policies in **Examples of network policies**.
 
 You can create network policies if you belong to the `ADMINISTRATORS` group.
 
-To create and view existing network policies in the {{site.data.keyword.netezza_short}} web console, select **Administration > Settings > Network Policies**. For more information about creating network policies with the web console, see [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
+To create and view existing network policies in the {{site.data.keyword.netezza_short}} web console, select **Administration > Settings > Network Policies**. For more information about creating network policies with the web console, see [Network policies with the web console](/docs/netezza?topic=netezza-adm-settings#wc-nwpolicies).
 
 ### Examples
 {: #nw-examples}

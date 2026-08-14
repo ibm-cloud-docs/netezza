@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-09"
+lastupdated: "2026-07-30"
 
 keywords: web console, getting started with the web cosnole
 
@@ -19,6 +19,8 @@ subcollection: netezza
 
 # Resource monitoring
 {: #resource_mon}
+
+The **Resource monitoring** section is part of the **Monitoring** page, accessible from **Monitoring** in the console navigation.
 
 ## Dashboard
 {: #dashboard}
@@ -130,8 +132,3 @@ You can zoom in and out by moving the slider to see a specific range. You can al
 The resource allocation charts display the percentage of current system resources that are consumed by the 4 most popular resource groups.
 
 The first chart monitors the percentage of system resources that are consumed by the resource groups over the time. The other two pie charts show the current resource allocation and current run jobs of the most popular resource groups.
-
-## Infrastructure
-{: #infrastructure}
-
-On the *Infrastructure* page, you can view information about your system, system disk status, SPUs, and storage utilization.

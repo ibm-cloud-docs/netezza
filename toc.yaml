@@ -41,14 +41,16 @@ toc:
               - webconsole/creating_procedures.md
               - webconsole/managing_owners.md
           - webconsole/query-editor.md
-          - webconsole/history.md
-          - webconsole/current-activity.md
-          - webconsole/resource-monitoring.md
+          - topicgroup:
+              label: Monitoring
+              topics:
+              - webconsole/history.md
+              - webconsole/current-activity.md
+              - webconsole/resource-monitoring.md
           - topicgroup:
               label: Administration
               topics:
               - webconsole/settings.md
-              - webconsole/scheduler-rules.md
           - topicgroup:
               label: Workload patterns
               topics:
@@ -180,6 +182,7 @@ toc:
           - nzalert/nzalert_overview.md
           - nzalert/nzalert_aws.md
           - nzalert/nzalert_az.md
+          - start/advanced-monitoring.md
       - topicgroup:
           label: Time travel and historical data
           topics:
@@ -201,6 +204,7 @@ toc:
           topics:
           - admins/nztool.md
           - admins/nz_timezone.md
+          - admins/nz_manualvacuum.md
           - link:
               label: Netezza Performance Server commands
               href: https://www.ibm.com/docs/en/netezza?topic=interfaces-command-line-interface
