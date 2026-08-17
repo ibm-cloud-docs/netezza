@@ -104,7 +104,16 @@ Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to f
    ```
    {: codeblock}
 
-On Windows, the shell strips quotes from arguments before passing them to the application. If you are using an OIDC username that requires quoting (for example, one that contains lowercase letters or special characters), passing it through the `-u` command-line argument can cause authentication failures. Linux preserves the quotes and is not affected. If you encounter authentication issues on Windows with a quoted OIDC username, use the environment variable approach instead.
+- From Windows (PowerShell), run:
+
+   ```sh
+   $env:APISERVER_URL="<api-server-url>"
+   $env:NZ_USER="<nps-admin-user>"
+   $env:NZ_PASSWORD="<nps-admin-user-password>"
+   ```
+   {: codeblock}
+
+On Windows, the shell strips quotes from command-line arguments before passing them to the application. If you are using an OIDC username that contains lowercase letters or special characters (for example, `user@example.com`), passing it through the `-u` argument causes the quotes to be removed and the username to be uppercased, which leads to an `Authentication failed` error. Linux preserves the quotes and is unaffected. If you encounter this issue on Windows, set the credentials by using environment variables instead of passing them through command-line arguments.
 {: note}
 
 ## The nz syntax
