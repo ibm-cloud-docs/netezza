@@ -113,8 +113,29 @@ Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to f
    ```
    {: codeblock}
 
-On Windows, the shell strips quotes from command-line arguments before passing them to the application. If you are using an OIDC username that contains lowercase letters or special characters (for example, `user@example.com`), passing it through the `-u` argument causes the quotes to be removed and the username to be uppercased, which leads to an `Authentication failed` error. Linux preserves the quotes and is unaffected. If you encounter this issue on Windows, set the credentials by using environment variables instead of passing them through command-line arguments.
-{: note}
+
+
+## Username formatting
+{: #username_nzcli_format}
+
+   - Use a single quote followed by double quotes `'" "'` for usernames that:
+     - Contain lowercase letters.
+     - Include special characters other than an underscore `_` or `@` symbol.
+
+      Example - Username: `SampleUser` -> `'"SampleUser"'`
+   - For all other usernames, double quotes `""` are optional.
+
+      Example - Username: `SAMPLEUSER` -> `SAMPLEUSER` or `"SAMPLEUSER"`
+
+
+ **Case Sensitivity**:
+   - **DB Users**: Usernames are not case-sensitive.
+
+      Example - `sample_user` and `SAMPLE_USER` are treated the same.
+
+   - **IBMIAM Users**: Usernames are case-sensitive.
+
+      Example - `sample_user@ibm.com` and `SAMPLE_USER@ibm.com` are treated differently.
 
 ## The nz syntax
 {: #nz-syntax}
@@ -228,28 +249,6 @@ nzstats
 nzsystem
 ```
 {: screen}
-
-## Username formatting
-{: #username_nzcli_format}
-
-   - Use a single quote followed by double quotes `'" "'` for usernames that:
-     - Contain lowercase letters.
-     - Include special characters other than an underscore `_` or `@` symbol.
-
-      Example - Username: `SampleUser` -> `'"SampleUser"'`
-   - For all other usernames, double quotes `""` are optional.
-
-      Example - Username: `SAMPLEUSER` -> `SAMPLEUSER` or `"SAMPLEUSER"`
-
-
- **Case Sensitivity**:
-   - **DB Users**: Usernames are not case-sensitive.
-
-      Example - `sample_user` and `SAMPLE_USER` are treated the same.
-
-   - **IBMIAM Users**: Usernames are case-sensitive.
-
-      Example - `sample_user@ibm.com` and `SAMPLE_USER@ibm.com` are treated differently.
 
 ## nz command reference
 {: #supported-cmds}
