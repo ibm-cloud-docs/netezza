@@ -27,10 +27,7 @@ subcollection: netezza
 ## Azure
 {: #azure_nw_policy}
 
-By default, you can connect to the {{site.data.keyword.netezza_short}} database or connect from the database to any device with any IP address or hostname.
-By using the network policies feature in the web console, you can control the set of the IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or can be connected from. Network policies feature is supported on Azure only.
-
-- If you want to restrict the destination your {{site.data.keyword.netezza_short}} instance can reach out to or can be reached from, see [Allowing connections only from a defined set of sources with the specified IP addresses and hostnames](/docs/netezza?topic=netezza-network-policies#use-case-1).
+By default, you can connect to the {{site.data.keyword.netezza_short}} database or connect from the database to any device with any IP address or hostname. By using the network policies feature in the web console, you can control the Ingress traffic set of IP addresses that your {{site.data.keyword.netezza_short}} database can be connected from. Network policies feature is supported on Azure only.
 
 - If you want to restrict the sources that can reach out to your {{site.data.keyword.netezza_short}} instance or from which the instance can be reached, see [Allowing connections only from on premises and take backups, load or unload data by using Cloud Object Store](https://cloud.ibm.com/docs/netezza?topic=netezza-network-policies#use-case-2).
 
@@ -48,9 +45,8 @@ By using the network policies feature in the web console, you can control the se
 Network policies are defined by:
 
 1. [Classless Inter-domain Routing (CIDR) notation](https://datatracker.ietf.org/doc/html/rfc4632).
-2. [DNS hostnames](https://datatracker.ietf.org/doc/html/rfc1123).
 
-By using these form-factors, you can create a network policy as either an `allow` or a `block` policy.
+By using this form factor, you can create a network policy as `allow`. Once you add a network policy, apart from the CIDR that is allowed, all other ingress traffic is blocked.
 
 ### Block and allow policies
 {: #nw-block-allow}
@@ -58,22 +54,24 @@ By using these form-factors, you can create a network policy as either an `allow
 #### Block policy
 {: #blockpolicy}
 
-Specifies a type of policy that prevents you from the following:
+Specifies a policy that prevents the following:
 
-- Connecting to the {{site.data.keyword.netezza_short}} database by using any device or service.
-
-- Connecting from the {{site.data.keyword.netezza_short}} database to any device or service that has either the specified hostname or an IP address in the range that is specified by CIDR.
+- When a customer-configured network policy is present, all ingress traffic to the {{site.data.keyword.netezza_short}} database is blocked by default.
+- Any traffic that is not explicitly permitted by the configured network policy is denied.
 
 #### Allow policy
 {: #allowpolicy}
 
-Specifies a policy that allows you to do the following:
+Specifies a policy that allows the following:
 
-- Connecting to the {{site.data.keyword.netezza_short}} database by using any device or service.
+- Traffic explicitly permitted by the configured network policy to access the {{site.data.keyword.netezza_short}} database.
+- Only the traffic matching the configured policy rules is allowed when a network policy is present.
 
-- Connecting from the {{site.data.keyword.netezza_short}} database to any device or service that has either the specified hostname or an IP address in the range that is specified by CIDR.
+#### Default case
+{: #defaultcase}
 
-You can use the combination of allow and block (deny) policies to restrict connections to and from the {{site.data.keyword.netezza_short}} database to the provided set of IP addresses and hostnames.
+- When no customer network policy is configured, all ingress traffic to the {{site.data.keyword.netezza_short}} database is allowed by default.
+- After a customer network policy is configured, the default behavior changes to deny, and only traffic explicitly allowed by the policy is permitted.
 
 ### Defining network policies
 {: #define-np}
@@ -94,9 +92,7 @@ For example, `76.168.0.0/24` represents IP addresses in the range of `76.168.0.0
 
 `0.0.0.0/0` is a special case of a CIDR notation, which is allowed. Use it with caution because of the following reasons:
 
-- When you use `0.0.0.0/0` as a block policy, all traffic to and from your {{site.data.keyword.netezza_short}} database is restricted.
-
-- When you use `0.0.0.0/0`as an allow policy, all traffic to and from your {{site.data.keyword.netezza_short}} database is allowed.
+- When you use `0.0.0.0/0` as an ingress allow policy, all traffic to your {{site.data.keyword.netezza_short}} database is allowed.
 
 You can use CIDR ranges to represent public and private IP addresses.
 Devices or services that are in a private or enterprise network that uses private IP addresses have gateways.
@@ -104,122 +100,169 @@ These gateways typically have network interfaces with public IP addresses, which
 This allows entities in the private network to connect to external services.
 {: note}
 
-You must use a CIDR range that represents only the public IP addresses of gateways when you are setting `allow` and `block` policies.
-
-Do not specify a CIDR range that represents private IP addresses space as block policies. You might impact the functioning of the database.
-
-#### Defining network policies with DNS hostnames
-{: #nw-defining-DNS}
-
-With {{site.data.keyword.netezza_short}}, you can specify DNS hostnames in network policies.
-
-DNS hostnames are names that are assigned to devices or services that serve as their network identity and are used to connect with them. An example of DNS hostname is `cloud.ibm.com`.
-
-If you use a DNS hostname in policies, the local DNS name resolves the hostname to a single static IP address in the {{site.data.keyword.netezza_short}} instance so that the policy can work effectively.
-
-If the hostname resolves to multiple IP addresses or if the assigned IP addresses can change (for example, load balancer), make sure that you provide the CIDR range of those IP addresses in the policy rather than the DNS hostname.
-
-### Domain Name Server (DNS) resolution
-{: #nw-dns}
-
-When you use DNS hostname in a policy, the database tries to resolve the domain by using the local name server on the node.
-If you use domain names that typically are not cached by the local name servers, for example, a service that is not native to or provided by the cloud infrastructure provider, the local name servers cannot resolve to it.
-
-In such scenarios, you can do one of the following:
-
-- Add the DNS server's IP address in the allow rule so that the database can resolve the hostname to its IP address.
-
-- Provide the complete CIDR range that is used by the device or the service.
+You must use a CIDR range that represents only the public IP addresses of gateways when you are setting `allow` policies.
 
 ### Order of evaluation of network policies
 {: #nw-eval}
 
-The **allow** policies are evaluated first. Then, the **deny** policies.
+Policies are evaluated collectively rather than in a specific order. The allowed traffic is the union of the traffic permitted by all applicable policies. If traffic is not allowed by any applicable policy, it is denied.
 
-During the evaluation, each policy is evaluated in the order that they are defined, from first to last.
+You can find examples of creating policies in [Examples of network policies](/docs/netezza?topic=netezza-network-policies#nw-examples).
 
-The first rule that matches the incoming or outgoing connection is applied and subsequent rules are ignored for that connection.
-
-You can find examples of creating policies in **Examples of network policies**.
-
-### Creating and listing network policies
+### Network policies page
 {: #nw-creating-listing}
 
-You can create network policies if you belong to the `ADMINISTRATORS` group.
+On the **Network policies** page, you can add policies and view existing policies.
 
-To create and view existing network policies in the {{site.data.keyword.netezza_short}} web console, select **Administration > Settings > Network Policies**. For more information about creating network policies with the web console, see [Network policies with the web console](/docs/netezza?topic=netezza-adm-settings#wc-nwpolicies).
+The **Network policies** and **Private link** tabs are applicable only for Azure.
+{: note}
+
+To add network policies, you must belong to the `ADMINISTRATORS` group.
+{: note}
+
+For more information about network policies and examples, see [Network policies](/docs/netezza?topic=netezza-network-policies).
+
+#### Domain standards
+{: #nw-domain-standards}
+
+For more information about domain standards, see [Defining network policies with Classless Inter-Domain Routing (CIDR)](/docs/netezza?topic=netezza-network-policies#nw-cidr).
+
+#### Adding network policies
+{: #nw-adding}
+
+1. Go to **Administration > Network policies**.
+1. In the **Add policy** section, type your Classless Inter-Domain Routing (CIDR). The IP address must conform to the domain standards.
+1. Click **Save**.
+
+#### Viewing network policies
+{: #nw-viewing}
+
+To view existing policies, go to **Administration > Network policies > Existing policies**.
+
+#### Deleting network policies
+{: #nw-deleting}
+
+1. Go to **Administration > Network policies > Existing policies**.
+1. Select the policy that you want to delete.
+1. Click **Delete**.
+
+You can select multiple policies to delete.
+{: note}
 
 ### Examples
 {: #nw-examples}
 
 Following are examples of how you can apply network policies.
 
-#### Allowing connections only from a defined set of sources with the specified IP addresses and hostnames
+#### Allowing connections only from a defined set of sources with the specified IP addresses
 {: #use-case-1}
 
-If you want to allow connections to the {{site.data.keyword.netezza_short}} database only from devices with IP addresses in the range that is represented by CIDR-1, CIDR-2, and hostnames H1 and H2, and reject connections from all other sources, follow these steps.
+If you want to allow connections to the {{site.data.keyword.netezza_short}} database only from devices with IP addresses in the ranges represented by CIDR-1, CIDR-2, CIDR-3, and CIDR-4, follow these steps.
 
-1. Create the policies in order from `Rule 1` to `Rule 5`.
-
-   ```sh
-   Rule 1: CIDR-1    (allow)
-   Rule 2: CIDR-2    (allow)
-   Rule 3: H1        (allow)
-   Rule 4: H2        (allow)
-   Rule 5: 0.0.0.0/0 (deny)
-   ```
-   {: codeblock}
-
-   These rules ensure that connections are matched against `Rule 1-4` to determine whether they can be allowed. If they are not allowed, `Rule 5` rejects them.
-
-   If someone is trying to connect to the {{site.data.keyword.netezza_short}} database with hostnames `H1` and `H2`, the database first tries to resolve the hostname to its IP address to complete the connection. Because the database might not have the DNS entry cached locally, the database tries to resolve the hostname by using a public DNS server. The DNS lookup fails because Rule 5 is in place. As a result, the connection attempt fails.
-
-2. Add the public authoritative DNS server hostname or CIDR (DNS-1) to the allow rules for the DNS lookup to succeed.
+1. Create a network policy that allows ingress traffic from the required sources.
 
    ```sh
    Rule 1: CIDR-1    (allow)
    Rule 2: CIDR-2    (allow)
-   Rule 3: H1        (allow)
-   Rule 4: H2        (allow)
-   Rule 5: DNS-1     (allow)
-   Rule 6: 0.0.0.0/0 (deny)
+   Rule 3: CIDR-3    (allow)
+   Rule 4: CIDR-4    (allow)
    ```
    {: codeblock}
 
-   The new rule is added as an **allow** rule (*Rule 5*).
+   After the network policy is applied, ingress traffic to the {{site.data.keyword.netezza_short}} database is restricted to the traffic explicitly allowed by the policy. Any ingress traffic that does not match the configured allow rules is denied.
+
+Kubernetes NetworkPolicy does not provide an explicit deny-all rule. When an ingress NetworkPolicy selects a pod, ingress traffic is denied by default unless it is allowed by an applicable NetworkPolicy rule.
+{: note}
 
 #### Allowing connections only from on premises and take backups, load or unload data by using Cloud Object Store
 {: #use-case-2}
 
-If you want applications or users only from their on-premises network to connect to their {{site.data.keyword.netezza_short}} database, follow these steps.
+If you want applications or users from your on-premises network to connect to the {{site.data.keyword.netezza_short}} database and also allow the database to access Cloud Object Store endpoints, follow these steps.
 
-1. Use a public NAT gateway.
+1. Identify the public NAT gateway used by the on-premises network.
 
-   The on-premises network is a private enterprise network, which uses a private IP address space. If the applications and users want to connect to services outside the on-premises network, they must use a public NAT gateway.
+   The public NAT gateway replaces the source IP addresses of the on-premises applications and users with one of its public IP addresses, represented by CIDR-1.
 
-   The public NAT gateway has interfaces with public IP addresses in a range that is represented by CIDR-1 and replaces the source IP address of the instances in the enterprise network with one of the public IP address of the NAT gateway.
-
-   As a result, external applications see all the traffic that comes from one of the public interfaces of the NAT gateway that is represented by CIDR-1.
-
-1. Add CIDR-1 as an `allow` rule (Rule 1).
+1. Create a network policy that allows ingress traffic from CIDR-1.
 
    ```sh
    Rule 1: CIDR-1    (allow)
    ```
    {: codeblock}
 
-1. Add a **deny all** rule (*Rule 2*) to restrict connections that originate only from the on-premises network.
-
-   ```sh
-   Rule 1: CIDR-1    (allow)
-   Rule 2: 0.0.0.0/0 (deny)
-   ```
-   {: codeblock}
+   After the network policy is applied, ingress traffic from CIDR-1 is allowed, while other ingress traffic is denied by default.
 
 1. Make connections from the database to the respective Cloud Object Store endpoints (such as AWS S3 and Azure Blob Storage).
 
-   You must add endpoints to the allows list if you want your database admins to back up data to Cloud Object Store and developers to use external tables in applications to load and unload data.
+   You must add endpoints to the allow list if you want your database admins to back up data to Cloud Object Store and developers to use external tables in applications to load and unload data.
 
+
+#### Allowing connections from multiple sources by using multiple network policies
+{: #use-case-3}
+
+If you want to allow connections from multiple independent sources, you can create multiple network policies.
+
+For example:
+
+```sh
+NetworkPolicy 1:
+  CIDR-1    (allow)
+
+NetworkPolicy 2:
+  CIDR-2    (allow)
+
+NetworkPolicy 3:
+  CIDR-3    (allow)
+
+NetworkPolicy 4:
+  CIDR-4    (allow)
+```
+{: codeblock}
+
+All four network policies are evaluated collectively. There is no execution order or priority between the policies.
+
+The effective allowed traffic is the union of the traffic allowed by all applicable network policies:
+
+- Traffic matching CIDR-1 → Allowed
+- Traffic matching CIDR-2 → Allowed
+- Traffic matching CIDR-3 → Allowed
+- Traffic matching CIDR-4 → Allowed
+- Traffic matching none of the policies → Denied
+
+#### Default behavior when no network policy is configured
+{: #use-case-default}
+
+If no ingress network policy is configured, ingress traffic is allowed by default.
+
+```sh
+No NetworkPolicy
+       |
+       v
+Ingress traffic
+       |
+       v
+     ALLOW
+```
+{: codeblock}
+
+After an ingress network policy is configured, the {{site.data.keyword.netezza_short}} database becomes ingress-isolated.
+
+```sh
+NetworkPolicy configured
+       |
+       v
+Ingress traffic
+       |
+       +----------------------+
+       |                      |
+Matches an allow rule    No matching rule
+       |                      |
+       v                      v
+     ALLOW                  DENY
+```
+{: codeblock}
+
+This behavior allows you to start with the default open access and progressively restrict access by defining the specific sources that should be permitted.
 
 ##### Adding AWS S3 endpoint to network allow policies
 {: #use-case-2a}
