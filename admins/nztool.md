@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-08"
+lastupdated: "2026-07-30"
 
 keywords: nztool
 
@@ -127,6 +127,8 @@ System state is 'Online'.
 ```
 {: codeblock}
 
+Passing a password with the `-pw` flag exposes it in the operating system process table. Any user who can run process enumeration commands such as `ps -ef` inside the same container can read the credential and reuse it to authenticate to the database. Use one of the secure alternatives described in [Setting up environment variables](#supportedcommands) instead.
+{: important}
 
 **NPSaaS command shortcut syntax**
 {: #npsyntxshrtct}
@@ -145,6 +147,9 @@ Example:
 System state is 'Online'.
 ```
 {: codeblock}
+
+Passing a password with the `-pw` flag exposes it in the operating system process table. Any user who can run process enumeration commands such as `ps -ef` inside the same container can read the credential and reuse it to authenticate to the database. Use one of the secure alternatives described in [Setting up environment variables](#supportedcommands) instead.
+{: important}
 
 
 **Software Support Tool syntax**
@@ -166,6 +171,22 @@ Example:
 
 ## Setting up environment variables
 {: #supportedcommands}
+
+To avoid exposing credentials in the process table, use environment variables or an interactive password prompt instead of passing the `-pw` flag directly on the command line.
+
+The following secure alternatives are available:
+
+- **Interactive prompt**: Invoke the command without supplying a password value. The client prompts for the password at runtime and the credential is not recorded in the process table. For example:
+
+   ```sh
+   ./nz nzstate -apiserver <apiserver-url> -u <nps-admin-user>
+   ```
+   {: codeblock}
+
+- **Environment variables**: Set `NZ_USER` and `NZ_PASSWORD` before invoking the command. Environment variables are not visible to other users through `ps` on a properly configured system.
+
+If you must pass `-pw` as a command-line argument for legacy automation, restrict access to the container to the minimum set of trusted users and rotate any exposed credentials immediately.
+{: note}
 
 Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
 
