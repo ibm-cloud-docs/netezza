@@ -81,42 +81,6 @@ The `nz` tool can be downloaded using the following methods. For cloud platforms
 
    You can download the `nzcli` from [Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7EWebSphere&product=ibm/WebSphere/IBM+Cloud+Private+for+Data+System&release=NZCLI_11.2&platform=All&function=all).
 
-## Setting up environment variables
-{: #supportedcommands}
-
-Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
-
-- From Linux or Mac OSX terminal, run:
-
-   ```sh
-   export APISERVER_URL=<api-server-url>
-   export NZ_USER=<nps-admin-user>
-   export NZ_PASSWORD=<nps-admin-user-password>
-   ```
-   {: codeblock}
-
-- From Windows (`cmd.exe`), run:
-
-   ```sh
-   set APISERVER_URL=<api-server-url>
-   set NZ_USER=<nps-admin-user>
-   set NZ_PASSWORD=<nps-admin-user-password>
-   ```
-   {: codeblock}
-
-- From Windows (PowerShell), run:
-
-   ```sh
-   $env:APISERVER_URL="<api-server-url>"
-   $env:NZ_USER="<nps-admin-user>"
-   $env:NZ_PASSWORD="<nps-admin-user-password>"
-   ```
-   {: codeblock}
-
-
-On Windows, the shell strips quotes from arguments before passing them to the application. If the username contains quotes (for example, one containing lowercase letters or special characters), passing it through the command-line argument (-u `<username>`) can result in authentication failures. Linux preserves the quotes and is not affected by this behavior. To avoid authentication issues on Windows, it is recommended to use the environment variable approach when specifying a quoted username.
-{: note}
-
 ## Username formatting
 {: #username_nzcli_format}
 
@@ -200,6 +164,41 @@ Example:
 ```
 {: codeblock}
 
+## Setting up environment variables
+{: #supportedcommands}
+
+Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
+
+- From Linux or Mac OSX terminal, run:
+
+   ```sh
+   export APISERVER_URL=<api-server-url>
+   export NZ_USER=<nps-admin-user>
+   export NZ_PASSWORD=<nps-admin-user-password>
+   ```
+   {: codeblock}
+
+- From Windows (`cmd.exe`), run:
+
+   ```sh
+   set APISERVER_URL=<api-server-url>
+   set NZ_USER=<nps-admin-user>
+   set NZ_PASSWORD=<nps-admin-user-password>
+   ```
+   {: codeblock}
+
+- From Windows (PowerShell), run:
+
+   ```sh
+   $env:APISERVER_URL="<api-server-url>"
+   $env:NZ_USER="<nps-admin-user>"
+   $env:NZ_PASSWORD="<nps-admin-user-password>"
+   ```
+   {: codeblock}
+
+
+On Windows, the shell strips quotes from arguments before passing them to the application. If the username contains quotes (for example, one containing lowercase letters or special characters), passing it through the command-line argument (-u `<username>`) can result in authentication failures. Linux preserves the quotes and is not affected by this behavior. To avoid authentication issues on Windows, it is recommended to use the environment variable approach when specifying a quoted username.
+{: note}
 
 ## Installing shortcuts with nz install
 {: #nzinstall-shortcuts}
