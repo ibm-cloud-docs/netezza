@@ -185,7 +185,7 @@ The following secure alternatives are available:
 
 - **Environment variables**: Set `NZ_USER` and `NZ_PASSWORD` before invoking the command. Environment variables are not visible to other users through `ps` on a properly configured system.
 
-If you must pass `-pw` as a command-line argument for legacy automation, restrict access to the container to the minimum set of trusted users and rotate any exposed credentials immediately.
+If `-pw` must be passed as a command-line argument for legacy automation, restrict container access to the minimum set of trusted users and rotate any exposed credentials immediately.
 {: note}
 
 Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
