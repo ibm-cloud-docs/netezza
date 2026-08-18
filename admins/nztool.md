@@ -114,7 +114,7 @@ Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to f
    {: codeblock}
 
 
-On Windows, the shell strips quotes from arguments before passing them to the application. If you are using a username that requires quotes (for example, one containing lowercase letters or special characters), passing it through the command-line argument (-u `<username>`) can result in authentication failures. Linux preserves the quotes and is not affected by this behavior. To avoid authentication issues on Windows, it is recommended to use the environment variable approach when specifying a quoted username.
+On Windows, the shell strips quotes from arguments before passing them to the application. If the username contains quotes (for example, one containing lowercase letters or special characters), passing it through the command-line argument (-u `<username>`) can result in authentication failures. Linux preserves the quotes and is not affected by this behavior. To avoid authentication issues on Windows, it is recommended to use the environment variable approach when specifying a quoted username.
 {: note}
 
 ## Username formatting
