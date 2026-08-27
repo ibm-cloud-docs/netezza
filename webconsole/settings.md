@@ -60,7 +60,6 @@ For more information about domain standards, see [Defining network policies with
 1. Go to **Administration > Network policies**.
 1. In the *Add policy* section, type your Classless Inter-Domain Routing (CIDR) or hostname.
    The IP address must conform to the domain standards.
-1. Select whether the policy is `Allowed` or `Blocked`.
 1. Click **Save**.
 
 ### Viewing network policies
