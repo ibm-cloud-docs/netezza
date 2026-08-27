@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-13"
+lastupdated: "2026-09-04"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,33 @@ subcollection: netezza
 
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 4 September 2026 – 11.3.1.4
+{: #sep2026}
+{: release-note}
+
+### New features and enhancements
+{: #nfsep2026}
+
+SDN to OVN network policy migration
+:   {{site.data.keyword.netezza_short}} has migrated its underlying network policy enforcement layer from Software-Defined Networking (SDN) based on Kubernetes `NetworkPolicy` objects to Open Virtual Network (OVN). This infrastructure change improves the scalability, consistency, and reliability of ingress traffic control for both Azure and AWS deployments. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies).
+
+UBI 9 base image upgrade
+
+:   The Host and SPU container images for {{site.data.keyword.netezza_short}} are now based on Red Hat Universal Base Image (UBI) 9 (RHEL 9.8). Previously based on UBI 8, this upgrade eliminates security vulnerabilities that could not be remediated in UBI 8 and were blocking PSIRT approvals. The upgrade applies to all deployment types: Fully Managed (SaaS) and Bring Your Own Cloud (BYOC) on both AWS and Azure.
+
+    This is an infrastructure-level change. No action is required from users or administrators. Existing deployments are migrated automatically as part of the 11.3.1.4 upgrade.
+
+### Fixes
+{: #fixessep2026}
+
+- Backup operations to IAM role-based S3 buckets were failing with an `AccessDenied` error on AWS BYOC public and private instances. The S3 connector was not detecting IRSA/EKS Web Identity credentials and fell back to the EC2 instance profile, which lacked the required `s3:PutObject` permission. The AWS SDK for C++ has been upgraded to v1.11.866, adding automatic IRSA/EKS Web Identity credential detection. Backup and restore operations using IAM role-based buckets now work correctly on all AWS BYOC deployment types.
+
+
+### Components
+{: #compsep2026}
+
+- `nzcli` version: 11.3.1.4
 
 ## 12 August 2026 – 11.3.1.3
 {: #jun2026}
