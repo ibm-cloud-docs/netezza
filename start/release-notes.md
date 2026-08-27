@@ -40,16 +40,23 @@ UBI 9 base image upgrade
 
     This is an infrastructure-level change. No action is required from users or administrators. Existing deployments are migrated automatically as part of the 11.3.1.4 upgrade.
 
+INZA 11.3.7 support
+
+:   INZA has been upgraded to version 11.3.7. For more information, link will be updated later.   
+
 ### Fixes
 {: #fixessep2026}
 
 - Backup operations to IAM role-based S3 buckets were failing with an `AccessDenied` error on AWS BYOC public and private instances. The S3 connector was not detecting IRSA/EKS Web Identity credentials and fell back to the EC2 instance profile, which lacked the required `s3:PutObject` permission. The AWS SDK for C++ has been upgraded to v1.11.866, adding automatic IRSA/EKS Web Identity credential detection. Backup and restore operations using IAM role-based buckets now work correctly on all AWS BYOC deployment types.
+
+- Fixed an issue in INZA where UDX DDL backup files were removed before dependency restoration completed, which could cause loss of user objects during an installation retry. Backup files are now retained until restoration succeeds.
 
 
 ### Components
 {: #compsep2026}
 
 - `nzcli` version: 11.3.1.4
+- `INZA` version: 11.3.7
 
 ## 12 August 2026 – 11.3.1.3
 {: #jun2026}
