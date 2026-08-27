@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-08"
+lastupdated: "2026-08-27"
 
 keywords: nztool
 
@@ -81,19 +81,103 @@ The `nz` tool can be downloaded using the following methods. For cloud platforms
 
    You can download the `nzcli` from [Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7EWebSphere&product=ibm/WebSphere/IBM+Cloud+Private+for+Data+System&release=NZCLI_11.2&platform=All&function=all).
 
+## Username formatting
+{: #username_nzcli_format}
+
+   - Use a single quote followed by double quotes `'" "'` for usernames that:
+     - Contain lowercase letters.
+     - Include special characters other than an underscore `_` or `@` symbol.
+
+      Example - Username: `SampleUser` -> `'"SampleUser"'`
+   - For all other usernames, double quotes `""` are optional.
+
+      Example - Username: `SAMPLEUSER` -> `SAMPLEUSER` or `"SAMPLEUSER"`
+
+
+ **Case Sensitivity**:
+   - **DB Users**: Usernames are not case-sensitive.
+
+      Example - `sample_user` and `SAMPLE_USER` are treated the same.
+
+   - **IBMIAM Users**: Usernames are case-sensitive.
+
+      Example - `sample_user@ibm.com` and `SAMPLE_USER@ibm.com` are treated differently.
+
+## The nz syntax
+{: #nz-syntax}
+
+The `nz` tool supports execution of select NPSaaS commands and Software Support Tools. Command execution syntax depends on the command type — NPSaaS command or Software Support Tool — and whether a shortcut command was installed.
+
+Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload the `nz` tool at least every other release.
+{: note}
+
+**NPSaaS command syntax**
+{: #npsaassyntax}
+
+```sh
+nz [command] [subcommands] [options]
+```
+{: codeblock}
+
+Example:
+
+```sh
+./nz nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+System state is 'Online'.
+```
+{: codeblock}
+
+Passing a password with the `-pw` flag exposes it in the operating system process table. Any user who can run process enumeration commands such as `ps -ef` inside the same container can read the credential and reuse it to authenticate to the database. Use one of the secure alternatives described in [Setting up environment variables](#supportedcommands) instead.
+{: important}
+
+**NPSaaS command shortcut syntax**
+{: #npsyntxshrtct}
+
+After running `nz install`, you can use shortcuts and omit the `nz` prefix:
+
+```sh
+[command] [subcommand] [options]
+```
+{: codeblock}
+
+Example:
+
+```sh
+./nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+System state is 'Online'.
+```
+{: codeblock}
+
+Passing a password with the `-pw` flag exposes it in the operating system process table. Any user who can run process enumeration commands such as `ps -ef` inside the same container can read the credential and reuse it to authenticate to the database. Use one of the secure alternatives described in [Setting up environment variables](#supportedcommands) instead.
+{: important}
+
+
+**Software Support Tool syntax**
+{: #ssts}
+
+Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`.
+
+```sh
+nz [run-command] [software-support-tool] [subcommands] [options]
+```
+{: codeblock}
+
+Example:
+
+```sh
+./nz run nz_get_table_rowcount database1 table1
+```
+{: codeblock}
+
 ## Setting up environment variables
 {: #supportedcommands}
 
-To avoid exposing credentials in the process table, use environment variables or an interactive password prompt instead of passing the `-pw` flag directly on the command line.
+To avoid exposing credentials in the process table, use environment variables instead of passing the `-pw` flag directly on the command line.
 
-The following secure alternatives are available:
+The `nz` tool does not support interactive password prompts. If neither `-pw` nor `NZ_PASSWORD` is provided, the command fails with an authentication error.
+{: important}
 
-- **Interactive prompt**: Invoke the command without supplying a password value. The client prompts for the password at runtime and the credential is not recorded in the process table. For example:
-
-   ```sh
-   ./nz nzstate -apiserver <apiserver-url> -u <nps-admin-user>
-   ```
-   {: codeblock}
+The following secure alternative is available:
 
 - **Environment variables**: Set `NZ_USER` and `NZ_PASSWORD` before invoking the command. Environment variables are not visible to other users through `ps` on a properly configured system.
 
@@ -129,91 +213,9 @@ Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to f
    ```
    {: codeblock}
 
-## Username formatting
-{: #username_nzcli_format}
-
-   - Use a single quote followed by double quotes `'" "'` for usernames that:
-     - Contain lowercase letters.
-     - Include special characters other than an underscore `_` or `@` symbol.
-
-      Example - Username: `SampleUser` -> `'"SampleUser"'`
-   - For all other usernames, double quotes `""` are optional.
-
-      Example - Username: `SAMPLEUSER` -> `SAMPLEUSER` or `"SAMPLEUSER"`
-
-
- **Case Sensitivity**:
-   - **DB Users**: Usernames are not case-sensitive.
-
-      Example - `sample_user` and `SAMPLE_USER` are treated the same.
-
-   - **IBMIAM Users**: Usernames are case-sensitive.
-
-      Example - `sample_user@ibm.com` and `SAMPLE_USER@ibm.com` are treated differently.
 
 On Windows, the shell strips quotes from arguments before passing them to the application. If the username contains quotes (for example, one containing lowercase letters or special characters), passing it through the command-line argument (-u `<username>`) can result in authentication failures. Linux preserves the quotes and is not affected by this behavior. To avoid authentication issues on Windows, it is recommended to use the environment variable approach when specifying a quoted username.
 {: note}
-
-## The nz syntax
-{: #nz-syntax}
-
-The `nz` tool supports execution of select NPSaaS commands and Software Support Tools. Command execution syntax depends on the command type — NPSaaS command or Software Support Tool — and whether a shortcut command was installed.
-
-Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload the `nz` tool at least every other release.
-{: note}
-
-**NPSaaS command syntax**
-{: #npsaassyntax}
-
-```sh
-nz [command] [subcommands] [options]
-```
-{: codeblock}
-
-Example:
-
-```sh
-./nz nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
-System state is 'Online'.
-```
-{: codeblock}
-
-
-**NPSaaS command shortcut syntax**
-{: #npsyntxshrtct}
-
-After running `nz install`, you can use shortcuts and omit the `nz` prefix:
-
-```sh
-[command] [subcommand] [options]
-```
-{: codeblock}
-
-Example:
-
-```sh
-./nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
-System state is 'Online'.
-```
-{: codeblock}
-
-
-**Software Support Tool syntax**
-{: #ssts}
-
-Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`.
-
-```sh
-nz [run-command] [software-support-tool] [subcommands] [options]
-```
-{: codeblock}
-
-Example:
-
-```sh
-./nz run nz_get_table_rowcount database1 table1
-```
-{: codeblock}
 
 ## Installing shortcuts with nz install
 {: #nzinstall-shortcuts}
