@@ -174,9 +174,6 @@ Example:
 
 To avoid exposing credentials in the process table, use environment variables instead of passing the `-pw` flag directly on the command line.
 
-The `nz` tool does not support interactive password prompts. If neither `-pw` nor `NZ_PASSWORD` is provided, the command fails with an authentication error.
-{: important}
-
 The following secure alternative is available:
 
 - **Environment variables**: Set `NZ_USER` and `NZ_PASSWORD` before invoking the command. Environment variables are not visible to other users through `ps` on a properly configured system.
