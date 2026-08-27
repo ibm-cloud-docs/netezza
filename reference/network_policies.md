@@ -109,46 +109,6 @@ Policies are evaluated collectively rather than in a specific order. The allowed
 
 You can find examples of creating policies in [Examples of network policies](/docs/netezza?topic=netezza-network-policies#nw-examples).
 
-### Network policies page
-{: #nw-creating-listing}
-
-On the **Network policies** page, you can add policies and view existing policies.
-
-The **Network policies** and **Private link** tabs are applicable only for Azure.
-{: note}
-
-To add network policies, you must belong to the `ADMINISTRATORS` group.
-{: note}
-
-For more information about network policies and examples, see [Network policies](/docs/netezza?topic=netezza-network-policies).
-
-#### Domain standards
-{: #nw-domain-standards}
-
-For more information about domain standards, see [Defining network policies with Classless Inter-Domain Routing (CIDR)](/docs/netezza?topic=netezza-network-policies#nw-cidr).
-
-#### Adding network policies
-{: #nw-adding}
-
-1. Go to **Administration > Network policies**.
-1. In the **Add policy** section, type your Classless Inter-Domain Routing (CIDR). The IP address must conform to the domain standards.
-1. Click **Save**.
-
-#### Viewing network policies
-{: #nw-viewing}
-
-To view existing policies, go to **Administration > Network policies > Existing policies**.
-
-#### Deleting network policies
-{: #nw-deleting}
-
-1. Go to **Administration > Network policies > Existing policies**.
-1. Select the policy that you want to delete.
-1. Click **Delete**.
-
-You can select multiple policies to delete.
-{: note}
-
 ### Examples
 {: #nw-examples}
 
