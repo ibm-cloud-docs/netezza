@@ -158,7 +158,7 @@ For more information, see [Connecting to Netezza Performance Server](/docs/netez
 {: #spending_notifs}
 
 If you have an IBM Cloud® Pay-As-You-Go or Subscription account, you can set up email spending notifications. After your account is configured, you can configure spending thresholds and choose to receive notifications when you reach 80%, 90%, and 100% of the thresholds.
-For more information, see [Setting spending notifications](/docs/account?topic=account-spending).
+For more information, see [Setting spending notifications](/docs/support?topic=support-spending).
 
 ## What's managed for me with {{site.data.keyword.netezza_short}}?
 {: #whats-managed}
@@ -183,7 +183,7 @@ In the event of a hardware or software failure, the service is automatically res
 
 - You can find pricing information one the IBM Cloud [catalog](https://cloud.ibm.com/catalog#services) page.
 
-For more information, contact [IBM Sales](https://www.ibm.com/contact).
+For more information, contact [IBM Sales](https://www.ibm.com/contact/global).
 
 ## Where can I find help for a problem that I'm having?
 {: #finding-help}
@@ -198,7 +198,7 @@ For information about posting questions on a forum or opening a support ticket, 
 
 - [IBM Cloud® support forum](https://www.ibm.com/mysupport/s/forumshome?language=en_US)
 
-- [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/datamanagement/home)
+- [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/my-community)
 
 ## How can I change a Query History user's password?
 {: #changequerypswd-help}

@@ -33,7 +33,7 @@ Learn how to provision a {{site.data.keyword.netezza_short}} instance on Azure o
 
 You need a pay-as-you-go {{site.data.keyword.cloud_notm}} account or a subscription to start the provisioning process.
 
-For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/docs/account?topic=account-account-getting-started) and [Upgrading your account](https://cloud.ibm.com/docs/account?topic=account-upgrading-account).
+For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started) and [Upgrading your account](/docs/account?topic=account-upgrading-account).
 
 ## Provisioning {{site.data.keyword.netezza_short}} instances
 {: #provisioning_instances}

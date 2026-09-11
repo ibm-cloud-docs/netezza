@@ -75,7 +75,7 @@ SOC 2 Type 2 compliance is available for Netezza Performance Server deployments 
 - [ISO 27017](https://www.iso.org/standard/43757.html)
 - [ISO 27018](https://www.iso.org/standard/76559.html)
 
-For more information, see the [IBM Compliance Support page](https://www.ibm.com/support/pages/compliance-request-tool/search/?q=IBM%20Netezza%20Performance%20Server).
+For more information, see the [IBM Compliance Support page](https://www.ibm.com/products/cloud/compliance).
 
 ## HIPAA
 {: #hipaa}

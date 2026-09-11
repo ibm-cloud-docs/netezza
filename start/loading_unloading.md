@@ -38,7 +38,7 @@ There are different ways in which you can load your data on {{site.data.keyword.
 
 1. Log in to Netezza Performance Server.
 
-   In this example, the [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=sco-nzsql-command) is used, but you can use other clients.
+   In this example, the [the `nzsql` command](https://www.ibm.com/docs/en/netezza?topic=sc-nzsql-command) is used, but you can use other clients.
    
    As explained in [Connecting to {{site.data.keyword.netezza_short}}](/docs/netezza?topic=netezza-connecting-overview), you can provision {{site.data.keyword.netezza_short}} with a private endpoint or public and private endpoints. Each endpoint type provides a set of two hostnames that you can connect to {{site.data.keyword.netezza_short}}.
 

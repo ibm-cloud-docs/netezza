@@ -672,7 +672,7 @@ IdP configuration
    `python2` and its adapter are no longer supported.
 - **Netezza client:**\
    Supports initiating, viewing, and manipulating schedules for ad hoc, pause, resume, and scaling operations. For more information, see [Pausing and resuming instances](/docs/netezza?topic=netezza-pauseresume) and [Scaling](/docs/netezza?topic=netezza-scaling-topic).
-- Introduced new maintenance job types, **Grooms** and **Genstats**, under the **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
+- Introduced new maintenance job types, **Grooms** and **Genstats**, under the **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-adm-settings#maintenance).
 - Introduced a new **Lakehouse** option for creating databases. For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
 - `CREATE TABLE` support for unpartitioned Iceberg tables.
 - `INSERT` support for Iceberg tables.
@@ -984,7 +984,7 @@ As of 20 May 2022, workload enhancements and network policy support are added.
 {: #nfmay2022}
 
 - Two new workload contours NC0 and NC3 are available for a wider range of configuration options for provisioning and scaling.
-- Network policy support is added. You can control the set of IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or be connected from by using network policies. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies) and [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
+- Network policy support is added. You can control the set of IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or be connected from by using network policies. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies) and [Network policies with the web console](/docs/netezza?topic=netezza-adm-settings&interface=ui).
 
 ### Known issues
 {: #kimay2022}
