@@ -50,8 +50,8 @@ To get started with the database assistant:
 
 1. Click the database assistant chat icon.
 
-    ![database assistant icon](images/assistant-icon.png "database assistant icon")
-    {: caption="Database assistant icon" caption-side="bottom"}
+![database assistant icon](images/assistant-icon.png "database assistant icon")
+{: caption="Database assistant icon" caption-side="bottom"}
 
 If the chatbot is not visible, go to **Settings > Additional features** and enable the **Database assistant** option.
 {: note}

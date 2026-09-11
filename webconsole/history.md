@@ -102,8 +102,8 @@ The Connection history page provides a comprehensive view of all connection requ
 
    - Time-based graph: Shows the distribution of connection attempts over time, helping you identify trends and patterns.
 
- ![Connection history image](images/Connectionhistory.png "Connection history")
- {: caption="Connection history" caption-side="bottom"}
+![Connection history image](images/Connectionhistory.png "Connection history")
+{: caption="Connection history" caption-side="bottom"}
 
 ## Automaint history
 {: #automain_hist}
@@ -112,13 +112,13 @@ The Automaint history page provides a record of the last successful scheduled au
 
 **Genstats**: This section provides a list of tables used to generate statistics, helping to improve system performance by identifying areas for optimization.
 
- ![Genstat image](images/genstat.png "Genstat")
- {: caption="Genstat" caption-side="bottom"}
+![Genstat image](images/genstat.png "Genstat")
+{: caption="Genstat" caption-side="bottom"}
 
 **Grooms**: This section displays information about the maintenance activities performed during the last scheduled automaint run, including information like:
 
 - Number of records purged.
 - List of pages that were made available or updated during the groom.
 
- ![Groom image](images/groom.png "Automaint history")
- {: caption="Automaint history" caption-side="bottom"}
+![Groom image](images/groom.png "Automaint history")
+{: caption="Automaint history" caption-side="bottom"}
