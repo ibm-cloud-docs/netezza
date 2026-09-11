@@ -39,7 +39,7 @@ Open the database assistant from the Netezza web console, and then ask it to hel
 
 The database assistant uses built-in skills and is trained on the official IBM Netezza documentation so that it can provide you with the most accurate responses.
 
-For details on the AI powering the Assistant, see the [WXO documentation](https://www.ibm.com/docs/en/watson-orchestrate).
+For details on the AI powering the Assistant, see the [WXO documentation](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base).
 
 ## Starting the database assistant
 {: #assistant-getstarted}

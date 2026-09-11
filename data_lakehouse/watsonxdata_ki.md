@@ -32,14 +32,16 @@ You might experience the following issues while using {{site.data.keyword.lakeho
 
     For more information, see [ALTER TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-alter-table-2).
 
-    **Workaround**
+    #### Workaround
+    {: #ki-workaround-1}
 
-    Refer [Dropping incompatible column types in ALTER TABLE](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=watsonxdata-known-issues-limitations#Knwnissulimit2__dl_yms_hfl_2bc)
+    Refer [Dropping incompatible column types in ALTER TABLE](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=watsonxdata-known-issues-limitations)
 
 - **INSERT** is only supported for unpartitioned tables. You will not be able to insert into partitioned iceberg tables created by other engines.
 
 - **CTAS (CREATE TABLE AS SELECT)** within a single SQL statement is not supported when the target table is an iceberg table.
 
-    **Workaround**
+    #### Workaround
+    {: #ki-workaround-2}
 
     Create the table and do the insert in separate SQL statements.

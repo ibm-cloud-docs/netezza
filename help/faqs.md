@@ -296,7 +296,7 @@ For a complete description of each of the `Query History` commands, refer to the
 ## How to check the name without using config name ALL_HIST?
 {: #example_allhist}
 
-Check your name by running below query:
+Check your name by running the following query:
 
 ```bash
  nzsql -c "SHOW HISTORY CONFIGURATION"
@@ -360,7 +360,7 @@ Within the NC-START workload contour, storage can be scaled up to 1200 GB. Howev
 {: faq}
 {: support}
 
-To scale up from the NC-START configuration, please follow the guidance provided in the documentation links below:
+To scale up from the NC-START configuration, see the following documentation links:
 To increase storage within the NC-START workload contour (currently at 400 GB), see: [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).
 To scale the workload contour from NC-START to NC0, see: [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
 
@@ -424,7 +424,7 @@ WHERE usename IN (
 {: faq}
 {: support}
 
-Global Restore alone may not be enough. Running the above update query ensures proper migration of user authentication data after restore.
+Global Restore alone may not be enough. Running the update query in the previous step ensures proper migration of user authentication data after restore.
 
 ## Is configuring LDAP on NZSaaS different from On-Premise?
 {: #conf-nzaas}

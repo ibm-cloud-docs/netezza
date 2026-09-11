@@ -40,7 +40,7 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
 {: important}
 
 ## How to use object storage
-{: #htuos}
+{: #htuos-use}
 
 ### Create a database with object storage
 {: #cadwos}

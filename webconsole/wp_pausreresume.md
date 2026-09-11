@@ -88,12 +88,12 @@ On the *Workload patterns* page, you can initiate, edit or delete your **Pause/r
    - In **Find history**, type the name of the operation.
 
 ## Auto-pausing and auto-resuming
-{: #autopnr-console}
+{: #pnr-autopnr-console}
 
 On the *Workload patterns* page, you can enable or disable your **Auto pause** operations and check their **History**.
 
 ## Enabling auto-pause
-{: #autopnr-console-enable}
+{: #pnr-autopnr-console-enable}
 
 1. Go to **Workload patterns**.
 1. Click **Pause/resume**.
@@ -102,12 +102,12 @@ On the *Workload patterns* page, you can enable or disable your **Auto pause** o
 1. Click **Confirm**.
 
 ## Disabling auto-pause
-{: #autopnr-console-disable}
+{: #pnr-autopnr-console-disable}
 
 1. Go to **Workload patterns**.
 
 ## Checking auto-pause history
-{: #autopnr-console-history}
+{: #pnr-autopnr-console-history}
 
 1. Go to **Workload patterns > History**.
 1. Depending on your requirements, perform one of the following actions:

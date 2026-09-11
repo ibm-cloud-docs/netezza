@@ -41,7 +41,7 @@ Supported platforms for the `nz` tool:
 The `nz` tool can be downloaded using the following methods. For cloud platforms, it is recommended to download from the NPS server using the command-line interface method.
 {: note}
 
-1. **Using command-line interface**
+1. Using command-line interface
 
    Run the command:
 
@@ -77,7 +77,7 @@ The `nz` tool can be downloaded using the following methods. For cloud platforms
    ```
    {: codeblock}
 
-1. **Download from Fix Central**
+1. Download from Fix Central
 
    You can download the `nzcli` from [Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7EWebSphere&product=ibm/WebSphere/IBM+Cloud+Private+for+Data+System&release=NZCLI_11.2&platform=All&function=all).
 
@@ -122,7 +122,7 @@ The `nz` tool supports execution of select NPSaaS commands and Software Support 
 Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload the `nz` tool at least every other release.
 {: note}
 
-**NPSaaS command syntax**
+### NPSaaS command syntax
 {: #npsaassyntax}
 
 ```sh
@@ -141,7 +141,7 @@ System state is 'Online'.
 Passing a password with the `-pw` flag exposes it in the operating system process table. Any user who can run process enumeration commands such as `ps -ef` inside the same container can read the credential and reuse it to authenticate to the database. Use one of the secure alternatives described in [Setting up environment variables](#supportedcommands) instead.
 {: important}
 
-**NPSaaS command shortcut syntax**
+### NPSaaS command shortcut syntax
 {: #npsyntxshrtct}
 
 After running `nz install`, you can use shortcuts and omit the `nz` prefix:
@@ -163,7 +163,7 @@ Passing a password with the `-pw` flag exposes it in the operating system proces
 {: important}
 
 
-**Software Support Tool syntax**
+### Software Support Tool syntax
 {: #ssts}
 
 Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`.

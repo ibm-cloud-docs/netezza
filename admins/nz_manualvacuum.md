@@ -38,7 +38,7 @@ The manual vacuum operation is a critical maintenance task that:
 - Performs vacuum and reindex operations on all databases
 - Restarts the NPS system (`nzstart`)
 
-The system is unavailable during this operation, which may take significant time depending on the size of your databases.
+The system is unavailable during this operation, which may take significant time depending on the number and volume of your databases.
 {: important}
 
 ## Prerequisites
