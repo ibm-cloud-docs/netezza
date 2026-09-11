@@ -34,11 +34,10 @@ Netezza Performance Server offers seamless integration with Native Cloud Object 
 5. Follow the on-screen instructions. For details, see [Setting up a cloud object storage bucket](/docs/netezza?topic=netezza-cloudobjectstorage).
 6. Once the bucket is configured, the button will change to **Enable Object Storage**.
 
-{: important}
-
 - During the enabling process, all console operations will be suspended. You will not be able to navigate or perform any other actions.
 - After configuring the bucket, wait for sometime before enabling object storage. This delay ensures proper synchronization between Netezza processes.
 - Once enabled, object storage cannot be disabled.
+{: important}
 
 ## How to use object storage
 {: #htuos}

@@ -93,10 +93,9 @@ To access the *Monitoring profile* page, go to **Administration > Monitoring pro
 On the *Maintenance* page, you can perform on-demand maintenance operations and schedule recurring database maintenance. The page provides the following operations:
 
 - **Manual vacuum** — a data catalog operation that performs deep maintenance on system catalogs.
-
 - **Schedule database maintenance** — schedule recurring Grooms and Genstats maintenance windows.
 
-{: #maintenance-list-end}
+
 
 ### Manual vacuum
 {: #manual-vacuum}

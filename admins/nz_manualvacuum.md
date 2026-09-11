@@ -146,11 +146,11 @@ The manual vacuum operation generates:
 - **Log file**: `/nz/manual_vacuum/nz_manual_vacuum.<timestamp>.log`
 - **Backup file**: `/nz/manual_vacuum/nz_manual_vacuum.<timestamp>.tar.gz`
 - **Console output**: Detailed progress information including:
-  - Operation handle and timestamp
-  - Command execution status
-  - Timing information for each database
-  - Size comparison (before and after)
-  - Completion status
+    - Operation handle and timestamp
+    - Command execution status
+    - Timing information for each database
+    - Size comparison (before and after)
+    - Completion status
 
 ### Sample output
 {: #manualvacuum-sample-output}

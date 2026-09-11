@@ -46,6 +46,7 @@ subcollection: netezza
 
 #### IAM Role-Based Access
 {: #awss3-iam-role-access}
+
     - Check the **Use IAM Role** checkbox on the configuration form.
     - **For SaaS/Fully Managed systems only:**
       - After checking the IAM option, additional instructions will be displayed.
