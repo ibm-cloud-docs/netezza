@@ -119,7 +119,7 @@ SELECT DATABASE, STORAGETYPE FROM _v_database;
 
 **Example output:**
 
-```
+```screen
  DATABASE |  STORAGETYPE
 ----------+----------------
  DB1      | BLOCK

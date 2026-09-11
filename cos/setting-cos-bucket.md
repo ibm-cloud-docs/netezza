@@ -37,14 +37,15 @@ subcollection: netezza
 2. Navigate to Settings → Object Storage.
 3. Click `Configure Object Storage` Bucket.
 
-    ### AWS S3 configuration options:
-    {: #awss3conf_options}
+### AWS S3 configuration options:
+{: #awss3conf_options}
 
-    **Credential-Based Access (Default)**
+**Credential-Based Access (Default)**
     - Provide your AWS access credentials (`Access Key ID` and `Secret Access Key`).
     - Supported for both Fully Managed and SaaS systems.
 
-    **IAM Role-Based Access**
+#### IAM Role-Based Access
+{: #awss3-iam-role-access}
     - Check the **Use IAM Role** checkbox on the configuration form.
     - **For SaaS/Fully Managed systems only:**
       - After checking the IAM option, additional instructions will be displayed.
@@ -61,8 +62,8 @@ subcollection: netezza
       Azure Blob Storage continues to require credential‑based access and does not support IAM role‑based authentication.
       {: note}
 
-    ### Azure Blob storage configuration:
-    {: #azureblobstor_conf}
+### Azure Blob storage configuration:
+{: #azureblobstor_conf}
 
     - Provide your Azure storage account credentials.
     - Currently supports credential-based access only.
@@ -94,3 +95,4 @@ Once object storage is enabled, it **cannot be disabled**.
 | AWS S3              | BYOC              | ✅ Supported      | ✅ Supported from 11.3.1.0 release onwards, need to configuration IAM access bucket manually from backend for BYOC private cluster.  |
 | Azure Blob Storage  | All               | ✅ Supported      | Coming Soon   |
 | S3-Compatible       | All               | ✅ Supported      | Varies        |
+{: caption="Configuration summary" caption-side="bottom"}

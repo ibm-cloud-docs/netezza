@@ -219,7 +219,8 @@ On Windows, the shell strips quotes from arguments before passing them to the ap
 
 You can create shortcuts for the following commonly used commands by running the `nz install` command. As a result, for example, instead of running `nz nzstate`, you can issue `nzstate` directly.
 
-**nz install syntax**
+### nz install syntax
+{: #nzinstall-syntax}
 
 ```sh
 nz install [--dry-run] [--dest DESTINATION-DIRECTORY] [--force]
@@ -231,6 +232,7 @@ nz install [--dry-run] [--dest DESTINATION-DIRECTORY] [--force]
 | `--dry-run` | Displays the symlinks that will be created without creating them. |
 | `--dest` | Directory where the links are installed. |
 | `--force` | Overwrites a pre-existing link. |
+{: caption="nz install options" caption-side="bottom"}
 
 Example:
 
@@ -299,6 +301,7 @@ When you take a backup of your database by using `nzbatchbnr`, you must keep the
 |---------|-------------|
 | `auto-pr` | List and show details of the Auto Pause/Resume mechanism. |
 | `manualvacuum` | Execute a manual vacuum operation (requires system restart). |
+{: caption="nz sub-commands" caption-side="bottom"}
 
 ### High-level nz commands
 {: #high_lev_cmds}
@@ -307,6 +310,7 @@ When you take a backup of your database by using `nzbatchbnr`, you must keep the
 |---------|-------------|
 | `bnr` | Backup and restore operations. |
 | `nzprogress` | Show all plans currently in progress. |
+{: caption="High-level nz commands" caption-side="bottom"}
 
 ### Run commands
 {: #other_cmds}
@@ -320,6 +324,7 @@ These commands allow running various `nz` commands on the target system:
 | `run` | Run any allowed nz command synchronously (passes `-u`, `-pw`). |
 | `run-async` | Run any allowed nz command asynchronously. |
 | `run-show-progress` | Run any allowed nz command showing immediate progress. |
+{: caption="Run commands" caption-side="bottom"}
 
 ### Permission and scaling commands
 {: #permi_cmds}
@@ -328,6 +333,7 @@ These commands allow running various `nz` commands on the target system:
 |---------|-------------|
 | `perms` | Get and set permissions. |
 | `scale` | Scale NPS compute and/or storage. |
+{: caption="Permission and scaling commands" caption-side="bottom"}
 
 ### Setup and miscellaneous commands
 {: #setup_misc_cmds}
@@ -338,6 +344,7 @@ These commands allow running various `nz` commands on the target system:
 | `version` | Show the current version of the NZ client. |
 | `install` | Install symlinks for supported NZ client commands. |
 | `awsiam` | AWS IAM authenticator setup. |
+{: caption="Setup and miscellaneous commands" caption-side="bottom"}
 
 ### Direct nz host commands
 {: #nz_host_calls}
@@ -354,6 +361,7 @@ These commands allow running various `nz` commands on the target system:
 | `nzrev` | Call the nzrev tool. |
 | `nzstats` | Call the nzstats tool. |
 | `nzsession` | Call the nzsession tool. |
+{: caption="Direct nz host commands" caption-side="bottom"}
 
 ### Software Support Tools scripts
 {: #sst-scripts-ref}

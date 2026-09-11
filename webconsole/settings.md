@@ -96,6 +96,8 @@ On the *Maintenance* page, you can perform on-demand maintenance operations and 
 
 - **Schedule database maintenance** — schedule recurring Grooms and Genstats maintenance windows.
 
+{: #maintenance-list-end}
+
 ### Manual vacuum
 {: #manual-vacuum}
 

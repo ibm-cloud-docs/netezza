@@ -71,6 +71,7 @@ nz manualvacuum [options]
 | `-force` | Skip the confirmation prompt and proceed with the operation immediately |
 | `-format <FORMAT>` | Output format for the command results |
 | `-host <HOST>` | The URL of the API server. Can be set using the `NZ_HOST` environment variable |
+{: caption="nz manualvacuum options" caption-side="bottom"}
 
 ## Examples
 {: #manualvacuum-examples}
@@ -85,7 +86,7 @@ nz manualvacuum [options]
 
 The command displays a warning and prompts for confirmation:
 
-```
+```screen
   WARNING: Manual Vacuum Operation
 =====================================
 This operation will:
@@ -154,7 +155,7 @@ The manual vacuum operation generates:
 ### Sample output
 {: #manualvacuum-sample-output}
 
-```
+```screen
 Manual vacuum completed successfully
 
 Output:

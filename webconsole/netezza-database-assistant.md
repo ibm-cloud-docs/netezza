@@ -51,6 +51,7 @@ To get started with the database assistant:
 1. Click the database assistant chat icon.
 
     ![database assistant icon](images/assistant-icon.png "database assistant icon")
+    {: caption="Database assistant icon" caption-side="bottom"}
 
 If the chatbot is not visible, go to **Settings > Additional features** and enable the **Database assistant** option.
 {: note}
@@ -93,6 +94,7 @@ Depending on the database workload, the database assistant might take some time 
 | 24 | All skewed tables                      | Tables with skewed distribution of data                                                          |
 | 25 | Most/Least used dataslice              | What is the most used dataslice? What is the least used dataslice?             |
 | 26 | User permissions                       | Show user permissions across all databases                                      |
+{: caption="Database assistant actions" caption-side="bottom"}
 
 
 

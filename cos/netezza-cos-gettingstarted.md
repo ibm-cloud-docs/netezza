@@ -28,6 +28,7 @@ This guide outlines how to configure, manage, and optimize the Cloud Object Stor
 {: #pre-requites-sysreq}
 
 ## Supported Platforms
+{: #cos-supported-platforms}
 
 IBM Netezza Performance Server (NPS) on:
 
@@ -35,10 +36,12 @@ IBM Netezza Performance Server (NPS) on:
 - BYOC/CVPC (Bring Your Own Cloud / Customer-Provided VPC)
 
 ### Minimum Version
+{: #cos-minimum-version}
 
 - COS support requires NPS version 11.3.0.3-IF1.
 
 ### Cloud Providers
+{: #cos-cloud-providers}
 
 - **AWS S3** (Standard bucket type required)
 - **Azure Blob Storage** (support planned)

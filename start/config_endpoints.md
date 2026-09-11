@@ -107,7 +107,7 @@ endpoint.
 
 8. Go to **VPC->Endpoints** once the endpoint is created and select the endpoint to view its status.
 
-   Once the endpoint status shows `Available`, in the **endpoint details** page, you will see the DNS names assigned to each endpoint you created. There will be one DNS name created which can be used to access the service across all subnets and one for each subnet you added in *Step 5*. The dns name specific to each subnet will have the subnet name in sub-domain, like, `eu-central-1a.vpce.amazonaws.com` for the subnet in availability zone A in **eu-central-1**. We recommend use the first dns record, which can be used to access the service across all subnets that have been added.
+   Once the endpoint status shows `Available`, in the **endpoint details** page, you will see the DNS names assigned to each endpoint you created. There will be one DNS name created which can be used to access the service across all subnets and one for each subnet you added in _Step 5_. The dns name specific to each subnet will have the subnet name in sub-domain, like, `eu-central-1a.vpce.amazonaws.com` for the subnet in availability zone A in **eu-central-1**. We recommend use the first dns record, which can be used to access the service across all subnets that have been added.
    {: note}
 
    You will have two DNS names that you will use to connect to the service created.

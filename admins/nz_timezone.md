@@ -25,16 +25,19 @@ subcollection: netezza
 {: #timezn_mngmnt}
 
 ## Overview
+{: #timezone-overview}
 
 The `nz timezone` command is used to list, view, and set timezone configurations on NPS (Netezza Performance Server) hosts. This command provides a convenient way to manage timezone settings through the NPS API.
 
 ## Syntax
+{: #timezone-syntax}
 
 ```bash
 nz timezone [sub-command] [options]
 ```
 
 ## Required Options
+{: #timezone-required-options}
 
 The following options are **required** for all operations:
 
@@ -43,16 +46,20 @@ The following options are **required** for all operations:
 | `-apiserver <APISERVER>` | `APISERVER_URL` | The URL of the API server |
 | `-u <USER>` | `NZ_USER` | NPS username for authentication |
 | `-pw <PASSWORD>` | `NZ_PASSWORD` | NPS password for authentication |
+{: caption="Required options for nz timezone" caption-side="bottom"}
 
 
 ## Optional Options
+{: #timezone-optional-options}
 
 | Option | Environment Variable | Description |
 |--------|---------------------|-------------|
 | `-format <FORMAT>` | `FORMAT` | Specify the output format (e.g., JSON, table, etc.) |
 | `-host <HOST>` | `NZ_HOST` | The URL of the NPS host (alternative to apiserver) |
+{: caption="Optional options for nz timezone" caption-side="bottom"}
 
 ## Getting help
+{: #timezone-getting-help}
 
 To display the help information for the timezone command:
 
@@ -61,8 +68,10 @@ nz timezone -help
 ```
 
 ## Sub-Commands
+{: #timezone-sub-commands}
 
 ### 1. `ls` - List All Possible Timezone Values
+{: #timezone-ls}
 
 Lists all available timezone values that can be set on the NPS host.
 
@@ -93,6 +102,7 @@ nz timezone ls
 
 
 ### 2. `set` - Set Timezone
+{: #timezone-set}
 
 Sets a new timezone on the NPS host.
 
@@ -109,6 +119,7 @@ Message:success
 ```
 
 ### 3. `show` - Show Current Timezone
+{: #timezone-show}
 
 Displays the currently configured timezone on the NPS host.
 

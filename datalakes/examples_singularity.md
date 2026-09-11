@@ -167,7 +167,7 @@ The *parquet* column names are case-insensitive unless it introduces a collision
 
 If you encounter the following error during lakehouse queries:
 
-```
+```screen
 AWS Error NETWORK_CONNECTION during HeadObject operation: curlCode: 28, Timeout was reached
 ```
 {: screen}
