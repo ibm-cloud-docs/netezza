@@ -51,6 +51,14 @@ INZA 11.3.7 support
 
 - Fixed an issue in INZA where UDX DDL backup files were removed before dependency restoration completed, which could cause loss of user objects during an installation retry. Backup files are now retained until restoration succeeds.
 
+- The maximum number of supported administrator privileges has been increased to accommodate future privilege additions. Previously, the available privilege space was exhausted as new administrator privileges were introduced, which could lead to incorrect privilege processing in certain scenarios. This enhancement removes that limitation, ensuring reliable privilege management while maintaining compatibility with existing privilege management commands.
+
+
+### Known issues
+{: #kisep2026}
+
+OCR text extraction language support on AWS BYOC Private instances
+:   OCR text extraction for languages other than English is not supported on AWS BYOC Private instances. Only English language text extraction is functional for the **Extract text from image** operation.
 
 ### Components
 {: #compsep2026}
