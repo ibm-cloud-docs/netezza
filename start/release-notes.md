@@ -41,7 +41,7 @@ UBI 9 base image upgrade
 
 INZA 11.3.7 support
 
-:   INZA has been upgraded to version 11.3.7. For more information, link will be updated later.   
+:   INZA has been upgraded to version 11.3.7. For more information, see [Netezza Performance Server Analytics 11.3.7 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1137-release-notes){: external}.  
 
 ### Fixes
 {: #fixessep2026}
