@@ -32,13 +32,12 @@ subcollection: netezza
 {: #nfsep2026}
 
 SDN to OVN network policy migration
-:   {{site.data.keyword.netezza_short}} has migrated its underlying network policy enforcement layer from Software-Defined Networking (SDN) based on Kubernetes `NetworkPolicy` objects to Open Virtual Network (OVN). This infrastructure change improves the scalability, consistency, and reliability of ingress traffic control for both Azure and AWS deployments. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies).
+
+:   {{site.data.keyword.netezza_short}} has migrated its underlying network policy enforcement layer from Software-Defined Networking (SDN) based on Kubernetes `NetworkPolicy` objects to Open Virtual Network (OVN). This infrastructure change improves the scalability, consistency, and reliability of ingress traffic control for  Azure deployments. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies).
 
 UBI 9 base image upgrade
 
-:   The Host and SPU container images for {{site.data.keyword.netezza_short}} are now based on Red Hat Universal Base Image (UBI) 9 (RHEL 9.8). Previously based on UBI 8, this upgrade eliminates security vulnerabilities that could not be remediated in UBI 8 and were blocking PSIRT approvals. The upgrade applies to all deployment types: Fully Managed (SaaS) and Bring Your Own Cloud (BYOC) on both AWS and Azure.
-
-    This is an infrastructure-level change. No action is required from users or administrators. Existing deployments are migrated automatically as part of the 11.3.1.4 upgrade.
+:   The Host and SPU container images for {{site.data.keyword.netezza_short}} are now based on Red Hat Universal Base Image (UBI) 9 (RHEL 9.8) and applies to all deployment types: Fully Managed (SaaS) and Bring Your Own Cloud (BYOC) on both AWS and Azure. This is an infrastructure-level change. No action is required from users or administrators. Existing deployments are migrated automatically as part of the 11.3.1.4 upgrade.
 
 INZA 11.3.7 support
 
