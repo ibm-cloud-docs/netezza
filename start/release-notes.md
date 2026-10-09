@@ -46,11 +46,11 @@ INZA 11.3.7 support
 ### Fixes
 {: #fixessep2026}
 
-- Backup operations to IAM role-based S3 buckets were failing with an `AccessDenied` error on AWS BYOC public and private instances. The S3 connector was not detecting IRSA/EKS Web Identity credentials and fell back to the EC2 instance profile, which lacked the required `s3:PutObject` permission. The AWS SDK for C++ has been upgraded to v1.11.866, adding automatic IRSA/EKS Web Identity credential detection. Backup and restore operations using IAM role-based buckets now work correctly on all AWS BYOC deployment types.
+- Fixed an `AccessDenied` error that caused backup and restore operations to fail on IAM role-based S3 buckets for AWS BYOC public and private instances. Backup and restore operations using IAM role-based buckets now work correctly on all AWS BYOC deployment types.
 
-- Fixed an issue in INZA where UDX DDL backup files were removed before dependency restoration completed, which could cause loss of user objects during an installation retry. Backup files are now retained until restoration succeeds.
+- Fixed an issue in INZA where UDX DDL backup files could be removed before dependency restoration completed. Backup files are now retained until restoration succeeds.
 
-- The maximum number of supported administrator privileges has been increased to accommodate future privilege additions. Previously, the available privilege space was exhausted as new administrator privileges were introduced, which could lead to incorrect privilege processing in certain scenarios. This enhancement removes that limitation, ensuring reliable privilege management while maintaining compatibility with existing privilege management commands.
+- Increased the maximum number of supported administrator privileges to ensure reliable privilege management as new privileges are introduced.
 
 
 ### Known issues
