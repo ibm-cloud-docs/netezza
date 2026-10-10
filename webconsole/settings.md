@@ -60,7 +60,6 @@ For more information about domain standards, see [Defining network policies with
 1. Go to **Administration > Network policies**.
 1. In the *Add policy* section, type your Classless Inter-Domain Routing (CIDR) or hostname.
    The IP address must conform to the domain standards.
-1. Select whether the policy is `Allowed` or `Blocked`.
 1. Click **Save**.
 
 ### Viewing network policies
@@ -94,8 +93,9 @@ To access the *Monitoring profile* page, go to **Administration > Monitoring pro
 On the *Maintenance* page, you can perform on-demand maintenance operations and schedule recurring database maintenance. The page provides the following operations:
 
 - **Manual vacuum** — a data catalog operation that performs deep maintenance on system catalogs.
-
 - **Schedule database maintenance** — schedule recurring Grooms and Genstats maintenance windows.
+
+
 
 ### Manual vacuum
 {: #manual-vacuum}

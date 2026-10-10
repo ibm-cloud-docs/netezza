@@ -158,7 +158,7 @@ For more information, see [Connecting to Netezza Performance Server](/docs/netez
 {: #spending_notifs}
 
 If you have an IBM Cloud® Pay-As-You-Go or Subscription account, you can set up email spending notifications. After your account is configured, you can configure spending thresholds and choose to receive notifications when you reach 80%, 90%, and 100% of the thresholds.
-For more information, see [Setting spending notifications](/docs/account?topic=account-spending).
+For more information, see [Setting spending notifications](/docs/support?topic=support-spending).
 
 ## What's managed for me with {{site.data.keyword.netezza_short}}?
 {: #whats-managed}
@@ -183,7 +183,7 @@ In the event of a hardware or software failure, the service is automatically res
 
 - You can find pricing information one the IBM Cloud [catalog](https://cloud.ibm.com/catalog#services) page.
 
-For more information, contact [IBM Sales](https://www.ibm.com/contact).
+For more information, contact [IBM Sales](https://www.ibm.com/contact/global).
 
 ## Where can I find help for a problem that I'm having?
 {: #finding-help}
@@ -198,7 +198,7 @@ For information about posting questions on a forum or opening a support ticket, 
 
 - [IBM Cloud® support forum](https://www.ibm.com/mysupport/s/forumshome?language=en_US)
 
-- [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/datamanagement/home)
+- [IBM Hybrid Data Management Community](https://community.ibm.com/community/user/my-community)
 
 ## How can I change a Query History user's password?
 {: #changequerypswd-help}
@@ -296,7 +296,7 @@ For a complete description of each of the `Query History` commands, refer to the
 ## How to check the name without using config name ALL_HIST?
 {: #example_allhist}
 
-Check your name by running below query:
+Check your name by running the following query:
 
 ```bash
  nzsql -c "SHOW HISTORY CONFIGURATION"
@@ -360,7 +360,7 @@ Within the NC-START workload contour, storage can be scaled up to 1200 GB. Howev
 {: faq}
 {: support}
 
-To scale up from the NC-START configuration, please follow the guidance provided in the documentation links below:
+To scale up from the NC-START configuration, see the following documentation links:
 To increase storage within the NC-START workload contour (currently at 400 GB), see: [NC-START Storage Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingstorage-console-ondemand).
 To scale the workload contour from NC-START to NC0, see: [NC-START to NC0 Contour Scaling Guide](https://cloud.ibm.com/docs/netezza?topic=netezza-scaling-console&locale=en#ncstart-scalingcontour-console-ondemand).
 
@@ -424,7 +424,7 @@ WHERE usename IN (
 {: faq}
 {: support}
 
-Global Restore alone may not be enough. Running the above update query ensures proper migration of user authentication data after restore.
+Global Restore alone may not be enough. Running the update query in the previous step ensures proper migration of user authentication data after restore.
 
 ## Is configuring LDAP on NZSaaS different from On-Premise?
 {: #conf-nzaas}

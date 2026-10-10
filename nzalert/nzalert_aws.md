@@ -97,6 +97,8 @@ AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
     |:------------------------|:---------|
     | EXAMPLE_EMAIL_NM_1      | EMAIL    |
     | EXAMPLE_AWS_SNS_NM_1    | AWS_SNS  |
+    {: caption="Notification methods" caption-side="bottom"}
+
 
 2. Identify the method created using the SNS ARN.
 3. In `nzsql`, run the following:
@@ -108,6 +110,8 @@ AWS_TOPIC_ARN '<YOUR_SNS_TOPIC_ARN>';
     | NAME                  | TYPE     | AWS_TOPIC_ARN                                  | AWS_ROLE_ARN                                  |
     |:---------------------|:---------|:----------------------------------------------|:----------------------------------------------|
     | EXAMPLE_AWS_SNS_NM_1 | AWS_SNS  | `arn:aws:sns:<region>:<account-id>:<topic-name>` | `arn:aws:iam::<account-id>:role/<role-name>`     |
+    {: caption="Notification method details" caption-side="bottom"}
+
 
 4. Copy the **AWS_ROLE_ARN** from the output and save it for later use.
 

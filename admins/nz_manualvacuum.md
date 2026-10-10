@@ -38,7 +38,7 @@ The manual vacuum operation is a critical maintenance task that:
 - Performs vacuum and reindex operations on all databases
 - Restarts the NPS system (`nzstart`)
 
-The system is unavailable during this operation, which may take significant time depending on the size of your databases.
+The system is unavailable during this operation, which may take significant time depending on the number and volume of your databases.
 {: important}
 
 ## Prerequisites
@@ -71,6 +71,7 @@ nz manualvacuum [options]
 | `-force` | Skip the confirmation prompt and proceed with the operation immediately |
 | `-format <FORMAT>` | Output format for the command results |
 | `-host <HOST>` | The URL of the API server. Can be set using the `NZ_HOST` environment variable |
+{: caption="nz manualvacuum options" caption-side="bottom"}
 
 ## Examples
 {: #manualvacuum-examples}
@@ -85,7 +86,7 @@ nz manualvacuum [options]
 
 The command displays a warning and prompts for confirmation:
 
-```
+```screen
   WARNING: Manual Vacuum Operation
 =====================================
 This operation will:
@@ -145,16 +146,16 @@ The manual vacuum operation generates:
 - **Log file**: `/nz/manual_vacuum/nz_manual_vacuum.<timestamp>.log`
 - **Backup file**: `/nz/manual_vacuum/nz_manual_vacuum.<timestamp>.tar.gz`
 - **Console output**: Detailed progress information including:
-  - Operation handle and timestamp
-  - Command execution status
-  - Timing information for each database
-  - Size comparison (before and after)
-  - Completion status
+    - Operation handle and timestamp
+    - Command execution status
+    - Timing information for each database
+    - Size comparison (before and after)
+    - Completion status
 
 ### Sample output
 {: #manualvacuum-sample-output}
 
-```
+```screen
 Manual vacuum completed successfully
 
 Output:

@@ -30,7 +30,7 @@ For more information, see:
 - [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
 - [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
 - [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
-- [DESCRIBE](https://www.ibm.com/docs/en/netezza?topic=reference-describe)
+- [DESCRIBE](https://www.ibm.com/docs/en/netezza?topic=reference-describe-table)
 - [SELECT QUERIES](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2)
 - [CTAS](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-as-2)
 - [DROP SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-drop-schema-2)

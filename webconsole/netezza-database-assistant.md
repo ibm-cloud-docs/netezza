@@ -39,7 +39,7 @@ Open the database assistant from the Netezza web console, and then ask it to hel
 
 The database assistant uses built-in skills and is trained on the official IBM Netezza documentation so that it can provide you with the most accurate responses.
 
-For details on the AI powering the Assistant, see the [WXO documentation](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=experience-faqs#are-span-translatenoibm-watsonx-orchestratespan-and-the-skill-sets-secure).
+For details on the AI powering the Assistant, see the [WXO documentation](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base).
 
 ## Starting the database assistant
 {: #assistant-getstarted}
@@ -50,7 +50,8 @@ To get started with the database assistant:
 
 1. Click the database assistant chat icon.
 
-    ![database assistant icon](images/assistant-icon.png "database assistant icon")
+![database assistant icon](images/assistant-icon.png "database assistant icon")
+{: caption="Database assistant icon" caption-side="bottom"}
 
 If the chatbot is not visible, go to **Settings > Additional features** and enable the **Database assistant** option.
 {: note}
@@ -93,6 +94,7 @@ Depending on the database workload, the database assistant might take some time 
 | 24 | All skewed tables                      | Tables with skewed distribution of data                                                          |
 | 25 | Most/Least used dataslice              | What is the most used dataslice? What is the least used dataslice?             |
 | 26 | User permissions                       | Show user permissions across all databases                                      |
+{: caption="Database assistant actions" caption-side="bottom"}
 
 
 

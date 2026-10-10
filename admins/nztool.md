@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-08"
+lastupdated: "2026-08-27"
 
 keywords: nztool
 
@@ -41,7 +41,7 @@ Supported platforms for the `nz` tool:
 The `nz` tool can be downloaded using the following methods. For cloud platforms, it is recommended to download from the NPS server using the command-line interface method.
 {: note}
 
-1. **Using command-line interface**
+1. Using command-line interface
 
    Run the command:
 
@@ -77,12 +77,120 @@ The `nz` tool can be downloaded using the following methods. For cloud platforms
    ```
    {: codeblock}
 
-1. **Download from Fix Central**
+1. Download from Fix Central
 
    You can download the `nzcli` from [Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7EWebSphere&product=ibm/WebSphere/IBM+Cloud+Private+for+Data+System&release=NZCLI_11.2&platform=All&function=all).
 
+## Username formatting
+{: #username_nzcli_format}
+
+   - Use a single quote followed by double quotes `'" "'` for usernames that:
+     - Contain lowercase letters.
+     - Include special characters other than an underscore `_` or `@` symbol.
+
+      Example - Username: `SampleUser` -> `'"SampleUser"'`
+   - For all other usernames, double quotes `""` are optional.
+
+      Example - Username: `SAMPLEUSER` -> `SAMPLEUSER` or `"SAMPLEUSER"`
+
+
+ **Case Sensitivity**:
+   - **DB Users**: Usernames are not case-sensitive.
+
+      Example - `sample_user` and `SAMPLE_USER` are treated the same.
+
+   - **IBMIAM Users**: Usernames are case-sensitive.
+
+      Example - `sample_user@ibm.com` and `SAMPLE_USER@ibm.com` are treated differently.
+- From Windows (PowerShell), run:
+
+   ```sh
+   $env:APISERVER_URL="<api-server-url>"
+   $env:NZ_USER="<nps-admin-user>"
+   $env:NZ_PASSWORD="<nps-admin-user-password>"
+   ```
+   {: codeblock}
+
+On Windows, the shell strips quotes from command-line arguments before passing them to the application. If you are using an OIDC username that contains lowercase letters or special characters (for example, `user@example.com`), passing it through the `-u` argument causes the quotes to be removed and the username to be uppercased, which leads to an `Authentication failed` error. Linux preserves the quotes and is unaffected. If you encounter this issue on Windows, set the credentials by using environment variables instead of passing them through command-line arguments.
+{: note}
+
+## The nz syntax
+{: #nz-syntax}
+
+The `nz` tool supports execution of select NPSaaS commands and Software Support Tools. Command execution syntax depends on the command type — NPSaaS command or Software Support Tool — and whether a shortcut command was installed.
+
+Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload the `nz` tool at least every other release.
+{: note}
+
+### NPSaaS command syntax
+{: #npsaassyntax}
+
+```sh
+nz [command] [subcommands] [options]
+```
+{: codeblock}
+
+Example:
+
+```sh
+./nz nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+System state is 'Online'.
+```
+{: codeblock}
+
+Passing a password with the `-pw` flag exposes it in the operating system process table. Any user who can run process enumeration commands such as `ps -ef` inside the same container can read the credential and reuse it to authenticate to the database. Use one of the secure alternatives described in [Setting up environment variables](#supportedcommands) instead.
+{: important}
+
+### NPSaaS command shortcut syntax
+{: #npsyntxshrtct}
+
+After running `nz install`, you can use shortcuts and omit the `nz` prefix:
+
+```sh
+[command] [subcommand] [options]
+```
+{: codeblock}
+
+Example:
+
+```sh
+./nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
+System state is 'Online'.
+```
+{: codeblock}
+
+Passing a password with the `-pw` flag exposes it in the operating system process table. Any user who can run process enumeration commands such as `ps -ef` inside the same container can read the credential and reuse it to authenticate to the database. Use one of the secure alternatives described in [Setting up environment variables](#supportedcommands) instead.
+{: important}
+
+
+### Software Support Tool syntax
+{: #ssts}
+
+Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`.
+
+```sh
+nz [run-command] [software-support-tool] [subcommands] [options]
+```
+{: codeblock}
+
+Example:
+
+```sh
+./nz run nz_get_table_rowcount database1 table1
+```
+{: codeblock}
+
 ## Setting up environment variables
 {: #supportedcommands}
+
+To avoid exposing credentials in the process table, use environment variables instead of passing the `-pw` flag directly on the command line.
+
+The following secure alternative is available:
+
+- **Environment variables**: Set `NZ_USER` and `NZ_PASSWORD` before invoking the command. Environment variables are not visible to other users through `ps` on a properly configured system.
+
+If `-pw` must be passed as a command-line argument for legacy automation, restrict container access to the minimum set of trusted users and rotate any exposed credentials immediately.
+{: note}
 
 Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to forgo specifying the `-apiserver`, `-u`, and `-pw` options when you are running `nz` commands.
 
@@ -104,77 +212,26 @@ Set the `APISERVER_URL`, `NZ_USER`, and `NZ_PASSWORD` environment variables to f
    ```
    {: codeblock}
 
-On Windows, the shell strips quotes from arguments before passing them to the application. If you are using an OIDC username that requires quoting (for example, one that contains lowercase letters or special characters), passing it through the `-u` command-line argument can cause authentication failures. Linux preserves the quotes and is not affected. If you encounter authentication issues on Windows with a quoted OIDC username, use the environment variable approach instead.
+- From Windows (PowerShell), run:
+
+   ```sh
+   $env:APISERVER_URL="<api-server-url>"
+   $env:NZ_USER="<nps-admin-user>"
+   $env:NZ_PASSWORD="<nps-admin-user-password>"
+   ```
+   {: codeblock}
+
+
+On Windows, the shell strips quotes from arguments before passing them to the application. If the username contains quotes (for example, one containing lowercase letters or special characters), passing it through the command-line argument (-u `<username>`) can result in authentication failures. Linux preserves the quotes and is not affected by this behavior. To avoid authentication issues on Windows, it is recommended to use the environment variable approach when specifying a quoted username.
 {: note}
-
-## The nz syntax
-{: #nz-syntax}
-
-The `nz` tool supports execution of select NPSaaS commands and Software Support Tools. Command execution syntax depends on the command type — NPSaaS command or Software Support Tool — and whether a shortcut command was installed.
-
-Beginning with 11.2.2.10, the `APISERVER_URL` must be used instead of the host argument. To ensure optimal performance, you should redownload the `nz` tool at least every other release.
-{: note}
-
-**NPSaaS command syntax**
-{: #npsaassyntax}
-
-```sh
-nz [command] [subcommands] [options]
-```
-{: codeblock}
-
-Example:
-
-```sh
-./nz nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
-System state is 'Online'.
-```
-{: codeblock}
-
-
-**NPSaaS command shortcut syntax**
-{: #npsyntxshrtct}
-
-After running `nz install`, you can use shortcuts and omit the `nz` prefix:
-
-```sh
-[command] [subcommand] [options]
-```
-{: codeblock}
-
-Example:
-
-```sh
-./nzstate -apiserver <apiserver-url> -u <nps-admin-user> -pw <nps-admin-user-password>
-System state is 'Online'.
-```
-{: codeblock}
-
-
-**Software Support Tool syntax**
-{: #ssts}
-
-Execution of a Software Support Tool requires a run command: `run`, `run-async`, `run-without-creds`, or `run-show-progress`.
-
-```sh
-nz [run-command] [software-support-tool] [subcommands] [options]
-```
-{: codeblock}
-
-Example:
-
-```sh
-./nz run nz_get_table_rowcount database1 table1
-```
-{: codeblock}
-
 
 ## Installing shortcuts with nz install
 {: #nzinstall-shortcuts}
 
 You can create shortcuts for the following commonly used commands by running the `nz install` command. As a result, for example, instead of running `nz nzstate`, you can issue `nzstate` directly.
 
-**nz install syntax**
+### nz install syntax
+{: #nzinstall-syntax}
 
 ```sh
 nz install [--dry-run] [--dest DESTINATION-DIRECTORY] [--force]
@@ -186,6 +243,7 @@ nz install [--dry-run] [--dest DESTINATION-DIRECTORY] [--force]
 | `--dry-run` | Displays the symlinks that will be created without creating them. |
 | `--dest` | Directory where the links are installed. |
 | `--force` | Overwrites a pre-existing link. |
+{: caption="nz install options" caption-side="bottom"}
 
 Example:
 
@@ -219,28 +277,6 @@ nzstats
 nzsystem
 ```
 {: screen}
-
-## Username formatting
-{: #username_nzcli_format}
-
-   - Use a single quote followed by double quotes `'" "'` for usernames that:
-     - Contain lowercase letters.
-     - Include special characters other than an underscore `_` or `@` symbol.
-
-      Example - Username: `SampleUser` -> `'"SampleUser"'`
-   - For all other usernames, double quotes `""` are optional.
-
-      Example - Username: `SAMPLEUSER` -> `SAMPLEUSER` or `"SAMPLEUSER"`
-
-
- **Case Sensitivity**:
-   - **DB Users**: Usernames are not case-sensitive.
-
-      Example - `sample_user` and `SAMPLE_USER` are treated the same.
-
-   - **IBMIAM Users**: Usernames are case-sensitive.
-
-      Example - `sample_user@ibm.com` and `SAMPLE_USER@ibm.com` are treated differently.
 
 ## nz command reference
 {: #supported-cmds}
@@ -276,6 +312,7 @@ When you take a backup of your database by using `nzbatchbnr`, you must keep the
 |---------|-------------|
 | `auto-pr` | List and show details of the Auto Pause/Resume mechanism. |
 | `manualvacuum` | Execute a manual vacuum operation (requires system restart). |
+{: caption="nz sub-commands" caption-side="bottom"}
 
 ### High-level nz commands
 {: #high_lev_cmds}
@@ -284,6 +321,7 @@ When you take a backup of your database by using `nzbatchbnr`, you must keep the
 |---------|-------------|
 | `bnr` | Backup and restore operations. |
 | `nzprogress` | Show all plans currently in progress. |
+{: caption="High-level nz commands" caption-side="bottom"}
 
 ### Run commands
 {: #other_cmds}
@@ -297,6 +335,7 @@ These commands allow running various `nz` commands on the target system:
 | `run` | Run any allowed nz command synchronously (passes `-u`, `-pw`). |
 | `run-async` | Run any allowed nz command asynchronously. |
 | `run-show-progress` | Run any allowed nz command showing immediate progress. |
+{: caption="Run commands" caption-side="bottom"}
 
 ### Permission and scaling commands
 {: #permi_cmds}
@@ -305,6 +344,7 @@ These commands allow running various `nz` commands on the target system:
 |---------|-------------|
 | `perms` | Get and set permissions. |
 | `scale` | Scale NPS compute and/or storage. |
+{: caption="Permission and scaling commands" caption-side="bottom"}
 
 ### Setup and miscellaneous commands
 {: #setup_misc_cmds}
@@ -315,6 +355,7 @@ These commands allow running various `nz` commands on the target system:
 | `version` | Show the current version of the NZ client. |
 | `install` | Install symlinks for supported NZ client commands. |
 | `awsiam` | AWS IAM authenticator setup. |
+{: caption="Setup and miscellaneous commands" caption-side="bottom"}
 
 ### Direct nz host commands
 {: #nz_host_calls}
@@ -331,6 +372,7 @@ These commands allow running various `nz` commands on the target system:
 | `nzrev` | Call the nzrev tool. |
 | `nzstats` | Call the nzstats tool. |
 | `nzsession` | Call the nzsession tool. |
+{: caption="Direct nz host commands" caption-side="bottom"}
 
 ### Software Support Tools scripts
 {: #sst-scripts-ref}

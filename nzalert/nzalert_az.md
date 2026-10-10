@@ -70,7 +70,7 @@ Events will be published to your Azure event grid topic by providing the endpoin
 ### Step 3: Give publish permission
 {: #publishpermission}
 
-To get the events to be published in that topic, click the created topic and navigate to **Access Control (IAM)** on the left side.
+To get the events to be published in that topic, click the created topic and navigate to **Access Control (IAM)**.
 
 1. Click on **Add Role Assignment**.
 1. Choose role **Eventgrid data sender**.

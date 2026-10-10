@@ -41,3 +41,4 @@ subcollection: netezza
 | Resource Groups           | ListGroups                                                                  | View AWS resource groups.                                                      |
 | Route 53 Domains          | ListDomains, ListOperations                                                 | View domain registration details and operations.                               |
 | CloudWatch                | DescribeAlarms                                                              | View CloudWatch alarm configurations.                                          |
+{: caption="AWS IAM permissions" caption-side="bottom"}

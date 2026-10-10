@@ -119,7 +119,7 @@ SELECT DATABASE, STORAGETYPE FROM _v_database;
 
 **Example output:**
 
-```
+```screen
  DATABASE |  STORAGETYPE
 ----------+----------------
  DB1      | BLOCK
@@ -134,7 +134,7 @@ During an upgrade from a release that supports **only block storage** to one tha
 
 The default `storagetype` associated with a database can be changed using the `ALTER DATABASE` command.
 
-- **Alter database storage type**
+- Alter database storage type
 
     ```sql
     ALTER DATABASE <database_name> STORAGETYPE '<storage_type>';

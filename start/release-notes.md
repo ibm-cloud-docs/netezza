@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-13"
+lastupdated: "2026-09-04"
 
 keywords: Netezza Performance Server release notes, what's new, AWS, Netezza on AWS
 
@@ -23,6 +23,47 @@ subcollection: netezza
 
 # Release notes for NPSaaS
 {: #my-service-relnotes1123x}
+
+## 8 October 2026 – 11.3.1.4
+{: #sep2026}
+{: release-note}
+
+### New features and enhancements
+{: #nfsep2026}
+
+Network policy infrastructure enhancement for Azure
+
+:   {{site.data.keyword.netezza_short}} has upgraded its network policy enforcement architecture for Azure deployments to improve the scalability, consistency, and reliability of ingress traffic control and network security. This is an infrastructure enhancement applied automatically; no action or configuration change is required from users or administrators. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies).
+
+UBI 9 base image upgrade
+
+:   The Host and SPU container images for {{site.data.keyword.netezza_short}} are now based on Red Hat Universal Base Image (UBI) 9 (RHEL 9.8) and applies to all deployment types: Fully Managed (SaaS) and Bring Your Own Cloud (BYOC) on both AWS and Azure. This is an infrastructure-level change. No action is required from users or administrators. Existing deployments are migrated automatically as part of the 11.3.1.4 upgrade.
+
+INZA 11.3.7 support
+
+:   INZA has been upgraded to version 11.3.7. For more information, see [Netezza Performance Server Analytics 11.3.7 release notes](https://www.ibm.com/docs/en/netezza?topic=compatibility-netezza-performance-server-analytics-1137-release-notes){: external}.  
+
+### Fixes
+{: #fixessep2026}
+
+- Fixed an `AccessDenied` error that caused backup and restore operations to fail on IAM role-based S3 buckets for AWS BYOC public and private instances. Backup and restore operations using IAM role-based buckets now work correctly on all AWS BYOC deployment types.
+
+- Fixed an issue in INZA where UDX DDL backup files could be removed before dependency restoration completed. Backup files are now retained until restoration succeeds.
+
+- Increased the maximum number of supported administrator privileges to ensure reliable privilege management as new privileges are introduced.
+
+
+### Known issues
+{: #kisep2026}
+
+Unstructured data: OCR text extraction language support on AWS BYOC Private instances
+:   When using the unstructured data feature on AWS BYOC Private instances, OCR text extraction for languages other than English is not supported. Only English language text extraction is functional for the **Extract text from image** operation.
+
+### Components
+{: #compsep2026}
+
+- `nzcli` version: 11.3.1.4
+- `INZA` version: 11.3.7
 
 ## 12 August 2026 – 11.3.1.3
 {: #jun2026}
@@ -638,7 +679,7 @@ IdP configuration
    `python2` and its adapter are no longer supported.
 - **Netezza client:**\
    Supports initiating, viewing, and manipulating schedules for ad hoc, pause, resume, and scaling operations. For more information, see [Pausing and resuming instances](/docs/netezza?topic=netezza-pauseresume) and [Scaling](/docs/netezza?topic=netezza-scaling-topic).
-- Introduced new maintenance job types, **Grooms** and **Genstats**, under the **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-settings#maintenance).
+- Introduced new maintenance job types, **Grooms** and **Genstats**, under the **Maintenance** section. For more information, see [Maintenance](/docs/netezza?topic=netezza-adm-settings#maintenance).
 - Introduced a new **Lakehouse** option for creating databases. For more information, see [Create databases](/docs/netezza?topic=netezza-databases#create-db).
 - `CREATE TABLE` support for unpartitioned Iceberg tables.
 - `INSERT` support for Iceberg tables.
@@ -950,7 +991,7 @@ As of 20 May 2022, workload enhancements and network policy support are added.
 {: #nfmay2022}
 
 - Two new workload contours NC0 and NC3 are available for a wider range of configuration options for provisioning and scaling.
-- Network policy support is added. You can control the set of IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or be connected from by using network policies. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies) and [Network policies with the web console](/docs/netezza?topic=netezza-settings&interface=ui).
+- Network policy support is added. You can control the set of IP addresses and hostnames that your {{site.data.keyword.netezza_short}} database can connect to or be connected from by using network policies. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies) and [Network policies with the web console](/docs/netezza?topic=netezza-adm-settings&interface=ui).
 
 ### Known issues
 {: #kimay2022}

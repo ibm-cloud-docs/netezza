@@ -30,7 +30,7 @@ For more information, see:
 - [CREATE DATABASE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-database-2)
 - [CREATE SCHEMA](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-schema-2)
 - [CREATE TABLE](https://www.ibm.com/docs/en/netezza?topic=npsscr-create-table-2)
-- [DESCRIBE](https://www.ibm.com/docs/en/netezza?topic=reference-describe)
+- [DESCRIBE](https://www.ibm.com/docs/en/netezza?topic=reference-describe-table)
 - [SELECT QUERIES](https://www.ibm.com/docs/en/netezza?topic=npsscr-select-retrieve-rows-2)
 - Backup and restore is only supported for the login and reference information, not the data itself.
 - AWS S3, IBM COS, minIO data sources are available as storage options or a data lake database.

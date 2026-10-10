@@ -40,7 +40,7 @@ To enable the REST catalog feature, follow these steps:
 2. **Access web console**
    Navigate to the **IBM Netezza Web Console**.
 
-3. **Enable REST catalog**
+3. Enable REST catalog
    - Go to the **Settings** tab.
    - Toggle the **REST catalog** switch to enable the feature.
 
@@ -57,7 +57,7 @@ To enable the REST catalog feature, follow these steps:
    Deployment includes provisioning of an additional **20 GiB** of persistent storage.
    {: note}
 
-6. **Monitor deployment status**
+6. Monitor deployment status
    - Visit the **Settings** page to view deployment progress.
    - Status updates are displayed via **notification pop-ups**.
 
@@ -69,11 +69,11 @@ Once the REST catalog is enabled:
 1. **Navigate to databases page**
    Open the **Databases** section in the web console.
 
-2. **Create lakehouse database**
+2. Create lakehouse database
    - Select **Lakehouse** as the database type.
    - Choose **REST catalog** from the catalog type options.
 
-3. **Provide required details**
+3. Provide required details
    - For AWS S3-based Lakehouse, enter the **public endpoint** for your region.
    - Follow the on-screen instructions to complete database creation.
 
