@@ -31,9 +31,9 @@ subcollection: netezza
 ### New features and enhancements
 {: #nfsep2026}
 
-SDN to OVN network policy migration
+Network policy infrastructure enhancement for Azure
 
-:   {{site.data.keyword.netezza_short}} has migrated its underlying network policy enforcement layer from Software-Defined Networking (SDN) based on Kubernetes `NetworkPolicy` objects to Open Virtual Network (OVN). This infrastructure change improves the scalability, consistency, and reliability of ingress traffic control for  Azure deployments. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies).
+:   {{site.data.keyword.netezza_short}} has upgraded its network policy enforcement architecture for Azure deployments to improve the scalability, consistency, and reliability of ingress traffic control and network security. This is an infrastructure enhancement applied automatically; no action or configuration change is required from users or administrators. For more information, see [Network policies](/docs/netezza?topic=netezza-network-policies).
 
 UBI 9 base image upgrade
 
@@ -56,8 +56,8 @@ INZA 11.3.7 support
 ### Known issues
 {: #kisep2026}
 
-OCR text extraction language support on AWS BYOC Private instances
-:   OCR text extraction for languages other than English is not supported on AWS BYOC Private instances. Only English language text extraction is functional for the **Extract text from image** operation.
+Unstructured data: OCR text extraction language support on AWS BYOC Private instances
+:   When using the unstructured data feature on AWS BYOC Private instances, OCR text extraction for languages other than English is not supported. Only English language text extraction is functional for the **Extract text from image** operation.
 
 ### Components
 {: #compsep2026}
