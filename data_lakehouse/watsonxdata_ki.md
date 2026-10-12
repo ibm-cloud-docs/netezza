@@ -35,7 +35,7 @@ You might experience the following issues while using {{site.data.keyword.lakeho
     #### Workaround
     {: #ki-workaround-1}
 
-    Refer [Dropping incompatible column types in ALTER TABLE](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=watsonxdata-known-issues-limitations)
+    Refer [Dropping incompatible column types in ALTER TABLE](https://www.ibm.com/docs/en/watsonxdata/standard/2.3.x?topic=overview-known-issues-limitations)
 
 - **INSERT** is only supported for unpartitioned tables. You will not be able to insert into partitioned iceberg tables created by other engines.
 

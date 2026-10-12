@@ -88,7 +88,7 @@ Ensure that you obtained the IBM API key by following the steps:
 
 Where:
 
-- `url` is the thrift endpoint URL, which you retrieve from {{site.data.keyword.lakehouse_short}} instance. For more information, see [Getting the HMS endpoint](/docs/watsonxdata?topic=watsonxdata-hms#hms_url). Ensure that the `url` is in the following `thrift://<host>:<port>` format when you run `nz setup-hms` command.
+- `url` is the thrift endpoint URL, which you retrieve from {{site.data.keyword.lakehouse_short}} instance. Ensure that the `url` is in the following `thrift://<host>:<port>` format when you run `nz setup-hms` command.
 - `hms-user` is by default `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CREATED>`.
 - `hms-token` is your API key obtained in the **Before you begin** section.
 
