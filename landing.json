@@ -76,14 +76,6 @@
       {
         "date": "22 December 2025",
         "title": "This release introduces native Azure Blob and AWS S3 support for Netezza tables on object storage, IAM-based access for AWS buckets, an integrated AI Database Assistant, enhanced Iceberg table management with REST catalog and BYOC, customer-managed encryption keys for AWS, improved SSL/TLS certificate validation for OLEDB, accurate client IP logging for AWS private instances, certificate download from the console, optimized query history loading, and better backup scheduling during daylight saving changes."
-      },
-      {
-        "date": "11 November 2025",
-        "title": "This release introduces predefined alert rules in the web console for faster, automated configuration, enforces SSL/TLS server certificate validation with configurable options, and adds support for INZA 11.3.3 for advanced analytics."
-      },
-      {
-        "date": "29 September 2025",
-        "title": "The latest Netezza release introduces native support for Cloud Object Storage (COS), enabling scalable data management beyond traditional storage formats. Netezza Bring Your Own Cloud (BYOC) is now generally available on Azure, allowing secure deployment within customer-managed VPCs. Additionally, Netezza Software supports Bring Your Own Orchestration, offering flexible deployment on customer hardware or Red Hat OpenShift with scalable architecture for analytics and AI workloads. To enhance security, SSL/TLS connections now require server certificate validation using the caCertFile parameter across ODBC, JDBC, and nzsql clients."
       }
     ]
   }
